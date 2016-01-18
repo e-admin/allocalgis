@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.localgis.web</groupId>
+  <artifactId>LocalgisWebapps</artifactId>
+  <version>3.0</version>
+  <packaging>pom</packaging>
+  <name>LocalgisWebapps</name>
+ <repositories>
+		<!-- <repository> <id>satec_repository</id> <name>Viavansi Repositorio</name> 
+			<url>http://rossi.malab.satec.es:8080/artifactory/repo</url> </repository> -->
+
+		
+		<repository>			
+			<id>serverCotesa</id>
+			<name>LocalGISIII</name>
+			<url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+		</repository>
+		
+		<repository>
+			<id>geotools</id>
+			<name>Geotools repository</name>
+			<url>http://download.osgeo.org/webdav/geotools/</url>
+		</repository>
+
+		<repository>
+			<id>opengeo</id>
+			<name>OpenGeo Maven Repository</name>
+			<url>http://repo.opengeo.org/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>deegree-repo</id>
+			<url>http://artefacts.deegree.org/repo</url>
+			<releases>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>ibatis2</id>
+			<name>ibatis2 repository</name>
+			<url>http://ibcorp.com.br/repository/</url>
+		</repository>
+		
+
+	</repositories>
+	<distributionManagement>
+		<!-- <repository> <id>rossi.malab.satec.es</id> <name>rossi.malab.satec.es-releases</name> 
+			<url>http://rossi.malab.satec.es:8080/artifactory/ext-release-local</url> 
+			</repository> -->
+	<repository>
+			<id>serverCotesa</id>
+			<name>LocalGISIII</name>
+			<url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+		</repository>
+		<snapshotRepository>
+			<id>serverCotesa</id>
+			<name>LocalGISIII</name>
+			<url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+		</snapshotRepository>
+	</distributionManagement>
+ 
+<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<target>1.7</target>
+					<source>1.7</source>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+  <!-- 
+  <modules>
+    <module>LOCALGIS-Core</module>
+    <module>LOCALGIS-Web</module>
+    <module>LOCALGIS-WebManager</module>
+    <module>LOCALGIS-WFSG</module>
+    <module>LOCALGIS-Core-geowfst</module>
+    <module>LOCALGIS-geowfst</module>
+  </modules>
+  -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.localgis.web</groupId>
+        <artifactId>localgis-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.localgis.web</groupId>
+        <artifactId>localgis-guiaurbana</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.localgis.web</groupId>
+        <artifactId>localgis-wmsmanager</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.localgis.web</groupId>
+        <artifactId>localgis-wfsg</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+       <dependency>
+        <groupId>com.localgis.web</groupId>
+        <artifactId>localgis-wfs-mne</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+	  <dependency>
+        <groupId>com.localgis.web</groupId>
+        <artifactId>localgis-core-geowfst</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.localgis.web</groupId>
+        <artifactId>localgis-geowfst</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <parent>
+  	<groupId>com.localgis</groupId>
+  	<artifactId>localgis-parent</artifactId>
+  	<version>3.0</version>
+  	<relativePath>..</relativePath>
+  </parent>
+</project>

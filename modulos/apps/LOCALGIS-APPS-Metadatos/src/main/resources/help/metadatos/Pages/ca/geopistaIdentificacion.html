@@ -1,0 +1,89 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <title>Pestaña identificación en la herramienta de metadatos</title>
+
+<!-- *************************************************************************************** -->
+<!-- content styles -->
+<link href="../css/contents.css" rel="stylesheet" type="text/css">
+<!-- *************************************************************************************** -->
+
+</head>
+<body bgcolor="#FFFFFF">
+
+<h1 class="cabeceraazuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(C)Identificación</h1>
+
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En la pestaña de identificación
+se muestran los datos correspondientes a la entidad <b>MD_identification</b> del estándar que
+es la información básica necesaria para identificar de modo único un recurso o recursos. Estos datos son:</p>
+<ul>
+<li class="enlaceazuloscuro">Citación:</li><ul class="contenidonormal">Hace referencia al nombre dado al recurso.
+ Cuando se pulsa el botón adjunto se muestra la pantalla <a class="enlaceazuloscuro" href=geopistaCitacion.html>citación</a> donde se
+pueden introducir todos los datos de la citación.</ul>
+<li class="enlaceazuloscuro">Resumen:</li><ul class="contenidonormal">Breve resumen descriptivo del contenido del recurso.</ul>
+<li class="enlaceazuloscuro">Propósito:</li><ul class="contenidonormal">Resumen del propósito para el que se creó el recurso.</ul>
+<li class="enlaceazuloscuro">Idiomas:</li><ul class="contenidonormal">Idiomas usados en el conjunto de datos.</ul>
+<li class="enlaceazuloscuro">Conjunto de caracteres:</li><ul class="contenidonormal">Nombre completo de la norma de codificación de caracteres. Esta predefinido a <b>8859Part1</b>.</ul>
+<li class="enlaceazuloscuro">Contacto:</li><ul class="contenidonormal">Identificación de la persona y/u organización relacionadas con el recurso.
+Cuando se pulsa el botón adjunto se muestra la pantalla de <a class="enlaceazuloscuro" href="geopistaContactos.html">contactos</a> donde se puede seleccionar o
+crear nuevos contactos</ul>
+<li class="enlaceazuloscuro">Rol:</li><ul class="contenidonormal">Posición o cargo que ocupa la persona responsable del recurso.</ul>
+<li class="enlaceazuloscuro">Representación espacial:</li><ul class="contenidonormal">Métodos usados para la representación espacial de la información geográfica.</ul>
+</ul>
+<p align="center"><IMG height=436 width=560 src="./img/metadatos2.jpg"></p>
+<p align="center" class="contenidogris">Pestaña metadato en la pantalla de edición</p>
+
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Como se puede ver esta pestaña incluye cuatro subpestañas más, que son las siguientes.</p>
+
+<p align="left" class="cabecera2azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="categoria">Categoría</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tema(s) principal(es) del conjunto de datos.</p>
+<p align="center"><IMG src="./img/categoria.jpg"></p>
+<p align="center" class="contenidogris">Pestaña categoría en la pestaña identificación</p>
+
+<p align="left" class="cabecera2azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="extension">Extensión</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Esta pestaña corresponde a la entidad <b>EX_Extent</b> del estándar. Representa
+información sobre el área cubierta por los datos y la localización geográfica de los mismos. Da las coordenadas de las cuatro esquinas, junto con una
+ breve descripción del área cubierta por el conjunto de datos. </p>
+<ul>
+<li class="enlaceazuloscuro">Descripción:</li><ul class="contenidonormal">Breve descripción del área geográfica dentro de la que los datos están disponibles.</ul>
+<li class="enlaceazuloscuro">Escala:</li><ul class="contenidonormal">Factor que da una idea general sobre la densidad de los datos espaciales.</ul>
+<li class="enlaceazuloscuro">Coordenadas:</li><ul class="contenidonormal">Posición geográfica del conjunto de los datos, es decir, las coordenadas geográficas de las cuatro esquinas.</ul>
+<li class="enlaceazuloscuro">Extensión vertical:</li><ul class="contenidonormal">Dominio vertical del conjunto de datos.</ul>
+    <ul>
+        <li class="enlaceazuloscuro">Valor mínimo:</li><ul class="contenidonormal">Extensión vertical inferior contenida en el conjunto de datos.</ul>
+        <li class="enlaceazuloscuro">Valor máximo:</li><ul class="contenidonormal">Extensión vertical superior contenida en el conjunto de datos.</ul>
+        <li class="enlaceazuloscuro">Unidades de medida:</li><ul class="contenidonormal">Unidades verticales usadas para la descripción da la extensión vertical.
+        Ejemplo: metros, pies, mm, hoctopascales.</ul>
+    </ul>
+</ul>
+
+
+<p align="center"><IMG src="./img/extension.jpg"></p>
+<p align="center" class="contenidogris">Pestaña extensión en la pestaña identificación</p>
+
+<p align="left" class="cabecera2azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="graficos">Gráficos</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proporciona gráficos que ilustran el recurso. Estos
+gráficos (imagen rasterizada del conjunto de datos) deben incluir una leyenda explicativa para su interpretación.</p>
+<p align="center"><IMG src="./img/graficos.jpg"></p>
+<p align="center" class="contenidogris">Pestaña gráficos en la pestaña identificación</p>
+
+<p align="left" class="cabecera2azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="restricciones">Restricciones</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Esta pestaña corresponde a la entidad <b>MD_Constraints</b> del estándar. Representa
+información a cerca de las restricciones que afectan al recurso.</p>
+<ul>
+    <li class="enlaceazuloscuro">Limitaciones de uso:</li><ul class="contenidonormal">Limitaciones que afectan a la capacidad para el uso del recurso.</ul>
+    <li class="enlaceazuloscuro">Restricciones legales:</li><ul class="contenidonormal">Restricciones y prerrequisitos legales para acceder y usar el recurso.</ul>
+    <ul>
+        <li class="enlaceazuloscuro">Restricciones de acceso:</li><ul class="contenidonormal">Restricciones dedicadas a asegurar la protección de la privacidad o propiedad
+        intelectual y cualquier restricción para obtener el recurso.</ul>
+        <li class="enlaceazuloscuro">Restricciones de uso:</li><ul class="contenidonormal">Limitaciones de uso aplicadas al conjunto de datos para asegurar la privacidad o
+        protección intelectual, y cualquier restricción o advertencia especial para su uso.</ul>
+        <li class="enlaceazuloscuro">Otras restricciones:</li><ul class="contenidonormal">Permite al usuario describir las restricciones no nombradas en las otras opciones.</ul>
+    </ul>
+</ul>
+
+
+<p align="center"><IMG src="./img/restricciones.jpg"></p>
+<p align="center" class="contenidogris">Pestaña restricciones en la pestaña identificación</p>
+
+</html>

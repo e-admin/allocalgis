@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <element xml-name="idcat">
+        <element xml-name="cn" java-name="claseBienInmueble"/>
+        <element xml-name="rc">
+            <element xml-name="pc1" java-name="idBienInmueble.parcelaCatastral.refCatastral1"/>
+            <element xml-name="pc2" java-name="idBienInmueble.parcelaCatastral.refCatastral2"/>
+            <element xml-name="car" java-name="idBienInmueble.numCargo" length="4"/>
+            <element xml-name="cc1" java-name="idBienInmueble.digControl1"/>
+            <element xml-name="cc2" java-name="idBienInmueble.digControl2"/>
+        </element>
+        <element xml-name="locat">
+            <element xml-name="cd" java-name="domicilioTributario.provinciaINE"/>
+            <element xml-name="cmc" java-name="codMunicipioDGC" length="3"/>
+        </element>
+    </element>
+
+    <element xml-name="idad">
+        <element xml-name="iia" java-name="idAyuntamientoBienInmueble"/>
+        <element xml-name="nfr">
+            <element xml-name="rp">
+                <element xml-name="cp" java-name="numFincaRegistral.registroPropiedad.codigoProvincia"/>
+                <element xml-name="crp" java-name="numFincaRegistral.registroPropiedad.codigoRegistroPropiedad" length="3"/>
+            </element>
+            <element xml-name="sc" java-name="numFincaRegistral.seccion"/>
+            <element xml-name="fr" java-name="numFincaRegistral.numFinca"/>
+            <element xml-name="sfr" java-name="numFincaRegistra.numSubFinca"/>
+        </element>
+    </element>
+
+    <element xml-name="dt">
+        <element xml-name="loine">
+            <element xml-name="cp" java-name="domicilioTributario.provinciaINE"/>
+            <element xml-name="cm" java-name="domicilioTributario.municipioINE" length="3"/>
+        </element>
+        <element xml-name="cmc" java-name="domicilioTributario.codigoMunicipioDGC" length="3"/>
+        <element xml-name="np" java-name="domicilioTributario.nombreProvincia"/>
+        <element xml-name="nm" java-name="domicilioTributario.nombreMunicipio"/>
+        <element xml-name="nem" java-name="domicilioTributario.nombreEntidadMenor"/>
+        <element xml-name="locs">
+            <element xml-name="lous" java-condition="domicilioTributario.esUrbana">
+                <element xml-name="lourb">
+                    <element xml-name="dir">
+                        <element xml-name="cv" java-name="domicilioTributario.codigoVia" null-value="-1"/>
+                        <element xml-name="tv" java-name="domicilioTributario.tipoVia"/>
+                        <element xml-name="nv" java-name="domicilioTributario.nombreVia"/>
+                        <element xml-name="pnp" java-name="domicilioTributario.primerNumero" null-value="-1"/>
+                        <element xml-name="plp" java-name="domicilioTributario.primeraLetra"/>
+                        <element xml-name="snp" java-name="domicilioTributario.segundoNumero" null-value="-1"/>
+                        <element xml-name="slp" java-name="domicilioTributario.segundaLetra"/>
+                        <element xml-name="km" java-name="domicilioTributario.kilometro" null-value="-1.0"/>
+                        <element xml-name="td" java-name="domicilioTributario.direccionNoEstructurada"/>
+                    </element>
+                    <element xml-name="loint">
+                        <element xml-name="bq" java-name="domicilioTributario.bloque"/>
+                        <element xml-name="es" java-name="domicilioTributario.escalera"/>
+                        <element xml-name="pt" java-name="domicilioTributario.planta"/>
+                        <element xml-name="pu" java-name="domicilioTributario.puerta"/>
+                    </element>
+                    <element xml-name="dp" java-name="domicilioTributario.codigoPostal"/>
+                    <element xml-name="dm" java-name="domicilioTributario.distrito"/>
+                </element>
+                <element xml-name="lorus">
+                    <element xml-name="cma" java-name="domicilioTributario.codMunOrigenAgregacion" length="3"/>
+                    <element xml-name="czc" java-name="domicilioTributario.codZonaConcentracion"/>
+                    <element xml-name="cpp">
+                        <element xml-name="cpo" java-name="domicilioTributario.codPoligono"/>
+                        <element xml-name="cpa" java-name="domicilioTributario.codParcela"/>
+                    </element>
+                    <element xml-name="npa" java-name="domicilioTributario.nombreParaje"/>
+                    <element xml-name="cpaj" java-name="domicilioTributario.codParaje"/>
+                </element>
+            </element>
+            <element xml-name="lors"  java-condition="domicilioTributario.esRustica">
+                <element xml-name="lorus">
+                    <element xml-name="cma" java-name="domicilioTributario.codMunOrigenAgregacion" length="3"/>
+                    <element xml-name="czc" java-name="domicilioTributario.codZonaConcentracion"/>
+                    <element xml-name="cpp">
+                        <element xml-name="cpo" java-name="domicilioTributario.codPoligono"/>
+                        <element xml-name="cpa" java-name="domicilioTributario.codParcela"/>
+                    </element>
+                    <element xml-name="npa" java-name="domicilioTributario.nombreParaje"/>
+                    <element xml-name="cpaj" java-name="domicilioTributario.codParaje"/>
+                </element>
+                <element xml-name="lourb">
+                    <element xml-name="dir">
+                        <element xml-name="cv" java-name="domicilioTributario.codigoVia" null-value="-1"/>
+                        <element xml-name="tv" java-name="domicilioTributario.tipoVia"/>
+                        <element xml-name="nv" java-name="domicilioTributario.nombreVia"/>
+                        <element xml-name="pnp" java-name="domicilioTributario.primerNumero" null-value="-1"/>
+                        <element xml-name="plp" java-name="domicilioTributario.primeraLetra"/>
+                        <element xml-name="snp" java-name="domicilioTributario.segundoNumero" null-value="-1"/>
+                        <element xml-name="slp" java-name="domicilioTributario.segundaLetra"/>
+                        <element xml-name="km" java-name="domicilioTributario.kilometro" null-value="-1.0"/>
+                        <element xml-name="td" java-name="domicilioTributario.direccionNoEstructurada"/>
+                    </element>
+                    <element xml-name="loint">
+                        <element xml-name="bq" java-name="domicilioTributario.bloque"/>
+                        <element xml-name="es" java-name="domicilioTributario.escalera"/>
+                        <element xml-name="pt" java-name="domicilioTributario.planta"/>
+                        <element xml-name="pu" java-name="domicilioTributario.puerta"/>
+                    </element>
+                    <element xml-name="dp" java-name="domicilioTributario.codigoPostal"/>
+                    <element xml-name="dm" java-name="domicilioTributario.distrito"/>
+                </element>
+            </element>
+        </element>
+    </element>
+
+    <element xml-name="debi">
+        <element xml-name="pvd" java-name="datosEconomicosBien.precioDeclarado"/>
+        <element xml-name="opvd" java-name="datosEconomicosBien.origenPrecioDeclarado"/>
+        <element xml-name="pav" java-name="datosEconomicosBien.precioVenta"/>
+        <element xml-name="afv" java-name="datosEconomicosBien.anioFinValoracion"/>
+        <element xml-name="itp" java-name="datosEconomicosBien.indTipoPropiedad"/>
+        <element xml-name="noe" java-name="datosEconomicosBien.numOrdenHorizontal"/>
+        <element xml-name="uso" java-name="datosEconomicosBien.uso"/>
+        <element xml-name="cpt" java-name="datosEconomicosBien.coefParticipacion" format="##0.000000"/>
+    </element>
+
+    <element xml-name="rep">
+        <element xml-name="idr">
+            <element xml-name="nif" java-name="representante.nif"/>
+            <element xml-name="nom" java-name="representante.razonSocial"/>
+        </element>
+        <element xml-name="df">
+            <element xml-name="loine">
+                <element xml-name="cp" java-name="representante.domicilio.provinciaINE"/>
+                <element xml-name="cm" java-name="representante.domicilio.municipioINE" length="3"/>
+            </element>
+            <element xml-name="cmc" java-name="representante.domicilio.codigoMunicipioDGC" length="3"/>
+            <element xml-name="np" java-name="representante.domicilio.nombreProvincia"/>
+            <element xml-name="nm" java-name="representante.domicilio.nombreMunicipio"/>
+            <element xml-name="nem" java-name="representante.domicilio.nombreEntidadMenor"/>
+            <element xml-name="dir">
+                <element xml-name="cv" java-name="representante.domicilio.codigoVia" null-value="-1"/>
+                <element xml-name="tv" java-name="representante.domicilio.tipoVia"/>
+                <element xml-name="nv" java-name="representante.domicilio.nombreVia"/>
+                <element xml-name="pnp" java-name="representante.domicilio.primerNumero" null-value="-1"/>
+                <element xml-name="plp" java-name="representante.domicilio.primeraLetra"/>
+                <element xml-name="snp" java-name="representante.domicilio.segundoNumero" null-value="-1"/>
+                <element xml-name="slp" java-name="representante.domicilio.segundaLetra"/>
+                <element xml-name="km" java-name="representante.domicilio.kilometro" null-value="-1.0"/>
+                <element xml-name="td" java-name="representante.domicilio.direccionNoEstructurada"/>
+            </element>
+            <element xml-name="loint">
+                <element xml-name="bq" java-name="representante.domicilio.bloque"/>
+                <element xml-name="es" java-name="representante.domicilio.escalera"/>
+                <element xml-name="pt" java-name="representante.domicilio.planta"/>
+                <element xml-name="pu" java-name="representante.domicilio.puerta"/>
+            </element>
+            <element xml-name="pos">
+                <element xml-name="dp" java-name="representante.domicilio.codigoPostal"/>
+                <element xml-name="ac" java-name="representante.domicilio.apartadoCorreos" null-value="-1"/>
+            </element>
+        </element>
+    </element>
+</root>

@@ -1,0 +1,41 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- updaterPlugin:0.0.2-SNAPSHOT:launchInstall (default-cli) @ standalone-pom ---
+
+============================================================
+|CHECKING SERVERS ...
+============================================================
+:  Check server: http://localhost:8081 ... SUCCESS
+:  Check server: http://localhost:8080 ... SUCCESS
+:  Check BdD server: jdbc:postgresql://srvdesbbdd.grupotecopy.es/localgispruebas:5432 ... SUCCESS
+: 
+============================================================
+|CHECK SERVERS: SUCCESS
+============================================================
+: Perform the installation of the module:AdministracionModule
+: [INFO]  Interactive Session.
+[INFO] Contacting with WebService at: http://localhost:8080/RegistryWS/services/RegistryService
+log4j:WARN No appenders could be found for logger (org.apache.axis2.util.Loader).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+[WARNING] Installation can't be obtained at http://localhost:8080/RegistryWS/services/RegistryService
+[INFO] com.localgis.modules.web:SoftwareModule:jar:3.0.0:compile
+[INFO] com.localgis.modules.web:RegistryWSModule:jar:3.0.0:compile
+[INFO] com.localgis.modules.server:SysServerBasicModule:jar:3.0.0:compile
+[INFO] com.localgis.modules.server:ServerGeopistaModule:jar:3.0.0:compile
+[INFO] com.localgis.modules.server:ServerPrincipalModule:jar:3.0.0:compile
+[INFO] com.localgis.modules.server:AdministracionServerModule:jar:3.0.0:compile
+[INFO] com.localgis.modules.app:AdministracionModule:jar:3.0.0
+The following modules will be installed:
+Modulo instalacion/actualizacion LOCALGIS-SERVER-Principal:3.0.0:
+Modulo instalacion/actualizacion LOCALGIS-SERVER-Geopista:3.0.0:
+Agrupador modulos instalacion basica sys server:3.0.0:
+Modulo Registro Instalacion:3.0.0:
+Modulo instalacion/actualizacion LOCALGIS-SERVER-Administracion:3.0.0:
+Modulo Software:3.0.0:
+Modulo de Administracion de LOCALGIS:3.0.0:
+Continue? (Yes/No) No: : 

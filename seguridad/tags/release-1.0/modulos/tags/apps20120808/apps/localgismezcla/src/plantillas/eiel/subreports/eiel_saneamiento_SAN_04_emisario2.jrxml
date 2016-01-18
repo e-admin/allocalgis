@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="eiel_saneamiento_SAN_04_emisario2"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="535"
+		 pageHeight="900"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+	<import value="com.geopista.app.filter.LCGFilter" />
+
+	<parameter name="filtro_em" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_municipio" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="locale" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["es_ES"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[".\\src\\plantillas\\eiel\\subreports\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMPRIMIR_IMAGENES" isForPrompting="false" class="java.lang.Boolean">
+		<defaultValueExpression ><![CDATA[new Boolean(true)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ID_ENTIDAD" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["77"]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[SELECT
+     eiel_c_nucleo_poblacion."nombre_oficial" AS nucleo,
+     eiel_t_saneam_tem."material" AS tem_material,
+     eiel_t_saneam_tem."diametro" AS diametro,
+     eiel_t_saneam_pv."tipo" AS tipo,
+     eiel_t_saneam_pv."zona" AS zona,
+     eiel_t_saneam_pv."distancia_nucleo" AS distancia_nucleo,
+     eiel_t_saneam_serv."aliv_c_acum" AS aliv_c_acum,
+     eiel_t_saneam_serv."aliv_s_acum" AS aliv_s_acum,
+     eiel_t_saneam_serv."pozos_registro" AS pozos_registro,
+     eiel_t_saneam_serv."sumideros" AS serv_sumideros,
+     eiel_t_saneam_serv."viviendas_c_conex" AS viviendas_c_conex,
+     eiel_t_saneam_serv."viviendas_s_conex" AS viviendas_s_conex,
+     eiel_t_saneam_serv."viviendas_def_conex" AS viviendas_def_conex,
+     eiel_t_saneam_serv."long_rs_deficit" AS long_rs_deficit,
+     eiel_t_saneam_serv."pobl_est_def_afect" AS pobl_est_def_afect,
+     eiel_t_saneam_serv."caudal_total" AS caudal_total,
+     eiel_t_saneam_serv."caudal_tratado" AS caudal_tratado,
+     eiel_t_saneam_serv."c_reutilizado_urb" AS reutilizado_urb,
+     eiel_t_saneam_serv."c_reutilizado_rust" AS reutilizado_rust,
+     eiel_t_saneam_serv."c_reutilizado_ind" AS reutilizado_ind,
+     eiel_t_saneam_serv."observ" AS serv_observ,
+     eiel_c_saneam_tem."id" AS id
+FROM
+     "public"."eiel_c_saneam_tem" eiel_c_saneam_tem INNER JOIN "eiel_t_saneam_tem" eiel_t_saneam_tem ON eiel_c_saneam_tem."clave" = eiel_t_saneam_tem."clave"
+     AND eiel_c_saneam_tem."codprov" = eiel_t_saneam_tem."codprov"
+     AND eiel_c_saneam_tem."codmunic" = eiel_t_saneam_tem."codmunic"
+     AND eiel_c_saneam_tem."tramo_em" = eiel_t_saneam_tem."tramo_em"
+     INNER JOIN "public"."eiel_tr_saneam_tem_pobl" eiel_tr_saneam_tem_pobl ON eiel_t_saneam_tem."clave" = eiel_tr_saneam_tem_pobl."clave_tem"
+     AND eiel_tr_saneam_tem_pobl."codmunic_tem" = eiel_t_saneam_tem."codmunic"
+     AND eiel_tr_saneam_tem_pobl."tramo_em" = eiel_t_saneam_tem."tramo_em"
+     AND eiel_tr_saneam_tem_pobl."codprov_tem" = eiel_t_saneam_tem."codprov"
+     INNER JOIN "public"."eiel_c_nucleo_poblacion" eiel_c_nucleo_poblacion ON eiel_tr_saneam_tem_pobl."codprov_pobl" = eiel_c_nucleo_poblacion."codprov"
+     AND eiel_c_nucleo_poblacion."codpoblamiento" = eiel_tr_saneam_tem_pobl."codpoblamiento_pobl"
+     AND eiel_c_nucleo_poblacion."codmunic" = eiel_tr_saneam_tem_pobl."codmunic_pobl"
+     AND eiel_c_nucleo_poblacion."codentidad" = eiel_tr_saneam_tem_pobl."codentidad_pobl"
+     INNER JOIN "public"."eiel_t_saneam_pv" eiel_t_saneam_pv ON eiel_c_saneam_tem."codprov" = eiel_t_saneam_pv."codprov"
+     AND eiel_t_saneam_pv."codmunic" = eiel_c_saneam_tem."codmunic"
+     INNER JOIN "public"."eiel_t_saneam_serv" eiel_t_saneam_serv ON eiel_c_saneam_tem."codprov" = eiel_t_saneam_serv."codprov"
+     AND eiel_t_saneam_serv."codmunic" = eiel_c_saneam_tem."codmunic"
+WHERE
+     eiel_c_saneam_tem.revision_expirada >= 9.699999999E9
+     and eiel_c_saneam_tem."id_municipio" = $P{id_municipio}$P!{filtro_em}]]></queryString>
+
+	<field name="nucleo" class="java.lang.String"/>
+	<field name="tem_material" class="java.lang.String"/>
+	<field name="diametro" class="java.lang.Integer"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="zona" class="java.lang.String"/>
+	<field name="distancia_nucleo" class="java.lang.Integer"/>
+	<field name="aliv_c_acum" class="java.lang.String"/>
+	<field name="aliv_s_acum" class="java.lang.String"/>
+	<field name="pozos_registro" class="java.lang.String"/>
+	<field name="serv_sumideros" class="java.lang.String"/>
+	<field name="viviendas_c_conex" class="java.lang.Integer"/>
+	<field name="viviendas_s_conex" class="java.lang.Integer"/>
+	<field name="viviendas_def_conex" class="java.lang.Integer"/>
+	<field name="long_rs_deficit" class="java.lang.Integer"/>
+	<field name="pobl_est_def_afect" class="java.lang.Integer"/>
+	<field name="caudal_total" class="java.lang.Integer"/>
+	<field name="caudal_tratado" class="java.lang.Integer"/>
+	<field name="reutilizado_urb" class="java.lang.Integer"/>
+	<field name="reutilizado_rust" class="java.lang.Integer"/>
+	<field name="reutilizado_ind" class="java.lang.Integer"/>
+	<field name="serv_observ" class="java.lang.String"/>
+	<field name="id" class="java.math.BigDecimal"/>
+
+	<variable name="var_array_dominios" class="java.lang.Object" resetType="Report" calculation="System">
+	</variable>
+	<variable name="var_array_patterns" class="java.lang.Object" resetType="Report" calculation="System">
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="50"  isSplitAllowed="true" >
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="18"
+						y="4"
+						width="488"
+						height="19"
+						key="subreport-2"
+						isRemoveLineWhenBlank="true"/>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="clave_capa">
+						<subreportParameterExpression><![CDATA["EM"]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<returnValue subreportVariable="var_array_dominios" toVariable="var_array_dominios"/>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"eiel_dominios_BD.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="18"
+						y="23"
+						width="493"
+						height="19"
+						key="subreport-3"
+						isRemoveLineWhenBlank="true"/>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="clave_capa">
+						<subreportParameterExpression><![CDATA["EM"]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<returnValue subreportVariable="var_array_patterns" toVariable="var_array_patterns"/>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"eiel_patterns_BD.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="850"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="10"
+						y="5"
+						width="76"
+						height="22"
+						key="staticText-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="true"/>
+					</textElement>
+				<text><![CDATA[EMISARIOS:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="10"
+						y="49"
+						width="516"
+						height="27"
+						forecolor="#000000"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Verdana" pdfFontName="Helvetica-Oblique" size="8" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["(" + LCGFilter.getValue($V{var_array_dominios},"material") + ")"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="108"
+						y="27"
+						width="418"
+						height="22"
+						forecolor="#000000"
+						key="textField-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[LCGFilter.getValue($V{var_array_patterns},"material_" + $F{tem_material})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="76"
+						width="91"
+						height="22"
+						key="staticText-9"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[Tipo de vertido:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="101"
+						y="76"
+						width="123"
+						height="22"
+						forecolor="#000000"
+						key="textField-2"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[LCGFilter.getValue($V{var_array_patterns},"tipo_" + $F{tipo})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="10"
+						y="98"
+						width="214"
+						height="27"
+						forecolor="#000000"
+						key="textField-3"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Verdana" pdfFontName="Helvetica-Oblique" size="8" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["(" + LCGFilter.getValue($V{var_array_dominios},"tipo") + ")"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="224"
+						y="76"
+						width="98"
+						height="22"
+						key="staticText-11"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[Zona de vertido:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="224"
+						y="98"
+						width="302"
+						height="27"
+						forecolor="#000000"
+						key="textField-7"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Verdana" pdfFontName="Helvetica-Oblique" size="8" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["(" + LCGFilter.getValue($V{var_array_dominios},"zona") + ")"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="322"
+						y="76"
+						width="204"
+						height="22"
+						forecolor="#000000"
+						key="textField-6"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[LCGFilter.getValue($V{var_array_patterns},"zona_" + $F{zona})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="125"
+						width="116"
+						height="22"
+						key="staticText-12"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[Distancia al núcleo:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="189"
+						y="5"
+						width="47"
+						height="22"
+						key="staticText-32"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[Núcleo:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="175"
+						y="125"
+						width="62"
+						height="22"
+						key="staticText-34"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[Diámetro:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="236"
+						y="5"
+						width="290"
+						height="22"
+						forecolor="#000000"
+						key="textField-10"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nucleo}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="237"
+						y="125"
+						width="49"
+						height="22"
+						forecolor="#000000"
+						key="textField-12"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{diametro}.toString()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="126"
+						y="125"
+						width="49"
+						height="22"
+						forecolor="#000000"
+						key="textField-13"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{distancia_nucleo}.toString()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="153"
+						width="153"
+						height="22"
+						key="staticText-35"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="true"/>
+					</textElement>
+				<text><![CDATA[ELEMENTOS ACCESORIOS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="10"
+						y="27"
+						width="98"
+						height="22"
+						key="staticText-37"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[Tipo de material:]]></text>
+				</staticText>
+				<image  scaleImage="FillFrame" vAlign="Top" hAlign="Left" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="18"
+						y="265"
+						width="320"
+						height="336"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="image-1">
+							<printWhenExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></printWhenExpression>
+						</reportElement>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch" fill="Solid" />
+					<imageExpression class="java.awt.Image"><![CDATA[com.geopista.app.reports.maps.MapImageFactory.getParametricMapImage("image-1",$F{id},"1:5000","546","TEM","eiel_c_saneam_tem","id","lcg_pnoa;lcg_point_reports;TEM","6527642624960007325",320,336,$P{ID_ENTIDAD})]]></imageExpression>
+				</image>
+				<image  scaleImage="FillFrame" vAlign="Top" hAlign="Left" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="363"
+						y="267"
+						width="139"
+						height="111"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="image-2">
+							<printWhenExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></printWhenExpression>
+						</reportElement>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch" fill="Solid" />
+					<imageExpression class="java.awt.Image"><![CDATA[com.geopista.app.reports.maps.MapImageFactory.getParametricMapImage("image-2",$F{id},"1:100000","546","TEM","eiel_c_saneam_tem","id","TEM;NP;parroquias","6527642624960007325",139,111,$P{ID_ENTIDAD})]]></imageExpression>
+				</image>
+				<image  scaleImage="FillFrame" vAlign="Top" hAlign="Left" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="368"
+						y="396"
+						width="134"
+						height="116"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="image-3">
+							<printWhenExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></printWhenExpression>
+						</reportElement>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch" fill="Solid" />
+					<imageExpression class="java.awt.Image"><![CDATA[com.geopista.app.reports.maps.MapImageFactory.getParametricMapImage("image-3",$F{id},"1:500000","546","TEM","eiel_c_saneam_tem","id","TEM;parroquias","6527642624960007325",134,116,$P{ID_ENTIDAD})]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement
+						x="10"
+						y="175"
+						width="171"
+						height="22"
+						key="staticText-38"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[Aliviadero con acumulación:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="181"
+						y="175"
+						width="34"
+						height="22"
+						forecolor="#000000"
+						key="textField-14"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{aliv_c_acum}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="216"
+						y="175"
+						width="53"
+						height="22"
+						forecolor="#000000"
+						key="textField-15"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Oblique" size="8" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["(" + LCGFilter.getValue($V{var_array_dominios},"aliv_c_acum") + ")"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="275"
+						y="175"
+						width="158"
+						height="22"
+						key="staticText-39"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[Aliviadero sin acumulación:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="434"
+						y="175"
+						width="30"
+						height="22"
+						forecolor="#000000"
+						key="textField-16"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{aliv_s_acum}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="465"
+						y="175"
+						width="56"
+						height="22"
+						forecolor="#000000"
+						key="textField-17"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Oblique" size="8" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["(" + LCGFilter.getValue($V{var_array_dominios},"aliv_s_acum") + ")"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="340"
+						y="200"
+						width="182"
+						height="22"
+						forecolor="#000000"
+						key="textField-18"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Oblique" size="8" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["(" + LCGFilter.getValue($V{var_array_dominios},"pozos_registro") + ")"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="215"
+						y="200"
+						width="123"
+						height="22"
+						forecolor="#000000"
+						key="textField-19"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[LCGFilter.getValue($V{var_array_patterns},"pozos_registro_" + $F{pozos_registro})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="181"
+						y="200"
+						width="34"
+						height="22"
+						forecolor="#000000"
+						key="textField-20"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{pozos_registro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="200"
+						width="171"
+						height="22"
+						key="staticText-40"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[Número de pozos de registro:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="11"
+						y="223"
+						width="170"
+						height="22"
+						key="staticText-41"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[Número de sumideros:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="181"
+						y="223"
+						width="34"
+						height="22"
+						forecolor="#000000"
+						key="textField-21"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{serv_sumideros}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="215"
+						y="222"
+						width="123"
+						height="22"
+						forecolor="#000000"
+						key="textField-22"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[LCGFilter.getValue($V{var_array_patterns},"sumideros_" + $F{serv_sumideros})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="340"
+						y="223"
+						width="182"
+						height="22"
+						forecolor="#000000"
+						key="textField-23"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Oblique" size="8" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["(" + LCGFilter.getValue($V{var_array_dominios},"sumideros") + ")"]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

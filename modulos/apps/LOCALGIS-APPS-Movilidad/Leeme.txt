@@ -1,0 +1,14 @@
+La aplicación de movilidad localgis-apps-movilidad solo contiene los fuentes para generar los ficheros
+necesarios para distribuir el aplicativo.
+
+Generar 3 ficheros:
+
+localgis-apps-movilidad/dist/instalador/
+
+- localgis-apps-movilidad-tablet.zip
+- localgis-apps-movilidad-configuradorPDA.zip
+- localgis-apps-movilidad-cab.zip
+
+Estos ficheros son utilizados por el otro componente maven localgis-apps-movilidad-distrib
+
+

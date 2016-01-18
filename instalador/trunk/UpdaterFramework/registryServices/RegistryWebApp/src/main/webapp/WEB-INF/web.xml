@@ -1,0 +1,19 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app metadata-complete="true">
+	<listener>
+		<listener-class>com.localgis.ws.datamodel.RegistryDataModel</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>AxisServlet</servlet-name>
+		<display-name>LocalGIS Registry SOAPServlet</display-name>
+		<servlet-class>org.apache.axis2.transport.http.AxisServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AxisServlet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+</web-app>

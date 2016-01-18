@@ -1,0 +1,89 @@
+
+input[type="text"]{
+	border: 2px black solid;
+	font-size:12px;
+    font-weight:bold;
+    font-family:Arial; 	
+ 	filter:alpha(opacity=50);
+    opacity:0.5;
+}
+
+input[type="text"]:hover{
+	border-color: rgb(85,125,193);
+ 	filter:alpha(opacity=80);
+    opacity:0.8;
+}
+
+input[type="text"]:focus{
+	border-color: rgb(85,125,193);
+ 	filter:alpha(opacity=80);
+    opacity:0.8;
+}
+
+/* ----- BODY ----------------------------------------------------- */
+BODY{
+	background-color:#F0F0F0;
+}
+
+/* ----- GENERIC ----------------------------------------------------- */
+.visible{
+	visibility: visible;
+}
+
+.invisible{
+	visibility: hidden;
+}
+
+.ActionBtn{
+	/*background: transparent url(../../img/showFeatureMap/SelectionBtn.png) no-repeat center center;  */
+	background-color:black;
+	margin-top:2px;
+    height:16px;
+    width:70px;  
+    text-align:center;
+    font-size:12px;
+    font-weight:bold;
+    font-family:Arial;
+    color:white;  
+    position: relative;
+    display: inline-block;
+}
+
+.ActionBtn:hover{
+	/*background: transparent url(../../img/showFeatureMap/SelectionBtn_over.png) no-repeat center center;  */
+	background-color:rgb(85,125,193);	
+    cursor:pointer;
+}
+
+.ActionText{
+	color:black;
+	margin-top:2px;    
+    font-size:12px;
+    font-weight:bold;
+    font-family:Arial;
+}
+
+.ActionText:hover{
+	color:rgb(85,125,193);	
+    cursor:pointer;
+}
+
+/* ----- BOTTOM ------------------------------------------------------- */
+
+#bottom{
+	position: absolute;
+	height:35px;
+	width:185px;
+	top:465px;
+	left:0px;
+	z-index: 1000;
+}
+
+#bottomImgLeft{
+	background: transparent url(../../img/showFeatureMap/logo.png) no-repeat center center;  
+    height:35px;
+    width:205px;  
+    position: relative;
+    top:0px;
+    left:0px;
+}

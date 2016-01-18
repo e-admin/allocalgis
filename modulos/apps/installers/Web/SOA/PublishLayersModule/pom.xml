@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>installers</artifactId>
+		<groupId>com.localgis</groupId>
+		<version>3.0.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<groupId>com.localgis.modules.web.soa</groupId>
+	<artifactId>PublishLayersModule</artifactId>
+	<name>PublishLayersModule</name>
+	<description>Metamodulo instalacion Publish Layers LocalGIS</description>
+	<packaging>jar</packaging>
+
+	<properties>
+		<module.title>Modulo PublishLayers LocalGIS</module.title>
+		<module.version>3.0.0</module.version>
+		<module.installType>appWAR</module.installType>
+		<module.artifact.groupId>com.localgis.web</module.artifact.groupId>
+		<module.artifact.id>PublishLayers</module.artifact.id>
+		<module.artifact.version>3.0</module.artifact.version>
+		<module.artifact.type>war</module.artifact.type>
+		<module.artifact.finalName>${module.artifact.id}</module.artifact.finalName>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.localgis.maven.plugin</groupId>
+				<artifactId>updaterPlugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.localgis.modules.web</groupId>
+			<artifactId>RegistryWSModule</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,37 @@
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN"
+    "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+
+<dwr>
+  <allow>
+    <create creator="new" javascript="WFSGService">
+      <param name="class" value="com.localgis.web.gwfst.dwr.WFSGService"/>
+    </create>   
+    <create creator="new" javascript="MarkerService">
+      <param name="class" value="com.localgis.web.gwfst.dwr.MarkerService"/>
+    </create>  
+  	<convert match="com.localgis.web.wfsg.domain.ElementEntity" converter="bean">
+		<param name="include" value="name,numero,posX,posY,exactResult"/>
+	</convert>
+    <convert match="com.localgis.web.gwfst.beans.PlaceNameInfoService" converter="bean">
+        <param name="include" value="name,type,service,featureType"/>
+    </convert>
+    
+    <create creator="new" javascript="Sigm">
+      <param name="class" value="com.localgis.web.gwfst.ws.sigm.dwr.Sigm"/>
+    </create> 
+   <!--  <create creator="new" javascript="DWR_FeatureData">
+      <param name="class" value="com.localgis.web.gwfst.ws.dwr.DWR_FeatureData"/>
+    </create>  -->
+    <convert match="com.localgis.web.gwfst.ws.sigm.beans.PropertyAndName" converter="bean">
+        <param name="include" value="groupTitle,property,name,searchActive,active"/>
+    </convert>
+    <convert match="com.localgis.web.gwfst.ws.sigm.beans.PropertyAndValue" converter="bean">
+        <param name="include" value="groupTitle,property,value"/>
+    </convert>
+    
+    <create creator="new" javascript="GeoService">
+    	<param name="class" value="com.localgis.web.gwfst.dwr.GeoService"/>
+    </create> 
+  </allow>
+</dwr>

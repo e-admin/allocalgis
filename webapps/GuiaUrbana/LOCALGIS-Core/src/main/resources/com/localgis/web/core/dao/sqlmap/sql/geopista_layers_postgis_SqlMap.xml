@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geopista_layers">
+
+  <select id="selectLayersByIdMapAndIdEntidad" parameterClass="java.util.Map" resultMap="GeopistaLayerResult">
+    select l.id_layer as id_layer,
+           l.name as name,
+           q.selectquery as selectquery, 
+           s.id_style as id_style,
+           ls.stylename as name_style,
+           s.xml as xml_style,
+           ls."position" as position,
+           mlr."position" as position_layer_family,
+           ls.isvisible as isvisible
+    from maps m1 left outer join maps m2 on m1.id_entidad = 0 and m2.id_entidad = #idEntidad# and m1.id_map = m2.id_map
+                 inner join maps_layerfamilies_relations mlr on m1.id_map = mlr.id_map 
+                 inner join layerfamilies lf on mlr.id_layerfamily = lf.id_layerfamily and mlr.id_entidad = m1.id_entidad
+                 inner join layerfamilies_layers_relations llr on lf.id_layerfamily=llr.id_layerfamily
+                 inner join layers l on llr.id_layer=l.id_layer
+                 inner join queries q on q.id_layer=l.id_layer and q.databasetype = 1
+                 left join layers_styles ls on m1.id_map = ls.id_map and lf.id_layerfamily = ls.id_layerfamily and ls.id_layer = l.id_layer and ls.id_entidad=m1.id_entidad
+                 left join styles s on s.id_style=ls.id_style
+    where m2.id_map is null and (m1.id_entidad = #idEntidad# or m1.id_entidad = 0) and
+          m1.id_map=#idMap# and 
+          s.id_style is not null
+    order by ls."position"
+    <!--  Con esta query se perdian las capas al republicar un mapa que en la base de datos de Geopista solo estaba con municipio 0 -->
+    <!-- 
+    select l.id_layer as id_layer,
+           l.name as name,
+           q.selectquery as selectquery, 
+           s.id_style as id_style,
+           ls.stylename as name_style,
+           s.xml as xml_style,
+           ls."position" as position
+    from maps m inner join maps_layerfamilies_relations mlr on m.id_map = mlr.id_map 
+                inner join layerfamilies lf on mlr.id_layerfamily = lf.id_layerfamily
+                inner join layerfamilies_layers_relations llr on lf.id_layerfamily=llr.id_layerfamily
+                inner join layers l on llr.id_layer=l.id_layer
+                inner join queries q on q.id_layer=l.id_layer
+                left join layers_styles ls on m.id_map = ls.id_map and lf.id_layerfamily = ls.id_layerfamily and ls.id_layer = l.id_layer
+                left join styles s on s.id_style=ls.id_style
+    where m.id_map=#idMap# and 
+          s.id_style is not null and 
+          m.id_entidad=#idEntidad# and 
+          mlr.id_entidad=#idEntidad# and
+          ls.id_entidad=#idEntidad#
+    order by ls."position"
+    -->
+    <!--
+    En principio no es necesario ordenar porque nos vamos a traer la posicion  
+    order by mlr.position,llr.position,l.id_layer
+    -->
+	<!-- 
+	mlr.position as mlr_position, " +
+	                            "d1.traduccion as nombre_categoria, d2.traduccion as nombre_layer,lf.id_layerfamily as lf_id_layerfamily," +
+	                            "l.id_layer as l_id_layer," +
+	                            "l.name as l_name," +
+	                            "l.acl as l_acl," +
+	                            "llr.position as llr_position," +
+	                            "ls.stylename as ls_stylename," +
+	                            "ls.position as ls_position," +
+	                            "s.xml as s_xml," +
+	                            "s.id_style as s_id_style," +
+	                            "q.selectquery as q_selectquery " +
+	                    "from maps m inner join maps_layerfamilies_relations mlr on m.id_map=mlr.id_map " +
+	                            "inner join layerfamilies lf on mlr.id_layerfamily=lf.id_layerfamily " +
+	                            "inner join layerfamilies_layers_relations llr on lf.id_layerfamily=llr.id_layerfamily " +
+	                            "inner join layers l on llr.id_layer=l.id_layer " +
+	                            "inner join queries q on q.id_layer=l.id_layer " +
+	                            "left join layers_styles ls on m.id_map=ls.id_map and lf.id_layerfamily=ls.id_layerfamily and ls.id_layer=l.id_layer " +
+	                            "left join styles s on s.id_style=ls.id_style " +
+	                           // "inner join dictionary d on (lf.id_name=d.id_vocablo  or l.id_name=d.id_vocablo) " + ASO cambia esta mal
+	                           "inner join dictionary d1 on lf.id_name=d1.id_vocablo " +
+	                           "inner join dictionary d2 on l.id_name=d2.id_vocablo " +
+	                    "where m.id_map=? and d1.locale=? and d2.locale=?" +
+	                    "and s.id_style is not null and m.id_entidad=? and mlr.id_entidad=? "+
+	                    "and ls.id_entidad=?" +//Añadido por ASO
+                        "order by mlr.position,llr.position,l.id_layer    select maps.id_map, maps.id_entidad, maps.xml, maps.projection_id, dictionary.traduccion as name
+    from maps maps, dictionary dictionary
+    where (maps.id_entidad = #idMap# or maps.id_entidad = 0) and
+          dictionary.id_vocablo = maps.id_name and
+          dictionary.locale = #locale#
+          -->
+  </select>
+
+  <select id="selectLayersByIdEntidad" parameterClass="java.util.Map" resultMap="GeopistaLayerResultRestricted">
+    select distinct l.id_layer as id_layer,
+           l.name as name    
+    from maps m inner join maps_layerfamilies_relations mlr on m.id_map = mlr.id_map 
+                inner join layerfamilies lf on mlr.id_layerfamily = lf.id_layerfamily
+                inner join layerfamilies_layers_relations llr on lf.id_layerfamily=llr.id_layerfamily
+                inner join layers l on llr.id_layer=l.id_layer
+                inner join queries q on q.id_layer=l.id_layer and q.databasetype = 1
+    where (m.id_entidad=#idEntidad# or m.id_entidad=0) and 
+          (mlr.id_entidad=#idEntidad# or  mlr.id_entidad=0)
+    order by l.name
+
+  </select>
+
+
+
+</sqlMap>

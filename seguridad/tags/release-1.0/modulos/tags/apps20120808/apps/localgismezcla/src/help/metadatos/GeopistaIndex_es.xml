@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN" 
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+
+<index version="1.0">
+      <indexitem text="Introducción" target="geopistaIntro"/>
+      <indexitem text="Acceso" target="geopistaAcceso"/>
+      <indexitem text="Archivo" target="geopistaArchivo">
+            <indexitem text="Abrir sesión" target="geopistaArchivoAbrir"/>
+            <indexitem text="Cerrar sesión" target="geopistaArchivoCerrar"/>
+      </indexitem>
+      <indexitem text="Gestión de Metadatos" target="geopistaMetadatos">
+          <indexitem text="Consultar metadatos" target="geopistaConsultar"/>
+          <indexitem text="Crear metadato" target="geopistaCrear"/>
+          <indexitem text="Contactos" target="geopistaContactos"/>
+      </indexitem>
+      <indexitem text="Idioma" target="geopistaIdioma"/>
+      <indexitem text="Edición del Metadato" target="geopistaEdicion">
+          <indexitem text="Metadato" target="geopistaMetadato"/>
+          <indexitem text="Identificación" target="geopistaIdentificacion">
+              <indexitem text="Categoría" target="geopistaIdentificacionCategoria"/>
+              <indexitem text="Extensión" target="geopistaIdentificacionExtension"/>
+              <indexitem text="Gráficos" target="geopistaIdentificacionGraficos"/>
+              <indexitem text="Restricciones" target="geopistaIdentificacionRestricciones"/>
+          </indexitem>
+          <indexitem text="Sistema de referencia" target="geopistaReferencia"/>
+          <indexitem text="Calidad" target="geopistaCalidad"/>
+          <indexitem text="Distribución" target="geopistaDistribucion"/>
+          <indexitem text="Otras pantallas" target="geopistaOtras">
+                <indexitem text="Citación" target="geopistaCitacion"/>
+                <indexitem text="Formatos distribución" target="geopistaFormatos"/>
+                <indexitem text="Fecha" target="geopistaFecha"/>
+                <indexitem text="Recursos en linea" target="geopistaRecursos"/>
+          </indexitem>
+      </indexitem>
+      <indexitem text="Código de colores" target="geopistaColores"/>
+ </index>
+

@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.localgis.app</groupId>
+	<artifactId>localgis-apps-gestorfip</artifactId>
+	<version>3.0</version>
+	<packaging>jar</packaging>
+	<name>localgis-apps-gestorfip</name>
+	<description>Open Source GIS cliente Gestor FIP</description>
+	<organization>
+		<name>MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO</name>
+	</organization>
+	<parent>
+		<groupId>com.localgis</groupId>
+		<artifactId>localgis-parent-apps</artifactId>
+		<version>3.0</version>
+	</parent>
+
+	<properties>
+		<!--project.build.sourceEncoding>UTF-8</project.build.sourceEncoding-->
+		<!-- Configuracion jnlp -->
+		<mainClassJnlp>com.gestorfip.app.planeamiento.LocalGISGestorFip</mainClassJnlp>
+		<argProperties>workbench-properties-gestorfip.xml</argProperties>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+	        <groupId>commons-codec</groupId>
+	        <artifactId>commons-codec</artifactId>
+	        <version>1.6</version>
+       	</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.workbench</groupId>
+			<artifactId>localgis-workbench</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.const</groupId>
+			<artifactId>localgis-const</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.juniversalchardet</groupId>
+			<artifactId>juniversalchardet</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.plugin</groupId>
+			<artifactId>localgis-defaultplugins</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.web</groupId>
+			<artifactId>localgis-gestorfip-client</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.utils</groupId>
+			<artifactId> localgis-utils-gestorfip</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.plugin</groupId>
+			<artifactId>localgis-plugin-fichaurbanistica</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.plugin</groupId>
+			<artifactId>localgis-plugin-rpm</artifactId>
+			<version>3.0</version>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>com.localgis.ui</groupId>
+			<artifactId>localgis-ui</artifactId>
+			<version>3.0</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.plugin</groupId>
+			<artifactId>localgis-plugin-opengestor</artifactId>
+			<version>3.0</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.plugin</groupId>
+			<artifactId>localgis-plugin-loadcatastrolayers</artifactId>
+			<version>3.0</version>
+			<scope>runtime</scope>
+		</dependency>
+		
+	</dependencies>
+
+</project>

@@ -1,0 +1,3 @@
+com.localgis.modules:exampleModule:jar:0.0.1-SNAPSHOT
+   com.localgis.modules:exampleModule2:jar:0.0.1-SNAPSHOT:compile
+      com.localgis.modules:exampleModule3:jar:0.0.1-SNAPSHOT:compile

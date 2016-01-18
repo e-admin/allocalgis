@@ -1,0 +1,153 @@
+<root>
+			<element xml-name="ucf" java-condition1="isCatastroTemporal">
+				<element xml-name="iducat">
+					<element xml-name="ruc">
+						<element xml-name="pc1" java-name="refParcela.refCatastral1"/>
+						<element xml-name="pc2" java-name="refParcela.refCatastral2"/>
+						<element xml-name="cuc" java-name="codUnidadConstructiva"/>
+					</element>
+					<element xml-name="cn" java-name="tipoUnidad"/>
+					<element xml-name="locat">
+						<element xml-name="cd" java-name="codDelegacionMEH"/>
+						<element xml-name="cmc" java-name="codMunicipioDGC" length="3"/>
+					</element>
+				</element>
+				<element xml-name="dt">
+					<element xml-name="loine">
+						<element xml-name="cp" java-name="dirUnidadConstructiva.provinciaINE"/>
+						<element xml-name="cm" java-name="dirUnidadConstructiva.municipioINE"/>
+					</element>
+					<element xml-name="cmc" java-name="dirUnidadConstructiva.codigoMunicipioDGC"/>
+					<element xml-name="np" java-name="dirUnidadConstructiva.nombreProvincia"/>
+					<element xml-name="nm" java-name="dirUnidadConstructiva.nombreMunicipio"/>
+					<element xml-name="nem" java-name="dirUnidadConstructiva.nombreEntidadMenor"/>
+					<element xml-name="lourb">
+						<element xml-name="dir">
+							<element xml-name="cv" java-name="dirUnidadConstructiva.codigoVia" null-value="-1"/>
+							<element xml-name="tv" java-name="dirUnidadConstructiva.tipoVia"/>
+							<element xml-name="nv" java-name="dirUnidadConstructiva.nombreVia"/>
+							<element xml-name="pnp" java-name="dirUnidadConstructiva.primerNumero" null-value="-1"/>
+							<element xml-name="plp" java-name="dirUnidadConstructiva.primeraLetra"/>
+							<element xml-name="snp" java-name="dirUnidadConstructiva.segundoNumero" null-value="-1"/>
+							<element xml-name="slp" java-name="dirUnidadConstructiva.segundaLetra"/>
+							<element xml-name="km" java-name="dirUnidadConstructiva.kilometro" null-value="-1.0"/>
+							<element xml-name="td" java-name="dirUnidadConstructiva.direccionNoEstructurada"/>
+						</element>
+					</element>
+				</element>
+				<element xml-name="dfuc">
+					<element xml-name="ac" java-name="datosFisicos.anioConstruccion"/>
+					<element xml-name="iacons" java-name="datosFisicos.indExactitud"/>
+					<element xml-name="so" java-name="datosFisicos.supOcupada"/>
+					<element xml-name="lf" java-name="datosFisicos.longFachada"/>
+				</element>
+				<element xml-name="dvuc">
+					<element xml-name="fpon">
+						<element xml-name="cvpv" java-name="datosEconomicos.codViaPonencia"/>
+						<element xml-name="ctvpv" java-name="datosEconomicos.tramoPonencia.codTramo"/>
+						<element xml-name="zv" java-name="datosEconomicos.zonaValor.codZonaValor"/>
+					</element>
+					<element xml-name="ccvsuc">
+						<element xml-name="nf" java-name="datosEconomicos.numFachadas"/>
+						<element xml-name="ilf" java-name="datosEconomicos.correctorLongFachada"/>
+					</element>
+					<element xml-name="ccvcuc">
+						<element xml-name="ccec" java-name="datosEconomicos.correctorConservacion"/>
+					</element>
+					<element xml-name="ccvscuc">
+						<element xml-name="iccdf" java-name="datosEconomicos.correctorDepreciacion"/>
+						<element xml-name="vcccs" java-name="datosEconomicos.coefCargasSingulares"/>
+						<element xml-name="iccsce" java-name="datosEconomicos.correctorSitEspeciales"/>
+						<element xml-name="iccunl" java-name="datosEconomicos.correctorNoLucrativo"/>
+					</element>
+				</element>
+			</element>
+			<element xml-name="movf" java-condition1="isCatastroTemporal">
+				<element xml-name="tmov" java-name="TIPO_MOVIMIENTO"/>
+			</element>
+			
+			<element xml-name="uceam" java-condition="isUCAltaModif" java-condition1="isNotCatastroTemporal">
+				<element xml-name="iducat">
+					<element xml-name="ruc">
+						<element xml-name="pc1" java-name="refParcela.refCatastral1"/>
+						<element xml-name="pc2" java-name="refParcela.refCatastral2"/>
+						<element xml-name="cuc" java-name="codUnidadConstructiva"/>
+					</element>
+					<element xml-name="cn" java-name="tipoUnidad"/>
+					<element xml-name="locat">
+						<element xml-name="cd" java-name="codDelegacionMEH"/>
+						<element xml-name="cmc" java-name="codMunicipioDGC" length="3"/>
+					</element>
+				</element>
+				<element xml-name="dt">
+					<element xml-name="loine">
+						<element xml-name="cp" java-name="dirUnidadConstructiva.provinciaINE"/>
+						<element xml-name="cm" java-name="dirUnidadConstructiva.municipioINE"/>
+					</element>
+					<element xml-name="cmc" java-name="dirUnidadConstructiva.codigoMunicipioDGC"/>
+					<element xml-name="np" java-name="dirUnidadConstructiva.nombreProvincia"/>
+					<element xml-name="nm" java-name="dirUnidadConstructiva.nombreMunicipio"/>
+					<element xml-name="nem" java-name="dirUnidadConstructiva.nombreEntidadMenor"/>
+					<element xml-name="lourb">
+						<element xml-name="dir">
+							<element xml-name="cv" java-name="dirUnidadConstructiva.codigoVia" null-value="-1"/>
+							<element xml-name="tv" java-name="dirUnidadConstructiva.tipoVia"/>
+							<element xml-name="nv" java-name="dirUnidadConstructiva.nombreVia"/>
+							<element xml-name="pnp" java-name="dirUnidadConstructiva.primerNumero" null-value="-1"/>
+							<element xml-name="plp" java-name="dirUnidadConstructiva.primeraLetra"/>
+							<element xml-name="snp" java-name="dirUnidadConstructiva.segundoNumero" null-value="-1"/>
+							<element xml-name="slp" java-name="dirUnidadConstructiva.segundaLetra"/>
+							<element xml-name="km" java-name="dirUnidadConstructiva.kilometro" null-value="-1.0"/>
+							<element xml-name="td" java-name="dirUnidadConstructiva.direccionNoEstructurada"/>
+						</element>
+					</element>
+				</element>
+				<element xml-name="dfuc">
+					<element xml-name="ac" java-name="datosFisicos.anioConstruccion"/>
+					<element xml-name="iacons" java-name="datosFisicos.indExactitud"/>
+					<element xml-name="so" java-name="datosFisicos.supOcupada"/>
+					<element xml-name="lf" java-name="datosFisicos.longFachada"/>
+				</element>
+				<element xml-name="dvuc">
+					<element xml-name="fpon">
+						<element xml-name="cvpv" java-name="datosEconomicos.codViaPonencia"/>
+						<element xml-name="ctvpv" java-name="datosEconomicos.tramoPonencia.codTramo"/>
+						<element xml-name="zv" java-name="datosEconomicos.zonaValor.codZonaValor"/>
+					</element>
+					<element xml-name="ccvsuc">
+						<element xml-name="nf" java-name="datosEconomicos.numFachadas"/>
+						<element xml-name="ilf" java-name="datosEconomicos.correctorLongFachada"/>
+					</element>
+					<element xml-name="ccvcuc">
+						<element xml-name="ccec" java-name="datosEconomicos.correctorConservacion"/>
+					</element>
+					<element xml-name="ccvscuc">
+						<element xml-name="iccdf" java-name="datosEconomicos.correctorDepreciacion"/>
+						<element xml-name="vcccs" java-name="datosEconomicos.coefCargasSingulares"/>
+						<element xml-name="iccsce" java-name="datosEconomicos.correctorSitEspeciales"/>
+						<element xml-name="iccunl" java-name="datosEconomicos.correctorNoLucrativo"/>
+					</element>
+				</element>
+			</element>
+			<element xml-name="movam" java-condition="isUCAltaModif" java-condition1="isNotCatastroTemporal">
+				<element xml-name="tmov" java-name="TIPO_MOVIMIENTO"/>
+			</element>
+			
+			<element xml-name="uceb" java-condition="isUCElim" java-condition1="isNotCatastroTemporal">	
+				<element xml-name="iducat">
+					<element xml-name="ruc">
+						<element xml-name="pc1" java-name="refParcela.refCatastral1"/>
+						<element xml-name="pc2" java-name="refParcela.refCatastral2"/>
+						<element xml-name="cuc" java-name="codUnidadConstructiva"/>
+					</element>
+					<element xml-name="cn" java-name="tipoUnidad"/>
+					<element xml-name="locat">
+						<element xml-name="cd" java-name="codDelegacionMEH"/>
+						<element xml-name="cmc" java-name="codMunicipioDGC" length="3"/>
+					</element>
+				</element>
+			</element>
+			<element xml-name="movb" java-condition="isUCElim" java-condition1="isNotCatastroTemporal">
+				<element xml-name="tmov" java-name="TIPO_MOVIMIENTO"/>
+			</element>
+</root>

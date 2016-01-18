@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="localgis_map_server_layer">
+
+  <insert id="insert" parameterClass="com.localgis.web.core.model.LocalgisMapServerLayer">
+    <selectKey keyProperty="id" resultClass="java.lang.Integer">
+      select nextval('localgisguiaurbana.layersequence')
+    </selectKey>
+    insert into localgisguiaurbana.map_server_layer (id, service, url, layers, srs, format, version, activa,
+      visible, mapid, position, idgeopista)
+    values (#id:INTEGER#, #service:VARCHAR#, #url:VARCHAR#, #layers:VARCHAR#, #srs:VARCHAR#,
+      #format:VARCHAR#, #version:VARCHAR#, #activa:NUMERIC#, #visible:NUMERIC#, #mapid:INTEGER#,
+      #position:NUMERIC#, #idgeopista:INTEGER#)
+  </insert>
+
+</sqlMap>

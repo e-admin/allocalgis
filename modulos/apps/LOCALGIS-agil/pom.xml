@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.localgis.lib</groupId>
+  <artifactId>localgis-agil</artifactId>
+  <name>LOCALGIS agil</name>
+  <version>3.0</version>
+  <url>http://maven.apache.org</url>
+  <parent>
+    <groupId>com.localgis</groupId>
+    <artifactId>localgis-parent</artifactId>
+    <version>3.0</version>
+  </parent>
+  
+  <build>	
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<target>1.7</target>
+					<source>1.7</source>
+					<!-- Evitar el error de las dependencias de com.sun.image.codec.jpeg -->
+					<compilerArgument>-XDignore.symbol.file=true</compilerArgument>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+  <dependencies>
+  	<dependency>
+  		<groupId>com.vividsolutions</groupId>
+  		<artifactId>jts</artifactId>
+  		<version>1.12</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.localgis.context</groupId>
+  		<artifactId>localgis-context</artifactId>
+  		<version>3.0</version>
+  	</dependency>
+	<dependency>
+	  <groupId>com.localgis</groupId>
+	  <artifactId>agile_core</artifactId>
+	  <version>1.0.0</version>
+	</dependency>
+  	<dependency>
+  		<groupId>com.localgis.utils</groupId>
+  		<artifactId>localgis-utils</artifactId>
+  		<version>3.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>servletapi</groupId>
+  		<artifactId>servlet-api</artifactId>
+  		<version>2.4</version>
+  		<scope>provided</scope>
+  	</dependency>
+  </dependencies>  
+</project>

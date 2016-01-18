@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geopista_vias">
+
+  <select id="selectViaById" resultMap="GeopistaViaResult">
+    select id, SDO_GEOM.SDO_CENTROID("GEOMETRY", metadata.diminfo).SDO_POINT.X as x_centered, SDO_GEOM.SDO_CENTROID("GEOMETRY", metadata.diminfo).SDO_POINT.Y as y_centered
+    from vias, user_sdo_geom_metadata metadata
+    where id = #id# and metadata.table_name = 'VIAS' and metadata.column_name = 'GEOMETRY'
+  </select>
+
+</sqlMap>

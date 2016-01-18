@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="cementerio_unidadenterramiento">
+  <resultMap class="com.geopista.app.cementerios.business.vo.General" id="ibatorgenerated_BaseResultMap">
+
+    <result column="attname" jdbcType="VARCHAR" property="attname" />
+    <result column="attlen" jdbcType="INTEGER" property="attlen" />
+    <result column="format_type" jdbcType="VARCHAR" property="format_type" />
+    <result column="attrelid" jdbcType="VARCHAR" property="attrelid" />
+    
+  </resultMap>
+
+  <select id="selectByRegClass" parameterClass="com.geopista.app.cementerios.business.vo.General" resultMap="ibatorgenerated_BaseResultMap">
+	SELECT attname, attlen, atttypmod, format_type(atttypid, atttypmod), attrelid::regclass
+	FROM pg_attribute
+	WHERE attrelid = #attrelid:VARCHAR#::regclass AND attnum > 0 and (format_type(atttypid, atttypmod) != '-' ) ;
+  </select>
+
+</sqlMap>

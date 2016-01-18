@@ -1,0 +1,49 @@
+//
+// Licensed Materials - Property of IBM,
+// (c) Copyright IBM Corp. 1998, 2005  All Rights Reserved
+//
+
+// This is the default system policy file
+// It should be named: ${java.home}/lib/security/java.policy
+
+// by default, all system extensions get AllPermission
+grant codeBase "file:${java.home}/lib/ext/*" {
+	permission java.security.AllPermission;
+};
+
+// by default, all optional package system extensions get AllPermission
+grant codeBase "file:${java.home}/lib/${com.ibm.oti.configuration.dir}/opt-ext/*" {
+	permission java.security.AllPermission;
+};
+
+// these are the default permissions granted to any codesource
+grant { 
+	// Uncomment to allow use of the deprecated method java.lang.Thread.stop()
+	// permission java.lang.RuntimePermission "stopThread";
+
+	/*[IF mNet|eNet]*/
+	// allow anyone to bind to non-privileged ports
+	permission java.net.SocketPermission "localhost:1024-","listen";
+	/*[ENDIF]*/
+	// system properies anyone should be allowed to read
+	permission java.util.PropertyPermission "file.separator","read";
+	permission java.util.PropertyPermission "line.separator","read";
+	permission java.util.PropertyPermission "path.separator","read";
+	permission java.util.PropertyPermission "java.class.version","read";
+	permission java.util.PropertyPermission "java.specification.version","read";
+	permission java.util.PropertyPermission "java.specification.vendor","read";
+	permission java.util.PropertyPermission "java.specification.name","read";
+	permission java.util.PropertyPermission "java.version","read";
+	permission java.util.PropertyPermission "java.vendor","read";
+	permission java.util.PropertyPermission "java.vendor.url","read";
+	permission java.util.PropertyPermission "java.vm.specification.vendor","read";
+	permission java.util.PropertyPermission "java.vm.specification.name","read";
+	permission java.util.PropertyPermission "java.vm.specification.version","read";	
+	permission java.util.PropertyPermission "java.vm.version","read";
+	permission java.util.PropertyPermission "java.vm.vendor","read";
+	permission java.util.PropertyPermission "java.vm.name","read";
+	permission java.util.PropertyPermission "os.name","read";
+	permission java.util.PropertyPermission "os.version","read";
+	permission java.util.PropertyPermission "os.arch","read";
+	permission com.ibm.oti.security.permissions.awt.AWTPermissionEx "fileDialog";
+};

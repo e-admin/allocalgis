@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+  <largeur>595</largeur>
+  <hauteur>841</hauteur>
+  <largeurSansMarge>451</largeurSansMarge>
+  <hauteurSansMarge>697</hauteurSansMarge>
+  <top>72</top>
+  <left>72</left>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.legendeFrame.LegendFrame">
+    <PrintHeight>215</PrintHeight>
+    <PrintWidth>336</PrintWidth>
+    <PrintX>23</PrintX>
+    <PrintY>468</PrintY>
+    <ScreenHeight>154</ScreenHeight>
+    <ScreenWidth>240</ScreenWidth>
+    <ScreenX>17</ScreenX>
+    <ScreenY>335</ScreenY>
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>240</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>154</BottomLeftCornery>
+    <BottomRightCornerx>240</BottomRightCornerx>
+    <BottomRightCornery>154</BottomRightCornery>
+    <titleMapLegendFont>
+      <FontName>Arial</FontName>
+      <FontStyle>1</FontStyle>
+      <FontSize>12</FontSize>
+      <Color>0, 0, 0, 255</Color>
+      <Underline>false</Underline>
+      <UpperCase>false</UpperCase>
+    </titleMapLegendFont>
+    <labelMapLegendFont>
+      <FontName>Arial</FontName>
+      <FontStyle>0</FontStyle>
+      <FontSize>12</FontSize>
+      <Color>0, 0, 0, 255</Color>
+      <Underline>false</Underline>
+      <UpperCase>false</UpperCase>
+    </labelMapLegendFont>
+    <select>false</select>
+  </graphicElement>
+  <graphicElement class="com.geopista.ui.plugin.print.elements.MapFrame">
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>308</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>272</BottomLeftCornery>
+    <BottomRightCornerx>308</BottomRightCornerx>
+    <BottomRightCornery>272</BottomRightCornery>
+    <PrintHeight>380</PrintHeight>
+    <PrintWidth>431</PrintWidth>
+    <PrintX>9</PrintX>
+    <PrintY>61</PrintY>
+    <ScreenHeight>272</ScreenHeight>
+    <ScreenWidth>308</ScreenWidth>
+    <ScreenX>7</ScreenX>
+    <ScreenY>44</ScreenY>
+    <select>false</select>
+    <BorderColor>0, 51, 51, 255</BorderColor>
+    <BorderThickness>1</BorderThickness>
+    <FullExtent>false</FullExtent>
+  </graphicElement>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.NorthFrame">
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>37</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>36</BottomLeftCornery>
+    <BottomRightCornerx>37</BottomRightCornerx>
+    <BottomRightCornery>36</BottomRightCornery>
+    <PrintHeight>50</PrintHeight>
+    <PrintWidth>51</PrintWidth>
+    <PrintX>389</PrintX>
+    <PrintY>61</PrintY>
+    <ScreenHeight>36</ScreenHeight>
+    <ScreenWidth>37</ScreenWidth>
+    <ScreenX>278</ScreenX>
+    <ScreenY>44</ScreenY>
+    <select>false</select>
+    <NorthIconNumber>3</NorthIconNumber>
+  </graphicElement>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.graphicText.GraphicText">
+    <PrintHeight>39</PrintHeight>
+    <PrintWidth>411</PrintWidth>
+    <PrintX>21</PrintX>
+    <PrintY>8</PrintY>
+    <ScreenHeight>28</ScreenHeight>
+    <ScreenWidth>294</ScreenWidth>
+    <ScreenX>15</ScreenX>
+    <ScreenY>6</ScreenY>
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>294</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>28</BottomLeftCornery>
+    <BottomRightCornerx>294</BottomRightCornerx>
+    <BottomRightCornery>28</BottomRightCornery>
+    <Texte>Gestión del Espacio Público</Texte>
+    <FontName>Arial</FontName>
+    <FontStyle>0</FontStyle>
+    <FontSize>12</FontSize>
+    <HorizontalAlignment>0</HorizontalAlignment>
+    <VerticalAlignment>0</VerticalAlignment>
+    <FontColor>0, 0, 0, 255</FontColor>
+    <BackgroundColor>236, 233, 216, 255</BackgroundColor>
+    <BorderColor>255, 255, 255, 255</BorderColor>
+    <BorderThickness>1</BorderThickness>
+    <UpperCase>false</UpperCase>
+    <Underline>false</Underline>
+    <Opaque>false</Opaque>
+    <select>false</select>
+  </graphicElement>
+</page>
+

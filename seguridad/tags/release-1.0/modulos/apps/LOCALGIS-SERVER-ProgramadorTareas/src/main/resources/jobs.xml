@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job-scheduling-data xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData http://www.quartz-scheduler.org/xml/job_scheduling_data_1_8.xsd"
+  version="1.8">
+  
+    <pre-processing-commands>
+        <delete-jobs-in-group>*</delete-jobs-in-group>
+        <delete-triggers-in-group>*</delete-triggers-in-group>
+    </pre-processing-commands>
+    
+    <processing-directives>
+        <overwrite-existing-data>false</overwrite-existing-data>
+        <ignore-duplicates>true</ignore-duplicates>
+    </processing-directives>
+ 
+    <schedule>
+        <trigger>
+            <simple>
+	            <name>TestTaskTrigger</name>
+	            <group>TestTaskTriggers</group>
+                <job-name>TestTaskJob</job-name>     
+                <job-group>TestTaskJobs</job-group>
+	            <repeat-count>-1</repeat-count> <!-- repeat forever  -->
+	            <repeat-interval>20000</repeat-interval>  <!--  every 10 seconds -->
+	        </simple>
+        </trigger> 
+        <job>
+            <name>TestTaskJob</name>
+            <group>TestTaskJobs</group>
+            <job-class>com.localgis.server.task.jobs.ScheduleJob</job-class>
+            <job-data-map>
+                <entry>
+                    <key>mainClass</key>
+                    <value>com.localgis.server.taskscheduler.test.tasks.TestTask</value>
+                </entry>
+                <entry>
+                    <key>mainClassMethod</key>
+                    <value>main</value>
+                </entry>
+            </job-data-map>
+        </job> 
+    </schedule>     
+   <!--<schedule>
+        <trigger>
+            <cron>
+                <name>EIELIndicadoresBatchGeneratorTrigger</name>
+                <group>EIELIndicadoresBatchGeneratorTriggers</group>
+                <job-name>EIELIndicadoresBatchGeneratorJob</job-name>
+                <job-group>EIELIndicadoresBatchGeneratorJobs</job-group>
+                <cron-expression>0/20 * * * * ?</cron-expression>
+            </cron>
+        </trigger> 
+        <job>
+            <name>EIELIndicadoresBatchGeneratorJob</name>
+            <group>EIELIndicadoresBatchGeneratorJobs</group>
+            <job-class>com.localgis.server.task.jobs.ScheduleJob</job-class>
+            <job-data-map>
+                <entry>
+                    <key>mainClass</key>
+                    <value>com.geopista.app.eiel.EIELIndicadoresBatchGenerator</value>
+                </entry>
+                <entry>
+                    <key>mainClassMethod</key>
+                    <value>main</value>
+                </entry>
+            </job-data-map>
+        </job> 
+    </schedule>
+    <schedule>
+        <trigger>
+            <cron>
+                <name>LuceneIndexerTrigger</name>
+                <group>LuceneIndexerTriggers</group>
+                <job-name>LuceneIndexerJob</job-name>
+                <job-group>LuceneIndexerJobs</job-group>
+                <cron-expression>0 22 12 * * ?</cron-expression>
+            </cron>
+        </trigger> 
+        <job>
+            <name>LuceneIndexerJob</name>
+            <group>LuceneIndexerJobs</group>
+            <job-class>com.localgis.server.task.jobs.ScheduleJob</job-class>
+            <job-data-map>
+                <entry>
+                    <key>mainClass</key>
+                    <value>com.localgis.index.LocalgisLayerIndexer</value>
+                </entry>
+                <entry>
+                    <key>mainClassMethod</key>
+                    <value>main</value>
+                </entry>
+            </job-data-map>
+        </job> 
+    </schedule>-->
+</job-scheduling-data>

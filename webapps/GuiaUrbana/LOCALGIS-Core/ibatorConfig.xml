@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration >
+  <classPathEntry location="C:\Documents and Settings\david.caaveiro\.m2\repository\postgresql\postgresql\8.0-311.jdbc3\postgresql-8.0-311.jdbc3.jar"/>
+  <ibatorContext id="contextPrincipal" >
+    <jdbcConnection driverClass="org.postgresql.Driver" connectionURL="jdbc:postgresql://localhost:5432/geopista" userId="geopista" password="geopista" />
+	    <javaModelGenerator targetPackage="com.localgis.web.core.model" targetProject="LOCALGIS-Core/src/main/java" />
+    <sqlMapGenerator targetPackage="sqlMaps" targetProject="LOCALGIS-Core/src/main/resources" />
+    <daoGenerator targetPackage="com.localgis.web.core.dao" targetProject="LOCALGIS-Core/src/main/java" type="IBATIS" implementationPackage="com.localgis.web.core.dao.sqlmap"/>
+    <table schema="public" tableName="entidad_supramunicipal" domainObjectName="GeopistaEntidadSupramunicipal" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableInsert="false" enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false">
+    </table>
+  </ibatorContext>
+</ibatorConfiguration>

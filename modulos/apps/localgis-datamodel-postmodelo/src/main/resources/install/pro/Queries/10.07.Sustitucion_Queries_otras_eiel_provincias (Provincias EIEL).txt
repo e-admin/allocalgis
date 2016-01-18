@@ -1,0 +1,18 @@
+-- eiel_provincias (Provincias EIEL)
+--
+-- Sustitucion de la select query
+--
+select selectquery  from queries
+where id_layer=(select id_layer from layers where name='eiel_provincias')
+
+select replace(selectquery,'"eiel_c_provincia"."GEOMETRY"','transform("eiel_c_provincia"."GEOMETRY" , ?T) as "GEOMETRY"') from queries
+where id_layer=(select id_layer from layers where name='eiel_provincias')
+
+update queries set selectquery=(select replace(selectquery,'"eiel_c_provincia"."GEOMETRY",','transform("eiel_c_provincia"."GEOMETRY" , ?T) as "GEOMETRY"') from queries
+where id_layer=(select id_layer from layers where name='eiel_provincias')) 
+where id_layer=(select id_layer from layers where name='eiel_provincias');
+
+
+
+
+

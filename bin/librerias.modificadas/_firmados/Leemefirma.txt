@@ -1,0 +1,7 @@
+
+
+jarsigner -keystore ..\..\sign\GeopistaKeyStore xstream-1.4.3.jar -signedjar xstream-1.4.3.jar.signed -storepass geopista99 -keypass geopista99 geopista
+
+jarsigner -keystore ..\..\sign\GeopistaKeyStore ibatis2-dao-localgis-2.2.0.jar -signedjar ibatis2-dao-localgis-2.2.0.jar -storepass geopista99 -keypass geopista99 geopista
+
+jarsigner -keystore ..\..\sign\GeopistaKeyStore javax.pkcs11-dnie-1.0.jar -signedjar javax.pkcs11-dnie-1.0.jar -storepass geopista99 -keypass geopista99 geopista

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+codebase="@SITE@"
+href="localgis_gestor_capas.jnlp">
+<information>
+<title>LocalGIS Gestor de Capas</title>
+<vendor>MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO</vendor>
+<homepage href="http://www.geopista.com" />
+<description>Open Source GIS client. Gestor de Capas.(@SITE@)</description>
+<icon href="logo_geopista.gif"/>
+<offline-allowed/>
+<icon kind="splash" href="splash_geopista.gif"/>
+<shortcut online="false">
+      <desktop/>
+      <menu submenu="LocalGIS"/>
+    </shortcut>
+</information>
+<resources>
+<j2se version="1.6" initial-heap-size="128m" max-heap-size="1024m" />
+<jar href="gestor_capas.jar" main="true"/>
+<jar href="productos/core/pluginDatosExternos.jar" />
+<jar href="catastro_client.jar"/>
+<jar href="geopista_config.jar"/>
+<jar href="geopista_img.jar" />
+<jar href="geopista_images.jar" />
+<jar href="geopista_administrador.jar"/>
+<jar href="geopista_security.jar" />
+<jar href="geopista_security_sso.jar"/>
+<jar href="geopista_security_dnie.jar"/>
+<jar href="geopista_sql.jar" />
+<jar href="geopista_utilidades.jar" />
+<jar href="geopista_apps.jar" />
+<jar href="geopista_workbench.jar" />
+<jar href="geopista_plugin.jar" />
+<jar href="jumppatched.jar" />
+<jar href="helpset.jar" />
+<jar href="catastro_help.jar" />
+<jar href="geopista_server.jar" />
+<jar href="geopista_protocol.jar" />
+<jar href="geopista_utilidades.jar" />
+<jar href="productos/javahelp/jhall.jar"/>
+<jar href="productos/degree/deegree2004-05-07.jar"></jar>
+<jar href="productos/JEP/jep-2.24.jar"></jar>
+<jar href="productos/jai/jai_codec.jar"></jar>
+<jar href="productos/jai/jai_core.jar"></jar>
+<jar href="productos/vividsolutions/Jama-1.0.1.jar"></jar>
+<jar href="productos/JCalendar/jcalendar-1.3.2.jar"></jar>
+<jar href="productos/xml/jdom.jar"></jar>
+<jar href="productos/vividsolutions/jts-1.5.jar"></jar>
+<jar href="productos/xml/xercesImpl.jar"></jar>
+<jar href="productos/xml/xml-apis.jar"></jar>
+<jar href="productos/postgre/postgresql-8.0-311.jdbc3.jar"></jar>
+<jar href="productos/log4j/log4j-1.2.6.jar"></jar>
+<jar href="productos/castor/castor-0.9.5.3.jar"></jar>
+<jar href="productos/xfire/commons-httpclient-3.0.jar"></jar>
+<jar href="productos/httpclient/commons-logging.jar"></jar>
+<jar href="productos/jetty/lib/javax.servlet.jar"></jar>
+<jar href="productos/jetty/extra/lib/org.mortbay.jaas.jar"></jar>
+<jar href="productos/jetty/lib/org.mortbay.jetty.jar"></jar>
+<jar href="productos/jetty/extra/lib/org.mortbay.jetty.plus.jar"></jar>
+<jar href="productos/agile/agile_core.jar"></jar>
+<jar href="productos/hibernate/hibernate-2.1.jar"></jar>
+<jar href="productos/buoy/Buoy.jar"></jar>
+<jar href="productos/crypto/xmlsec-20050423.jar"></jar>
+<jar href="productos/netbeans/AbsoluteLayout.jar" />
+<jar href="productos/xfire/commons-codec-1.3.jar" />
+<jar href="productos/xfire/commons-httpclient-3.0.jar" />
+<jar href="productos/xfire/xfire-core-1.2.6.jar" />
+<jar href="productos/cifrado/cifrado.jar" />
+<jar href="productos/jdbc/jtds-1.2.jar" />
+<jar href="productos/jdbc/mysql-connector-java-5.0.4-bin.jar" />
+<jar href="productos/jdbc/ojdbc14.jar" />
+<jar href="productos/sql/sqleonardo-2009.01.jar" />
+<jar href="productos/jetty/extra/ext/xapool.jar" />
+<jar href="productos/xfire/xfire-aegis-1.2.6.jar" />
+<jar href="productos/xfire/xfire-annotations-1.2.6.jar" />
+<jar href="productos/xfire/wsdl4j-1.6.1.jar" />
+<jar href="productos/xfire/xfire-java5-1.2.6.jar" />
+<jar href="productos/xfire/xfire-jaxb2-1.2.6.jar" />
+
+<jar href="productos/commons-ssl/commons-ssl.jar" />
+<jar href="productos/axis/axis.jar" />
+<jar href="productos/jaxrpc/jaxrpc.jar" />
+<jar href="productos/xstream/xstream-1.4.2.jar" />
+<jar href="productos/mantisconnect-modelo/mantisconnect_modelo.jar" /> 
+<jar href="productos/axis2/backport-util-concurrent-3.1.jar" /> 
+<jar href="productos/axis2/backport-util-concurrent-3.1.jar"/>
+<jar href="productos/xfire/commons-discovery-0.2.jar"/>
+<jar href="productos/xfire/wsdl4j-1.6.1.jar" />
+
+<property name="geopista.jdbc.driver.oracle.class" value="oracle.jdbc.driver.OracleDriver" />
+<property name="geopista.jdbc.driver.oracle.url" value="jdbc:oracle:thin:@&lt;server&gt;[:1521]:database_name" />
+<property name="geopista.jdbc.driver.postgres.class" value="org.postgresql.Driver" />
+<property name="geopista.jdbc.driver.postgres.url" value="jdbc:postgresql:[&lt;//host&gt;[:&lt;5432&gt;/]]&lt;database&gt;" />
+<property name="geopista.jdbc.driver.mysql.class" value="com.mysql.jdbc.Driver" />
+<property name="geopista.jdbc.driver.mysql.url" value="jdbc:mysql://&lt;hostname&gt;[:&lt;3306&gt;]/&lt;dbname&gt;" />
+<property name="geopista.jdbc.driver.jtds.class" value="net.sourceforge.jtds.jdbc.Driver" />
+<property name="geopista.jdbc.driver.jtds.url" value="jdbc:jtds:sqlserver://hostname:1433/dataBase" />
+<property name="geopista.jdbc.driver.jtds.name" value="jTDS 1.2" />
+</resources>
+<application-desc main-class="com.geopista.app.layerutil.GestorCapas">
+<argument>-Dfile.encoding=windows-1252</argument>
+</application-desc>
+<security><all-permissions/></security>
+</jnlp>

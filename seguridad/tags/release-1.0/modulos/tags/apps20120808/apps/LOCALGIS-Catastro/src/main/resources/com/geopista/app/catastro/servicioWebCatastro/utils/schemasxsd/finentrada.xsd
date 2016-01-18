@@ -1,0 +1,3037 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by MIGUEL MARTIN (DIRECCION GENERAL DEL CATASTRO) -->
+<!--*****************************************************************************************************************-->
+<!--*****************************************************************************************************************-->
+<!--                                                         finentrada                                                                               -->
+<!--																																						-->
+<!-- 		Tipo de documento:  agrupación de entidades  particularizadas  - formato de intercambio             	-->
+<!--																																						-->
+<!--	   Aprobado por Resolución de 31 de Julio de 2006, de la Dirección General del Catastro, 				-->
+<!--      por la que se aprueba la forma de remisión y la estructura, contenido, especificaciones técnicas 	-->
+<!--	   y formato informático de los ficheros de intercambio de información catastral alfanumérica 				-->
+<!--	   y gráfica FIN, VARPAD, FICC Y FXCC. 																						-->
+<!--																																						-->
+<!--*****************************************************************************************************************-->
+<!--*****************************************************************************************************************-->
+<!--**********************************************************-->
+<!--         			Revisión 28.06.10                                 -->
+<!--**********************************************************-->
+<!--
+
+Cambios realizados respecto a la versión anterior:
+28-06-2010
+Se añaden los tipos de expediente INGF y INCF, y se elimina el tipo INSP.
+07-05-2010
+Se añade el tipo de expediente REGI.
+22-12-2009
+Se añaden los tipos de expediente REPO y RESA.
+11-12-2009
+Se añade el tipo de expediente REAL.
+09-12-2009
+Se añade el expediente anterior en el elemento exp.
+Se adapta el tipo movrefe a la mofificación del tipo de datos rexpg.
+Se corrige el tipo de fichero.
+24-06-2009
+Se modifica el comentario del campo iipvc, para explicar su significado de forma más clara.
+19-05-2009
+El código de la descripción de la alteración catastral pasa a ser de 3 posiciones.
+24-09-2008
+Se modifican los tipos fincafine y fincavfine para permitir indicar el BICE al que pertenece la finca.
+En los datos de valoración de la finca se deja como único dato obligatorio el año de ponencia.
+04-09-2008
+Se añade el tipo de expediente 'CONS' (expediente instrumental para consultas).
+24-07-2008
+En los datos de la declaración (en el expediente), el campo doco pasa a ser opcional.
+02-07-2008
+En la localización urbana obligatoria del bien inmueble, el campo dir pasa a ser obligatorio (se modifican los tipos lourbrefe y locsrefe y se crea el tipo lourbrrefe).
+30-06-2008
+Se añaden los tipos de expediente CBIC e INSP.
+19-06-2008
+En las fincas en intercambio de variaciones, los datos físicos pasan a ser opcionales y se permite el tipo de movimiento I.
+07-04-2008
+Se modifican los tipos de expediente.
+17-03-2008
+Se restringe iacons para que no admita el valor D.
+29-02-2008
+Se añade la opción G en el tipo de entidad generadora (tegrfe).
+25-01-2008
+Se modifican los nombres de algunos tipos, pero la estructura no cambia.
+08-01-2008
+Se añade el tipo de expediente REVB.
+Se añade el tipo de fichero CFIC.
+23-11-2007
+Se añaden los tipos de expediente CNOT, DICF y DICJ.
+25-10-2007
+Se modifica el tipo elemffe para separar el movimiento de baja de fincas del resto de situaciones finales. 
+17-10-2007
+Se añade el tipo de expediente PVCR.
+05-09-2007
+Se añade el tipo de expediente RENR.
+06-07-2007
+Se modifica el tipo de algunas fechas: pasa de xsd:date a fecha.
+05-07-2007
+Se modifica el tipo del código del polígono de valoración.
+14-06-2007
+Se crean los tipos usoe y cate que restringen el uso y la categoría para no admitir el valor N.
+01-06-2007
+Se añade la opción del movimiento de baja de finca en el intercambio de situaciones finales.
+Se añade el elemento cucm en dfuc.
+29-05-2007
+Se añade el tipo de expediente REVU.
+22-05-2007
+El campo idoco pasa a ser opcional.
+11-05-2007
+Se modifican varios tipos para impedir cadenas rellenas unicamente con blancos.
+05-03-2007
+Se modifican los tipos de expediente.
+03-01-2007
+Se cambia el tipo de datos de la superficie del solar de supp a supg
+27-11-2006
+Se añade el código de la entidad destinataria como campo opcional
+3-11-2006
+Los datos de la declaración en el expediente pasan a ser opcionales
+31-10-2006
+Se añade el tipo simple einfg al tipo de datos complejo movre
+Se actualizan los tipos de expediente del tipo texpjr
+-->
+<xsd:schema xmlns="http://www.catastro.meh.es/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.catastro.meh.es/" elementFormDefault="qualified" version="1.0">
+	<xsd:include schemaLocation="ldc.xsd"/>
+	<!--PARTICULARIZACIÓN (REDUCCIÓN) DE TIPOS SIMPLES-->
+	<xsd:simpleType name="tegrfe">
+		<xsd:restriction base="teg">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="G"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tfirfe">
+		<xsd:restriction base="tfi">
+			<xsd:enumeration value="CFIE"/>
+			<xsd:enumeration value="CFIC"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="usofe">
+		<xsd:restriction base="uso">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="V"/>
+			<xsd:enumeration value="I"/>
+			<xsd:enumeration value="O"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="K"/>
+			<xsd:enumeration value="T"/>
+			<xsd:enumeration value="G"/>
+			<xsd:enumeration value="Y"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="R"/>
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="P"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+			<xsd:enumeration value="3"/>
+			<xsd:enumeration value="4"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="J"/>
+			<xsd:enumeration value="Z"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="catfe">
+		<xsd:restriction base="cat">
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+			<xsd:enumeration value="3"/>
+			<xsd:enumeration value="4"/>
+			<xsd:enumeration value="5"/>
+			<xsd:enumeration value="6"/>
+			<xsd:enumeration value="7"/>
+			<xsd:enumeration value="8"/>
+			<xsd:enumeration value="9"/>
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="iaconsfe">
+		<xsd:restriction base="iacons">
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="+"/>
+			<xsd:enumeration value="-"/>
+			<xsd:enumeration value="C"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="texpjrfe">
+		<xsd:restriction base="texp">
+			<xsd:enumeration value="902C"/>
+			<xsd:enumeration value="903C"/>
+			<xsd:enumeration value="904C"/>
+			<xsd:enumeration value="901N"/>
+			<xsd:enumeration value="902N"/>
+			<xsd:enumeration value="903N"/>
+			<xsd:enumeration value="904N"/>
+			<xsd:enumeration value="ALCN"/>
+			<xsd:enumeration value="ALCA"/>
+			<xsd:enumeration value="CBIC"/>
+			<xsd:enumeration value="CCCP"/>
+			<xsd:enumeration value="CCDL"/>
+			<xsd:enumeration value="CCEX"/>
+			<xsd:enumeration value="CCGU"/>
+			<xsd:enumeration value="CIBI"/>
+			<xsd:enumeration value="CNOT"/>
+			<xsd:enumeration value="COEF"/>
+			<xsd:enumeration value="COEJ"/>
+			<xsd:enumeration value="CONS"/>
+			<xsd:enumeration value="DICF"/>
+			<xsd:enumeration value="DICJ"/>
+			<xsd:enumeration value="INGF"/>
+			<xsd:enumeration value="INCF"/>
+			<xsd:enumeration value="PVCR"/>
+			<xsd:enumeration value="RBCF"/>
+			<xsd:enumeration value="RBCJ"/>
+			<xsd:enumeration value="REAL"/>
+			<xsd:enumeration value="RECF"/>
+			<xsd:enumeration value="RECJ"/>
+			<xsd:enumeration value="RED1"/>
+			<xsd:enumeration value="RED2"/>
+			<xsd:enumeration value="REGI"/>
+			<xsd:enumeration value="RENR"/>
+			<xsd:enumeration value="REPO"/>
+			<xsd:enumeration value="RESA"/>
+			<xsd:enumeration value="REVB"/>
+			<xsd:enumeration value="REVU"/>
+			<xsd:enumeration value="RRC1"/>
+			<xsd:enumeration value="RRC2"/>
+			<xsd:enumeration value="RRD1"/>
+			<xsd:enumeration value="RRD2"/>
+			<xsd:enumeration value="SBAJ"/>
+			<xsd:enumeration value="SCRP"/>
+			<xsd:enumeration value="SDTG"/>
+			<xsd:enumeration value="SIDF"/>
+			<xsd:enumeration value="SITC"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--REDUCCIÓN DE LA ENTIDAD CABECERA-->
+	<xsd:complexType name="cabredufe">
+		<xsd:complexContent>
+			<xsd:restriction base="cab">
+				<xsd:sequence>
+					<!--Identificación de la entidad generadora-->
+					<xsd:element name="ieg">
+						<xsd:annotation>
+							<xsd:documentation>Identificación de la entidad generadora</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="ieg">
+									<xsd:sequence>
+										<xsd:element name="teg" type="tegrfe">
+											<xsd:annotation>
+												<xsd:documentation>Tipo de entidad generadora:            A (Ayuntamientos) C (Entidades con convenio)                E (Empresas)  </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ceg">
+											<xsd:annotation>
+												<xsd:documentation>Código de la entidad Generadora</xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="ceg">
+														<xsd:choice>
+															<xsd:element name="engf" type="engf">
+																<xsd:annotation>
+																	<xsd:documentation>Entidad generadora del fichero</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+														</xsd:choice>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="neg" type="neg">
+											<xsd:annotation>
+												<xsd:documentation>Nombre de la Entidad generadora</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<!--Información del fichero-->
+					<xsd:element name="ifi">
+						<xsd:annotation>
+							<xsd:documentation>Identificación del fichero</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="ifi">
+									<xsd:sequence>
+										<xsd:element name="ffi" type="fecha">
+											<xsd:annotation>
+												<xsd:documentation>Fecha de generación del fichero</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="hfi" type="xsd:time">
+											<xsd:annotation>
+												<xsd:documentation>Hora de generación del fichero</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<!--Se fuerza a que el tipo de fichero sea siempre NRGE-->
+										<xsd:element name="tfi" type="tfirfe">
+											<xsd:annotation>
+												<xsd:documentation>Tipo de fichero:  CFIE (Fin de entrada)</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="dfi" type="dfi" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Descripción del fichero</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="nfi" type="nfi" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Nombre del fichero asignado por la D.G. del Catastro</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ced" type="ced" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Código de la entidad destinataria (Cumplimentado por la DGC)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<!--Datos específicos del formato -->
+					<xsd:element name="iper" type="iper">
+						<xsd:annotation>
+							<xsd:documentation>Información del período</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="cuexp" type="cuexp">
+						<xsd:annotation>
+							<xsd:documentation>Número de expedientes</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="cufin" type="cufin">
+						<xsd:annotation>
+							<xsd:documentation>Número de Fincas</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="cubi" type="cubi">
+						<xsd:annotation>
+							<xsd:documentation>Número de bienes inmuebles</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="cutit" type="cutit">
+						<xsd:annotation>
+							<xsd:documentation>Número de titulares</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REDUCCIÓN DE LORUS Y LOURB QUE SE UTILIZARÁ EN EL DOMICILIO SELECTIVO-->
+	<xsd:complexType name="lourbrefe">
+		<xsd:complexContent>
+			<xsd:restriction base="lourb">
+				<xsd:sequence>
+					<xsd:element name="dir">
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dir">
+									<xsd:sequence>
+										<xsd:element name="cv" type="cv">
+											<xsd:annotation>
+												<xsd:documentation>Código de vía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="tv" type="tv">
+											<xsd:annotation>
+												<xsd:documentation>Tipo de vía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="nv" type="nv">
+											<xsd:annotation>
+												<xsd:documentation>Nombre de vía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="pnp" type="pnp" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Primer número de policía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="plp" type="plp" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Primera letra asociada al número de policía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="snp" type="snp" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Segundo número de policiía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="slp" type="slp" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Segunda letra asociada al número de policía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="km" type="km" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Kilómetro</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="td" type="dne" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Dirección no estructurada</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="loint" type="loint" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Localización interna</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dp" type="dp" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Distrito postal</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dm" type="dm" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Distrito municipal</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Reducción de lourb (para localización urbana adicional)-->
+	<xsd:complexType name="lourbrrefe">
+		<xsd:complexContent>
+			<xsd:restriction base="lourb">
+				<xsd:sequence>
+					<xsd:element name="dir" minOccurs="0">
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dir">
+									<xsd:sequence>
+										<xsd:element name="cv" type="cv">
+											<xsd:annotation>
+												<xsd:documentation>Código de vía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="tv" type="tv">
+											<xsd:annotation>
+												<xsd:documentation>Tipo de vía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="nv" type="nv">
+											<xsd:annotation>
+												<xsd:documentation>Nombre de vía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="pnp" type="pnp" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Primer número de policía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="plp" type="plp" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Primera letra asociada al número de policía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="snp" type="snp" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Segundo número de policiía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="slp" type="slp" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Segunda letra asociada al número de policía</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="km" type="km" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Kilómetro</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="td" type="dne" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Dirección no estructurada</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="loint" type="loint" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Localización interna</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dp" type="dp" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Distrito postal</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dm" type="dm" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Distrito municipal</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REDUCCIÓN DE LORUS-->
+	<xsd:complexType name="lorusrefe">
+		<xsd:complexContent>
+			<xsd:restriction base="lorus">
+				<xsd:sequence>
+					<xsd:element name="cma" type="cma" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Código de municipio agregado</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="czc" type="czc" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Código de la zona de concentración</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="cpp" type="cpp">
+						<xsd:annotation>
+							<xsd:documentation>Códigos polígono parcela</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="npa" type="npa" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Nombre del Paraje</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="cpaj" type="cpaj" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Código del paraje</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REDUCCIÓN DE LORUS-->
+	<xsd:complexType name="lorusrrefe">
+		<xsd:complexContent>
+			<xsd:restriction base="lorus">
+				<xsd:sequence>
+					<xsd:element name="cma" type="cma" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Código de municipio agregado</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="czc" type="czc" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Código de la zona de concentración</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="cpp" type="cpp">
+						<xsd:annotation>
+							<xsd:documentation>Códigos polígono parcela</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="npa" type="npa">
+						<xsd:annotation>
+							<xsd:documentation>Nombre del Paraje</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="cpaj" type="cpaj">
+						<xsd:annotation>
+							<xsd:documentation>Código del paraje</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REDUCCIÓN DE LA LOCALIZACIÓN SELECTIVA-->
+	<xsd:complexType name="locsrefe">
+		<xsd:complexContent>
+			<xsd:restriction base="locs">
+				<xsd:choice>
+					<xsd:element name="lous">
+						<xsd:annotation>
+							<xsd:documentation>Localización urbana obligatoria </xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="lous">
+									<xsd:sequence>
+										<xsd:element name="lourb" type="lourbrefe">
+											<xsd:annotation>
+												<xsd:documentation>Localización urbana</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="lorus" type="lorusrefe" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Localización rústica adicional</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="lors">
+						<xsd:annotation>
+							<xsd:documentation>Localización rústica obligatoria</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="lors">
+									<xsd:sequence>
+										<xsd:element name="lorus" type="lorusrrefe">
+											<xsd:annotation>
+												<xsd:documentation>Localización rústica</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="lourb" type="lourbrrefe" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Localización urbana adicional</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REDUCCIÓN DE LA ENTIDAD BIEN INMUEBLE-->
+	<xsd:complexType name="birefe">
+		<xsd:complexContent>
+			<xsd:restriction base="bi">
+				<xsd:sequence>
+					<!--Identificación del bien inmueble-->
+					<xsd:element name="idcat" type="idcat">
+						<xsd:annotation>
+							<xsd:documentation>Identificación del bien inmueble</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<!--Identificación adicional-->
+					<xsd:element name="idad" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Información adicional de identificación</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="idad">
+									<xsd:sequence>
+										<xsd:element name="iia" type="iia" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Identificación del inmueble del Ayuntamiento</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="nfr" type="nfr" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Número de finca registral</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<!--Domicilio tributario-->
+					<xsd:element name="dt">
+						<xsd:annotation>
+							<xsd:documentation>Domicilio tributario</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dt">
+									<xsd:sequence>
+										<xsd:element name="loine" type="loine">
+											<xsd:annotation>
+												<xsd:documentation>Localización INE</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="cmc" type="cmc">
+											<xsd:annotation>
+												<xsd:documentation>Código de Municipio de la DGC</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="np" type="np">
+											<xsd:annotation>
+												<xsd:documentation>Nombre de provincia</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="nm" type="nm">
+											<xsd:annotation>
+												<xsd:documentation>Nombre de Municipio</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="nem" type="nem" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Nombre de la entidad menor</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="locs" type="locsrefe">
+											<xsd:annotation>
+												<xsd:documentation>Localización municipal</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="debi" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Datos económicos del bien inmueble</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="debi">
+									<xsd:sequence>
+										<xsd:element name="pvd" type="vcat" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Precio o valor declarado</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="opvd" type="opvd" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Origen del precio o valor declarado</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="pav" type="vcat" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Precio aministrativo de venta</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="afv" type="xsd:gYear" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Año de finalización de la valoración según precio administrativo de venta</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="itp" type="itp" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Indicador del tipo de propiedad en fórmulas 5 y 6     (T: sobre todo          S: sobre suelo         C: sobre construcción            V: sobre vuelo         I: sobre inmueble    N: no informado )</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="noe" type="noe" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Número de orden del inmueble en la escritura de división horizontal</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="uso" type="usofe" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>uso</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="cpt" type="cpt" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Coeficiente de Participación</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="rep" type="rep" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Representante</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REDUCCIÓN DE LA ENTIDAD SITUACIÓN INICIAL DE TITULARIDAD-->
+	<xsd:complexType name="lsirfe">
+		<xsd:complexContent>
+			<xsd:restriction base="lsi">
+				<xsd:sequence>
+					<xsd:element name="tit" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Transmitente</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="tit">
+									<xsd:sequence>
+										<xsd:element name="der" type="der">
+											<xsd:annotation>
+												<xsd:documentation>Datos del derecho</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="idpa" type="idpa">
+											<xsd:annotation>
+												<xsd:documentation>Identificación del titular</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REDUCCIÓN DE LA ENTIDAD SITUACIÓN FINAL DE TITULARIDAD-->
+	<xsd:complexType name="lsferfe">
+		<xsd:complexContent>
+			<xsd:restriction base="lsfe">
+				<xsd:sequence>
+					<xsd:element name="ltit">
+						<xsd:annotation>
+							<xsd:documentation>Lista de titulares</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="ltit">
+									<xsd:sequence>
+										<xsd:element name="tit" maxOccurs="unbounded">
+											<xsd:annotation>
+												<xsd:documentation>Titular</xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="tit">
+														<xsd:sequence>
+															<xsd:element name="der" type="der">
+																<xsd:annotation>
+																	<xsd:documentation>Datos del derecho</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="ord" type="ord">
+																<xsd:annotation>
+																	<xsd:documentation>Ordinal del derecho (número secuencial del derecho del titular sobre el bien)</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="idpa" type="idpa">
+																<xsd:annotation>
+																	<xsd:documentation>Identificación del titular</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="df">
+																<xsd:annotation>
+																	<xsd:documentation>Domicilio fiscal</xsd:documentation>
+																</xsd:annotation>
+																<xsd:complexType>
+																	<xsd:complexContent>
+																		<xsd:restriction base="df">
+																			<xsd:sequence>
+																				<xsd:element name="loine" type="loine">
+																					<xsd:annotation>
+																						<xsd:documentation>Localización INE</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="cmc" type="cmc">
+																					<xsd:annotation>
+																						<xsd:documentation>Código de Municipio de la DGC</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="np" type="np">
+																					<xsd:annotation>
+																						<xsd:documentation>Nombre de provincia</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="nm" type="nm">
+																					<xsd:annotation>
+																						<xsd:documentation>Nombre de municipio</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="nem" type="nem" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Nombre de entidad menor</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="dir" type="dir">
+																					<xsd:annotation>
+																						<xsd:documentation>Dirección</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="loint" type="loint" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Localización interna</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="pos" type="pos">
+																					<xsd:annotation>
+																						<xsd:documentation>Datos postales</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																			</xsd:sequence>
+																		</xsd:restriction>
+																	</xsd:complexContent>
+																</xsd:complexType>
+															</xsd:element>
+															<xsd:element name="iatit" type="iatit" minOccurs="0">
+																<xsd:annotation>
+																	<xsd:documentation>Información adicional de titularidad</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="faj" type="fecha" minOccurs="0">
+																<xsd:annotation>
+																	<xsd:documentation>Fecha de alteración jurídica. Sólo se consignará en caso de existir una fecha de alteración distinta de la expresada en el expediente</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+														</xsd:sequence>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="lcbi" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Lista de comunidades de bienes</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="lcbi">
+									<xsd:sequence>
+										<xsd:element name="cbi" maxOccurs="4">
+											<xsd:annotation>
+												<xsd:documentation>Comunidad de bienes</xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="cbi">
+														<xsd:sequence>
+															<xsd:element name="idcbf" type="idcbf">
+																<xsd:annotation>
+																	<xsd:documentation>Identificación de la comunidad de bienes</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="df">
+																<xsd:annotation>
+																	<xsd:documentation>Domicilio fiscal</xsd:documentation>
+																</xsd:annotation>
+																<xsd:complexType>
+																	<xsd:complexContent>
+																		<xsd:restriction base="df">
+																			<xsd:sequence>
+																				<xsd:element name="loine" type="loine">
+																					<xsd:annotation>
+																						<xsd:documentation>Localización INE</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="cmc" type="cmc">
+																					<xsd:annotation>
+																						<xsd:documentation>Código de Municipio de la DGC</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="np" type="np">
+																					<xsd:annotation>
+																						<xsd:documentation>Nombre de provincia</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="nm" type="nm">
+																					<xsd:annotation>
+																						<xsd:documentation>Nombre de municipio</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="nem" type="nem" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Nombre de entidad menor</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="dir" type="dir">
+																					<xsd:annotation>
+																						<xsd:documentation>Dirección</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="loint" type="loint" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Localización interna</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="pos" type="pos">
+																					<xsd:annotation>
+																						<xsd:documentation>Datos postales</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																			</xsd:sequence>
+																		</xsd:restriction>
+																	</xsd:complexContent>
+																</xsd:complexType>
+															</xsd:element>
+														</xsd:sequence>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REDUCCIÓN DE LA ENTIDAD MOVIMIENTO-->
+	<xsd:complexType name="movrefe">
+		<xsd:complexContent>
+			<xsd:restriction base="mov">
+				<xsd:sequence>
+					<xsd:element name="tint" type="tint">
+						<xsd:annotation>
+							<xsd:documentation>Tipo de Intercambio:            V: Intercambio de variaciones.              F: Intercambio basado en estados finales                      R: Sólo información de registro </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<!--Tipo de expediente (motivo del movimiento)-->
+					<xsd:element name="texp" type="texpjrfe">
+						<xsd:annotation>
+							<xsd:documentation>Tipo de expediente</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="fac" type="fecha">
+						<xsd:annotation>
+							<xsd:documentation>Fecha de la alteración catastral</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="expg" type="expg" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Expediente de la Gerencia</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="expec" type="expec">
+						<xsd:annotation>
+							<xsd:documentation>Expediente administrativo origen</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="expa" type="expg" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Expediente anterior</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="fre" type="fecha">
+						<xsd:annotation>
+							<xsd:documentation>Fecha de registro</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="fhm">
+						<xsd:annotation>
+							<xsd:documentation>Fecha y hora del movimiento</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="fhm">
+									<xsd:sequence>
+										<xsd:element name="fm" type="fecha">
+											<xsd:annotation>
+												<xsd:documentation>Fecha del movimiento</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="hm" type="xsd:time">
+											<xsd:annotation>
+												<xsd:documentation>Hora del movimiento</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<!--INFORMACIÓN DE NOTARIOS Y REGISTRADORES-->
+					<xsd:element name="inr" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>información notarial</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="inr">
+									<xsd:sequence>
+										<xsd:element name="npn" type="npn" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Número de protocolo notarial</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="decl" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Datos de la declaración</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="decl">
+									<xsd:sequence>
+										<!--Documento origen de la alteración-->
+										<xsd:element name="doco" type="doco" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Documento origen de la alteración: P: Público, R: Privado</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="idoco" type="idoco" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Información del documento origen de la alteración</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="nbi" type="nbi">
+											<xsd:annotation>
+												<xsd:documentation>Número de bienes inmuebles implicados en la declaración</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="cdeac" type="cdeac" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Código descriptivo de la alteración</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="deac" type="deac" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Descripción de la alteración</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="einfg" type="ie">
+						<xsd:annotation>
+							<xsd:documentation>Existencia de información gráfica</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dec">
+						<xsd:annotation>
+							<xsd:documentation>Presentador del expediente</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dec">
+									<xsd:sequence>
+										<xsd:element name="idp" type="idp">
+											<xsd:annotation>
+												<xsd:documentation>Identificación</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="dfn">
+											<xsd:annotation>
+												<xsd:documentation>Domicilio de notificación</xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="dfn">
+														<xsd:sequence>
+															<xsd:element name="loine" type="loine">
+																<xsd:annotation>
+																	<xsd:documentation>Localización INE</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="cmc" type="cmc">
+																<xsd:annotation>
+																	<xsd:documentation>Código de municipio de la DGC</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="np" type="np">
+																<xsd:annotation>
+																	<xsd:documentation>Nombre de provincia</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="nm" type="nm">
+																<xsd:annotation>
+																	<xsd:documentation>Nombre de municipio</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="nem" type="nem" minOccurs="0">
+																<xsd:annotation>
+																	<xsd:documentation>Nombre de entidad menor</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="dir">
+																<xsd:annotation>
+																	<xsd:documentation>Dirección</xsd:documentation>
+																</xsd:annotation>
+																<xsd:complexType>
+																	<xsd:complexContent>
+																		<xsd:restriction base="dir">
+																			<xsd:sequence>
+																				<xsd:element name="cv" type="cv" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Código de vía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="tv" type="tv">
+																					<xsd:annotation>
+																						<xsd:documentation>Tipo de vía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="nv" type="nv">
+																					<xsd:annotation>
+																						<xsd:documentation>Nombre de vía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="pnp" type="pnp" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Primer número de policía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="plp" type="plp" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Primera letra asociada al número de policía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="snp" type="snp" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Segundo número de policía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="slp" type="slp" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Segunda letra asociada al número de policía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="km" type="km" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Kilómetro</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="td" type="dne" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Texto de dirección no estructurada</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																			</xsd:sequence>
+																		</xsd:restriction>
+																	</xsd:complexContent>
+																</xsd:complexType>
+															</xsd:element>
+															<xsd:element name="loint" type="loint" minOccurs="0">
+																<xsd:annotation>
+																	<xsd:documentation>Localización interna</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="pos" type="pos">
+																<xsd:annotation>
+																	<xsd:documentation>Datos postales</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+														</xsd:sequence>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--ELEMENTO RAIZ DEL FORMATO DE INTERCAMBIO -->
+	<xsd:element name="finentrada">
+		<xsd:annotation>
+			<xsd:documentation>Formato de intercambio de información de catastro Fin de entrada</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="cab" type="cabredufe">
+					<xsd:annotation>
+						<xsd:documentation>Cabecera</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="luden" type="lufe">
+					<xsd:annotation>
+						<xsd:documentation>Lista de Unidades de datos del Fin entrada</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="lufe">
+		<xsd:complexContent>
+			<xsd:restriction base="luden">
+				<xsd:sequence>
+					<xsd:element name="uden" type="ufe" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Unidad de datos del Fin de entrada</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--UNIDAD DE DE DATOS DE VARPAD RESTRICCIÓN DE LA UNIDAD DE DATOS DE ENTRADA-->
+	<xsd:complexType name="ufe">
+		<xsd:complexContent>
+			<xsd:restriction base="uden">
+				<xsd:sequence>
+					<xsd:element name="exp" type="movrefe">
+						<xsd:annotation>
+							<xsd:documentation>Expediente</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<!--ELEMENTOS CATASTRALES DE UN EXPEDIENTE-->
+					<xsd:element name="lelem" type="lelemfe">
+						<xsd:annotation>
+							<xsd:documentation>Intercambios amparados por el expediente</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="lelemfe">
+		<xsd:complexContent>
+			<xsd:restriction base="lelem">
+				<xsd:choice>
+					<xsd:element name="elemv" type="elemvfe" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Intercambio de variaciones</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="elemf" type="elemffe" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Intercambio de situaciones finales</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="elemr" type="elemrfe" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Intercambio de registro</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REDUCIÓN DE LA PARTE DE ELEMENTOS CON TIPO DE INTERCAMBIO R-->
+	<xsd:complexType name="elemrfe">
+		<xsd:complexContent>
+			<xsd:restriction base="elemr">
+				<xsd:sequence>
+					<xsd:element name="bicreg" type="bireg">
+						<xsd:annotation>
+							<xsd:documentation>Bien inmueble</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REDUCIÓN DE LA PARTE DE ELEMENTOS CON TIPO DE INTERCAMBIO V-->
+	<xsd:complexType name="elemvfe">
+		<xsd:complexContent>
+			<xsd:restriction base="elemv">
+				<xsd:sequence>
+					<xsd:element name="fincacev" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Finca en intercambio de variaciones</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="fincace">
+									<xsd:sequence>
+										<xsd:choice>
+											<xsd:sequence>
+												<xsd:element name="fincaeam" type="fincavfine">
+													<xsd:annotation>
+														<xsd:documentation>Datos de la finca para un  movimiento de alta o modificación </xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+												<xsd:element name="movam" type="movami">
+													<xsd:annotation>
+														<xsd:documentation>Movimiento</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+											</xsd:sequence>
+											<xsd:sequence>
+												<xsd:element name="fincaeb" type="fincabfine">
+													<xsd:annotation>
+														<xsd:documentation>Datos de la finca para un  movimiento de baja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+												<xsd:element name="movb" type="movb">
+													<xsd:annotation>
+														<xsd:documentation>Movimiento</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:choice>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="lsuelov" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Lista de suelos en intercambio de variaciones</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="lsuelocev">
+									<xsd:sequence>
+										<xsd:element name="sueloce" maxOccurs="unbounded">
+											<xsd:annotation>
+												<xsd:documentation>Suelo en intercambio de variaciones</xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="sueloce">
+														<xsd:sequence>
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="sueloeam" type="suelofine">
+																		<xsd:annotation>
+																			<xsd:documentation>Datos del suelo para un  movimiento de alta o modificación </xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movam" type="movam">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+																<xsd:sequence>
+																	<xsd:element name="sueloeb" type="suelobfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Datos del suelo para un  movimiento de baja</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movb" type="movb">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:sequence>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="lucv" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Lista de unidades constructivas en intercambio de variaciones</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="luccev">
+									<xsd:sequence>
+										<xsd:element name="ucce" maxOccurs="unbounded">
+											<xsd:annotation>
+												<xsd:documentation>Unidad constructiva en intercambio de variaciones</xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="ucce">
+														<xsd:sequence>
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="uceam" type="uniconsfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Datos de la unidad constructiva para un  movimiento de alta o modificación </xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movam" type="movam">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+																<xsd:sequence>
+																	<xsd:element name="uceb" type="uniconsbfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Datos de la unidad constructiva para un  movimiento de baja</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movb" type="movb">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:sequence>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="lbicenv" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Lista de bienes inmuebles en intercambio de variaciones</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="lbicenv">
+									<xsd:sequence>
+										<xsd:choice maxOccurs="unbounded">
+											<xsd:choice>
+												<xsd:annotation>
+													<xsd:documentation>Datos del bien inmueble para un movimiento de alta o modificación</xsd:documentation>
+												</xsd:annotation>
+												<xsd:element name="bicec" type="bicecfinfe">
+													<xsd:annotation>
+														<xsd:documentation>Bien inmueble sin información de titularidad</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+												<xsd:element name="bij" type="bijfinfe">
+													<xsd:annotation>
+														<xsd:documentation>Bien inmueble  completo</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+											</xsd:choice>
+											<xsd:element name="biccb" type="biccb">
+												<xsd:annotation>
+													<xsd:documentation>Datos del bien inmueble para un  movimiento de baja</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+										</xsd:choice>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="lconsv" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Lista de construcciones en intercambio de variaciones</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="lconscev">
+									<xsd:sequence>
+										<xsd:element name="consce" maxOccurs="unbounded">
+											<xsd:annotation>
+												<xsd:documentation>Construcción en intercambio de variaciones</xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="consce">
+														<xsd:sequence>
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="conseam" type="consfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Datos de la construcción para un  movimiento de alta o modificación </xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movam" type="movam">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+																<xsd:sequence>
+																	<xsd:element name="conseb" type="consbfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Datos de la construcción para un  movimiento de baja</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movb" type="movb">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:sequence>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="lsprv" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Lista de cultivos en intercambio de variaciones</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="lsprcev">
+									<xsd:sequence>
+										<xsd:element name="sprce" maxOccurs="unbounded">
+											<xsd:annotation>
+												<xsd:documentation>Cultivo en intercambio de variaciones</xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="sprce">
+														<xsd:sequence>
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="spream" type="sprfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Datos del cultivo para un  movimiento de alta o modificación </xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movam" type="movam">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+																<xsd:sequence>
+																	<xsd:element name="spreb" type="sprbfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Datos del cultivo para un movimiento de baja</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movb" type="movb">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:sequence>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="lreparv" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Lista de repartos en intercambio de variaciones</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="lreparcev">
+									<xsd:sequence>
+										<xsd:element name="reparce" maxOccurs="unbounded">
+											<xsd:annotation>
+												<xsd:documentation>Reparto en intercambio de variaciones</xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="reparce">
+														<xsd:sequence>
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="repaream" type="reparfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Datos del reparto para un  movimiento de alta o modificación </xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movam" type="movam">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+																<xsd:sequence>
+																	<xsd:element name="repareb" type="reparbfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Datos del reparto para un  movimiento de baja</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movb" type="movb">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:sequence>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="fxcc" type="fxcc" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>FXCC</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="limg" type="limg" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Lista de Imágenes</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REDUCIÓN DE LA PARTE DE ELEMENTOS CON TIPO DE INTERCAMBIO F-->
+	<xsd:complexType name="elemffe">
+		<xsd:complexContent>
+			<xsd:restriction base="elemf">
+				<xsd:choice>
+					<xsd:sequence>
+						<xsd:element name="fincacef">
+							<xsd:annotation>
+								<xsd:documentation>Finca en intercambio de situaciones finales</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:restriction base="fincacf">
+										<xsd:choice>
+											<xsd:sequence>
+												<xsd:element name="fincaf" type="fincafine">
+													<xsd:annotation>
+														<xsd:documentation>Datos de la finca</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+												<xsd:element name="movf" type="movf">
+													<xsd:annotation>
+														<xsd:documentation>Movimiento</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:choice>
+									</xsd:restriction>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="lsuelof" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Lista de suelos en intercambio de situaciones finales</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:restriction base="lsuelocef">
+										<xsd:sequence>
+											<xsd:element name="suelocf" maxOccurs="unbounded">
+												<xsd:annotation>
+													<xsd:documentation>Suelo en intercambio de situaciones finales</xsd:documentation>
+												</xsd:annotation>
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:restriction base="suelocf">
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="suelof" type="suelofine">
+																		<xsd:annotation>
+																			<xsd:documentation>Datos del suelo</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movf" type="movf">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:restriction>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:restriction>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="lucf" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Lista de unidades constructivas en intercambio de situaciones finales</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:restriction base="luccef">
+										<xsd:sequence>
+											<xsd:element name="uccf" maxOccurs="unbounded">
+												<xsd:annotation>
+													<xsd:documentation>Unidad constructiva en intercambio de situaciones finales</xsd:documentation>
+												</xsd:annotation>
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:restriction base="uccf">
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="ucf" type="uniconsfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Datos de la unidad constructiva</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movf" type="movf">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:restriction>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:restriction>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="lbicenf">
+							<xsd:annotation>
+								<xsd:documentation>Lista de bienes inmuebles en intercambio de situaciones finales</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:restriction base="lbicenf">
+										<xsd:sequence>
+											<xsd:element name="bicf" maxOccurs="unbounded">
+												<xsd:annotation>
+													<xsd:documentation>Bien inmueble en intercambio de situaciones finales</xsd:documentation>
+												</xsd:annotation>
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:restriction base="bicf">
+															<xsd:sequence>
+																<xsd:element name="bi" type="birefe">
+																	<xsd:annotation>
+																		<xsd:documentation>Datos del bien inmueble</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:element>
+																<xsd:element name="inft" type="infte" minOccurs="0">
+																	<xsd:annotation>
+																		<xsd:documentation>Información tributaria</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:element>
+																<xsd:element name="mov" type="movf">
+																	<xsd:annotation>
+																		<xsd:documentation>Movimiento</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:element>
+																<xsd:element name="lsf" type="lsferfe">
+																	<xsd:annotation>
+																		<xsd:documentation>Situación final de titularidad</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:restriction>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:restriction>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="lconsf" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Lista de construcciones en intercambio de situaciones finales</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:restriction base="lconscef">
+										<xsd:sequence>
+											<xsd:element name="conscf" maxOccurs="unbounded">
+												<xsd:annotation>
+													<xsd:documentation>Construcción en intercambio de situaciones finales</xsd:documentation>
+												</xsd:annotation>
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:restriction base="conscf">
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="consf" type="consfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Construcción</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movf" type="movf">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:restriction>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:restriction>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="lsprf" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Lista de cultivos en intercambio de situaciones finales</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:restriction base="lsprcef">
+										<xsd:sequence>
+											<xsd:element name="sprcf" maxOccurs="unbounded">
+												<xsd:annotation>
+													<xsd:documentation>Cultivo en intercambio de situaciones finales</xsd:documentation>
+												</xsd:annotation>
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:restriction base="sprcf">
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="sprf" type="sprfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Cultivo</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movf" type="movf">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:restriction>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:restriction>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="lreparf" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Lista de repartos en intercambio de situaciones finales</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:restriction base="lreparcef">
+										<xsd:sequence>
+											<xsd:element name="reparcf" maxOccurs="unbounded">
+												<xsd:annotation>
+													<xsd:documentation>Reparto en intercambio de situaciones finales</xsd:documentation>
+												</xsd:annotation>
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:restriction base="reparcf">
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="reparf" type="reparfine">
+																		<xsd:annotation>
+																			<xsd:documentation>Reparto</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="movf" type="movf">
+																		<xsd:annotation>
+																			<xsd:documentation>Movimiento</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:restriction>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:restriction>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="fxcc" type="fxcc" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Fxcc</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="limg" type="limg" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Lista de imágenes</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:element name="fincacefb">
+						<xsd:annotation>
+							<xsd:documentation>Baja de finca en intercambio de situaciones finales</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="fincacfb">
+									<xsd:choice>
+										<xsd:sequence>
+											<xsd:element name="fincafb" type="fincabfine">
+												<xsd:annotation>
+													<xsd:documentation>Datos de la finca para un  movimiento de baja </xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+											<xsd:element name="movb" type="movb">
+												<xsd:annotation>
+													<xsd:documentation>Movimiento</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:choice>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REDUCCIONES DE LOS ELEMENTOS FUNDAMENTALES-->
+	<!--FINCA-->
+	<xsd:complexType name="fincafine">
+		<xsd:complexContent>
+			<xsd:restriction base="finca">
+				<xsd:sequence>
+					<xsd:element name="idfcat" type="idfcat">
+						<xsd:annotation>
+							<xsd:documentation> Identificación de la finca</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="rbice" type="rbice" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Referencia del BICE al que pertenece la finca</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dt" type="dtr">
+						<xsd:annotation>
+							<xsd:documentation>Domicilio tributario</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dff">
+						<xsd:annotation>
+							<xsd:documentation>Datos físicos de la finca</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dff">
+									<xsd:sequence>
+										<xsd:element name="ssf">
+											<xsd:annotation>
+												<xsd:documentation>Superficies de la finca</xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="ssf">
+														<xsd:sequence>
+															<xsd:element name="ss" type="supg">
+																<xsd:annotation>
+																	<xsd:documentation>Superficie de la finca</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="sct" type="supp">
+																<xsd:annotation>
+																	<xsd:documentation>Superficie construida total</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="ssr" type="supp">
+																<xsd:annotation>
+																	<xsd:documentation>Superficie sobre rasante</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="sbr" type="supp">
+																<xsd:annotation>
+																	<xsd:documentation>Superficie bajo rasante</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="sc" type="supp">
+																<xsd:annotation>
+																	<xsd:documentation>Superficie cubierta</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+														</xsd:sequence>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="cen" type="cen" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Centroide</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="dval" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Datos de valoración urbana </xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dval">
+									<xsd:sequence>
+										<xsd:annotation>
+											<xsd:documentation>Datos de valoración de la finca</xsd:documentation>
+										</xsd:annotation>
+										<xsd:element name="aapv" type="xsd:gYear">
+											<xsd:annotation>
+												<xsd:documentation>Año de aprobación de la ponencia</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:sequence minOccurs="0">
+											<xsd:element name="cfcvc" type="cfcvc">
+												<xsd:annotation>
+													<xsd:documentation>Código de la fórmula de cálculo del valor catastral</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+											<xsd:element name="cpo" type="cpov">
+												<xsd:annotation>
+													<xsd:documentation>Código de Polígono de valoración</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+											<xsd:element name="mr" type="mr">
+												<xsd:annotation>
+													<xsd:documentation>Indicador de modalidad de reparto del valor de la edificabilidad no materializada o derecho de vuelo (1: por partes iguales; 2: por superficie; 3: por coeficientes; A: Se valora por repercusión; B: Anula el vuelo indicado en ponencia; C: Fincas infraedificadas o ruinosas; N: reparto efectuado según forma de cálculo)
+</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+											<xsd:element name="iipvc" type="iipvce" minOccurs="0">
+												<xsd:annotation>
+													<xsd:documentation>Excepcionalmente, se podrá marcar con una N la no aplicabilidad de los criterios generales de cálculo de la infraedificabilidad, por lo que la finca nunca resultará infraedificada</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--FINCA INTERCAMBIO VARIACIONES-->
+	<xsd:complexType name="fincavfine">
+		<xsd:complexContent>
+			<xsd:restriction base="finca">
+				<xsd:sequence>
+					<xsd:element name="idfcat" type="idfcat">
+						<xsd:annotation>
+							<xsd:documentation> Identificación de la finca</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="rbice" type="rbice" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Referencia del BICE al que pertenece la finca</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dt" type="dtr">
+						<xsd:annotation>
+							<xsd:documentation>Domicilio tributario</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dff" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Datos físicos de la finca</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dff">
+									<xsd:sequence>
+										<xsd:element name="ssf">
+											<xsd:annotation>
+												<xsd:documentation>Superficies de la finca</xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="ssf">
+														<xsd:sequence>
+															<xsd:element name="ss" type="supg">
+																<xsd:annotation>
+																	<xsd:documentation>Superficie de la finca</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="sct" type="supp">
+																<xsd:annotation>
+																	<xsd:documentation>Superficie construida total</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="ssr" type="supp">
+																<xsd:annotation>
+																	<xsd:documentation>Superficie sobre rasante</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="sbr" type="supp">
+																<xsd:annotation>
+																	<xsd:documentation>Superficie bajo rasante</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="sc" type="supp">
+																<xsd:annotation>
+																	<xsd:documentation>Superficie cubierta</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+														</xsd:sequence>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="cen" type="cen" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Centroide</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="dval" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Datos de valoración urbana </xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dval">
+									<xsd:sequence>
+										<xsd:annotation>
+											<xsd:documentation>Datos de valoración de la finca</xsd:documentation>
+										</xsd:annotation>
+										<xsd:element name="aapv" type="xsd:gYear">
+											<xsd:annotation>
+												<xsd:documentation>Año de aprobación de la ponencia</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:sequence minOccurs="0">
+											<xsd:element name="cfcvc" type="cfcvc">
+												<xsd:annotation>
+													<xsd:documentation>Código de la fórmula de cálculo del valor catastral</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+											<xsd:element name="cpo" type="cpov">
+												<xsd:annotation>
+													<xsd:documentation>Código de Polígono de valoración</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+											<xsd:element name="mr" type="mr">
+												<xsd:annotation>
+													<xsd:documentation>Indicador de modalidad de reparto del valor de la edificabilidad no materializada o derecho de vuelo (1: por partes iguales; 2: por superficie; 3: por coeficientes; A: Se valora por repercusión; B: Anula el vuelo indicado en ponencia; C: Fincas infraedificadas o ruinosas; N: reparto efectuado según forma de cálculo)
+</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+											<xsd:element name="iipvc" type="iipvce" minOccurs="0">
+												<xsd:annotation>
+													<xsd:documentation>Excepcionalmente, se podrá marcar con una N la no aplicabilidad de los criterios generales de cálculo de la infraedificabilidad, por lo que la finca nunca resultará infraedificada</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--FINCA MOVIMIENTO DE BAJA-->
+	<xsd:complexType name="fincabfine">
+		<xsd:complexContent>
+			<xsd:restriction base="finca">
+				<xsd:sequence>
+					<xsd:element name="idfcat" type="idfcat">
+						<xsd:annotation>
+							<xsd:documentation>Identificación de la finca</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--SUELO-->
+	<xsd:complexType name="suelofine">
+		<xsd:complexContent>
+			<xsd:restriction base="suelo">
+				<xsd:sequence>
+					<xsd:element name="idsucat" type="idsucat">
+						<xsd:annotation>
+							<xsd:documentation>Identificación  del suelo</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dfsu">
+						<xsd:annotation>
+							<xsd:documentation>Datos físicos del suelo</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dfsu">
+									<xsd:sequence>
+										<xsd:element name="fach" type="fach">
+											<xsd:annotation>
+												<xsd:documentation>Información de fachada</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sup" type="supp">
+											<xsd:annotation>
+												<xsd:documentation>Superficie</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="fondo" type="fondo" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Fondo</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="dvs">
+						<xsd:annotation>
+							<xsd:documentation>Datos de valoración del suelo</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dvs">
+									<xsd:sequence>
+										<xsd:element name="fpon" type="fpon">
+											<xsd:annotation>
+												<xsd:documentation>Información de ponencia</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="zu" type="zu">
+											<xsd:annotation>
+												<xsd:documentation>Zona urbanística según codificación DGC</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ctv" type="ctv">
+											<xsd:annotation>
+												<xsd:documentation>Código del tipo de valor a aplicar: 0,1,2,3,4,5,6,7,8,9</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ccvs" type="ccvs">
+											<xsd:annotation>
+												<xsd:documentation>Coeficientes correctores del valor del suelo</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="cccsc" type="cccsc">
+											<xsd:annotation>
+												<xsd:documentation>Coeficientes correctores conjuntos del valor del suelo y las construcciones</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--SUELO EN SITUACIONES DE BAJA-->
+	<xsd:complexType name="suelobfine">
+		<xsd:complexContent>
+			<xsd:restriction base="suelo">
+				<xsd:sequence>
+					<xsd:element name="idsucat" type="idsucat">
+						<xsd:annotation>
+							<xsd:documentation>Identificación del suelo</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--UNIDAD CONSTRUCTIVA-->
+	<xsd:complexType name="uniconsfine">
+		<xsd:complexContent>
+			<xsd:restriction base="unicons">
+				<xsd:sequence>
+					<xsd:element name="iducat" type="iducat">
+						<xsd:annotation>
+							<xsd:documentation>Identificación de la unidad constructiva</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dt" type="dtre" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Domicilio tributario</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dfuc">
+						<xsd:annotation>
+							<xsd:documentation>Datos físicos de la unidad constructiva</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dfuc">
+									<xsd:sequence>
+										<xsd:element name="ac" type="xsd:gYear">
+											<xsd:annotation>
+												<xsd:documentation>Año de la construcción</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="iacons" type="iaconsfe" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Indicador del año de la construcción. Valores posibles ('E','+','-','C')</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:choice>
+											<xsd:element name="so" type="supp">
+												<xsd:annotation>
+													<xsd:documentation>Superficie de Suelo ocupada por la Unidad Constructiva</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+											<xsd:element name="cucm" type="cuc">
+												<xsd:annotation>
+													<xsd:documentation>Código de la Unidad Constructiva Matriz</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+										</xsd:choice>
+										<xsd:element name="lf" type="lf" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Longitud de fachada</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="dvuc">
+						<xsd:annotation>
+							<xsd:documentation>Datos de valoración</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dvuc">
+									<xsd:sequence>
+										<xsd:element name="fpon" type="fpon" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Información de ponencia</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ccvsuc" type="ccvsuc">
+											<xsd:annotation>
+												<xsd:documentation>Coeficientes correctores del valor del suelo</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ccvcuc" type="ccvcuc">
+											<xsd:annotation>
+												<xsd:documentation>Coeficientes correctores del valor de la construcción</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ccvscuc" type="ccvscuc">
+											<xsd:annotation>
+												<xsd:documentation>Coeficientes correctores conjuntos del valor del suelo y la construcción</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--UNIDAD CONSTRUCTIVA BAJA-->
+	<xsd:complexType name="uniconsbfine">
+		<xsd:complexContent>
+			<xsd:restriction base="unicons">
+				<xsd:sequence>
+					<xsd:element name="iducat" type="iducat">
+						<xsd:annotation>
+							<xsd:documentation>Identificación de la unidad constructiva</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--CONSTRUCCION-->
+	<xsd:complexType name="consfine">
+		<xsd:complexContent>
+			<xsd:restriction base="cons">
+				<xsd:sequence>
+					<xsd:element name="idconscat" type="idconscat">
+						<xsd:annotation>
+							<xsd:documentation>Identificación de la construcción</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dt" type="domi" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Domicilio tributario</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dfcons" type="dfconsefe">
+						<xsd:annotation>
+							<xsd:documentation>Datos físicos de la construcción</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dvcons" type="dvconsefe">
+						<xsd:annotation>
+							<xsd:documentation>Datos de Valoración de la construcción</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--CONSTRUCCION BAJA-->
+	<xsd:complexType name="consbfine">
+		<xsd:complexContent>
+			<xsd:restriction base="cons">
+				<xsd:sequence>
+					<xsd:element name="idconscat" type="idconscat">
+						<xsd:annotation>
+							<xsd:documentation>Identificación de la construcción</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--Restricción de los datos físicos de la construcción para adaptarlos a la entrada de datos-->
+	<xsd:complexType name="dfconsefe">
+		<xsd:complexContent>
+			<xsd:restriction base="dfcons">
+				<xsd:sequence>
+					<xsd:element name="cuc" type="cuc">
+						<xsd:annotation>
+							<xsd:documentation>Código de la unidad constructiva</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:choice>
+						<xsd:element name="car" type="car">
+							<xsd:annotation>
+								<xsd:documentation>Cargo</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="modl" type="modl">
+							<xsd:annotation>
+								<xsd:documentation>Modalidad de reparto:                  Primer carácater: (T/A) a todos o a alguno                     Segundo carácter: (L/C) a locales o a cargos                      Tercer carácter: (1/2/3/4) proporción del reparto, por partes iguales, por superficie de los locales, por coeficientes de propiedad, o por coeficientes específicamente determindos</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+					<xsd:element name="cdes" type="cdes">
+						<xsd:annotation>
+							<xsd:documentation>Código de destino según codificación establecida por la D.G.C.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="refor" type="refor" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Datos de la eforma</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ili" type="ie" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Indicador de local interior</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="stl" type="supp">
+						<xsd:annotation>
+							<xsd:documentation>Superficie total del local</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="spt" type="supp" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Superficie de porches y terrazas</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="sil" type="supp" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Superficie imputable al local situada en otras plantas</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--Restricción de los datos de valoración de la construcción para adaptarlos a la entrada de datos-->
+	<xsd:complexType name="dvconsefe">
+		<xsd:complexContent>
+			<xsd:restriction base="dvcons">
+				<xsd:sequence>
+					<xsd:element name="tip" type="tip">
+						<xsd:annotation>
+							<xsd:documentation>Tipología</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="usop" type="usofe">
+						<xsd:annotation>
+							<xsd:documentation>Uso predominante</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="cat" type="catfe">
+						<xsd:annotation>
+							<xsd:documentation>Categoría</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ctv" type="ctvcons">
+						<xsd:annotation>
+							<xsd:documentation>Código del tipo de valor a aplicar: (Valores admitidos: 0,1,2,3,4,5,6,7,8,9, T teórica, N no consta, E equipamientos, V zona verde)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ccvscc" type="ccvscc">
+						<xsd:annotation>
+							<xsd:documentation>Coeficientes correctores conjuntos del valor del suelo y las construcciones</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--REPARTO-->
+	<xsd:complexType name="reparfine">
+		<xsd:complexContent>
+			<xsd:restriction base="repar">
+				<xsd:sequence>
+					<xsd:element name="idrepcat">
+						<xsd:annotation>
+							<xsd:documentation>Identificación del reparto</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="idrepcat">
+									<xsd:sequence>
+										<xsd:element name="pc" type="pc">
+											<xsd:annotation>
+												<xsd:documentation>Parcela Castastral</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ner" type="ner">
+											<xsd:annotation>
+												<xsd:documentation>Elemento a repartir</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="locat" type="locat">
+											<xsd:annotation>
+												<xsd:documentation>Localización DGC</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--PARTICULARIZACIÓN DE NER PARA ALTA O MODIFICACIÓN-->
+	<!--<xsd:complexType name="neram">
+		<xsd:complexContent>
+			<xsd:restriction base="ner">
+				<xsd:choice>
+					<xsd:sequence>
+						<xsd:element name="noec" type="noec">
+							<xsd:annotation>
+								<xsd:documentation>Número de orden del elemento de construcción</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="lerep">
+							<xsd:annotation>
+								<xsd:documentation>Lista de elementos a los que se reparte</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:restriction base="lerep">
+										<xsd:sequence>
+											<xsd:element name="irep" maxOccurs="unbounded">
+												<xsd:annotation>
+													<xsd:documentation>Información del Reparto</xsd:documentation>
+												</xsd:annotation>
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:restriction base="irep">
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="car" type="car">
+																		<xsd:annotation>
+																			<xsd:documentation>Cargo</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="pctrep" type="pctrep" minOccurs="0">
+																		<xsd:annotation>
+																			<xsd:documentation>Porcentaje de Reparto</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+																<xsd:sequence minOccurs="0">
+																	<xsd:element name="noec" type="noec">
+																		<xsd:annotation>
+																			<xsd:documentation>Número de orden del local a repartir entre locales</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="pctrep" type="pctrep" minOccurs="0">
+																		<xsd:annotation>
+																			<xsd:documentation>Porcentaje de Reparto</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:restriction>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:restriction>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:sequence>
+						<xsd:element name="cspr" type="cspr">
+							<xsd:annotation>
+								<xsd:documentation>Código de subparcela</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="ccc" type="ccc">
+							<xsd:annotation>
+								<xsd:documentation>Calificación Catastral</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="lcrep">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:restriction base="lerep">
+										<xsd:sequence>
+											<xsd:element name="irep" maxOccurs="unbounded">
+												<xsd:annotation>
+													<xsd:documentation>Información del Reparto</xsd:documentation>
+												</xsd:annotation>
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:restriction base="irep">
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="car" type="car">
+																		<xsd:annotation>
+																			<xsd:documentation>Cargo</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																	<xsd:element name="pctrep" type="pctrep" minOccurs="0">
+																		<xsd:annotation>
+																			<xsd:documentation>Porcentaje de Reparto</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:restriction>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:restriction>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:choice>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>-->
+	<!--NER DE BAJA-->
+	<!--	<xsd:complexType name="nerb">
+		<xsd:complexContent>
+			<xsd:restriction base="ner">
+				<xsd:choice>
+					<xsd:sequence>
+						<xsd:element name="noec" type="noec">
+							<xsd:annotation>
+								<xsd:documentation>Número de orden del elemento de construcción</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="lerep" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Lista de elementos a los que se reparte</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:restriction base="lerep">
+										<xsd:sequence>
+											<xsd:element name="irep" maxOccurs="unbounded">
+												<xsd:annotation>
+													<xsd:documentation>Información del Reparto</xsd:documentation>
+												</xsd:annotation>
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:restriction base="irep">
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="car" type="car">
+																		<xsd:annotation>
+																			<xsd:documentation>Cargo</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+																<xsd:sequence minOccurs="0">
+																	<xsd:element name="noec" type="noec">
+																		<xsd:annotation>
+																			<xsd:documentation>Número de orden del local a repartir entre locales</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:restriction>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:restriction>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:sequence>
+						<xsd:element name="cspr" type="cspr">
+							<xsd:annotation>
+								<xsd:documentation>Código de subparcela</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="ccc" type="ccc">
+							<xsd:annotation>
+								<xsd:documentation>Calificación Catastral</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="lcrep" minOccurs="0">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:restriction base="lerep">
+										<xsd:sequence>
+											<xsd:element name="irep" maxOccurs="unbounded">
+												<xsd:annotation>
+													<xsd:documentation>Información del Reparto</xsd:documentation>
+												</xsd:annotation>
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:restriction base="irep">
+															<xsd:choice>
+																<xsd:sequence>
+																	<xsd:element name="car" type="car">
+																		<xsd:annotation>
+																			<xsd:documentation>Cargo</xsd:documentation>
+																		</xsd:annotation>
+																	</xsd:element>
+																</xsd:sequence>
+															</xsd:choice>
+														</xsd:restriction>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:restriction>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:choice>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>-->
+	<!--rrrrr-->
+	<!--reduccion lrep-->
+	<!--<xsd:complexType name="lcrepfine">
+		<xsd:complexContent>
+			<xsd:restriction base="lcrep">
+				<xsd:sequence>
+					
+					<xsd:element name="irep" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Información del Reparto</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="irep">
+									<xsd:choice>
+										<xsd:sequence>
+											<xsd:element name="car" type="car">
+												<xsd:annotation>
+													<xsd:documentation>Cargo</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+											<xsd:element name="pctrep" type="pctrep" minOccurs="0">
+												<xsd:annotation>
+													<xsd:documentation>Porcentaje de Reparto</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:choice>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>-->
+	<!--REPARTO BAJA-->
+	<xsd:complexType name="reparbfine">
+		<xsd:complexContent>
+			<xsd:restriction base="repar">
+				<xsd:sequence>
+					<xsd:element name="idrepcat">
+						<xsd:annotation>
+							<xsd:documentation>Identificación del reparto</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="idrepcat">
+									<xsd:sequence>
+										<xsd:element name="pc" type="pc">
+											<xsd:annotation>
+												<xsd:documentation>Parcela Castastral</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ner" type="nerb">
+											<xsd:annotation>
+												<xsd:documentation>Elemento a repartir</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="locat" type="locat">
+											<xsd:annotation>
+												<xsd:documentation>Localización DGC</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<!--<xsd:element name="lerep" type="lerep" minOccurs="0"/>-->
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--SUBPARCELA-->
+	<xsd:complexType name="sprfine">
+		<xsd:complexContent>
+			<xsd:restriction base="spr">
+				<xsd:sequence>
+					<xsd:element name="idspr" type="idspr">
+						<xsd:annotation>
+							<xsd:documentation>Identificación del cultivo</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dspr">
+						<xsd:annotation>
+							<xsd:documentation>Datos del cultivo</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dspr">
+									<xsd:sequence>
+										<xsd:choice>
+											<xsd:element name="car" type="car">
+												<xsd:annotation>
+													<xsd:documentation>Cargo</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+											<xsd:element name="modl" type="modlspr">
+												<xsd:annotation>
+													<xsd:documentation>Código de la modalidad de reparto:                   Primer carácter: (T/A) a todos o a alguno                     Segundo carácter:   (C) cargo                 Tercer carácter: (1/2/3/4) proporción del reparto, por partes iguales, por superficie de los locales, por coeficientes de propiedad, o por coeficientes específicamente determinados    </xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+										</xsd:choice>
+										<xsd:element name="tspr" type="tspr">
+											<xsd:annotation>
+												<xsd:documentation>Tipo de subparcela:  T: terreno               A: abstracta            D: dominio público</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<!--<xsd:element name="dcc" type="dcc" minOccurs="0"/>-->
+										<xsd:element name="ip" type="ip">
+											<xsd:annotation>
+												<xsd:documentation>Intensidad productiva</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ssp" type="supg">
+											<xsd:annotation>
+												<xsd:documentation>Superficie de la subparcela</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="bspr" type="bspr" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Datos de bonificación del cultivo</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--SUBPARCELA BAJA-->
+	<xsd:complexType name="sprbfine">
+		<xsd:complexContent>
+			<xsd:restriction base="spr">
+				<xsd:sequence>
+					<xsd:element name="idspr" type="idspr">
+						<xsd:annotation>
+							<xsd:documentation>Identificación del cultivo</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--BIEN INMUEBLE 	CATASTRAL JURÍDICO-->
+	<xsd:complexType name="bijfinfe">
+		<xsd:complexContent>
+			<xsd:restriction base="bije">
+				<xsd:sequence>
+					<xsd:element name="bi" type="birefe"/>
+					<xsd:element name="inft" type="infte" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Información tributaria</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="mov" type="movami">
+						<xsd:annotation>
+							<xsd:documentation>Movimiento</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="lsf" type="lsferfe">
+						<xsd:annotation>
+							<xsd:documentation>Situación final de titularidad (Adquirentes)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="lsi" type="lsirfe" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Situación inicial de titularidad (Transmitentes)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--BIEN INMUEBLE 	CATASTRAL ECONÓMICO-->
+	<xsd:complexType name="bicecfinfe">
+		<xsd:complexContent>
+			<xsd:restriction base="bicece">
+				<xsd:sequence>
+					<xsd:element name="bi" type="birefe">
+						<xsd:annotation>
+							<xsd:documentation>Datos de bien inmueble</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="inft" type="infte" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Información tributaria</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="mov" type="movm">
+						<xsd:annotation>
+							<xsd:documentation>Movimiento</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

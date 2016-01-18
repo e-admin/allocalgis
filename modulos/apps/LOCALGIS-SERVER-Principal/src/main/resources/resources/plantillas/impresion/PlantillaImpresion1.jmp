@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+  <largeur>841</largeur>
+  <hauteur>1190</hauteur>
+  <largeurSansMarge>697</largeurSansMarge>
+  <hauteurSansMarge>1046</hauteurSansMarge>
+  <top>72</top>
+  <left>72</left>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.graphicText.GraphicText">
+    <PrintHeight>3892</PrintHeight>
+    <PrintWidth>10252</PrintWidth>
+    <PrintX>55</PrintX>
+    <PrintY>8858</PrintY>
+    <ScreenHeight>1960</ScreenHeight>
+    <ScreenWidth>5162</ScreenWidth>
+    <ScreenX>27</ScreenX>
+    <ScreenY>4462</ScreenY>
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>5162</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>1960</BottomLeftCornery>
+    <BottomRightCornerx>5162</BottomRightCornerx>
+    <BottomRightCornery>1960</BottomRightCornery>
+    <Texte>leyenda del mapa</Texte>
+    <FontName>Arial</FontName>
+    <FontStyle>1</FontStyle>
+    <FontSize>16</FontSize>
+    <HorizontalAlignment>2</HorizontalAlignment>
+    <VerticalAlignment>1</VerticalAlignment>
+    <FontColor>0, 0, 0, 255</FontColor>
+    <BackgroundColor>255, 204, 0, 255</BackgroundColor>
+    <BorderColor>128, 128, 128, 255</BorderColor>
+    <BorderThickness>1</BorderThickness>
+    <UpperCase>false</UpperCase>
+    <Underline>false</Underline>
+    <Opaque>false</Opaque>
+    <select>false</select>
+  </graphicElement>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.legendeFrame.LegendFrame">
+    <PrintHeight>3261</PrintHeight>
+    <PrintWidth>4535</PrintWidth>
+    <PrintX>210</PrintX>
+    <PrintY>9328</PrintY>
+    <ScreenHeight>1642</ScreenHeight>
+    <ScreenWidth>2283</ScreenWidth>
+    <ScreenX>105</ScreenX>
+    <ScreenY>4699</ScreenY>
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>2283</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>1642</BottomLeftCornery>
+    <BottomRightCornerx>2283</BottomRightCornerx>
+    <BottomRightCornery>1642</BottomRightCornery>
+    <titleMapLegendFont>
+      <FontName>Arial</FontName>
+      <FontStyle>1</FontStyle>
+      <FontSize>12</FontSize>
+      <Color>0, 0, 0, 255</Color>
+      <Underline>false</Underline>
+      <UpperCase>false</UpperCase>
+    </titleMapLegendFont>
+    <labelMapLegendFont>
+      <FontName>Arial</FontName>
+      <FontStyle>0</FontStyle>
+      <FontSize>12</FontSize>
+      <Color>0, 0, 0, 255</Color>
+      <Underline>false</Underline>
+      <UpperCase>false</UpperCase>
+    </labelMapLegendFont>
+    <select>false</select>
+  </graphicElement>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.graphicText.GraphicText">
+    <PrintHeight>721</PrintHeight>
+    <PrintWidth>603</PrintWidth>
+    <PrintX>27</PrintX>
+    <PrintY>67</PrintY>
+    <ScreenHeight>363</ScreenHeight>
+    <ScreenWidth>303</ScreenWidth>
+    <ScreenX>13</ScreenX>
+    <ScreenY>33</ScreenY>
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>303</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>363</BottomLeftCornery>
+    <BottomRightCornerx>303</BottomRightCornerx>
+    <BottomRightCornery>363</BottomRightCornery>
+    <Texte>mapa</Texte>
+    <FontName>Arial</FontName>
+    <FontStyle>0</FontStyle>
+    <FontSize>12</FontSize>
+    <HorizontalAlignment>2</HorizontalAlignment>
+    <VerticalAlignment>1</VerticalAlignment>
+    <FontColor>0, 0, 0, 255</FontColor>
+    <BackgroundColor>102, 0, 255, 255</BackgroundColor>
+    <BorderColor>0, 0, 0, 255</BorderColor>
+    <BorderThickness>3</BorderThickness>
+    <UpperCase>false</UpperCase>
+    <Underline>false</Underline>
+    <Opaque>false</Opaque>
+    <select>false</select>
+  </graphicElement>
+  <graphicElement class="com.geopista.ui.plugin.print.elements.MapFrame">
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>261</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>127</BottomLeftCornery>
+    <BottomRightCornerx>261</BottomRightCornerx>
+    <BottomRightCornery>127</BottomRightCornery>
+    <PrintHeight>253</PrintHeight>
+    <PrintWidth>520</PrintWidth>
+    <PrintX>67</PrintX>
+    <PrintY>219</PrintY>
+    <ScreenHeight>127</ScreenHeight>
+    <ScreenWidth>261</ScreenWidth>
+    <ScreenX>33</ScreenX>
+    <ScreenY>110</ScreenY>
+    <select>false</select>
+    <BorderColor>236, 233, 216, 255</BorderColor>
+    <BorderThickness>1</BorderThickness>
+    <FullExtent>false</FullExtent>
+  </graphicElement>
+  <graphicElement class="com.geopista.ui.plugin.print.elements.ScaleBarFrame">
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>258</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>10</BottomLeftCornery>
+    <BottomRightCornerx>258</BottomRightCornerx>
+    <BottomRightCornery>10</BottomRightCornery>
+    <PrintHeight>19</PrintHeight>
+    <PrintWidth>510</PrintWidth>
+    <PrintX>65</PrintX>
+    <PrintY>144</PrintY>
+    <ScreenHeight>10</ScreenHeight>
+    <ScreenWidth>258</ScreenWidth>
+    <ScreenX>33</ScreenX>
+    <ScreenY>73</ScreenY>
+    <Transparency>255</Transparency>
+    <IncrementCount>3</IncrementCount>
+    <PaintingArea>false</PaintingArea>
+    <Transparency>255</Transparency>
+    <LinkedMapNumber>1</LinkedMapNumber>
+  </graphicElement>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.graphicText.GraphicText">
+    <PrintHeight>45</PrintHeight>
+    <PrintWidth>289</PrintWidth>
+    <PrintX>176</PrintX>
+    <PrintY>5</PrintY>
+    <ScreenHeight>22</ScreenHeight>
+    <ScreenWidth>145</ScreenWidth>
+    <ScreenX>88</ScreenX>
+    <ScreenY>2</ScreenY>
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>145</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>22</BottomLeftCornery>
+    <BottomRightCornerx>145</BottomRightCornerx>
+    <BottomRightCornery>22</BottomRightCornery>
+    <Texte>&lt;html&gt;&lt;u&gt;%TITULO%&lt;/u&gt;&lt;/html&gt;</Texte>
+    <FontName>Arial</FontName>
+    <FontStyle>2</FontStyle>
+    <FontSize>12</FontSize>
+    <HorizontalAlignment>0</HorizontalAlignment>
+    <VerticalAlignment>0</VerticalAlignment>
+    <FontColor>0, 0, 0, 255</FontColor>
+    <BackgroundColor>236, 233, 216, 255</BackgroundColor>
+    <BorderColor>255, 255, 255, 255</BorderColor>
+    <BorderThickness>1</BorderThickness>
+    <UpperCase>false</UpperCase>
+    <Underline>true</Underline>
+    <Opaque>true</Opaque>
+    <select>false</select>
+  </graphicElement>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.legendeFrame.LegendFrame">
+    <PrintHeight>98</PrintHeight>
+    <PrintWidth>392</PrintWidth>
+    <PrintX>71</PrintX>
+    <PrintY>472</PrintY>
+    <ScreenHeight>49</ScreenHeight>
+    <ScreenWidth>197</ScreenWidth>
+    <ScreenX>35</ScreenX>
+    <ScreenY>237</ScreenY>
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>197</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>49</BottomLeftCornery>
+    <BottomRightCornerx>197</BottomRightCornerx>
+    <BottomRightCornery>49</BottomRightCornery>
+    <titleMapLegendFont>
+      <FontName>Arial</FontName>
+      <FontStyle>1</FontStyle>
+      <FontSize>12</FontSize>
+      <Color>0, 0, 0, 255</Color>
+      <Underline>false</Underline>
+      <UpperCase>false</UpperCase>
+    </titleMapLegendFont>
+    <labelMapLegendFont>
+      <FontName>Arial</FontName>
+      <FontStyle>0</FontStyle>
+      <FontSize>12</FontSize>
+      <Color>0, 0, 0, 255</Color>
+      <Underline>false</Underline>
+      <UpperCase>false</UpperCase>
+    </labelMapLegendFont>
+    <select>false</select>
+  </graphicElement>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.graphicText.GraphicText">
+    <PrintHeight>27</PrintHeight>
+    <PrintWidth>271</PrintWidth>
+    <PrintX>150</PrintX>
+    <PrintY>651</PrintY>
+    <ScreenHeight>13</ScreenHeight>
+    <ScreenWidth>136</ScreenWidth>
+    <ScreenX>75</ScreenX>
+    <ScreenY>327</ScreenY>
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>136</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>13</BottomLeftCornery>
+    <BottomRightCornerx>136</BottomRightCornerx>
+    <BottomRightCornery>13</BottomRightCornery>
+    <Texte>%CAMPO_ITERACION%</Texte>
+    <FontName>Arial</FontName>
+    <FontStyle>0</FontStyle>
+    <FontSize>12</FontSize>
+    <HorizontalAlignment>0</HorizontalAlignment>
+    <VerticalAlignment>0</VerticalAlignment>
+    <FontColor>0, 0, 0, 255</FontColor>
+    <BackgroundColor>236, 233, 216, 255</BackgroundColor>
+    <BorderColor>255, 255, 255, 255</BorderColor>
+    <BorderThickness>1</BorderThickness>
+    <UpperCase>false</UpperCase>
+    <Underline>false</Underline>
+    <Opaque>true</Opaque>
+    <select>false</select>
+  </graphicElement>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.NorthFrame">
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>84</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>81</BottomLeftCornery>
+    <BottomRightCornerx>84</BottomRightCornerx>
+    <BottomRightCornery>81</BottomRightCornery>
+    <PrintHeight>162</PrintHeight>
+    <PrintWidth>168</PrintWidth>
+    <PrintX>657</PrintX>
+    <PrintY>0</PrintY>
+    <ScreenHeight>81</ScreenHeight>
+    <ScreenWidth>84</ScreenWidth>
+    <ScreenX>330</ScreenX>
+    <ScreenY>0</ScreenY>
+    <select>true</select>
+    <NorthIconNumber>0</NorthIconNumber>
+  </graphicElement>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.NorthFrame">
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>58</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>39</BottomLeftCornery>
+    <BottomRightCornerx>58</BottomRightCornerx>
+    <BottomRightCornery>39</BottomRightCornery>
+    <PrintHeight>79</PrintHeight>
+    <PrintWidth>116</PrintWidth>
+    <PrintX>485</PrintX>
+    <PrintY>180</PrintY>
+    <ScreenHeight>39</ScreenHeight>
+    <ScreenWidth>58</ScreenWidth>
+    <ScreenX>244</ScreenX>
+    <ScreenY>90</ScreenY>
+    <select>false</select>
+    <NorthIconNumber>0</NorthIconNumber>
+  </graphicElement>
+  <graphicElement class="com.geopista.ui.plugin.print.elements.ImageFrame">
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>288</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>80</BottomLeftCornery>
+    <BottomRightCornerx>288</BottomRightCornerx>
+    <BottomRightCornery>80</BottomRightCornery>
+    <PrintHeight>160</PrintHeight>
+    <PrintWidth>572</PrintWidth>
+    <PrintX>37</PrintX>
+    <PrintY>806</PrintY>
+    <ScreenHeight>80</ScreenHeight>
+    <ScreenWidth>288</ScreenWidth>
+    <ScreenX>18</ScreenX>
+    <ScreenY>406</ScreenY>
+    <select>false</select>
+    <imageURL>file:/C:/LocalGIS/Datos/plantillas/geomarketing/img/logo_geocuenca.jpg</imageURL>
+  </graphicElement>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.graphicText.GraphicText">
+    <PrintHeight>35</PrintHeight>
+    <PrintWidth>552</PrintWidth>
+    <PrintX>61</PrintX>
+    <PrintY>709</PrintY>
+    <ScreenHeight>17</ScreenHeight>
+    <ScreenWidth>277</ScreenWidth>
+    <ScreenX>30</ScreenX>
+    <ScreenY>357</ScreenY>
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>277</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>17</BottomLeftCornery>
+    <BottomRightCornerx>277</BottomRightCornerx>
+    <BottomRightCornery>17</BottomRightCornery>
+    <Texte>%TEXTO_ITERACION%</Texte>
+    <FontName>Arial</FontName>
+    <FontStyle>0</FontStyle>
+    <FontSize>12</FontSize>
+    <HorizontalAlignment>0</HorizontalAlignment>
+    <VerticalAlignment>0</VerticalAlignment>
+    <FontColor>0, 0, 0, 255</FontColor>
+    <BackgroundColor>236, 233, 216, 255</BackgroundColor>
+    <BorderColor>255, 102, 102, 255</BorderColor>
+    <BorderThickness>1</BorderThickness>
+    <UpperCase>false</UpperCase>
+    <Underline>false</Underline>
+    <Opaque>false</Opaque>
+    <select>false</select>
+  </graphicElement>
+  <graphicElement class="reso.jumpPlugIn.printLayoutPlugIn.printLayoutInterface.elements.graphicText.GraphicText">
+    <PrintHeight>85</PrintHeight>
+    <PrintWidth>188</PrintWidth>
+    <PrintX>427</PrintX>
+    <PrintY>614</PrintY>
+    <ScreenHeight>42</ScreenHeight>
+    <ScreenWidth>94</ScreenWidth>
+    <ScreenX>215</ScreenX>
+    <ScreenY>309</ScreenY>
+    <topLeftCornerx>0</topLeftCornerx>
+    <topLeftCornery>0</topLeftCornery>
+    <topRightCornerx>94</topRightCornerx>
+    <topRightCornery>0</topRightCornery>
+    <BottomLeftCornerx>0</BottomLeftCornerx>
+    <BottomLeftCornery>42</BottomLeftCornery>
+    <BottomRightCornerx>94</BottomRightCornerx>
+    <BottomRightCornery>42</BottomRightCornery>
+    <Texte>&lt;html&gt;&lt;u&gt;%DESCRIPCION%&lt;/u&gt;&lt;/html&gt;</Texte>
+    <FontName>Arial</FontName>
+    <FontStyle>0</FontStyle>
+    <FontSize>12</FontSize>
+    <HorizontalAlignment>0</HorizontalAlignment>
+    <VerticalAlignment>0</VerticalAlignment>
+    <FontColor>0, 0, 0, 255</FontColor>
+    <BackgroundColor>236, 233, 216, 255</BackgroundColor>
+    <BorderColor>255, 255, 255, 255</BorderColor>
+    <BorderThickness>1</BorderThickness>
+    <UpperCase>false</UpperCase>
+    <Underline>true</Underline>
+    <Opaque>false</Opaque>
+    <select>false</select>
+  </graphicElement>
+</page>
+

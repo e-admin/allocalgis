@@ -1,0 +1,36 @@
+import java.io.*;
+
+    File jnlpFile = new File(basedir, "target/jnlp/launcher.jnlp");
+    if (!jnlpFile.isFile()) {
+        System.out.println("Target jnlp file not found: " + jnlpFile.getAbsolutePath());
+        return false;
+    }
+
+    String jnlpString = org.apache.commons.io.IOUtils.toString(new FileInputStream(jnlpFile));
+    if (!jnlpString.contains("<jar href=\"org/jfrog/test/simple/1.0/simple-1.0.jar\" main=\"true\"/>")) {
+        System.out.println("Main jar wasn't included or not detected");
+        return false;
+    }
+
+    if (jnlpString.contains("$iconRef")) {
+        System.out.println("Additional parameter '$iconRef' wasn't replaced");
+        return false;
+    }
+
+    if (!jnlpString.contains("<icon href=\"myapp.png\"/>")) {
+        System.out.println("iconRef replacement was incorrect");
+        return false;
+    }
+
+    if (!jnlpString.contains("<argument>firstArgument</argument>")) {
+        System.out.println("Project parameter wasn't replaced");
+        return false;
+    }
+
+    if (jnlpString.contains("log4j")) {
+        System.out.println("Exclusion of log4j didn't work");
+        return false;
+    }
+
+    return true;
+

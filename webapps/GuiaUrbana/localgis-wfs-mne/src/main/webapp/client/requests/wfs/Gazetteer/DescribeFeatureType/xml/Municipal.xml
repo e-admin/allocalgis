@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DescribeFeatureType version="1.1.0" service="WFS" xmlns="http://www.opengis.net/wfs" xmlns:app="http://www.deegree.org/app">
+	<TypeName>app:Municipalities</TypeName>
+</DescribeFeatureType>

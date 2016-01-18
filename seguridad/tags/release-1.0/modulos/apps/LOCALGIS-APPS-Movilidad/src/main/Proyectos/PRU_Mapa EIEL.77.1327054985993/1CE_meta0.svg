@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg viewBox="0.0 0.0 1340.9375 1071.8047" despX="206555.7691789418" despY="4798115.679182684" >
+  <g l1="id" l2="IdMunicip" l3="Clave" l4="Código provincia" l5="Código Municipio" l6="Código INE Entidad" l7="Código INE Núcleo" l8="Código Orden" geometryType="11" systemId="CE" stroke-dasharray="" editable="true" fill="none" id="Cementerios" >
+    <path d="M1.0 2.0 L3.0 4.0 5.0 6.0 z" v1="-1" v2="-1" v3="-1" v4="-1" v5="-1" v6="-1" v7="-1" v8="-1" id="203915103079" >
+    <metadata><![CDATA[
+<skeleton>
+<tab label="IdentificaciÃ³n" classId="CementeriosEIEL">
+		<item rm="orden_ce" label="Código Orden" name="" edit="false"/>
+		<item rm="codpoblamiento" label="Código INE Núcleo" name="" edit="false"/>
+		<item rm="codentidad" label="Código INE Entidad" name="" edit="false"/>
+		<item rm="codmunic" label="Código Municipio" name="" edit="false"/>
+		<item rm="codprov" label="Código provincia" name="" edit="false"/>
+		<item rm="clave" label="Clave" name="" edit="false"/>
+</tab>
+<tab label="InformaciÃ³n" classId="CementeriosEIEL">
+		<item rm="fecha_inst" label="Fecha de instalación" name="TIPO_FECHA" edit="true" modif="true" />
+		<item rm="obra_ejec" label="Obra Ejecutada" name="eiel_Obra ejecutada" edit="true" modif="true" />
+		<item rm="acceso_s_ruedas" label="Acceso con silla de ruedas" name="eiel_Acceso con silla de ruedas" edit="true" modif="true" />
+		<item rm="crematorio" label="Creamatorio" name="eiel_Existencia de crematorio" edit="true" modif="true" />
+		<item rm="superficie" label="Superficie" name="" edit="true"/>
+		<item rm="saturacion" label="Saturación" name="eiel_saturación" edit="true" modif="true" />
+		<item rm="ampliacion" label="Posb. Ampl." name="eiel_Posibilidad de ampliación" edit="true" modif="true" />
+		<item rm="capilla" label="Capilla" name="eiel_Capilla" edit="true" modif="true" />
+		<item rm="acceso" label="Est. Acceso" name="eiel_Estado del acceso" edit="true" modif="true" />
+		<item rm="distancia" label="Distancia (m)" name="" edit="true"/>
+		<item rm="titular" label="Titular" name="eiel_Titularidad de cementerio" edit="true" modif="true" />
+		<item rm="nombre" label="Nombre" name="" edit="true"/>
+</tab>
+<tab label="Estado" classId="CementeriosEIEL">
+		<item rm="estado_revision" label="E. Revisión" name="eiel_Estado de revisión" edit="true" modif="true" />
+		<item rm="fecha_revision" label="F. Revisión" name="TIPO_FECHA" edit="true" modif="true" />
+		<item rm="observ" label="Observaciones" name="" edit="true"/>
+</tab>
+</skeleton>
+]]></metadata>
+  </path>
+  <path d="M930.08594 678.65625 L932.125 679.59766 930.34766 689.2461 930.2422 692.375 905.0625 691.125 903.0469 690.97266 879.9297 684.90625 856.1719 679.53516 863.1875 654.03516 919.90625 665.2422 917.21094 675.28516 930.08594 678.65625 z" v1="5384" v2="33001" v3="CE" v4="33" v5="001" v6="0910" v7="01" v8="005" id="287088943079" >
+  <metadata><![CDATA[<?xml version="1.0"?>
+<skeleton>
+ <tab label="IdentificaciÃ³n" classId="CementeriosEIEL">
+  <item rm="orden_ce" label="Código Orden" name="" edit="false">
+005
+  </item>
+  <item rm="codpoblamiento" label="Código INE Núcleo" name="" edit="false">
+01
+  </item>
+  <item rm="codentidad" label="Código INE Entidad" name="" edit="false">
+0910
+  </item>
+  <item rm="codmunic" label="Código Municipio" name="" edit="false">
+001
+  </item>
+  <item rm="codprov" label="Código provincia" name="" edit="false">
+33
+  </item>
+  <item rm="clave" label="Clave" name="" edit="false">
+CE
+  </item>
+
+ </tab>
+ <tab label="InformaciÃ³n" classId="CementeriosEIEL">
+  <item rm="fecha_inst" label="Fecha de instalación" name="TIPO_FECHA" edit="true" modif="true" modified="true">
+2012-01-27
+  </item>
+  <item rm="obra_ejec" label="Obra Ejecutada" name="eiel_Obra ejecutada" edit="true" modif="true" modified="true">
+SI
+  </item>
+  <item rm="acceso_s_ruedas" label="Acceso con silla de ruedas" name="eiel_Acceso con silla de ruedas" edit="true" modif="true" modified="true">
+NO
+  </item>
+  <item rm="crematorio" label="Creamatorio" name="eiel_Existencia de crematorio" edit="true" modif="true" modified="true">
+NO
+  </item>
+  <item rm="superficie" label="Superficie" name="" edit="true">
+1788
+  </item>
+  <item rm="saturacion" label="Saturación" name="eiel_saturación" edit="true" modif="true" modified="true">
+SI
+  </item>
+  <item rm="ampliacion" label="Posb. Ampl." name="eiel_Posibilidad de ampliación" edit="true" modif="true" modified="true">
+SI
+  </item>
+  <item rm="capilla" label="Capilla" name="eiel_Capilla" edit="true" modif="true" modified="true">
+NO
+  </item>
+  <item rm="acceso" label="Est. Acceso" name="eiel_Estado del acceso" edit="true" modif="true" modified="true">
+B
+  </item>
+  <item rm="distancia" label="Distancia (m)" name="" edit="true">
+0.0
+  </item>
+  <item rm="titular" label="Titular" name="eiel_Titularidad de cementerio" edit="true" modif="true" modified="true">
+MU
+  </item>
+  <item rm="nombre" label="Nombre" name="" edit="true">
+CEMENTERIO
+  </item>
+
+ </tab>
+ <tab label="Estado" classId="CementeriosEIEL">
+  <item rm="estado_revision" label="E. Revisión" name="eiel_Estado de revisión" edit="true" modif="true" modified="true">
+0
+  </item>
+  <item rm="fecha_revision" label="F. Revisión" name="TIPO_FECHA" edit="true" modif="true" modified="true">
+2012-01-31
+  </item>
+  <item rm="observ" label="Observaciones" name="" edit="true">
+
+  </item>
+
+ </tab>
+
+</skeleton>
+]]></metadata>
+</path>
+</g>
+</svg>

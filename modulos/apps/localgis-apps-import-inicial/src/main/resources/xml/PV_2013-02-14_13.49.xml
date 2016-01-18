@@ -1,0 +1,1982 @@
+<LocalGISXmlLayer>
+  <Tables>
+    <table>
+      <name>eiel_c_saneam_pv</name>
+      <idTabla>10128</idTabla>
+      <description>eiel_c_saneam_pv</description>
+      <columns/>
+      <geometryType>1</geometryType>
+      <external>0</external>
+    </table>
+  </Tables>
+  <ColumnsDB>
+    <entry>
+      <style>eiel_c_saneam_pv</style>
+      <htDescripcion>
+        <entry>
+          <int>1</int>
+          <columnDB>
+            <name>id</name>
+            <type>numeric</type>
+            <length>8</length>
+            <precission>0</precission>
+            <isNotNull>true</isNotNull>
+            <isUnique>true</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_saneam_pv</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>2</int>
+          <columnDB>
+            <name>id_municipio</name>
+            <type>numeric</type>
+            <length>5</length>
+            <precission>0</precission>
+            <isNotNull>true</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_saneam_pv</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>3</int>
+          <columnDB>
+            <name>GEOMETRY</name>
+            <type>geometry</type>
+            <length>0</length>
+            <precission>0</precission>
+            <isNotNull>false</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_saneam_pv</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>4</int>
+          <columnDB>
+            <name>clave</name>
+            <type>varchar</type>
+            <length>2</length>
+            <precission>0</precission>
+            <isNotNull>true</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_saneam_pv</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>5</int>
+          <columnDB>
+            <name>codprov</name>
+            <type>varchar</type>
+            <length>2</length>
+            <precission>0</precission>
+            <isNotNull>true</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_saneam_pv</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>6</int>
+          <columnDB>
+            <name>codmunic</name>
+            <type>varchar</type>
+            <length>3</length>
+            <precission>0</precission>
+            <isNotNull>true</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_saneam_pv</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>7</int>
+          <columnDB>
+            <name>orden_pv</name>
+            <type>varchar</type>
+            <length>4</length>
+            <precission>0</precission>
+            <isNotNull>true</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_saneam_pv</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>8</int>
+          <columnDB>
+            <name>cota_z</name>
+            <type>numeric</type>
+            <length>8</length>
+            <precission>0</precission>
+            <isNotNull>false</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_saneam_pv</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>9</int>
+          <columnDB>
+            <name>obra_ejec</name>
+            <type>varchar</type>
+            <length>2</length>
+            <precission>0</precission>
+            <isNotNull>false</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_saneam_pv</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>10</int>
+          <columnDB>
+            <name>precision_dig</name>
+            <type>varchar</type>
+            <length>2</length>
+            <precission>0</precission>
+            <isNotNull>false</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_saneam_pv</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>11</int>
+          <columnDB>
+            <name>revision_actual</name>
+            <type>numeric</type>
+            <length>10</length>
+            <precission>0</precission>
+            <isNotNull>true</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <defaultValue>0</defaultValue>
+            <tableName>eiel_c_saneam_pv</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>12</int>
+          <columnDB>
+            <name>revision_expirada</name>
+            <type>numeric</type>
+            <length>10</length>
+            <precission>0</precission>
+            <isNotNull>false</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <defaultValue>9999999999</defaultValue>
+            <tableName>eiel_c_saneam_pv</tableName>
+          </columnDB>
+        </entry>
+      </htDescripcion>
+    </entry>
+  </ColumnsDB>
+  <Domains>
+    <hDom>
+      <entry>
+        <style>20240</style>
+        <domain>
+          <idDomain>20240</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>226776</style>
+                <domainNode>
+                  <idNode>226776</idNode>
+                  <idDes>226246</idDes>
+                  <type>4</type>
+                  <hDict>
+                    <entry>
+                      <style>ga_ES</style>
+                      <style>Precision digitalización</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Precision digitalización</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>Precision digitalización</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>Precision digitalización</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>Precision digitalización</style>
+                    </entry>
+                  </hDict>
+                  <lHijos>
+                    <hDom>
+                      <entry>
+                        <style>226782</style>
+                        <domainNode>
+                          <idNode>226782</idNode>
+                          <idDes>226252</idDes>
+                          <type>7</type>
+                          <idParent>226776</idParent>
+                          <hDict>
+                            <entry>
+                              <style>ga_ES</style>
+                              <style>Escaneado</style>
+                            </entry>
+                            <entry>
+                              <style>es_ES</style>
+                              <style>Escaneado</style>
+                            </entry>
+                            <entry>
+                              <style>va_ES</style>
+                              <style>Escaneado</style>
+                            </entry>
+                            <entry>
+                              <style>eu_ES</style>
+                              <style>Escaneado</style>
+                            </entry>
+                            <entry>
+                              <style>ca_ES</style>
+                              <style>Escaneado</style>
+                            </entry>
+                          </hDict>
+                          <lHijos>
+                            <hDom/>
+                          </lHijos>
+                          <idDomain>20240</idDomain>
+                          <patron>SC</patron>
+                          <settedLocale>false</settedLocale>
+                          <forceDelete>false</forceDelete>
+                        </domainNode>
+                      </entry>
+                      <entry>
+                        <style>226781</style>
+                        <domainNode>
+                          <idNode>226781</idNode>
+                          <idDes>226251</idDes>
+                          <type>7</type>
+                          <idParent>226776</idParent>
+                          <hDict>
+                            <entry>
+                              <style>es_ES</style>
+                              <style>Proyecto</style>
+                            </entry>
+                            <entry>
+                              <style>ga_ES</style>
+                              <style>Proyecto</style>
+                            </entry>
+                            <entry>
+                              <style>va_ES</style>
+                              <style>Proyecto</style>
+                            </entry>
+                            <entry>
+                              <style>eu_ES</style>
+                              <style>Proyecto</style>
+                            </entry>
+                            <entry>
+                              <style>ca_ES</style>
+                              <style>Proyecto</style>
+                            </entry>
+                          </hDict>
+                          <lHijos>
+                            <hDom/>
+                          </lHijos>
+                          <idDomain>20240</idDomain>
+                          <patron>PY</patron>
+                          <settedLocale>false</settedLocale>
+                          <forceDelete>false</forceDelete>
+                        </domainNode>
+                      </entry>
+                      <entry>
+                        <style>226779</style>
+                        <domainNode>
+                          <idNode>226779</idNode>
+                          <idDes>226249</idDes>
+                          <type>7</type>
+                          <idParent>226776</idParent>
+                          <hDict>
+                            <entry>
+                              <style>es_ES</style>
+                              <style>GPS</style>
+                            </entry>
+                            <entry>
+                              <style>ga_ES</style>
+                              <style>GPS</style>
+                            </entry>
+                            <entry>
+                              <style>va_ES</style>
+                              <style>GPS</style>
+                            </entry>
+                            <entry>
+                              <style>eu_ES</style>
+                              <style>GPS</style>
+                            </entry>
+                            <entry>
+                              <style>ca_ES</style>
+                              <style>GPS</style>
+                            </entry>
+                          </hDict>
+                          <lHijos>
+                            <hDom/>
+                          </lHijos>
+                          <idDomain>20240</idDomain>
+                          <patron>GP</patron>
+                          <settedLocale>false</settedLocale>
+                          <forceDelete>false</forceDelete>
+                        </domainNode>
+                      </entry>
+                      <entry>
+                        <style>226780</style>
+                        <domainNode>
+                          <idNode>226780</idNode>
+                          <idDes>226250</idDes>
+                          <type>7</type>
+                          <idParent>226776</idParent>
+                          <hDict>
+                            <entry>
+                              <style>es_ES</style>
+                              <style>Digitalizado sobre ortofoto</style>
+                            </entry>
+                            <entry>
+                              <style>ga_ES</style>
+                              <style>Digitalizado sobre ortofoto</style>
+                            </entry>
+                            <entry>
+                              <style>va_ES</style>
+                              <style>Digitalizado sobre ortofoto</style>
+                            </entry>
+                            <entry>
+                              <style>eu_ES</style>
+                              <style>Digitalizado sobre ortofoto</style>
+                            </entry>
+                            <entry>
+                              <style>ca_ES</style>
+                              <style>Digitalizado sobre ortofoto</style>
+                            </entry>
+                          </hDict>
+                          <lHijos>
+                            <hDom/>
+                          </lHijos>
+                          <idDomain>20240</idDomain>
+                          <patron>OF</patron>
+                          <settedLocale>false</settedLocale>
+                          <forceDelete>false</forceDelete>
+                        </domainNode>
+                      </entry>
+                      <entry>
+                        <style>226778</style>
+                        <domainNode>
+                          <idNode>226778</idNode>
+                          <idDes>226248</idDes>
+                          <type>7</type>
+                          <idParent>226776</idParent>
+                          <hDict>
+                            <entry>
+                              <style>es_ES</style>
+                              <style>Desconocido</style>
+                            </entry>
+                            <entry>
+                              <style>ga_ES</style>
+                              <style>Desconocido</style>
+                            </entry>
+                            <entry>
+                              <style>va_ES</style>
+                              <style>Desconocido</style>
+                            </entry>
+                            <entry>
+                              <style>eu_ES</style>
+                              <style>Desconocido</style>
+                            </entry>
+                            <entry>
+                              <style>ca_ES</style>
+                              <style>Desconocido</style>
+                            </entry>
+                          </hDict>
+                          <lHijos>
+                            <hDom/>
+                          </lHijos>
+                          <idDomain>20240</idDomain>
+                          <patron>DC</patron>
+                          <settedLocale>false</settedLocale>
+                          <forceDelete>false</forceDelete>
+                        </domainNode>
+                      </entry>
+                      <entry>
+                        <style>226777</style>
+                        <domainNode>
+                          <idNode>226777</idNode>
+                          <idDes>226247</idDes>
+                          <type>7</type>
+                          <idParent>226776</idParent>
+                          <hDict>
+                            <entry>
+                              <style>es_ES</style>
+                              <style>Punto aproximado</style>
+                            </entry>
+                            <entry>
+                              <style>ga_ES</style>
+                              <style>Punto aproximado</style>
+                            </entry>
+                            <entry>
+                              <style>va_ES</style>
+                              <style>Punto aproximado</style>
+                            </entry>
+                            <entry>
+                              <style>eu_ES</style>
+                              <style>Punto aproximado</style>
+                            </entry>
+                            <entry>
+                              <style>ca_ES</style>
+                              <style>Punto aproximado</style>
+                            </entry>
+                          </hDict>
+                          <lHijos>
+                            <hDom/>
+                          </lHijos>
+                          <idDomain>20240</idDomain>
+                          <patron>AP</patron>
+                          <settedLocale>false</settedLocale>
+                          <forceDelete>false</forceDelete>
+                        </domainNode>
+                      </entry>
+                    </hDom>
+                  </lHijos>
+                  <idDomain>20240</idDomain>
+                  <patron>?</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>eiel_precision_dig</name>
+          <idCategory>5</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>20193</style>
+        <domain>
+          <idDomain>20193</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>226567</style>
+                <domainNode>
+                  <idNode>226567</idNode>
+                  <idDes>226037</idDes>
+                  <type>4</type>
+                  <hDict>
+                    <entry>
+                      <style>ga_ES</style>
+                      <style>Obra ejecutada</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Obra ejecutada</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>Obra ejecutada</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>Obra ejecutada</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>Obra ejecutada</style>
+                    </entry>
+                  </hDict>
+                  <lHijos>
+                    <hDom>
+                      <entry>
+                        <style>226569</style>
+                        <domainNode>
+                          <idNode>226569</idNode>
+                          <idDes>226039</idDes>
+                          <type>7</type>
+                          <idParent>226567</idParent>
+                          <hDict>
+                            <entry>
+                              <style>ga_ES</style>
+                              <style>Si</style>
+                            </entry>
+                            <entry>
+                              <style>es_ES</style>
+                              <style>Si</style>
+                            </entry>
+                            <entry>
+                              <style>va_ES</style>
+                              <style>Si</style>
+                            </entry>
+                            <entry>
+                              <style>eu_ES</style>
+                              <style>Si</style>
+                            </entry>
+                            <entry>
+                              <style>ca_ES</style>
+                              <style>Si</style>
+                            </entry>
+                          </hDict>
+                          <lHijos>
+                            <hDom/>
+                          </lHijos>
+                          <idDomain>20193</idDomain>
+                          <patron>SI</patron>
+                          <settedLocale>false</settedLocale>
+                          <forceDelete>false</forceDelete>
+                        </domainNode>
+                      </entry>
+                      <entry>
+                        <style>226568</style>
+                        <domainNode>
+                          <idNode>226568</idNode>
+                          <idDes>226038</idDes>
+                          <type>7</type>
+                          <idParent>226567</idParent>
+                          <hDict>
+                            <entry>
+                              <style>ga_ES</style>
+                              <style>No</style>
+                            </entry>
+                            <entry>
+                              <style>es_ES</style>
+                              <style>No</style>
+                            </entry>
+                            <entry>
+                              <style>va_ES</style>
+                              <style>No</style>
+                            </entry>
+                            <entry>
+                              <style>eu_ES</style>
+                              <style>No</style>
+                            </entry>
+                            <entry>
+                              <style>ca_ES</style>
+                              <style>No</style>
+                            </entry>
+                          </hDict>
+                          <lHijos>
+                            <hDom/>
+                          </lHijos>
+                          <idDomain>20193</idDomain>
+                          <patron>NO</patron>
+                          <settedLocale>false</settedLocale>
+                          <forceDelete>false</forceDelete>
+                        </domainNode>
+                      </entry>
+                    </hDom>
+                  </lHijos>
+                  <idDomain>20193</idDomain>
+                  <patron>?</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>eiel_Obra ejecutada</name>
+          <idCategory>5</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>87</style>
+        <domain>
+          <idDomain>87</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>585</style>
+                <domainNode>
+                  <idNode>585</idNode>
+                  <type>1</type>
+                  <hDict/>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>87</idDomain>
+                  <patron>4[.*]</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Texto de 4 caracteres </name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>86</style>
+        <domain>
+          <idDomain>86</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>584</style>
+                <domainNode>
+                  <idNode>584</idNode>
+                  <type>1</type>
+                  <hDict/>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>86</idDomain>
+                  <patron>3[.*]</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Texto de 3 caracteres</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>85</style>
+        <domain>
+          <idDomain>85</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>583</style>
+                <domainNode>
+                  <idNode>583</idNode>
+                  <type>1</type>
+                  <hDict/>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>85</idDomain>
+                  <patron>2[.*]</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Texto de 2 caracteres</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>10023</style>
+        <domain>
+          <idDomain>10023</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>100023</style>
+                <domainNode>
+                  <idNode>100023</idNode>
+                  <type>3</type>
+                  <hDict/>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>10023</idDomain>
+                  <patron>?[0:99999999]</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Numero entre 0-99999999 no obligatorio
+</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>10069</style>
+        <domain>
+          <idDomain>10069</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>957</style>
+                <domainNode>
+                  <idNode>957</idNode>
+                  <idDes>597</idDes>
+                  <type>8</type>
+                  <hDict>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Municipio obligatorio</style>
+                    </entry>
+                  </hDict>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>10069</idDomain>
+                  <patron>ENV_VAR:geopista.DefaultCityId</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Municipio obligatorio</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>10067</style>
+        <domain>
+          <idDomain>10067</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>955</style>
+                <domainNode>
+                  <idNode>955</idNode>
+                  <idDes>595</idDes>
+                  <type>8</type>
+                  <hDict>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Autonumérico incremental</style>
+                    </entry>
+                  </hDict>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>10067</idDomain>
+                  <patron>ID</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Autonumérico incremental</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+    </hDom>
+    <hDomByName>
+      <entry>
+        <style>Texto de 4 caracteres </style>
+        <domain reference="../../../hDom/entry[3]/domain"/>
+      </entry>
+      <entry>
+        <style>Texto de 2 caracteres</style>
+        <domain reference="../../../hDom/entry[5]/domain"/>
+      </entry>
+      <entry>
+        <style>eiel_Obra ejecutada</style>
+        <domain reference="../../../hDom/entry[2]/domain"/>
+      </entry>
+      <entry>
+        <style>eiel_precision_dig</style>
+        <domain reference="../../../hDom/entry/domain"/>
+      </entry>
+      <entry>
+        <style>Texto de 3 caracteres</style>
+        <domain reference="../../../hDom/entry[4]/domain"/>
+      </entry>
+      <entry>
+        <style>Numero entre 0-99999999 no obligatorio
+</style>
+        <domain reference="../../../hDom/entry[6]/domain"/>
+      </entry>
+      <entry>
+        <style>Autonumérico incremental</style>
+        <domain reference="../../../hDom/entry[8]/domain"/>
+      </entry>
+      <entry>
+        <style>Municipio obligatorio</style>
+        <domain reference="../../../hDom/entry[7]/domain"/>
+      </entry>
+    </hDomByName>
+    <vectSorted>
+      <style>10067</style>
+      <style>20193</style>
+      <style>20240</style>
+      <style>10069</style>
+      <style>10023</style>
+      <style>85</style>
+      <style>85</style>
+      <style>86</style>
+      <style>87</style>
+    </vectSorted>
+  </Domains>
+  <Layer>
+    <layer>
+      <layerManager>
+        <undoableEditReceiver>
+          <undoManager>
+            <hasBeenDone>true</hasBeenDone>
+            <alive>true</alive>
+            <inProgress>true</inProgress>
+            <edits/>
+            <indexOfNextAdd>0</indexOfNextAdd>
+            <limit>100</limit>
+          </undoManager>
+          <newUndoableEdits/>
+          <transactions>0</transactions>
+          <nothingToUndoReported>false</nothingToUndoReported>
+          <irreversibleChangeReported>false</irreversibleChangeReported>
+          <undoManagerCouldUndoAtStart>false</undoManagerCouldUndoAtStart>
+          <listeners/>
+          <aborted>false</aborted>
+        </undoableEditReceiver>
+        <coordinateSystem class="com.vividsolutions.jump.coordsys.CoordinateSystem$1">
+          <name>Unspecified</name>
+          <epsgCode>0</epsgCode>
+          <zone>0</zone>
+        </coordinateSystem>
+        <categories/>
+        <layerReferencesToDispose/>
+        <firingEvents>false</firingEvents>
+        <layerListeners>
+          <com.vividsolutions.jump.workbench.model.Layer_-4>
+            <outer-class reference="../../../.."/>
+          </com.vividsolutions.jump.workbench.model.Layer_-4>
+        </layerListeners>
+        <firstColors class="java.util.AbstractList$Itr">
+          <cursor>0</cursor>
+          <lastRet>-1</lastRet>
+          <expectedModCount>17</expectedModCount>
+          <outer-class class="LayerFamilies">
+            <awt-color>
+              <red>0</red>
+              <green>180</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>180</red>
+              <green>0</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>0</red>
+              <green>180</green>
+              <blue>180</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>152</red>
+              <green>78</green>
+              <blue>163</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>255</red>
+              <green>127</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>255</red>
+              <green>255</green>
+              <blue>51</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>255</red>
+              <green>192</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>204</red>
+              <green>204</green>
+              <blue>255</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>255</red>
+              <green>204</green>
+              <blue>204</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>204</red>
+              <green>255</green>
+              <blue>204</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>166</red>
+              <green>86</green>
+              <blue>40</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>247</red>
+              <green>129</green>
+              <blue>191</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>0</red>
+              <green>255</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>255</red>
+              <green>0</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>0</red>
+              <green>0</green>
+              <blue>255</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>0</red>
+              <green>255</green>
+              <blue>255</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>255</red>
+              <green>0</green>
+              <blue>255</blue>
+              <alpha>255</alpha>
+            </awt-color>
+          </outer-class>
+        </firstColors>
+        <blackboard>
+          <properties/>
+        </blackboard>
+        <orderLayers/>
+      </layerManager>
+      <name>227134</name>
+      <visible>true</visible>
+      <scaleDependentRenderingEnabled>false</scaleDependentRenderingEnabled>
+      <description>PV</description>
+      <drawingLast>false</drawingLast>
+      <styles/>
+      <synchronizingLineColor>true</synchronizingLineColor>
+      <editable>true</editable>
+      <dinamica>false</dinamica>
+      <versionable>true</versionable>
+      <validator>com.geopista.protocol.VersionValidator</validator>
+      <layerListener class="com.vividsolutions.jump.workbench.model.Layer$4" reference="../layerManager/layerListeners/com.vividsolutions.jump.workbench.model.Layer_-4"/>
+      <blackboard class="com.vividsolutions.jump.workbench.model.Layer$1">
+        <properties>
+          <entry>
+            <style>com.vividsolutions.jump.workbench.model.Layer - FIRING APPEARANCE CHANGED ON ATTRIBUTE CHANGE</style>
+            <boolean>true</boolean>
+          </entry>
+        </properties>
+        <outer-class reference="../.."/>
+      </blackboard>
+      <featureCollectionModified>false</featureCollectionModified>
+    </layer>
+    <idLayer>12150</idLayer>
+    <htNombre>
+      <entry>
+        <style>es_ES</style>
+        <style>Punto de vertido</style>
+      </entry>
+      <entry>
+        <style>gl_ES</style>
+        <style>[gl]Punto de vertido</style>
+      </entry>
+      <entry>
+        <style>va_ES</style>
+        <style>[va]Punto de vertido</style>
+      </entry>
+      <entry>
+        <style>eu_ES</style>
+        <style>[eu]Punto de vertido</style>
+      </entry>
+      <entry>
+        <style>ca_ES</style>
+        <style>[cat]Punto de vertido</style>
+      </entry>
+    </htNombre>
+    <acl>
+      <id>123</id>
+      <nombre>Punto de vertido</nombre>
+      <permisos>
+        <hPermisos/>
+        <hPermisosSorted/>
+      </permisos>
+    </acl>
+    <idEntidadLayer>0</idEntidadLayer>
+  </Layer>
+  <Attributes>
+    <attribute>
+      <column>
+        <Name>GEOMETRY</Name>
+        <idColumn>101082</idColumn>
+        <table>
+          <name>eiel_c_saneam_pv</name>
+          <idTabla>10128</idTabla>
+          <columns>
+            <entry>
+              <style>id</style>
+              <column>
+                <Name>id</Name>
+                <idColumn>101083</idColumn>
+                <domain class="com.geopista.feature.AutoFieldDomain">
+                  <children/>
+                  <systemID>10067</systemID>
+                  <Name>Autonumérico incremental</Name>
+                  <pattern>ID</pattern>
+                  <originalPattern>ID</originalPattern>
+                  <aproxLenght>0</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>false</nullable>
+                  <type>ID</type>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>101808</systemID>
+                  <idAlias>227136</idAlias>
+                  <idLayer>12150</idLayer>
+                  <position>2</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>id</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>codprov</style>
+              <column>
+                <Name>codprov</Name>
+                <idColumn>101086</idColumn>
+                <domain class="com.geopista.feature.StringDomain">
+                  <children/>
+                  <systemID>85</systemID>
+                  <Name>Texto de 2 caracteres</Name>
+                  <pattern>2[.*]</pattern>
+                  <originalPattern>2[.*]</originalPattern>
+                  <aproxLenght>10</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>false</nullable>
+                  <patternReg>
+                    <pattern>.*</pattern>
+                    <flags>0</flags>
+                  </patternReg>
+                  <maxLength>2</maxLength>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>101811</systemID>
+                  <idAlias>227139</idAlias>
+                  <idLayer>12150</idLayer>
+                  <position>5</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Código provincia</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Código provincia</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Código provincia</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Código provincia</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Código provincia</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>precision_dig</style>
+              <column>
+                <Name>precision_dig</Name>
+                <idColumn>101091</idColumn>
+                <domain class="com.geopista.feature.CodeBookDomain">
+                  <children/>
+                  <systemID>20240</systemID>
+                  <Name>eiel_precision_dig</Name>
+                  <pattern></pattern>
+                  <originalPattern>?</originalPattern>
+                  <aproxLenght>0</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>true</nullable>
+                  <Levels>0</Levels>
+                  <levelToColumnMap/>
+                  <levelToName/>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>101816</systemID>
+                  <idAlias>227144</idAlias>
+                  <idLayer>12150</idLayer>
+                  <position>10</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Precisión digitalización</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Precisión digitalización</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Precisión digitalización</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Precisión digitalización</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Precisión digitalización</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>codmunic</style>
+              <column>
+                <Name>codmunic</Name>
+                <idColumn>101087</idColumn>
+                <domain class="com.geopista.feature.StringDomain">
+                  <children/>
+                  <systemID>86</systemID>
+                  <Name>Texto de 3 caracteres</Name>
+                  <pattern>3[.*]</pattern>
+                  <originalPattern>3[.*]</originalPattern>
+                  <aproxLenght>10</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>false</nullable>
+                  <patternReg>
+                    <pattern>.*</pattern>
+                    <flags>0</flags>
+                  </patternReg>
+                  <maxLength>3</maxLength>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>101812</systemID>
+                  <idAlias>227140</idAlias>
+                  <idLayer>12150</idLayer>
+                  <position>6</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Código Municipio</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Código Municipio</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Código Municipio</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Código Municipio</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Código Municipio</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>GEOMETRY</style>
+              <column reference="../../../.."/>
+            </entry>
+            <entry>
+              <style>cota_z</style>
+              <column>
+                <Name>cota_z</Name>
+                <idColumn>101089</idColumn>
+                <domain class="com.geopista.feature.NumberDomain">
+                  <children/>
+                  <systemID>10023</systemID>
+                  <Name>Numero entre 0-99999999 no obligatorio
+</Name>
+                  <pattern>[0:99999999]</pattern>
+                  <originalPattern>?[0:99999999]</originalPattern>
+                  <format></format>
+                  <aproxLenght>10</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>true</nullable>
+                  <minValue>0.0</minValue>
+                  <maxValue>9.9999999E7</maxValue>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>101814</systemID>
+                  <idAlias>227142</idAlias>
+                  <idLayer>12150</idLayer>
+                  <position>8</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Cota_z</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Cota_z</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Cota_z</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Cota_z</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Cota_z</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>id_municipio</style>
+              <column>
+                <Name>id_municipio</Name>
+                <idColumn>101084</idColumn>
+                <domain class="com.geopista.feature.AutoFieldDomain">
+                  <children/>
+                  <systemID>10069</systemID>
+                  <Name>Municipio obligatorio</Name>
+                  <pattern>ENV_VAR:geopista.DefaultCityId</pattern>
+                  <originalPattern>ENV_VAR:geopista.DefaultCityId</originalPattern>
+                  <format></format>
+                  <aproxLenght>8</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>false</nullable>
+                  <type>ENV_VAR</type>
+                  <expression>geopista.DefaultCityId</expression>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>101809</systemID>
+                  <idAlias>227137</idAlias>
+                  <idLayer>12150</idLayer>
+                  <position>3</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]IdMunicip</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>IdMunicip</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]IdMunicip</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]IdMunicip</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]IdMunicip</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>revision_actual</style>
+              <column>
+                <Name>revision_actual</Name>
+                <idColumn>101476</idColumn>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>102200</systemID>
+                  <idAlias>227573</idAlias>
+                  <idLayer>12150</idLayer>
+                  <position>11</position>
+                  <editable>false</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Revisión actual</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Revisión actual</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Revisión actual</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Revisión actual</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Revisión actual</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>clave</style>
+              <column>
+                <Name>clave</Name>
+                <idColumn>101085</idColumn>
+                <domain class="com.geopista.feature.StringDomain">
+                  <children/>
+                  <systemID>85</systemID>
+                  <Name>Texto de 2 caracteres</Name>
+                  <pattern>2[.*]</pattern>
+                  <originalPattern>2[.*]</originalPattern>
+                  <aproxLenght>10</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>false</nullable>
+                  <patternReg>
+                    <pattern>.*</pattern>
+                    <flags>0</flags>
+                  </patternReg>
+                  <maxLength>2</maxLength>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>101810</systemID>
+                  <idAlias>227138</idAlias>
+                  <idLayer>12150</idLayer>
+                  <position>4</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Clave</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Clave</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Clave</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Clave</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Clave</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>orden_pv</style>
+              <column>
+                <Name>orden_pv</Name>
+                <idColumn>101088</idColumn>
+                <domain class="com.geopista.feature.StringDomain">
+                  <children/>
+                  <systemID>87</systemID>
+                  <Name>Texto de 4 caracteres </Name>
+                  <pattern>4[.*]</pattern>
+                  <originalPattern>4[.*]</originalPattern>
+                  <aproxLenght>10</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>false</nullable>
+                  <patternReg>
+                    <pattern>.*</pattern>
+                    <flags>0</flags>
+                  </patternReg>
+                  <maxLength>4</maxLength>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>101813</systemID>
+                  <idAlias>227141</idAlias>
+                  <idLayer>12150</idLayer>
+                  <position>7</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>Código Orden</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Código Orden</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>Codi Ordre</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>Código Orden</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>Codi Ordre</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>obra_ejec</style>
+              <column>
+                <Name>obra_ejec</Name>
+                <idColumn>101090</idColumn>
+                <domain class="com.geopista.feature.CodeBookDomain">
+                  <children/>
+                  <systemID>20193</systemID>
+                  <Name>eiel_Obra ejecutada</Name>
+                  <pattern></pattern>
+                  <originalPattern>?</originalPattern>
+                  <aproxLenght>0</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>true</nullable>
+                  <Levels>0</Levels>
+                  <levelToColumnMap/>
+                  <levelToName/>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>101815</systemID>
+                  <idAlias>227143</idAlias>
+                  <idLayer>12150</idLayer>
+                  <position>9</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Obra ejecutada</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Obra ejecutada</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Obra ejecutada</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Obra ejecutada</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Obra ejecutada</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+          </columns>
+          <geometryType>0</geometryType>
+          <external>0</external>
+        </table>
+        <level>0</level>
+        <attribute>
+          <column reference="../.."/>
+          <accessType>R/W</accessType>
+          <systemID>101807</systemID>
+          <idAlias>227135</idAlias>
+          <idLayer>12150</idLayer>
+          <position>1</position>
+          <editable>true</editable>
+          <htTraducciones>
+            <entry>
+              <style>gl_ES</style>
+              <style>[gl]Geometria</style>
+            </entry>
+            <entry>
+              <style>es_ES</style>
+              <style>Geometria</style>
+            </entry>
+            <entry>
+              <style>va_ES</style>
+              <style>[va]Geometria</style>
+            </entry>
+            <entry>
+              <style>eu_ES</style>
+              <style>[eu]Geometria</style>
+            </entry>
+            <entry>
+              <style>ca_ES</style>
+              <style>[cat]Geometria</style>
+            </entry>
+          </htTraducciones>
+        </attribute>
+      </column>
+      <accessType>R/W</accessType>
+      <systemID>101807</systemID>
+      <idAlias>227135</idAlias>
+      <idLayer>12150</idLayer>
+      <position>1</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Geometria</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Geometria</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Geometria</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Geometria</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Geometria</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry/column"/>
+      <accessType>R/W</accessType>
+      <systemID>101808</systemID>
+      <idAlias>227136</idAlias>
+      <idLayer>12150</idLayer>
+      <position>2</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>es_ES</style>
+          <style>id</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[7]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>101809</systemID>
+      <idAlias>227137</idAlias>
+      <idLayer>12150</idLayer>
+      <position>3</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]IdMunicip</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>IdMunicip</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]IdMunicip</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]IdMunicip</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]IdMunicip</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[9]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>101810</systemID>
+      <idAlias>227138</idAlias>
+      <idLayer>12150</idLayer>
+      <position>4</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Clave</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Clave</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Clave</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Clave</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Clave</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[2]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>101811</systemID>
+      <idAlias>227139</idAlias>
+      <idLayer>12150</idLayer>
+      <position>5</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Código provincia</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Código provincia</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Código provincia</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Código provincia</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Código provincia</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[4]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>101812</systemID>
+      <idAlias>227140</idAlias>
+      <idLayer>12150</idLayer>
+      <position>6</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Código Municipio</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Código Municipio</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Código Municipio</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Código Municipio</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Código Municipio</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[10]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>101813</systemID>
+      <idAlias>227141</idAlias>
+      <idLayer>12150</idLayer>
+      <position>7</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>Código Orden</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Código Orden</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>Codi Ordre</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>Código Orden</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>Codi Ordre</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[6]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>101814</systemID>
+      <idAlias>227142</idAlias>
+      <idLayer>12150</idLayer>
+      <position>8</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Cota_z</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Cota_z</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Cota_z</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Cota_z</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Cota_z</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[11]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>101815</systemID>
+      <idAlias>227143</idAlias>
+      <idLayer>12150</idLayer>
+      <position>9</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Obra ejecutada</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Obra ejecutada</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Obra ejecutada</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Obra ejecutada</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Obra ejecutada</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[3]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>101816</systemID>
+      <idAlias>227144</idAlias>
+      <idLayer>12150</idLayer>
+      <position>10</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Precisión digitalización</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Precisión digitalización</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Precisión digitalización</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Precisión digitalización</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Precisión digitalización</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[8]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>102200</systemID>
+      <idAlias>227573</idAlias>
+      <idLayer>12150</idLayer>
+      <position>11</position>
+      <editable>false</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Revisión actual</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Revisión actual</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Revisión actual</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Revisión actual</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Revisión actual</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+  </Attributes>
+  <Queries>
+    <entry>
+      <int>1</int>
+      <query>
+        <idQuery>10242</idQuery>
+        <tipoDatabase>1</tipoDatabase>
+        <idLayer>12150</idLayer>
+        <selectQuery>SELECT transform(&quot;eiel_c_saneam_pv&quot;.&quot;GEOMETRY&quot; , ?T) as &quot;GEOMETRY&quot;,&quot;eiel_c_saneam_pv&quot;.&quot;id&quot;,&quot;eiel_c_saneam_pv&quot;.&quot;id_municipio&quot;,&quot;eiel_c_saneam_pv&quot;.&quot;clave&quot;,&quot;eiel_c_saneam_pv&quot;.&quot;codprov&quot;,&quot;eiel_c_saneam_pv&quot;.&quot;codmunic&quot;,&quot;eiel_c_saneam_pv&quot;.&quot;orden_pv&quot;,&quot;eiel_c_saneam_pv&quot;.&quot;cota_z&quot;,&quot;eiel_c_saneam_pv&quot;.&quot;obra_ejec&quot;,&quot;eiel_c_saneam_pv&quot;.&quot;precision_dig&quot; FROM &quot;eiel_c_saneam_pv&quot; WHERE &quot;eiel_c_saneam_pv&quot;.&quot;id_municipio&quot; in (?M) AND &quot;eiel_c_saneam_pv&quot;.&quot;clave&quot;&lt;&gt;&apos;AN&apos;</selectQuery>
+        <insertQuery>INSERT INTO &quot;eiel_c_saneam_pv&quot; (&quot;GEOMETRY&quot;,&quot;id&quot;,&quot;id_municipio&quot;,&quot;clave&quot;,&quot;codprov&quot;,&quot;codmunic&quot;,&quot;orden_pv&quot;,&quot;cota_z&quot;,&quot;obra_ejec&quot;,&quot;precision_dig&quot;) VALUES(transform(GeometryFromText(text(?1),?S), ?T),?PK,?M,&apos;PV&apos;,substr(?M::text,1,2),substr(?M::text,3,5),?7,?8,?9,?10)
+</insertQuery>
+        <updateQuery>UPDATE &quot;eiel_c_saneam_pv&quot; SET &quot;GEOMETRY&quot;=transform(GeometryFromText(text(?1),?S), ?T),&quot;id&quot;=?2,&quot;id_municipio&quot;=?M,&quot;clave&quot;=&apos;PV&apos;,&quot;codprov&quot;=substr(?M::text,1,2),&quot;codmunic&quot;=substr(?M::text,3,5),&quot;orden_pv&quot;=?7,&quot;cota_z&quot;=?8,&quot;obra_ejec&quot;=?9,&quot;precision_dig&quot;=?10 WHERE &quot;id&quot;=?2
+</updateQuery>
+        <deleteQuery>DELETE FROM &quot;eiel_c_saneam_pv&quot; WHERE &quot;id&quot;=?2</deleteQuery>
+      </query>
+    </entry>
+  </Queries>
+  <LayerFamilies>
+    <layerFamilyTable>
+      <layerFamily>
+        <layerables/>
+        <systemLayerFamily>false</systemLayerFamily>
+        <systemId>346</systemId>
+        <description>227799</description>
+      </layerFamily>
+      <htNombre>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]EIEL_Indicadores_II_Red de saneamiento</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>EIEL_Indicadores_II_Red de saneamiento</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]EIEL_Indicadores_II_Red de saneamiento</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]EIEL_Indicadores_II_Red de saneamiento</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]EIEL_Indicadores_II_Red de saneamiento</style>
+        </entry>
+      </htNombre>
+      <htDescripcion/>
+      <hmPosLayers/>
+    </layerFamilyTable>
+    <layerFamilyTable>
+      <layerFamily>
+        <layerables/>
+        <systemLayerFamily>false</systemLayerFamily>
+        <systemId>332</systemId>
+        <description>227065</description>
+      </layerFamily>
+      <htNombre>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]EIEL SANEAMIENTO</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>EIEL SANEAMIENTO</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]EIEL SANEAMIENTO</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]EIEL SANEAMIENTO</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]EIEL SANEAMIENTO</style>
+        </entry>
+      </htNombre>
+      <htDescripcion/>
+      <hmPosLayers/>
+    </layerFamilyTable>
+  </LayerFamilies>
+  <Styles>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;&#xd;
+&lt;StyledLayerDescriptor version=&quot;1.0.0&quot; xmlns=&quot;http://www.opengis.net/sld&quot; xmlns:gml=&quot;http://www.opengis.net/gml&quot; xmlns:ogc=&quot;http://www.opengis.net/ogc&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&#xd;
+&lt;NamedLayer&gt;&lt;Name&gt;PV&lt;/Name&gt;&lt;UserStyle&gt;&lt;Name&gt;PV:_:EIEL:PV&lt;/Name&gt;&lt;Title&gt;PV:_:EIEL:PV&lt;/Title&gt;&lt;Abstract&gt;PV:_:EIEL:PV&lt;/Abstract&gt;&lt;FeatureTypeStyle&gt;&lt;Name&gt;PV&lt;/Name&gt;&lt;Rule&gt;&lt;Name&gt;0 a 25000&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;MinScaleDenominator&gt;0.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;25000.0&lt;/MaxScaleDenominator&gt;&lt;PointSymbolizer&gt;&lt;Graphic&gt;&lt;ExternalGraphic&gt;&lt;OnlineResource xmlns:xlink=&apos;http://www.w3.org/1999/xlink&apos; xlink:type=&apos;simple&apos; xlink:href=&apos;file:/C:/LocalGIS/Datos/textures/iconlib/EIEL_Punto vertido 4.png&apos;/&gt;&lt;Format&gt;image/png&lt;/Format&gt;&lt;/ExternalGraphic&gt;&lt;Opacity&gt;1.0&lt;/Opacity&gt;&lt;Size&gt;&lt;ogc:Literal&gt;15&lt;/ogc:Literal&gt;&lt;/Size&gt;&lt;Rotation&gt;0.0&lt;/Rotation&gt;&lt;/Graphic&gt;&lt;/PointSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Texto&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;ogc:Filter xmlns:ogc=&apos;http://www.opengis.net/ogc&apos;&gt;&lt;ogc:PropertyIsEqualTo&gt;&lt;ogc:PropertyName&gt;Clave&lt;/ogc:PropertyName&gt;&lt;ogc:Literal&gt;PV&lt;/ogc:Literal&gt;&lt;/ogc:PropertyIsEqualTo&gt;&lt;/ogc:Filter&gt;
+&lt;MinScaleDenominator&gt;0.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;25000.0&lt;/MaxScaleDenominator&gt;&lt;TextSymbolizer&gt;&lt;Label&gt;&lt;ogc:PropertyName&gt;Clave&lt;/ogc:PropertyName&gt;&lt;/Label&gt;&lt;Font&gt;&lt;CssParameter name=&apos;font-color&apos;&gt;#000000&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-family&apos;&gt;Arial&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-weight&apos;&gt;bold&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-style&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-size&apos;&gt;10.0&lt;/CssParameter&gt;&lt;/Font&gt;&lt;LabelPlacement&gt;&lt;PointPlacement&gt;&lt;AnchorPoint&gt;&lt;AnchorPointX&gt;0.5&lt;/AnchorPointX&gt;&lt;AnchorPointY&gt;0.0&lt;/AnchorPointY&gt;&lt;/AnchorPoint&gt;&lt;Displacement&gt;&lt;DisplacementX&gt;0.0&lt;/DisplacementX&gt;&lt;DisplacementY&gt;0.0&lt;/DisplacementY&gt;&lt;/Displacement&gt;&lt;Rotation&gt;0.0&lt;/Rotation&gt;&lt;/PointPlacement&gt;&lt;/LabelPlacement&gt;&lt;/TextSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Revision expirada Temporal Textos&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;ogc:Filter xmlns:ogc=&apos;http://www.opengis.net/ogc&apos;&gt;&lt;ogc:PropertyIsEqualTo&gt;&lt;ogc:PropertyName&gt;Revision Expirada&lt;/ogc:PropertyName&gt;&lt;ogc:Literal&gt;9899999999&lt;/ogc:Literal&gt;&lt;/ogc:PropertyIsEqualTo&gt;&lt;/ogc:Filter&gt;
+&lt;MinScaleDenominator&gt;0.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;25000.0&lt;/MaxScaleDenominator&gt;&lt;TextSymbolizer&gt;&lt;Label&gt;Elemento Temporal&lt;/Label&gt;&lt;Font&gt;&lt;CssParameter name=&apos;font-family&apos;&gt;Agency FB&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-color&apos;&gt;#6666ff&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-weight&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-size&apos;&gt;18.0&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-style&apos;&gt;normal&lt;/CssParameter&gt;&lt;/Font&gt;&lt;LabelPlacement&gt;&lt;PointPlacement&gt;&lt;AnchorPoint&gt;&lt;AnchorPointX&gt;0.0&lt;/AnchorPointX&gt;&lt;AnchorPointY&gt;0.0&lt;/AnchorPointY&gt;&lt;/AnchorPoint&gt;&lt;Displacement&gt;&lt;DisplacementX&gt;0.0&lt;/DisplacementX&gt;&lt;DisplacementY&gt;0.0&lt;/DisplacementY&gt;&lt;/Displacement&gt;&lt;Rotation&gt;0.0&lt;/Rotation&gt;&lt;/PointPlacement&gt;&lt;/LabelPlacement&gt;&lt;/TextSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Revision expirada Publicable Textos&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;ogc:Filter xmlns:ogc=&apos;http://www.opengis.net/ogc&apos;&gt;&lt;ogc:PropertyIsEqualTo&gt;&lt;ogc:PropertyName&gt;Revision Expirada&lt;/ogc:PropertyName&gt;&lt;ogc:Literal&gt;9799999999&lt;/ogc:Literal&gt;&lt;/ogc:PropertyIsEqualTo&gt;&lt;/ogc:Filter&gt;
+&lt;MinScaleDenominator&gt;0.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;25000.0&lt;/MaxScaleDenominator&gt;&lt;TextSymbolizer&gt;&lt;Label&gt;Elemento Publicable&lt;/Label&gt;&lt;Font&gt;&lt;CssParameter name=&apos;font-family&apos;&gt;Agency FB&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-color&apos;&gt;#6666ff&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-weight&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-size&apos;&gt;18.0&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-style&apos;&gt;normal&lt;/CssParameter&gt;&lt;/Font&gt;&lt;LabelPlacement&gt;&lt;PointPlacement&gt;&lt;AnchorPoint&gt;&lt;AnchorPointX&gt;0.0&lt;/AnchorPointX&gt;&lt;AnchorPointY&gt;0.0&lt;/AnchorPointY&gt;&lt;/AnchorPoint&gt;&lt;Displacement&gt;&lt;DisplacementX&gt;0.0&lt;/DisplacementX&gt;&lt;DisplacementY&gt;0.0&lt;/DisplacementY&gt;&lt;/Displacement&gt;&lt;Rotation&gt;0.0&lt;/Rotation&gt;&lt;/PointPlacement&gt;&lt;/LabelPlacement&gt;&lt;/TextSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Revision expirada Borrable Textos&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;ogc:Filter xmlns:ogc=&apos;http://www.opengis.net/ogc&apos;&gt;&lt;ogc:PropertyIsEqualTo&gt;&lt;ogc:PropertyName&gt;Revision Expirada&lt;/ogc:PropertyName&gt;&lt;ogc:Literal&gt;9599999999&lt;/ogc:Literal&gt;&lt;/ogc:PropertyIsEqualTo&gt;&lt;/ogc:Filter&gt;
+&lt;MinScaleDenominator&gt;0.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;25000.0&lt;/MaxScaleDenominator&gt;&lt;TextSymbolizer&gt;&lt;Label&gt;Elemento Borrable&lt;/Label&gt;&lt;Font&gt;&lt;CssParameter name=&apos;font-family&apos;&gt;Agency FB&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-color&apos;&gt;#ff0000&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-weight&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-size&apos;&gt;18.0&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-style&apos;&gt;normal&lt;/CssParameter&gt;&lt;/Font&gt;&lt;LabelPlacement&gt;&lt;PointPlacement&gt;&lt;AnchorPoint&gt;&lt;AnchorPointX&gt;0.0&lt;/AnchorPointX&gt;&lt;AnchorPointY&gt;0.0&lt;/AnchorPointY&gt;&lt;/AnchorPoint&gt;&lt;Displacement&gt;&lt;DisplacementX&gt;0.0&lt;/DisplacementX&gt;&lt;DisplacementY&gt;0.0&lt;/DisplacementY&gt;&lt;/Displacement&gt;&lt;Rotation&gt;0.0&lt;/Rotation&gt;&lt;/PointPlacement&gt;&lt;/LabelPlacement&gt;&lt;/TextSymbolizer&gt;&lt;/Rule&gt;&lt;/FeatureTypeStyle&gt;&lt;/UserStyle&gt;&lt;/NamedLayer&gt;&#xd;
+&lt;/StyledLayerDescriptor&gt;&#xd;
+</Styles>
+</LocalGISXmlLayer>

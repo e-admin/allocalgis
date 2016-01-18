@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration >
+  <classPathEntry location="C:\Documents and Settings\david.caaveiro\.m2\repository\postgresql\postgresql\8.0-311.jdbc3\postgresql-8.0-311.jdbc3.jar"/>
+  <ibatorContext id="contextPrincipal" >
+    <jdbcConnection driverClass="org.postgresql.Driver" connectionURL="jdbc:postgresql://213.164.32.203:5432/geopista" userId="geopista" password="geopista" />
+	    <javaModelGenerator targetPackage="com.localgis.web.core.model" targetProject="localgis-core/src/main/java" />
+    <sqlMapGenerator targetPackage="com.localgis.web.core.dao.sqlmap.sql" targetProject="localgis-core/src/main/resources" />
+    <daoGenerator targetPackage="com.localgis.web.core.dao" targetProject="localgis-core/src/main/java" type="IBATIS" implementationPackage="com.localgis.web.core.dao.sqlmap"/>
+   
+    <table schema="localgisguiaurbana" tableName="entidadlocalgis_entidadext" domainObjectName="EntidadlocalgisEntidadext"  enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+
+    </table>
+    
+    <table schema="localgisguiaurbana" tableName="entidad_tipo_map" domainObjectName="EntidadTipoMap"  enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+    
+    </table>
+    
+    <table schema="public" tableName="entidades_municipios" domainObjectName="PublicEntidadesMunicipios" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+
+    </table>
+    
+  </ibatorContext>
+</ibatorConfiguration>

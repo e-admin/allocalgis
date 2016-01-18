@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://calculateexpression" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ax21="http://beans.calculateexpression/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://calculateexpression">
+    <wsdl:documentation>
+		Please Type your service description here
+	</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://beans.calculateexpression/xsd">
+            <xs:complexType name="TestCalculatorExpressionBean">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="destino" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="resultado" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax22="http://beans.calculateexpression/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://calculateexpression">
+            <xs:import namespace="http://beans.calculateexpression/xsd"/>
+            <xs:element name="validateExpresion">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="destino" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="expression" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="from" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="where" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="validateExpresionResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="validarFicheroExpresion">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="txtFichero" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="validarFicheroExpresionResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="updateDataExpresion">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="destino" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="expression" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="from" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="where" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="updateDataExpresionResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="testDataExpresion">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="destino" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="expression" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="from" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="where" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="testDataExpresionResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ax22:TestCalculatorExpressionBean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getTablesNamesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getColumnNames">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="tableName" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getColumnNamesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="testDataExpresionRequest">
+        <wsdl:part name="parameters" element="ns:testDataExpresion"/>
+    </wsdl:message>
+    <wsdl:message name="testDataExpresionResponse">
+        <wsdl:part name="parameters" element="ns:testDataExpresionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getTablesNamesRequest"/>
+    <wsdl:message name="getTablesNamesResponse">
+        <wsdl:part name="parameters" element="ns:getTablesNamesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getColumnNamesRequest">
+        <wsdl:part name="parameters" element="ns:getColumnNames"/>
+    </wsdl:message>
+    <wsdl:message name="getColumnNamesResponse">
+        <wsdl:part name="parameters" element="ns:getColumnNamesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="validateExpresionRequest">
+        <wsdl:part name="parameters" element="ns:validateExpresion"/>
+    </wsdl:message>
+    <wsdl:message name="validateExpresionResponse">
+        <wsdl:part name="parameters" element="ns:validateExpresionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="validarFicheroExpresionRequest">
+        <wsdl:part name="parameters" element="ns:validarFicheroExpresion"/>
+    </wsdl:message>
+    <wsdl:message name="validarFicheroExpresionResponse">
+        <wsdl:part name="parameters" element="ns:validarFicheroExpresionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="updateDataExpresionRequest">
+        <wsdl:part name="parameters" element="ns:updateDataExpresion"/>
+    </wsdl:message>
+    <wsdl:message name="updateDataExpresionResponse">
+        <wsdl:part name="parameters" element="ns:updateDataExpresionResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="ServicesPortType">
+        <wsdl:operation name="testDataExpresion">
+            <wsdl:input message="ns:testDataExpresionRequest" wsaw:Action="urn:testDataExpresion"/>
+            <wsdl:output message="ns:testDataExpresionResponse" wsaw:Action="urn:testDataExpresionResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getTablesNames">
+            <wsdl:input message="ns:getTablesNamesRequest" wsaw:Action="urn:getTablesNames"/>
+            <wsdl:output message="ns:getTablesNamesResponse" wsaw:Action="urn:getTablesNamesResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getColumnNames">
+            <wsdl:input message="ns:getColumnNamesRequest" wsaw:Action="urn:getColumnNames"/>
+            <wsdl:output message="ns:getColumnNamesResponse" wsaw:Action="urn:getColumnNamesResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="validateExpresion">
+            <wsdl:input message="ns:validateExpresionRequest" wsaw:Action="urn:validateExpresion"/>
+            <wsdl:output message="ns:validateExpresionResponse" wsaw:Action="urn:validateExpresionResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="validarFicheroExpresion">
+            <wsdl:input message="ns:validarFicheroExpresionRequest" wsaw:Action="urn:validarFicheroExpresion"/>
+            <wsdl:output message="ns:validarFicheroExpresionResponse" wsaw:Action="urn:validarFicheroExpresionResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateDataExpresion">
+            <wsdl:input message="ns:updateDataExpresionRequest" wsaw:Action="urn:updateDataExpresion"/>
+            <wsdl:output message="ns:updateDataExpresionResponse" wsaw:Action="urn:updateDataExpresionResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ServicesSoap11Binding" type="ns:ServicesPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="testDataExpresion">
+            <soap:operation soapAction="urn:testDataExpresion" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTablesNames">
+            <soap:operation soapAction="urn:getTablesNames" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getColumnNames">
+            <soap:operation soapAction="urn:getColumnNames" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validateExpresion">
+            <soap:operation soapAction="urn:validateExpresion" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validarFicheroExpresion">
+            <soap:operation soapAction="urn:validarFicheroExpresion" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="updateDataExpresion">
+            <soap:operation soapAction="urn:updateDataExpresion" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ServicesSoap12Binding" type="ns:ServicesPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="testDataExpresion">
+            <soap12:operation soapAction="urn:testDataExpresion" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTablesNames">
+            <soap12:operation soapAction="urn:getTablesNames" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getColumnNames">
+            <soap12:operation soapAction="urn:getColumnNames" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validateExpresion">
+            <soap12:operation soapAction="urn:validateExpresion" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validarFicheroExpresion">
+            <soap12:operation soapAction="urn:validarFicheroExpresion" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="updateDataExpresion">
+            <soap12:operation soapAction="urn:updateDataExpresion" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ServicesHttpBinding" type="ns:ServicesPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="testDataExpresion">
+            <http:operation location="Services/testDataExpresion"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="testDataExpresion"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="testDataExpresion"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTablesNames">
+            <http:operation location="Services/getTablesNames"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="getTablesNames"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="getTablesNames"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getColumnNames">
+            <http:operation location="Services/getColumnNames"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="getColumnNames"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="getColumnNames"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validateExpresion">
+            <http:operation location="Services/validateExpresion"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="validateExpresion"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="validateExpresion"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validarFicheroExpresion">
+            <http:operation location="Services/validarFicheroExpresion"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="validarFicheroExpresion"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="validarFicheroExpresion"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="updateDataExpresion">
+            <http:operation location="Services/updateDataExpresion"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="updateDataExpresion"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="updateDataExpresion"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="Services">
+        <wsdl:port name="ServicesHttpSoap11Endpoint" binding="ns:ServicesSoap11Binding">
+            <soap:address location="http://localhost:8082/wsCalculateExpression/services/Services.ServicesHttpSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="ServicesHttpSoap12Endpoint" binding="ns:ServicesSoap12Binding">
+            <soap12:address location="http://localhost:8082/wsCalculateExpression/services/Services.ServicesHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="ServicesHttpEndpoint" binding="ns:ServicesHttpBinding">
+            <http:address location="http://localhost:8082/wsCalculateExpression/services/Services.ServicesHttpEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

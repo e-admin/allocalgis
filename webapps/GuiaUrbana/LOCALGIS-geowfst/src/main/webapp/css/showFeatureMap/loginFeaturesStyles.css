@@ -1,0 +1,191 @@
+/* ----- LOGIN ----------------------------------------------------- */
+
+#box {
+    width: 800px;
+    height: 500px;
+    position:absolute;
+    top:0;
+    left:0;
+    border: 0px solid black;
+    background-color: white;
+}
+
+
+#boxTopShadow {
+    background: transparent url(../../img/showFeatureMap/mapTopShadow.png) repeat-x left top;
+	height:10px;
+	width:inherit;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:750;
+}
+
+#boxLeftShadow {
+    background: transparent url(../../img/showFeatureMap/mapLeftShadow.png) repeat-y left top;
+	height:inherit;
+	width:10px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:750;
+}
+
+#boxRightShadow {
+    background: transparent url(../../img/showFeatureMap/mapRightShadow.png) repeat-y right top;
+	height:inherit;
+	width:10px;
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:750;
+}
+
+#boxBottomShadow {
+    background: transparent url(../../img/showFeatureMap/mapBottomShadow.png) repeat-x left bottom;
+	height:10px;
+	width:inherit;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	z-index:750;
+}
+
+
+/*Login Siempre Centrado*/
+/*
+#login{
+	width: 250px;
+	height: 150px;
+	position:absolute;
+	margin-left:-125px;
+	margin-top:-85px;
+    top:50%;
+    left:50%;
+    background-color: white;
+    z-index: 1500;
+    display:inline;
+}
+*/
+
+#login{
+	width: 250px;
+	height: 150px;
+	position:absolute;
+    top:155px;
+    left:250px;
+    background-color: white;
+    z-index: 1500;
+    
+}
+
+#loginPanelBorderLeft{
+	background: transparent url(../../img/showFeatureMap/loginPanelBorderLeft.png) repeat-y left bottom;
+	height:115px;
+	width:10px;	
+	position: absolute;
+	top:33px;
+	left:-4px;
+}
+
+#loginPanelBorderRight{
+	background: transparent url(../../img/showFeatureMap/loginPanelBorderRight.png) repeat-y right bottom;
+	height:115px;
+	width:10px;	
+	position: absolute;
+	top:33px;
+	left:260px;
+}
+
+.loginCertificateBtn{
+	background: transparent url(../../img/showFeatureMap/loginCertificateBtn.png) repeat-y right bottom;
+	height:45px;
+	width:55px;	
+	position: absolute;
+	top:95px;
+	left:260px;
+}
+
+.loginCertificateBtn:hover{
+	background: transparent url(../../img/showFeatureMap/loginCertificateBtn_over.png) repeat-y right bottom;
+	cursor:pointer
+}
+
+#loginPanelBorderTop{
+	background: transparent url(../../img/showFeatureMap/loginPanelBorderTop.png) no-repeat center bottom;
+	height:33px;
+	width:266px;	
+	top:0px;
+}
+
+.loginHead{
+	background-color:black;
+	top:32px;
+	left:4px;
+	position:relative;
+    height:16px;
+    width:254px;
+    width:97%;  
+    text-align:center;
+    font-size:12px;
+    font-weight:bold;
+    font-family:Arial;
+    color:white;
+}
+
+#loginPanelCenter{
+	top:32px;
+	left:4px;
+	width:254px;
+	position: relative;
+	height:90px;
+    font-size:12px;
+    font-weight:bold;
+    font-family:Arial;
+	border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.loginBottom{
+	background-color:black;
+	top:32px;
+	left:4px;
+	position:relative;
+    height:10px;
+    width:97%;  
+    text-align:center;
+}
+
+#loginPanelBorderBottom{
+	background: transparent url(../../img/showFeatureMap/loginPanelBorderBottom.png) no-repeat center bottom;
+	height:33px;
+	width:266px;	
+	position: relative;
+	top:32px;
+}
+
+.loginTextBox{
+	border: 2px black solid;
+	font-size:12px;
+    font-weight:bold;
+    font-family:Arial; 	
+ 	filter:alpha(opacity=50);
+    opacity:0.5;
+    width:100px;
+    height: 15px;
+}
+
+.loginTextBox:hover{
+	border-color: rgb(85,125,193);
+ 	filter:alpha(opacity=80);
+    opacity:0.8;
+}
+
+.loginTextBox:focus{
+	border-color: rgb(85,125,193);
+ 	filter:alpha(opacity=80);
+    opacity:0.8;
+}
+
+
+

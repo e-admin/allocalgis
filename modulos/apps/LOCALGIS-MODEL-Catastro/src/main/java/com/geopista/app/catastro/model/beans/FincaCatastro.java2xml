@@ -1,0 +1,295 @@
+<root>
+	<element xml-name="fincacef" java-condition="isNotDelete" java-condition1="isCatastroTemporal">
+		<element xml-name="fincaf" >
+			<element xml-name="idfcat">
+				<element xml-name="cn" java-name="BICE"/>
+				<element xml-name="pc">
+					<element xml-name="pc1" java-name="refFinca.refCatastral1"/>
+					<element xml-name="pc2" java-name="refFinca.refCatastral2"/>
+				</element>
+				<element xml-name="locat">
+					<element xml-name="cd" java-name="codDelegacionMEH"/>
+					<element xml-name="cmc" java-name="codMunicipioDGC" length="3"/>
+				</element>
+			</element>
+			<element xml-name="dt">
+				<element xml-name="loine">
+					<element xml-name="cp" java-name="dirParcela.provinciaINE"/>
+					<element xml-name="cm" java-name="dirParcela.municipioINE"/>
+				</element>
+				<element xml-name="cmc" java-name="dirParcela.codigoMunicipioDGC"/>
+				<element xml-name="np" java-name="dirParcela.nombreProvincia"/>
+				<element xml-name="nm" java-name="dirParcela.nombreMunicipio"/>
+				<element xml-name="nem" java-name="dirParcela.nombreEntidadMenor"/>
+				<element xml-name="locs">
+					<element xml-name="lous" java-condition="esUrbana" java-condition1="isCatastroTemporal">
+						<element xml-name="lourb">
+							<element xml-name="dir">
+								<element xml-name="cv" java-name="dirParcela.codigoVia" null-value="-1"/>
+								<element xml-name="tv" java-name="dirParcela.tipoVia"/>
+								<element xml-name="nv" java-name="dirParcela.nombreVia"/>
+								<element xml-name="pnp" java-name="dirParcela.primerNumero" null-value="-1"/>
+								<element xml-name="plp" java-name="dirParcela.primeraLetra"/>
+								<element xml-name="snp" java-name="dirParcela.segundoNumero" null-value="-1"/>
+								<element xml-name="slp" java-name="dirParcela.segundaLetra"/>
+								<element xml-name="km" java-name="dirParcela.kilometro" null-value="-1.0"/>
+								<element xml-name="td" java-name="dirParcela.direccionNoEstructurada"/>
+							</element>
+							<element xml-name="bl" java-name="dirParcela.bloque"/>
+							<element xml-name="dp" java-name="dirParcela.codigoPostal"/>
+							<element xml-name="dm" java-name="dirParcela.distrito"/>
+						</element>
+						<element xml-name="lorus">
+							<element xml-name="cma" java-name="dirParcela.codMunOrigenAgregacion"/>
+							<element xml-name="czc" java-name="dirParcela.codZonaConcentracion"/>
+							<element xml-name="cpp">
+								<element xml-name="cpo" java-name="dirParcela.codPoligono"/>
+								<element xml-name="cpa" java-name="dirParcela.codParcela"/>
+							</element>
+							<element xml-name="npa" java-name="dirParcela.nombreParaje"/>
+							<element xml-name="cpaj" java-name="dirParcela.codParaje"/>
+						</element>
+					</element>
+					<element xml-name="lors" java-condition="esRustica" java-condition1="isCatastroTemporal">
+						<element xml-name="lorus">
+							<element xml-name="cma" java-name="dirParcela.codMunOrigenAgregacion"/>
+							<element xml-name="czc" java-name="dirParcela.codZonaConcentracion"/>
+							<element xml-name="cpp">
+								<element xml-name="cpo" java-name="dirParcela.codPoligono"/>
+								<element xml-name="cpa" java-name="dirParcela.codParcela"/>
+							</element>
+							<element xml-name="npa" java-name="dirParcela.nombreParaje"/>
+							<element xml-name="cpaj" java-name="dirParcela.codParaje"/>
+						</element>
+						<element xml-name="lourb">
+							<element xml-name="dir">
+								<element xml-name="cv" java-name="dirParcela.codigoVia" null-value="-1"/>
+								<element xml-name="tv" java-name="dirParcela.tipoVia"/>
+								<element xml-name="nv" java-name="dirParcela.nombreVia"/>
+								<element xml-name="pnp" java-name="dirParcela.primerNumero" null-value="-1"/>
+								<element xml-name="plp" java-name="dirParcela.primeraLetra"/>
+								<element xml-name="snp" java-name="dirParcela.segundoNumero" null-value="-1"/>
+								<element xml-name="slp" java-name="dirParcela.segundaLetra"/>
+								<element xml-name="km" java-name="dirParcela.kilometro" null-value="-1.0"/>
+								<element xml-name="td" java-name="dirParcela.direccionNoEstructurada"/>
+							</element>
+							<element xml-name="bl" java-name="dirParcela.bloque"/>
+							<element xml-name="dp" java-name="dirParcela.codigoPostal" null-value="-1"/>
+							<element xml-name="dm" java-name="dirParcela.distrito"/>
+						</element>
+					</element>
+				</element>
+			</element>
+			<element xml-name="dff">
+				<element xml-name="ssf">
+					<element xml-name="ss" java-name="datosFisicos.supFinca"/>
+					<element xml-name="sct" java-name="datosFisicos.supTotal"/>
+					<element xml-name="ssr" java-name="datosFisicos.supSobreRasante"/>
+					<element xml-name="sbr" java-name="datosFisicos.supBajoRasante"/>
+					<element xml-name="sc" java-name="datosFisicos.supCubierta"/>
+				</element>
+				<element xml-name="cen">
+					<element xml-name="coordx" java-name="datosFisicos.xCoord"/>
+					<element xml-name="coordy" java-name="datosFisicos.yCoord"/>
+					<element xml-name="srs" java-name="datosFisicos.SRS"/>
+				</element>
+			</element>		
+			<element xml-name="dval">
+				<element xml-name="aapv" java-name="datosEconomicos.anioAprobacion"/>
+				<element xml-name="cfcvc" java-name="datosEconomicos.codigoCalculoValor" length="2"/>
+				<element xml-name="cpo" java-name="datosEconomicos.poligonoCatastralValor.codPoligono"/>
+ 				<element xml-name="mr" java-name="datosEconomicos.indModalidadReparto"/>
+				<element xml-name="iipvc" java-name="datosEconomicos.indInfraedificabilidad"/>
+			</element>			
+		</element>
+		<element xml-name="movf" java-condition="isNotDelete">
+			<element xml-name="tmov" java-name="TIPO_MOVIMIENTO"/>
+		</element>
+	</element>        
+	<element xml-name="lsuelof" java-condition="isNotDelete" java-condition1="isCatastroTemporal">
+	 	<element xml-name="suelocf" java-name="lstSuelos"/>
+	</element>
+	<element xml-name="lucf" java-condition="isNotDelete" java-condition1="isCatastroTemporal">
+		<element xml-name="uccf" java-name="lstUnidadesConstructivas"/>
+	</element>
+	<element xml-name="lbicenf" java-condition="isNotDelete" java-condition1="isCatastroTemporal">
+		<element xml-name="bicf" java-name="lstBienesInmuebles"/>
+	</element>
+	<element xml-name="lconsf" java-condition="isNotDelete"  java-condition1="isCatastroTemporal">
+		<element xml-name="conscf" java-name="lstConstrucciones"/>
+	</element>
+	<element xml-name="lsprf" java-condition="isNotDelete"  java-condition1="isCatastroTemporal">
+		<element xml-name="sprcf" java-name="lstCultivos"/>
+	</element>
+	<element xml-name="lreparf" java-condition="isNotDelete" java-condition1="isCatastroTemporal">
+		<element xml-name="reparcf" java-name="lstReparto"/>
+	</element>
+	<element xml-name="fincacefb" java-condition="getDelete" java-condition1="isCatastroTemporal">
+		<element xml-name="fincafb">
+			<element xml-name="idfcat">
+					<element xml-name="cn" java-name="BICE"/>
+					<element xml-name="pc">
+							<element xml-name="pc1" java-name="refFinca.refCatastral1"/>
+							<element xml-name="pc2" java-name="refFinca.refCatastral2"/>
+					</element>
+					<element xml-name="locat">
+							<element xml-name="cd" java-name="codDelegacionMEH"/>
+							<element xml-name="cmc" java-name="codMunicipioDGC" length="3"/>
+					</element>
+				</element>
+		</element>
+		<!--<element xml-name="movb" java-condition="getDelete">-->
+		<element xml-name="movb">
+				<element xml-name="tmov" java-name="TIPO_MOVIMIENTO_DELETE"/>            
+		</element>    		
+    </element>
+	
+
+	<element xml-name="fincacev"  java-condition="isElemModificado" java-condition1="isNotCatastroTemporal">
+		<element xml-name="fincaeam" java-condition="isFincaAltaModif"  java-condition1="isNotCatastroTemporal">
+			<element xml-name="idfcat">
+				<element xml-name="cn" java-name="BICE"/>
+				<element xml-name="pc">
+					<element xml-name="pc1" java-name="refFinca.refCatastral1"/>
+					<element xml-name="pc2" java-name="refFinca.refCatastral2"/>
+				</element>
+				<element xml-name="locat">
+					<element xml-name="cd" java-name="codDelegacionMEH"/>
+					<element xml-name="cmc" java-name="codMunicipioDGC" length="3"/>
+				</element>
+			</element>
+			<element xml-name="dt">
+				<element xml-name="loine">
+					<element xml-name="cp" java-name="dirParcela.provinciaINE"/>
+					<element xml-name="cm" java-name="dirParcela.municipioINE"/>
+				</element>
+				<element xml-name="cmc" java-name="dirParcela.codigoMunicipioDGC"/>
+				<element xml-name="np" java-name="dirParcela.nombreProvincia"/>
+				<element xml-name="nm" java-name="dirParcela.nombreMunicipio"/>
+				<element xml-name="nem" java-name="dirParcela.nombreEntidadMenor"/>
+				<element xml-name="locs">
+					<element xml-name="lous" java-condition="esUrbana" java-condition1="isNotCatastroTemporal">
+						<element xml-name="lourb">
+							<element xml-name="dir">
+								<element xml-name="cv" java-name="dirParcela.codigoVia" null-value="-1"/>
+								<element xml-name="tv" java-name="dirParcela.tipoVia"/>
+								<element xml-name="nv" java-name="dirParcela.nombreVia"/>
+								<element xml-name="pnp" java-name="dirParcela.primerNumero" null-value="-1"/>
+								<element xml-name="plp" java-name="dirParcela.primeraLetra"/>
+								<element xml-name="snp" java-name="dirParcela.segundoNumero" null-value="-1"/>
+								<element xml-name="slp" java-name="dirParcela.segundaLetra"/>
+								<element xml-name="km" java-name="dirParcela.kilometro" null-value="-1.0"/>
+								<element xml-name="td" java-name="dirParcela.direccionNoEstructurada"/>
+							</element>
+							<element xml-name="bl" java-name="dirParcela.bloque"/>
+							<element xml-name="dp" java-name="dirParcela.codigoPostal"/>
+							<element xml-name="dm" java-name="dirParcela.distrito"/>
+						</element>
+						<element xml-name="lorus">
+							<element xml-name="cma" java-name="dirParcela.codMunOrigenAgregacion"/>
+							<element xml-name="czc" java-name="dirParcela.codZonaConcentracion"/>
+							<element xml-name="cpp">
+								<element xml-name="cpo" java-name="dirParcela.codPoligono"/>
+								<element xml-name="cpa" java-name="dirParcela.codParcela"/>
+							</element>
+							<element xml-name="npa" java-name="dirParcela.nombreParaje"/>
+							<element xml-name="cpaj" java-name="dirParcela.codParaje"/>
+						</element>
+					</element>
+					<element xml-name="lors" java-condition="esRustica" java-condition1="isNotCatastroTemporal">
+						<element xml-name="lorus">
+							<element xml-name="cma" java-name="dirParcela.codMunOrigenAgregacion"/>
+							<element xml-name="czc" java-name="dirParcela.codZonaConcentracion"/>
+							<element xml-name="cpp">
+								<element xml-name="cpo" java-name="dirParcela.codPoligono"/>
+								<element xml-name="cpa" java-name="dirParcela.codParcela"/>
+							</element>
+							<element xml-name="npa" java-name="dirParcela.nombreParaje"/>
+							<element xml-name="cpaj" java-name="dirParcela.codParaje"/>
+						</element>
+						<element xml-name="lourb">
+							<element xml-name="dir">
+								<element xml-name="cv" java-name="dirParcela.codigoVia" null-value="-1"/>
+								<element xml-name="tv" java-name="dirParcela.tipoVia"/>
+								<element xml-name="nv" java-name="dirParcela.nombreVia"/>
+								<element xml-name="pnp" java-name="dirParcela.primerNumero" null-value="-1"/>
+								<element xml-name="plp" java-name="dirParcela.primeraLetra"/>
+								<element xml-name="snp" java-name="dirParcela.segundoNumero" null-value="-1"/>
+								<element xml-name="slp" java-name="dirParcela.segundaLetra"/>
+								<element xml-name="km" java-name="dirParcela.kilometro" null-value="-1.0"/>
+								<element xml-name="td" java-name="dirParcela.direccionNoEstructurada"/>
+							</element>
+							<element xml-name="bl" java-name="dirParcela.bloque"/>
+							<element xml-name="dp" java-name="dirParcela.codigoPostal" null-value="-1"/>
+							<element xml-name="dm" java-name="dirParcela.distrito"/>
+						</element>
+					</element>
+				</element>
+			</element>
+			<element xml-name="dff">
+				<element xml-name="ssf">
+					<element xml-name="ss" java-name="datosFisicos.supFinca"/>
+					<element xml-name="sct" java-name="datosFisicos.supTotal"/>
+					<element xml-name="ssr" java-name="datosFisicos.supSobreRasante"/>
+					<element xml-name="sbr" java-name="datosFisicos.supBajoRasante"/>
+					<element xml-name="sc" java-name="datosFisicos.supCubierta"/>
+				</element>
+				<element xml-name="cen">
+					<element xml-name="coordx" java-name="datosFisicos.xCoord"/>
+					<element xml-name="coordy" java-name="datosFisicos.yCoord"/>
+					<element xml-name="srs" java-name="datosFisicos.SRS"/>
+				</element>
+			</element>		
+			<element xml-name="dval">
+				<element xml-name="aapv" java-name="datosEconomicos.anioAprobacion"/>
+				<element xml-name="cfcvc" java-name="datosEconomicos.codigoCalculoValor" length="2"/>
+				<element xml-name="cpo" java-name="datosEconomicos.poligonoCatastralValor.codPoligono"/>
+ 				<element xml-name="mr" java-name="datosEconomicos.indModalidadReparto"/>
+				<element xml-name="iipvc" java-name="datosEconomicos.indInfraedificabilidad"/>
+			</element>
+		</element>
+		<element xml-name="movam" java-condition="isFincaAltaModif" java-condition1="isNotCatastroTemporal">
+			<element xml-name="tmov" java-name="TIPO_MOVIMIENTO"/>
+		</element>
+		<element xml-name="fincaeb" java-condition="isFincaElim" java-condition1="isNotCatastroTemporal">
+			<element xml-name="idfcat">
+				<element xml-name="cn" java-name="BICE"/>
+				<element xml-name="pc">
+					<element xml-name="pc1" java-name="refFinca.refCatastral1"/>
+					<element xml-name="pc2" java-name="refFinca.refCatastral2"/>
+				</element>
+				<element xml-name="locat">
+					<element xml-name="cd" java-name="codDelegacionMEH"/>
+					<element xml-name="cmc" java-name="codMunicipioDGC" length="3"/>
+				</element>
+			</element>
+		</element>
+		<element xml-name="movb" java-condition="isFincaElim" java-condition1="isNotCatastroTemporal">
+			<element xml-name="tmov" java-name="TIPO_MOVIMIENTO_DELETE"/> 
+		</element>
+	</element> 
+	<element xml-name="lsuelov" java-condition="isElemSueloModificado" java-condition1="isNotCatastroTemporal">
+		<element xml-name="sueloce" java-name="lstSuelos"/>
+	</element> 
+	<element xml-name="lucv" java-condition="isElemUCModificado" java-condition1="isNotCatastroTemporal">
+		<element xml-name="ucce" java-name="lstUnidadesConstructivas"/>
+	</element> 
+	<element xml-name="lbicenv" java-condition="isElemBienModificado" java-condition1="isNotCatastroTemporal">
+		<element xml-name="bicec" java-condition="isBienInmuebleJurAltaModifSinTitularidad" java-condition1="isNotCatastroTemporal" java-name="lstBienesInmueblesAltaModifSinTitular"/>
+		<element xml-name="bij" java-condition="isBienInmuebleJurAltaModifConTitularidad" java-condition1="isNotCatastroTemporal" java-name="lstBienesInmueblesAltaModifConTitular"/>
+		<element xml-name="biccb" java-condition="isBienInmuebleJurElim" java-condition1="isNotCatastroTemporal" java-name="lstBienesInmueblesBaja"/>
+	</element> 
+	<element xml-name="lconsv" java-condition="isElemConstruccionModificado" java-condition1="isNotCatastroTemporal">
+		<element xml-name="consce" java-name="lstConstrucciones"/>
+	</element> 
+	<element xml-name="lsprv" java-condition="isElemCultivoModificado" java-condition1="isNotCatastroTemporal">
+		<element xml-name="sprce" java-name="lstCultivos"/>
+	</element> 
+	<element xml-name="lreparv" java-condition="isElemRepartoModificado" java-condition1="isNotCatastroTemporal">
+		<element xml-name="reparce" java-name="lstReparto"/>
+	</element> 
+	<element xml-name="fxcc" java-condition="isElemFxccModificado" java-condition1="isNotCatastroTemporal" />
+	<element xml-name="limg" java-condition="isElemImagenModificado" java-condition1="isNotCatastroTemporal">
+		<element xml-name="img" java-name="LstImagenes"/>
+	</element> 
+</root>

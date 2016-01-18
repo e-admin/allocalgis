@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.installers</groupId>
+	<artifactId>actualizaciones-grouper</artifactId>
+	<version>3.0.0</version>
+	<packaging>pom</packaging>
+	<name>AgrupadorModulosWeb</name>
+	<description>Agrupador modulos instaladores localgis</description>
+	
+	<modules>
+		<module>ActualizadorLocalgis3</module>
+		<module>ActualizadorToledo</module>
+		<module>ActualizadorVigo</module>
+		<module>ActualizadorModelo</module>
+		<module>ActualizadorPostModelo</module>
+		<module>ActualizadorPreLocalgis3</module>
+		<module>ActualizadorLocalgis2.1</module>
+		
+	</modules>
+	<parent>
+		<relativePath>..</relativePath>
+		<version>3.0.0</version>
+		<artifactId>installers</artifactId>
+		<groupId>com.localgis</groupId>
+	</parent>
+</project>

@@ -1,0 +1,39 @@
+<?xml version="1.0"  encoding="ISO-8859-1"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">  
+
+   <Set name="contextPath">/Tareas</Set>
+   <Set name="war"><SystemProperty default="." name="jetty.home"/>/wtpwebapps/localgis-server-tareas</Set>
+
+   <Set name="copyWebDir">false</Set>
+  
+   <Set name="securityHandler">
+		<New class="org.eclipse.jetty.security.ConstraintSecurityHandler">
+			<Set name="loginService">
+				<New class="com.geopista.security.LocalgisJAASLoginService" id="basicLoginService">
+						<Set name="Name">basicLoginService</Set>
+						<Set name="LoginModuleName">jdbc</Set>
+						<Set name="CallbackHandlerClass">
+							org.eclipse.jetty.plus.jaas.callback.DefaultLocalgisCallbackHandler
+						</Set>
+						<Set name="IdentityService">
+							<New class="org.eclipse.jetty.security.DefaultIdentityService"/>
+						</Set>
+						<Set name="roleClassNames">
+							<Array type="java.lang.String">
+								<Item>org.eclipse.jetty.plus.jaas.JAASRole</Item>
+								<Item>org.eclipse.jetty.plus.jaas.JAASGroup</Item>
+								<Item>com.localgis.security.model.LocalgisJAASGroup</Item>
+							</Array>
+						</Set>
+					</New> 
+			</Set>
+			<Set name="authenticator">
+				<New id="basicAuthenticator" class="org.eclipse.jetty.security.authentication.BasicAuthenticator"/>
+			</Set>
+		</New>
+  </Set>
+
+</Configure>
+

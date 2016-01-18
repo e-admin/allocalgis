@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<DatastoreConfiguration name="parcelas" type="POSTGIS">
+  <Connection>
+    <driver>org.postgresql.Driver</driver>
+    <logon>jdbc:postgresql://$INSTALL_PGSQL_IP:$INSTALL_PGSQL_PORT/$INSTALL_GEOPISTA_DATABASE</logon>
+    <user>$INSTALL_GEOPISTA_USER</user>
+    <password>$INSTALL_GEOPISTA_PASSWORD</password>
+  </Connection>
+  <FeatureType name="geocodificacion">
+    <!-- The OutputFormat element contains information about wich java
+         class is responsible for generating a named output
+         format. The name of the output format is given by the name of
+         the element; the responsible class is named by the
+         responsibleClass attribute. -->
+    <OutputFormat>
+      <GML2 responsibleClass="org.deegree_impl.services.wfs.postgis.PostgisDataStoreOutputGML">
+        <!-- URL where an application can find the schema of the
+             feature type schema -->
+        <SchemaLocation>file:///$INSTALL_PATH/geocoder/WEB-INF/xml/geocodificacion.xsd</SchemaLocation>
+      </GML2>
+      <XML responsibleClass="org.deegree_impl.services.wfs.postgis.PostgisDataStoreOutputXML">
+        <Param name="FILTER" value="file:///c:/geocoder/xml/sample_wfs/transform.xsl"/>
+        <!-- URL where an application can find the schema of the
+             feature type schema -->
+        <SchemaLocation>file:///$INSTALL_PATH/geocoder/WEB-INF/xml/geocodificacion.xsd</SchemaLocation>
+      </XML>
+      <FEATURECOLLECTION responsibleClass="org.deegree_impl.services.wfs.postgis.PostgisDataStoreOutputFC"/>
+    </OutputFormat>
+    <MappingField>
+      <Property name="/geocodificacion/id" type="INTEGER"/>
+      <DatastoreField name="numeros_policia.id" type="INTEGER"/>
+    </MappingField>
+    <MappingField>
+      <Property name="/geocodificacion/municipality" type="VARCHAR"/>
+      <DatastoreField name="numeros_policia.id_municipio" type="VARCHAR"/>
+    </MappingField>
+     <MappingField>
+            <Property name="/geocodificacion/streetNumber" type="VARCHAR"/>
+            <DatastoreField name="numeros_policia.rotulo" type="VARCHAR"/>
+     </MappingField>
+     <MappingField>
+       <Property name="/geocodificacion/Geometry" type="Geometry" />
+       <DatastoreField name='numeros_policia."GEOMETRY"' type="Geometry" alias="GEOMETRY" />
+      </MappingField>
+     <MappingField>
+      <Property name="/geocodificacion/vias" type="VARCHAR"/>
+      <DatastoreField name="numeros_policia.id_via" type="OTHER"/>
+    </MappingField>
+    <MappingField>
+      <Property name="/geocodificacion/viasid" type="VARCHAR"/>
+      <DatastoreField name="vias.id" type="VARCHAR"/>
+    </MappingField>
+    <MappingField>
+      <Property name="/geocodificacion/street" type="VARCHAR"/>
+      <DatastoreField name="vias.nombrecatastro" type="VARCHAR"/>
+    </MappingField>
+    <MappingField>
+      <Property name="/geocodificacion/streetType" type="VARCHAR"/>
+      <DatastoreField name="vias.tipovianormalizadocatastro" type="VARCHAR"/>
+    </MappingField>
+
+
+    <!-- name of the top level table if a relational schema is
+         used. otherwise this is the only table. -->
+    <MasterTable name="numeros_policia" targetName="geocodificacion">
+      <!-- name of the table column that stores the id of a feature -->
+      <IdField number="true" auto="true">id</IdField>
+      <Reference tableField="id_via" replaceable="true" targetTable="vias" targetField="id"/>
+
+      <GeoFieldIdentifier>GEOM</GeoFieldIdentifier>
+    </MasterTable>
+     <RelatedTable name="vias" targetName="vias" jointable="false">
+      <IdField number="true" auto="true">ID</IdField>
+    </RelatedTable>
+
+
+         <CRS>EPSG:23030</CRS>
+     </FeatureType>
+</DatastoreConfiguration>

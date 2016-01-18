@@ -1,0 +1,4 @@
+Parametros para ejecutar actuaciones_espacio_publico.jrxml
+ID_ENTIDAD (id de la entidad a la que pertenece el usuario) 
+ID_WARNING (id de la intervencion a listar)
+LOCALE (idioma elegido)

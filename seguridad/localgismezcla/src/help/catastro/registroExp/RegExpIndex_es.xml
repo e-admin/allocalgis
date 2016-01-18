@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+
+<index version="1.0">
+    <indexitem text="Contenidos">
+
+        <indexitem text="Gestión de Expedientes">
+	    	<indexitem text="Inicio Gestión de Expedientes" target="GestionExpedientes"/>
+            <indexitem text="Búsqueda de Expedientes">
+                <indexitem text="Búsqueda" target="BusquedaExpedientes"/>
+            </indexitem>
+            <indexitem text="Nuevo Expediente">
+                <indexitem text="Nuevo" target="NuevoExpediente"/>
+            </indexitem>
+            <indexitem text="Asociar Parcelas al Expediente">
+                <indexitem text="Asociar" target="AsociarParcelas"/>
+            </indexitem>
+            <indexitem text="Gestión de Expedientes">
+                <indexitem text="Gestión" target="GestionDeExpedientes"/>
+            </indexitem>
+            <indexitem text="Modificar Datos de Expediente">
+                <indexitem text="Modicar Datos" target="ModificarDatosExpediente"/>
+            </indexitem>
+            <indexitem text="Editar Información Catastral">
+                <indexitem text="Editar Inf. Catastral" target="EditarInformacionCatastral"/>
+            </indexitem>
+            <indexitem text="Exportar Expediente">
+                <indexitem text="Exportar" target="ExportarExpediente"/>
+            </indexitem>
+            <indexitem text="Asocirar Información Gráfica al Expediente">
+                <indexitem text="Asociar Inf. Gráfica" target="AsociarInformacionGrafica"/>
+            </indexitem>
+            <indexitem text="Ver Estado Expediente">
+                <indexitem text="Ver Estado" target="VerEstadoExpediente"/>
+            </indexitem>
+        </indexitem>
+
+        <indexitem text="Edición">
+	    	<indexitem text="Modificación de la información catastral" target="introduccion"/>
+	    	
+	        <indexitem text="Finca">
+	            <indexitem text="Más datos de la Finca" target="masDatosFinca"/>
+	            <indexitem text="Nueva Finca" target="NuevaFinca"/>
+	            <indexitem text="Eliminar Finca" target="EliminarFinca"/>
+	        </indexitem>
+	                      
+	       <indexitem text="Bien Inmueble">
+	            <indexitem text="Más datos del Bien Inmueble" target="MasDatosBI"/>
+	            <indexitem text="Nuevo Bien Inmueble" target="NuevoBI"/>
+	            <indexitem text="Eliminar Bien Inmueble" target="EliminarBI"/>
+	            <indexitem text="Definir representante" target="DefinirRepresentante"/>
+	        </indexitem>
+	        
+	        <indexitem text="Construcciones">
+	            <indexitem text="Más Datos del Local" target="MasDatosLocales"/>
+	            <indexitem text="Nuevo Local" target="NuevoLocal"/>
+	        	<indexitem text="Nuevo Local Común" target="NuevoLocalComun"/>
+	        	<indexitem text="Eliminar Local" target="EliminarLocal"/>
+	        </indexitem>
+	        
+	        <indexitem text="Cultivos">
+	            <indexitem text="Nuevo Cultivo" target="NuevoCultivo"/>
+	        	<indexitem text="Nuevo Cultivo Común" target="NuevoCultivoComun"/>
+	        	<indexitem text="Eliminar Cultivo" target="EliminarCultivo"/>
+	        </indexitem>
+	        
+	        <indexitem text="Titulares">
+	            <indexitem text="Más Datos del Titular" target="MasDatosTitular"/>
+	        	<indexitem text="Nuevo Titular" target="NuevoTitular"/>
+	        	<indexitem text="Eliminar Titular" target="EliminarTitular"/>
+	        	<indexitem text="Comunidad de bienes" target="ComunidadBienes"/>
+	        </indexitem>
+	        
+	        <indexitem text="Suelos" target="Suelo"/>
+	        <indexitem text="Unidades Constructivas" target="UnidadConstructiva"/>
+	        <indexitem text="Reparto" target="Reparto"/>
+	    </indexitem>
+        <indexitem text="Exportación de expedientes">
+	    	<indexitem text="Exportación" target="Exportacion"/>
+        </indexitem>
+        <indexitem text="Histórico de Ficheros y Configuración">
+	    	<indexitem text="Histórico de Ficheros" target="HistoricoDeFicheros"/>
+	    	<indexitem text="Configuración" target="Configuracion"/>
+        </indexitem>
+    </indexitem>
+</index>

@@ -1,0 +1,48 @@
+﻿
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;	
+}
+
+a{color:#993300; text-decoration:none;}
+#caja {
+width:70%;
+display: none;
+padding:1px;
+border:2px solid #FADDA9;
+background-color:#FDF4E1;
+}
+#ficha_datos_basicos_feature{
+width:95%;
+#display: none;
+display: block;
+padding:1px;
+border:2px solid #FADDA9;
+background-color:#FDF4E1;		
+}
+
+#mostrar{
+display:block;
+width:90%;
+padding:0px;
+border:2px solid #D0E8F4;
+background-color:#ECF8FD;
+}
+
+#load{
+position:absolute;
+z-index:1;
+border:3px double #999;
+background:#f7f7f7;
+width:300px;
+height:300px;
+margin-top:-150px;
+margin-left:-150px;
+top:50%;
+left:50%;
+text-align:center;
+line-height:300px;
+font-family:"Trebuchet MS", verdana, arial,tahoma;
+font-size:18pt;
+}

@@ -1,0 +1,117 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <link rel="stylesheet" href="../jhexamples.css" type="text/css"><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (X11; U; Linux 2.4.1 i686) [Netscape]">
+   <title>Merge Demo Help and Master HelpSet
+</title>
+<!--
+ *         Copyright (C) 2003 Sun Microsystems, Inc
+ *                    All rights reserved.
+ *          Notice of copyright on this source code 
+ *          product does not indicate publication. 
+ * 
+ * RESTRICTED RIGHTS LEGEND: Use, duplication, or disclosure by 
+ * the U.S. Government is subject to restrictions as set forth 
+ * in subparagraph (c)(1)(ii) of the Rights in Technical Data
+ * and Computer Software Clause at DFARS 252.227-7013 (Oct. 1988) 
+ * and FAR 52.227-19 (c) (June 1987).
+ *
+ *    Sun Microsystems, Inc., 4150 Network Circle,
+ *    Santa Clara, California 95054, U.S.A.
+ *
+-->
+<!-- *************************************************************************************** -->
+<!-- content styles -->
+<link href="../css/contents.css" rel="stylesheet" type="text/css">
+<!-- *************************************************************************************** -->
+
+</head>
+<body bgcolor="#FFFFFF">
+
+<h1 class="cabeceraazuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Últimos Eventos</h1>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opción de Menú:</p>
+<p align="center"><IMG height=420 width=560 src="./img/licen_menu2.2.gif"></p>
+
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Con esta opción el usuario podrá 
+consultar 
+<ul>
+<li>Los <i><b>N últimos eventos</b></i> de cada Expediente del sistema.</li>
+<li>Los <i><b>N eventos no revisados</b></i> de los Expedientes existentes en el sistema.</li>
+</ul>
+</p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El valor de los <i><b>N eventos</b></i> a 
+mostrar es configurable. Para ello hay que modificar el valor de la variable <i>N_ULTIMOS_EVENTOS</i> 
+del fichero de configuración de la aplicación.
+
+<p align="center"><IMG height=420 width=560 src="./img/licen_ultimos_eventos.gif"></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El formulario se divide en:
+<ul class="contenidonormal">
+<p align="left" class="cabecera2azuloscuro">Datos de Búsqueda</p>
+<ul>
+<li><b>Tipo de Licencia</b>, Obra Mayor o Menor.</li>
+<li><b>Tipo de Obra</b>.</li>
+<li><b>Número de Expediente</b></li>
+<li><b>Estado actual del Expediente</b>.</li>
+<li><b>DNI/CIF del Solicitante</b>. Persona que realiza la solicitud de la Licencia de Obra.</li>
+<li><b>Fecha</b>, en la que se produjo el evento.</li>
+<li>Opción <b>Revisados</b>, <b>no Revisados</b> o <b>TODOS</b>. Esta opción es sólo válida para 
+la búsqueda de los <i>Últimos Eventos</i>, y no de los <i>Eventos pendientes de Revisar</i>.</li>
+</ul>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Si alguno de los campos no se rellena, no se tendrá en cuenta 
+ese campo en la búsqueda.</p> 
+<br>
+<p align="left" class="cabecera2azuloscuro"><b>Últimos Eventos</b></p>
+<ul>
+<li><p align="left" class="contenidonormal"><b>Listado</b> con los <i>N últimos eventos</i> de cada expediente 
+que cumplen los criterios de búsqueda. Para cada evento se muestran los siguientes datos:</p></li>
+<ul>
+<li><B>Número de Expediente</B> al que pertenece el evento.</li>
+<li><b>Tipo de Licencia</b> a la que pertenece, Mayor o Menor.</li>
+<li><b>Tipo de Obra</b>.</li>
+<li><b>Emplazamiento</b> de la Licencia de Obra a la que pertenece el evento.</li>
+<li><b>Estado</b> actual del Expediente.</li>
+<li><b>Solicitante</b> de la Licencia de Obra.</li>
+<li><b>Estado</b> del Expediente en el que se produjo el evento.</li>
+<li><b>Fecha</b> en la que produjo el evento.</li>
+<li><b>Revisado</b>. Chequeado si el evento ya ha sido revisado por un usuario.</li>
+<li><b>Descripción</b> del evento. Detalle del evento.</li>
+</ul> 
+<li class="contenidonormal"><b>Descripción del Evento Seleccionado</b></li>
+<p align="left" class="contenidonormal">Muestra el detalle del evento seleccionado en la tabla anterior, 
+para mayor comodidad del usuario.</p>
+</ul>
+<br>
+<p align="left" class="cabecera2azuloscuro">Eventos Pendientes de Revisar</p>
+<ul>
+<li><p align="left" class="contenidonormal"><b>Listado</b> con los <i>N eventos</i> de cada expediente 
+del sistema que cumplen los criterios de búsqueda y que no han sido revisados por el usuario. Para cada evento se 
+muestran los siguientes datos:</p></li>
+<ul>
+<li><B>Número de Expediente</B> al que pertenece el evento.</li>
+<li><b>Tipo de Licencia</b> a la que pertenece, Mayor o Menor.</li>
+<li><b>Tipo de Obra</b>.</li>
+<li><b>Emplazamiento</b> de la Licencia de Obra a la que pertenece el evento.</li>
+<li><b>Estado</b> actual del Expediente.</li>
+<li><b>Solicitante</b> de la Licencia de Obra.</li>
+<li><b>Estado</b> del Expediente en el que se produjo el evento.</li>
+<li><b>Fecha</b> en la que produjo el evento.</li>
+<li><b>Revisado</b>. Debe de aparecer como no Chequeado, ya que son eventos que aún no han sido revisados.</li>
+<li><b>Descripción</b> del evento. Detalle del evento.</li>
+</ul> 
+<li class="contenidonormal"><b>Descripción del Evento Seleccionado</b></li>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Muestra el detalle del evento seleccionado en la tabla anterior, 
+para mayor comodidad del usuario.</p>
+</ul>
+<br>
+<p align="left" class="cabecera2azuloscuro">Botón Ir a Expediente</p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abre la opción de menú de Modificación de Licencias de Obra, para el Expediente seleccionado.</p>
+<br>
+
+<p align="left" class="cabecera2azuloscuro">Botón Salir</p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cierra el formulario de Consulta de los Últimos Eventos.</p>
+</ul>
+</p>
+
+<br>
+</html>

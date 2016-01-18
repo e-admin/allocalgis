@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN" 
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+
+<index version="1.0">
+    <indexitem text="Contenidos">
+        <indexitem text="Introducción" target="ocupacionesIntro"/>
+        <indexitem text="Usuarios y Permisos" target="ocupacionesUsuarios"/>
+        <indexitem text="WorkFlow" target="ocupacionesWorkflow"/>
+        <indexitem text="Opciones de Menú" target="ocupacionesOpcionesMenu"/>
+        <indexitem text="Creación de una Licencia" target="ocupacionesCreacion"/>
+        <indexitem text="Modificación de una Licencia" targer="ocupacionesModificacion"/>
+        <indexitem text="Consulta de una Licencia" target="ocupacionesConsulta"/>
+        <indexitem text="Informes" target="ocupacionesInformes"/>
+        <indexitem text="Eventos">
+            <indexitem text="Consulta de Eventos" target="ocupacionesConsultaEventos"/>
+            <indexitem text="Últimos Eventos" target="ocupacionesUltimosEventos"/>
+        </indexitem>
+        <indexitem text="Generación de Planos" target="ocupacionesPlanos"/>
+        <indexitem text="Consulta de Notificaciones" target="ocupacionesNotificaciones"/>
+        <indexitem text="Consulta del Histórico" target="ocupacionesHistorico"/>
+        <indexitem text="Consulta de las Tareas Pendientes" target="ocupacionesTareasPendientes"/>
+		<indexitem text="Configuración" target="ocupacionesConfiguracion"/>   
+        <indexitem text="Cambio de Idioma" target="ocupacionesIdioma"/>
+    </indexitem>
+</index>
+

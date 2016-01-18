@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+          
+<struts-config>
+    
+    
+    <form-beans>
+        <form-bean name="entidadForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property initial="" name="idEntidad" type="java.lang.Integer"/>
+        </form-bean>
+        <form-bean name="fileForm" type="com.localgis.web.wm.struts.forms.UploadForm">
+        	
+        </form-bean>
+        <form-bean name="mapsForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property initial="" name="available" type="java.lang.String"/>
+            <form-property initial="" name="published" type="java.lang.String"/>
+            <form-property initial="" name="type" type="java.lang.String"/>
+            <form-property initial="" name="mapsToPublish" type="java.lang.String"/>
+			<form-property initial="" name="mapsToRemove" type="java.lang.String"/>
+         </form-bean>  
+         
+         <!-- NUEVO -->
+         <form-bean name="LoginForm" type="com.localgis.web.wm.struts.actionsforms.LoginActionForm" />
+         <!-- FIN NUEVO -->    
+    </form-beans>
+    
+    <global-exceptions>
+        
+    </global-exceptions>
+    
+    <global-forwards>
+		<forward name="error" path="/admin/error.jsp"/>
+		<forward name="entidadNoSelected" path="/admin/index.jsp"></forward>
+    </global-forwards>
+    
+    <action-mappings>
+   		<!-- NUEVO -->       	
+        <action path="/admin/inicio" forward="/admin/index.jsp"/>    
+
+		<action path="/admin/seleccionEntidad" type="com.localgis.web.wm.struts.actions.LoadEntidadesAction">
+            <forward name="success" path="/admin/seleccionEntidad.jsp"/>
+        </action>
+        <!-- FIN NUEVO -->   
+                
+        <action path="/admin/gestionCapas" type="com.localgis.web.wm.struts.actions.CapasDispatchAction" parameter="parameter">
+            <forward name="listLayers" path="/admin/gestionCapas.jsp"/>
+        </action>        
+         
+        <action input="/admin/seleccionEntidad.jsp" name="entidadForm" path="/admin/entidadSelected" scope="session" type="com.localgis.web.wm.struts.actions.EntidadSelectedAction">
+            <forward name="success" path="/admin/menu.jsp"/>
+        </action>         
+         
+        <action input="/admin/seleccionTipoMapa.jsp" path="/admin/gestionMapas" type="com.localgis.web.wm.struts.actions.GestionMapaAction">
+            <forward name="success" path="/admin/gestionMapas.jsp"/>
+        	
+        </action>
+        <!-- NUEVO -->
+        <action path="/admin/login" scope="request" 
+            type="com.localgis.web.wm.struts.actions.LoginAction" 
+            name="LoginForm">
+            <forward name="success" path="/admin/inicio.do"/>
+            <forward name="login" path="/loginWithEntidad.jsp"/>
+            <forward name="invalidLogin" path="/loginWithEntidad.jsp?error=invalidLogin"/>
+        </action>
+        <!-- FIN NUEVO -->
+        
+        
+        <action path="/admin/logoff" type="com.localgis.web.wm.struts.actions.LogoffAction" >
+        	<forward name="logoff" path="/admin/index.jsp"/>
+        </action>
+         
+        <action path="/admin/uploadFile" input="/admin/uploadStatus.jsp" scope="request" name="fileForm" type="com.localgis.web.wm.struts.actions.UploadAction" >
+        	<forward name="successCSS" path="/admin/uploadCss.jsp"></forward>
+        	<forward name="successLegend" path="/admin/uploadLegend.jsp"></forward>
+        	<forward name="successCabecera" path="/admin/uploadCabecera.jsp"></forward>
+        	<forward name="error"  path="/admin/uploadError.jsp"></forward>
+        </action>
+        
+         <action path="/admin/preview" scope="request" type="com.localgis.web.wm.struts.actions.PreviewAction" >
+        	<forward name="success" path="/preview/preview.jsp"></forward>
+        </action>
+       
+        
+        <action path="/admin/seleccionTipoMapas" type="com.localgis.web.wm.struts.actions.SeleccionTipoMapaAction">
+			<forward name="capas" path="/admin/seleccionTipoMapa.jsp"/>
+			<forward name="mapas" path="/admin/seleccionTipoMapa.jsp"/>
+			<forward name="menu" path="/admin/menu.jsp"/>
+		</action>        	
+        <action forward="/admin/menu.jsp" path="/admin/menu" />
+        
+        <action path="/admin/gestionEstilos" type="com.localgis.web.wm.struts.actions.GestionEstilosAction">
+        	<forward name="success" path="/admin/gestionEstilos.jsp"></forward>
+        </action>
+        
+        <!-- NUEVO DNIE --> 
+          <action path="/dni/inicio" forward="/dni/index.jsp"/> 
+        <!-- FIN NUEVO --> 
+
+    </action-mappings>
+   
+    <controller processorClass="org.apache.struts.action.RequestProcessor" maxFileSize="200K" ></controller>
+ 
+    <message-resources parameter="com/localgis/web/wm/struts/ApplicationResource"/>    
+ 
+</struts-config>

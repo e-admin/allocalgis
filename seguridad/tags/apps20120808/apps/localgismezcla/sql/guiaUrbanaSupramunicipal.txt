@@ -1,0 +1,20 @@
+-- Para que al publicar un mapa en el wms se almacena tambien si la
+-- capa se visualiza o no, segun se guarde el mapa con el EditorGIS
+
+ALTER TABLE localgisguiaurbana.maplayer ADD COLUMN isvisible boolean DEFAULT true;
+
+alter table localgisguiaurbana.css rename column idmunicipio to identidad;
+alter table localgisguiaurbana.css alter column identidad type numeric(8);
+
+alter table localgisguiaurbana.legend rename column idmunicipio to identidad;
+alter table localgisguiaurbana.legend alter column identidad type numeric(8);
+
+alter table localgisguiaurbana.map rename column mapidmunicipio to mapidentidad;
+alter table localgisguiaurbana.map alter column mapidentidad type numeric(8);
+
+alter table localgisguiaurbana.restricted_attribute rename column idmunicipio to identidad;
+alter table localgisguiaurbana.restricted_attribute alter column identidad type numeric(8);
+
+-- Tablas que ya no se necesitan
+DROP TABLE localgisguiaurbana.municipios;
+DROP TABLE localgisguiaurbana.provincias;

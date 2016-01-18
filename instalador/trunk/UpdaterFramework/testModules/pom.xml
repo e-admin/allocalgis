@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>UpdaterFramework</artifactId>
+		<groupId>com.localgis</groupId>
+		<version>3.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<groupId>com.localgis.modules</groupId>
+	<artifactId>updateModules</artifactId>
+	<name>TestModules</name>
+	<description>Modules for testing the updater</description>
+	<packaging>pom</packaging>
+	<modules>
+		<module>exampleModule</module>
+		<module>exampleModule2</module>
+		<module>exampleModule3</module>
+		<module>updaterModuleParent</module>
+	</modules>
+	<build>
+		
+	</build>
+	<reporting>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>2.0.1</version>
+				</plugin>
+			</plugins>
+		</reporting>
+</project>

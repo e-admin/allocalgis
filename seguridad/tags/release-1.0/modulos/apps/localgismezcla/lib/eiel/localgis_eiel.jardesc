@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="WINDOWS-1252"?>
+<jardesc>
+<jar path="D:/Codigo/LocalGIS-EIEL/lib/eiel/localgis_eiel.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/LocalGIS-EIEL/lib/eiel/localgis_eiel.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+<storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+<selectedProjects/>
+<manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.language"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.plugin.eielsavemap"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.administrador.usuarios"/>
+<file path="/LocalGIS-EIEL/src/workbench-properties-eiel-system.xml"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.plugin.unmarkfamilylayers"/>
+<file path="/LocalGIS-EIEL/src/GeoPistai18n.properties"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.editor"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.protocol.administrador.dominios"/>
+<file path="/LocalGIS-EIEL/src/workbench-properties-eiel.xml"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.forms"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.plugin.unmarkall"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.beans"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.plugin.selectfamilylayers"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.inventario"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;help.eiel"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.protocol.administrador"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;help.eiel.Pages.css"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.vividsolutions.jump.workbench.ui.plugin"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.server.administradorCartografia"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.io.datasource"/>
+<file path="/LocalGIS-EIEL/src/GeoPista.properties"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.ui.plugin"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.images"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;help.eiel.Pages.es.img"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.server.database"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.models"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.plugin.invertselection.languages"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.server.control.aplicacion.spi"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.utils"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.plugin.unmarkall.languages"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.dialogs"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.plugin.eielloadmap"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.plugin.unmarkfamilylayers.languages"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.ui.autoforms"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.plugin.invertselection"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;help.eiel.Pages.es"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.style.sld.ui"/>
+<file path="/LocalGIS-EIEL/src/workbench-properties-eiel-edicion.xml"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.plugin.selectall"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.vividsolutions.jump.workbench.ui"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.ui.dialogs"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.plugin.selectfamilylayers.languages"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.plugin.selectall.languages"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.server.eiel.web"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.ui"/>
+<file path="/LocalGIS-EIEL/src/GeoPistai18n_es_ES.properties"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.eiel.panels"/>
+<file path="/LocalGIS-EIEL/src/workbench-properties.xml"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.app.administrador"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.model"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;com.geopista.util"/>
+<javaElement handleIdentifier="=LocalGIS-EIEL/src&lt;help.eiel.JavaHelpSearch"/>
+</selectedElements>
+</jardesc>

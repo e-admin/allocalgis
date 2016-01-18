@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<root>
+	<element xml-name="feature" java-name="featureId"/>
+	<element xml-name="timeStamp" java-name="timeStamp"/>
+	<element xml-name="user" java-name="user"/>
+	<element xml-name="eventType" java-name="eventType"/>
+</root>

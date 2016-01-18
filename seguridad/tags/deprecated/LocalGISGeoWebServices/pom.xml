@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.espacio</groupId>
+	<artifactId>LocalGISGeoWebServices</artifactId>
+	<name>LocalGISGeoWebServices</name>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>com.localgis</groupId>
+		<artifactId>localgis-parent</artifactId>
+		<version>3.0</version>
+	</parent>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<target>1.7</target>
+					<source>1.7</source>
+					<!-- Evitar el error de las dependencias de com.sun.image.codec.jpeg -->
+					<compilerArgument>-XDignore.symbol.file=true</compilerArgument>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.localgis.protocol</groupId>
+			<artifactId>localgis-protocol</artifactId>
+			<version>3.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.servicemix.bundles</groupId>
+			<artifactId>org.apache.servicemix.bundles.wss4j</artifactId>
+			<version>1.5.4_2</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.opensaml</groupId>
+					<artifactId>opensaml</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>opensaml</groupId>
+					<artifactId>opensaml</artifactId>
+				</exclusion>
+
+			</exclusions>
+		</dependency>
+	</dependencies>
+</project>

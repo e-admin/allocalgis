@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="localgis_style">
+
+  <insert id="insert" parameterClass="com.localgis.web.core.model.LocalgisStyle">
+    <selectKey keyProperty="styleid" resultClass="java.lang.Integer">
+      select localgisguiaurbana.stylesequence.nextval from dual
+    </selectKey>
+    insert into localgisguiaurbana.style (styleid, stylename, styletitle, styleabstract, featuretypestyles)
+    values (#styleid:INTEGER#, #stylename:VARCHAR#, #styletitle:VARCHAR#, #styleabstract:VARCHAR#,
+      #featuretypestyles:VARCHAR#)
+  </insert>
+
+</sqlMap>

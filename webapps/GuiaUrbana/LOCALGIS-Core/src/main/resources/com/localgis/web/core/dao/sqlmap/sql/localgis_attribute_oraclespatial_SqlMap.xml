@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="localgis_attribute" >
+
+  <insert id="insert" parameterClass="com.localgis.web.core.model.LocalgisAttribute" >
+    <selectKey resultClass="java.lang.Integer" keyProperty="attributeid" >
+      select localgisguiaurbana.attributesequence.nextval from dual
+    </selectKey>
+    insert into localgisguiaurbana.attribute (attributeid, attributename, attributeidgeopista, layerid, attributeidalias,mapid)
+    values (#attributeid:INTEGER#, #attributename:VARCHAR#, #attributeidgeopista:NUMERIC#, #layerid:INTEGER#, #attributeidalias:NUMERIC#,#mapid:INTEGER#)
+  </insert>
+
+</sqlMap>

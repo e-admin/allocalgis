@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="localgis-server-init">
+        <wb-resource deploy-path="/" source-path="/src/main/rar" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/src/main/resources"/>
+        <dependent-module archiveName="localgis-security-3.0.jar" deploy-path="/" handle="module:/resource/localgis-security/localgis-security">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-codec/commons-codec/1.6/commons-codec-1.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-cifrado-3.0.jar" deploy-path="/" handle="module:/resource/localgis-cifrado/localgis-cifrado">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-sql-3.0.jar" deploy-path="/" handle="module:/resource/localgis-sql/localgis-sql">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/log4j/log4j/1.2.16/log4j-1.2.16.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/postgresql/postgresql/8.0-318.jdbc3/postgresql-8.0-318.jdbc3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/postgis/postgis-jdbc/1.3.3/postgis-jdbc-1.3.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/localgis-server-init/target/classes"/>
+    </wb-module>
+</project-modules>

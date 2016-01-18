@@ -1,0 +1,112 @@
+/* 
+Geopista Layouts
+Author: Alfonso Domnguez
+version: 10.26.2004
+*/
+img {
+	vertical-align: top;
+	top: 0px;
+}
+
+input{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	font-size: 11px;
+	line-height: 16px;
+	border: 1px solid #EFEFEF;
+}
+
+select{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #999999;
+	font-size: 11px;
+	line-height: 16px;
+	border: 1px solid #EFEFEF;
+}
+
+table{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #2974A5;
+	font-size: 11px;
+	line-height: 16px;
+}
+p {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	color: #2974A5;
+	font-size: 11px;
+	line-height: 16px;
+	margin: 0;
+	padding-top: 6px;
+	padding-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 0px;
+}
+
+h1 {
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	color: #990000;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0;
+	padding-top: 6px;
+	padding-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 0px;
+}
+h2, h2 span { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	color: #2974A5; 
+	font-size: 11px; 
+	font-weight: normal; 
+	margin: 0; 
+	}
+h2 em { display: none; }
+#rside p, .strip p { font-size: 10px; }
+#valid p { font-size: 9px; color: #fff; }
+p.projtype { font-size: 14px; color: #AE0C0A; line-height: 32px; }
+.altcolor { padding: 1px 50px 1px 3px; color: #AE0C0A; background: #fff; }
+.altcolor2 { color: #AE0C0A; }
+p.tiny { font-size: 9px; }
+p.tiny span { line-height: 11px; }
+
+
+p a, p a:visited { padding: 0;background: #EEEEEE; text-decoration: none; color: #AE0C0A; }
+p a:visited { text-decoration: none; background: none; padding: 0; }
+p a:hover { color: #666666; text-decoration: none;  padding: 0;}
+
+a, a:visited { text-decoration: none; color: #AE0C0A; padding: 0;}
+a:hover { color: #666666; text-decoration: none;  padding: 0;}
+
+#rside p a, #rside p a:visited { padding: 0 3px 0 3px; }
+.bodytext {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.menublanco{
+	color: #FFFFFF;
+}
+
+.bodytext a{
+	color: #333333;
+	text-decoration: none;
+	background-color: #EFEFEF;
+}
+.bodytext a:hover{
+	color: #333333;
+	text-decoration: underline;
+	background-color: #EFEFEF;
+}
+.bodytext a:visited{
+	color: #FF3333;
+	text-decoration: none;
+	background-color: #EFEFEF;
+}
+
+.csc-caption {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: italic;
+	color: #003399;
+	padding: 0px;
+}

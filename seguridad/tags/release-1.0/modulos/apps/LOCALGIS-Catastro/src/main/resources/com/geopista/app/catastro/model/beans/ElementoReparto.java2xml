@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<root>
+    <element xml-name="noec" java-condition="esConstruccion" java-name="numCargo" length="4"/>
+    <element xml-name="pctrep" java-condition="esConstruccion" java-name="porcentajeReparto" format="##0.000"/>
+
+    <element xml-name="car" java-condition="esCargo" java-name="numCargo" length="4"/>
+    <element xml-name="pctrep" java-condition="esCargo" java-name="porcentajeReparto" format="##0.000"/>
+</root>

@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.app</groupId>
+	<artifactId>localgis-apps-alp</artifactId>
+	<version>3.0</version>
+	<name>LOCALGIS-APPS-ALP</name>
+	<description>Open Source GIS client. ALP</description>
+	<organization>
+		<name>MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO</name>
+	</organization>
+	
+	<parent>
+		<artifactId>localgis-parent-apps</artifactId>
+		<groupId>com.localgis</groupId>
+		<version>3.0</version>
+	</parent>
+	
+	<properties>
+		<!-- Configuracion jnlp -->
+		<mainClassJnlp>com.geopista.app.alptolocalgis.AlpToLocalGIS</mainClassJnlp>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.localgis.protocol</groupId>
+			<artifactId>localgis-protocol</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.context</groupId>
+			<artifactId>localgis-context</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.security</groupId>
+			<artifactId>localgis-security</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.model</groupId>
+			<artifactId>localgis-model</artifactId>
+			<version>3.0</version>
+		</dependency>
+				<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+		<dependency>
+		<groupId>commons-discovery</groupId>
+		<artifactId>commons-discovery</artifactId>
+		<version>0.5</version>
+	</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,185 @@
+body {
+    background-color:#eaebec;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+#wrapShowMap {
+	/* AJUSTE TAMAÑO*/
+    /*width: 100%;*/
+    width: 98%;
+    margin:0 auto;
+    text-align:left;
+    background-color: transparent;
+        position: absolute;
+} 
+
+#bannerMapaContainer{
+    height:50px;
+    background-color: transparent;
+    width: 100%;
+}
+
+#bannerMapa{
+    height: 50px;
+    width: 1312px;
+    background-color: #F9F9F9;
+    border: 0px;
+    margin: 0px;
+}
+
+#bannerMapaLeft {
+	/*float: center;*/
+    height: 50px;
+    width: 300px;
+    position: fixed;
+}
+
+#bannerMapaRight {
+    float: right;
+    height: 50px;
+    width: 1000px;
+    margin-left: 314px;
+    position: fixed;
+}
+
+#imgBannerLeft{
+	width: 300px;
+	height: 50px;
+}
+
+#imgBannerRight{
+	width: 1000px;
+	height: 50px;
+}
+
+#searchDiv {
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+#toolbar {
+    background-color: transparent;
+    float: left;
+    height: 30px;
+    position: relative;
+    width: 900px;
+    margin-left: 350px;
+    margin-top: 32px;
+}
+
+#map {
+    width: 1314px;
+    height: 560px;
+    background-color: transparent;
+    position:relative;
+}
+
+#layerswitcher {
+    float: left;
+    width: 270px;
+    height: 585px;
+    background-color: transparent;
+    /*background:url("../js/openlayers-2.5/theme/localgis/img/555_70.png");*/
+    border-radius:5px 5px 5px 5px;
+    overflow: auto;
+    position: relative;
+    padding-top:20px;
+}
+.layerswitcherHide{
+
+}
+
+#nombreMunicipio {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size:12px;
+    width: 643px;
+    margin-left: 280px;
+    position: relative;
+    text-align: center;
+    top: -1px;
+}
+
+#mapDetail {
+    width: 100%;
+    height: 98%;
+    border: 1px solid darkgray;
+    position: absolute;
+    margin-left: auto;
+    background-color: transparent;
+    margin-top: -10px;
+    
+}
+
+.inputTextField_buscar {
+    background-color: white;
+    border: 1px solid #f2f2f2;
+    text-indent: 2px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #666666;
+    width: 180px
+}
+
+
+.inputTextField, select, textarea {
+    background-color: white;
+    border: 1px solid #f2f2f2;
+    text-indent: 2px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #666666;
+}
+
+.modify {
+	float:right;
+	width:100px;
+	top:1px;
+}
+
+.expand_collapse{
+	float:left;
+	top:-20px;
+	position:relative;
+}
+
+#desplegables {
+    background-color: transparent;
+    float: right;
+    height: 30px;
+    position: absolute;
+    margin-left:912px;
+    width: 400px;
+    z-index: 1;
+}
+
+#cartobase {
+	padding-top:5px;
+	float:right;
+	padding-right: 40px;
+}
+
+#nuevoSearch {
+	padding-top:5px;
+	float:right;
+}
+  
+#logo{
+    background-repeat:no-repeat;
+    height:50px;
+    background-color: transparent;
+    width: 924px;
+}
+#menuR {
+    cursor: default;
+    padding: 6px;
+    position: absolute;
+    width: 135px;
+    z-index: 2024;
+    top:10px;
+}
+
+

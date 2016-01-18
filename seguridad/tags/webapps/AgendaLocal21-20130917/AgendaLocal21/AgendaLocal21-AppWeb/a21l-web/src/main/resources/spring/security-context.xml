@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:sec="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+        	
+    	
+   		<sec:http auto-config="true">
+   			<sec:intercept-url pattern="/indicadores.htm" access="ROLE_ANONIMO" />
+   			<sec:form-login login-page="/login.htm" default-target-url="/indicadores.htm" authentication-failure-url="/loginfailed.htm" always-use-default-target='true'/>
+ 			<sec:remember-me key="remember-me-security" />
+			<sec:logout logout-success-url="/login.htm" invalidate-session="true"/>
+    	</sec:http>
+
+    <sec:authentication-manager alias="_authenticationManager">
+        <sec:authentication-provider user-service-ref="servicioSeguridad"/>
+    </sec:authentication-manager>
+	<!-- 
+    <sec:authentication-manager alias="_authenticationManager">
+        <sec:authentication-provider user-service-ref="servicioSeguridad"/>
+    </sec:authentication-manager>
+ 	-->
+<!-- 	<bean id="rememberMeServices" class="com.triune.services.CustomTokenBasedRememberMeService"> -->
+<!-- 	    <property name="key" value="remember-me-security" /> -->
+<!-- 	    <property name="cookieName" value="TRIUNE" /> -->
+<!-- 	    <property name="tokenValiditySeconds" value="1209600" /> -->
+<!-- 	    <property name="useSecureCookie" value="true" /> -->
+<!-- 	    <property name="userDetailsService" ref="customUserDetailsService" /> -->
+<!-- 	    <property name="alwaysRemember" value="false" /> -->
+<!-- 	    <property name="parameter" value="_spring_security_remember_me_input"/> -->
+<!-- 	</bean> -->
+ 	
+    <bean id="methodSecurityInterceptor" class="org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor">
+        <property name="authenticationManager" ref="_authenticationManager"/>
+        <property name="accessDecisionManager" ref="accessDecisionManager"/>
+        <property name="rejectPublicInvocations" value="false"/>
+        <property name="securityMetadataSource">
+            <value>
+
+            </value>
+        </property>
+    </bean>
+
+    <bean id="roleVoter" class="org.springframework.security.access.vote.RoleVoter">
+        <property name="rolePrefix" value="ROLE_"/>
+    </bean>
+
+    <bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+        <property name="decisionVoters">
+            <list>
+                <ref bean="roleVoter"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>

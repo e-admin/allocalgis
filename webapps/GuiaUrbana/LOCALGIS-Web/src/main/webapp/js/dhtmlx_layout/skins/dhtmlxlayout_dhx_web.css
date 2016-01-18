@@ -1,0 +1,568 @@
+/*****************************************************************************************************************************************************************
+								"DHX_WEB" SKIN
+*****************************************************************************************************************************************************************/
+/* inner table */
+table.dhtmlxLayoutPolyContainer_dhx_web {
+	width: 100%;
+	height: 100%;
+	abackground-color: #D3E2E5;
+}
+/* single polygon */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly {
+	position: relative;
+	overflow: hidden;
+	vertical-align: top;
+	background-color: #646464;
+}
+/* window content */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxWindowMainContent {
+	border: #a4bed4 1px solid;
+	background-color: #FFFFFF;
+}
+
+/* WITH ENGINE */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlx_wins_body_inner {
+	border: #000000 1px solid;
+	background-color: #FFFFFF;
+}
+
+/* content cover boocker */
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhxcont_content_blocker {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	filter: alpha(opacity=40);
+	-moz-opacity: 0.4;
+	opacity: 0.4;
+	background-color: #f5f5f5;
+}
+
+
+/* infobar */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar {
+	position: relative;
+	font-family: Tahoma;
+	font-size: 2px;
+	height: 27px;
+	background-color: #646464;
+	overflow: hidden;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar div.dhtmlxInfoBarButtonsFake {
+	position: absolute;
+	width: 28px;
+	height: 27px;
+	margin: 0px;
+	top: 0px;
+	right: -1px;
+	background-color: #646464;
+	overflow: hidden;
+}
+/* infobar label */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar div.dhtmlxInfoBarLabel {
+	white-space: nowrap;
+	color: #f5f5f5;
+	font-family: "Trebuchet MS";
+	font-size: 14px;
+	font-weight: normal;
+	top: 5px;
+	margin-left: 12px;
+	line-height: 15px;
+	vertical-align: middle;
+	cursor: default;
+	position: absolute;
+	-moz-user-select: none;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxInfoBarLabel {
+	display: none;
+}
+/* button collapse to-right */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar div.dhtmlxInfoButtonShowHide_ver {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 6px;
+	right: 4px;
+	font-family: Tahoma;
+	font-size: 2px;
+	text-align: center;
+	vertical-align: top;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbarCollapsed div.dhtmlxInfoButtonShowHide_ver { /* tabbar case, collapsed */
+	position: absolute;
+	width: 7px;
+	height: 8px;
+	top: 6px;
+	right: 4px;
+	font-family: Tahoma;
+	font-size: 2px;
+	text-align: center;
+	vertical-align: top;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+.dhxLayoutButton_dhx_web_ver1t {
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_btns.gif");
+	background-position: -32px 0px;
+}
+.dhxLayoutButton_dhx_web_ver1b {
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_btns.gif");
+	background-position: 0px 0px;
+}
+/* button collapse to-left */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar div.dhtmlxInfoButtonShowHide_hor {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 6px;
+	right: 4px;
+	font-family: Tahoma;
+	font-size: 2px;
+	text-align: center;
+	vertical-align: top;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbarCollapsed div.dhtmlxInfoButtonShowHide_hor { /* tabbar case, collapsed */
+	position: absolute;
+	width: 8px;
+	height: 7px;
+	top: 10px;
+	left: 6px;
+	font-family: Tahoma;
+	font-size: 2px;
+	text-align: center;
+	vertical-align: top;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+.dhxLayoutButton_dhx_web_hor1l {
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_btns.gif");
+	background-position: -16px 0px;
+}
+.dhxLayoutButton_dhx_web_hor1r {
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_btns.gif");
+	background-position: -48px 0px;
+}
+/* collapsed polygon horizontal */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedHor {
+	position: relative;
+	font-family: Tahoma;
+	font-size: 2px;
+	height: 100%;
+	height: 18px;
+	overflow: hidden;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedHor div.dhtmlxInfoBarLabel {
+	display: none;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedHor div.dhtmlxInfoButtonShowHide_ver {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 1px;
+	right: 4px;
+	font-family: Tahoma;
+	font-size: 2px;
+	text-align: center;
+	vertical-align: top;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+.dhxLayoutButton_dhx_web_ver2t {
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_btns.gif");
+	background-position: -32px 0px;
+}
+.dhxLayoutButton_dhx_web_ver2b {
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_btns.gif");
+	background-position: 0px 0px;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedHor div.dhtmlxInfoBarButtonsFake {
+	height: 18px;
+	left: 0px;
+	position: relative;
+	top: 0px;
+	background-color: #646464;
+}
+/* collapsed polygon vertical */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedVer {
+	position: relative;
+	width: 100%;
+	font-family: Tahoma;
+	font-size: 2px;
+	height: 100%;
+	overflow: hidden;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxInfoBarLabel {
+	display: none;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxInfoButtonShowHide_hor {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 6px;
+	left: 1px;
+	font-family: Tahoma;
+	font-size: 2px;
+	text-align: center;
+	vertical-align: top;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+.dhxLayoutButton_dhx_web_hor2l {
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_btns.gif");
+	background-position: -16px 0px;
+}
+.dhxLayoutButton_dhx_web_hor2r {
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_btns.gif");
+	background-position: -48px 0px;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxInfoBarButtonsFake {
+	width: 16px;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	width: 18px;
+	background-color: #646464;
+}
+/* border-bottom for vercollapsed cell */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxInfoBarButtonsFake2 {
+	display: none;
+}
+/* inner objects */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInnerContainer {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	position: relative;
+	overflow: auto;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhtmlx_wins_body_content {
+	position: relative;
+	overflow: hidden;
+}
+/* SPLITTERS */
+/* hor-based splitter */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutPolySplitterHor {
+	font-size: 1px;
+	height: 9px;
+	line-height: 9px;
+	cursor: n-resize;
+	-moz-user-select: none;
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_drag_hor.gif") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	vertical-align: top;
+}
+/* hor-based splitter inactive */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutPolySplitterHorInactive {
+	font-size: 1px;
+	height: 9px;
+	line-height: 9px;
+	cursor: default;
+	-moz-user-select: none;
+	vertical-align: top;
+}
+/* ver-based splitter */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutPolySplitterVer {
+	font-size: 2px;
+	width: 9px;
+	cursor: w-resize;
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_drag_ver.gif") !important;
+	background-repeat: no-repeat !important;
+	background-position: 50% center !important;
+	vertical-align: top;
+	-moz-user-select: none;
+}
+/* ver-based splitter inactive */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutPolySplitterVerInactive {
+	font-size: 2px;
+	width: 9px;
+	cursor: default;
+	vertical-align: top;
+	-moz-user-select: none;
+}
+/* DEFAULT SINGLE POLYGON WITH ATTACHED TABBAR */
+/* polygon */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbar {
+	position: relative;
+	overflow: hidden;
+	vertical-align: top;
+	border: 0px solid transparent;
+	border-top: 1px solid #D2E3EA;
+	border-bottom: 1px solid #D2E3EA;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbarCollapsed {
+	position: relative;
+	border: #C2D5DC 1px solid;
+	overflow: hidden;
+	vertical-align: top;
+	background-color: #D2E3EA;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbar div.dhtmlxWindowMainContent {
+	border: #333333 0px solid !important;
+	background-color: #FFFFFF;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbarCollapsed div.dhtmlxPolyInfoBarCollapsedVer, td.dhtmlxLayoutSinglePolyTabbarCollapsed div.dhtmlxPolyInfoBarCollapsedHor {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+/* small tabbar fix */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbar div.dhx_tabbar_row {
+}
+
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbar div.dhtmlxPolyInfoBar, td.dhtmlxLayoutSinglePolyTabbarCollapsed div.dhtmlxPolyInfoBar {
+	position: relative;
+	z-index: 100;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbar div.dhtmlxInfoBarLabel, td.dhtmlxLayoutSinglePolyTabbarCollapsed div.dhtmlxInfoBarLabel {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbar div.dhtmlxInfoBarButtonsFake, td.dhtmlxLayoutSinglePolyTabbarCollapsed div.dhtmlxInfoBarButtonsFake {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbar div.dhtmlxPolyInfoBar div {
+	position: relative;
+	float: right;
+	background-position: center top;
+	background-repeat: no-repeat;
+	width: 12px;
+	height: 12px;
+	overflow: hidden;
+	z-index: 100;
+}
+/* collapse/expand buttons for tabbar */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbar div.dhtmlxPolyInfoBar div.dhtmlxInfoButtonShowHide_hor, table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePolyTabbar div.dhtmlxPolyInfoBar div.dhtmlxInfoButtonShowHide_ver {
+	position: absolute;
+	right: 4px;
+	top: 4px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+/* SIZER */
+div.dhxLayout_Sizer_dhx_web {
+	position: absolute;
+	background-color: #848484;
+	filter: alpha(opacity=30);
+	-moz-opacity: 0.3;
+	opacity: 0.3;
+	transparent: 0;
+	font-size: 1px;
+	z-index: 1999;
+}
+div.dhxLayout_Cover_dhx_web {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	filter: alpha(opacity=20);
+	-moz-opacity: 0.2;
+	opacity: 0.2;
+	background-color: #646464;
+}
+
+/* attached menu */
+.dhtmlxMenu_dhx_web_Middle {
+	amargin-left: 1px;
+	amargin-right: 1px;
+}
+.dhtmlxMenu_dhx_web_bottom_border {
+	height=25;
+	border-bottom: #C2D5DC 1px solid;
+}
+.dhtmlxToolbar_dhx_web_bottom_top {
+	border-top: #C2D5DC 1px solid;
+}
+/* progress cover */
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhtmlxLayoutPolyProgress {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity=15);
+	-moz-opacity: 0.15;
+	opacity: 0.15;
+	background-color: #93C0E7;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhtmlxLayoutPolyProgressBGIMG {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_progress.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+/* progres cover global */
+div.dhtmlxLayoutPolyProgressGlobal_dhx_web {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity=15);
+	-moz-opacity: 0.15;
+	opacity: 0.15;
+	background-color: #93C0E7;
+}
+div.dhtmlxLayoutPolyProgressBGIMGGlobal_dhx_web {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_progress_global.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+/* status bar */
+div.dhxcont_global_layout_area div.dhxcont_sb_container {
+	position: relative;
+	height: 41px;
+}
+div.dhxcont_global_layout_area div.dhxcont_sb_container div.dhxcont_statusbar {
+	position: relative;
+	top: 9px;
+	height: 32px;
+	line-height: 32px;
+	background-color: #cecece;
+	width: auto;
+	padding: 0px 12px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: "Trebuchet MS";
+	font-size: 14px;
+	vertical-align: middle;
+	color: #666666;
+}
+/* status attachecd to layout's cell */
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhxcont_sb_container_layoutcell {
+	position: relative;
+	height: 41px;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhxcont_sb_container_layoutcell div.dhxcont_statusbar {
+	position: relative;
+	top: 9px;
+	height: 32px;
+	line-height: 32px;
+	background-color: #ececec;
+	width: auto;
+	padding: 0px 12px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: "Trebuchet MS";
+	font-size: 14px;
+	vertical-align: middle;
+	color: #666666;
+}
+/*
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhxcont_statusbar {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	background: none;
+	_bottom: -1px;
+	background-image: url("../imgs/dhxlayout_dhx_web/dhxlayout_bg_sb.gif");
+	background-repeat: repeat-x;
+	overflow: hidden;
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #7393ae;
+	vertical-align: middle;
+	line-height: 20px;
+	height: 20px;
+	-moz-user-select: none;
+	cursor: default;
+	padding-left: 4px;
+}
+*/
+/* dhxcont cells in layout */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhxcont_global_content_area {
+	position: absolute;
+	overflow: hidden; /* important for IE */
+	background-color: #FFFFFF;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhxcont_global_content_area.dhxcont_layout_dhx_web {
+	border: white 8px solid;
+}
+
+/* left/right lines in header */
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhtmlxPolyInfoBar div.dhtmlxLineL,
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhtmlxPolyInfoBarCollapsedHor div.dhtmlxLineL,
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhtmlxPolyInfoBar div.dhtmlxLineR,
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhtmlxPolyInfoBarCollapsedHor div.dhtmlxLineR,
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxLineL,
+table.dhtmlxLayoutPolyContainer_dhx_web div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxLineR {
+	display: none;
+}
+
+
+
+/* fullscreened init on body */
+.dhxlayout_fullscreened {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	overflow: hidden;
+}
+/* layout attached to window */
+/*
+.dhtmlx_skin_dhx_web div.dhtmlx_wins_body_inner.dhxwin_attachedlayout {
+	background-color: #ebebeb !important;
+	border: #ebebeb 2px solid !important;
+}
+*/
+
+/* skin detect, dhx_web */
+div.dhxlayout_skin_detect {
+	width: 499px;
+}
+
+/* COLLAPSED TEXT */
+/* horizontal */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar div.dhtmlxInfoBarLabel_collapsed_ver {
+	display: none;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedHor div.dhtmlxInfoBarLabel_collapsed_ver {
+	position: absolute;
+	top: 2px;
+	left: 5px;
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #666666;
+	white-space: nowrap;
+	cursor: default;
+	-moz-user-select: none;
+}
+/* vertical */
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar div.dhtmlxInfoBarLabel_collapsed_hor {
+	display: none;
+}
+table.dhtmlxLayoutPolyContainer_dhx_web td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxInfoBarLabel_collapsed_hor {
+	position: absolute;
+	top: 28px;
+	left: 0px;
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #666666;
+	white-space: nowrap;
+	cursor: default;
+	-moz-user-select: none;
+}
+

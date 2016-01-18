@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig
+PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig >
+
+    <settings useStatementNamespaces="true"/>
+
+	<transactionManager type="JDBC">
+		<dataSource type="JNDI">
+			<!--<property name="DataSource" value="java:comp/env/jdbc/localgis" /> -->
+			<property name="DataSource" value="jdbc/localgis" />
+		</dataSource>	
+	</transactionManager>
+
+<!-- Ficheros de mapeos. Los paths son relativos al classpath. -->
+	<!-- Ficheros relacionados con la bd de geopista -->
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_authentication_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_columns_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_coverage_layers_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_entidad_supramunicipal_SqlMap.xml" /> 
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_layers_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_layers_${db.connectiontype}_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_map_server_layers_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_maps_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_map_generic_element_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_map_generic_element_${db.connectiontype}_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_municipios_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_numeros_policia_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_numeros_policia_${db.connectiontype}_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_parcelas_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_parcelas_${db.connectiontype}_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_tables_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_vias_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_vias_${db.connectiontype}_SqlMap.xml" />
+
+	<!-- Ficheros relacionados con la bd de localgis -->
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_attribute_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_attribute_${db.connectiontype}_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_css_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_layer_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_layer_${db.connectiontype}_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_legend_${db.connectiontype}_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_map_server_layer_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_map_server_layer_${db.connectiontype}_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_map_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_map_${db.connectiontype}_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_maplayer_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_marker_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_marker_${db.connectiontype}_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_incidencia_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_incidencia_${db.connectiontype}_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_municipios_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_municipios_${db.connectiontype}_SqlMap.xml" />
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_restricted_attribute_SqlMap.xml" />
+	<sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_spatial_ref_sys_SqlMap.xml" />
+	<sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_style_SqlMap.xml" />
+	<sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/localgis_style_${db.connectiontype}_SqlMap.xml" />
+	
+
+	<!-- Ficheros relacionados con la bd de geowfst -->
+	<sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_entidades_municipios_SqlMap.xml" />
+	<sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geopista_layers_styles_SqlMap.xml" />
+	<sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geowfst_entidad_tipo_map_SqlMap.xml" />
+	<sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geowfst_entidadlocalgis_entidadext_SqlMap.xml" />
+	<sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geowfst_procedures_SqlMap.xml" />
+	<sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geowfst_procedure_properties_SqlMap.xml" />
+	<sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/geowfst_procedure_defaults_SqlMap.xml" />
+	
+</sqlMapConfig>

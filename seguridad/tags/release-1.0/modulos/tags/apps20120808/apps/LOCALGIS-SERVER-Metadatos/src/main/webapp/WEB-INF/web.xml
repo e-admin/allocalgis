@@ -1,0 +1,244 @@
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Metadatos</display-name>
+	
+	<filter>
+		<filter-name>FiltroSeguridad</filter-name>
+		<filter-class>com.geopista.server.control.filtros.FiltroSeguridad</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>FiltroSeguridad</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<listener>
+  		<listener-class>
+  			com.localgis.server.LocalgisSerlvetContextListener
+  		</listener-class>
+  	</listener>
+
+
+	<servlet>
+		<servlet-name>GetPerfil</servlet-name>
+		<servlet-class>com.geopista.server.control.web.GetPerfil</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>NewContact</servlet-name>
+		<servlet-class>com.geopista.server.metadatos.web.NewContact</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateContact</servlet-name>
+		<servlet-class>com.geopista.server.metadatos.web.UpdateContact</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeleteContact</servlet-name>
+		<servlet-class>com.geopista.server.metadatos.web.DeleteContact</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.geopista.server.control.web.Login</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+		<servlet>
+		<servlet-name>HeartBeat</servlet-name>
+		<servlet-class>com.geopista.server.control.web.HeartBeat</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>com.geopista.server.control.web.Logout</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>CServletDB</servlet-name>
+		<servlet-class>com.geopista.sql.CServletDB</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>GetContactos</servlet-name>
+		<servlet-class>com.geopista.server.metadatos.web.GetContactos</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>SaveMetadata</servlet-name>
+		<servlet-class>com.geopista.server.metadatos.web.SaveMetadata</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	
+	<servlet>
+		<servlet-name>GetMetadataParcial</servlet-name>
+		<servlet-class>com.geopista.server.metadatos.web.GetMetadatosParcial</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+        <servlet>
+		<servlet-name>GetMetadata</servlet-name>
+		<servlet-class>com.geopista.server.metadatos.web.GetMetadata</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeleteMetadata</servlet-name>
+		<servlet-class>com.geopista.server.metadatos.web.DeleteMetadata</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+    <servlet>
+		<servlet-name>GetLayers</servlet-name>
+		<servlet-class>com.geopista.server.metadatos.web.GetLayers</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>CServletIntentos</servlet-name>
+		<servlet-class>com.geopista.server.control.web.CServletIntentos</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+    <servlet>
+		<servlet-name>UpdateAll</servlet-name>
+		<servlet-class>com.geopista.server.metadatos.web.UpdateAll</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>GetPerfil</servlet-name>
+		<url-pattern>/GetPerfil</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>HeartBeat</servlet-name>
+		<url-pattern>/HeartBeat</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CServletIntentos</servlet-name>
+		<url-pattern>/CServletIntentos</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CServletDB</servlet-name>
+		<url-pattern>/CServletDB</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GetContactos</servlet-name>
+		<url-pattern>/GetContactos</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NewContact</servlet-name>
+		<url-pattern>/NewContact</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateContact</servlet-name>
+		<url-pattern>/UpdateContact</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DeleteContact</servlet-name>
+		<url-pattern>/DeleteContact</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SaveMetadata</servlet-name>
+		<url-pattern>/SaveMetadata</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetMetadataParcial</servlet-name>
+		<url-pattern>/GetMetadataParcial</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetMetadata</servlet-name>
+		<url-pattern>/GetMetadata</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteMetadata</servlet-name>
+		<url-pattern>/DeleteMetadata</url-pattern>
+	</servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>GetLayers</servlet-name>
+		<url-pattern>/GetLayers</url-pattern>
+	</servlet-mapping>
+
+    <servlet-mapping>
+           <servlet-name>UpdateAll</servlet-name>
+           <url-pattern>/UpdateAll</url-pattern>
+       </servlet-mapping>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JAAS Role</web-resource-name>
+			<url-pattern>/Login/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>Geopista.Metadatos.Login</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JAAS Role</web-resource-name>
+			<url-pattern>/CServletDB/*</url-pattern>
+			<url-pattern>/GetContactos/*</url-pattern>
+			<url-pattern>/NewContact/*</url-pattern>
+			<url-pattern>/UpdateContact/*</url-pattern>
+			<url-pattern>/DeleteContact/*</url-pattern>
+			<url-pattern>/SaveMetadata/*</url-pattern>
+			<url-pattern>/GetMetadataParcial/*</url-pattern>
+			<url-pattern>/GetMetadata/*</url-pattern>
+			<url-pattern>/DeleteMetadata/*</url-pattern>
+            <url-pattern>/GetLayers/*</url-pattern>
+            <url-pattern>/UpdateAll/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>Geopista.Metadatos.View</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+    <security-constraint>
+    		<web-resource-collection>
+    			<web-resource-name>JAAS Role</web-resource-name>
+    			<url-pattern>/GetPerfil/*</url-pattern>
+	               <url-pattern>/Logout/*</url-pattern>
+    		</web-resource-collection>
+	        <auth-constraint>
+            		<role-name>Geopista.Common.Actions</role-name>
+           </auth-constraint>
+    	</security-constraint>
+
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>Jetty Demo Realm</realm-name>
+	</login-config>
+
+</web-app>
+
+

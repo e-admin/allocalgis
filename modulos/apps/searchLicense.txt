@@ -1,0 +1,1 @@
+"c:\Program Files (x86)\0.Portables\cygwin\bin\find" . -name "*.java" |xargs grep -L MINETUR >salida

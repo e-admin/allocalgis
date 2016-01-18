@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geopista_maps">
+
+  <resultMap class="com.localgis.web.core.model.GeopistaMap" id="GeopistaMapaResult">
+    <result column="id_map" jdbcType="INTEGER" property="idMap"/>
+    <result column="id_entidad" jdbcType="NUMERIC" property="idEntidad"/>
+    <result column="xml" jdbcType="VARCHAR" property="xml"/>
+    <result column="name" jdbcType="VARCHAR" property="name"/>
+  </resultMap>
+  
+    <resultMap class="com.localgis.web.core.model.GeopistaMap" id="GeopistaMapaResult2">
+    <result column="id_map" jdbcType="INTEGER" property="idMap"/>
+  </resultMap>
+  
+  <select id="selectMapsByIdEntidad" parameterClass="java.util.Map" resultMap="GeopistaMapaResult">
+    <!--  version un un outer join -->
+    select m1.id_map, m1.id_entidad, m1.xml, d.traduccion as name
+    from maps m1 left outer join maps m2 on m1.id_entidad = 0 and m2.id_entidad = #idEntidad# and m1.id_map = m2.id_map 
+         left outer join dictionary d on m1.id_name = d.id_vocablo and d.locale = #locale#
+    where m2.id_map is null and (m1.id_entidad = #idEntidad# or m1.id_entidad = 0)
+    order by d.traduccion,m1.id_map
+
+    <!-- Version con un not in -->
+    <!--
+    select m.id_map, m.id_entidad, m.xml, d.traduccion as name
+    from maps m, dictionary d 
+    where m.id_name=d.id_vocablo and 
+          d.locale = #locale# and 
+          (id_entidad = #idEntidad# or (id_entidad = 0 and id_map not in (select m2.id_map from maps m2 where m2.id_entidad = #idEntidad#)))
+    order by d.traduccion
+    -->
+
+  </select>
+
+  <select id="selectMapById" parameterClass="java.util.Map" resultMap="GeopistaMapaResult">
+    select m1.id_map, m1.id_entidad, m1.xml, d.traduccion as name
+    from maps m1 left outer join maps m2 on m1.id_entidad = 0 and m2.id_entidad = #idEntidad# and m1.id_map = m2.id_map 
+         left outer join dictionary d on m1.id_name = d.id_vocablo and d.locale = #locale#
+    where m2.id_map is null and (m1.id_entidad = #idEntidad# or m1.id_entidad = 0)
+    	and m1.id_map=#idMap#
+    order by d.traduccion,m1.id_map
+  </select>
+  
+    <select id="selectMapByName" parameterClass="java.util.Map" resultMap="GeopistaMapaResult2">
+    	select distinct(m.id_map) from maps m, dictionary d where m.id_name=d.id_vocablo and
+		d.traduccion=#nombreMapa# and (id_entidad=0 or id_entidad IN 
+		(select id_entidad from entidades_municipios where id_municipio=#idMunicipio#))
+  </select>
+  
+</sqlMap>

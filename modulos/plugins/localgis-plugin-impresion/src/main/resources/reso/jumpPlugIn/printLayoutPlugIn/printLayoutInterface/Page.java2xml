@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<root>
+	<element xml-name="largeur" java-name="largeur" />
+	<element xml-name="hauteur" java-name="hauteur" />
+	<element xml-name="largeurSansMarge" java-name="largeurSansMarge" />
+	<element xml-name="hauteurSansMarge" java-name="hauteurSansMarge" />
+	<element xml-name="top" java-name="top" />
+	<element xml-name="left" java-name="left" />
+	<element xml-name="graphicElement" java-name="graphicElement" />
+</root>

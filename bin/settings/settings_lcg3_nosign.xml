@@ -1,0 +1,102 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository>${env.USERPROFILE}\.m2\repository.localgis3-nosign</localRepository>
+  <interactiveMode>true</interactiveMode>
+  <usePluginRegistry>false</usePluginRegistry>
+  <offline>false</offline>
+  
+  <servers>							
+		<server>
+			<id>LocalGISIII</id>
+			<username>admin</username>
+			<password>admin</password>
+		</server>	
+  </servers>
+
+	<profiles>		
+		<profile>
+			<id>LocalGISIII</id>	
+				<properties>
+					<jarsigner.alias>geopista</jarsigner.alias>
+					<jarsigner.keystoreDirectory>${signPath}</jarsigner.keystoreDirectory>
+					<jarsigner.keystore>GeopistaKeyStore</jarsigner.keystore>
+					<jarsigner.storepass>geopista99</jarsigner.storepass>
+					<jarsigner.keypass>geopista99</jarsigner.keypass>				
+				</properties>			
+			<repositories>
+				
+				<!-- Si miramos el pom.xml de localgis-parent para que en lugar de utilizar los repositorios que tiene ese fichero utilize estos hay
+					que poner el id que tiene ese poml.xml aqui. De esta forma si cambiamos aqui la URL esta tiene preferencia sobre la del pom.xml
+					En este caso reemplazamos porque no queremos que nos utilize los que estan firamdos
+					
+					<url>http://localgis3.minetur.gob.es/nexus/content/groups/localgisgroup/</url>
+					<url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+				-->
+					
+				<repository>
+					<id>LocalGISIII</id>
+					<name>Repositorio de LocalGISIII de MINETUR</name>
+					<url>http://rossi.malab.satec.es:8080/artifactory/localgis3</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</repository>		
+				<repository>
+					<id>LocalGISIII.Cotesa</id>
+					<name>Repositorio de LocalGISIII de MINETUR</name>
+					<url>http://rossi.malab.satec.es:8080/artifactory/localgis3</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</repository>	
+				<repository>
+					<id>geotools</id>
+					<name>Geotools repository</name>
+					<url>http://download.osgeo.org/webdav/geotools/</url>
+						<releases>
+							<enabled>true</enabled>
+						</releases>
+						<snapshots>
+							<enabled>true</enabled>
+							<updatePolicy>always</updatePolicy>
+						</snapshots>
+				</repository>
+			</repositories>					
+			<pluginRepositories>
+				<pluginRepository>
+					<id>LocalGISIII</id>
+					<name>Repositorio de LocalGISIII de MINETUR</name>
+					<url>http://rossi.malab.satec.es:8080/artifactory/localgis3</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>	
+			</profile>
+	</profiles>
+	<mirrors>
+		<!--mirror>
+			<id>LocalGISGrupo</id> 
+			<name>Servidor Nexus SATEC</name>
+			<url>http://rossi.malab.satec.es:8080/artifactory/localgis3</url> 
+			<mirrorOf>LocalGISIII.Cotesa</mirrorOf> 
+		</mirror-->
+	</mirrors>
+	<activeProfiles>
+		<activeProfile>LocalGISIII</activeProfile>
+	</activeProfiles>
+</settings>

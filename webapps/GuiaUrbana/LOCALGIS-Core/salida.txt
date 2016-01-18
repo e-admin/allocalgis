@@ -1,0 +1,1387 @@
++ Error stacktraces are turned on.
+Apache Maven 2.2.1 (r801777; 2009-08-06 21:16:01+0200)
+Java version: 1.7.0_09
+Java home: c:\Program Files\Java\jdk1.7.0_09\jre
+Default locale: es_ES, platform encoding: Cp1252
+OS name: "windows 7" version: "6.1" arch: "amd64" Family: "windows"
+[DEBUG] Building Maven user-level plugin registry from: 'C:\Users\fjgarcia\.m2\plugin-registry.xml'
+[DEBUG] Building Maven global-level plugin registry from: 'c:\Aplicaciones\apache-maven-2.2.1\bin\..\conf\plugin-registry.xml'
+[INFO] Scanning for projects...
+[DEBUG] Searching for parent-POM: com.localgis.web:LocalgisWebapps:pom:3.0 of project: com.localgis.web:localgis-core:jar:3.0 in relative path: ../pom.xml
+[DEBUG] Using parent-POM from the project hierarchy at: '../pom.xml' for project: com.localgis.web:localgis-core:jar:3.0
+[DEBUG] Adding managed dependencies for com.localgis.web:localgis-core
+[DEBUG]   com.localgis.web:localgis-core:jar:3.0
+[DEBUG]   com.localgis.web:localgis-guiaurbana:jar:3.0
+[DEBUG]   com.localgis.web:localgis-wmsmanager:jar:3.0
+[DEBUG]   com.localgis.web:localgis-wfsg:jar:3.0
+[DEBUG]   com.localgis.web:localgis-core-geowfst:jar:3.0
+[DEBUG]   com.localgis.web:localgis-geowfst:jar:3.0
+[DEBUG] Wagons could not be registered as the extension container was never created
+[INFO] ------------------------------------------------------------------------
+[INFO] Building LocalGIS Core
+[INFO]    task-segment: [install]
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Retrieving parent-POM: org.apache.maven.plugins:maven-plugins:pom:12 for project: null:maven-resources-plugin:maven-plugin:2.3 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven-parent:pom:9 for project: org.apache.maven.plugins:maven-plugins:pom:12 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache:apache:pom:4 for project: org.apache.maven:maven-parent:pom:9 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven.plugins:maven-plugins:pom:18 for project: null:maven-compiler-plugin:maven-plugin:2.3.2 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven-parent:pom:16 for project: org.apache.maven.plugins:maven-plugins:pom:18 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache:apache:pom:7 for project: org.apache.maven:maven-parent:pom:16 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven.surefire:surefire:pom:2.4.3 for project: org.apache.maven.plugins:maven-surefire-plugin:maven-plugin:null from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven-parent:pom:7 for project: org.apache.maven.surefire:surefire:pom:2.4.3 from the repository.
+[DEBUG] Adding managed dependencies for org.apache.maven.plugins:maven-surefire-plugin
+[DEBUG]   org.apache.maven.surefire:surefire-api:jar:2.4.3
+[DEBUG]   org.apache.maven.surefire:surefire-booter:jar:2.4.3
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.5.1
+[DEBUG] Retrieving parent-POM: org.apache.maven.plugins:maven-plugins:pom:10 for project: null:maven-jar-plugin:maven-plugin:2.2 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven.plugins:maven-plugins:pom:8 for project: null:maven-install-plugin:maven-plugin:2.2 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven-parent:pom:5 for project: org.apache.maven.plugins:maven-plugins:pom:8 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache:apache:pom:3 for project: org.apache.maven:maven-parent:pom:5 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven.plugins:maven-plugins:pom:13 for project: null:maven-site-plugin:maven-plugin:2.0 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven-parent:pom:11 for project: org.apache.maven.plugins:maven-plugins:pom:13 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache:apache:pom:5 for project: org.apache.maven:maven-parent:pom:11 from the repository.
+[DEBUG] Plugin dependencies for:
+
+org.apache.maven.plugins:maven-resources-plugin:2.3
+
+are:
+
+org.apache.maven:maven-plugin-api:jar:2.0.6:runtime
+org.apache.maven:maven-project:jar:2.0.6:runtime
+org.codehaus.plexus:plexus-utils:jar:1.5.6:runtime
+org.apache.maven.shared:maven-filtering:jar:1.0-beta-2:runtime
+
+
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:maven-plugin:2.3:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven:pom:2.0.6 for project: null:maven-plugin-api:jar:null from the repository.
+[DEBUG] Adding managed dependencies for unknown:maven-plugin-api
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-project
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-settings
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-settings:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-model
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus:pom:1.0.11 for project: null:plexus-utils:jar:1.4.1 from the repository.
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus-containers:pom:1.0.3 for project: null:plexus-container-default:jar:1.0-alpha-9-stable-1 from the repository.
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus:pom:1.0.4 for project: org.codehaus.plexus:plexus-containers:pom:1.0.3 from the repository.
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:runtime (selected for runtime)
+[DEBUG]         junit:junit:jar:3.8.1:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.4.1)
+[DEBUG]         classworlds:classworlds:jar:1.1-alpha-2:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-profile
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-profile:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-model:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-artifact-manager
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-artifact-manager:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-repository-metadata
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-artifact
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-artifact:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven.wagon:wagon:pom:1.0-beta-2 for project: null:wagon-provider-api:jar:1.0-beta-2 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven-parent:pom:4 for project: org.apache.maven.wagon:wagon:pom:1.0-beta-2 from the repository.
+[DEBUG] Adding managed dependencies for unknown:wagon-provider-api
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]       org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.4.1)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-plugin-registry
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-plugin-registry:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-artifact:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:runtime (selected for runtime)
+[DEBUG]       junit:junit:jar:3.8.1:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.4.1)
+[DEBUG]       classworlds:classworlds:jar:1.1-alpha-2:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus:pom:1.0.12 for project: null:plexus-utils:jar:1.5.6 from the repository.
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (removed - nearer found: 1.5.6)
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.5.6:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven.shared:maven-shared-components:pom:10 for project: org.apache.maven.shared:maven-filtering:jar:1.0-beta-2 from the repository.
+[DEBUG]   org.apache.maven.shared:maven-filtering:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-core
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-core:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven.wagon:wagon-providers:pom:1.0-beta-2 for project: null:wagon-file:jar:1.0-beta-2 from the repository.
+[DEBUG] Adding managed dependencies for unknown:wagon-file
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2:test
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]       org.apache.maven.wagon:wagon-file:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-plugin-parameter-documenter
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (removed - nearer found: 1.5.6)
+[DEBUG] Adding managed dependencies for unknown:wagon-http-lightweight
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2:test
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]       org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:wagon-http-shared
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2:test
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]         org.apache.maven.wagon:wagon-http-shared:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]           jtidy:jtidy:jar:4aug2000r7-dev:runtime (selected for runtime)
+[DEBUG]         xml-apis:xml-apis:jar:1.0.b2:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven.reporting:maven-reporting:pom:2.0.6 for project: null:maven-reporting-api:jar:null from the repository.
+[DEBUG] Adding managed dependencies for unknown:maven-reporting-api
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven.doxia:doxia:pom:1.0-alpha-7 for project: null:doxia-sink-api:jar:1.0-alpha-7 from the repository.
+[DEBUG]         org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-error-diagnostics
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       commons-cli:commons-cli:jar:1.0:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:wagon-ssh-external
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2:test
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]       org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.6)
+[DEBUG] Adding managed dependencies for unknown:wagon-ssh-common
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2:test
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]         org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]           org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.6)
+[DEBUG]           org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: plexus:plexus-containers:pom:1.0.2 for project: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-7 from the repository.
+[DEBUG] Retrieving parent-POM: plexus:plexus-root:pom:1.0.3 for project: plexus:plexus-containers:pom:1.0.2 from the repository.
+[DEBUG]             org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-7:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG]             plexus:plexus-utils:jar:1.0.2:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-plugin-descriptor
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-monitor
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:wagon-ssh
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2:test
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]       org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]         com.jcraft:jsch:jar:0.1.27:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.6)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (removed - nearer found: 1.5.6)
+[DEBUG]       classworlds:classworlds:jar:1.1:runtime (removed - nearer found: 1.1-alpha-2)
+[DEBUG]     org.apache.maven:maven-monitor:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-interpolation:jar:1.6:runtime (selected for runtime)
+[DEBUG]  The following artifacts were filtered out for plugin: org.apache.maven.plugins:maven-resources-plugin:2.3 because they're already in the core of Maven:
+
+org.apache.maven:maven-plugin-api:jar:2.0.6:runtime
+org.apache.maven:maven-project:jar:2.0.6:runtime
+
+These will use the artifact files already in the core ClassRealm instead, to allow them to be included in PluginDescriptor.getArtifacts().
+
+
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.3:resources' -->
+[DEBUG]   (f) encoding = ISO-8859-1
+[DEBUG]   (f) filters = []
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.localgis.web:localgis-core:3.0 @ c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@6aa91761
+[DEBUG] -- end configuration --
+[INFO] [resources:resources {execution: default-resources}]
+[DEBUG] properties used {java.vendor=Oracle Corporation, env.SYSTEMROOT=C:\Windows, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, env.COMMANDER_DRIVE=C:, env.PROMPT=$P$G, env.COMMANDER_PATH=C:\Program Files\totalcmd, os.name=Windows 7, env.FP_NO_HOST_CHECK=NO, sun.boot.class.path=c:\Program Files\Java\jdk1.7.0_09\jre\lib\resources.jar;c:\Program Files\Java\jdk1.7.0_09\jre\lib\rt.jar;c:\Program Files\Java\jdk1.7.0_09\jre\lib\sunrsasign.jar;c:\Program Files\Java\jdk1.7.0_09\jre\lib\jsse.jar;c:\Program Files\Java\jdk1.7.0_09\jre\lib\jce.jar;c:\Program Files\Java\jdk1.7.0_09\jre\lib\charsets.jar;c:\Program Files\Java\jdk1.7.0_09\jre\lib\jfr.jar;c:\Program Files\Java\jdk1.7.0_09\jre\classes, env.COMPUTERNAME=PC-4CZ1201K0Z, env.ALLUSERSPROFILE=C:\ProgramData, sun.desktop=windows, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0_09-b05, env.HOMEPATH=\, project.build.sourceEncoding=ISO-8859-1, env.HOMESHARE=\\ideafix\fjgarcia, env.__COMPAT_LAYER=DisableUserCallbackException, user.name=fjgarcia, env.ULTRAMON_LANGDIR=C:\Program Files\UltraMon\Resources\en, env.PATH=C:\Program Files (x86)\PC Connectivity Solution\;C:\Program Files (x86)\ATI Stream\bin\x86_64;C:\Program Files (x86)\ATI Stream\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\TortoiseSVN\bin;c:\Program Files\Java\jdk1.7.0_09\bin;C:\PROGRA~1\Java\jdk1.6.0_32\bin;C:\Program Files (x86)\CVSNT\;c:\Aplicaciones\apache-maven-3.0.3\bin\;c:\Program Files (x86)\pgAdmin III\1.14\;C:\PROGRA~2\apache-ant-1.8.2\bin;C:\Program Files (x86)\OpenVPN\bin;C:\Program Files (x86)\Astaro\Astaro SSL VPN Client\bin;c:\Program Files (x86)\GnuWin32\bin\, user.language=es, env.WINDIR=C:\Windows, sun.boot.library.path=c:\Program Files\Java\jdk1.7.0_09\jre\bin, classworlds.conf=c:\Aplicaciones\apache-maven-2.2.1\bin\..\bin\m2.conf, java.version=1.7.0_09, env.PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel, user.timezone=Europe/Paris, env.TEMP=C:\Users\fjgarcia\AppData\Local\Temp, sun.arch.data.model=64, java.endorsed.dirs=c:\Program Files\Java\jdk1.7.0_09\jre\lib\endorsed, sun.cpu.isalist=amd64, env.HOMEDRIVE=Y:, sun.jnu.encoding=Cp1252, file.encoding.pkg=sun.io, env.SYSTEMDRIVE=C:, file.separator=\, java.specification.name=Java Platform API Specification, java.class.version=51.0, user.country=ES, java.home=c:\Program Files\Java\jdk1.7.0_09\jre, env.APPDATA=C:\Users\fjgarcia\AppData\Roaming, env.PUBLIC=C:\Users\Public, java.vm.info=mixed mode, env.OS=Windows_NT, os.version=6.1, project.reporting.outputEncoding=ISO-8859-1, path.separator=;, env.ATISTREAMSDKROOT=C:\Program Files (x86)\ATI Stream\, java.vm.version=23.5-b02, env.ASL.LOG=Destination=file, user.variant=, env.USERPROFILE=C:\Users\fjgarcia, env.JAVA_HOME=c:\Program Files\Java\jdk1.7.0_09\, java.awt.printerjob=sun.awt.windows.WPrinterJob, env.TMP=C:\Users\fjgarcia\AppData\Local\Temp, env.PROGRAMFILES=C:\Program Files, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.windows.WToolkit, user.script=, user.home=C:\Users\fjgarcia, env.COMMONPROGRAMFILES=C:\Program Files\Common Files, env.SESSIONNAME=Console, java.specification.vendor=Oracle Corporation, env.M2_HOME=c:\Aplicaciones\apache-maven-2.2.1\bin\.., env.NUMBER_OF_PROCESSORS=4, java.library.path=c:\Program Files\Java\jdk1.7.0_09\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\PC Connectivity Solution\;C:\Program Files (x86)\ATI Stream\bin\x86_64;C:\Program Files (x86)\ATI Stream\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\TortoiseSVN\bin;c:\Program Files\Java\jdk1.7.0_09\bin;C:\PROGRA~1\Java\jdk1.6.0_32\bin;C:\Program Files (x86)\CVSNT\;c:\Aplicaciones\apache-maven-3.0.3\bin\;c:\Program Files (x86)\pgAdmin III\1.14\;C:\PROGRA~2\apache-ant-1.8.2\bin;C:\Program Files (x86)\OpenVPN\bin;C:\Program Files (x86)\Astaro\Astaro SSL VPN Client\bin;c:\Program Files (x86)\GnuWin32\bin\;., java.vendor.url=http://java.oracle.com/, env.PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\, env.USERDNSDOMAIN=INT.SATEC.ES, env.COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files, env.MAVEN_CMD_LINE_ARGS=-X -s c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\bin\settings_localgis3_satec.xml -f pom.xml install, java.vm.vendor=Oracle Corporation, java.runtime.name=Java(TM) SE Runtime Environment, maven.home=c:\Aplicaciones\apache-maven-2.2.1\bin\.., java.class.path=c:\Aplicaciones\apache-maven-2.2.1\bin\..\boot\classworlds-1.1.jar, sun.java.command=org.codehaus.classworlds.Launcher -X -s c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\bin\settings_localgis3_satec.xml -f pom.xml install, env.PROGRAMW6432=C:\Program Files, maven.test.skip=true, env.MAVEN_JAVA_EXE="c:\Program Files\Java\jdk1.7.0_09\\bin\java.exe", env.PROGRAMFILES(X86)=C:\Program Files (x86), java.vm.specification.name=Java Virtual Machine Specification, env.LOGONSERVER=\\DONVITO, env.PROCESSOR_ARCHITECTURE=AMD64, java.vm.specification.version=1.7, env.COMMONPROGRAMW6432=C:\Program Files\Common Files, sun.os.patch.level=Service Pack 1, sun.cpu.endian=little, env.HOME=Y:\, env.ANT_HOME=C:\PROGRA~2\apache-ant-1.8.2, env.PROCESSOR_REVISION=2a07, java.io.tmpdir=C:\Users\fjgarcia\AppData\Local\Temp\, env.VBOX_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, env.COMSPEC=C:\Windows\system32\cmd.exe, env.PROGRAMDATA=C:\ProgramData, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, os.arch=amd64, java.ext.dirs=c:\Program Files\Java\jdk1.7.0_09\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, user.dir=c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core, env.LOCALAPPDATA=C:\Users\fjgarcia\AppData\Local, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, env.CLASSWORLDS_JAR="c:\Aplicaciones\apache-maven-2.2.1\bin\..\boot\classworlds-1.1.jar", env.PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, maven.test.failure.ignore=true, env.ERROR_CODE=0, env.USERNAME=fjgarcia, file.encoding=Cp1252, env.USERDOMAIN=SATEC, env.COMMANDER_INI=C:\Users\fjgarcia\AppData\Roaming\GHISLER\wincmd.ini, java.specification.version=1.7, env.PROCESSOR_LEVEL=6}
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources
+excludes []
+includes []
+[INFO] Copying 62 resources
+[DEBUG] file dao.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\dao.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\dao.xml
+[DEBUG] file geopista_authentication_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_authentication_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_authentication_SqlMap.xml
+[DEBUG] file geopista_columns_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_columns_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_columns_SqlMap.xml
+[DEBUG] file geopista_coverage_layers_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_coverage_layers_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_coverage_layers_SqlMap.xml
+[DEBUG] file geopista_entidad_supramunicipal_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_entidad_supramunicipal_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_entidad_supramunicipal_SqlMap.xml
+[DEBUG] file geopista_layers_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_layers_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_layers_oraclespatial_SqlMap.xml
+[DEBUG] file geopista_layers_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_layers_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_layers_postgis_SqlMap.xml
+[DEBUG] file geopista_layers_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_layers_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_layers_SqlMap.xml
+[DEBUG] file geopista_maps_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_maps_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_maps_SqlMap.xml
+[DEBUG] file geopista_map_generic_element_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_map_generic_element_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_map_generic_element_oraclespatial_SqlMap.xml
+[DEBUG] file geopista_map_generic_element_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_map_generic_element_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_map_generic_element_postgis_SqlMap.xml
+[DEBUG] file geopista_map_generic_element_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_map_generic_element_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_map_generic_element_SqlMap.xml
+[DEBUG] file geopista_map_server_layers_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_map_server_layers_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_map_server_layers_SqlMap.xml
+[DEBUG] file geopista_municipios_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_municipios_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_municipios_SqlMap.xml
+[DEBUG] file geopista_nucleo_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_nucleo_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_nucleo_SqlMap.xml
+[DEBUG] file geopista_numeros_policia_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_numeros_policia_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_numeros_policia_oraclespatial_SqlMap.xml
+[DEBUG] file geopista_numeros_policia_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_numeros_policia_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_numeros_policia_postgis_SqlMap.xml
+[DEBUG] file geopista_numeros_policia_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_numeros_policia_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_numeros_policia_SqlMap.xml
+[DEBUG] file geopista_parcelas_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_parcelas_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_parcelas_oraclespatial_SqlMap.xml
+[DEBUG] file geopista_parcelas_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_parcelas_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_parcelas_postgis_SqlMap.xml
+[DEBUG] file geopista_parcelas_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_parcelas_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_parcelas_SqlMap.xml
+[DEBUG] file geopista_tables_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_tables_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_tables_SqlMap.xml
+[DEBUG] file geopista_vias_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_vias_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_vias_oraclespatial_SqlMap.xml
+[DEBUG] file geopista_vias_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_vias_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_vias_postgis_SqlMap.xml
+[DEBUG] file geopista_vias_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\geopista_vias_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\geopista_vias_SqlMap.xml
+[DEBUG] file incidencias_authentication_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\incidencias_authentication_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\incidencias_authentication_SqlMap.xml
+[DEBUG] file localgis_attribute_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_attribute_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_attribute_oraclespatial_SqlMap.xml
+[DEBUG] file localgis_attribute_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_attribute_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_attribute_postgis_SqlMap.xml
+[DEBUG] file localgis_attribute_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_attribute_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_attribute_SqlMap.xml
+[DEBUG] file localgis_css_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_css_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_css_SqlMap.xml
+[DEBUG] file localgis_incidencia_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_incidencia_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_incidencia_oraclespatial_SqlMap.xml
+[DEBUG] file localgis_incidencia_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_incidencia_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_incidencia_postgis_SqlMap.xml
+[DEBUG] file localgis_incidencia_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_incidencia_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_incidencia_SqlMap.xml
+[DEBUG] file localgis_layer_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_layer_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_layer_oraclespatial_SqlMap.xml
+[DEBUG] file localgis_layer_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_layer_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_layer_postgis_SqlMap.xml
+[DEBUG] file localgis_layer_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_layer_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_layer_SqlMap.xml
+[DEBUG] file localgis_legend_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_legend_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_legend_oraclespatial_SqlMap.xml
+[DEBUG] file localgis_legend_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_legend_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_legend_postgis_SqlMap.xml
+[DEBUG] file localgis_maplayer_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_maplayer_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_maplayer_SqlMap.xml
+[DEBUG] file localgis_map_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_map_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_map_oraclespatial_SqlMap.xml
+[DEBUG] file localgis_map_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_map_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_map_postgis_SqlMap.xml
+[DEBUG] file localgis_map_server_layer_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_map_server_layer_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_map_server_layer_oraclespatial_SqlMap.xml
+[DEBUG] file localgis_map_server_layer_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_map_server_layer_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_map_server_layer_postgis_SqlMap.xml
+[DEBUG] file localgis_map_server_layer_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_map_server_layer_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_map_server_layer_SqlMap.xml
+[DEBUG] file localgis_map_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_map_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_map_SqlMap.xml
+[DEBUG] file localgis_marker_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_marker_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_marker_oraclespatial_SqlMap.xml
+[DEBUG] file localgis_marker_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_marker_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_marker_postgis_SqlMap.xml
+[DEBUG] file localgis_marker_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_marker_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_marker_SqlMap.xml
+[DEBUG] file localgis_municipios_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_municipios_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_municipios_oraclespatial_SqlMap.xml
+[DEBUG] file localgis_municipios_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_municipios_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_municipios_postgis_SqlMap.xml
+[DEBUG] file localgis_municipios_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_municipios_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_municipios_SqlMap.xml
+[DEBUG] file localgis_restricted_attribute_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_restricted_attribute_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_restricted_attribute_SqlMap.xml
+[DEBUG] file localgis_spatial_ref_sys_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_spatial_ref_sys_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_spatial_ref_sys_SqlMap.xml
+[DEBUG] file localgis_style_oraclespatial_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_style_oraclespatial_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_style_oraclespatial_SqlMap.xml
+[DEBUG] file localgis_style_postgis_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_style_postgis_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_style_postgis_SqlMap.xml
+[DEBUG] file localgis_style_SqlMap.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\localgis_style_SqlMap.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\localgis_style_SqlMap.xml
+[DEBUG] file sqlMapConfig.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\sqlMapConfig.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\sqlMapConfig.xml
+[DEBUG] file sqlMapConfigIncidencias.xml has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\com\localgis\web\core\dao\sqlmap\sql\sqlMapConfigIncidencias.xml to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\com\localgis\web\core\dao\sqlmap\sql\sqlMapConfigIncidencias.xml
+[DEBUG] file localgis.properties has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\localgis.properties to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\localgis.properties
+[DEBUG] file localgis_skeleton.map has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\localgis_skeleton.map to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\localgis_skeleton.map
+[DEBUG] file localgis_skeleton_extra.map has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\localgis_skeleton_extra.map to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\localgis_skeleton_extra.map
+[DEBUG] file localgis_skeleton_static.map has a filtered file extension
+[DEBUG] copy c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\resources\localgis_skeleton_static.map to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes\localgis_skeleton_static.map
+[DEBUG] com.localgis.web:localgis-core:jar:3.0 (selected for null)
+[DEBUG] Retrieving parent-POM: org.geotools:library:pom:2.5.5 for project: org.geotools:gt-main:jar:null from the repository.
+[DEBUG] Retrieving parent-POM: org.geotools:modules:pom:2.5.5 for project: org.geotools:library:pom:null from the repository.
+[DEBUG] Retrieving parent-POM: org.geotools:geotools:pom:2.5.5 for project: org.geotools:modules:pom:null from the repository.
+[DEBUG] Adding managed dependencies for org.geotools:gt-main
+[DEBUG]   org.opengis:geoapi:jar:2.2.0
+[DEBUG]   net.java.dev.jsr-275:jsr-275:jar:1.0-beta-2
+[DEBUG]   javax.media:jai_core:jar:1.1.3
+[DEBUG]   javax.media:jai_codec:jar:1.1.3
+[DEBUG]   javax.media:jai_imageio:jar:1.1
+[DEBUG]   java3d:vecmath:jar:1.3.1
+[DEBUG]   com.vividsolutions:jts:jar:1.9
+[DEBUG]   org.wkb4j:wkb4j:jar:1.0-RC1
+[DEBUG]   batik:batik-transcoder:jar:1.6
+[DEBUG]   batik:batik-svggen:jar:1.6
+[DEBUG]   batik:batik-awt-util:jar:1.6
+[DEBUG]   batik:batik-rasterizer:jar:1.6
+[DEBUG]   batik:batik-dom:jar:1.6
+[DEBUG]   batik:batik-bridge:jar:1.6
+[DEBUG]   batik:batik-gvt:jar:1.6
+[DEBUG]   batik:batik-svg-dom:jar:1.6
+[DEBUG]   batik:batik-util:jar:1.6
+[DEBUG]   batik:batik-css:jar:1.6
+[DEBUG]   batik:batik-parser:jar:1.6
+[DEBUG]   batik:batik-xml:jar:1.6
+[DEBUG]   batik:batik-ext:jar:1.6
+[DEBUG]   batik:batik-script:jar:1.6
+[DEBUG]   jdom:jdom:jar:1.0
+[DEBUG]   oro:oro:jar:2.0.8
+[DEBUG]   commons-lang:commons-lang:jar:2.1
+[DEBUG]   commons-collections:commons-collections:jar:3.1
+[DEBUG]   commons-pool:commons-pool:jar:1.3
+[DEBUG]   commons-logging:commons-logging:jar:1.1.1
+[DEBUG]   commons-io:commons-io:jar:1.4
+[DEBUG]   log4j:log4j:jar:1.2.12
+[DEBUG]   commons-beanutils:commons-beanutils:jar:1.7.0
+[DEBUG]   commons-httpclient:commons-httpclient:jar:3.0.1
+[DEBUG]   commons-dbcp:commons-dbcp:jar:1.2.2
+[DEBUG]   velocity:velocity:jar:1.4
+[DEBUG]   xerces:xercesImpl:jar:2.7.1
+[DEBUG]   xml-apis:xml-apis-xerces:jar:2.7.1
+[DEBUG]   xpp3:xpp3:jar:1.1.3.4.O
+[DEBUG]   org.postgis:postgis-driver:jar:1.0
+[DEBUG]   postgresql:postgresql:jar:8.1-407.jdbc3
+[DEBUG]   mysql:mysql-connector-java:jar:5.1.5
+[DEBUG]   hsqldb:hsqldb:jar:1.8.0.7
+[DEBUG]   org.openplans:spatialdb:jar:0.1
+[DEBUG]   com.oracle:ojdbc14:jar:10.2.0.3.0
+[DEBUG]   com.oracle:sdoapi:jar:10.2.0
+[DEBUG]   org.h2database:h2:jar:1.1.104
+[DEBUG]   edu.ucar:netcdf:jar:2.2.20
+[DEBUG]   org.slf4j:slf4j-jdk14:jar:1.4.0
+[DEBUG]   jaxb:jaxb-api:jar:2.1.5
+[DEBUG]   jaxb:jaxb-impl:jar:2.1.5
+[DEBUG]   org.eclipse.emf:common:jar:2.2.1
+[DEBUG]   org.eclipse.emf:ecore:jar:2.2.2
+[DEBUG]   junit:junit:jar:4.4:test
+[DEBUG]   org.easymock:easymock:jar:2.3:test
+[DEBUG]   org.easymock:easymockclassextension:jar:2.3:test
+[DEBUG]   com.mockrunner:mockrunner:jar:0.3.6:test
+[DEBUG]   com.ibm.icu:icu4j:jar:3.4.4
+[DEBUG]   org.geotools:gt-main:jar:2.5.5:compile (selected for compile)
+[DEBUG] Adding managed dependencies for org.geotools:gt-api
+[DEBUG]   org.opengis:geoapi:jar:2.2.0
+[DEBUG]   net.java.dev.jsr-275:jsr-275:jar:1.0-beta-2
+[DEBUG]   javax.media:jai_core:jar:1.1.3
+[DEBUG]   javax.media:jai_codec:jar:1.1.3
+[DEBUG]   javax.media:jai_imageio:jar:1.1
+[DEBUG]   java3d:vecmath:jar:1.3.1
+[DEBUG]   com.vividsolutions:jts:jar:1.9
+[DEBUG]   org.wkb4j:wkb4j:jar:1.0-RC1
+[DEBUG]   batik:batik-transcoder:jar:1.6
+[DEBUG]   batik:batik-svggen:jar:1.6
+[DEBUG]   batik:batik-awt-util:jar:1.6
+[DEBUG]   batik:batik-rasterizer:jar:1.6
+[DEBUG]   batik:batik-dom:jar:1.6
+[DEBUG]   batik:batik-bridge:jar:1.6
+[DEBUG]   batik:batik-gvt:jar:1.6
+[DEBUG]   batik:batik-svg-dom:jar:1.6
+[DEBUG]   batik:batik-util:jar:1.6
+[DEBUG]   batik:batik-css:jar:1.6
+[DEBUG]   batik:batik-parser:jar:1.6
+[DEBUG]   batik:batik-xml:jar:1.6
+[DEBUG]   batik:batik-ext:jar:1.6
+[DEBUG]   batik:batik-script:jar:1.6
+[DEBUG]   jdom:jdom:jar:1.0
+[DEBUG]   oro:oro:jar:2.0.8
+[DEBUG]   commons-lang:commons-lang:jar:2.1
+[DEBUG]   commons-collections:commons-collections:jar:3.1
+[DEBUG]   commons-pool:commons-pool:jar:1.3
+[DEBUG]   commons-logging:commons-logging:jar:1.1.1
+[DEBUG]   commons-io:commons-io:jar:1.4
+[DEBUG]   log4j:log4j:jar:1.2.12
+[DEBUG]   commons-beanutils:commons-beanutils:jar:1.7.0
+[DEBUG]   commons-httpclient:commons-httpclient:jar:3.0.1
+[DEBUG]   commons-dbcp:commons-dbcp:jar:1.2.2
+[DEBUG]   velocity:velocity:jar:1.4
+[DEBUG]   xerces:xercesImpl:jar:2.7.1
+[DEBUG]   xml-apis:xml-apis-xerces:jar:2.7.1
+[DEBUG]   xpp3:xpp3:jar:1.1.3.4.O
+[DEBUG]   org.postgis:postgis-driver:jar:1.0
+[DEBUG]   postgresql:postgresql:jar:8.1-407.jdbc3
+[DEBUG]   mysql:mysql-connector-java:jar:5.1.5
+[DEBUG]   hsqldb:hsqldb:jar:1.8.0.7
+[DEBUG]   org.openplans:spatialdb:jar:0.1
+[DEBUG]   com.oracle:ojdbc14:jar:10.2.0.3.0
+[DEBUG]   com.oracle:sdoapi:jar:10.2.0
+[DEBUG]   org.h2database:h2:jar:1.1.104
+[DEBUG]   edu.ucar:netcdf:jar:2.2.20
+[DEBUG]   org.slf4j:slf4j-jdk14:jar:1.4.0
+[DEBUG]   jaxb:jaxb-api:jar:2.1.5
+[DEBUG]   jaxb:jaxb-impl:jar:2.1.5
+[DEBUG]   org.eclipse.emf:common:jar:2.2.1
+[DEBUG]   org.eclipse.emf:ecore:jar:2.2.2
+[DEBUG]   junit:junit:jar:4.4:test
+[DEBUG]   org.easymock:easymock:jar:2.3:test
+[DEBUG]   org.easymock:easymockclassextension:jar:2.3:test
+[DEBUG]   com.mockrunner:mockrunner:jar:0.3.6:test
+[DEBUG]   com.ibm.icu:icu4j:jar:3.4.4
+[DEBUG]     org.geotools:gt-api:jar:2.5.5:compile (selected for compile)
+[DEBUG]       com.vividsolutions:jts:jar:1.9:compile (selected for compile)
+[DEBUG] Adding managed dependencies for org.geotools:gt-referencing
+[DEBUG]   org.opengis:geoapi:jar:2.2.0
+[DEBUG]   net.java.dev.jsr-275:jsr-275:jar:1.0-beta-2
+[DEBUG]   javax.media:jai_core:jar:1.1.3
+[DEBUG]   javax.media:jai_codec:jar:1.1.3
+[DEBUG]   javax.media:jai_imageio:jar:1.1
+[DEBUG]   java3d:vecmath:jar:1.3.1
+[DEBUG]   com.vividsolutions:jts:jar:1.9
+[DEBUG]   org.wkb4j:wkb4j:jar:1.0-RC1
+[DEBUG]   batik:batik-transcoder:jar:1.6
+[DEBUG]   batik:batik-svggen:jar:1.6
+[DEBUG]   batik:batik-awt-util:jar:1.6
+[DEBUG]   batik:batik-rasterizer:jar:1.6
+[DEBUG]   batik:batik-dom:jar:1.6
+[DEBUG]   batik:batik-bridge:jar:1.6
+[DEBUG]   batik:batik-gvt:jar:1.6
+[DEBUG]   batik:batik-svg-dom:jar:1.6
+[DEBUG]   batik:batik-util:jar:1.6
+[DEBUG]   batik:batik-css:jar:1.6
+[DEBUG]   batik:batik-parser:jar:1.6
+[DEBUG]   batik:batik-xml:jar:1.6
+[DEBUG]   batik:batik-ext:jar:1.6
+[DEBUG]   batik:batik-script:jar:1.6
+[DEBUG]   jdom:jdom:jar:1.0
+[DEBUG]   oro:oro:jar:2.0.8
+[DEBUG]   commons-lang:commons-lang:jar:2.1
+[DEBUG]   commons-collections:commons-collections:jar:3.1
+[DEBUG]   commons-pool:commons-pool:jar:1.3
+[DEBUG]   commons-logging:commons-logging:jar:1.1.1
+[DEBUG]   commons-io:commons-io:jar:1.4
+[DEBUG]   log4j:log4j:jar:1.2.12
+[DEBUG]   commons-beanutils:commons-beanutils:jar:1.7.0
+[DEBUG]   commons-httpclient:commons-httpclient:jar:3.0.1
+[DEBUG]   commons-dbcp:commons-dbcp:jar:1.2.2
+[DEBUG]   velocity:velocity:jar:1.4
+[DEBUG]   xerces:xercesImpl:jar:2.7.1
+[DEBUG]   xml-apis:xml-apis-xerces:jar:2.7.1
+[DEBUG]   xpp3:xpp3:jar:1.1.3.4.O
+[DEBUG]   org.postgis:postgis-driver:jar:1.0
+[DEBUG]   postgresql:postgresql:jar:8.1-407.jdbc3
+[DEBUG]   mysql:mysql-connector-java:jar:5.1.5
+[DEBUG]   hsqldb:hsqldb:jar:1.8.0.7
+[DEBUG]   org.openplans:spatialdb:jar:0.1
+[DEBUG]   com.oracle:ojdbc14:jar:10.2.0.3.0
+[DEBUG]   com.oracle:sdoapi:jar:10.2.0
+[DEBUG]   org.h2database:h2:jar:1.1.104
+[DEBUG]   edu.ucar:netcdf:jar:2.2.20
+[DEBUG]   org.slf4j:slf4j-jdk14:jar:1.4.0
+[DEBUG]   jaxb:jaxb-api:jar:2.1.5
+[DEBUG]   jaxb:jaxb-impl:jar:2.1.5
+[DEBUG]   org.eclipse.emf:common:jar:2.2.1
+[DEBUG]   org.eclipse.emf:ecore:jar:2.2.2
+[DEBUG]   junit:junit:jar:4.4:test
+[DEBUG]   org.easymock:easymock:jar:2.3:test
+[DEBUG]   org.easymock:easymockclassextension:jar:2.3:test
+[DEBUG]   com.mockrunner:mockrunner:jar:0.3.6:test
+[DEBUG]   com.ibm.icu:icu4j:jar:3.4.4
+[DEBUG]       org.geotools:gt-referencing:jar:2.5.5:compile (selected for compile)
+[DEBUG]         java3d:vecmath:jar:1.3.1:compile (selected for compile)
+[DEBUG]         commons-pool:commons-pool:jar:1.3:compile (selected for compile)
+[DEBUG] Adding managed dependencies for org.geotools:gt-metadata
+[DEBUG]   org.opengis:geoapi:jar:2.2.0
+[DEBUG]   net.java.dev.jsr-275:jsr-275:jar:1.0-beta-2
+[DEBUG]   javax.media:jai_core:jar:1.1.3
+[DEBUG]   javax.media:jai_codec:jar:1.1.3
+[DEBUG]   javax.media:jai_imageio:jar:1.1
+[DEBUG]   java3d:vecmath:jar:1.3.1
+[DEBUG]   com.vividsolutions:jts:jar:1.9
+[DEBUG]   org.wkb4j:wkb4j:jar:1.0-RC1
+[DEBUG]   batik:batik-transcoder:jar:1.6
+[DEBUG]   batik:batik-svggen:jar:1.6
+[DEBUG]   batik:batik-awt-util:jar:1.6
+[DEBUG]   batik:batik-rasterizer:jar:1.6
+[DEBUG]   batik:batik-dom:jar:1.6
+[DEBUG]   batik:batik-bridge:jar:1.6
+[DEBUG]   batik:batik-gvt:jar:1.6
+[DEBUG]   batik:batik-svg-dom:jar:1.6
+[DEBUG]   batik:batik-util:jar:1.6
+[DEBUG]   batik:batik-css:jar:1.6
+[DEBUG]   batik:batik-parser:jar:1.6
+[DEBUG]   batik:batik-xml:jar:1.6
+[DEBUG]   batik:batik-ext:jar:1.6
+[DEBUG]   batik:batik-script:jar:1.6
+[DEBUG]   jdom:jdom:jar:1.0
+[DEBUG]   oro:oro:jar:2.0.8
+[DEBUG]   commons-lang:commons-lang:jar:2.1
+[DEBUG]   commons-collections:commons-collections:jar:3.1
+[DEBUG]   commons-pool:commons-pool:jar:1.3
+[DEBUG]   commons-logging:commons-logging:jar:1.1.1
+[DEBUG]   commons-io:commons-io:jar:1.4
+[DEBUG]   log4j:log4j:jar:1.2.12
+[DEBUG]   commons-beanutils:commons-beanutils:jar:1.7.0
+[DEBUG]   commons-httpclient:commons-httpclient:jar:3.0.1
+[DEBUG]   commons-dbcp:commons-dbcp:jar:1.2.2
+[DEBUG]   velocity:velocity:jar:1.4
+[DEBUG]   xerces:xercesImpl:jar:2.7.1
+[DEBUG]   xml-apis:xml-apis-xerces:jar:2.7.1
+[DEBUG]   xpp3:xpp3:jar:1.1.3.4.O
+[DEBUG]   org.postgis:postgis-driver:jar:1.0
+[DEBUG]   postgresql:postgresql:jar:8.1-407.jdbc3
+[DEBUG]   mysql:mysql-connector-java:jar:5.1.5
+[DEBUG]   hsqldb:hsqldb:jar:1.8.0.7
+[DEBUG]   org.openplans:spatialdb:jar:0.1
+[DEBUG]   com.oracle:ojdbc14:jar:10.2.0.3.0
+[DEBUG]   com.oracle:sdoapi:jar:10.2.0
+[DEBUG]   org.h2database:h2:jar:1.1.104
+[DEBUG]   edu.ucar:netcdf:jar:2.2.20
+[DEBUG]   org.slf4j:slf4j-jdk14:jar:1.4.0
+[DEBUG]   jaxb:jaxb-api:jar:2.1.5
+[DEBUG]   jaxb:jaxb-impl:jar:2.1.5
+[DEBUG]   org.eclipse.emf:common:jar:2.2.1
+[DEBUG]   org.eclipse.emf:ecore:jar:2.2.2
+[DEBUG]   junit:junit:jar:4.4:test
+[DEBUG]   org.easymock:easymock:jar:2.3:test
+[DEBUG]   org.easymock:easymockclassextension:jar:2.3:test
+[DEBUG]   com.mockrunner:mockrunner:jar:0.3.6:test
+[DEBUG]   com.ibm.icu:icu4j:jar:3.4.4
+[DEBUG]         org.geotools:gt-metadata:jar:2.5.5:compile (selected for compile)
+[DEBUG] Retrieving parent-POM: org.opengis:parent:pom:2.2.0 for project: org.opengis:geoapi:jar:null from the repository.
+[DEBUG]           org.opengis:geoapi:jar:2.2.0:compile (selected for compile)
+[DEBUG]             net.java.dev.jsr-275:jsr-275:jar:1.0-beta-2:compile (selected for compile)
+[DEBUG]           net.java.dev.jsr-275:jsr-275:jar:1.0-beta-2:compile (selected for compile)
+[DEBUG]     com.vividsolutions:jts:jar:1.9:compile (selected for compile)
+[DEBUG]     jdom:jdom:jar:1.0:compile (selected for compile)
+[DEBUG]     commons-beanutils:commons-beanutils:jar:1.7.0:compile (selected for compile)
+[DEBUG]       commons-logging:commons-logging:jar:1.0.3:compile (selected for compile)
+[DEBUG] Retrieving parent-POM: org.geotools:plugin:pom:2.5.5 for project: org.geotools:gt-epsg-hsql:jar:null from the repository.
+[DEBUG] Adding managed dependencies for org.geotools:gt-epsg-hsql
+[DEBUG]   org.opengis:geoapi:jar:2.2.0
+[DEBUG]   net.java.dev.jsr-275:jsr-275:jar:1.0-beta-2
+[DEBUG]   javax.media:jai_core:jar:1.1.3
+[DEBUG]   javax.media:jai_codec:jar:1.1.3
+[DEBUG]   javax.media:jai_imageio:jar:1.1
+[DEBUG]   java3d:vecmath:jar:1.3.1
+[DEBUG]   com.vividsolutions:jts:jar:1.9
+[DEBUG]   org.wkb4j:wkb4j:jar:1.0-RC1
+[DEBUG]   batik:batik-transcoder:jar:1.6
+[DEBUG]   batik:batik-svggen:jar:1.6
+[DEBUG]   batik:batik-awt-util:jar:1.6
+[DEBUG]   batik:batik-rasterizer:jar:1.6
+[DEBUG]   batik:batik-dom:jar:1.6
+[DEBUG]   batik:batik-bridge:jar:1.6
+[DEBUG]   batik:batik-gvt:jar:1.6
+[DEBUG]   batik:batik-svg-dom:jar:1.6
+[DEBUG]   batik:batik-util:jar:1.6
+[DEBUG]   batik:batik-css:jar:1.6
+[DEBUG]   batik:batik-parser:jar:1.6
+[DEBUG]   batik:batik-xml:jar:1.6
+[DEBUG]   batik:batik-ext:jar:1.6
+[DEBUG]   batik:batik-script:jar:1.6
+[DEBUG]   jdom:jdom:jar:1.0
+[DEBUG]   oro:oro:jar:2.0.8
+[DEBUG]   commons-lang:commons-lang:jar:2.1
+[DEBUG]   commons-collections:commons-collections:jar:3.1
+[DEBUG]   commons-pool:commons-pool:jar:1.3
+[DEBUG]   commons-logging:commons-logging:jar:1.1.1
+[DEBUG]   commons-io:commons-io:jar:1.4
+[DEBUG]   log4j:log4j:jar:1.2.12
+[DEBUG]   commons-beanutils:commons-beanutils:jar:1.7.0
+[DEBUG]   commons-httpclient:commons-httpclient:jar:3.0.1
+[DEBUG]   commons-dbcp:commons-dbcp:jar:1.2.2
+[DEBUG]   velocity:velocity:jar:1.4
+[DEBUG]   xerces:xercesImpl:jar:2.7.1
+[DEBUG]   xml-apis:xml-apis-xerces:jar:2.7.1
+[DEBUG]   xpp3:xpp3:jar:1.1.3.4.O
+[DEBUG]   org.postgis:postgis-driver:jar:1.0
+[DEBUG]   postgresql:postgresql:jar:8.1-407.jdbc3
+[DEBUG]   mysql:mysql-connector-java:jar:5.1.5
+[DEBUG]   hsqldb:hsqldb:jar:1.8.0.7
+[DEBUG]   org.openplans:spatialdb:jar:0.1
+[DEBUG]   com.oracle:ojdbc14:jar:10.2.0.3.0
+[DEBUG]   com.oracle:sdoapi:jar:10.2.0
+[DEBUG]   org.h2database:h2:jar:1.1.104
+[DEBUG]   edu.ucar:netcdf:jar:2.2.20
+[DEBUG]   org.slf4j:slf4j-jdk14:jar:1.4.0
+[DEBUG]   jaxb:jaxb-api:jar:2.1.5
+[DEBUG]   jaxb:jaxb-impl:jar:2.1.5
+[DEBUG]   org.eclipse.emf:common:jar:2.2.1
+[DEBUG]   org.eclipse.emf:ecore:jar:2.2.2
+[DEBUG]   junit:junit:jar:4.4:test
+[DEBUG]   org.easymock:easymock:jar:2.3:test
+[DEBUG]   org.easymock:easymockclassextension:jar:2.3:test
+[DEBUG]   com.mockrunner:mockrunner:jar:0.3.6:test
+[DEBUG]   com.ibm.icu:icu4j:jar:3.4.4
+[DEBUG]   org.geotools:gt-epsg-hsql:jar:2.5.5:compile (selected for compile)
+[DEBUG]     org.geotools:gt-referencing:jar:2.5.5:compile (selected for compile)
+[DEBUG]       java3d:vecmath:jar:1.3.1:compile (selected for compile)
+[DEBUG]       commons-pool:commons-pool:jar:1.3:compile (selected for compile)
+[DEBUG]       org.geotools:gt-metadata:jar:2.5.5:compile (selected for compile)
+[DEBUG]         org.opengis:geoapi:jar:2.2.0:compile (selected for compile)
+[DEBUG]           net.java.dev.jsr-275:jsr-275:jar:1.0-beta-2:compile (selected for compile)
+[DEBUG]         net.java.dev.jsr-275:jsr-275:jar:1.0-beta-2:compile (selected for compile)
+[DEBUG]     hsqldb:hsqldb:jar:1.8.0.7:compile (selected for compile)
+[DEBUG]   junit:junit:jar:3.8.1:test (selected for test)
+[DEBUG]   log4j:log4j:jar:1.2.16:compile (selected for compile)
+[DEBUG]   jdom:jdom:jar:1.0:compile (selected for compile)
+[DEBUG]   commons-codec:commons-codec:jar:1.3:compile (selected for compile)
+[DEBUG]   ojdbc:ojdbc:jar:10.1.0.2.0:compile (selected for compile)
+[DEBUG]   com.ibatis:ibatis2-sqlmap:jar:2.2.0:compile (selected for compile)
+[DEBUG]   com.ibatis:ibatis2-dao:jar:2.2.0:compile (selected for compile)
+[DEBUG]   com.ibatis:ibatis2-common:jar:2.2.0:compile (selected for compile)
+[DEBUG]   mapscript:mapscript:jar:1.0:compile (selected for compile)
+[DEBUG]   postgresql:postgresql:jar:8.0-311.jdbc3:compile (selected for compile)
+[DEBUG]   com.oracle:ojdbc14:jar:10.2.0.4.0:compile (selected for compile)
+[DEBUG]   javax.servlet:servlet-api:jar:2.5:provided (selected for provided)
+[DEBUG]   javax.servlet.jsp:jsp-api:jar:2.1:provided (selected for provided)
+[DEBUG] Retrieving parent-POM: org.apache.struts:struts-parent:pom:1.3.8 for project: org.apache.struts:struts-core:jar:1.3.8 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.struts:struts-master:pom:4 for project: org.apache.struts:struts-parent:pom:1.3.8 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache:apache:pom:2 for project: org.apache.struts:struts-master:pom:4 from the repository.
+[DEBUG]   org.apache.struts:struts-core:jar:1.3.8:compile (selected for compile)
+[DEBUG]     antlr:antlr:jar:2.7.2:compile (selected for compile)
+[DEBUG]     commons-chain:commons-chain:jar:1.1:compile (selected for compile)
+[DEBUG]       commons-digester:commons-digester:jar:1.6:compile (selected for compile)
+[DEBUG]         commons-beanutils:commons-beanutils:jar:1.6:compile (removed - nearer found: 1.7.0)
+[DEBUG]         commons-logging:commons-logging:jar:1.0:compile (removed - nearer found: 1.0.3)
+[DEBUG]         commons-collections:commons-collections:jar:2.1:compile (selected for compile)
+[DEBUG]         xml-apis:xml-apis:jar:1.0.b2:compile (selected for compile)
+[DEBUG]     commons-digester:commons-digester:jar:1.6:compile (removed - nearer found: 1.8)
+[DEBUG]     commons-digester:commons-digester:jar:1.8:compile (selected for compile)
+[DEBUG]       commons-logging:commons-logging:jar:1.1:compile (removed - nearer found: 1.0.3)
+[DEBUG]     commons-logging:commons-logging:jar:1.0.3:compile (removed - nearer found: 1.0.4)
+[DEBUG]     commons-logging:commons-logging:jar:1.0.4:compile (selected for compile)
+[DEBUG]     commons-validator:commons-validator:jar:1.3.1:compile (selected for compile)
+[DEBUG]       commons-digester:commons-digester:jar:1.6:compile (removed - nearer found: 1.8)
+[DEBUG]     oro:oro:jar:2.0.8:compile (selected for compile)
+[DEBUG]   org.apache.axis:axis-jaxrpc:jar:1.4:compile (selected for compile)
+[DEBUG]   commons-httpclient:commons-httpclient:jar:3.1:compile (selected for compile)
+[DEBUG]     commons-codec:commons-codec:jar:1.2:compile (removed - nearer found: 1.3)
+[DEBUG]   commons-ssl:commons-ssl:jar:1.0:compile (selected for compile)
+[DEBUG]   org.apache.axis:axis:jar:1.4:compile (selected for compile)
+[DEBUG]   castor:castor:jar:0.9.5.3:compile (selected for compile)
+[DEBUG] Retrieving parent-POM: org.sonatype.oss:oss-parent:pom:6 for project: com.jcraft:jsch:jar:0.1.44 from the repository.
+[DEBUG]   com.jcraft:jsch:jar:0.1.44:compile (selected for compile)
+[WARNING] While downloading javax.xml:jaxrpc:1.1
+  This artifact has been relocated to javax.xml:jaxrpc-api:1.1.
+
+
+[DEBUG]   javax.xml:jaxrpc-api:jar:1.1:compile (selected for compile)
+[WARNING] While downloading xerces:xerces:2.4.0
+  This artifact has been relocated to xerces:xercesImpl:2.4.0.
+
+
+[DEBUG]   xerces:xercesImpl:jar:2.4.0:compile (selected for compile)
+[DEBUG] Plugin dependencies for:
+
+org.apache.maven.plugins:maven-compiler-plugin:2.3.2
+
+are:
+
+org.apache.maven:maven-plugin-api:jar:2.0.6:runtime
+org.apache.maven:maven-artifact:jar:2.0.6:runtime
+org.apache.maven:maven-core:jar:2.0.6:runtime
+org.apache.maven:maven-toolchain:jar:1.0:runtime
+org.codehaus.plexus:plexus-utils:jar:2.0.5:runtime
+org.codehaus.plexus:plexus-compiler-api:jar:1.8.1:runtime
+org.codehaus.plexus:plexus-compiler-manager:jar:1.8.1:runtime
+org.codehaus.plexus:plexus-compiler-javac:jar:1.8.1:runtime
+
+
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:maven-plugin:2.3.2:runtime (selected for runtime)
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (selected for runtime)
+[DEBUG]   org.apache.maven:maven-core:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-settings:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-profile:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-model:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.4.1)
+[DEBUG]     org.apache.maven:maven-repository-metadata:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-error-diagnostics:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-project:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-plugin-descriptor:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-artifact-manager:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-monitor:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-toolchain
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]   org.apache.maven:maven-toolchain:jar:1.0:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus:pom:2.0.6 for project: null:plexus-utils:jar:2.0.5 from the repository.
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (removed - nearer found: 2.0.5)
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:2.0.5:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus-compiler:pom:1.8.1 for project: null:plexus-compiler-api:jar:null from the repository.
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus-components:pom:1.1.18 for project: null:plexus-compiler:pom:1.8.1 from the repository.
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus:pom:2.0.7 for project: org.codehaus.plexus:plexus-components:pom:1.1.18 from the repository.
+[DEBUG] Adding managed dependencies for unknown:plexus-compiler-api
+[DEBUG]   org.codehaus.plexus:plexus-compiler-api:jar:1.8.1
+[DEBUG]   org.codehaus.plexus:plexus-compiler-test:jar:1.8.1
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.5.5
+[DEBUG]   junit:junit:jar:3.8.2:test
+[DEBUG]   org.codehaus.plexus:plexus-compiler-api:jar:1.8.1:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.5.5:runtime (removed - nearer found: 2.0.5)
+[DEBUG] Adding managed dependencies for unknown:plexus-compiler-manager
+[DEBUG]   org.codehaus.plexus:plexus-compiler-api:jar:1.8.1
+[DEBUG]   org.codehaus.plexus:plexus-compiler-test:jar:1.8.1
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.5.5
+[DEBUG]   junit:junit:jar:3.8.2:test
+[DEBUG]   org.codehaus.plexus:plexus-compiler-manager:jar:1.8.1:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus-compilers:pom:1.8.1 for project: null:plexus-compiler-javac:jar:null from the repository.
+[DEBUG] Adding managed dependencies for unknown:plexus-compiler-javac
+[DEBUG]   org.codehaus.plexus:plexus-compiler-api:jar:1.8.1
+[DEBUG]   org.codehaus.plexus:plexus-compiler-test:jar:1.8.1
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.5.5
+[DEBUG]   junit:junit:jar:3.8.2:test
+[DEBUG]   org.codehaus.plexus:plexus-compiler-javac:jar:1.8.1:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.5.5:runtime (removed - nearer found: 2.0.5)
+[DEBUG]  The following artifacts were filtered out for plugin: org.apache.maven.plugins:maven-compiler-plugin:2.3.2 because they're already in the core of Maven:
+
+org.apache.maven:maven-plugin-api:jar:2.0.6:runtime
+org.apache.maven:maven-artifact:jar:2.0.6:runtime
+org.apache.maven:maven-core:jar:2.0.6:runtime
+org.apache.maven:maven-toolchain:jar:1.0:runtime
+
+These will use the artifact files already in the core ClassRealm instead, to allow them to be included in PluginDescriptor.getArtifacts().
+
+
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:2.3.2:compile' -->
+[DEBUG]   (f) basedir = c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core
+[DEBUG]   (f) buildDirectory = c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target
+[DEBUG]   (f) classpathElements = [c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes, c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-main\2.5.5\gt-main-2.5.5.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-api\2.5.5\gt-api-2.5.5.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\vividsolutions\jts\1.9\jts-1.9.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-referencing\2.5.5\gt-referencing-2.5.5.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\java3d\vecmath\1.3.1\vecmath-1.3.1.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-pool\commons-pool\1.3\commons-pool-1.3.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-metadata\2.5.5\gt-metadata-2.5.5.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\opengis\geoapi\2.2.0\geoapi-2.2.0.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\net\java\dev\jsr-275\jsr-275\1.0-beta-2\jsr-275-1.0-beta-2.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\jdom\jdom\1.0\jdom-1.0.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-epsg-hsql\2.5.5\gt-epsg-hsql-2.5.5.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\hsqldb\hsqldb\1.8.0.7\hsqldb-1.8.0.7.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\log4j\log4j\1.2.16\log4j-1.2.16.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-codec\commons-codec\1.3\commons-codec-1.3.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\ojdbc\ojdbc\10.1.0.2.0\ojdbc-10.1.0.2.0.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\ibatis\ibatis2-sqlmap\2.2.0\ibatis2-sqlmap-2.2.0.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\ibatis\ibatis2-dao\2.2.0\ibatis2-dao-2.2.0.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\ibatis\ibatis2-common\2.2.0\ibatis2-common-2.2.0.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\mapscript\mapscript\1.0\mapscript-1.0.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\postgresql\postgresql\8.0-311.jdbc3\postgresql-8.0-311.jdbc3.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\oracle\ojdbc14\10.2.0.4.0\ojdbc14-10.2.0.4.0.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\apache\struts\struts-core\1.3.8\struts-core-1.3.8.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\antlr\antlr\2.7.2\antlr-2.7.2.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-chain\commons-chain\1.1\commons-chain-1.1.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-digester\commons-digester\1.8\commons-digester-1.8.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-validator\commons-validator\1.3.1\commons-validator-1.3.1.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\oro\oro\2.0.8\oro-2.0.8.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\apache\axis\axis-jaxrpc\1.4\axis-jaxrpc-1.4.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-ssl\commons-ssl\1.0\commons-ssl-1.0.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\apache\axis\axis\1.4\axis-1.4.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\castor\castor\0.9.5.3\castor-0.9.5.3.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\jcraft\jsch\0.1.44\jsch-0.1.44.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\javax\xml\jaxrpc-api\1.1\jaxrpc-api-1.1.jar, c:\Users\fjgarcia\.m2\repository.localgis3.satec\xerces\xercesImpl\2.4.0\xercesImpl-2.4.0.jar]
+[DEBUG]   (f) compileSourceRoots = [c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) encoding = ISO-8859-1
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\generated-sources\annotations
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes
+[DEBUG]   (f) outputFileName = localgis-core-3.0
+[DEBUG]   (f) projectArtifact = com.localgis.web:localgis-core:jar:3.0
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@6aa91761
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) source = 1.7
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 1.7
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[INFO] [compiler:compile {execution: default-compile}]
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java]
+[DEBUG] Classpath: [c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-main\2.5.5\gt-main-2.5.5.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-api\2.5.5\gt-api-2.5.5.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\vividsolutions\jts\1.9\jts-1.9.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-referencing\2.5.5\gt-referencing-2.5.5.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\java3d\vecmath\1.3.1\vecmath-1.3.1.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-pool\commons-pool\1.3\commons-pool-1.3.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-metadata\2.5.5\gt-metadata-2.5.5.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\opengis\geoapi\2.2.0\geoapi-2.2.0.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\net\java\dev\jsr-275\jsr-275\1.0-beta-2\jsr-275-1.0-beta-2.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\jdom\jdom\1.0\jdom-1.0.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-epsg-hsql\2.5.5\gt-epsg-hsql-2.5.5.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\hsqldb\hsqldb\1.8.0.7\hsqldb-1.8.0.7.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\log4j\log4j\1.2.16\log4j-1.2.16.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-codec\commons-codec\1.3\commons-codec-1.3.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\ojdbc\ojdbc\10.1.0.2.0\ojdbc-10.1.0.2.0.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\ibatis\ibatis2-sqlmap\2.2.0\ibatis2-sqlmap-2.2.0.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\ibatis\ibatis2-dao\2.2.0\ibatis2-dao-2.2.0.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\ibatis\ibatis2-common\2.2.0\ibatis2-common-2.2.0.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\mapscript\mapscript\1.0\mapscript-1.0.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\postgresql\postgresql\8.0-311.jdbc3\postgresql-8.0-311.jdbc3.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\oracle\ojdbc14\10.2.0.4.0\ojdbc14-10.2.0.4.0.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\apache\struts\struts-core\1.3.8\struts-core-1.3.8.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\antlr\antlr\2.7.2\antlr-2.7.2.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-chain\commons-chain\1.1\commons-chain-1.1.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-digester\commons-digester\1.8\commons-digester-1.8.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-validator\commons-validator\1.3.1\commons-validator-1.3.1.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\oro\oro\2.0.8\oro-2.0.8.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\apache\axis\axis-jaxrpc\1.4\axis-jaxrpc-1.4.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-ssl\commons-ssl\1.0\commons-ssl-1.0.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\apache\axis\axis\1.4\axis-1.4.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\castor\castor\0.9.5.3\castor-0.9.5.3.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\jcraft\jsch\0.1.44\jsch-0.1.44.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\javax\xml\jaxrpc-api\1.1\jaxrpc-api-1.1.jar
+ c:\Users\fjgarcia\.m2\repository.localgis3.satec\xerces\xercesImpl\2.4.0\xercesImpl-2.4.0.jar]
+[DEBUG] Output directory: c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes
+[DEBUG] Classpath:
+[DEBUG]  c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-main\2.5.5\gt-main-2.5.5.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-api\2.5.5\gt-api-2.5.5.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\vividsolutions\jts\1.9\jts-1.9.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-referencing\2.5.5\gt-referencing-2.5.5.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\java3d\vecmath\1.3.1\vecmath-1.3.1.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-pool\commons-pool\1.3\commons-pool-1.3.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-metadata\2.5.5\gt-metadata-2.5.5.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\opengis\geoapi\2.2.0\geoapi-2.2.0.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\net\java\dev\jsr-275\jsr-275\1.0-beta-2\jsr-275-1.0-beta-2.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\jdom\jdom\1.0\jdom-1.0.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-epsg-hsql\2.5.5\gt-epsg-hsql-2.5.5.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\hsqldb\hsqldb\1.8.0.7\hsqldb-1.8.0.7.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\log4j\log4j\1.2.16\log4j-1.2.16.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-codec\commons-codec\1.3\commons-codec-1.3.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\ojdbc\ojdbc\10.1.0.2.0\ojdbc-10.1.0.2.0.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\ibatis\ibatis2-sqlmap\2.2.0\ibatis2-sqlmap-2.2.0.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\ibatis\ibatis2-dao\2.2.0\ibatis2-dao-2.2.0.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\ibatis\ibatis2-common\2.2.0\ibatis2-common-2.2.0.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\mapscript\mapscript\1.0\mapscript-1.0.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\postgresql\postgresql\8.0-311.jdbc3\postgresql-8.0-311.jdbc3.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\oracle\ojdbc14\10.2.0.4.0\ojdbc14-10.2.0.4.0.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\apache\struts\struts-core\1.3.8\struts-core-1.3.8.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\antlr\antlr\2.7.2\antlr-2.7.2.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-chain\commons-chain\1.1\commons-chain-1.1.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-digester\commons-digester\1.8\commons-digester-1.8.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-validator\commons-validator\1.3.1\commons-validator-1.3.1.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\oro\oro\2.0.8\oro-2.0.8.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\apache\axis\axis-jaxrpc\1.4\axis-jaxrpc-1.4.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-ssl\commons-ssl\1.0\commons-ssl-1.0.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\apache\axis\axis\1.4\axis-1.4.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\castor\castor\0.9.5.3\castor-0.9.5.3.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\jcraft\jsch\0.1.44\jsch-0.1.44.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\javax\xml\jaxrpc-api\1.1\jaxrpc-api-1.1.jar
+[DEBUG]  c:\Users\fjgarcia\.m2\repository.localgis3.satec\xerces\xercesImpl\2.4.0\xercesImpl-2.4.0.jar
+[DEBUG] Source roots:
+[DEBUG]  c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java
+[DEBUG] Command line options:
+[DEBUG] -d c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes -classpath c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes;c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-main\2.5.5\gt-main-2.5.5.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-api\2.5.5\gt-api-2.5.5.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\vividsolutions\jts\1.9\jts-1.9.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-referencing\2.5.5\gt-referencing-2.5.5.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\java3d\vecmath\1.3.1\vecmath-1.3.1.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-pool\commons-pool\1.3\commons-pool-1.3.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-metadata\2.5.5\gt-metadata-2.5.5.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\opengis\geoapi\2.2.0\geoapi-2.2.0.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\net\java\dev\jsr-275\jsr-275\1.0-beta-2\jsr-275-1.0-beta-2.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\jdom\jdom\1.0\jdom-1.0.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\geotools\gt-epsg-hsql\2.5.5\gt-epsg-hsql-2.5.5.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\hsqldb\hsqldb\1.8.0.7\hsqldb-1.8.0.7.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\log4j\log4j\1.2.16\log4j-1.2.16.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-codec\commons-codec\1.3\commons-codec-1.3.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\ojdbc\ojdbc\10.1.0.2.0\ojdbc-10.1.0.2.0.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\ibatis\ibatis2-sqlmap\2.2.0\ibatis2-sqlmap-2.2.0.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\ibatis\ibatis2-dao\2.2.0\ibatis2-dao-2.2.0.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\ibatis\ibatis2-common\2.2.0\ibatis2-common-2.2.0.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\mapscript\mapscript\1.0\mapscript-1.0.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\postgresql\postgresql\8.0-311.jdbc3\postgresql-8.0-311.jdbc3.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\oracle\ojdbc14\10.2.0.4.0\ojdbc14-10.2.0.4.0.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\apache\struts\struts-core\1.3.8\struts-core-1.3.8.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\antlr\antlr\2.7.2\antlr-2.7.2.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-chain\commons-chain\1.1\commons-chain-1.1.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-digester\commons-digester\1.8\commons-digester-1.8.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-validator\commons-validator\1.3.1\commons-validator-1.3.1.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\oro\oro\2.0.8\oro-2.0.8.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\apache\axis\axis-jaxrpc\1.4\axis-jaxrpc-1.4.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\commons-ssl\commons-ssl\1.0\commons-ssl-1.0.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\org\apache\axis\axis\1.4\axis-1.4.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\castor\castor\0.9.5.3\castor-0.9.5.3.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\com\jcraft\jsch\0.1.44\jsch-0.1.44.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\javax\xml\jaxrpc-api\1.1\jaxrpc-api-1.1.jar;c:\Users\fjgarcia\.m2\repository.localgis3.satec\xerces\xercesImpl\2.4.0\xercesImpl-2.4.0.jar; -sourcepath c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java; c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSConfigurator.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\GeopistaColumn.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaMapDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\manager\LocalgisEntidadSupramunicipalManagerImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\GeopistaParcela.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\security\dnie\CertificateAuthManager.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisLayerExt.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\utils\FileUtils.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\exceptions\LocalgisNotAllowedOperationException.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\IncidenciasAuthenticationDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisAttributeDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisMarkerDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaParcelaDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisMapDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaMapGenericElementDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\EntidadLocalGis.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaAuthenticationDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisLegendDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisLayer.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisIncidencia.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\config\Configuration.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\manager\LocalgisMapsConfigurationManager.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisStyleDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\Point.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisRestrictedAttributesDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisIncidenciaDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\utils\LocalgisUtils.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\main\ReconfigureMapServer.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\manager\LocalgisLayerManagerImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaNumeroPoliciaDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\manager\LocalgisUtilsManagerImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaMapServerLayerDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaMapServerLayerDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\security\dnie\afirma\AFirmaException.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\GeopistaEntidadSupramunicipal.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\GeopistaNumeroPolicia.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisMapServerLayerDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaTableDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisAttributeTranslated.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\GeopistaVia.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\GeopistaMunicipio.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaEntidadSupramunicipalDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\coordsys\PredefinedCoordinateSystems.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\GeopistaMap.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\security\sso\beans\SesionBean.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaLayerDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaNucleoDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\security\dnie\afirma\DatosCertificadoOut.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaColumnDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\exceptions\LocalgisWMSException.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisAttribute.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\security\dnie\afirma\AFirmaManager.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaMapDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\LocalgisManagerBuilderFactory.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\coordsys\CoordinateSystem.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaParcelaDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisMunicipioDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaTableDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\ConstantesSQL.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaMunicipioDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\coordsys\CoordinateSystemRegistry.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisMarkerDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisLayerDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\manager\LocalgisMapManager.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisMapLayer.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\manager\LocalgisURLsManagerImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaMapGenericElementDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\security\sso\ADMCARServices.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\exceptions\LocalgisInvalidParameterException.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisMapDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisMap.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\manager\LocalgisMapsConfigurationManagerImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\functions\AutoPublish.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\manager\LocalgisLayerManager.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\security\dnie\afirma\DatosValidacionCertificadoOut.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisLayerDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\LocalgisManagerBuilder.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\manager\LocalgisMapManagerImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisSpatialRefSysDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaCoverageLayerDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaLayerDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\manager\LocalgisUtilsManager.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaColumnDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisMapServerLayerDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaViaDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\IncidenciasAuthenticationDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaMunicipioDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaAuthenticationDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\GeopistaNucleo.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisMapLayerDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\exceptions\LocalgisMapNotFoundException.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisMunicipioDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\security\sso\SSOAuthManager.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaEntidadesMunicipiosDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaEntidadSupramunicipalDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaNucleoDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\manager\LocalgisURLsManager.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\manager\LocalgisMapsConfigurationManagerImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\GeopistaLayer.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaCoverageLayerDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\GeopistaCoverageLayer.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaNumeroPoliciaDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisLegendKey.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisStyle.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisCSSDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\GeopistaMapServerLayer.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\Scale.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\GeopistaEntidadesMunicipiosKey.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\BoundingBox.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisSpatialRefSysDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisLegendDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisStyleDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisMapLayerDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisCSS.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisRestrictedAttributesDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSConfigurator.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisMapServerLayer.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\utils\Base64Helper.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisAttributeValueTranslated.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\util\LocalgisManagerBuilderSingleton.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\GeopistaEntidadesMunicipiosDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisLegend.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\exceptions\LocalgisConfigurationException.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisAttributeDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\LocalgisIncidenciaDAO.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisRestrictedAttribute.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\exceptions\LocalgisDBException.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisMarker.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\manager\LocalgisEntidadSupramunicipalManager.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\LocalgisCSSDAOImpl.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\manager\LocalgisMapsConfigurationManager.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\exceptions\LocalgisInitiationException.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\utils\ChangeCoordinateSystem.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\model\LocalgisSpatialRefSys.java c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\dao\sqlmap\GeopistaViaDAOImpl.java -s c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\generated-sources\annotations -g -nowarn -target 1.7 -source 1.7 -encoding ISO-8859-1
+[INFO] Compiling 137 source files to c:\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[22,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[23,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[24,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[25,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[26,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[27,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[28,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[29,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[149,1] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[151,1] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[152,1] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1681,50] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[25,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[26,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[27,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[28,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[29,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[30,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[31,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[32,22] error: package com.jcraft.jsch does not exist
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[150,1] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[152,1] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[153,1] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1726,50] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1594,3] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1594,19] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1605,25] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1613,3] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1615,18] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1618,11] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1641,12] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1660,12] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1718,18] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1643,3] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1643,19] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1654,25] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1662,3] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1664,18] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1667,11] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1686,12] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1705,12] error: cannot find symbol
+[ERROR] \Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1763,18] error: cannot find symbol
+[INFO] 42 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Compilation failure
+
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[22,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[23,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[24,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[25,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[26,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[27,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[28,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[29,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[149,1] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[151,1] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[152,1] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1681,50] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[25,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[26,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[27,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[28,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[29,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[30,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[31,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[32,22] error: package com.jcraft.jsch does not exist
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[150,1] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[152,1] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[153,1] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1726,50] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1594,3] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1594,19] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1605,25] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1613,3] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1615,18] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1618,11] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1641,12] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1660,12] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wms\WMSSimpleConfigurator.java:[1718,18] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1643,3] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1643,19] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1654,25] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1662,3] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1664,18] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1667,11] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1686,12] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1705,12] error: cannot find symbol
+\Satec\Proyectos\LOCALGIS\LOCALGIS.FASEIII\3Codigo\localgis\webapps\GuiaUrbana\LOCALGIS-Core\src\main\java\com\localgis\web\core\wm\geoserver\wms\WMSSimpleConfigurator.java:[1763,18] error: cannot find symbol
+
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Trace
+org.apache.maven.BuildFailureException: Compilation failure
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:715)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalWithLifecycle(DefaultLifecycleExecutor.java:556)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:535)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+Caused by: org.apache.maven.plugin.CompilationFailureException: Compilation failure
+	at org.apache.maven.plugin.AbstractCompilerMojo.execute(AbstractCompilerMojo.java:656)
+	at org.apache.maven.plugin.CompilerMojo.execute(CompilerMojo.java:128)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:490)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	... 17 more
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3 seconds
+[INFO] Finished at: Mon Jan 21 16:21:25 CET 2013
+[INFO] Final Memory: 22M/174M
+[INFO] ------------------------------------------------------------------------

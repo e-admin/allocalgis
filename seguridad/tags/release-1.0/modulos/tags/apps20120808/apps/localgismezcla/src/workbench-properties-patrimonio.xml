@@ -1,0 +1,8 @@
+<workbench>
+  <plug-in>com.vividsolutions.jump.workbench.ui.zoom.ZoomToFullExtentPlugIn</plug-in>
+  <plug-in>com.geopista.ui.plugin.edit.DocumentManagerPlugin</plug-in>
+  <plug-in>com.geopista.ui.plugin.edit.TextManagerPlugin</plug-in>
+  <plug-in>com.geopista.ui.plugin.edit.ImageManagerPlugin</plug-in>
+  <plug-in>com.geopista.ui.plugin.edit.InventarioManagerPlugIn</plug-in>   
+</workbench>
+

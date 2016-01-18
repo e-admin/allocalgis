@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>UpdaterFramework</artifactId>
+    <groupId>com.localgis</groupId>
+    <version>3.0</version>
+    <relativePath>..</relativePath>
+  </parent>
+  <artifactId>registryServices</artifactId>
+  <packaging>pom</packaging>
+   <version>3.0</version>
+  <name>Registry Service Modules</name>
+  <description>Modules for version control in LocalGIS. This is the first module to be installed.</description>
+  <modules>
+    <module>RegistryWebApp</module>
+    <module>RegistryDataModel</module>
+  </modules>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>log4j</groupId>
+  			<artifactId>log4j</artifactId>
+  			<version>1.2.15</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
+  
+  	<distributionManagement>
+		<repository>
+			<id>serverCotesa</id>
+			<name>LocalGISIII</name>
+			<url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+		</repository>
+		<snapshotRepository>
+			<id>serverCotesa</id>
+			<name>LocalGISIII</name>
+			<url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

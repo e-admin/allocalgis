@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Eiel_modelo" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\proyectos\\Local Gis\\MODELO\\EIEL\\iReport\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="FASE" class="java.lang.String"/>
+	<parameter name="ISLA" class="java.lang.String"/>
+	<parameter name="DIPU" class="java.lang.String"/>
+	<parameter name="CODPROV" class="java.lang.String"/>
+	<parameter name="MUNI" class="java.lang.String"/>
+	<parameter name="CODMUNI" class="java.lang.String"/>
+	<parameter name="WHERE" class="java.lang.String"/>
+	<parameter name="IMG" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT v_ENTIDAD_SINGULAR.PROVINCIA, v_ENTIDAD_SINGULAR.DENOMINACI, v_ENTIDAD_SINGULAR.MUNICIPIO, v_ENTIDAD_SINGULAR.ENTIDAD
+ FROM   v_ENTIDAD_SINGULAR WHERE $P!{WHERE}
+ ORDER BY v_ENTIDAD_SINGULAR.PROVINCIA, v_ENTIDAD_SINGULAR.MUNICIPIO, v_ENTIDAD_SINGULAR.ENTIDAD]]>
+	</queryString>
+	<field name="provincia" class="java.lang.String"/>
+	<field name="denominaci" class="java.lang.String"/>
+	<field name="municipio" class="java.lang.String"/>
+	<field name="entidad" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="126" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="803" height="126"/>
+			</rectangle>
+			<image>
+				<reportElement x="472" y="1" width="330" height="87"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{IMG}+"logoN.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="75" y="0" width="1" height="126"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="471" y="0" width="1" height="126"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="81" y="0" width="390" height="33"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ENCUESTA DE INFRAESTRUCTURA Y EQUIPAMIENTOS LOCALES]]></text>
+			</staticText>
+			<line>
+				<reportElement x="76" y="99" width="395" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="76" y="67" width="395" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="76" y="33" width="395" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="81" y="33" width="170" height="35"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[C AUTÓNOMA, DIPUTACIÓN, CABILDO O C. INSULAR]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="251" y="34" width="220" height="34"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{DIPU}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="14" y="10" width="428" height="13"/>
+				<textElement/>
+				<text><![CDATA[CUADRO E.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="23" width="428" height="13"/>
+				<textElement/>
+				<text><![CDATA[ENTIDADES DE POBLACIÓN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="65" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="65"/>
+			</rectangle>
+			<line>
+				<reportElement x="120" y="1" width="1" height="63"/>
+			</line>
+			<line>
+				<reportElement x="252" y="23" width="1" height="41"/>
+			</line>
+			<line>
+				<reportElement x="120" y="23" width="682" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="2" width="120" height="63"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[PERÍODO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="23" width="476" height="41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[DENOMINACIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="44" width="64" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Código INE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="23" width="62" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[PROVINCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="24" width="68" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[MUNICIPIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="23" width="71" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ENTIDAD]]></text>
+			</staticText>
+			<line>
+				<reportElement x="184" y="23" width="1" height="41"/>
+			</line>
+			<line>
+				<reportElement x="323" y="23" width="1" height="41"/>
+			</line>
+			<staticText>
+				<reportElement x="122" y="2" width="681" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ENTIDAD DE POBLACIÓN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="44" width="204" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="186" y="45" width="66" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Código INE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="44" width="69" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Código INE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="22"/>
+			</rectangle>
+			<line>
+				<reportElement x="120" y="0" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement x="252" y="0" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement x="322" y="0" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement x="184" y="0" width="1" height="22"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="120" y="1" width="63" height="21" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{provincia}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="252" y="0" width="70" height="22" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{entidad}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="323" y="1" width="479" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{denominaci}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="184" y="0" width="67" height="22" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{municipio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="2" width="119" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{FASE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

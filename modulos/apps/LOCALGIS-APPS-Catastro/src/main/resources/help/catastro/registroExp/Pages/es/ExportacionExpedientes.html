@@ -1,0 +1,54 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <link rel="stylesheet" href="../jhexamples.css" type="text/css"><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (X11; U; Linux 2.4.1 i686) [Netscape]">
+   <title>Exportación de Expedientes
+</title>
+<!--
+ *         Copyright (C) 2003 Sun Microsystems, Inc
+ *                    All rights reserved.
+ *          Notice of copyright on this source code
+ *          product does not indicate publication.
+ *
+ * RESTRICTED RIGHTS LEGEND: Use, duplication, or disclosure by
+ * the U.S. Government is subject to restrictions as set forth
+ * in subparagraph (c)(1)(ii) of the Rights in Technical Data
+ * and Computer Software Clause at DFARS 252.227-7013 (Oct. 1988)
+ * and FAR 52.227-19 (c) (June 1987).
+ *
+ *    Sun Microsystems, Inc., 4150 Network Circle,
+ *    Santa Clara, California 95054, U.S.A.
+ *
+-->
+<!-- *************************************************************************************** -->
+<!-- content styles -->
+<link href="../css/contents.css" rel="stylesheet" type="text/css">
+<!-- *************************************************************************************** -->
+
+</head>
+    <body bgcolor="#FFFFFF">
+
+    <h1 class="cabeceraazuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exportación de Expedientes</h1>
+    <p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Específicamente el modulo de exportación
+        contempla la generación de ficheros en formato de FIN entrada y su envío mediante servicios Web  a la OVC. </p>
+    <p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Según la modalidad sobre la cual se trabaje,
+        la exportación de la información se realizará mediante ficheros FIN entrada relativos a uno o varios
+        expedientes a la vez. De esta forma, cuando un usuario en el modo acoplado finalice un expediente, en la pantalla
+        de gestión se le activará la opción de exportar y enviar todos los cambios realizados a la OVC para su
+        comprobación y aplicación. Para dicho intercambio será necesario introducir el certificado digital obligatorio
+        como se muestra a continuación.</p>
+    <p align="center"><IMG src="./img/ExportacionExpedientes1.jpg"></p>
+    <p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>NOTA :</b> El intercambio de información
+        entre la aplicación y los servicios Web de la OVC se está realizando mediante simulación, por lo que no se
+        solicitara dicho certificado al usuario y el resultado de este proceso podrá consultarse en la ruta:
+        GeoPISTA/Datos/FinEntrada.xml</p>
+    <p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En el caso desacoplado, el usuario
+        administrador tendrá que acceder a la opción de de generación y envío en el menú principal de la aplicación,
+        para así crear el FIN de Entrada Masivo en el que se incluirán, tanto los expedientes finalizados desde el
+        último envío de información a catastro, como aquellos que se han creado hasta entonces y no se han comunicado.
+        Para ello deberá proporcionar la ruta donde se escribirá el fichero generado como se muestra a continuación.</p>
+    <p align="center"><IMG src="./img/ExportacionExpedientes2.jpg"></p>
+    <p align="center"><IMG src="./img/ExportacionExpedientes3.jpg"></p>
+    </body>
+</html>

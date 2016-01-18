@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="$codebaseJnlp" href="$urlFileJnlp">
+ <information>
+	<title>$informationTitle</title>
+	<vendor>$informationVendor</vendor>
+	<homepage href="http://www.geopista.com" />
+	<description>$informationDescription</description>
+	<icon href="logo_geopista.gif" />
+	<offline-allowed />
+	<icon kind="splash" href="splash_geopista.gif" />
+	<shortcut online="false">
+	  <desktop />
+	  <menu submenu="LocalGIS" />
+	</shortcut>
+ </information>
+ <resources>
+    <j2se version="1.7" initial-heap-size="128m" max-heap-size="1024m"/>
+    <jar href="$relativePathJar/$jarFileMain" main="true"/>
+    $dependencies
+	<property name="log4j.debug" value="true"/>
+	<property name="log4j.configuration" value="log4j.xml"/>
+    <extension name="$idExtensionName" href="$urlFileExtensionJnlp"/>
+	
+	<property name="geopista.jdbc.driver.oracle.class" value="oracle.jdbc.driver.OracleDriver"/>  
+	<property name="geopista.jdbc.driver.oracle.url" value="jdbc:oracle:thin:@&lt;server&gt;[:1521]:database_name"/>  
+	<property name="geopista.jdbc.driver.postgres.class" value="org.postgresql.Driver"/>  
+	<property name="geopista.jdbc.driver.postgres.url" value="jdbc:postgresql:[&lt;//host&gt;[:&lt;5432&gt;/]]&lt;database&gt;"/>  
+	<property name="geopista.jdbc.driver.mysql.class" value="com.mysql.jdbc.Driver"/>  
+	<property name="geopista.jdbc.driver.mysql.url" value="jdbc:mysql://&lt;hostname&gt;[:&lt;3306&gt;]/&lt;dbname&gt;"/>  
+	<property name="geopista.jdbc.driver.jtds.class" value="net.sourceforge.jtds.jdbc.Driver" />  
+	<property name="geopista.jdbc.driver.jtds.url" value="jdbc:jtds:sqlserver://hostname:1433/dataBase" />  
+	<property name="geopista.jdbc.driver.jtds.name" value="jTDS 1.2" /> 
+ </resources>
+ 
+ <application-desc main-class="$mainClassJnlp">
+ 	## Posibles parametros a procesar
+	#if ($argProperties)
+		<argument>-properties</argument>
+		<argument>$argProperties</argument>
+	#end
+	<argument>-plug-in-directory</argument>  
+	<argument>/Geopista/plugins</argument>  
+ </application-desc>
+ 
+ <security><all-permissions/></security>
+ 
+</jnlp>

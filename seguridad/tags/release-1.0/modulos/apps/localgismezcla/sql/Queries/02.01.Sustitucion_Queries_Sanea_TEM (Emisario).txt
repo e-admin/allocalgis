@@ -1,0 +1,45 @@
+-- TEM (Emisario)
+
+--
+-- Sustitucion de la select query
+--
+select selectquery  from queries
+where id_layer=(select id_layer from layers where name='TEM')
+
+select replace(selectquery,' "eiel_c_saneam_tem"."GEOMETRY"',' transform("eiel_c_saneam_tem"."GEOMETRY", ?T) as "GEOMETRY"') from queries
+where id_layer=(select id_layer from layers where name='TEM')
+
+update queries set selectquery=(select replace(selectquery,' "eiel_c_saneam_tem"."GEOMETRY"',' transform("eiel_c_saneam_tem"."GEOMETRY", ?T) as "GEOMETRY"') from queries
+where id_layer=(select id_layer from layers where name='TEM')) 
+where id_layer=(select id_layer from layers where name='TEM');
+
+
+--
+-- Sustitucion de la update query
+--
+select updatequery  from queries
+where id_layer=(select id_layer from layers where name='TEM')
+
+select replace(updatequery,'=GeometryFromText(?1,?S)','=transform(GeometryFromText(text(?1),?S), ?T)') from queries
+where id_layer=(select id_layer from layers where name='TEM')
+
+update queries set updatequery=(select replace(updatequery,'=GeometryFromText(?1,?S)','=transform(GeometryFromText(text(?1),?S), ?T)') from queries
+where id_layer=(select id_layer from layers where name='TEM')) 
+where id_layer=(select id_layer from layers where name='TEM')
+
+
+--
+-- Sustitucion de la insert query
+--
+select insertquery  from queries
+where id_layer=(select id_layer from layers where name='TEM')
+
+select replace(insertquery,'(GeometryFromText(?1,?S)','(transform(GeometryFromText(text(?1),?S), ?T)') from queries
+where id_layer=(select id_layer from layers where name='TEM')
+
+update queries set insertquery=(select replace(insertquery,'(GeometryFromText(?1,?S)','(transform(GeometryFromText(text(?1),?S), ?T)') from queries
+where id_layer=(select id_layer from layers where name='TEM')) 
+where id_layer=(select id_layer from layers where name='TEM');
+
+
+

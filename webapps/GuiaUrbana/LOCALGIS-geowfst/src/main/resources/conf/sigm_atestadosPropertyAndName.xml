@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<feature id="NumeroExpediente" fullId="datossolicitante.NumeroExpediente">
+  <propertyandname>
+    <grouptitle>Solicitante</grouptitle>
+    <property>datossolicitante.NumeroExpediente</property>
+    <name>Nº de Expediente</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Solicitante</grouptitle>
+    <property>datossolicitante.NombreSolicitante</property>
+    <name>Nombre</name>
+    <searchactive>false</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Solicitante</grouptitle>
+    <property>datossolicitante.PrimerApellidoSolicitante</property>
+    <name>Primer Apellido</name>
+    <searchactive>false</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Solicitante</grouptitle>
+    <property>datossolicitante.SegundoApellidoSolicitante</property>
+    <name>Segundo Apellido</name>
+    <searchactive>false</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Solicitante</grouptitle>
+    <property>datossolicitante.IdentificacionSolicitante</property>
+    <name>NIF/CIF</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Solicitante</grouptitle>
+    <property>pais.descripcion</property>
+    <name>Pais</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Solicitante</grouptitle>
+    <property>provincia.descripcion</property>
+    <name>Provincia</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Solicitante</grouptitle>
+    <property>municipio.descripcion</property>
+    <name>Municipio</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Solicitante</grouptitle>
+    <property>datossolicitante.DireccionSolicitante</property>
+    <name>Dirección</name>
+    <searchactive>false</searchactive>
+    <active>true</active>
+  </propertyandname>  
+   <propertyandname>
+    <grouptitle>Solicitante</grouptitle>
+    <property>datossolicitante.CodPostalSolicitante</property>
+    <name>Código Postal</name>
+    <searchactive>false</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Solicitante</grouptitle>
+    <property>datossolicitante.TelefonoSolicitante</property>
+    <name>Teléfono</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Atestado</grouptitle>
+    <property>datosaccidentespolicia.VehiculosImplicados</property>
+    <name>Vehículos Implicados</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Atestado</grouptitle>
+    <property>datosaccidentespolicia.DaniosMateriales</property>
+    <name>Daños Materiales</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Atestado</grouptitle>
+    <property>datosaccidentespolicia.Heridos</property>
+    <name>Heridos</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Atestado</grouptitle>
+    <property>datosaccidentespolicia.Fallecidos</property>
+    <name>Fallecidos</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Atestado</grouptitle>
+    <property>datosaccidentespolicia.TestAlcoholemia</property>
+    <name>Test de Alcoholemia</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Atestados</grouptitle>
+    <property>datosaccidentespolicia.PermisoConducir</property>
+    <name>Permiso Conducir</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+</feature>

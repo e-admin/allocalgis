@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+    <tocitem text="(EU)Contenidos">
+        <tocitem text="(EU)Introducción" target="ocupacionesIntro"/>        
+        <tocitem text="(EU)Usuarios y Permisos" target="ocupacionesUsuarios"/>        
+        <tocitem text="(EU)Opciones de Menú" target="ocupacionesOpcionesMenu"/>        
+        <tocitem text="(EU)WorkFlow" target="ocupacionesWorkflow"/>
+        <tocitem text="(EU)Consulta de una Licencia" target="ocupacionesConsulta"/>
+        <tocitem text="(EU)Creación de una Licencia" target="ocupacionesCreacion"/>
+        <tocitem text="(EU)Modificación de una Licencia" target="ocupacionesModificacion"/>
+        <tocitem text="(EU)Generación de informes" target="ocupacionesInformes"/>
+        <tocitem text="(EU)Gestión de Eventos">
+            <tocitem text="(EU)Consulta de Eventos" target="ocupacionesConsultaEventos"/>
+            <tocitem text="(EU)Últimos Eventos" target="ocupacionesUltimosEventos"/>
+        </tocitem>
+       <tocitem text="(EU)Generación de Planos" target="ocupacionesPlanos"/>
+       <tocitem text="(EU)Consulta de Notificaciones" target="ocupacionesConsultaNotificaciones"/>
+       <tocitem text="(EU)Consulta de Histórico" target="ocupacionesConsultaHistorico"/>
+       <tocitem text="(EU)Tareas Pendientes" target="ocupacionesTareasPendientes"/>
+   	   <tocitem text="(EU)Configuración" target="ocupacionesConfiguracion"/>   	   
+       <tocitem text="(EU)Cambio de Idioma" target="ocupacionesIdiomas"/>
+    </tocitem>    
+</toc>

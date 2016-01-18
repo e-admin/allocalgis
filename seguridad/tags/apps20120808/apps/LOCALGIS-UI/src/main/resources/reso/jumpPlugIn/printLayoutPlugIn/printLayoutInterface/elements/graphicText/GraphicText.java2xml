@@ -1,0 +1,33 @@
+<root>
+	<element xml-name="PrintHeight" java-name="PrintHeight" />
+	<element xml-name="PrintWidth" java-name="PrintWidth" />
+	<element xml-name="PrintX" java-name="PrintX" />
+	<element xml-name="PrintY" java-name="PrintY" />
+	<element xml-name="ScreenHeight" java-name="ScreenHeight" />
+	<element xml-name="ScreenWidth" java-name="ScreenWidth" />
+	<element xml-name="ScreenX" java-name="ScreenX" />
+	<element xml-name="ScreenY" java-name="ScreenY" />
+	<element xml-name="topLeftCornerx" java-name="topLeftCornerx" />
+	<element xml-name="topLeftCornery" java-name="topLeftCornery" />
+	<element xml-name="topRightCornerx" java-name="topRightCornerx" />
+	<element xml-name="topRightCornery" java-name="topRightCornery" />
+	<element xml-name="BottomLeftCornerx" java-name="BottomLeftCornerx" />
+	<element xml-name="BottomLeftCornery" java-name="BottomLeftCornery" />
+	<element xml-name="BottomRightCornerx" java-name="BottomRightCornerx" />
+	<element xml-name="BottomRightCornery" java-name="BottomRightCornery" />
+	<element xml-name="Texte" java-name="Text" />
+	<element xml-name="FontName" java-name="FontName" />
+	<element xml-name="FontStyle" java-name="FontStyle" />
+	<element xml-name="FontSize" java-name="FontSize" />
+	<element xml-name="HorizontalAlignment" java-name="HorizontalAlignment" />
+	<element xml-name="VerticalAlignment" java-name="VerticalAlignment" />
+	<element xml-name="FontColor" java-name="FontColor" />
+	<element xml-name="BackgroundColor" java-name="BackgroundColor" />
+	<element xml-name="BorderColor" java-name="BorderColor" />
+	<element xml-name="BorderThickness" java-name="BorderThickness" />
+	<element xml-name="UpperCase" java-name="UpperCase" />
+	<element xml-name="Underline" java-name="Underline" />
+	<element xml-name="Opaque" java-name="Opaque" />
+	<element xml-name="select" java-name="select" />
+	
+</root>

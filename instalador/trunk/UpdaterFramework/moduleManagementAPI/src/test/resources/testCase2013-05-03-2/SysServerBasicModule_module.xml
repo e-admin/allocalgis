@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <name>Agrupador modulos instalacion basica sys server</name>
+  <version>3.0.0</version>
+  <artifact>
+    <groupId>null</groupId>
+    <artifactId>null</artifactId>
+    <version>null</version>
+    <install>package</install>
+  </artifact>
+  <dependencyInfo>
+    <dependencies>
+      <module>
+        <name>Modulo instalacion/actualizacion LOCALGIS-SERVER-Principal</name>
+        <version>3.0.0</version>
+        <artifact>
+          <groupId>com.localgis.server</groupId>
+          <artifactId>localgis-server-principal</artifactId>
+          <version>3.0</version>
+          <install>sysWAR</install>
+        </artifact>
+      </module>
+      <module>
+        <name>Modulo instalacion/actualizacion LOCALGIS-SERVER-Geopista</name>
+        <version>3.0.0</version>
+        <artifact>
+          <groupId>com.localgis.server</groupId>
+          <artifactId>localgis-server-geopista</artifactId>
+          <version>3.0</version>
+          <install>sysWAR</install>
+        </artifact>
+      </module>
+    </dependencies>
+  </dependencyInfo>
+</module>

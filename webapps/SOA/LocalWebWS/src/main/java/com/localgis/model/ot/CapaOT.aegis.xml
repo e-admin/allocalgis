@@ -1,0 +1,6 @@
+<mappings>
+    <mapping>
+        <property name="subtipos" componentType="com.localgis.model.ot.SubtipoOT"/>
+    </mapping>
+</mappings>
+

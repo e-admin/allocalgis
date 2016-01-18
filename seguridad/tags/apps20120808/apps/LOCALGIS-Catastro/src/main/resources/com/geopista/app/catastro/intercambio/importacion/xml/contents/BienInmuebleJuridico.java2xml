@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <element xml-name="bi" java-name="bienInmueble"/>
+
+	<element xml-name="inft">
+        <element xml-name="dcbl">
+            <element xml-name="vb" java-name="bienInmueble.datosBaseLiquidable.valorBase"/>
+            <element xml-name="cvb" java-name="bienInmueble.datosBaseLiquidable.procedenciaValorBase"/>
+        </element>
+    </element>    
+    <element xml-name="mov">
+        <element xml-name="tmov" java-name="bienInmueble.tipoMovimiento"/>
+    </element>    
+    <element xml-name="lsf">
+        <element xml-name="ltit">
+            <element xml-name="tit" java-name="lstTitulares"/>
+        </element>
+        <element xml-name="lcbi">
+            <element xml-name="cbi" java-name="lstComBienes"/>
+        </element>
+    </element>
+</root>

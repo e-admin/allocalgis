@@ -1,0 +1,1 @@
+266#\J9\PPRO11\bin\j9.exe -jcl:ppro11 -Dfile.encoding=UTF-8  -Dautologin -Xmx32m -Djava.library.path=\LocalGIS3 -Dapp_path=\LocalGIS3 -cp "\LocalGIS\all.jar;\LocalGIS3;\LocalGIS3\localgis-apps-movilidad.jar" es.satec.localgismobile.core.LocalGISMobile

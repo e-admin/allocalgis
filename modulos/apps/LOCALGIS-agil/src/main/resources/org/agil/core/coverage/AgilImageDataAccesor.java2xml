@@ -1,0 +1,4 @@
+<!DOCTYPE root>
+<root>
+	<element java-name="ImagePath" xml-name="path" />
+</root>

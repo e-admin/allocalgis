@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<documento>
+    <encabezadoI18N>Informe.encabezado</encabezadoI18N>
+    <piepaginaI18N>Informe.piepagina</piepaginaI18N>
+    <CabeceraI18N>Informe.cabecera</CabeceraI18N>
+    <Plano width="250" height="250"/>
+    <PieI18N>Informe.pie</PieI18N>
+    <p/>
+    <p/>
+    <SuperTituloI18N>Informe.SuperTituloDatos</SuperTituloI18N>
+    <p/>
+    <TituloI18N>Informe.SuperTituloDatosExpediente</TituloI18N>
+    <p/>
+    <TituloDetalleI18N>Informe.TituloDetalleNumExpediente</TituloDetalleI18N><Detalle tipo="campo">getNumExpediente</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleEstado</TituloDetalleI18N><Detalle tipo="campo">getEstadoString</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleServicioEncargado</TituloDetalleI18N><Detalle tipo="campo">getServicioEncargado</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleTipoTramitación</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getTipoTramitacion" clase="Domain" domsource="TiposTramitacion">getIdTramitacion</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleAsunto</TituloDetalleI18N><Detalle tipo="campo">getAsunto</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleFechaApertura</TituloDetalleI18N><Detalle tipo="campo">getFechaAperturaString</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleFormaInicio</TituloDetalleI18N><Detalle tipo="campo">getFormaInicio</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSilencioAdministrativo</TituloDetalleI18N><Detalle tipo="campo" clase="IBool">getSilencioAdministrativo</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleNumFolios</TituloDetalleI18N><Detalle tipo="campo">getNumFolios</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleResponsable</TituloDetalleI18N><Detalle tipo="campo">getResponsable</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetallePlazoVencimiento</TituloDetalleI18N><Detalle tipo="campo" clase="Date">getPlazoVencimiento</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSilencioNumDias</TituloDetalleI18N><Detalle tipo="campo">getNumDias</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleFinalizacion</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getTipoFinalizacion" clase="IBool">getIdFinalizacion</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleObservaciones</TituloDetalleI18N><Detalle tipo="campo">getObservaciones</Detalle>
+    <p/>
+	<p/>
+    <SuperTituloI18N>Informe.SuperTituloSolicitud</SuperTituloI18N>
+    <p/>
+    <TituloI18N>Informe.TituloSolicitudDatos</TituloI18N>
+    <p/>
+    <TituloDetalleI18N>Informe.TituloDetalleSDTipo</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion" clase="Domain" domsource="TiposOcupacion">getTipoOcupacion</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDFechaSolicitud</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud" clase="Date">getFecha</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNecesitaObra</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion" clase="Bool">getNecesitaObra</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDExpedienteObra</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion">getNumExpediente</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDMotivo</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud">getMotivo</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDAsunto</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud">getAsunto</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDAreaOcupacion</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion">getAreaOcupacion</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDHoraInicio</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion" clase="Hora">getHoraInicio</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDHoraFin</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion" clase="Hora">getHoraFin</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNumeroMesas</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion">getNumMesas</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNumeroSillas</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion">getNumSillas</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDAfectaAcera</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion" clase="Bool">getAfectaAcera</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDAfectaCalzada</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion" clase="Bool">getAfectaCalzada</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDAfectaAparcamiento</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion" clase="Bool">getAfectaAparcamiento</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDM2Acera</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion">getM2acera</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDM2Calzada</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion">getM2calzada</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDM2Aparcamiento</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getDatosOcupacion">getM2aparcamiento</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDObservaciones</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud">getObservaciones</Detalle>
+    <p/>
+    <TituloI18N>Informe.TituloSolicitudEmplazamiento</TituloI18N>
+    <p/>
+    <TituloDetalleI18N>Informe.TituloDetalleSETipoVia</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud">getTipoViaAfecta</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSENombreVia</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud">getNombreViaAfecta</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSENumero</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud">getNumeroViaAfecta</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSEPortal</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud">getPortalAfecta</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSEPlanta</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud">getPlantaAfecta</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSELetra</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud">getLetraAfecta</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSECP</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud">getCpostalAfecta</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSEMunicipio</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud">getMunicipioAfecta</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSEProvincia</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud">getProvinciaAfecta</Detalle>
+    <p/>
+    <TituloI18N>Informe.TituloAnexos</TituloI18N>
+    <VectorDetalle tipo="vector" source="getSolicitud:getAnexos">
+	    <p/>
+    	<TituloDetalleI18N>Informe.TituloDetalleAnexoFichero</TituloDetalleI18N><Detalle tipo="campo">getFileName</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleAnexoTipo</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getTipoAnexo" clase="Domain" domsource="DocumentacionAnexoObraMayor">getIdTipoAnexo</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleAnexoDescripcion</TituloDetalleI18N><Detalle tipo="campo">getObservacion</Detalle>
+	</VectorDetalle>
+    <p/>
+    <p/>
+    <TituloI18N>Informe.TituloSolicitante</TituloI18N>
+    <p/>
+    <TituloI18N>Informe.TituloSolicitanteDatosPersonales</TituloI18N>
+    <TituloDetalleI18N>Informe.TituloDetalleSDPDNI</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario">getDniCif</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDPNombre</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario">getNombre</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDPApellido1</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario">getApellido1</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDPApellido2</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario">getApellido2</Detalle>
+    <p/>
+    <TituloI18N>Informe.TituloSolicitanteDatosNotificacion</TituloI18N>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNViaNotificacion</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion:getViaNotificacion" clase="Domain" domsource="ViasNotificacion">getIdViaNotificacion</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNFax</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getFax</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNTelefono</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getTelefono</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNMovil</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getMovil</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNEmail</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getEmail</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNTipoVia</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getTipoVia</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNNombre</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getNombreVia</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNNumero</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getNumeroVia</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNPlanta</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getPlanta</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNLetra</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getLetra</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNPortal</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getPortal</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNEscalera</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getEscalera</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNCP</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getCpostal</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNMunicipio</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getMunicipio</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNProvincia</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion">getProvincia</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleSDNNotificarSolicitante</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getPropietario:getDatosNotificacion" clase="IBool">getNotificar</Detalle>
+    <p/>
+    <TituloI18N>Informe.TituloRepresentante</TituloI18N>
+    <p/>
+    <TituloI18N>Informe.TituloRepresentanteDatosPersonales</TituloI18N>
+    <TituloDetalleI18N>Informe.TituloDetalleRDPDNI</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante">getDniCif</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDPNombre</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante">getNombre</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDPApellido1</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante">getApellido1</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDPApellido2</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante">getApellido2</Detalle>
+    <p/>
+    <TituloI18N>Informe.TituloRepresentanteDatosNotificacion</TituloI18N>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNViaNotificacion</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion:getViaNotificacion" clase="Domain" domsource="ViasNotificacion">getIdViaNotificacion</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNFax</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getFax</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNTelefono</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getTelefono</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNMovil</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getMovil</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNEmail</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getEmail</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNTipoVia</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getTipoVia</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNNombre</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getNombreVia</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNNumero</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getNumeroVia</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNPlanta</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getPlanta</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNLetra</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getLetra</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNPortal</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getPortal</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNEscalera</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getEscalera</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNCP</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getCpostal</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNMunicipio</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getMunicipio</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNProvincia</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion">getProvincia</Detalle>
+    <TituloDetalleI18N>Informe.TituloDetalleRDNNotificarRepresentante</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getSolicitud:getRepresentante:getDatosNotificacion" clase="IBool">getNotificar</Detalle>
+    <p/>
+    <p/>
+    <SuperTituloI18N>Informe.SuperTituloCallesAfectadas</SuperTituloI18N>
+    <VectorDetalle tipo="vector" source="getCallesAfec">
+    <p/>
+    	<TituloDetalleI18N>Informe.TituloDetalleCATipoVia</TituloDetalleI18N><Detalle tipo="campo">getTipoViaIne</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleCANombre</TituloDetalleI18N><Detalle tipo="campo">getNombre</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleCANumero</TituloDetalleI18N><Detalle tipo="campo">getNumero</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleCAComentario</TituloDetalleI18N><Detalle tipo="campo">getComentario</Detalle>
+	</VectorDetalle>
+    <p/>
+    <p/>
+    <SuperTituloI18N>Informe.SuperTituloNotificaciones</SuperTituloI18N>
+    <VectorDetalle tipo="vector" source="getNotificaciones">
+	    <p/>
+    	<TituloDetalleI18N>Informe.TituloDetalleNotificacionTipoNotificacoin</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getTipoNotificacion" clase="Domain" domsource="DocumentacionTipoNotificacion">getIdTipoNotificacion</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleNotificacionEstado</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getEstadoNotificacion" clase="Domain" domsource="DocumentacionEstadoNotificacion">getIdEstado</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleNotificacionFechaVencimiento</TituloDetalleI18N><Detalle tipo="campo" clase="Date">getPlazoVencimiento</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleNotificacionDNI</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getPersona">getDniCif</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleNotificacionFechaNotificacion</TituloDetalleI18N><Detalle tipo="campo" clase="Date">getFechaNotificacion</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleNotificacionFechaReenvio</TituloDetalleI18N><Detalle tipo="campo" clase="Date">getFecha_reenvio</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleNotificacionNombre</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getPersona">getNombre</Detalle>
+		<TituloDetalleI18N>Informe.TituloDetalleNotificacionApellido1</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getPersona">getApellido1</Detalle>
+		<TituloDetalleI18N>Informe.TituloDetalleNotificacionApellido2</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getPersona">getApellido2</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleNotificacionTipoCalle</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getPersona:getDatosNotificacion">getTipoVia</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleNotificacionCalle</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getPersona:getDatosNotificacion">getNombreVia</Detalle>
+		<TituloDetalleI18N>Informe.TituloDetalleNotificacionNumero</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getPersona:getDatosNotificacion">getNumeroVia</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleNotificacionCP</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getPersona:getDatosNotificacion">getCpostal</Detalle>
+		<TituloDetalleI18N>Informe.TituloDetalleNotificacionMunicipio</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getPersona:getDatosNotificacion">getMunicipio</Detalle>
+		<TituloDetalleI18N>Informe.TituloDetalleNotificacionProvincia</TituloDetalleI18N><Detalle tipo="DetalleCampo" campo="getPersona:getDatosNotificacion">getProvincia</Detalle>
+    	<TituloDetalleI18N>Informe.TituloDetalleNotificacionEntregadoA</TituloDetalleI18N><Detalle tipo="campo">getEntregadaA</Detalle>
+	</VectorDetalle>
+
+</documento>

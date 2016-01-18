@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+	<display-name>administracion</display-name>
+	
+	<filter>
+		<filter-name>FiltroSeguridad</filter-name>
+		<filter-class>com.geopista.server.control.filtros.FiltroSeguridad</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>FiltroSeguridad</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<listener>
+  		<listener-class>
+  			com.localgis.server.LocalgisSerlvetContextListener
+  		</listener-class>
+  	</listener>
+  	
+  	<servlet>
+    	<servlet-name>autorun</servlet-name>
+    	<servlet-class>com.geopista.server.ServerContext</servlet-class>
+    	<load-on-startup>1</load-on-startup>
+  	</servlet>
+
+	<servlet>
+		<servlet-name>CServletIntentos</servlet-name>
+		<servlet-class>com.geopista.server.control.web.CServletIntentos</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.geopista.server.control.web.Login</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>GetPerfil</servlet-name>
+		<servlet-class>com.geopista.server.control.web.GetPerfil</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>com.geopista.server.control.web.Logout</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateRol</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.UpdateRol</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteRol</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.DeleteRol</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>NewRol</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.NewRol</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateUser</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.UpdateUser</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>NewUser</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.NewUser</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>NewDomainNode</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.NewDomainNode</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>NewDomain</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.NewDomain</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteDomainNode</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.DeleteDomainNode</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+    <servlet>
+        <servlet-name>DeleteDomain</servlet-name>
+        <servlet-class>com.geopista.server.administrador.web.DeleteDomain</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+	<servlet>
+		<servlet-name>UpdateDomainNode</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.UpdateDomainNode</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>GetSesions</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.GetSesions</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ManageSessions</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.ManageSessions</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DeleteUser</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.DeleteUser</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>NewEntidad</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.NewEntidad</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeleteEntidad</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.DeleteEntidad</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>UpdateEntidad</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.UpdateEntidad</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>NewEntidadMunicipio</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.NewEntidadMunicipio</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeleteEntidadMunicipio</servlet-name>
+		<servlet-class>com.geopista.server.administrador.web.DeleteEntidadMunicipio</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CServletDB</servlet-name>
+		<servlet-class>com.geopista.sql.CServletDB</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+    <servlet>
+		<servlet-name>HeartBeat</servlet-name>
+		<servlet-class>com.geopista.server.control.web.HeartBeat</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>SigmServlet</servlet-name>
+		<servlet-class>com.localgis.server.sigm.SigmServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetPerfil</servlet-name>
+		<url-pattern>/GetPerfil</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CServletIntentos</servlet-name>
+		<url-pattern>/CServletIntentos</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateRol</servlet-name>
+		<url-pattern>/UpdateRol</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DeleteRol</servlet-name>
+		<url-pattern>/DeleteRol</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>NewRol</servlet-name>
+		<url-pattern>/NewRol</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateUser</servlet-name>
+		<url-pattern>/UpdateUser</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NewUser</servlet-name>
+		<url-pattern>/NewUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>NewDomainNode</servlet-name>
+		<url-pattern>/NewDomainNode</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NewDomain</servlet-name>
+		<url-pattern>/NewDomain</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet-mapping>
+		<servlet-name>GetSesions</servlet-name>
+		<url-pattern>/GetSesions</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ManageSessions</servlet-name>
+		<url-pattern>/ManageSessions</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DeleteDomainNode</servlet-name>
+		<url-pattern>/DeleteDomainNode</url-pattern>
+	</servlet-mapping>
+
+    <servlet-mapping>
+            <servlet-name>DeleteDomain</servlet-name>
+            <url-pattern>/DeleteDomain</url-pattern>
+        </servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UpdateDomainNode</servlet-name>
+		<url-pattern>/UpdateDomainNode</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DeleteUser</servlet-name>
+		<url-pattern>/DeleteUser</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>NewEntidad</servlet-name>
+		<url-pattern>/NewEntidad</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DeleteEntidad</servlet-name>
+		<url-pattern>/DeleteEntidad</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UpdateEntidad</servlet-name>
+		<url-pattern>/UpdateEntidad</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>NewEntidadMunicipio</servlet-name>
+		<url-pattern>/NewEntidadMunicipio</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteEntidadMunicipio</servlet-name>
+		<url-pattern>/DeleteEntidadMunicipio</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>CServletDB</servlet-name>
+		<url-pattern>/CServletDB</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>HeartBeat</servlet-name>
+		<url-pattern>/HeartBeat</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>SigmServlet</servlet-name>
+		<url-pattern>/SigmServlet</url-pattern>
+	</servlet-mapping>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JAAS Role</web-resource-name>
+			<url-pattern>/Login/*</url-pattern>
+			<url-pattern>/GetPermission/*</url-pattern>
+			<url-pattern>/UpdateRol/*</url-pattern>
+			<url-pattern>/DeleteRol/*</url-pattern>
+			<url-pattern>/NewRol/*</url-pattern>
+			<url-pattern>/UpdateUser/*</url-pattern>
+			<url-pattern>/NewUser/*</url-pattern>
+			<url-pattern>/DeleteUser/*</url-pattern>
+			<url-pattern>/NewDomainNode/*</url-pattern>
+			<url-pattern>/NewDomain/*</url-pattern>
+			<url-pattern>/GetSesions/*</url-pattern>
+			<url-pattern>/ManageSessions/*</url-pattern>
+			<url-pattern>/DeleteDomainNode/*</url-pattern>
+			<url-pattern>/UpdateDomainNode/*</url-pattern>
+            <url-pattern>/DeleteDomain/*</url-pattern>
+            <url-pattern>/NewEntidad/*</url-pattern>
+            <url-pattern>/DeleteEntidad/*</url-pattern>
+            <url-pattern>/UpdateEntidad/*</url-pattern>
+            <url-pattern>/NewEntidadMunicipio/*</url-pattern>
+            <url-pattern>/DeleteEntidadMunicipio/*</url-pattern>
+            <url-pattern>/SigmServlet/*</url-pattern>	
+			<http-method>POST</http-method>
+			<http-method>GET</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>Geopista.Administracion.Login</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JAAS Role</web-resource-name>
+			<url-pattern>/CServletDB/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>Geopista.Administracion.View</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JAAS Role</web-resource-name>
+			<url-pattern>/GetPerfil/*</url-pattern>
+			<url-pattern>/Logout/*</url-pattern>
+
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>Geopista.Common.Actions</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>Jetty Demo Realm</realm-name>
+	</login-config>
+
+	<resource-ref>
+     	<description>Localgis</description>
+     	<res-ref-name>jdbc/localgis</res-ref-name>
+     	<res-type>javax.sql.DataSource</res-type>
+     	<res-auth>Container</res-auth>
+  	</resource-ref>
+  	
+</web-app>
+
+

@@ -1,0 +1,48 @@
+-- IP (Centros de Extincion de Incendios)
+--
+-- Sustitucion de la select query
+--
+select selectquery  from queries
+where id_layer=(select id_layer from layers where name='IP')
+
+select replace(selectquery,'"eiel_c_ip"."GEOMETRY"','transform("eiel_c_ip"."GEOMETRY" , ?T) as "GEOMETRY"') from queries
+where id_layer=(select id_layer from layers where name='IP')
+
+update queries set selectquery=(select replace(selectquery,'"eiel_c_ip"."GEOMETRY",','transform("eiel_c_ip"."GEOMETRY" , ?T) as "GEOMETRY"') from queries
+where id_layer=(select id_layer from layers where name='IP')) 
+where id_layer=(select id_layer from layers where name='IP');
+
+
+
+
+--
+-- Sustitucion de la update query
+--
+select updatequery  from queries
+where id_layer=(select id_layer from layers where name='IP')
+
+select replace(updatequery,'=GeometryFromText(?1,?S)','=transform(GeometryFromText(text(?1),?S), ?T)') from queries
+where id_layer=(select id_layer from layers where name='IP')
+
+update queries set updatequery=(select replace(updatequery,'=GeometryFromText(?1,?S)','=transform(GeometryFromText(text(?1),?S), ?T)') from queries
+where id_layer=(select id_layer from layers where name='IP')) 
+where id_layer=(select id_layer from layers where name='IP')')
+
+
+
+
+--
+-- Sustitucion de la insert query
+--
+select insertquery  from queries
+where id_layer=(select id_layer from layers where name='IP')
+
+select replace(insertquery,'(GeometryFromText(?1,?S)','(transform(GeometryFromText(text(?1),?S), ?T)') from queries
+where id_layer=(select id_layer from layers where name='IP')
+
+update queries set insertquery=(select replace(insertquery,'(GeometryFromText(?1,?S)','(transform(GeometryFromText(text(?1),?S), ?T)') from queries
+where id_layer=(select id_layer from layers where name='IP')) 
+where id_layer=(select id_layer from layers where name='IP');
+
+
+

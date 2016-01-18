@@ -1,0 +1,1327 @@
+/*
+ * Copyright (C) 2005 - 2007 JasperSoft Corporation.  All rights reserved. 
+ * http://www.jaspersoft.com.
+ *
+ * Unless you have purchased a commercial license agreement from JasperSoft,
+ * the following license terms apply:
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as published by
+ * the Free Software Foundation.
+ *
+ * This program is distributed WITHOUT ANY WARRANTY; and without the
+ * implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, see http://www.gnu.org/licenses/gpl.txt
+ * or write to:
+ *
+ * Free Software Foundation, Inc.,
+ * 59 Temple Place - Suite 330,
+ * Boston, MA  USA  02111-1307
+ *
+ *
+ *
+ *
+ * CrosstabWizardDialog.java
+ * 
+ * Created on January 27, 2006, 12:11 PM
+ *
+ */
+
+package it.businesslogic.ireport.crosstab.gui;
+
+import it.businesslogic.ireport.CrosstabReportElement;
+import it.businesslogic.ireport.Report;
+import it.businesslogic.ireport.SubDataset;
+import it.businesslogic.ireport.TextFieldReportElement;
+import it.businesslogic.ireport.chart.Dataset;
+import it.businesslogic.ireport.crosstab.CrosstabCell;
+import it.businesslogic.ireport.crosstab.CrosstabColumnGroup;
+import it.businesslogic.ireport.crosstab.CrosstabGroup;
+import it.businesslogic.ireport.crosstab.CrosstabRowGroup;
+import it.businesslogic.ireport.crosstab.Measure;
+import it.businesslogic.ireport.gui.subdataset.SubDatasetDialog;
+import it.businesslogic.ireport.util.Misc;
+import java.awt.Color;
+import java.awt.Point;
+import java.util.Vector;
+import javax.swing.JLabel;
+import it.businesslogic.ireport.util.I18n;
+
+/**
+ *
+ * @author  gtoffoli
+ */
+public class CrosstabWizardDialog extends javax.swing.JDialog {
+    
+    private CrosstabReportElement crosstabReportElement = null;
+    
+    private SubDataset crosstabSubDataset = null;
+    private int currentStep = -1;
+    
+    private int dialogResult = javax.swing.JOptionPane.CLOSED_OPTION;
+    
+    private Report report = null;
+    
+    private Vector stepsPanels = new Vector();
+    private Vector stepsLabels = new Vector();
+    
+    /** Creates new form NewJDialog */
+    public CrosstabWizardDialog(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
+        initComponents();
+        
+        stepsPanels.add(jPanelStep0);
+        stepsPanels.add(jPanelStep1);
+        stepsPanels.add(jPanelStep2);
+        stepsPanels.add(jPanelStep3);
+        stepsPanels.add(jPanelStep4);
+        stepsPanels.add(jPanelStep5);
+        
+        stepsLabels.add(jLabelStep1);
+        stepsLabels.add(jLabelStep2);
+        stepsLabels.add(jLabelStep3);
+        stepsLabels.add(jLabelStep4);
+        stepsLabels.add(jLabelStep5);
+        stepsLabels.add(jLabelStep6);
+        
+        groupByFieldPanel2.addVoidItem();
+        groupByFieldPanel4.addVoidItem();
+        
+        groupByFieldPanel1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                groupByFieldPanel1CancelActionPerformed(evt);
+            }
+        });
+        
+        groupByFieldPanel2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                groupByFieldPanel2CancelActionPerformed(evt);
+            }
+        });
+        
+        groupByFieldPanel3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                groupByFieldPanel3CancelActionPerformed(evt);
+            }
+        });
+        
+        groupByFieldPanel4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                groupByFieldPanel4CancelActionPerformed(evt);
+            }
+        });
+        
+        applyI18n();
+        goNext();
+        
+        pack();
+        Misc.centerFrame(this);
+    }
+    
+    public void groupByFieldPanel1CancelActionPerformed(java.awt.event.ActionEvent evt) {
+        if (getCurrentStep() == 1) updateButtons();
+    }
+    
+    public void groupByFieldPanel2CancelActionPerformed(java.awt.event.ActionEvent evt) {
+        
+    }
+    
+    public void groupByFieldPanel3CancelActionPerformed(java.awt.event.ActionEvent evt) {
+        if (getCurrentStep() == 2) updateButtons();
+    }
+    
+    public void groupByFieldPanel4CancelActionPerformed(java.awt.event.ActionEvent evt) {
+    }
+    
+    /** This method is called from within the constructor to
+     * initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is
+     * always regenerated by the Form Editor.
+     */
+    // <editor-fold defaultstate="collapsed" desc=" Generated Code ">//GEN-BEGIN:initComponents
+    private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
+
+        jPanelBase = new javax.swing.JPanel();
+        jPanelSteps = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabelStep1 = new javax.swing.JLabel();
+        jLabelStep2 = new javax.swing.JLabel();
+        jLabelStep3 = new javax.swing.JLabel();
+        jLabelStep4 = new javax.swing.JLabel();
+        jLabelStep5 = new javax.swing.JLabel();
+        jLabelStep6 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel7 = new javax.swing.JLabel();
+        jPanelContent = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabelStepDescription = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        jPanelStepContainer = new javax.swing.JPanel();
+        jPanelStep0 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jComboBoxSubdataset = new javax.swing.JComboBox();
+        jButtonNewSubDataset = new javax.swing.JButton();
+        jPanelStep1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        groupByFieldPanel1 = new it.businesslogic.ireport.crosstab.gui.GroupByFieldPanel();
+        groupByFieldPanel2 = new it.businesslogic.ireport.crosstab.gui.GroupByFieldPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanelStep2 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        groupByFieldPanel3 = new it.businesslogic.ireport.crosstab.gui.GroupByFieldPanel();
+        groupByFieldPanel4 = new it.businesslogic.ireport.crosstab.gui.GroupByFieldPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanelStep3 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabelDetailField = new javax.swing.JLabel();
+        jComboBoxDetailField = new javax.swing.JComboBox();
+        jLabelDetailField1 = new javax.swing.JLabel();
+        jComboBoxDetailFieldFunction = new javax.swing.JComboBox();
+        jPanel5 = new javax.swing.JPanel();
+        jPanelStep4 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jCheckBoxTotalRows = new javax.swing.JCheckBox();
+        jCheckBoxTotalColumns = new javax.swing.JCheckBox();
+        jCheckBoxPrintGrid = new javax.swing.JCheckBox();
+        jPanel6 = new javax.swing.JPanel();
+        jPanelStep5 = new javax.swing.JPanel();
+        jLabelResult = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        jPanelContentButtons = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jButtonPrev = new javax.swing.JButton();
+        jButtonNext = new javax.swing.JButton();
+        jButtonFinish = new javax.swing.JButton();
+        jButtonCancel = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jPanelBase.setLayout(new java.awt.GridBagLayout());
+
+        jPanelSteps.setLayout(new java.awt.GridBagLayout());
+
+        jLabel1.setText("Steps");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(8, 8, 0, 0);
+        jPanelSteps.add(jLabel1, gridBagConstraints);
+
+        jLabelStep1.setText("1. SubDataset selection");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 0, 0);
+        jPanelSteps.add(jLabelStep1, gridBagConstraints);
+
+        jLabelStep2.setText("2. Rows");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 0, 0);
+        jPanelSteps.add(jLabelStep2, gridBagConstraints);
+
+        jLabelStep3.setText("3. Columns");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 0, 0);
+        jPanelSteps.add(jLabelStep3, gridBagConstraints);
+
+        jLabelStep4.setText("4. Detail");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 0, 0);
+        jPanelSteps.add(jLabelStep4, gridBagConstraints);
+
+        jLabelStep5.setText("5. Layout");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 0, 0);
+        jPanelSteps.add(jLabelStep5, gridBagConstraints);
+
+        jLabelStep6.setText("6. Finish");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 0, 0);
+        jPanelSteps.add(jLabelStep6, gridBagConstraints);
+
+        jSeparator2.setBackground(new java.awt.Color(204, 204, 255));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator2.setMaximumSize(new java.awt.Dimension(32767, 2));
+        jSeparator2.setMinimumSize(new java.awt.Dimension(2, 2));
+        jSeparator2.setPreferredSize(new java.awt.Dimension(1, 2));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        jPanelSteps.add(jSeparator2, gridBagConstraints);
+
+        jLabel7.setBackground(new java.awt.Color(207, 217, 231));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/it/businesslogic/ireport/icons/wizard.jpg")));
+        jLabel7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel7.setOpaque(true);
+        jLabel7.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridheight = 20;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanelSteps.add(jLabel7, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.weighty = 1.0;
+        jPanelBase.add(jPanelSteps, gridBagConstraints);
+
+        jPanelContent.setLayout(new java.awt.GridBagLayout());
+
+        jPanel1.setLayout(new java.awt.GridBagLayout());
+
+        jPanel1.setMinimumSize(new java.awt.Dimension(40, 40));
+        jPanel1.setPreferredSize(new java.awt.Dimension(280, 40));
+        jLabelStepDescription.setText("Steps");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(2, 8, 0, 0);
+        jPanel1.add(jLabelStepDescription, gridBagConstraints);
+
+        jSeparator4.setBackground(new java.awt.Color(204, 204, 255));
+        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator4.setMaximumSize(new java.awt.Dimension(32767, 2));
+        jSeparator4.setMinimumSize(new java.awt.Dimension(2, 2));
+        jSeparator4.setPreferredSize(new java.awt.Dimension(1, 2));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(4, 4, 4, 4);
+        jPanel1.add(jSeparator4, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
+        gridBagConstraints.weightx = 1.0;
+        jPanelContent.add(jPanel1, gridBagConstraints);
+
+        jPanelStepContainer.setLayout(new java.awt.BorderLayout());
+
+        jPanelStepContainer.setPreferredSize(new java.awt.Dimension(220, 180));
+        jPanelStep0.setLayout(new java.awt.GridBagLayout());
+
+        jLabel2.setText("Available subdataset");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 0, 8);
+        jPanelStep0.add(jLabel2, gridBagConstraints);
+
+        jComboBoxSubdataset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxSubdatasetActionPerformed(evt);
+            }
+        });
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 0, 8);
+        jPanelStep0.add(jComboBoxSubdataset, gridBagConstraints);
+
+        jButtonNewSubDataset.setText("Create new subdataset");
+        jButtonNewSubDataset.setActionCommand("Create a new subdataset");
+        jButtonNewSubDataset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonNewSubDatasetActionPerformed(evt);
+            }
+        });
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.insets = new java.awt.Insets(8, 8, 0, 8);
+        jPanelStep0.add(jButtonNewSubDataset, gridBagConstraints);
+
+        jPanelStepContainer.add(jPanelStep0, java.awt.BorderLayout.CENTER);
+
+        jPanelStep1.setLayout(new java.awt.GridBagLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/it/businesslogic/ireport/icons/crosstab/wizard_rows.png")));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        jPanelStep1.add(jLabel3, gridBagConstraints);
+
+        groupByFieldPanel1.setTitle("Row group 1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(4, 4, 4, 4);
+        jPanelStep1.add(groupByFieldPanel1, gridBagConstraints);
+
+        groupByFieldPanel2.setTitle("Row group 2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(4, 4, 4, 4);
+        jPanelStep1.add(groupByFieldPanel2, gridBagConstraints);
+
+        jPanel3.setLayout(new java.awt.GridBagLayout());
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.weighty = 1.0;
+        jPanelStep1.add(jPanel3, gridBagConstraints);
+
+        jPanelStepContainer.add(jPanelStep1, java.awt.BorderLayout.CENTER);
+
+        jPanelStep2.setLayout(new java.awt.GridBagLayout());
+
+        jPanelStep2.setMinimumSize(new java.awt.Dimension(250, 231));
+        jPanelStep2.setOpaque(false);
+        jPanelStep2.setPreferredSize(new java.awt.Dimension(250, 250));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/it/businesslogic/ireport/icons/crosstab/wizard_columns.png")));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        jPanelStep2.add(jLabel4, gridBagConstraints);
+
+        groupByFieldPanel3.setTitle("Column group 1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(4, 4, 4, 4);
+        jPanelStep2.add(groupByFieldPanel3, gridBagConstraints);
+
+        groupByFieldPanel4.setTitle("Column group 2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(4, 4, 4, 4);
+        jPanelStep2.add(groupByFieldPanel4, gridBagConstraints);
+
+        jPanel4.setLayout(new java.awt.GridBagLayout());
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.weighty = 1.0;
+        jPanelStep2.add(jPanel4, gridBagConstraints);
+
+        jPanelStepContainer.add(jPanelStep2, java.awt.BorderLayout.CENTER);
+
+        jPanelStep3.setLayout(new java.awt.GridBagLayout());
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/it/businesslogic/ireport/icons/crosstab/wizard_details.png")));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridwidth = 2;
+        jPanelStep3.add(jLabel5, gridBagConstraints);
+
+        jLabelDetailField.setText("Detail field");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 4, 0, 0);
+        jPanelStep3.add(jLabelDetailField, gridBagConstraints);
+
+        jComboBoxDetailField.setPreferredSize(new java.awt.Dimension(55, 20));
+        jComboBoxDetailField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxDetailFieldActionPerformed(evt);
+            }
+        });
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 4, 0, 4);
+        jPanelStep3.add(jComboBoxDetailField, gridBagConstraints);
+
+        jLabelDetailField1.setText("Function");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        gridBagConstraints.insets = new java.awt.Insets(4, 4, 0, 0);
+        jPanelStep3.add(jLabelDetailField1, gridBagConstraints);
+
+        jComboBoxDetailFieldFunction.setPreferredSize(new java.awt.Dimension(55, 20));
+        jComboBoxDetailFieldFunction.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxDetailFieldActionPerformed1(evt);
+            }
+        });
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(4, 4, 0, 4);
+        jPanelStep3.add(jComboBoxDetailFieldFunction, gridBagConstraints);
+
+        jPanel5.setLayout(new java.awt.GridBagLayout());
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.weighty = 1.0;
+        jPanelStep3.add(jPanel5, gridBagConstraints);
+
+        jPanelStepContainer.add(jPanelStep3, java.awt.BorderLayout.CENTER);
+
+        jPanelStep4.setLayout(new java.awt.GridBagLayout());
+
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/it/businesslogic/ireport/icons/crosstab/wizard_totals.png")));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        jPanelStep4.add(jLabel6, gridBagConstraints);
+
+        jCheckBoxTotalRows.setSelected(true);
+        jCheckBoxTotalRows.setText("Add row group totals");
+        jCheckBoxTotalRows.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        jCheckBoxTotalRows.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(8, 8, 8, 8);
+        jPanelStep4.add(jCheckBoxTotalRows, gridBagConstraints);
+
+        jCheckBoxTotalColumns.setSelected(true);
+        jCheckBoxTotalColumns.setText("Add column group totals");
+        jCheckBoxTotalColumns.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        jCheckBoxTotalColumns.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(0, 8, 8, 8);
+        jPanelStep4.add(jCheckBoxTotalColumns, gridBagConstraints);
+
+        jCheckBoxPrintGrid.setSelected(true);
+        jCheckBoxPrintGrid.setText("Show grid lines");
+        jCheckBoxPrintGrid.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        jCheckBoxPrintGrid.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(8, 8, 8, 8);
+        jPanelStep4.add(jCheckBoxPrintGrid, gridBagConstraints);
+
+        jPanel6.setLayout(new java.awt.GridBagLayout());
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanelStep4.add(jPanel6, gridBagConstraints);
+
+        jPanelStepContainer.add(jPanelStep4, java.awt.BorderLayout.CENTER);
+
+        jPanelStep5.setLayout(new java.awt.GridBagLayout());
+
+        jLabelResult.setText("  ");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        jPanelStep5.add(jLabelResult, gridBagConstraints);
+
+        jPanelStepContainer.add(jPanelStep5, java.awt.BorderLayout.CENTER);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanelContent.add(jPanelStepContainer, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanelBase.add(jPanelContent, gridBagConstraints);
+
+        jSeparator3.setBackground(new java.awt.Color(204, 204, 255));
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator3.setMaximumSize(new java.awt.Dimension(32767, 2));
+        jSeparator3.setMinimumSize(new java.awt.Dimension(2, 2));
+        jSeparator3.setPreferredSize(new java.awt.Dimension(1, 2));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanelBase.add(jSeparator3, gridBagConstraints);
+
+        jPanelContentButtons.setLayout(new java.awt.GridBagLayout());
+
+        jPanelContentButtons.setMinimumSize(new java.awt.Dimension(10, 30));
+        jPanelContentButtons.setPreferredSize(new java.awt.Dimension(10, 40));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        jPanelContentButtons.add(jPanel2, gridBagConstraints);
+
+        jButtonPrev.setText("< Prev");
+        jButtonPrev.setEnabled(false);
+        jButtonPrev.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPrevActionPerformed(evt);
+            }
+        });
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(8, 2, 8, 2);
+        jPanelContentButtons.add(jButtonPrev, gridBagConstraints);
+
+        jButtonNext.setText("Next >");
+        jButtonNext.setEnabled(false);
+        jButtonNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonNextActionPerformed(evt);
+            }
+        });
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(8, 2, 8, 2);
+        jPanelContentButtons.add(jButtonNext, gridBagConstraints);
+
+        jButtonFinish.setText("Finish");
+        jButtonFinish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFinishActionPerformed(evt);
+            }
+        });
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(8, 2, 8, 2);
+        jPanelContentButtons.add(jButtonFinish, gridBagConstraints);
+
+        jButtonCancel.setText("Cancel");
+        jButtonCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelActionPerformed(evt);
+            }
+        });
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(8, 2, 8, 4);
+        jPanelContentButtons.add(jButtonCancel, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        jPanelBase.add(jPanelContentButtons, gridBagConstraints);
+
+        getContentPane().add(jPanelBase, java.awt.BorderLayout.CENTER);
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    public void applyStandardBlackBox(CrosstabCell cell)
+    {
+        cell.getBox().setRightBorderColor(Color.BLACK);
+        cell.getBox().setRightBorder("1Point");
+        cell.getBox().setBottomBorderColor(Color.BLACK);
+        cell.getBox().setBottomBorder("1Point"); 
+    }
+    
+    public void addTextfieldElement(CrosstabCell cell, String expression, String expressionClass)
+    {
+        TextFieldReportElement tf = new TextFieldReportElement(0,0,cell.getWidth(),cell.getHeight());
+        tf.setRelativePosition(new Point(0,0));
+        tf.setCell(cell);
+        tf.setText( expression );
+        tf.setMatchingClassExpression( expressionClass , true);
+        tf.setVerticalAlign("Middle");
+        tf.setAlign("Center");
+        getCrosstabReportElement().getElements().add(tf);
+    }
+    
+    /**
+     * This method is used to avoid similar names for group and measures.
+     * If add = 0, no suffix is appended if the name is unique.
+     * Return baseName if baseName is unique, otherwise baseNameX where X > 0 
+     */
+    public String getGroupMeasureName(String baseName, int add)
+    {
+        String name = baseName + ((add == 0) ? "" : ""+add);
+        add++;
+        
+        for (int i=0; i<getCrosstabReportElement().getRowGroups().size(); ++i)
+        {
+            CrosstabGroup cg = (CrosstabGroup)getCrosstabReportElement().getRowGroups().elementAt(i);
+            if (cg.getName().equals(name))
+            {
+                return getGroupMeasureName(baseName, add);
+            }
+        }
+        
+        for (int i=0; i<getCrosstabReportElement().getColumnGroups().size(); ++i)
+        {
+            CrosstabGroup cg = (CrosstabGroup)getCrosstabReportElement().getColumnGroups().elementAt(i);
+            if (cg.getName().equals(name))
+            {
+                return getGroupMeasureName(baseName, add);
+            }
+        }
+        
+        for (int i=0; i<getCrosstabReportElement().getMeasures().size(); ++i)
+        {
+            Measure cm = (Measure)getCrosstabReportElement().getMeasures().elementAt(i);
+            if (cm.getName().equals(name))
+            {
+                return getGroupMeasureName(baseName, add);
+            }
+        }
+        
+        return name;
+    }
+        
+    private void jButtonFinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFinishActionPerformed
+
+        try {
+            
+        SubDataset sd = (SubDataset)jComboBoxSubdataset.getSelectedItem();
+        if (!(sd instanceof Report))
+        {
+            Dataset dataset = new Dataset();
+            dataset.setSubDataset(sd);
+            dataset.setConnectionExpression("$P{REPORT_CONNECTION}");
+            dataset.setUseConnection(true);
+            getCrosstabReportElement().setDataset( dataset );
+            getCrosstabReportElement().setUseDataset(true);
+        }
+            
+            
+        // 1. Add the first row group.
+        CrosstabCell cell = (CrosstabCell)this.getCrosstabReportElement().getCells().elementAt(0);
+        cell.setWidth(50);
+        cell.setHeight(30);
+        
+        if (jCheckBoxPrintGrid.isSelected())
+        {
+            applyStandardBlackBox(cell);
+        }
+        
+        CrosstabGroup group = new CrosstabRowGroup();
+        group.setName( getGroupMeasureName(groupByFieldPanel1.getFieldName(),0) );
+        group.setBucketExpression( groupByFieldPanel1.getExpression() );
+        group.setBucketExpressionClass( groupByFieldPanel1.getExpressionClass());
+        CrosstabCell headerCell = new CrosstabCell();
+        headerCell.setName(group.getName()+" header");
+        headerCell.setType(CrosstabCell.HEADER_CELL);
+        headerCell.setWidth( group.getSize() );
+        headerCell.setHeight( 30 );
+        
+        if (jCheckBoxPrintGrid.isSelected())
+        {
+            headerCell.getBox().setLeftBorder("1Point");
+            headerCell.getBox().setLeftBorderColor(Color.BLACK);
+            applyStandardBlackBox(headerCell);
+        }
+        applyStandardBlackBox(headerCell);
+        group.setHeaderCell(headerCell);
+        addTextfieldElement(headerCell, "$V{" + group.getName() + "}", group.getBucketExpressionClass());
+        
+        CrosstabCell totalHeaderCell = new CrosstabCell();
+        totalHeaderCell.setName(group.getName()+" total header");
+        totalHeaderCell.setType(CrosstabCell.HEADER_CELL);
+        totalHeaderCell.setWidth( group.getSize() );
+        if (jCheckBoxTotalRows.isSelected())
+        {
+            group.setTotalPosition("End");
+            totalHeaderCell.setHeight(30);
+            addTextfieldElement(totalHeaderCell, "\"" + group.getName() + " total\"", "java.lang.String");
+        }
+        else
+        {
+            totalHeaderCell.setHeight(0);
+        }
+        if (jCheckBoxPrintGrid.isSelected())
+        {
+            totalHeaderCell.getBox().setLeftBorder("1Point");
+            totalHeaderCell.getBox().setLeftBorderColor(Color.BLACK);
+            applyStandardBlackBox(totalHeaderCell);
+        }
+        group.setTotalCell(totalHeaderCell);
+        
+        getCrosstabReportElement().getCells().add( group.getHeaderCell());
+        getCrosstabReportElement().getCells().add( group.getTotalCell());
+        
+        getCrosstabReportElement().getRowGroups().add(group);
+
+        // 2. Add the second row group. ----------------------------------------------------
+        if (groupByFieldPanel2.getFieldName() != null && !groupByFieldPanel2.getFieldName().equals(""))
+        {
+            group = new CrosstabRowGroup();
+            group.setName( getGroupMeasureName(groupByFieldPanel2.getFieldName(),0));
+            group.setBucketExpression( groupByFieldPanel2.getExpression() );
+            group.setBucketExpressionClass( groupByFieldPanel2.getExpressionClass());
+            headerCell = new CrosstabCell();
+            headerCell.setName(group.getName()+" header");
+            headerCell.setType(CrosstabCell.HEADER_CELL);
+            headerCell.setWidth( group.getSize() );
+            headerCell.setHeight( 30 );
+            group.setHeaderCell(headerCell);
+            if (jCheckBoxPrintGrid.isSelected()) applyStandardBlackBox(headerCell);
+            addTextfieldElement(headerCell, "$V{" + group.getName() + "}", group.getBucketExpressionClass());
+
+            totalHeaderCell = new CrosstabCell();
+            totalHeaderCell.setName(group.getName()+" total header");
+            totalHeaderCell.setType(CrosstabCell.HEADER_CELL);
+            totalHeaderCell.setWidth( group.getSize() );
+
+
+            if (jCheckBoxTotalRows.isSelected())
+            {
+                group.setTotalPosition("End");
+                totalHeaderCell.setHeight(30);
+                addTextfieldElement(totalHeaderCell, "\"" + group.getName() + " total\"", "java.lang.String");
+            }
+            else
+            {
+                totalHeaderCell.setHeight(0);
+            }
+            group.setTotalCell(totalHeaderCell);
+            if (jCheckBoxPrintGrid.isSelected()) applyStandardBlackBox(totalHeaderCell);
+            
+            getCrosstabReportElement().getCells().add( group.getHeaderCell());
+            getCrosstabReportElement().getCells().add( group.getTotalCell());
+
+            getCrosstabReportElement().getRowGroups().add(group);
+        }
+        
+        // 3. Add the first column group -------------------------------------------------
+        
+        group = new CrosstabColumnGroup();
+        group.setName( getGroupMeasureName(groupByFieldPanel3.getFieldName(),0));
+        group.setBucketExpression( groupByFieldPanel3.getExpression() );
+        group.setBucketExpressionClass( groupByFieldPanel3.getExpressionClass());
+        headerCell = new CrosstabCell();
+        headerCell.setName(group.getName()+" header");
+        headerCell.setType(CrosstabCell.HEADER_CELL);
+        headerCell.setHeight( group.getSize() );
+        headerCell.setWidth( 50 );
+        if (jCheckBoxPrintGrid.isSelected())
+        {
+            headerCell.getBox().setTopBorder("1Point");
+            headerCell.getBox().setTopBorderColor(Color.BLACK);
+            applyStandardBlackBox(headerCell);
+        }
+        group.setHeaderCell(headerCell);
+        addTextfieldElement(headerCell, "$V{" + group.getName() + "}", group.getBucketExpressionClass());
+        
+        totalHeaderCell = new CrosstabCell();
+        totalHeaderCell.setName(group.getName()+" total header");
+        totalHeaderCell.setType(CrosstabCell.HEADER_CELL);
+        totalHeaderCell.setHeight( group.getSize() );
+        if (jCheckBoxTotalColumns.isSelected())
+        {
+            group.setTotalPosition("End");
+            totalHeaderCell.setWidth(50);
+            addTextfieldElement(totalHeaderCell, "\"" + group.getName() + " total\"", "java.lang.String");
+        }
+        else
+        {
+            totalHeaderCell.setWidth(0);
+        }
+        if (jCheckBoxPrintGrid.isSelected())
+        {
+            totalHeaderCell.getBox().setTopBorder("1Point");
+            totalHeaderCell.getBox().setTopBorderColor(Color.BLACK);
+            applyStandardBlackBox(totalHeaderCell);
+        }
+        group.setTotalCell(totalHeaderCell);
+        
+        getCrosstabReportElement().getCells().add( group.getHeaderCell());
+        getCrosstabReportElement().getCells().add( group.getTotalCell());
+        
+        getCrosstabReportElement().getColumnGroups().add(group);
+        
+        // 4. Add the first column group -------------------------------------------------
+        if (groupByFieldPanel4.getFieldName() != null && !groupByFieldPanel4.getFieldName().equals(""))
+        {
+            group = new CrosstabColumnGroup();
+            group.setName( getGroupMeasureName(groupByFieldPanel4.getFieldName(),0));
+            group.setBucketExpression( groupByFieldPanel4.getExpression() );
+            group.setBucketExpressionClass( groupByFieldPanel4.getExpressionClass());
+            
+            headerCell = new CrosstabCell();
+            headerCell.setName(group.getName()+" header");
+            headerCell.setType(CrosstabCell.HEADER_CELL);
+            headerCell.setHeight( group.getSize() );
+            headerCell.setWidth( 50 );
+            if (jCheckBoxPrintGrid.isSelected())
+            {
+                applyStandardBlackBox(headerCell);
+            }
+            group.setHeaderCell(headerCell);
+            addTextfieldElement(headerCell, "$V{" + group.getName() + "}", group.getBucketExpressionClass());
+
+            totalHeaderCell = new CrosstabCell();
+            totalHeaderCell.setName(group.getName()+" total header");
+            totalHeaderCell.setType(CrosstabCell.HEADER_CELL);
+            totalHeaderCell.setHeight( group.getSize() );
+            if (jCheckBoxTotalColumns.isSelected())
+            {
+                group.setTotalPosition("End");
+                totalHeaderCell.setWidth(50);
+                addTextfieldElement(totalHeaderCell, "\"" + group.getName() + " total\"", "java.lang.String");
+            }
+            else
+            {
+                totalHeaderCell.setWidth(0);
+            }
+            group.setTotalCell(totalHeaderCell);
+            if (jCheckBoxPrintGrid.isSelected()) applyStandardBlackBox(totalHeaderCell);
+
+            getCrosstabReportElement().getCells().add( group.getHeaderCell());
+            getCrosstabReportElement().getCells().add( group.getTotalCell());
+
+            getCrosstabReportElement().getColumnGroups().add(group);
+
+            
+        }
+        // 5. Create measure -------------------------------------------------
+        WizardFieldObject wfo = (WizardFieldObject)this.jComboBoxDetailField.getSelectedItem();
+        Measure measure = new Measure( getGroupMeasureName(wfo.getName()+"_"+ this.jComboBoxDetailFieldFunction.getSelectedItem(),0) );
+        measure.setClassType( wfo.getExpressionClass(null) );
+        measure.setCalculation( this.jComboBoxDetailFieldFunction.getSelectedItem()+"");
+        measure.setExpression( wfo.getExpression("") );
+        this.getCrosstabReportElement().getMeasures().add(measure);
+        
+        // Add maincell elements...
+        addTextfieldElement(cell, "$V{" + measure.getName() + "}", measure.getClassType());
+        
+        setDialogResult(javax.swing.JOptionPane.OK_OPTION);
+        setVisible(false);
+        
+        } catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+        
+        setDialogResult(javax.swing.JOptionPane.OK_OPTION);
+        setVisible(false);
+        
+        
+        
+    }//GEN-LAST:event_jButtonFinishActionPerformed
+
+    private void jButtonNewSubDatasetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewSubDatasetActionPerformed
+        
+        SubDatasetDialog sds = new SubDatasetDialog(this,true);
+        sds.setVisible(true);
+        this.setReport( report );
+    }//GEN-LAST:event_jButtonNewSubDatasetActionPerformed
+
+    private void jComboBoxDetailFieldActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxDetailFieldActionPerformed1
+// TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxDetailFieldActionPerformed1
+
+    private void jComboBoxDetailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxDetailFieldActionPerformed
+       
+        if (jComboBoxDetailField.getSelectedIndex() < 0 || !(jComboBoxDetailField.getSelectedItem() instanceof WizardFieldObject))
+        {
+            jComboBoxDetailFieldFunction.removeAllItems();
+        }
+        else
+        {
+            WizardFieldObject wfo = (WizardFieldObject)jComboBoxDetailField.getSelectedItem();
+            Misc.updateComboBox(jComboBoxDetailFieldFunction, wfo.getFunctions());
+            if (jComboBoxDetailFieldFunction.getItemCount() > 0)
+            {
+                jComboBoxDetailFieldFunction.setSelectedIndex(0);
+            }
+        }
+        
+        if (getCurrentStep() == 3) this.updateButtons();
+        
+    }//GEN-LAST:event_jComboBoxDetailFieldActionPerformed
+
+    private void jButtonPrevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPrevActionPerformed
+
+        this.goPrevious();
+        
+    }//GEN-LAST:event_jButtonPrevActionPerformed
+
+    private void jButtonNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNextActionPerformed
+
+        this.goNext();
+        
+    }//GEN-LAST:event_jButtonNextActionPerformed
+
+    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
+
+        dialogResult = javax.swing.JOptionPane.CLOSED_OPTION;
+        this.setVisible(false);
+        this.dispose();
+        
+    }//GEN-LAST:event_jButtonCancelActionPerformed
+
+    private void jComboBoxSubdatasetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxSubdatasetActionPerformed
+
+        if (jComboBoxSubdataset.getSelectedItem() != null &&
+            jComboBoxSubdataset.getSelectedItem() instanceof SubDataset)
+        {
+            setCrosstabSubDataset((SubDataset)jComboBoxSubdataset.getSelectedItem());
+        }    
+        if (getCurrentStep() == 0) updateButtons();
+    }//GEN-LAST:event_jComboBoxSubdatasetActionPerformed
+    
+    public void goNext()
+    {
+        
+        if (currentStep < getStepsPanels().size()-1)
+        {
+            currentStep++;
+        }
+        
+        setCurrentStepLabel(currentStep);
+        
+        jPanelStepContainer.removeAll();
+        jPanelStepContainer.add( (java.awt.Component)getStepsPanels().elementAt(currentStep), java.awt.BorderLayout.CENTER);
+        jPanelStepContainer.updateUI();
+        if (currentStep == 0)
+        {
+            jLabelStepDescription.setText("Step 1: Choose a subdataset or create a new one");
+        }
+        else if (currentStep == 1)
+        {
+            jLabelStepDescription.setText("Step 2: Define row group(s)");
+        }
+        else if (currentStep == 2)
+        {
+            jLabelStepDescription.setText("Step 3: Define column group(s)");
+        }
+        else if (currentStep == 3)
+        {
+            jLabelStepDescription.setText("Step 4: Define detail");
+        }
+        else if (currentStep == 4)
+        {
+            jLabelStepDescription.setText("Step 5: Choose a layout");
+        }
+        else if (currentStep == 5)
+        {
+            jLabelStepDescription.setText("Step 6: Finish");
+        }
+        updateButtons();
+    }
+    
+    public void goPrevious()
+    {
+        if (currentStep > 0)
+        {
+            currentStep--;
+        }
+        
+        jPanelStepContainer.removeAll();
+        jPanelStepContainer.add( (java.awt.Component)getStepsPanels().elementAt(currentStep), java.awt.BorderLayout.CENTER);
+        jPanelStepContainer.updateUI();
+        
+        setCurrentStepLabel(currentStep);
+        
+        updateButtons();
+    }
+    
+    public void setCurrentStepLabel(int step)
+    {
+        for (int i=0; i<stepsLabels.size(); ++i)
+        {
+            JLabel label = (JLabel)stepsLabels.get(i);
+            label.setFont( new java.awt.Font( label.getFont().getName(),
+                                              ( i == step) ? java.awt.Font.BOLD : 0,
+                                              label.getFont().getSize()));
+            label.updateUI();
+        }
+    }
+    
+    
+    public void updateButtons()
+    {
+        jButtonFinish.setEnabled( canFinish( ));
+        jButtonPrev.setEnabled( canGoPrevious());
+        jButtonNext.setEnabled( canGoNext() );
+        
+    }
+    
+    public boolean canGoPrevious()
+    {
+        return (getCurrentStep() > 0);
+    }
+    
+    public boolean canGoNext()
+    {
+        if (getCurrentStep() == 0)
+        {
+            if (jComboBoxSubdataset.getSelectedItem() == null || !(jComboBoxSubdataset.getSelectedItem() instanceof SubDataset))
+            {
+                return false;
+            }
+        }
+        else if (getCurrentStep() == 1)
+        {
+            if (groupByFieldPanel1.getFieldName() == null || groupByFieldPanel1.getFieldName().equals(""))
+            {
+                return false;
+            }
+        }
+        else if (getCurrentStep() == 2)
+        {
+            if (groupByFieldPanel3.getFieldName() == null || groupByFieldPanel3.getFieldName().equals(""))
+            {
+                return false;
+            }
+        }
+        else if (getCurrentStep() == 3)
+        {
+            if (jComboBoxDetailField.getSelectedIndex() < 0 || !(jComboBoxDetailField.getSelectedItem() instanceof WizardFieldObject))
+            {
+                return false;
+            }
+        }
+        else if (getCurrentStep() == 4)
+        {
+            return true;
+        }
+        else if (getCurrentStep() == 5)
+        {
+            return false;
+        }
+        
+        
+        return true;
+    }
+    
+    public boolean canFinish()
+    {
+        return (getCurrentStep() > 3 || (getCurrentStep() == 3 && canGoNext()));
+    }
+
+    public int getCurrentStep() {
+        return currentStep;
+    }
+
+    public void setCurrentStep(int currentStep) {
+        this.currentStep = currentStep;
+    }
+
+    public SubDataset getCrosstabSubDataset() {
+        return crosstabSubDataset;
+    }
+
+    public void setCrosstabSubDataset(SubDataset crosstabSubDataset) {
+        this.crosstabSubDataset = crosstabSubDataset;
+        this.groupByFieldPanel1.populateBySubdataset(crosstabSubDataset);
+        this.groupByFieldPanel2.populateBySubdataset(crosstabSubDataset, true);
+        this.groupByFieldPanel3.populateBySubdataset(crosstabSubDataset);
+        this.groupByFieldPanel4.populateBySubdataset(crosstabSubDataset, true);
+        
+        
+        // Populate the field...
+        jComboBoxDetailField.removeAllItems();
+        for (int i=0; i<crosstabSubDataset.getFields().size(); ++i)
+        {
+           jComboBoxDetailField.addItem(new WizardFieldObject(crosstabSubDataset.getFields().get(i)));
+        }
+        for (int i=0; i<crosstabSubDataset.getVariables().size(); ++i)
+        {
+            jComboBoxDetailField.addItem(new WizardFieldObject(crosstabSubDataset.getVariables().get(i)));
+        }
+        for (int i=0; i<crosstabSubDataset.getParameters().size(); ++i)
+        {
+            jComboBoxDetailField.addItem(new WizardFieldObject(crosstabSubDataset.getParameters().get(i)));
+        }
+        
+        if (jComboBoxDetailField.getItemCount() > 0)
+        {
+            jComboBoxDetailField.setSelectedIndex(0);
+        }
+        
+        
+    }
+
+    public Vector getStepsPanels() {
+        return stepsPanels;
+    }
+
+    public void setStepsPanels(Vector stepsPanels) {
+        this.stepsPanels = stepsPanels;
+    }
+
+    public Report getReport() {
+        return report;
+    }
+
+    public void setReport(Report report) {
+        this.report = report;
+        
+        
+        Misc.updateComboBox(jComboBoxSubdataset, getReport().getSubDatasets(), false);
+        jComboBoxSubdataset.insertItemAt( report, 0);
+        if (jComboBoxSubdataset.getItemCount() > 0)
+        {
+            jComboBoxSubdataset.setSelectedIndex(0);
+        }
+        
+    }
+
+    public int getDialogResult() {
+        return dialogResult;
+    }
+
+    public void setDialogResult(int dialogResult) {
+        this.dialogResult = dialogResult;
+    }
+
+    public CrosstabReportElement getCrosstabReportElement() {
+        return crosstabReportElement;
+    }
+
+    public void setCrosstabReportElement(CrosstabReportElement crosstabReportElement) {
+        this.crosstabReportElement = crosstabReportElement;
+    }
+    
+    
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private it.businesslogic.ireport.crosstab.gui.GroupByFieldPanel groupByFieldPanel1;
+    private it.businesslogic.ireport.crosstab.gui.GroupByFieldPanel groupByFieldPanel2;
+    private it.businesslogic.ireport.crosstab.gui.GroupByFieldPanel groupByFieldPanel3;
+    private it.businesslogic.ireport.crosstab.gui.GroupByFieldPanel groupByFieldPanel4;
+    private javax.swing.JButton jButtonCancel;
+    private javax.swing.JButton jButtonFinish;
+    private javax.swing.JButton jButtonNewSubDataset;
+    private javax.swing.JButton jButtonNext;
+    private javax.swing.JButton jButtonPrev;
+    private javax.swing.JCheckBox jCheckBoxPrintGrid;
+    private javax.swing.JCheckBox jCheckBoxTotalColumns;
+    private javax.swing.JCheckBox jCheckBoxTotalRows;
+    private javax.swing.JComboBox jComboBoxDetailField;
+    private javax.swing.JComboBox jComboBoxDetailFieldFunction;
+    private javax.swing.JComboBox jComboBoxSubdataset;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabelDetailField;
+    private javax.swing.JLabel jLabelDetailField1;
+    private javax.swing.JLabel jLabelResult;
+    private javax.swing.JLabel jLabelStep1;
+    private javax.swing.JLabel jLabelStep2;
+    private javax.swing.JLabel jLabelStep3;
+    private javax.swing.JLabel jLabelStep4;
+    private javax.swing.JLabel jLabelStep5;
+    private javax.swing.JLabel jLabelStep6;
+    private javax.swing.JLabel jLabelStepDescription;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanelBase;
+    private javax.swing.JPanel jPanelContent;
+    private javax.swing.JPanel jPanelContentButtons;
+    private javax.swing.JPanel jPanelStep0;
+    private javax.swing.JPanel jPanelStep1;
+    private javax.swing.JPanel jPanelStep2;
+    private javax.swing.JPanel jPanelStep3;
+    private javax.swing.JPanel jPanelStep4;
+    private javax.swing.JPanel jPanelStep5;
+    private javax.swing.JPanel jPanelStepContainer;
+    private javax.swing.JPanel jPanelSteps;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    // End of variables declaration//GEN-END:variables
+    
+    public void applyI18n(){
+                // Start autogenerated code ----------------------
+                jCheckBoxPrintGrid.setText(I18n.getString("crosstabWizardDialog.checkBoxPrintGrid","Show grid lines"));
+                jCheckBoxTotalColumns.setText(I18n.getString("crosstabWizardDialog.checkBoxTotalColumns","Add column group totals"));
+                jCheckBoxTotalRows.setText(I18n.getString("crosstabWizardDialog.checkBoxTotalRows","Add row group totals"));
+                // End autogenerated code ----------------------
+                // Start autogenerated code ----------------------
+                jButtonCancel.setText(I18n.getString("crosstabWizardDialog.buttonCancel","Cancel"));
+                jButtonFinish.setText(I18n.getString("crosstabWizardDialog.buttonFinish","Finish"));
+                jButtonNewSubDataset.setText(I18n.getString("crosstabWizardDialog.buttonNewSubDataset","Create new subdataset"));
+                jButtonNext.setText(I18n.getString("crosstabWizardDialog.buttonNext","Next >"));
+                jButtonPrev.setText(I18n.getString("crosstabWizardDialog.buttonPrev","< Prev"));
+                jLabel1.setText(I18n.getString("crosstabWizardDialog.label1","Steps"));
+                jLabel2.setText(I18n.getString("crosstabWizardDialog.label2","Available subdataset"));
+                jLabelDetailField.setText(I18n.getString("crosstabWizardDialog.labelDetailField","Detail field"));
+                jLabelDetailField1.setText(I18n.getString("crosstabWizardDialog.labelDetailField1","Function"));
+                jLabelStep1.setText(I18n.getString("crosstabWizardDialog.labelStep1","1. SubDataset selection"));
+                jLabelStep2.setText(I18n.getString("crosstabWizardDialog.labelStep2","2. Rows"));
+                jLabelStep3.setText(I18n.getString("crosstabWizardDialog.labelStep3","3. Columns"));
+                jLabelStep4.setText(I18n.getString("crosstabWizardDialog.labelStep4","4. Detail"));
+                jLabelStep5.setText(I18n.getString("crosstabWizardDialog.labelStep5","5. Layout"));
+                jLabelStep6.setText(I18n.getString("crosstabWizardDialog.labelStep6","6. Finish"));
+                jLabelStepDescription.setText(I18n.getString("crosstabWizardDialog.labelStepDescription","Steps"));
+                // End autogenerated code ----------------------
+                
+                jLabelResult.setText("<html>" + I18n.getString("crosstabWizardDialog.textArea1","You have successfully entered all the required information to\ncreate a crosstab.\n\nTo save this settings, click Finish"));
+                
+                java.awt.Font f = jLabelResult.getFont();
+                jLabelResult.setFont(new java.awt.Font( f.getName(),f.getStyle(), f.getSize() +2 ));
+                
+                groupByFieldPanel1.setTitle(I18n.getString("crosstabWizardDialog.groupByFieldPanel1.title","Row group 1"));
+                groupByFieldPanel2.setTitle(I18n.getString("crosstabWizardDialog.groupByFieldPanel2.title","Row group 2"));
+                groupByFieldPanel3.setTitle(I18n.getString("crosstabWizardDialog.groupByFieldPanel3.title","Column group 1"));
+                groupByFieldPanel4.setTitle(I18n.getString("crosstabWizardDialog.groupByFieldPanel4.title","Column group 2"));
+    }
+}

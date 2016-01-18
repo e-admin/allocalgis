@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/map_1_0.dtd">
+
+<map version="1.0">
+	<mapID target="catastroDiscrepanciasIBI" url="Ayuda/catastroDiscrepanciasIBI.htm" />
+	<mapID target="catastroEditar" url="Ayuda/catastroEditar.htm" />
+	<mapID target="catastroGeneracionInformesCatastrales" url="Ayuda/catastroGeneracionInformesCatastrales.htm" />
+	<mapID target="catastroImportacionFinUrb01" url="Ayuda/catastroImportacionFinUrb01.htm" />
+	<mapID target="catastroImportacionFinUrb02" url="Ayuda/catastroImportacionFinUrb02.htm" />
+	<mapID target="generadorConsultas" url="Ayuda/generadorConsultas.htm" />
+	<mapID target="generadorInformeCamposInforme" url="Ayuda/generadorInformeCamposInforme.htm" />
+	<mapID target="generadorInformeDatosGenerales" url="Ayuda/generadorInformeDatosGenerales.htm" />
+	<mapID target="generadorInformeEncabezado" url="Ayuda/generadorInformeEncabezado.htm" />
+	<mapID target="generadorInformeFinalizar" url="Ayuda/generadorInformeFinalizar.htm" />
+	<mapID target="generadorInformeSeleccion" url="Ayuda/generadorInformeSeleccion.htm" />
+	<mapID target="generadorInformeSeleccionRegistros" url="Ayuda/generadorInformeSeleccionRegistros.htm" />
+	<mapID target="generadorInformeUnionesTablas" url="Ayuda/generadorInformeUnionesTablas.htm" />
+	<mapID target="infoReferenciaEditarInfoReferencia" url="Ayuda/infoReferenciaEditarInfoReferencia.htm" />
+	<mapID target="InformacionReferenciaDatosCatastrosAlmacenados" url="Ayuda/InformacionReferenciaDatosCatastrosAlmacenados.htm" />
+	<mapID target="InformacionReferenciaDistritosCensalesGuardarBaseDatos" url="Ayuda/InformacionReferenciaDistritosCensalesGuardarBaseDatos.htm" />
+	<mapID target="InformacionReferenciaDistritosCensalesSeleccionFichero" url="Ayuda/InformacionReferenciaDistritosCensalesSeleccionFichero.htm" />
+	<mapID target="InformacionReferenciaEntidadesColectivasGuardarBaseDatos" url="Ayuda/InformacionReferenciaEntidadesColectivasGuardarBaseDatos.htm" />
+	<mapID target="InformacionReferenciaEntidadesColectivasSeleccionFichero" url="Ayuda/InformacionReferenciaEntidadesColectivasSeleccionFichero.htm" />
+	<mapID target="InformacionReferenciaEntidadesSingularesGuardarBaseDatos" url="Ayuda/InformacionReferenciaEntidadesSingularesGuardarBaseDatos.htm" />
+	<mapID target="InformacionReferenciaEntidadesSingularesSeleccionFichero" url="Ayuda/InformacionReferenciaEntidadesSingularesSeleccionFichero.htm" />
+	<mapID target="InformacionReferenciaGuardarBaseDatos" url="Ayuda/InformacionReferenciaGuardarBaseDatos.htm" />
+	<mapID target="InformacionReferenciaImportarTramosViaIneSeleccionFichero" url="Ayuda/InformacionReferenciaImportarTramosViaIneSeleccionFichero.htm" />
+	<mapID target="InformacionReferenciaImportarTramosViaSeleccionFichero" url="Ayuda/InformacionReferenciaImportarTramosViaSeleccionFichero.htm" />
+	<mapID target="InformacionReferenciaNucleosDiseminadosSeleccionFichero" url="Ayuda/InformacionReferenciaNucleosDiseminadosSeleccionFichero.htm" />
+	<mapID target="InformacionReferenciaNumeroPoliciaSeleccionFichero" url="Ayuda/InformacionReferenciaNumeroPoliciaSeleccionFichero.htm" />
+	<mapID target="InformacionReferenciaNumerosPoliciaGuardarBaseDatos" url="Ayuda/InformacionReferenciaNumerosPoliciaGuardarBaseDatos.htm" />
+	<mapID target="InformacionReferenciaSeccionesCensalesGuardarBaseDatos" url="Ayuda/InformacionReferenciaSeccionesCensalesGuardarBaseDatos.htm" />
+	<mapID target="InformacionReferenciaSeccionesCensalesSeleccionFichero" url="Ayuda/InformacionReferenciaSeccionesCensalesSeleccionFichero.htm" />
+	<mapID target="InformacionReferenciaSeleccionFicheroImportarDGCatastro" url="Ayuda/InformacionReferenciaSeleccionFicheroImportarDGCatastro.htm" />
+	<mapID target="InformacionReferenciaSubSeccionesCensalesGuardarBaseDatos" url="Ayuda/InformacionReferenciaSubSeccionesCensalesGuardarBaseDatos.htm" />
+	<mapID target="InformacionReferenciaSubSeccionesCensalesSeleccionFichero" url="Ayuda/InformacionReferenciaSubSeccionesCensalesSeleccionFichero.htm" />
+	<mapID target="InformacionReferenciaTiposViaIneGuardarBaseDatos.htm" url="Ayuda/InformacionReferenciaTiposViaIneGuardarBaseDatos" />
+	<mapID target="InformacionReferenciaTiposViaIneSeleccionFichero" url="Ayuda/InformacionReferenciaTiposViaIneSeleccionFichero.htm" />
+	<mapID target="InformacionReferenciaTramosViaIneGuardarBaseDatos" url="Ayuda/InformacionReferenciaTramosViaIneGuardarBaseDatos.htm" />
+	<mapID target="infraestructurasEditarRedAbastecimiento" url="Ayuda/infraestructurasEditarRedAbastecimiento.htm" />
+	<mapID target="infraestructurasEditarRedSaneamiento" url="Ayuda/infraestructurasEditarRedSaneamiento.htm" />
+	<mapID target="infraestructurasGestionEventos01" url="Ayuda/infraestructurasGestionEventos01.htm" />
+	<mapID target="infraestructurasGestorEventos02" url="Ayuda/infraestructurasGestorEventos02.htm" />
+	<mapID target="infraestructurasImportar01" url="Ayuda/infraestructurasImportar01.htm" />
+	<mapID target="infraestructurasImportar02" url="Ayuda/infraestructurasImportar02.htm" />
+	<mapID target="planeamientoEditarAmbitos" url="Ayuda/planeamientoEditarAmbitos.htm" />
+	<mapID target="planeamientoEditarPlaneamiento" url="Ayuda/planeamientoEditarPlaneamiento.htm" />
+	<mapID target="planeamientoExpedirInformeUrbanistico01" url="Ayuda/planeamientoExpedirInformeUrbanistico01.htm" />
+	<mapID target="planeamientoGenerarMapaPlaneamiento01" url="Ayuda/planeamientoGenerarMapaPlaneamiento01.htm" />
+	<mapID target="planeamientoGenerarMapaPlaneamiento02" url="Ayuda/planeamientoGenerarMapaPlaneamiento02.htm" />
+	<mapID target="planeamientoGenerarMapaPlaneamiento03" url="Ayuda/planeamientoGenerarMapaPlaneamiento03.htm" />
+	<mapID target="planeamientoGenerarMapaPlaneamiento04" url="Ayuda/planeamientoGenerarMapaPlaneamiento04.htm" />
+	<mapID target="planeamientoGenerarMapaPlaneamiento05" url="Ayuda/planeamientoGenerarMapaPlaneamiento05.htm" />
+	<mapID target="planeamientoGestionEventos01" url="Ayuda/planeamientoGestionEventos01.htm" />
+	<mapID target="planeamientoGestionEventos01" url="Ayuda/planeamientoGestionEventos01.htm" />
+	<mapID target="planeamientoGestorEventos02" url="Ayuda/planeamientoGestorEventos02.htm" />
+	<mapID target="planeamientoImportarAmbitosGestion03" url="Ayuda/planeamientoImportarAmbitosGestion03.htm" />
+	<mapID target="planeamientoInformeParcelasAfectadas01" url="Ayuda/planeamientoInformeParcelasAfectadas01.htm" />
+	<mapID target="planeamientoIportarAmbitosGestion02.htm" url="Ayuda/planeamientoIportarAmbitosGestion02.htm" />
+	<mapID target="InformacionReferenciaTiposViaIneGuardarBaseDatos" url ="Ayuda/InformacionReferenciaTiposViaIneGuardarBaseDatos.htm"/>
+	<mapID target="PatrimonioSuperficiesNoCoincidentes" url ="Ayuda/PatrimonioSuperficiesNoCoincidentes.htm"/>
+	<mapID target="PatrimonioFichasInventario" url ="Ayuda/PatrimonioFichasInventario.htm"/>
+	<mapID target="editorAyuda" url="Ayuda/editorAyuda.htm"/>
+	<mapID target="InfoReferenciaImportarDatosINE" url="Ayuda/InfoReferenciaImportarDatosINE.htm"/>
+	<mapID target="catastroImportarParcelas" url="Ayuda/catastroImportarParcelas.htm"/>
+	<mapID target="catastroImportarParcelaPaso1" url="Ayuda/catastroImportarPacelaPaso1.htm"/>
+	<mapID target="generadorReports" url="Ayuda/generadorReports.htm"/>
+	<mapID target="planeamientoImportarAmbitosPlaneamiento01" url="Ayuda/planeamientoImportarAmbitosPlaneamiento01.htm"/>
+	<mapID target="planeamientoImportarAmbitosPlaneamiento02" url="Ayuda/planeamientoImportarAmbitosPlaneamiento02.htm"/>
+	<mapID target="planeamientoImportarAmbitosPlaneamiento03" url="Ayuda/planeamientoImportarAmbitosPlaneamiento03.htm"/>
+	<mapID target="ImportarAmbitosPlaneamientoTotales" url="Ayuda/ImportarAmbitosPlaneamientoTotales.htm"/>
+	<mapID target="PlaneamientoAmbitosGestionTotales" url="Ayuda/PlaneamientoAmbitosGestionTotales.htm"/>
+	<mapID target="planeamientoImportarAmbitosGestion01" url="Ayuda/planeamientoImportarAmbitosGestion01.htm"/>
+	<mapID target="planeamientoImportarAmbitosGestion02" url="Ayuda/planeamientoImportarAmbitosGestion02.htm"/>
+	<mapID target="planeamientoImportarAmbitosGestion03" url="Ayuda/planeamientoImportarAmbitosGestion03.htm"/>
+	<mapID target="planeamientoImprirmirMapaPlaneamientoTotal" url="Ayuda/planeamientoImprirmirMapaPlaneamientoTotal.htm"/>
+	<mapID target="catastroImportacionFicheroUrbanaTotal" url="Ayuda/catastroImportacionFicheroUrbanaTotal.htm"/>
+	<mapID target="infraestructurasImportarTodo" url="Ayuda/infraestructurasImportarTodo.htm"/>
+	<mapID target="infraestructurasHistoricosAvisos" url="Ayuda/infraestructurasHistoricosAvisos.htm"/>
+	<mapID target="ImprimirMapaInformacionReferencia" url="Ayuda/ImprimirMapaInformacionReferencia.htm"/>
+	<mapID target="ImprimirMapaPatrimonio" url="Ayuda/ImprimirMapaPatrimonio.htm"/>
+	<mapID target="ImprimirMapaInfraestructuras" url="Ayuda/ImprimirMapaInfraestructuras.htm"/>
+	<mapID target="informacionReferenciaImportarToponimos" url="Ayuda/informacionReferenciaImportarToponimos.htm"/>
+	
+</map>

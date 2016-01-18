@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geopista_municipios">
+
+  <resultMap class="com.localgis.web.core.model.GeopistaMunicipio" id="GeopistaMunicipioResult">
+    <result column="id" jdbcType="NUMERIC" property="id"/>
+    <result column="id_provincia" jdbcType="VARCHAR" property="idProvincia"/>
+    <result column="id_catastro" jdbcType="VARCHAR" property="idCatastro"/>
+    <result column="id_mhacienda" jdbcType="VARCHAR" property="idMhacienda"/>
+    <result column="id_ine" jdbcType="VARCHAR" property="idIne"/>
+    <result column="nombreoficial" jdbcType="VARCHAR" property="nombreoficial"/>
+    <result column="nombreoficialcorto" jdbcType="VARCHAR" property="nombreoficialcorto"/>
+    <result column="nombrecooficial" jdbcType="VARCHAR" property="nombrecooficial"/>
+    <result column="area" jdbcType="NUMERIC" property="area"/>
+    <result column="length" jdbcType="NUMERIC" property="length"/>
+    <result column="srid" jdbcType="VARCHAR" property="srid"/>
+  </resultMap>
+
+  <resultMap class="com.localgis.web.core.model.BoundingBox" id="BoundingBoxResult">
+    <result column="minx" jdbcType="NUMERIC" property="minx"/>
+    <result column="miny" jdbcType="NUMERIC" property="miny"/>
+    <result column="maxx" jdbcType="NUMERIC" property="maxx"/>
+    <result column="maxy" jdbcType="NUMERIC" property="maxy"/>
+  </resultMap>
+
+  <select id="selectAll" resultMap="GeopistaMunicipioResult">
+    select id, id_provincia, id_catastro, id_mhacienda, id_ine, nombreoficial, nombreoficialcorto,
+      nombrecooficial, area, length, srid
+    from municipios
+    where srid is not null
+  </select>
+
+  <select id="selectMunicipioById" resultMap="GeopistaMunicipioResult">
+    select id, id_provincia, id_catastro, id_mhacienda, id_ine, nombreoficial, nombreoficialcorto,
+      nombrecooficial, area, length, srid
+    from municipios
+    where id = #idMunicipio#
+  </select>
+
+  <select id="selectMunicipiosByIdEntidad" resultMap="GeopistaMunicipioResult">
+    select m.id, m.id_provincia, m.id_catastro, m.id_mhacienda, m.id_ine, m.nombreoficial, m.nombreoficialcorto,
+      m.nombrecooficial, m.area, m.length, m.srid
+    from municipios m, entidades_municipios em 
+    where m.id = em.id_municipio and em.id_entidad = #idEntidad#
+  </select>
+
+</sqlMap>

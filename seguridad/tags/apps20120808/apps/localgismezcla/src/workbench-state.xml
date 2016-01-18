@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench-state>
+  <properties>
+    <mapping>
+      <key class="java.lang.String">class com.vividsolutions.jump.workbench.ui.snap.GridRenderer - ENABLED</key>
+      <value class="java.lang.Boolean">false</value>
+    </mapping>
+    <mapping>
+      <key class="java.lang.String">com.vividsolutions.jump.workbench.datastore.ConnectionManager - CONNECTION DESCRIPTORS</key>
+      <value class="java.util.ArrayList">
+        <item class="com.vividsolutions.jump.workbench.datastore.ConnectionDescriptor">
+          <name>mibase</name>
+          <dataStoreDriverClassName>com.vividsolutions.jump.datastore.postgis.PostgisDataStoreDriver</dataStoreDriverClassName>
+          <parameterList>
+            <schema>
+              <name>Server</name>
+              <name>Port</name>
+              <name>Instance</name>
+              <name>User</name>
+              <name>Password</name>
+              <class>java.lang.String</class>
+              <class>java.lang.Integer</class>
+              <class>java.lang.String</class>
+              <class>java.lang.String</class>
+              <class>java.lang.String</class>
+            </schema>
+            <nameToValueMap class="java.util.HashMap">
+              <mapping>
+                <key class="java.lang.String">User</key>
+                <value class="java.lang.String">postgres</value>
+              </mapping>
+              <mapping>
+                <key class="java.lang.String">Instance</key>
+                <value class="java.lang.String">postgres</value>
+              </mapping>
+              <mapping>
+                <key class="java.lang.String">Port</key>
+                <value class="java.lang.Integer">5432</value>
+              </mapping>
+              <mapping>
+                <key class="java.lang.String">Password</key>
+                <value class="java.lang.String">sdADrTrDXdvt</value>
+              </mapping>
+              <mapping>
+                <key class="java.lang.String">Server</key>
+                <value class="java.lang.String">localhost</value>
+              </mapping>
+            </nameToValueMap>
+          </parameterList>
+        </item>
+      </value>
+    </mapping>
+    <mapping>
+      <key class="java.lang.String">com.vividsolutions.jump.workbench.datasource.LoadFileDataSourceQueryChooser - FILE CHOOSER DIRECTORY</key>
+      <value class="java.lang.String">C:\Documents and Settings\Fernando\Mis documentos\Software\shapefiles</value>
+    </mapping>
+    <mapping>
+      <key class="java.lang.String">org.openjump.core.ui.plugin.file.OpenRecentPlugIn.FILES</key>
+      <value class="java.util.LinkedHashSet">
+        <item class="java.lang.String">C:\Documents and Settings\Fernando\Mis documentos\Software\shapefiles\EJES.SHP</item>
+        <item class="java.lang.String">C:\Documents and Settings\Fernando\Mis documentos\Software\shapefiles\nueva_red_total.shp</item>
+        <item class="java.lang.String">C:\Documents and Settings\Fernando\Mis documentos\Software\shapefiles\prueba.shp</item>
+      </value>
+    </mapping>
+    <mapping>
+      <key class="java.lang.String">org.openjump.core.ui.plugin.file.OpenRecentPlugIn.PROJECTS</key>
+      <value class="java.util.LinkedHashSet" />
+    </mapping>
+  </properties>
+</workbench-state>
+

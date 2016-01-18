@@ -1,0 +1,3 @@
+TIPO                      TIPOVIA                      NOMBREVIA                      NUMEROVIA
+ZAPATERIA                 CL                           MAYOR                          1
+PANADERIA                 CL                           MAYOR                          2      

@@ -1,0 +1,34 @@
+<skeleton>
+<tab i18nKey="CModificacionLicenciasForm.expedienteJPanel.TitleTab" classId="CExpedienteLicencia">
+	<item rm="NumExpediente" 		i18nKey="CConsultaLicenciasForm.numExpedienteJLabel.text" 				name="" edit="false"/>
+	<item rm="IdTipoObra"			i18nKey="CConsultaLicenciasForm.ObraMenorJMenuItem.tipoObraJLabel.text" name="idTipoLicencia" edit="true"/>
+	<item rm="IdEstado" 			i18nKey="CConsultaLicenciasForm.estadoExpedienteJLabel.text" 			name="idEstado" edit="true"/>
+	<item rm="ServicioEncargado" 	i18nKey="CConsultaLicenciasForm.servicioExpedienteJLabel.text" 			name="" edit="true"/>
+	<item rm="IdTipoTramitacion" 	i18nKey="CConsultaLicenciasForm.tramitacionJLabel.text" 				name="tipotramitacion" edit="true"/>
+	<item rm="Asunto" 				i18nKey="CConsultaLicenciasForm.asuntoExpedienteJLabel.text" 			name="" edit="true"/>
+	<item rm="Observaciones" 		i18nKey="CConsultaLicenciasForm.observacionesExpedienteJLabel.text" 	name="" edit="true"/>
+	<item rm="FechaAperturaString" 	i18nKey="CModificacionLicenciasForm.fechaAperturaJLabel.text"			name="fechaAperturaString" edit="true"/>
+	<item rm="FechaResolucionString"	i18nKey="CModificacionLicenciasForm.fechaResolucionJLabel.text"		name="fechaResolucion" edit="true"/>
+</tab>
+<tab i18nKey="CModificacionLicenciasForm.solicitudJPanel.TitleTab" classId="CSolicitudLicencia">
+	<item rm="FechaString" 				i18nKey="CModificacionLicenciasForm.fechaSolicitudJLabel.text" 			name="fechaString" edit="true"/>
+	<item rm="FechaLimiteObraString" 	i18nKey="CModificacionLicenciasForm.fechaLimiteObraJLabel.text"			name="fechaLimiteObraString" edit="true"/>
+	<item rm="Motivo" 					i18nKey="CModificacionLicenciasForm.motivoJLabel.text"					name="" edit="true"/>
+	<item rm="NombreViaAfecta" 			i18nKey="CConsultaLicenciasForm.nombreViaJLabel.text" 					name="" edit="true"/>
+	<item rm="NumeroViaAfecta" 			i18nKey="CModificacionLicenciasForm.numeroViaPropietarioJLabel.text" 	name="" edit="true"/>
+	<item rm="MunicipioAfecta" 			i18nKey="CConsultaLicenciasForm.municipioTitularJLabel.text" 		 	name="" edit="true"/>
+	<item rm="ProvinciaAfecta" 			i18nKey="CConsultaLicenciasForm.provinciaTitularJLabel.text" 		 	name="" edit="true"/>
+	<item rm="DNITitularString"			i18nKey="CConsultaLicenciasForm.DNITitularJLabel.text"					name="" edit="true"/>
+	<item rm="NombreTitularString"		i18nKey="CConsultaLicenciasForm.nombreTitularJLabel.text"			 	name="" edit="true"/>
+	<item rm="Apellido1TitularString"	i18nKey="CConsultaLicenciasForm.apellido1TitularJLabel.text"		 	name="" edit="true"/>
+	<item rm="Apellido2TitularString"	i18nKey="CConsultaLicenciasForm.apellido2TitularJLabel.text"		 	name="" edit="true"/>
+	<itemlist rm="RefCatastralesString" i18nKey="CReferenciaCatastralJDialog.registroCatastralJLabel.text"		name="" edit="true"/>
+</tab>
+<tab i18nKey="DatosActividadJPanel.SubTitleTab" classId="DatosActividad">
+	<item rm="AforoString" 				i18nKey="DatosActividadJPanel.aforoJLabel.setText" 			name="" edit="true"/>
+	<item rm="NumeroOperariosString" 	i18nKey="DatosActividadJPanel.numOperariosJLabel.setText" 	name="" edit="true"/>
+	<item rm="DescripcionAlmacenaje"	i18nKey="DatosActividadJPanel.almacenajeJLabel.setText" 	name="" edit="true"/>
+	<item rm="DescripcionVentilacion"	i18nKey="DatosActividadJPanel.ventilacionJLabel.setText" 	name="" edit="true"/>
+	<item rm="AlturaTechosString"		i18nKey="DatosActividadJPanel.alturaTechosJLabel.setText" 	name="" edit="true"/>
+</tab>
+</skeleton>

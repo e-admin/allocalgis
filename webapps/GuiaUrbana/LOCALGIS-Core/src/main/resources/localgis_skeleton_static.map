@@ -1,0 +1,290 @@
+MAP
+	NAME "localgisguiaurbana"
+	STATUS ON
+	SIZE 600 420
+	IMAGECOLOR 255 255 255
+	IMAGETYPE PNG24
+	EXTENT $MAX_EXTENT$
+	UNITS METERS
+	RESOLUTION 72
+	CONFIG "MS_ERRORFILE" "/tmp/ms_error.txt"
+
+	FONTSET   "fontset/fontset.txt"
+
+	# Needed for MapServer v4.  Please comment the following line if you are using MapServer v3.6 or earlier
+	TEMPLATEPATTERN "printable.html|loader.html"
+
+	SHAPEPATH "data"
+
+	WEB
+		METADATA
+			"wms_title" "LOCALGIS Guia Urbana"
+			"wms_abstract" "wms reference implementation"
+			"wms_server_version"  "1.1.1"
+			"wms_onlineresource" "$ONLINE_RESOURCE$"
+			"wms_srs" "EPSG:$SRID$"
+			"wms_keywordlist" "mapserver,WMS"
+			"wms_contactperson" ""
+			"wms_contactorganization" ""
+			"wms_contactposition"	""
+			"wms_addresstype" ""
+			"wms_address" ""
+			"wms_city" ""
+			"wms_stateorprovince" ""
+			"wms_city" ""
+			"wms_postcode" ""
+			"wms_country" ""
+			"wms_contactvoicetelephone" ""
+			"wms_contactfacsimiletelephone" ""
+			"wms_contactelectronicmailaddress" ""
+			"wms_feature_info_mime_type" "gml"
+			"wms_encoding" "$ENCODING$"
+		END
+		TEMPLATE "templates/feature.html"
+		EMPTY "empty.html"  # path relative to the webserver document root
+		MINSCALE 1000
+		MAXSCALE 1550000
+		IMAGEPATH tmp/  # full path to image tmp dir, so cgi can find it
+		IMAGEURL "tmp/"  # url location of image tmp dir, so web browser can find it
+	END # Web Interface Options
+
+	PROJECTION
+	   "$PROJECTION$"
+	END
+
+	LEGEND
+		STATUS ON
+		POSITION UL
+		KEYSIZE 24 16
+		LABEL
+			FONT "verdana"
+			TYPE TRUETYPE
+			SIZE 10
+			COLOR 70 70 70
+		END
+		TRANSPARENT on
+	END # Legend
+
+	REFERENCE
+		IMAGE graphics/clearmap.gif
+		EXTENT $MAX_EXTENT$
+		SIZE 150 128
+		STATUS ON
+		COLOR -1 -1 -1
+		OUTLINECOLOR 255 0 0
+	END
+
+	QUERYMAP
+		STATUS OFF
+		STYLE SELECTED
+		COLOR 255 255 0
+	END
+
+	SCALEBAR
+		STATUS OFF
+		LABEL
+			SIZE tiny
+			COLOR 0 0 0
+			OUTLINECOLOR 255 255 255
+		END
+		STYLE 0
+		INTERVALS 3
+		SIZE 100 3
+	 	COLOR 0 0 0
+	 	BACKGROUNDCOLOR 255 255 255
+	 	OUTLINECOLOR 0 0 0
+	 	UNITS METERS
+	 	POSITION LR
+	 	TRANSPARENT TRUE
+	 	POSTLABELCACHE true
+	END
+
+#############################
+# Definiciones de Layers/Capas
+#############################
+
+$LAYERS_MAPSERVER$
+
+LAYER
+    NAME "lcg_parcelas"
+    STATUS OFF
+    DEBUG OFF
+    TOLERANCE 13     
+    DUMP true
+    TYPE POLYGON
+    CONNECTIONTYPE $MAPSERVER_CONNECTIONTYPE$
+    CONNECTION "$MAPSERVER_CONNECTION$"
+    DATA '$PARCELAS_DATA$'
+    METADATA
+        "wms_featureinfoformat" "gml"
+        "wms_title" "lcg_parcelas"
+        "wms_srs" "EPSG:4230 EPSG:4258 EPSG:4326 EPSG:25828 EPSG:25829 EPSG:25830 EPSG:25831 EPSG:23028 EPSG:23029 EPSG:23030 EPSG:23031 EPSG:900913"
+        "gml_include_items" "all"
+    END
+    CLASS
+        COLOR 255 204 153
+        OUTLINECOLOR 0 0 0
+    END
+    EXTENT $MAX_EXTENT$
+    TRANSPARENCY 85
+    TEMPLATE "templates/feature.html"
+    HEADER "templates/header_feature.html"
+    FOOTER "templates/footer_feature.html"
+    LABELCACHE ON
+    POSTLABELCACHE FALSE
+END
+
+LAYER
+    NAME "$ORTOFOTO_LAYER_NAME$"
+    STATUS OFF
+    DEBUG OFF
+    DUMP true
+    TYPE RASTER
+    DATA "$ORTOFOTOS_DIRECTORY$/$ID_MUNICIPIO$/$ID_MUNICIPIO$.$ORTOFOTO_EXTENSION$"
+    PROJECTION
+        "$ORTOFOTO_PROJECTION$"
+    END
+    METADATA
+        "wms_title" "$ORTOFOTO_LAYER_NAME$"
+        "wms_srs" "EPSG:$ORTOFOTO_SRID$"
+        "gml_include_items" ""
+    END
+    EXTENT $MAX_EXTENT$
+    POSTLABELCACHE FALSE
+END
+
+LAYER
+    NAME "$PROVINCIAS_LAYER_NAME$"
+    STATUS OFF
+    DEBUG OFF
+    DUMP true
+    TOLERANCE 13
+    TYPE POLYGON
+    CONNECTIONTYPE $MAPSERVER_CONNECTIONTYPE$
+    CONNECTION "$MAPSERVER_CONNECTION$"
+    DATA '$PROVINCIAS_DATA$'
+    METADATA
+        "wms_featureinfoformat" "gml"
+        "wms_title" "$PROVINCIAS_LAYER_NAME$"
+        "wms_srs" "EPSG:4230 EPSG:4258 EPSG:4326 EPSG:25828 EPSG:25829 EPSG:25830 EPSG:25831 EPSG:23028 EPSG:23029 EPSG:23030 EPSG:23031 EPSG:900913"
+        "gml_include_items" "all"
+    END
+    CLASS
+        NAME "Nombre provincia cerca"
+        LABEL
+            ANGLE auto
+            FONT "Verdana-bold"
+            MAXSIZE 256
+            MINSIZE 4
+            SIZE $PROVINCIAS_NAME_SIZE$
+            TYPE TRUETYPE
+            BUFFER 0
+            COLOR $PROVINCIAS_NAME_COLOR$
+            FORCE false
+            MINDISTANCE -1
+            OFFSET 0 0
+            PARTIALS false
+            POSITION UC
+            MINFEATURESIZE auto
+        END
+        TEXT $PROVINCIAS_NAME_ATTRIBUTE$
+        MINSCALE $PROVINCIAS_MAX_SCALE$
+        MAXSCALE $MUNICIPIOS_MIN_SCALE$
+    END
+    CLASS
+        NAME "Nombre provincia lejos"
+        LABEL
+            ANGLE auto
+            FONT "Verdana"
+            MAXSIZE 256
+            MINSIZE 4
+            SIZE $PROVINCIAS_NAME_SIZE$
+            TYPE TRUETYPE
+            BUFFER 0
+            COLOR $PROVINCIAS_NAME_COLOR$
+            FORCE false
+            MINDISTANCE -1
+            OFFSET 0 0
+            PARTIALS false
+            POSITION UC
+            MINFEATURESIZE auto
+        END
+        TEXT $PROVINCIAS_NAME_ATTRIBUTE$
+        MINSCALE $MUNICIPIOS_MIN_SCALE$
+        MAXSCALE $PROVINCIAS_MIN_SCALE$
+    END
+    CLASS
+        NAME "Provincia cerca"
+        STYLE
+            WIDTH 2
+            OUTLINECOLOR $PROVINCIAS_OUTLINECOLOR$
+            END
+        MINSCALE $PROVINCIAS_MAX_SCALE$
+        MAXSCALE $MUNICIPIOS_MIN_SCALE$
+    END
+    CLASS
+        NAME "Provincia lejos"
+        STYLE
+            WIDTH 1
+            OUTLINECOLOR $PROVINCIAS_OUTLINECOLOR$
+            END
+        MINSCALE $MUNICIPIOS_MIN_SCALE$
+    END
+    EXTENT $PROVINCIAS_MAX_EXTENT$
+    TRANSPARENCY 85
+    TEMPLATE "templates/feature.html"
+    HEADER "templates/header_feature.html"
+    FOOTER "templates/footer_feature.html"
+    LABELCACHE ON
+    POSTLABELCACHE FALSE
+END
+
+LAYER
+    NAME "$MUNICIPIOS_LAYER_NAME$"
+    STATUS OFF
+    DEBUG OFF
+    DUMP true
+    TOLERANCE 13
+    TYPE POLYGON
+    CONNECTIONTYPE $MAPSERVER_CONNECTIONTYPE$
+    CONNECTION "$MAPSERVER_CONNECTION$"
+    DATA '$MUNICIPIOS_DATA$'
+    METADATA
+        "wms_featureinfoformat" "gml"
+        "wms_title" "$MUNICIPIOS_LAYER_NAME$"
+        "wms_srs" "EPSG:4230 EPSG:4258 EPSG:4326 EPSG:25828 EPSG:25829 EPSG:25830 EPSG:25831 EPSG:23028 EPSG:23029 EPSG:23030 EPSG:23031 EPSG:900913"
+        "gml_include_items" "all"
+    END
+    CLASS
+        OUTLINECOLOR $MUNICIPIOS_OUTLINECOLOR$
+    END
+    MINSCALE $MUNICIPIOS_MAX_SCALE$
+    MAXSCALE $MUNICIPIOS_MIN_SCALE$
+    EXTENT $PROVINCIAS_MAX_EXTENT$
+    TRANSPARENCY 85
+    TEMPLATE "templates/feature.html"
+    HEADER "templates/header_feature.html"
+    FOOTER "templates/footer_feature.html"
+    LABELCACHE ON
+    POSTLABELCACHE FALSE
+END
+
+LAYER
+    NAME         lcg_pnoa
+    TYPE         RASTER
+    OFFSITE      0 0 0
+    STATUS       OFF
+    CONNECTIONTYPE WMS
+    CONNECTION "http://www.idee.es/wms/PNOA/PNOA"
+
+    METADATA
+      "wms_srs" "EPSG:4230 EPSG:4258 EPSG:4326 EPSG:25828 EPSG:25829 EPSG:25830 EPSG:25831 EPSG:23028 EPSG:23029 EPSG:23030 EPSG:23031 EPSG:900913"
+      "wms_name" "PNOA"
+      "wms_server_version" "1.1.1"
+      "wms_format" "image/jpeg"
+    END
+
+END 
+
+
+END # Map File

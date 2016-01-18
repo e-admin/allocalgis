@@ -1,0 +1,17 @@
+"INSERT INTO "eiel_c_abast_ar" ("GEOMETRY","id","id_municipio","clave","codprov","codmunic","orden_ar","estado","observ","precision_dig") VALUES(GeometryFromText(?1,?S),?PK,?M,'AR',substr(?M,1,2),substr(?M,3,5),?7,?8,?9,?10)"
+
+"UPDATE parcelas SET "GEOMETRY"=transform(GeometryFromText(text(?1),?S), ?T),id=?2,referencia_catastral=?3,id_municipio=?M,id_distrito=?5,codigoparcela=?6,codigopoligono=?7,id_via=?8,primer_numero=?9,primera_letra=?10,segundo_numero=?11,segunda_letra=?12,kilometro=?13,bloque=?14,direccion_no_estructurada=?15,codigo_postal=?16,codigodelegacionmeh=?17,length=perimeter(GeometryFromText(text(?1),?S)),Area=area2d(GeometryFromText(text(?1),?S)), fecha_alta=?20,fecha_baja=?21,modificado=?22,ninterno=?23, tipo=?24, numerodup=?25, numsymbol=?26 WHERE ID=?2"
+
+"INSERT INTO parcelas ("GEOMETRY",id,referencia_catastral,id_municipio,id_distrito,codigoparcela,codigopoligono,id_via,primer_numero,primera_letra,segundo_numero,segunda_letra,kilometro,bloque,direccion_no_estructurada,codigo_postal,codigodelegacionmeh,length,area,fecha_alta,fecha_baja,modificado,ninterno, tipo, numerodup, numsymbol) VALUES(transform(GeometryFromText(text(?1),?S), ?T),?PK,?3,?M,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15,?16,?17,perimeter(GeometryFromText(text(?1),?S)),area2d(GeometryFromText(text(?1),?S)),?20,?21,?22,?23,?24,?25,?26)"
+
+"DELETE FROM parcelas WHERE ID=?2"
+
+
+select * from layers where name ilike '%Captacion%'
+
+select * from layers where id_name=(select id_vocablo from dictionary where locale='es_ES' and traduccion ='Elemento puntual de abastecimiento')
+
+select * from queries where id_layer=(select id_layer from layers where id_name=(select id_vocablo from dictionary where locale='es_ES' and traduccion ='Elemento puntual de abastecimiento'))
+
+select * from queries where id_layer=(select id_layer from layers where id_name=(select id_vocablo from dictionary where locale='es_ES' and traduccion ='Parcelas'))
+select * from queries where id_layer=(select id_layer from layers where id_name=(select id_vocablo from dictionary where locale='es_ES' and traduccion ='Red de distribución domiciliaria'))

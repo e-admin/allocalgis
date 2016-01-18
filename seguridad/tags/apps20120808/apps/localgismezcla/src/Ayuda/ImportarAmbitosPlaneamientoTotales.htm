@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>IMPORTAR PLANEAMIENTO MUNICIPAL</TITLE>
+</HEAD>
+<BODY>
+
+<B><U><FONT FACE="Verdana" SIZE=3><P><A NAME="_Toc85601964">IMPORTAR PLANEAMIENTO MUNICIPAL</A></P>
+</B></U>
+<B><U><P><A NAME="_Toc85601965">Selecci&oacute;n del fichero</A></P>
+</B></U>
+<P>Cuando el usuario selecciona la opci&oacute;n "Importar Planeamiento Municipal" en la pantalla inicial del m&oacute;dulo se abre la pantalla de importaci&oacute;n, donde el usuario puede indicar el fichero a importar.</P>
+
+<P>Esta opci&oacute;n s&oacute;lo est&aacute; disponible para los usuarios con permisos de &quot;Importar Planeamiento Municipal&quot;. Si el usuario no dispone de estos permisos el bot&oacute;n de "Abrir" aparecer&aacute; desactivado, y el usuario no podr&aacute; continuar en el proceso de importaci&oacute;n municipal.</P>
+
+<P>El usuario podr&aacute; seleccionar archivos de planeamiento general o de planeamiento de desarrollo que haya dibujado previamente con las aplicaciones para soluciones comerciales.</P>
+
+<P>Solamente se podr&aacute;n seleccionar shapefiles y jml. </P>
+
+<P>Una vez seleccionado el fichero a importar, el sistema realiza el proceso de validaci&oacute;n para comprobar que el fichero es v&aacute;lido.</P>
+
+<P>Si el fichero seleccionado es v&aacute;lido, el usuario podr&aacute; seguir con el proceso de importaci&oacute;n, pulsando en el bot&oacute;n "Siguiente"</P>
+
+<P><IMG SRC="Image213.gif" WIDTH=600 HEIGHT=464></P>
+
+<P>Si el fichero seleccionado no es v&aacute;lido, bien porque no cumple con el esquema especificado, o bien porque aunque cumpla con el esquema hay datos que no son correctos, el usuario no podr&aacute; continuar, y el bot&oacute;n de Siguiente aparecer&aacute; desactivado, hasta que se seleccione otro fichero correcto o pulse en Cancelar para salir de esta pantalla.</P>
+
+<P><IMG SRC="Image214.gif" WIDTH=600 HEIGHT=464></P>
+
+<B><U><P>&nbsp;</P>
+<P><A NAME="_Toc85601966">Comparaci&oacute;n de Dominios</A></P>
+</B></U>
+<P>El sistema compara el rango de valores de los campos principales de las capas de planeamiento con los dominios existentes en el Sistema de Informaci&oacute;n Territorial. En el caso de existir en el dominio del SIT todo el rango de valores el sistema importa la informaci&oacute;n sin intervenci&oacute;n del usuario. El caso que el nuevo rango de valores incorpore alg&uacute;n valor que no exista en el dominio del SIT el sistema muestra esta pantalla: Comparaci&oacute;n de Dominios.</P>
+
+<P>El cuadro de di&aacute;logo de Comparaci&oacute;n de Dominios de planeamiento se divide en tres cuadros de texto, un combo &quot;Dominio&quot; que muestra la capa de dominios y botones de interacci&oacute;n. En el cuadro rotulado como &quot;Valores nuevos&quot; se muestran todos los nuevos valores que el sistema ha detectado autom&aacute;ticamente durante el proceso de importaci&oacute;n, la capa a la que hacen referencia se muestra en el combo &quot;Dominio&quot; de la parte superior. En el cuadro &quot;Valores existentes&quot; aparecen los valores del mismo dominio que se encuentran almacenados en el SIT. El cuadro &quot;Lista de Incorporaciones&quot; aparecen los valores que el usuario a&ntilde;ade al dominio del SIT.</P>
+
+<P>El usuario utilizar&aacute; el bot&oacute;n &quot;A&ntilde;adir&quot; para a&ntilde;adir un valor nuevo al SIT. Usar&aacute; el bot&oacute;n &quot;Vincular&quot; si ha seleccionado un registro del cuadro &quot;Valores nuevos&quot; y otro del &quot;Valores existentes&quot; y el sistema vincular&aacute; todos los registros que tengan ese valor del dominio al existente en el SIT como &quot;Valores existentes&quot;. El bot&oacute;n &quot;Eliminar&quot; hace que el sistema no importe los registros que tienen ese valor.</P>
+
+<P>Para realizar estas operaciones es necesario tener los permisos de &quot;Alta de Dominios Planeamiento Municipal&quot; para a&ntilde;adir, &quot;Vincular Dominios Planeamiento Municipal&quot; para vincular y &quot;Eliminar Dominios Planeamiento Municipal&quot; para eliminar. En caso de no tener estos permisos aparecer&aacute;n desactivados los botones, por lo que el usuario podr&aacute; realizar unas u otras acciones.</P>
+
+<P>El sistema validar&aacute; que el usuario haya ofrecido una soluci&oacute;n para todos los valores nuevos encontrados en el proceso previo de importaci&oacute;n, de no ser as&iacute; no podr&aacute; proceder a la importaci&oacute;n de los registros. Por ello, el bot&oacute;n Siguiente aparece desactivado hasta que no exista ning&uacute;n valor en la lista de Valores Nuevos.</P>
+
+<P>En el cuadro de texto &quot;Lista de incorporaciones&quot;, se mostrar&aacute; las acciones que el usuario ha optado por realizar.</P>
+
+<P>En cualquier momento se puede pulsar sobre el bot&oacute;n &quot;Cancelar&quot; para no modificar estos valores en la base de datos.</P>
+
+<P><IMG SRC="Image215.gif" WIDTH=616 HEIGHT=477></P>
+
+<P>Ahora se puede seguir con la importaci&oacute;n porque ya no existen valores nuevos:</P>
+<P><IMG SRC="Image216.gif" WIDTH=600 HEIGHT=467></P>
+
+<B><U><P>&nbsp;</P>
+<P><A NAME="_Toc85601967">Fin de la importaci&oacute;n</A></P>
+</B></U><P>Esta pantalla es la &uacute;ltima que aparece cuando se importa Planeamiento Municipal. En ella, aparece en un editor el archivo importado, adem&aacute;s muestra informaci&oacute;n acerca del proceso de importaci&oacute;n: n&uacute;mero de registros insertados ...  </P>
+
+<P>&nbsp;</P>
+<P><IMG SRC="Image217.gif" WIDTH=600 HEIGHT=463></P>
+
+<P>&nbsp;</P></FONT></BODY>
+</HTML>

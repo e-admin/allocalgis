@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>installers</artifactId>
+		<groupId>com.localgis</groupId>
+		<version>3.0.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<groupId>com.localgis.modules.server</groupId>
+	<artifactId>ServerInitModule</artifactId>
+	<name>ServerPrincipalModule</name>
+	<description>Metamodulo instalacion/actualizacion LOCALGIS-SERVER-Init</description>
+	<packaging>jar</packaging>
+
+	<properties>
+		<module.title>Modulo instalacion/actualizacion LOCALGIS-SERVER-Init</module.title>
+		<module.version>3.0.0</module.version>
+		<module.installType>libext</module.installType>
+		<module.artifact.groupId>com.localgis.server</module.artifact.groupId>
+		<module.artifact.id>localgis-server-init</module.artifact.id>
+		<module.artifact.version>3.0</module.artifact.version>
+		<module.artifact.type>jar</module.artifact.type>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.localgis.maven.plugin</groupId>
+				<artifactId>updaterPlugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.localgis.modules.web</groupId>
+			<artifactId>RegistryWSModule</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+	</dependencies>
+
+</project>

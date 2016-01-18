@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geopista_layers">
+
+  <resultMap class="com.localgis.web.core.model.GeopistaLayer" id="GeopistaLayerResult">
+    <result column="id_layer" jdbcType="INTEGER" property="idLayer"/>
+    <result column="name" jdbcType="VARCHAR" property="name"/>
+    <result column="selectquery" jdbcType="VARCHAR" property="selectQuery"/>
+    <result column="id_style" jdbcType="INTEGER" property="idStyle"/>
+    <result column="xml_style" jdbcType="VARCHAR" property="xmlStyle"/>
+    <result column="name_style" jdbcType="VARCHAR" property="nameStyle"/>
+    <result column="position" jdbcType="NUMERIC" property="position"/>
+    <result column="position_layer_family" jdbcType="NUMERIC" property="positionLayerFamily"/>
+    <result column="isvisible" jdbcType="BOOLEAN" property="visible"/>
+  </resultMap>
+  
+  <resultMap class="com.localgis.web.core.model.GeopistaLayer" id="GeopistaLayerResultRestricted">
+    <result column="id_layer" jdbcType="INTEGER" property="idLayer"/>
+    <result column="name" jdbcType="VARCHAR" property="name"/>
+  </resultMap>
+  
+  
+   <select id="getCategoryByLayerName" resultClass="java.lang.String" parameterClass="java.util.Map" >   
+   		select categoria from lcg_nodos_capas where clave=#layername#     
+  </select>
+
+</sqlMap>

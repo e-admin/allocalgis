@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="LOCALGIS-SERVER-DNIe">
+        <wb-resource deploy-path="/WEB-INF/web.xml" source-path="/src/main/webapp/WEB-INF/web.xml"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <dependent-module archiveName="localgis-context-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-Context/LOCALGIS-Context">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-security-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-Security/LOCALGIS-Security">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-const-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-Const/LOCALGIS-Const">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-servercontext-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-ServerContext/LOCALGIS-ServerContext">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-protocol-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-Protocol/LOCALGIS-Protocol">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-sql-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-SQL/LOCALGIS-SQL">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-utils-document-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-UTILS-Document/LOCALGIS-UTILS-Document">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-model-admcar-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-Model-AdmCar/LOCALGIS-Model-AdmCar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-workbench-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-Workbench/LOCALGIS-Workbench">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-sldcontroler-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-SLDControler/LOCALGIS-SLDControler">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-agil-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-agil/LOCALGIS-agil">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-deegree-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-deegree/LOCALGIS-deegree">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-defaultplugins-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-defaultPlugins/LOCALGIS-defaultPlugins">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-utils-alfresco-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-UTILS-Alfresco/LOCALGIS-UTILS-Alfresco">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-model-alfresco-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-MODEL-Alfresco/LOCALGIS-MODEL-Alfresco">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-model-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-Model/LOCALGIS-Model">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-geotools-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-Geotools/LOCALGIS-Geotools">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-xml2java-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-Xml2Java/LOCALGIS-Xml2Java">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-contextutils-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-ContextUtils/LOCALGIS-ContextUtils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-utils-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-Utils/LOCALGIS-Utils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/LOCALGIS-SERVER-DNIe/build/classes"/>
+        <property name="context-root" value="localgis-server-dnie"/>
+    </wb-module>
+</project-modules>

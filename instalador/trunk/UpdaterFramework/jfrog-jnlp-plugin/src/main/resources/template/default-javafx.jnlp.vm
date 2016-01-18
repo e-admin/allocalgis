@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="$project.Url" href="$targetFileName">
+    <information>
+        <title>$project.Name</title>
+        <vendor>$project.Organization.Name</vendor>
+        <homepage href="$project.Url"/>
+        <description>$project.Description</description>
+#if($offlineAllowed == "true")
+        <offline-allowed/>
+#end
+    </information>
+#if($allPermissions == "true")
+    <security>
+        <all-permissions/>
+    </security>
+#end
+    <resources>
+        <j2se version="$j2seVersion"/>
+        <extension href="http://dl.javafx.com/1.2/javafx-rt.jnlp" name="JavaFX Runtime"/>
+#if($_javafxApplication)
+        <jar href="javafx/javafxrt-main/1.2/javafxrt-main-1.2.jar" download="eager"/>
+#end
+        $dependencies
+    </resources>
+#if($_javafxApplication)
+    <application-desc main-class="com.sun.javafx.runtime.main.Main">
+        <argument>MainJavaFXScript=$mainClass</argument>
+    </application-desc>
+#end
+#if($_javafxApplet)
+    <applet-desc name="$project.Name" main-class="com.sun.javafx.runtime.adapter.Applet" width="$appletWidth" height="$appletHeight">
+        <param name="MainJavaFXScript" value="$mainClass"/>
+    </applet-desc>
+#end
+</jnlp>
+

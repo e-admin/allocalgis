@@ -1,0 +1,10 @@
+#--------------------------------------------------------------------
+# (c) Copyright IBM Corp 1999, 2005
+
+#--------------------------------------------------------------------
+# jxeLink options for jclFoundation11
+#--------------------------------------------------------------------
+
+-japtFile "{{current.file.dir}}{{/}}jclFoundation11.japtOptions"
+-jar2jxeFile "{{current.file.dir}}{{/}}jclFoundation11.jar2jxeOptions"
+

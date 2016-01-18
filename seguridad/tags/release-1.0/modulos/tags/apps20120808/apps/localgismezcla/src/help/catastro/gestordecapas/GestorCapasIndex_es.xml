@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+
+<index version="1.0">
+    <indexitem text="Contenidos">
+        <indexitem text="Gestor de Capas">
+        
+	    	<indexitem text="Introducción" target="introduccion"/>
+	    	<indexitem text="Terminología Utilizada" target="Terminologia"/>
+	    	<indexitem text="Contenidos del Gestor de Capas">
+	    		<indexitem text="Contenidos del Gestor de Capas" target="ContenidosGestorDeCapas"/>
+	    		<indexitem text="Pestaña1: Tablas">
+	    			<indexitem text="Pestaña1: Tablas" target="Pestania1Tablas"/>
+	    			<indexitem text="Forma de Utilización">
+	    				<indexitem text="Forma de Utilización" target="FormaDeUtilizacionTablas"/>
+	    				<indexitem text="Creación de una Nueva Tabla de Base de Datos" target="CreacionTabla"/>
+	    				<indexitem text="Eliminación de una Tabla de Base de Datos" target="EliminacionTabla"/>
+	    				<indexitem text="Edición de una Tabla de Base de Datos" target="EdicionTabla"/>
+	    				<indexitem text="Creación de una Nueva Columna de Base de Datos" target="CreacionColumna"/>
+	    				<indexitem text="Eliminación de una Columna de Base de Datos" target="EliminacionColumna"/>
+	    				<indexitem text="Generación de Columna de Sistema Asociada a una Columna de Base de Datos" target="GeneracionColumnaAsociada"/>
+	    			</indexitem>
+	    		</indexitem>
+	    		<indexitem text="Pestaña2: Dominios">
+				 <indexitem text="Pestaña2: Dominios" target="Pestania2Dominios"/>
+				 <indexitem text="Forma de Utilización">
+				    	<indexitem text="Forma de Utilización" target="FormaDeUtilizacionDominios"/>				    				
+				 </indexitem>
+	    		</indexitem>	
+	    		<indexitem text="Pestaña3: Capas">
+				<indexitem text="Pestaña3: Capas" target="Pestania3Capas"/>
+				<indexitem text="Forma de Utilización">
+					<indexitem text="Forma de Utilización" target="FormaDeUtilizacionCapas"/>
+					<indexitem text="Creación de una nueva Capa" target="CreacionCapa"/>
+					<indexitem text="Modificación de una capa existente" target="ModificacionCapa"/>
+					<indexitem text="Eliminación de una capa existente" target="EliminacionCapa"/>
+				</indexitem>
+	    		</indexitem>	
+	    		<indexitem text="Pestaña4: Familia de Capas">
+				<indexitem text="Pestaña4: Familia de Capas" target="Pestania4FamiliaCapas"/>
+				<indexitem text="Forma de Utilización">
+					<indexitem text="Forma de Utilización" target="FormaUtilizacionFamiliaCapas"/>
+					<indexitem text="Crear una nueva familia o categoría de capas" target="CrearNuevaFamiliaCapas"/>
+					<indexitem text="Añadir una o más capas a una familia de capas" target="AniadirCapaFamiliaCapas"/>
+					<indexitem text="Modificar el nombre de una familia de capas" target="ModificarNombreFamiliaCapas"/>
+					<indexitem text="Eliminar una capa de una layerfamily" target="EliminarCapaFamiliaCapas"/>
+					<indexitem text="Modificar el orden de las capas dentro de una familia de capas" target="ModificarOrdenFamiliaCapas"/>
+					<indexitem text="Eliminar una familia de capas existente" target="EliminarFamiliaCapas"/>
+				</indexitem>
+	    		</indexitem>	
+	    	</indexitem>
+	    	
+	    </indexitem>
+    </indexitem>
+</index>

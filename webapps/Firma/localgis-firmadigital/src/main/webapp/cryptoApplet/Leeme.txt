@@ -1,0 +1,4 @@
+c:\Software\java\j2se\jdk1.6.0_13\jre\..\bin\jarsigner -keystore GeopistaKeyStore -storepass geopista99 bcmail-jdk15-143.jar geopista
+c:\Software\java\j2se\jdk1.6.0_13\jre\..\bin\jarsigner -keystore GeopistaKeyStore -storepass geopista99 commons-logging-1.1.jar geopista
+c:\Software\java\j2se\jdk1.6.0_13\jre\..\bin\jarsigner -keystore GeopistaKeyStore -storepass geopista99 commons-httpclient-3.0.1.jar geopista
+jarsigner -keystore GeopistaKeyStore -storepass geopista99 ujiCrypto-mityc-2.0.5-signed.jar geopista

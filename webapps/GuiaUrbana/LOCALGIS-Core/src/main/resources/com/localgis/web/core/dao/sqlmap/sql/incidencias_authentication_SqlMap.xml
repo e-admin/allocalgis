@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="incidencias_authentication" >
+  
+  <select id="isValidUserIncidencias" resultClass="java.lang.Integer" parameterClass="java.util.Map" >
+      select count(1)
+      from usrgrouperm g inner join r_acl_perm p on (g.idperm = p.idperm)
+                         inner join r_usr_perm u on (u.idperm = p.idperm and u.idacl = p.idacl)
+                         inner join iuseruserhdr usr on (u.userid = usr.id and (usr.id_entidad = #idEntidad# or usr.id_entidad is null or usr.id_entidad=0))
+      where g.def = #role# and
+            usr.name = #username# and
+            (usr.password = #encryptedPassword# or usr.password = #encryptedPassword2#)
+  </select>
+
+<select id="isValidUserIncidenciasExterno" resultClass="java.lang.Integer" parameterClass="java.util.Map" >
+      SELECT count(1) FROM SP_TER_INDTER WHERE INDDNINIF = #idUsuario#
+  </select>
+</sqlMap>

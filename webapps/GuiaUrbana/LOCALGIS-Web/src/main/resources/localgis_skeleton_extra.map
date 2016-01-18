@@ -1,0 +1,28 @@
+LAYER
+    NAME "lcg_actividades_contaminantes"
+    STATUS OFF
+    DEBUG OFF
+    DUMP true
+    TYPE POLYGON
+    CONNECTIONTYPE $MAPSERVER_CONNECTIONTYPE$
+    CONNECTION "$MAPSERVER_CONNECTION$"
+    DATA 'geometry_localgis from (SELECT transform(actividad_contaminante."GEOMETRY",$SRID$) as geometry_localgis, actividad_contaminante.oid as id_localgis, ID, id_tipo_actividad, id_razon_estudio,  num_administrativo, asunto, fecha_inicio, fecha_fin, tipo_via_afecta,  
+nombre_via_afecta, numero_via_afecta, cpostal_afecta, transform("GEOMETRY",$SRID$) from actividad_contaminante where id_municipio=$ID_MUNICIPIO$ ) AS actividades_contaminantes USING UNIQUE id_localgis USING SRID=23030'
+    METADATA
+        "wms_featureinfoformat" "gml"
+        "wms_title" "lcg_actividades_contaminantes"
+        "wms_srs" "EPSG:$SRID$"
+        "gml_include_items" "all"
+    END
+    CLASS
+        COLOR 255 204 153
+        OUTLINECOLOR 0 0 0
+    END
+    EXTENT $MAX_EXTENT$
+    TRANSPARENCY 85
+    TEMPLATE "templates/feature.html"
+    HEADER "templates/header_feature.html"
+    FOOTER "templates/footer_feature.html"
+    LABELCACHE ON
+    POSTLABELCACHE FALSE
+END

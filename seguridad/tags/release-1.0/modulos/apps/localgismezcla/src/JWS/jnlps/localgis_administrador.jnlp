@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+codebase="@SITE@"
+href="localgis_administrador.jnlp">
+<information>
+<title>LOCALGIS Administrador</title>
+<vendor>LocalGIS</vendor>
+<homepage href="http://www.geopista.com" />
+<description>Open Source GIS client. Administrador.(@SITE@)</description>
+<icon href="logo_geopista.gif" />
+<offline-allowed />
+<icon kind="splash" href="splash_geopista.gif" />
+<shortcut online="false">
+      <desktop />
+      <menu submenu="LocalGIS" />
+    </shortcut>
+</information>
+<resources>
+<j2se version="1.6" initial-heap-size="128m" max-heap-size="1024m"/>
+<jar href="geopista_administrador.jar" main="true" />
+<jar href="analysis.jar" />
+<jar href="edit.jar" />
+<jar href="editing.jar" />
+<jar href="explodeselectedfeatures.jar" />
+<jar href="grid.jar" />
+<jar href="dxf.jar" />
+<jar href="selectbytype.jar" />
+<jar href="selectitemsbycirclefromselectedlayers.jar" />
+<jar href="selectitemsbyfence.jar" />
+<jar href="cliptool.jar" />
+<jar href="drawconstrainedarc.jar" />
+<jar href="drawconstrainedcircle.jar" />
+<jar href="editingtool.jar" />
+<jar href="parallelitemcursortool.jar" />
+<jar href="rotateselecteditemstool.jar" />
+<jar href="scaleselecteditemstool.jar" />
+<jar href="selectoneitem.jar" />
+<jar href="symmetrictool.jar" />
+<jar href="zoomtoarea.jar" />
+<jar href="geopista_cartografia.jar" />
+<jar href="geopista_config.jar" />
+<jar href="geopista_help.jar" />
+<jar href="geopista_img.jar" />
+<jar href="geopista_protocol.jar" />
+<jar href="geopista_security.jar" />
+<jar href="geopista_security_sso.jar"/>
+<jar href="geopista_security_dnie.jar"/>
+<jar href="geopista_sql.jar" />
+<jar href="geopista_utilidades.jar" />
+<jar href="geopista_apps.jar"/>
+<jar href="geopista_workbench.jar"/>
+<jar href="geopista_plugin.jar" />
+<jar href="geopista_img.jar"/>
+<jar href="geopista_images.jar"/>
+<jar href="jumppatched.jar" />
+<jar href="productos/JCalendar/jcalendar-1.3.2.jar" />
+<jar href="productos/cifrado/cifrado.jar"></jar>
+<jar href="productos/xml/xercesImpl.jar" />
+<jar href="productos/xml/xml-apis.jar" />
+<jar href="productos/xfire/commons-httpclient-3.0.jar"></jar>
+<jar href="productos/httpclient/commons-logging.jar" />
+<jar href="productos/log4j/log4j-1.2.6.jar"></jar>
+<jar href="productos/castor/castor-0.9.5.3.jar" />
+<jar href="productos/jetty/extra/lib/org.mortbay.jaas.jar" />
+<jar href="productos/netbeans/AbsoluteLayout.jar" />
+<jar href="productos/javahelp/jhall.jar" />
+<jar href="productos/xfire/commons-codec-1.3.jar" />
+<jar href="productos/xfire/commons-httpclient-3.0.jar" />
+<jar href="productos/xfire/xfire-core-1.2.6.jar" />
+<jar href="productos/vividsolutions/jts-1.5.jar"></jar>
+
+<jar href="productos/commons-ssl/commons-ssl.jar" />
+<jar href="productos/axis/axis.jar" />
+<jar href="productos/jaxrpc/jaxrpc.jar" />
+<jar href="productos/mantisconnect-modelo/mantisconnect_modelo.jar" /> 
+<jar href="productos/xfire/commons-discovery-0.2.jar"/>
+<jar href="productos/axis2/backport-util-concurrent-3.1.jar"/>
+<jar href="productos/xfire/wsdl4j-1.6.1.jar" />
+</resources>
+<application-desc main-class="com.geopista.app.administrador.CMainAdministrador">
+<argument>-Dfile.encoding=windows-1252</argument>
+</application-desc>
+<security><all-permissions/></security>
+</jnlp>

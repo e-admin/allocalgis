@@ -1,0 +1,17 @@
+<root>
+    <element xml-name="bicreg">
+        <element xml-name="idreg">
+            <element xml-name="locat">
+                <element xml-name="cd" java-name="codigoDelegacion"/>
+                <element xml-name="cmc" java-name="codigoMunicipio"/>
+            </element>
+            <element xml-name="rcl">
+                <element xml-name="pc1" java-name="refCatas1"/>
+                <element xml-name="pc2" java-name="refCatas2"/>
+                <element xml-name="car" java-name="cargo"/>
+                <element xml-name="cc1" java-name="digitoControl1"/>
+                <element xml-name="cc2" java-name="digitoControl2"/>
+            </element>
+        </element>
+    </element>
+</root>

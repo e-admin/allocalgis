@@ -1,0 +1,13 @@
+El fichero swt-3.5.2-win32-win32-x86.zip es la ultima release de la aplicacion que se puede
+descargar
+No coincide exactamente con las versiones con las que probamos (3.448 y 3.449) pero puede funcionar
+
+Como es un producto que no se puede distribuir por el tipo de licencia hay que descargarselo de la pagina de eclipse
+
+http://archive.eclipse.org/eclipse/downloads/drops/R-3.5.2-201002111343/index.php#SWT
+http://archive.eclipse.org/eclipse/downloads/drops/R-3.5.2-201002111343/download.php?dropFile=swt-3.5.2-win32-win32-x86.zip
+
+
+Descomprimos el zip y desplegamos el swt.jar en el repositorio local para que lo pille.
+
+call mvn -s %SETTINGS% %TIPO_COMPILACION% -DgroupId=org.apache.axis2 -DartifactId=axis2 -Dversion=1.5.3 -Dpackaging=jar -Dfile=axis2-1.5.3-jar.jar.signed  -DrepositoryId=%REPOSITORYID% -Dclassifier=jar -Durl=%URL%

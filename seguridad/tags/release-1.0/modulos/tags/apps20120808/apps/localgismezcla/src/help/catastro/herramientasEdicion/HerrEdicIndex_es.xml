@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+
+<index version="1.0">
+    <indexitem text="Contenidos">
+        <indexitem text="herramientas de Edición">
+        
+	    	<indexitem text="Herramientas de Edición. Introducción" target="introduccion"/>
+	    	<indexitem text="Panel de Herramientas de Edición" target="PanelEdicion"/>
+	    	<indexitem text="Gestión de Coordenadas Absolutas y Relativas" target="CoordAbsolutasRelativas"/>
+	    	<indexitem text="Creación de Guías de Dibujo" target="GuiasDeDibujo"/>
+	    	<indexitem text="Selección por Polígono" target="SeleccionarPorPoligono"/>
+	    	<indexitem text="Selección por Círculo" target="SeleccionPorCirculo"/>
+	    	<indexitem text="Tratamiento de Simetrías" target="Simetria"/>
+	    	<indexitem text="Girado de Elementos" target="Girado"/>
+	    	<indexitem text="Escalado de Elementos" target="Escalado"/>
+	    	<indexitem text="Recortar los Elementos del Dibujo" target="Recortar"/>
+	    	<indexitem text="Generación de Geometrías Paralelas" target="GeometriasParalelas"/>
+	    	<indexitem text="Fusión de Elementos" target="FusionElementos"/>
+	    	<indexitem text="División de una Entidad en Múltiples Entidades" target="DivisionElementos"/>
+	    	<indexitem text="Explosión de Entidades" target="ExplosionEntidades"/>
+	    	<indexitem text="Selección de Entidades por Tipode Geometría" target="SeleccionPorTipo"/>
+	    	<indexitem text="Selección de una única Entidad" target="SeleccionUnaEntidad"/>	    	
+	    	<indexitem text="Dibujar Círculo" target="DibujarCirculo"/>
+	    	<indexitem text="Dibujar Arco" target="DibujarArco"/>
+	        
+	    </indexitem>
+    </indexitem>
+</index>

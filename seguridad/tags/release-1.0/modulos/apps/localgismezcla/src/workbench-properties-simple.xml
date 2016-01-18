@@ -1,0 +1,14 @@
+<workbench>
+	<plug-in>com.vividsolutions.jump.workbench.ui.zoom.ZoomToFullExtentPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.searchcatreference.SearchReferenciaCatastralPlugIn</plug-in>
+
+	<!-- new plugins -->
+	<plug-in>com.geopista.ui.plugin.GeopistaPrintPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.SeriePrintPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.GeopistaSaveMapPlugIn</plug-in>
+	
+	<plug-in>com.geopista.ui.plugin.LoadSystemLayersPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.GeopistaAddNewLayerPlugIn</plug-in>
+
+</workbench>
+

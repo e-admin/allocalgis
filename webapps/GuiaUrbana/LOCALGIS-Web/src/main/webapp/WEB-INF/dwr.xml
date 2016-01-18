@@ -1,0 +1,32 @@
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN"
+    "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+
+<dwr>
+  <allow>
+    <create creator="new" javascript="WFSGService">
+      <param name="class" value="com.localgis.web.dwr.WFSGService"/>
+    </create>   
+    <create creator="new" javascript="MarkerService">
+      <param name="class" value="com.localgis.web.dwr.MarkerService"/>
+    </create>   
+    <create creator="new" javascript="IncidenciaService">
+      <param name="class" value="com.localgis.web.dwr.IncidenciaService"/>
+    </create>      
+    <create creator="new" javascript="SearchService">
+      <param name="class" value="com.localgis.web.dwr.SearchService"/>
+    </create>      
+    <create creator="new" javascript="SSOAuthCheckService">
+      <param name="class" value="com.localgis.web.dwr.SSOAuthCheckService"/>
+    </create>      
+  	<convert match="com.localgis.web.wfsg.domain.ElementEntity" converter="bean">
+		<param name="include" value="name,numero,posX,posY,exactResult"/>
+	</convert>
+    <convert match="com.localgis.web.beans.PlaceNameInfoService" converter="bean">
+        <param name="include" value="name,type,service,featureType"/>
+    </convert>
+     <create creator="new" javascript="ReportService">
+      <param name="class" value="com.localgis.web.dwr.ReportService"/>
+    </create> 
+  </allow>
+</dwr>

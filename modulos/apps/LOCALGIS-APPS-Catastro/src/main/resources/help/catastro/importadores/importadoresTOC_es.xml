@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+    <tocitem text="Contenidos">
+    	<tocitem text="Importadores de Información Catastral">
+	    	<tocitem text="Introducción" target="introduccion"/>
+	    	
+	        <tocitem text="Importadores de Información Catastral. Descripción">
+	            <tocitem text="Importación de la Información del padrón Catastral" target="PadronCatastral"/>
+	            <tocitem text="Importación del Fichero FIN de Salida" target="FinSalida"/>
+	            <tocitem text="Importación del Fichero FIN de Retorno Masivo" target="FinRetorno"/>
+	            <tocitem text="Fichero de Intercambio de Información de Titularidad" target="InformacionTitularidad"/>
+	            <tocitem text="Fichero de Intercambio de Información Catastral" target="InformacionCatastral"/>
+	            <tocitem text="Fichero de Intercambio de Información Catastral de Retorno" target="InformacionRetorno"/>
+	        </tocitem>
+	                      
+	    </tocitem>
+    </tocitem>
+</toc>

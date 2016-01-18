@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+<toc version="2.0"categoryclosedimage="chapter" topicimage="topic" >
+    <tocitem text="LocalGIS">
+    	<tocitem text="Módulos" target="">
+    	   <tocitem text="Información de Referencia" target="">
+    	     <tocitem text="Importar Datos" target="">
+    	   	<tocitem text="Importar Datos de la D.G.Catastro" target="catastroImportarParcelas">
+    	   		  <tocitem text="Validar Datos de Catastro" target="InformacionReferenciaSeleccionFicheroImportarDGCatastro"/>
+			  <tocitem text="Almacenar Datos de Catastro" target="InformacionReferenciaDatosCatastrosAlmacenados"/>
+		</tocitem>	
+    	  	
+    	  	<tocitem text="Importar Padrón Municipal de Habitantes" target=""/>
+    	   	<tocitem text="Importar Topónimos" target="informacionReferenciaImportarToponimos"/>
+    	   	<tocitem text="Importar Información de Referencia delINE" target="InfoReferenciaImportarDatosINE">
+    	   		<tocitem text="Tramos de Vía" target="">
+    	   			<tocitem text="Validar Tramos de Vía" target="InformacionReferenciaImportarTramosViaSeleccionFichero"/>
+    	   			<tocitem text="Almacenar Tramos de Vía" target="InformacionReferenciaGuardarBaseDatos"/>
+    	   		</tocitem>	
+    	   		<tocitem text="Tramos de Vía INE" target="">
+			    	   <tocitem text="Validar Tramos Vía INE" target="InformacionReferenciaImportarTramosViaIneSeleccionFichero"/>
+			    	   <tocitem text="Almacenar Tramos Vía INE" target="InformacionReferenciaTramosViaIneGuardarBaseDatos"/>
+    	   		</tocitem>	
+    	   		
+    	   		<tocitem text="Números de Policía" target="">
+				   <tocitem text="Validar Números de Policía" target="InformacionReferenciaNumeroPoliciaSeleccionFichero"/>
+			   	   <tocitem text="Almacenar Números de Policía" target="InformacionReferenciaNumerosPoliciaGuardarBaseDatos"/>
+    	   		</tocitem>
+    	   		
+    	   		<tocitem text="Tipos de Vía" target="">
+				   <tocitem text="Validar Tipos de  Vía" target="InformacionReferenciaTiposViaIneSeleccionFichero"/>
+			   	   <tocitem text="Almacenar Tipos de Vía" target="InformacionReferenciaTiposViaIneGuardarBaseDatos"/>
+    	   		</tocitem>
+    	   		
+    	   		<tocitem text="Distritos Censales" target="">
+				   <tocitem text="Validar Distritos Censales" target="InformacionReferenciaDistritosCensalesSeleccionFichero"/>
+			   	   <tocitem text="Almacenar Distritos Censales" target="InformacionReferenciaDistritosCensalesGuardarBaseDatos"/>
+    	   		</tocitem>
+    	   		
+    	   		<tocitem text="Secciones Censales" target="">
+				   <tocitem text="Validar Secciones Censales" target="InformacionReferenciaSeccionesCensalesSeleccionFichero"/>
+			   	   <tocitem text="Almacenar Secciones Censales" target="InformacionReferenciaSeccionesCensalesGuardarBaseDatos"/>
+    	   		</tocitem>
+    	   		
+    	   		<tocitem text="SubSecciones Censales" target="">
+				   <tocitem text="Validar SubSecciones Censales" target="InformacionReferenciaSubSeccionesCensalesSeleccionFichero"/>
+			   	   <tocitem text="Almacenar SubSecciones Censales" target="InformacionReferenciaSubSeccionesCensalesGuardarBaseDatos"/>
+    	   		</tocitem>
+
+    	   		<tocitem text="Entidades Singulares" target="">
+				   <tocitem text="Validar Entidades Singulares" target="InformacionReferenciaEntidadesSingularesSeleccionFichero"/>
+			   	   <tocitem text="Almacenar Entidades Singulares" target="InformacionReferenciaEntidadesSingularesGuardarBaseDatos"/>
+    	   		</tocitem>
+
+    	   		<tocitem text="Núcleos y Diseminados" target="">
+				   <tocitem text="Validar Núcleos y Diseminados" target="InformacionReferenciaNucleosDiseminadosSeleccionFichero"/>
+			   	   <tocitem text="Almacenar Núcleos y Diseminados" target="InformacionReferenciaNucleosDiseminadosSeleccionFichero"/>
+    	   		</tocitem>
+
+    	   		<tocitem text="Entidades Colectivas" target="">
+				   <tocitem text="Validar Entidades Colectivas" target="InformacionReferenciaEntidadesColectivasSeleccionFichero"/>
+			   	   <tocitem text="Almacenar Entidades Colectivas" target="InformacionReferenciaEntidadesColectivasGuardarBaseDatos"/>
+    	   		</tocitem>
+
+
+
+    	   		
+    	   	</tocitem>
+    	     </tocitem>
+    	     
+    	     <tocitem text="Edición de Información" target="">
+    	     	<tocitem text="Editar Información de Referencia" target="infoReferenciaEditarInfoReferencia"/>
+    	   	<tocitem text="Fusionar Tramos de vía del Callejero como vías completas" target=""/>
+    	   	<tocitem text="Enlazar Nümeros de Policía al Callejero" target=""/>
+    	   	<tocitem text="Unir datos de la D.G. de Catastro al Callejero" target=""/>
+    	   	<tocitem text="Asociar Datos del INE al callejero" target=""/>
+    	   	<tocitem text="Segmentar vías por unidades poblacionales y secciones" target=""/>
+    	   	<tocitem text="Enlazar Vías de Catastro y del INE" target=""/>
+    	    </tocitem>
+    	    <tocitem text="Informes" target="">
+    	    	<tocitem text="Informe de Información de Referencia" target="generadorReports"/>
+		<tocitem text="Generar Mapa de Información de Referencia" target="ImprimirMapaInformacionReferencia"/>
+    	   </tocitem>
+    	   
+    	   </tocitem>
+	   
+	   <tocitem text="Planeamiento" target="">
+	    	   	<tocitem text="Importar Datos" target="">
+	    	   		<tocitem text="Importar Ambitos Planeamiento Municipal" target="ImportarAmbitosPlaneamientoTotales">
+	    	   			</tocitem text="Selección Fichero de Planeamiento" target="planeamientoImportarAmbitosPlaneamiento01"/>
+	    	   			</tocitem text="Comparación de Dominios" target="planeamientoImportarAmbitosPlaneamiento02"/>
+	    	   			</tocitem text="Fin de la Importación" target="planeamientoImportarAmbitosPlaneamiento03"/>
+	    	   		</tocitem>
+	    	   		<tocitem text="Importar Ambitos Gestión del Suelo" target="PlaneamientoAmbitosGestionTotales">
+	    	   			<tocitem text="Selección del Fichero" target="planeamientoImportarAmbitosGestion01"/>
+	    	   			<tocitem text="Comparación de Dominios" target="planeamientoImportarAmbitosGestion02"/>
+	    	   			<tocitem text="Fin de la Importación" target="planeamientoImportarAmbitosGestion03"/>
+	    	   		</tocitem>
+	    	   	</tocitem>
+	    	   	<tocitem text="Administrador de Dominios">
+	    	   		<tocitem text="Editor de Dominios de Planeamiento" target="" />
+	    	   	</tocitem>
+	    	   	<tocitem text="Edición de Datos" target="">
+	    	   		<tocitem text="Editar Planeamiento" target="planeamientoEditarPlaneamiento"/>
+	    	   		<tocitem text="Editor de Ámbitos de Gestión" target="planeamientoEditarAmbitos"/>
+	    	   	</tocitem>
+	    	   	<tocitem text="Histórico y Avisos" target="">
+	    	   		<tocitem text="Gestor de Eventos y Avisos de Gestión de Suelo" target="planeamientoGestionEventos01"/>
+	    	   	</tocitem>
+	    	   	<tocitem text="Informes y Mapas" target="">
+	    	   		<tocitem text="Expedir Informe Urbanístico" target="planeamientoExpedirInformeUrbanistico01"/>
+	    	   		<tocitem text="Generar Mapa de Planeamiento" target="planeamientoImprirmirMapaPlaneamientoTotal"/>
+	    	   		<tocitem text="Informe de Parcelas Afectadas por Ambitos de Gestión" target="planeamientoInformeParcelasAfectadas01"/>
+	    	   	</tocitem>
+    	
+	
+    	   </tocitem>
+    	   
+    	   
+    	   <tocitem text="Catastro" target="">
+    	   	<tocitem text="Importar Datos" target="">
+    	   		<tocitem text="Importar Fichero Informático de Castastro Urbana" target="catastroImportacionFicheroUrbanaTotal">
+    	   			<tocitem text="Selección Fichero" target="catastroImportacionFinUrb01"/>
+    	   			<tocitem text="Fin de la Importación" target="catastroImportacionFinUrb02"/>
+    	   		</tocitem>
+    	   		<tocitem text="Importar Fichero Informático de Catastro Rústica" target=""/>
+    	   	</tocitem>
+    	   	<tocitem text="Editar y Consultar Catastro" target="">
+	    	   	<tocitem text="Visualizar/Consutar Catastro" target=""/>
+	    	   	<tocitem text="Editar Catastro" target="catastroEditar"/>
+    	   	</tocitem>
+    	   	<tocitem text="Validar Referencia Catastral" target="">
+    	   		<tocitem text="Validación del a Referencia Catastral" target=""/>
+    	   	</tocitem>
+    	   	<tocitem text="Informes" target="">
+    	   		<tocitem text="Discrepancias de Información IBI-PMH" target="catastroDiscrepanciasIBI"/>
+    	   		<tocitem text="Generación de Informes Catastrales" target="catastroGeneracionInformesCatastrales"/>
+    	   	
+    	   	</tocitem>
+    	   </tocitem>
+    	   
+    	   
+    	   
+    	   <tocitem text="Patrimonio" target="">
+	       	   	<tocitem text="Consutlar y Editar" target="">
+	   	    	   	<tocitem text="Consutar Patrimonio" target=""/>
+	   	    	   	<tocitem text="Editar Patrimonio" target=""/>
+	       	   	</tocitem>
+	       	   	<tocitem text="Generar Informes y Mapas" target="">
+	       	   		<tocitem text="Listado de Superficies no coincidentes" target="PatrimonioSuperficiesNoCoincidentes"/>
+	       	   		<tocitem text="Informe de Patrimonio Municipal" target="generadorReports"/>
+	       	   		<tocitem text="Mapa de Patrimonio Municipal" target="ImprimirMapaPatrimonio"/>
+	       	   	</tocitem>
+	       	   	<tocitem text="Generar Fichas del Libro Inventario" target="">
+	       	   		<tocitem text="Fichas del Libro Inventario" target="PatrimonioFichasInventario"/>
+	       	   	</tocitem>
+    	   </tocitem>
+    	   
+    	   
+    	   <tocitem text="Infraestructuras" target="">
+    	   	<tocitem text="Importar Datos" target="">
+    	   		<tocitem text="Importar Infraestructuras" target="infraestructurasImportarTodo">
+    	   			<tocitem text="Selección del Fichero" target="infraestructurasImportar01"/>
+    	   			<tocitem text="Fin de la Importación" target="infraestructurasImportar02"/>
+    	   		</tocitem>
+    	   	</tocitem>
+    	   	<tocitem text="Edición de Información" target="">
+    	   		<tocitem text="Editar Red de Abastecimiento" target="infraestructurasEditarRedAbastecimiento"/>
+    	   		<tocitem text="Editar Red de Saneamiento" target="infraestructurasEditarRedSaneamiento"/>
+    	   	</tocitem>
+    	   	<tocitem text="Estadísticas" target="">
+    	   		<tocitem text="Estadísticas de Infraestructuras" target="generadorReports"/>
+    	   	</tocitem>
+    	   	<tocitem text="Histórico y avisos" target="">
+    	   		<tocitem text="Histórico, Estado y Gestor de Avisos de Infraestructuras" target="infraestructurasHistoricosAvisos"/>
+    	   	</tocitem>
+    	   	<tocitem text="Informes y Mapas" target="">
+    	   		<tocitem text="Informe de Infraestructuras" target="generadorReports"/>
+    	   		<tocitem text="Generar Mapa de Infraestructuras" target="ImprimirMapaInfraestructuras"/>
+    	   	</tocitem>
+    	   </tocitem>
+    	   
+    	</tocitem>
+    	
+    	<tocitem text="Editor LocalGIS" target="">
+	    		<tocitem text="Editor LocalGIS" target="editorAyuda"/>	
+    	</tocitem>
+    	
+    	<tocitem text="Asistente de Impresión">
+			<tocitem text="Generar Mapa" target="planeamientoGenerarMapaPlaneamiento01"/>
+	    	   	<tocitem text="Datos Generales" target="planeamientoGenerarMapaPlaneamiento02"/>
+	    	   	<tocitem text="Escala y Leyenda" target="planeamientoGenerarMapaPlaneamiento03"/>
+	    	   	<tocitem text="Configuración Impresora" target="planeamientoGenerarMapaPlaneamiento04"/>
+	    	   	<tocitem text="Previsualización del Mapa" target="planeamientoGenerarMapaPlaneamiento05"/>
+    	</tocitem>
+	<tocitem text="Generador Informes" target="">
+		<tocitem text="Seleccion Informe" target="generadorInformeSeleccion"/>
+		<tocitem text="Datos Generales Informe" target="generadorInformeDatosGenerales"/>
+		<tocitem text="Encabezado Informe" target="generadorInformeEncabezado"/>
+		<tocitem text="Campos en el informe" target="generadorInformeCamposInforme"/>
+		<tocitem text="Selección registros" target="generadorInformeSeleccionRegistros"/>
+		<tocitem text="Enlaces entre Tablas" target="generadorInformeUnionesTablas"/>
+		<tocitem text="Acción sobre el informe" target="generadorInformeFinalizar"/>
+	</tocitem>
+    </tocitem>
+</toc>
+

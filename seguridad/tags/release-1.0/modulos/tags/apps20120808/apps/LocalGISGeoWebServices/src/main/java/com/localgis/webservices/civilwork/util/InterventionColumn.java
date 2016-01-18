@@ -1,0 +1,5 @@
+package com.localgis.webservices.civilwork.util;
+
+public enum InterventionColumn {
+	DESCRIPTION,START_WARNING,USER_CREATOR,ACTUATION_TYPE,INTERVENTION_TYPE,NEXT_WARNING,FORESEEN_BUDGET,WORK_PERCENTAGE,CAUSES;
+}

@@ -1,0 +1,231 @@
+/**
+ * MetaInformationHandler.java
+ * © MINETUR, Government of Spain
+ * This program is part of LocalGIS
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+/*
+ * Created on 13.07.2005 for PIROL
+ *
+ * CVS header information:
+ *  $RCSfile: MetaInformationHandler.java,v $
+ *  $Revision: 1.1 $
+ *  $Date: 2009/07/03 12:32:01 $
+ *  $Source: /usr/cvslocalgis/.CVSROOT/localgisdos/core/src/pirolPlugIns/utilities/metaData/MetaInformationHandler.java,v $
+ */
+package pirolPlugIns.utilities.metaData;
+
+import java.util.HashMap;
+import java.util.Set;
+
+import pirolPlugIns.utilities.HandlerToMakeYourLifeEasier;
+import pirolPlugIns.utilities.FeatureCollection.PirolFeatureCollection;
+import pirolPlugIns.utilities.FeatureCollection.PirolFeatureCollectionRole;
+import pirolPlugIns.utilities.FeatureCollection.RoleStandardFeatureCollection;
+import pirolPlugIns.utilities.debugOutput.DebugUserIds;
+import pirolPlugIns.utilities.debugOutput.PersonalLogger;
+
+import com.vividsolutions.jump.feature.FeatureCollection;
+import com.vividsolutions.jump.workbench.model.Layer;
+
+/**
+ * Tool class for easier handling of meta information on a layer basis.<br>
+ * - objects will be created, if neccessary<br>
+ * - you don't need to access the properties map of the data source (where the meta information is stored) yourself<br>
+ *
+ * @author Ole Rahn
+ * <br>
+ * <br>FH Osnabr&uuml;ck - University of Applied Sciences Osnabr&uuml;ck,
+ * <br>Project: PIROL (2005),
+ * <br>Subproject: Daten- und Wissensmanagement
+ * 
+ * @version $Revision: 1.1 $
+ * @see pirolPlugIns.utilities.metaData.MetaInformationKeys
+ * 
+ */
+public class MetaInformationHandler implements HandlerToMakeYourLifeEasier {
+    protected ObjectContainingMetaInformation objectWithMetaInformation = null;
+
+
+    protected PersonalLogger logger = new PersonalLogger(DebugUserIds.USER_Ole);
+    /**
+     * 
+     *@param layerWithMetaInformation the layer you want the meta information of (has to have a DataSource!!)
+     */
+    public MetaInformationHandler(Layer layerWithMetaInformation) {
+        super();
+        if (layerWithMetaInformation!=null) {
+            FeatureCollection fc = layerWithMetaInformation.getFeatureCollectionWrapper().getUltimateWrappee();
+            
+            if (!PirolFeatureCollection.class.isInstance(fc)){
+                fc = createPirolFeatureCollection(fc);
+                layerWithMetaInformation.setFeatureCollection(fc);
+            }
+            
+            this.objectWithMetaInformation = (PirolFeatureCollection)fc;
+        } else {
+            throw new RuntimeException("given layer is null.");
+        }
+    }
+    
+    /**
+     * 
+     *@param objectWithMetaInformation the object you want the meta information of
+     */
+    public MetaInformationHandler(ObjectContainingMetaInformation objectWithMetaInformation) {
+        super();
+        if (objectWithMetaInformation!=null) {
+            this.objectWithMetaInformation = objectWithMetaInformation;
+        } else {
+            throw new RuntimeException("given layer is null.");
+        }
+    }
+
+    
+    /**
+     * creates a PirolFeatureCollection out of a regular FeatureCollection
+     *@param fc regular FeatureCollection
+     *@return PirolFeatureCollection
+     */
+    public static final PirolFeatureCollection createPirolFeatureCollection(FeatureCollection fc){
+        return MetaInformationHandler.createPirolFeatureCollection(fc, new RoleStandardFeatureCollection());
+    }
+    
+    /**
+     * creates a PirolFeatureCollection out of a regular FeatureCollection
+     *@param fc regular FeatureCollection
+     *@return PirolFeatureCollection
+     */
+    public static final PirolFeatureCollection createPirolFeatureCollection(FeatureCollection fc, PirolFeatureCollectionRole role){
+        PirolFeatureCollection pfc = null;
+        
+        if (!PirolFeatureCollection.class.isInstance(fc)){
+            pfc = new PirolFeatureCollection(fc, role); 
+        } else {
+            pfc = (PirolFeatureCollection)fc;
+            
+            if (!role.equalsRole(PirolFeatureCollectionRole.ROLE_STANDARD)){
+                pfc.addRole(role);
+            }
+            
+        }
+        
+        return pfc;
+    }
+    
+    /**
+     * Retrieve the existent meta information map. 
+     *@return the existent meta information map or null, if there is none
+     */
+    public MetaDataMap getExistentMetaInformationMap(){
+        if (this.containsMetaInformation()){
+            return this.getMetaInformationMap();
+        }
+        return null;
+    }
+    
+    /**
+     * Retrieve the existent meta information map or create one. 
+     *@return the existent meta information map or an empty meta information map (that is now attached to the DataSource)
+     *@throws RuntimeException, if the given DataSource doesn't even have properties (<code>getProperties()</code>)
+     */
+    public MetaDataMap getMetaInformationMap(){
+        if (!this.containsMetaInformation()){
+            MetaDataMap newMap = new MetaDataMap();
+            
+            if (this.objectWithMetaInformation!=null){
+                this.logger.printDebug("creating new meta map for " + this.objectWithMetaInformation);
+                this.objectWithMetaInformation.setMetaInformation(newMap);
+            } else
+                return null;
+            
+            return newMap;
+        } else if (this.objectWithMetaInformation!=null){
+            return this.objectWithMetaInformation.getMetaInformation();
+        } 
+        
+        return null;
+    }
+    
+    /**
+     * @return true if the given layer already contains meta information, false if not
+     */
+    public boolean containsMetaInformation(){
+        return (this.objectWithMetaInformation!=null && this.objectWithMetaInformation.getMetaInformation()!=null);
+    }
+
+    /**
+     * Adds a new meta information key-value-pair to the meta information map, replaces
+     * an existing pair with the same key.
+     *@param key
+     *@param value
+     */
+    public void addMetaInformation(String key, Object value) {
+        MetaDataMap metaMap = this.getMetaInformationMap();
+        if (metaMap.containsKey(key)) metaMap.remove(key);        
+        metaMap.addMetaInformation(key, value);
+    }
+
+    public HashMap getMetaData() {
+        MetaDataMap metaMap = this.getMetaInformationMap();
+        return metaMap.getMetaData();
+    }
+
+    public void setMetaData(HashMap metaData) {
+        MetaDataMap metaMap = this.getMetaInformationMap();
+        metaMap.setMetaData(metaData);
+    }
+    
+    public void clear() {
+        MetaDataMap metaMap = this.getMetaInformationMap();
+        metaMap.clear();
+    }
+
+    public boolean containsKey(String key) {
+        MetaDataMap metaMap = this.getMetaInformationMap();
+        return metaMap.containsKey(key);
+    }
+    
+    public Object getMetaInformation(String key) {
+        MetaDataMap metaMap = this.getMetaInformationMap();
+        return metaMap.get(key);
+    }
+
+    public boolean containsValue(Object value) {
+        MetaDataMap metaMap = this.getMetaInformationMap();
+        return metaMap.containsValue(value);
+    }
+
+    public Set keySet() {
+        MetaDataMap metaMap = this.getMetaInformationMap();
+        return metaMap.keySet();
+    }
+
+    public Object remove(String key) {
+        MetaDataMap metaMap = this.getMetaInformationMap();
+        return metaMap.remove(key);
+    }
+    
+    // Specific information
+    
+    /**
+     * @return the Attribute2UnitMap of the given DataSource or null, if there is none
+     */
+    public Attribute2UnitMap getAttribute2UnitMap(){
+        if (this.containsAttribute2UnitMap())
+            return (Attribute2UnitMap)this.getMetaInformation(Attribute2UnitMap.KEY_ATTRIBUTE2UNIT);
+        return null;        
+    }
+    
+    public void putAttribute2UnitMap(Attribute2UnitMap attribute2UnitMap){
+        this.addMetaInformation(Attribute2UnitMap.KEY_ATTRIBUTE2UNIT,attribute2UnitMap);
+    }
+    
+    public boolean containsAttribute2UnitMap() {
+        return this.containsKey(Attribute2UnitMap.KEY_ATTRIBUTE2UNIT);
+    }
+    
+    
+}

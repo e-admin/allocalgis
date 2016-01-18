@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.app</groupId>
+	<artifactId>localgis-apps-reloadexternallayers</artifactId>
+	<version>3.0</version>
+	<packaging>jar</packaging>
+	<organization>
+		<name>MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO</name>
+	</organization>
+	<parent>
+		<groupId>com.localgis</groupId>
+		<artifactId>localgis-parent-apps</artifactId>
+		<version>3.0</version>
+	</parent>
+	
+	<properties>
+		<!-- Configuracion jnlp -->
+		<mainClassJnlp>com.geopista.app.SimpleAppContext</mainClassJnlp>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-core</artifactId>
+			<version>3.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.const</groupId>
+			<artifactId>localgis-const</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.sql</groupId>
+			<artifactId>localgis-sql</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<!--version>8.0-311.jdbc3</version-->
+			<version>8.0-318.jdbc3</version>
+		</dependency>
+		<dependency>
+	  		<groupId>com.localgis.plugin</groupId>
+		  	<artifactId>localgis-plugin-datosexternos</artifactId>
+	 	 	<version>3.0</version>
+		</dependency>
+	</dependencies>
+	<name>localgis-apps-reloadexternallayeres</name>
+	<description>Reload Layers</description>
+</project>

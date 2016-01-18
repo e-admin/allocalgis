@@ -1,0 +1,11 @@
+/* 
+Geopista Layouts
+Author: Alfonso Domínguez
+version: 10.26.2004
+*/
+
+@import url(layout.css);
+@import url(typography.css);
+
+body { background: #FFFFFF; margin: 0; text-align: center; }
+img { border: 0; padding: 0; margin-bottom: 0 }

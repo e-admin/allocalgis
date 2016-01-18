@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="localgis_attribute" >
+
+  <resultMap id="LocalgisAttributeResult" class="com.localgis.web.core.model.LocalgisAttribute" >
+    <result column="attributeid" property="attributeid" jdbcType="INTEGER" />
+    <result column="attributename" property="attributename" jdbcType="VARCHAR" />
+    <result column="attributeidgeopista" property="attributeidgeopista" jdbcType="NUMERIC" />
+    <result column="layerid" property="layerid" jdbcType="INTEGER" />
+    <result column="attributeidalias" property="attributeidalias" jdbcType="NUMERIC" />
+    <result column="mapid" property="mapid" jdbcType="INTEGER" />
+  </resultMap>
+
+  <resultMap id="LocalgisAttributeTranslatedResult" class="com.localgis.web.core.model.LocalgisAttributeTranslated" >
+    <result column="attributeid" property="attributeid" jdbcType="INTEGER" />
+    <result column="attributename" property="attributename" jdbcType="VARCHAR" />
+    <result column="attributeidgeopista" property="attributeidgeopista" jdbcType="NUMERIC" />
+    <result column="layerid" property="layerid" jdbcType="INTEGER" />
+    <result column="attributeidalias" property="attributeidalias" jdbcType="NUMERIC" />
+    <result column="alias" property="alias" jdbcType="NUMERIC" />
+  </resultMap>
+
+  <resultMap id="LocalgisAttributeValueTranslatedResult" class="com.localgis.web.core.model.LocalgisAttributeValueTranslated" >
+    <result column="layername" property="layername" jdbcType="VARCHAR" />
+    <result column="attributename" property="attributename" jdbcType="VARCHAR" />
+    <result column="pattern" property="pattern" jdbcType="VARCHAR" />
+    <result column="traduccion" property="traduccion" jdbcType="VARCHAR" />
+    <result column="locale" property="locale" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <delete id="deleteByPrimaryKey" parameterClass="com.localgis.web.core.model.LocalgisAttribute" >
+    delete from localgisguiaurbana.attribute
+    where attributeid = #attributeid:INTEGER#
+  </delete>
+
+  <update id="updateByPrimaryKey" parameterClass="com.localgis.web.core.model.LocalgisAttribute" >
+    update localgisguiaurbana.attribute
+    set attributename = #attributename:VARCHAR#,
+      attributeidgeopista = #attributeidgeopista:NUMERIC#,
+      layerid = #layerid:INTEGER#,
+      attributeidalias = #attributeidalias:NUMERIC#
+      mapid = #mapid:NUMERIC#
+    where attributeid = #attributeid:INTEGER#
+  </update>
+  
+  <select id="selectAttributesByLayer" parameterClass="java.util.Map" resultMap="LocalgisAttributeResult">
+      select a.attributeid as attributeid,
+             a.attributename as attributename,
+             a.attributeidgeopista as attributeidgeopista,
+             a.layerid as layerid,
+             a.attributeidalias as attributeidalias,
+             a.mapid as mapid
+      from localgisguiaurbana.attribute a
+      where a.layerid = #idLayer# and a.mapid=#idMap#
+  </select>
+  
+  <select id="selectRestrictedAttributesByIdLayerGeopistaAndMapPublic" parameterClass="java.util.Map" resultMap="LocalgisAttributeResult">
+      select a.attributeid as attributeid,
+             a.attributename as attributename,
+             a.attributeidgeopista as attributeidgeopista,
+             a.layerid as layerid,
+             a.attributeidalias as attributeidalias,
+             a.mapid as mapid
+      from localgisguiaurbana.attribute a, localgisguiaurbana.layer l, localgisguiaurbana.restricted_attribute ra
+      where a.layerid = l.layerid and 
+            a.attributeidgeopista = ra.attributeidgeopista and 
+            l.layeridgeopista = #idLayerGeopista# and 
+            ra.mappublic = #mapPublic#
+  </select>
+
+  <select id="selectAttributesTranslatedByNameLayerAndMapPublic" parameterClass="java.util.Map" resultMap="LocalgisAttributeTranslatedResult">
+      select a.attributeid as attributeid,
+             a.attributename as attributename,
+             a.attributeidgeopista as attributeidgeopista,
+             a.layerid as layerid,
+             a.attributeidalias as attributeidalias,
+             d.traduccion as alias
+      from localgisguiaurbana.attribute a
+           inner join localgisguiaurbana.layer l on a.layerid = l.layerid and l.layername = #nameLayer#
+           inner join localgisguiaurbana.maplayer ml on l.layerid = ml.layerid
+           inner join localgisguiaurbana.map m on ml.mapid = m.mapid and m.mappublic = #mapPublic#
+           left outer join dictionary d on d.id_vocablo = a.attributeidalias and d.locale = #locale#
+  </select>
+  
+  <!--  El tipo 7 son los tipos multivaluados -->
+  <!-- Como en algunos idioma los atributos no estan traducidos cogemos
+  		los del idioma español y los del solicitado -->
+  <select id="selectAttributesValuesTranslatedByNameLayer" parameterClass="java.util.Map" resultMap="LocalgisAttributeValueTranslatedResult">
+	select l.name as layername,c.name as attributename,pattern,dt.traduccion,dt.locale
+    from attributes a inner join columns c on (a.id_column = c.id)
+                      left join columns_domains cd on (c.id = cd.id_column)
+                      inner join tables t on (c.id_table = t.id_table)
+		      			inner join layers l on (a.id_layer= l.id_layer)
+		      			inner join domainnodes dn  on (dn.id_domain=c.id_domain)
+		      			inner join dictionary dt on (dn.id_description=dt.id_vocablo)
+    where l.name=#nameLayer# and c.id_domain is not null and type=7 and (dt.locale = #locale# or dt.locale = 'es_ES')   			
+  </select>
+  
+  <select id="selectAttributesTranslatedByIdLayerAndMapPublic" parameterClass="java.util.Map" resultMap="LocalgisAttributeTranslatedResult">
+      select a.attributeid as attributeid,
+             a.attributename as attributename,
+             a.attributeidgeopista as attributeidgeopista,
+             a.layerid as layerid,
+             a.attributeidalias as attributeidalias,
+             d.traduccion as alias
+      from localgisguiaurbana.attribute a
+           inner join localgisguiaurbana.layer l on a.layerid = l.layerid and l.layerid = #idLayer#
+           inner join localgisguiaurbana.maplayer ml on l.layerid = ml.layerid
+           inner join localgisguiaurbana.map m on ml.mapid = m.mapid and m.mapid= #idMap# and m.mappublic = #mapPublic#
+           left outer join dictionary d on d.id_vocablo = a.attributeidalias and d.locale = #locale#
+  </select>
+
+</sqlMap>

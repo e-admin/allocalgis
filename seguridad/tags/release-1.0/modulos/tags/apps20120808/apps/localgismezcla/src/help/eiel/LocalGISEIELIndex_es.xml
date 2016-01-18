@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+
+<index version="1.0">
+
+	<indexitem text="LocalGIS-EIEL">
+
+		<indexitem text="Introducción al Módulo de la EIEL" target="introduccion" />
+
+		<indexitem text="Acceso">
+			<indexitem text="Acceso" target="acceso" />
+			<indexitem text="Permisos" target="permisos" />
+			<indexitem text="Gestión de Roles y Usuarios" target="rolesUsuarios" />
+		</indexitem>
+
+		<indexitem text="Edición de los datos de la EIEL">
+			<indexitem text="Edición de los datos de la EIEL" taget="edicion" />
+		</indexitem>
+		
+		<!-- 
+		<indexitem text="Mapas EIEL">
+			<indexitem text="Introducción" target="introMapas" />
+			<indexitem text="Mapa Provincial" target="mapaProvincial" />
+			<indexitem text="Mapa Comarcal" target="mapaComarcal" />
+			<indexitem text="Mapa Municipal" target="mapaMunicipal" />
+		</indexitem>
+		-->
+
+		<indexitem text="Mapas Temáticos">
+			<indexitem text="Introducción" target="introMapasTematicos" />
+			<indexitem text="Calcular Indicadores EIEL" target="calcularIndicadores" />
+			<indexitem text="Calcular Índices de Obras" target="calcularIndicesObras" />
+			<indexitem text="Mapas Temáticos" target="mapasTematicos" />
+			<indexitem text="Mapas de Obras" target="mapasObras" />
+		</indexitem>
+
+		<indexitem text="Gestión de Dominios">
+			<indexitem text="Gestión de Dominios" target="gestionDominios" />
+		</indexitem>
+
+		<indexitem text="Ayuda" target="ayuda" />
+		<indexitem text="Publicador Web" target="publicadorWeb" />
+		<indexitem text="Visor Web" target="visorWeb" />
+
+	</indexitem>
+		
+</index>

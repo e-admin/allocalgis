@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SYNC_CONFIG>
+    <entity>
+        <class>com.localgis.mobile.beans.ComentarioBean</class>
+        <connector fichero="">ComentarioBean</connector>
+    </entity>
+    <entity>
+        <class>com.localgis.mobile.beans.ExpedienteBean</class>
+        <connector fichero="">ExpedienteBean</connector>
+    </entity>
+    <entity>
+        <class>com.localgis.mobile.beans.ReferenciaCatastralBean</class>
+        <connector fichero="">ReferenciaCatastralBean</connector>
+        <!--<policy>com.localgis.mobile.server.synchronizer.policy.ServerWinsPolicy</policy>
+        <checkConflict>1</checkConflict>-->
+    </entity>
+</SYNC_CONFIG>

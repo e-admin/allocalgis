@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<root>
+    <element xml-name="dirty" java-name="dirty"/>
+    <element xml-name="systemId" java-name="systemId"/>
+    <element xml-name="layer" java-name="layer"/>
+    <element xml-name="new" java-name="new"/>
+    <element xml-name="deleted" java-name="deleted"/>
+</root>

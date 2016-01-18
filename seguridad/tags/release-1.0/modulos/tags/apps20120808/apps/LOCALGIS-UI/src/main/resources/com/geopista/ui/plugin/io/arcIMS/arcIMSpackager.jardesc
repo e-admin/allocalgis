@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="C:/Geopista/plugins/geopista_arcIMS.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/geopista/com/geopista/ui/plugin/arcIMS/arcIMSpackager.jardesc" exportErrors="false" exportWarnings="true" overwrite="true" saveDescription="true" useSourceFolders="false"/>
+<manifest generateManifest="false" manifestLocation="/geopista/com/geopista/ui/plugin/arcIMS/arcIMSManifest.MF" manifestVersion="1.0" reuseManifest="true" saveManifest="true" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<javaElement handleIdentifier="=geopista/&lt;cz.vsb.gisak.jump.plugin.arcims{ServiceWizardPanel.java"/>
+<file path="/geopista/GeoPistai18n.properties"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.ui.plugin.arcIMS{AddArcIMSQueryPlugIn.java"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.ui.plugin.arcIMS{AddGeopistaArcIMSQueryExtension.java"/>
+<file path="/geopista/GeoPista.properties"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.ui.plugin.arcIMS{ArcIMSLayer.java"/>
+<javaElement handleIdentifier="=geopista/&lt;cz.vsb.gisak.jump.plugin.arcims{ArcIMSConnector.java"/>
+<file path="/geopista/GeoPistai18n_es_ES.properties"/>
+<javaElement handleIdentifier="=geopista/&lt;cz.vsb.gisak.jump.plugin.arcims{URLStreamer.java"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.app{AppContextListener.java"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.util{ApplicationContext.java"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.app{AppContext.java"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.ui.dialogs{LoginDialog.java"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.model{IGeopistaMap.java"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.server.administradorCartografia{IAdministradorCartografiaClient.java"/>
+<file path="/geopista/com/geopista/ui/plugin/arcIMS/ArcIMSLayer.java2xml"/>
+<javaElement handleIdentifier="=geopista/&lt;cz.vsb.gisak.jump.plugin.arcims{URLWizardPanel.java"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.app{GeopistaEvent.java"/>
+<javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.model{ITask.java"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.ui.plugin.arcIMS{ArcIMSRequest.java"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.security{ISecurityManager.java"/>
+<javaElement handleIdentifier="=geopista/&lt;com.geopista.security{IConnection.java"/>
+</selectedElements>
+</jardesc>

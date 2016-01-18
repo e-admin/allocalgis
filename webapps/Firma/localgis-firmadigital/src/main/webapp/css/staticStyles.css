@@ -1,0 +1,178 @@
+
+/* CSS Document */
+
+.errorMessage {
+	color: red;
+}
+
+#wrapDigitalSignature {
+	width:920px;
+	margin:0 auto;
+	text-align:left;
+	background-color: white;
+} 
+
+#wrapFooterPage {
+    width:920px;
+    margin:0 auto;
+    text-align:left;
+    background-color: white;
+} 
+
+body {
+    background-color:#eaebec;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#top {
+    background-image:url(../img/top_line.gif);
+    height:28px;
+    background-repeat:repeat-x; 
+    border:0;
+    padding:0;
+    margin:0;
+    min-width: 700px;
+}
+	
+.esquina_sup_izq { float:left;}
+.esquina_sup_der { float:right;}
+
+#content { 
+	min-width: 700px;
+	background-image:url(../img/left_line.gif); 
+	background-repeat:repeat-y; 
+}
+	
+.boxcontrol {
+	padding:0 28px 0 28px; 
+	background-image: url(../img/right_line.gif) ; 
+	background-position:right; 
+	background-repeat:repeat-y;
+}
+
+#bottom { 
+	background-image:url(../img/btm_line.gif);
+	height:28px;
+	background-repeat:repeat-x; 
+	border:0;
+	padding:0;
+	margin:0;
+	min-width: 700px;
+}
+
+.esquina_inf_izq { float:left;}
+.esquina_inf_der { float:right; }
+
+#digitalSignature {
+	width: 860px;
+	height: 475px;
+	background-color: transparent;
+}
+
+#authorizationList {
+    float: left;
+    width: 247px;
+    background-color: transparent;
+    border: 0px solid black;
+    overflow: auto;
+    position: relative;
+    background-image: url(../img/banner_left.gif);
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding-top: 165px;
+}
+
+#authorizationList h1 {
+	font-variant: small-caps;
+}
+
+#authorizationList p {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color: #666666;
+}
+
+#authorizationList ul {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color: #666666;
+}
+
+#digitalSignatureDetail {
+    width: 582px;
+    height: 470px;
+    border: 1px solid darkgray;
+    position: relative;
+    margin-left: auto;
+    background-color: transparent;
+}
+
+h1 {
+	margin:0; 
+	border-bottom:1px; 
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+ 	font-size:12px;
+	color: #666666;
+	font-weight:bold;
+	margin-top: 10px;
+}
+	
+a:link,  a:hover, a:active,a:visited {font-weight:bold; text-decoration:none; font-size:10px; color: #666666; }
+a:hover {font-weight:bold; text-decoration:none; color: #FF6600;font-size:10px;}	
+	
+/* IE 5.5 box model hack para posicionar correctamente las imagenes de esquina */
+* html img.esquina_sup_izq, * html img.esquina_inf_izq  { \margin-left:-.2em;  ma\rgin-left:0; }
+* html img.esquina_inf_der, * html img.esquina_sup_der { \margin-left:.2em; } 
+
+#titlePage {
+    margin-left: 5px;	
+}
+
+#contentPage {
+    background-image: url(../img/banner_left.gif);
+    background-repeat:no-repeat;
+	height: 160px;
+}
+
+#footer {
+	background-image: url(../img/footer.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 64px;
+}
+
+#centeredTable {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight: bold;
+}
+
+#centeredTableLoginWithMunicipio {
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight: bold;
+}
+
+#centeredTable, #centeredTableLoginWithMunicipio td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#banner{
+    background-image: url(../img/banner_left.gif);
+    background-repeat:no-repeat;
+    height:250px;
+}
+
+#titlePage {
+    margin-left: 5px;   
+}
+

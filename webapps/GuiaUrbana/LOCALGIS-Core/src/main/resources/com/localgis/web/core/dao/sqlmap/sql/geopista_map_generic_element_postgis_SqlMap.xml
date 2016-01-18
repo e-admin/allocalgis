@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geopista_map_generic_element">
+
+  <select id="isValidTableName" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+    SELECT COUNT(t.table_name) FROM INFORMATION_SCHEMA.TABLES t WHERE t.table_name = #tableName#
+  </select>
+  
+  <select id="isValidColumnName" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+  	SELECT COUNT(c.column_name) FROM INFORMATION_SCHEMA.COLUMNS c  WHERE c.column_name = #columnName# AND c.table_name = #tableName#
+  </select>
+
+  <select id="selectCenteredPointMapGenericElement" parameterClass="java.util.Map"  resultMap="PointResult" remapResults="true">
+    select x(centroid(transform("GEOMETRY", #srid#))) as x_centered, y(centroid(transform("GEOMETRY", #srid#))) as y_centered
+    from $tableName$
+    where $identifierColumnName$ = #identifierValue#
+  </select>
+  
+  <select id="selectBoundingBoxMapGenericElement" parameterClass="java.util.Map" resultMap="BoundingBoxResult" remapResults="true">
+    select xmin(box3d(transform("GEOMETRY", #srid#))) as minx, ymin(box3d(transform("GEOMETRY", #srid#))) as miny, xmax(box3d(transform("GEOMETRY", #srid#))) as maxx, ymax(box3d(transform("GEOMETRY", #srid#))) as maxy
+    from $tableName$
+    where $identifierColumnName$ = #identifierValue#
+  </select>
+
+</sqlMap>

@@ -1,0 +1,37 @@
+[Version]
+Signature = "$Windows NT$"
+CESignature="$Windows CE$"
+Provider="Ministerio"
+
+[CEStrings]
+AppName="LM Movil Configurator"
+InstallDir="\LocalGIS3"
+
+[CEDevice]
+ProcessorType=2577
+VersionMin=4.000
+VersionMax=5.999
+BuildMax=0xE0000000
+
+[SourceDisksNames]
+1=,config,,".\"
+
+
+
+[SourceDisksFiles]
+"localgis.properties"=1
+"gps.properties"=1
+
+[CopyFiles1]
+"localgis.properties",,,0x00000001
+"gps.properties",,,0x00000001
+ 
+ 
+
+[DestinationDirs]
+CopyFiles1=0,"\LocalGIS3\config"
+ 
+[DefaultInstall]
+CopyFiles=CopyFiles1
+
+ 

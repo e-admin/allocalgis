@@ -1,0 +1,1224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://localhost:8080/desarrollo/services/Sgsp" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://localhost:8080/desarrollo/services/Sgsp" xmlns:intf="http://localhost:8080/desarrollo/services/Sgsp" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://sicalwin.sw.aytos" xmlns:tns2="http://lang.java" xmlns:tns3="http://util.java" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema targetNamespace="http://lang.java" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://util.java"/>
+   <import namespace="http://sicalwin.sw.aytos"/>
+   <import namespace="http://localhost:8080/desarrollo/services/Sgsp"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOffString">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="soapenc:string[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://sicalwin.sw.aytos" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://util.java"/>
+   <import namespace="http://localhost:8080/desarrollo/services/Sgsp"/>
+   <import namespace="http://lang.java"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="DfaBean">
+    <sequence>
+     <element name="dfa_are" nillable="true" type="soapenc:string"/>
+     <element name="dfa_bse" nillable="true" type="soapenc:string"/>
+     <element name="dfa_car" nillable="true" type="soapenc:string"/>
+     <element name="dfa_csv" nillable="true" type="soapenc:string"/>
+     <element name="dfa_cta" nillable="true" type="soapenc:string"/>
+     <element name="dfa_dto" nillable="true" type="soapenc:string"/>
+     <element name="dfa_eco" nillable="true" type="soapenc:string"/>
+     <element name="dfa_edv" nillable="true" type="soapenc:string"/>
+     <element name="dfa_eje" nillable="true" type="soapenc:string"/>
+     <element name="dfa_fac" nillable="true" type="soapenc:string"/>
+     <element name="dfa_ite" nillable="true" type="soapenc:string"/>
+     <element name="dfa_lor" nillable="true" type="soapenc:string"/>
+     <element name="dfa_ogn" nillable="true" type="soapenc:string"/>
+     <element name="dfa_org" nillable="true" type="soapenc:string"/>
+     <element name="dfa_pre" nillable="true" type="soapenc:string"/>
+     <element name="dfa_tex" nillable="true" type="soapenc:string"/>
+     <element name="dfa_txt" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffDfaBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:DfaBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="DtoBean">
+    <sequence>
+     <element name="dto_are" nillable="true" type="soapenc:string"/>
+     <element name="dto_bse" nillable="true" type="soapenc:string"/>
+     <element name="dto_bse1" nillable="true" type="soapenc:string"/>
+     <element name="dto_bse2" nillable="true" type="soapenc:string"/>
+     <element name="dto_bse3" nillable="true" type="soapenc:string"/>
+     <element name="dto_car" nillable="true" type="soapenc:string"/>
+     <element name="dto_csv" nillable="true" type="soapenc:string"/>
+     <element name="dto_cta" nillable="true" type="soapenc:string"/>
+     <element name="dto_dto" nillable="true" type="soapenc:string"/>
+     <element name="dto_eco" nillable="true" type="soapenc:string"/>
+     <element name="dto_edv" nillable="true" type="soapenc:string"/>
+     <element name="dto_eje" nillable="true" type="soapenc:string"/>
+     <element name="dto_fun" nillable="true" type="soapenc:string"/>
+     <element name="dto_imp" nillable="true" type="soapenc:string"/>
+     <element name="dto_iva1" nillable="true" type="soapenc:string"/>
+     <element name="dto_iva2" nillable="true" type="soapenc:string"/>
+     <element name="dto_iva3" nillable="true" type="soapenc:string"/>
+     <element name="dto_lda" nillable="true" type="soapenc:string"/>
+     <element name="dto_lor" nillable="true" type="soapenc:string"/>
+     <element name="dto_nif" nillable="true" type="soapenc:string"/>
+     <element name="dto_nld" nillable="true" type="soapenc:string"/>
+     <element name="dto_num" nillable="true" type="soapenc:string"/>
+     <element name="dto_ocl" nillable="true" type="soapenc:string"/>
+     <element name="dto_ocn" nillable="true" type="soapenc:string"/>
+     <element name="dto_oct" nillable="true" type="soapenc:string"/>
+     <element name="dto_opg" nillable="true" type="soapenc:string"/>
+     <element name="dto_org" nillable="true" type="soapenc:string"/>
+     <element name="dto_pct1" nillable="true" type="soapenc:string"/>
+     <element name="dto_por1" nillable="true" type="soapenc:string"/>
+     <element name="dto_por2" nillable="true" type="soapenc:string"/>
+     <element name="dto_por3" nillable="true" type="soapenc:string"/>
+     <element name="dto_pre" nillable="true" type="soapenc:string"/>
+     <element name="dto_sbs" nillable="true" type="soapenc:string"/>
+     <element name="dto_tex" nillable="true" type="soapenc:string"/>
+     <element name="dto_tiv1" nillable="true" type="soapenc:string"/>
+     <element name="dto_tiv2" nillable="true" type="soapenc:string"/>
+     <element name="dto_tiv3" nillable="true" type="soapenc:string"/>
+     <element name="dto_tre" nillable="true" type="soapenc:string"/>
+     <element name="dto_txt" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffDtoBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:DtoBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="FaaBean">
+    <sequence>
+     <element name="faa_ann" nillable="true" type="soapenc:string"/>
+     <element name="faa_cta" nillable="true" type="soapenc:string"/>
+     <element name="faa_eco" nillable="true" type="soapenc:string"/>
+     <element name="faa_eje" nillable="true" type="soapenc:string"/>
+     <element name="faa_fac" nillable="true" type="soapenc:string"/>
+     <element name="faa_fun" nillable="true" type="soapenc:string"/>
+     <element name="faa_imp" nillable="true" type="soapenc:string"/>
+     <element name="faa_nap" nillable="true" type="soapenc:string"/>
+     <element name="faa_nla" nillable="true" type="soapenc:string"/>
+     <element name="faa_opd" nillable="true" type="soapenc:string"/>
+     <element name="faa_ord" nillable="true" type="soapenc:string"/>
+     <element name="faa_org" nillable="true" type="soapenc:string"/>
+     <element name="faa_prya" nillable="true" type="soapenc:string"/>
+     <element name="faa_pryn" nillable="true" type="soapenc:string"/>
+     <element name="faa_pryo" nillable="true" type="soapenc:string"/>
+     <element name="faa_pryt" nillable="true" type="soapenc:string"/>
+     <element name="faa_pryx" nillable="true" type="soapenc:string"/>
+     <element name="faa_ref" nillable="true" type="soapenc:string"/>
+     <element name="faa_tdc" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffFaaBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:FaaBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="FacturaBean">
+    <sequence>
+     <element name="fac_ann" nillable="true" type="soapenc:string"/>
+     <element name="fac_arg" nillable="true" type="soapenc:string"/>
+     <element name="fac_bex" nillable="true" type="soapenc:string"/>
+     <element name="fac_bse1" nillable="true" type="soapenc:string"/>
+     <element name="fac_bse2" nillable="true" type="soapenc:string"/>
+     <element name="fac_bse3" nillable="true" type="soapenc:string"/>
+     <element name="fac_dif" nillable="true" type="soapenc:string"/>
+     <element name="fac_doc" nillable="true" type="soapenc:string"/>
+     <element name="fac_dsn1" nillable="true" type="soapenc:string"/>
+     <element name="fac_dsn2" nillable="true" type="soapenc:string"/>
+     <element name="fac_dsn3" nillable="true" type="soapenc:string"/>
+     <element name="fac_end" nillable="true" type="soapenc:string"/>
+     <element name="fac_fal" nillable="true" type="soapenc:string"/>
+     <element name="fac_fdc" nillable="true" type="soapenc:string"/>
+     <element name="fac_fen" nillable="true" type="soapenc:string"/>
+     <element name="fac_fex" nillable="true" type="soapenc:string"/>
+     <element name="fac_fpg" nillable="true" type="soapenc:string"/>
+     <element name="fac_fvt" nillable="true" type="soapenc:string"/>
+     <element name="fac_gap" nillable="true" type="soapenc:string"/>
+     <element name="fac_imp" nillable="true" type="soapenc:string"/>
+     <element name="fac_imt" nillable="true" type="soapenc:string"/>
+     <element name="fac_ite" nillable="true" type="soapenc:string"/>
+     <element name="fac_iva1" nillable="true" type="soapenc:string"/>
+     <element name="fac_iva2" nillable="true" type="soapenc:string"/>
+     <element name="fac_iva3" nillable="true" type="soapenc:string"/>
+     <element name="fac_neto" nillable="true" type="soapenc:string"/>
+     <element name="fac_nex" nillable="true" type="soapenc:string"/>
+     <element name="fac_npj" nillable="true" type="soapenc:string"/>
+     <element name="fac_num" nillable="true" type="soapenc:string"/>
+     <element name="fac_obe" nillable="true" type="soapenc:string"/>
+     <element name="fac_obl" nillable="true" type="soapenc:string"/>
+     <element name="fac_obp" nillable="true" type="soapenc:string"/>
+     <element name="fac_ofi" nillable="true" type="soapenc:string"/>
+     <element name="fac_ord" nillable="true" type="soapenc:string"/>
+     <element name="fac_por1" nillable="true" type="soapenc:string"/>
+     <element name="fac_por2" nillable="true" type="soapenc:string"/>
+     <element name="fac_por3" nillable="true" type="soapenc:string"/>
+     <element name="fac_ref" nillable="true" type="soapenc:string"/>
+     <element name="fac_sit" nillable="true" type="soapenc:string"/>
+     <element name="fac_tdc" nillable="true" type="soapenc:string"/>
+     <element name="fac_tpg" nillable="true" type="soapenc:string"/>
+     <element name="fac_tpj" nillable="true" type="soapenc:string"/>
+     <element name="fac_txt" nillable="true" type="soapenc:string"/>
+     <element name="fac_usr" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffFacturaBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:FacturaBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="FatBean">
+    <sequence>
+     <element name="fat_bse" nillable="true" type="soapenc:string"/>
+     <element name="fat_fac" nillable="true" type="soapenc:string"/>
+     <element name="fat_imp" nillable="true" type="soapenc:string"/>
+     <element name="fat_ite" nillable="true" type="soapenc:string"/>
+     <element name="fat_iva" nillable="true" type="soapenc:string"/>
+     <element name="fat_obp" nillable="true" type="soapenc:string"/>
+     <element name="fat_por" nillable="true" type="soapenc:string"/>
+     <element name="fat_txt" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffFatBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:FatBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="IagBean">
+    <sequence>
+     <element name="iag_agr" nillable="true" type="soapenc:string"/>
+     <element name="iag_are" nillable="true" type="soapenc:string"/>
+     <element name="iag_asc" nillable="true" type="soapenc:string"/>
+     <element name="iag_cta" nillable="true" type="soapenc:string"/>
+     <element name="iag_cte" nillable="true" type="soapenc:string"/>
+     <element name="iag_eco" nillable="true" type="soapenc:string"/>
+     <element name="iag_eje" nillable="true" type="soapenc:string"/>
+     <element name="iag_fun" nillable="true" type="soapenc:string"/>
+     <element name="iag_imp" nillable="true" type="soapenc:string"/>
+     <element name="iag_naa" nillable="true" type="soapenc:string"/>
+     <element name="iag_nad" nillable="true" type="soapenc:string"/>
+     <element name="iag_nap" nillable="true" type="soapenc:string"/>
+     <element name="iag_num" nillable="true" type="soapenc:string"/>
+     <element name="iag_oad" nillable="true" type="soapenc:string"/>
+     <element name="iag_org" nillable="true" type="soapenc:string"/>
+     <element name="iag_pam" nillable="true" type="soapenc:string"/>
+     <element name="iag_prya" nillable="true" type="soapenc:string"/>
+     <element name="iag_prye" nillable="true" type="soapenc:string"/>
+     <element name="iag_pryn" nillable="true" type="soapenc:string"/>
+     <element name="iag_pryo" nillable="true" type="soapenc:string"/>
+     <element name="iag_pryt" nillable="true" type="soapenc:string"/>
+     <element name="iag_pryx" nillable="true" type="soapenc:string"/>
+     <element name="iag_ref" nillable="true" type="soapenc:string"/>
+     <element name="iag_rem" nillable="true" type="soapenc:string"/>
+     <element name="iag_rfi" nillable="true" type="soapenc:string"/>
+     <element name="iag_sdo" nillable="true" type="soapenc:string"/>
+     <element name="iag_sdp" nillable="true" type="soapenc:string"/>
+     <element name="iag_ssn" nillable="true" type="soapenc:string"/>
+     <element name="iap_nap" nillable="true" type="soapenc:string"/>
+     <element name="iap_ope" nillable="true" type="soapenc:string"/>
+     <element name="iap_signo" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffIagBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:IagBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="IogBean">
+    <sequence>
+     <element name="iog_agr" nillable="true" type="soapenc:string"/>
+     <element name="iog_anp" nillable="true" type="soapenc:string"/>
+     <element name="iog_are" nillable="true" type="soapenc:string"/>
+     <element name="iog_arg" nillable="true" type="soapenc:string"/>
+     <element name="iog_can" nillable="true" type="soapenc:string"/>
+     <element name="iog_cnp30" nillable="true" type="soapenc:string"/>
+     <element name="iog_codigo_operacion" nillable="true" type="soapenc:string"/>
+     <element name="iog_doc" nillable="true" type="soapenc:string"/>
+     <element name="iog_dto" nillable="true" type="soapenc:string"/>
+     <element name="iog_end" nillable="true" type="soapenc:string"/>
+     <element name="iog_fai" nillable="true" type="soapenc:string"/>
+     <element name="iog_far" nillable="true" type="soapenc:string"/>
+     <element name="iog_fdc" nillable="true" type="soapenc:string"/>
+     <element name="iog_fec" nillable="true" type="soapenc:string"/>
+     <element name="iog_fex" nillable="true" type="soapenc:string"/>
+     <element name="iog_fpg" nillable="true" type="soapenc:string"/>
+     <element name="iog_fre" nillable="true" type="soapenc:string"/>
+     <element name="iog_fse" nillable="true" type="soapenc:string"/>
+     <element name="iog_gap" nillable="true" type="soapenc:string"/>
+     <element name="iog_imp" nillable="true" type="soapenc:string"/>
+     <element name="iog_ipl" nillable="true" type="soapenc:string"/>
+     <element name="iog_ipo" nillable="true" type="soapenc:string"/>
+     <element name="iog_ipt" nillable="true" type="soapenc:string"/>
+     <element name="iog_ite" nillable="true" type="soapenc:string"/>
+     <element name="iog_iva" nillable="true" type="soapenc:string"/>
+     <element name="iog_iva_bex" nillable="true" type="soapenc:string"/>
+     <element name="iog_iva_bse1" nillable="true" type="soapenc:string"/>
+     <element name="iog_iva_bse2" nillable="true" type="soapenc:string"/>
+     <element name="iog_iva_bse3" nillable="true" type="soapenc:string"/>
+     <element name="iog_iva_iva1" nillable="true" type="soapenc:string"/>
+     <element name="iog_iva_iva2" nillable="true" type="soapenc:string"/>
+     <element name="iog_iva_iva3" nillable="true" type="soapenc:string"/>
+     <element name="iog_iva_tiva1" nillable="true" type="soapenc:string"/>
+     <element name="iog_iva_tiva2" nillable="true" type="soapenc:string"/>
+     <element name="iog_iva_tiva3" nillable="true" type="soapenc:string"/>
+     <element name="iog_nap" nillable="true" type="soapenc:string"/>
+     <element name="iog_ncj" nillable="true" type="soapenc:string"/>
+     <element name="iog_nex" nillable="true" type="soapenc:string"/>
+     <element name="iog_num" nillable="true" type="soapenc:string"/>
+     <element name="iog_nup" nillable="true" type="soapenc:string"/>
+     <element name="iog_obe" nillable="true" type="soapenc:string"/>
+     <element name="iog_obp" nillable="true" type="soapenc:string"/>
+     <element name="iog_obs" nillable="true" type="soapenc:string"/>
+     <element name="iog_ofi" nillable="true" type="soapenc:string"/>
+     <element name="iog_ort" nillable="true" type="soapenc:string"/>
+     <element name="iog_signo" nillable="true" type="soapenc:string"/>
+     <element name="iog_tex" nillable="true" type="soapenc:string"/>
+     <element name="iog_tpg" nillable="true" type="soapenc:string"/>
+     <element name="iog_tpp" nillable="true" type="soapenc:string"/>
+     <element name="iog_txt" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffIogBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:IogBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="IoiBean">
+    <sequence>
+     <element name="ioi_asc" nillable="true" type="soapenc:string"/>
+     <element name="ioi_cta" nillable="true" type="soapenc:string"/>
+     <element name="ioi_eco" nillable="true" type="soapenc:string"/>
+     <element name="ioi_eje" nillable="true" type="soapenc:string"/>
+     <element name="ioi_imp" nillable="true" type="soapenc:string"/>
+     <element name="ioi_naa" nillable="true" type="soapenc:string"/>
+     <element name="ioi_nap" nillable="true" type="soapenc:string"/>
+     <element name="ioi_num" nillable="true" type="soapenc:string"/>
+     <element name="ioi_org" nillable="true" type="soapenc:string"/>
+     <element name="ioi_prya" nillable="true" type="soapenc:string"/>
+     <element name="ioi_pryn" nillable="true" type="soapenc:string"/>
+     <element name="ioi_pryo" nillable="true" type="soapenc:string"/>
+     <element name="ioi_pryt" nillable="true" type="soapenc:string"/>
+     <element name="ioi_ref" nillable="true" type="soapenc:string"/>
+     <element name="ioi_rei" nillable="true" type="soapenc:string"/>
+     <element name="ioi_sdo" nillable="true" type="soapenc:string"/>
+     <element name="ioi_sdp" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffIoiBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:IoiBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="OfiBean">
+    <sequence>
+     <element name="ofi_ana" nillable="true" type="soapenc:string"/>
+     <element name="ofi_anu" nillable="true" type="soapenc:string"/>
+     <element name="ofi_imp" nillable="true" type="soapenc:string"/>
+     <element name="ofi_nua" nillable="true" type="soapenc:string"/>
+     <element name="ofi_num" nillable="true" type="soapenc:string"/>
+     <element name="ofi_sdo" nillable="true" type="soapenc:string"/>
+     <element name="ofi_sdp" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffOfiBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:OfiBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="OgfBean">
+    <sequence>
+     <element name="ogf_anu" nillable="true" type="soapenc:string"/>
+     <element name="ogf_arg" nillable="true" type="soapenc:string"/>
+     <element name="ogf_codigo_operacion" nillable="true" type="soapenc:string"/>
+     <element name="ogf_cte" nillable="true" type="soapenc:string"/>
+     <element name="ogf_eco" nillable="true" type="soapenc:string"/>
+     <element name="ogf_eje" nillable="true" type="soapenc:string"/>
+     <element name="ogf_end_ite" nillable="true" type="soapenc:string"/>
+     <element name="ogf_fec" nillable="true" type="soapenc:string"/>
+     <element name="ogf_fed" nillable="true" type="soapenc:string"/>
+     <element name="ogf_fex" nillable="true" type="soapenc:string"/>
+     <element name="ogf_fse" nillable="true" type="soapenc:string"/>
+     <element name="ogf_fun" nillable="true" type="soapenc:string"/>
+     <element name="ogf_gap" nillable="true" type="soapenc:string"/>
+     <element name="ogf_imp" nillable="true" type="soapenc:string"/>
+     <element name="ogf_ite" nillable="true" type="soapenc:string"/>
+     <element name="ogf_nex" nillable="true" type="soapenc:string"/>
+     <element name="ogf_num" nillable="true" type="soapenc:string"/>
+     <element name="ogf_ofi" nillable="true" type="soapenc:string"/>
+     <element name="ogf_org" nillable="true" type="soapenc:string"/>
+     <element name="ogf_pam" nillable="true" type="soapenc:string"/>
+     <element name="ogf_prya" nillable="true" type="soapenc:string"/>
+     <element name="ogf_pryn" nillable="true" type="soapenc:string"/>
+     <element name="ogf_pryo" nillable="true" type="soapenc:string"/>
+     <element name="ogf_pryt" nillable="true" type="soapenc:string"/>
+     <element name="ogf_pryx" nillable="true" type="soapenc:string"/>
+     <element name="ogf_signo" nillable="true" type="soapenc:string"/>
+     <element name="ogf_sub_apg" nillable="true" type="soapenc:string"/>
+     <element name="ogf_sub_cla" nillable="true" type="soapenc:string"/>
+     <element name="ogf_ter_ite" nillable="true" type="soapenc:string"/>
+     <element name="ogf_txt" nillable="true" type="soapenc:string"/>
+     <element name="ogf_usu" nillable="true" type="soapenc:string"/>
+     <element name="ogp_agr" nillable="true" type="soapenc:string"/>
+     <element name="ogp_anp" nillable="true" type="soapenc:string"/>
+     <element name="ogp_are" nillable="true" type="soapenc:string"/>
+     <element name="ogp_cge" nillable="true" type="soapenc:string"/>
+     <element name="ogp_nup" nillable="true" type="soapenc:string"/>
+     <element name="ogp_tpp" nillable="true" type="soapenc:string"/>
+     <element name="opg_reg" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffOgfBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:OgfBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="OpgBean">
+    <sequence>
+     <element name="opg_acf" nillable="true" type="soapenc:string"/>
+     <element name="opg_agr" nillable="true" type="soapenc:string"/>
+     <element name="opg_anp" nillable="true" type="soapenc:string"/>
+     <element name="opg_are" nillable="true" type="soapenc:string"/>
+     <element name="opg_arg" nillable="true" type="soapenc:string"/>
+     <element name="opg_codigo_operacion" nillable="true" type="soapenc:string"/>
+     <element name="opg_doc" nillable="true" type="soapenc:string"/>
+     <element name="opg_dto" nillable="true" type="soapenc:string"/>
+     <element name="opg_emb" nillable="true" type="soapenc:string"/>
+     <element name="opg_end" nillable="true" type="soapenc:string"/>
+     <element name="opg_end_ite" nillable="true" type="soapenc:string"/>
+     <element name="opg_fac_ann" nillable="true" type="soapenc:string"/>
+     <element name="opg_fac_ord" nillable="true" type="soapenc:string"/>
+     <element name="opg_fac_tdc" nillable="true" type="soapenc:string"/>
+     <element name="opg_far" nillable="true" type="soapenc:string"/>
+     <element name="opg_fdc" nillable="true" type="soapenc:string"/>
+     <element name="opg_fec" nillable="true" type="soapenc:string"/>
+     <element name="opg_fex" nillable="true" type="soapenc:string"/>
+     <element name="opg_fpg" nillable="true" type="soapenc:string"/>
+     <element name="opg_fre" nillable="true" type="soapenc:string"/>
+     <element name="opg_fse" nillable="true" type="soapenc:string"/>
+     <element name="opg_fvt" nillable="true" type="soapenc:string"/>
+     <element name="opg_gap" nillable="true" type="soapenc:string"/>
+     <element name="opg_imp" nillable="true" type="soapenc:string"/>
+     <element name="opg_ite" nillable="true" type="soapenc:string"/>
+     <element name="opg_iva" nillable="true" type="soapenc:string"/>
+     <element name="opg_iva_bex" nillable="true" type="soapenc:string"/>
+     <element name="opg_iva_bse1" nillable="true" type="soapenc:string"/>
+     <element name="opg_iva_bse2" nillable="true" type="soapenc:string"/>
+     <element name="opg_iva_bse3" nillable="true" type="soapenc:string"/>
+     <element name="opg_iva_iva1" nillable="true" type="soapenc:string"/>
+     <element name="opg_iva_iva2" nillable="true" type="soapenc:string"/>
+     <element name="opg_iva_iva3" nillable="true" type="soapenc:string"/>
+     <element name="opg_iva_tiva1" nillable="true" type="soapenc:string"/>
+     <element name="opg_iva_tiva2" nillable="true" type="soapenc:string"/>
+     <element name="opg_iva_tiva3" nillable="true" type="soapenc:string"/>
+     <element name="opg_nap" nillable="true" type="soapenc:string"/>
+     <element name="opg_ncj" nillable="true" type="soapenc:string"/>
+     <element name="opg_nex" nillable="true" type="soapenc:string"/>
+     <element name="opg_nld" nillable="true" type="soapenc:string"/>
+     <element name="opg_num" nillable="true" type="soapenc:string"/>
+     <element name="opg_nup" nillable="true" type="soapenc:string"/>
+     <element name="opg_obe" nillable="true" type="soapenc:string"/>
+     <element name="opg_obp" nillable="true" type="soapenc:string"/>
+     <element name="opg_obs" nillable="true" type="soapenc:string"/>
+     <element name="opg_ofi" nillable="true" type="soapenc:string"/>
+     <element name="opg_signo" nillable="true" type="soapenc:string"/>
+     <element name="opg_sub" nillable="true" type="soapenc:string"/>
+     <element name="opg_ter_ite" nillable="true" type="soapenc:string"/>
+     <element name="opg_tpg" nillable="true" type="soapenc:string"/>
+     <element name="opg_tpp" nillable="true" type="soapenc:string"/>
+     <element name="opg_txt" nillable="true" type="soapenc:string"/>
+     <element name="opg_usu" nillable="true" type="soapenc:string"/>
+     <element name="opp_acf" nillable="true" type="soapenc:string"/>
+     <element name="opp_esd" nillable="true" type="soapenc:string"/>
+     <element name="opp_nld" nillable="true" type="soapenc:string"/>
+     <element name="opp_pct1" nillable="true" type="soapenc:string"/>
+     <element name="opp_pct2" nillable="true" type="soapenc:string"/>
+     <element name="opp_pct3" nillable="true" type="soapenc:string"/>
+     <element name="sml" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffOpgBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:OpgBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="TdbBean">
+    <sequence>
+     <element name="tdb_bco" nillable="true" type="soapenc:string"/>
+     <element name="tdb_bic" nillable="true" type="soapenc:string"/>
+     <element name="tdb_cta" nillable="true" type="soapenc:string"/>
+     <element name="tdb_dig" nillable="true" type="soapenc:string"/>
+     <element name="tdb_fca" nillable="true" type="soapenc:string"/>
+     <element name="tdb_ite" nillable="true" type="soapenc:string"/>
+     <element name="tdb_obs" nillable="true" type="soapenc:string"/>
+     <element name="tdb_ord" nillable="true" type="soapenc:string"/>
+     <element name="tdb_pai" nillable="true" type="soapenc:string"/>
+     <element name="tdb_sit" nillable="true" type="soapenc:string"/>
+     <element name="tdb_suc" nillable="true" type="soapenc:string"/>
+     <element name="tdb_tip" nillable="true" type="soapenc:string"/>
+     <element name="tdb_tpg" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffTdbBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:TdbBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="TerBean">
+    <sequence>
+     <element name="ter_act" nillable="true" type="soapenc:string"/>
+     <element name="ter_ali" nillable="true" type="soapenc:string"/>
+     <element name="ter_apellido1" nillable="true" type="soapenc:string"/>
+     <element name="ter_apellido2" nillable="true" type="soapenc:string"/>
+     <element name="ter_com" nillable="true" type="soapenc:string"/>
+     <element name="ter_cpo" nillable="true" type="soapenc:string"/>
+     <element name="ter_dce" nillable="true" type="soapenc:string"/>
+     <element name="ter_doc" nillable="true" type="soapenc:string"/>
+     <element name="ter_dom" nillable="true" type="soapenc:string"/>
+     <element name="ter_emb" nillable="true" type="soapenc:string"/>
+     <element name="ter_fax" nillable="true" type="soapenc:string"/>
+     <element name="ter_fpg" nillable="true" type="soapenc:string"/>
+     <element name="ter_gas" nillable="true" type="soapenc:string"/>
+     <element name="ter_ite" nillable="true" type="soapenc:string"/>
+     <element name="ter_nom" nillable="true" type="soapenc:string"/>
+     <element name="ter_nombre" nillable="true" type="soapenc:string"/>
+     <element name="ter_obs" nillable="true" type="soapenc:string"/>
+     <element name="ter_pob" nillable="true" type="soapenc:string"/>
+     <element name="ter_pro" nillable="true" type="soapenc:string"/>
+     <element name="ter_rel" nillable="true" type="soapenc:string"/>
+     <element name="ter_sec" nillable="true" type="soapenc:string"/>
+     <element name="ter_tdc" nillable="true" type="soapenc:string"/>
+     <element name="ter_tip" nillable="true" type="soapenc:string"/>
+     <element name="ter_tlf" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffTerBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:TerBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ParametrosBean">
+    <sequence>
+     <element name="abrirComponente" nillable="true" type="soapenc:string"/>
+     <element name="adm" nillable="true" type="tns2:ArrayOffString"/>
+     <element name="agente" nillable="true" type="soapenc:string"/>
+     <element name="ali" nillable="true" type="soapenc:string"/>
+     <element name="apgCge" nillable="true" type="soapenc:string"/>
+     <element name="apgCte" nillable="true" type="soapenc:string"/>
+     <element name="apgEco" nillable="true" type="soapenc:string"/>
+     <element name="apgEje" nillable="true" type="soapenc:string"/>
+     <element name="apgFun" nillable="true" type="soapenc:string"/>
+     <element name="apgOrg" nillable="true" type="soapenc:string"/>
+     <element name="apgPam" nillable="true" type="soapenc:string"/>
+     <element name="apiEco" nillable="true" type="soapenc:string"/>
+     <element name="apiOrg" nillable="true" type="soapenc:string"/>
+     <element name="arrIAG" nillable="true" type="tns2:ArrayOffString"/>
+     <element name="arrOPG" nillable="true" type="soapenc:string"/>
+     <element name="ascendente" nillable="true" type="soapenc:string"/>
+     <element name="bcoCod" nillable="true" type="soapenc:string"/>
+     <element name="cerrarComponente" nillable="true" type="soapenc:string"/>
+     <element name="cte" nillable="true" type="soapenc:string"/>
+     <element name="desglosadas" nillable="true" type="soapenc:string"/>
+     <element name="dfa" nillable="true" type="tns1:ArrayOffDfaBean"/>
+     <element name="dto" nillable="true" type="tns1:ArrayOffDtoBean"/>
+     <element name="eco" nillable="true" type="soapenc:string"/>
+     <element name="eje" nillable="true" type="soapenc:string"/>
+     <element name="etsDes" nillable="true" type="soapenc:string"/>
+     <element name="etsRef" nillable="true" type="soapenc:string"/>
+     <element name="excluidos" nillable="true" type="soapenc:string"/>
+     <element name="expediente" nillable="true" type="soapenc:string"/>
+     <element name="faa" nillable="true" type="tns1:ArrayOffFaaBean"/>
+     <element name="fac" nillable="true" type="tns1:ArrayOffFacturaBean"/>
+     <element name="fase" nillable="true" type="soapenc:string"/>
+     <element name="fat" nillable="true" type="tns1:ArrayOffFatBean"/>
+     <element name="fecha" nillable="true" type="soapenc:string"/>
+     <element name="fun" nillable="true" type="soapenc:string"/>
+     <element name="grupoApuntes" nillable="true" type="soapenc:string"/>
+     <element name="iag" nillable="true" type="tns1:ArrayOffIagBean"/>
+     <element name="importe" nillable="true" type="soapenc:string"/>
+     <element name="iog" nillable="true" type="tns1:ArrayOffIogBean"/>
+     <element name="ioi" nillable="true" type="tns1:ArrayOffIoiBean"/>
+     <element name="mesesProrroga" nillable="true" type="soapenc:string"/>
+     <element name="nif" nillable="true" type="soapenc:string"/>
+     <element name="numPago" nillable="true" type="soapenc:string"/>
+     <element name="numeroOp" nillable="true" type="soapenc:string"/>
+     <element name="observaciones" nillable="true" type="soapenc:string"/>
+     <element name="ofi" nillable="true" type="tns1:ArrayOffOfiBean"/>
+     <element name="ogf" nillable="true" type="tns1:ArrayOffOgfBean"/>
+     <element name="opg" nillable="true" type="tns1:ArrayOffOpgBean"/>
+     <element name="org" nillable="true" type="soapenc:string"/>
+     <element name="pam" nillable="true" type="soapenc:string"/>
+     <element name="prpAnn" nillable="true" type="soapenc:string"/>
+     <element name="prpEco" nillable="true" type="soapenc:string"/>
+     <element name="prpEje" nillable="true" type="soapenc:string"/>
+     <element name="prpNum" nillable="true" type="soapenc:string"/>
+     <element name="prpNumLin" nillable="true" type="soapenc:string"/>
+     <element name="prpOrg" nillable="true" type="soapenc:string"/>
+     <element name="prpTip" nillable="true" type="soapenc:string"/>
+     <element name="pryA" nillable="true" type="soapenc:string"/>
+     <element name="pryAni" nillable="true" type="soapenc:string"/>
+     <element name="pryN" nillable="true" type="soapenc:string"/>
+     <element name="pryNum" nillable="true" type="soapenc:string"/>
+     <element name="pryO" nillable="true" type="soapenc:string"/>
+     <element name="pryOrd" nillable="true" type="soapenc:string"/>
+     <element name="pryOrg" nillable="true" type="soapenc:string"/>
+     <element name="pryT" nillable="true" type="soapenc:string"/>
+     <element name="pryTpr" nillable="true" type="soapenc:string"/>
+     <element name="pryX" nillable="true" type="soapenc:string"/>
+     <element name="scwRft" nillable="true" type="soapenc:string"/>
+     <element name="tdb" nillable="true" type="tns1:ArrayOffTdbBean"/>
+     <element name="ter" nillable="true" type="tns1:ArrayOffTerBean"/>
+     <element name="terIte" nillable="true" type="soapenc:string"/>
+     <element name="tex" nillable="true" type="soapenc:string"/>
+     <element name="tipoBusqueda" nillable="true" type="soapenc:string"/>
+     <element name="usu" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ApGastosBean">
+    <sequence>
+     <element name="pga_acr" nillable="true" type="soapenc:string"/>
+     <element name="pga_ajp" nillable="true" type="soapenc:string"/>
+     <element name="pga_ali" nillable="true" type="soapenc:string"/>
+     <element name="pga_asd" nillable="true" type="soapenc:string"/>
+     <element name="pga_asr" nillable="true" type="soapenc:string"/>
+     <element name="pga_bja" nillable="true" type="soapenc:string"/>
+     <element name="pga_cex" nillable="true" type="soapenc:string"/>
+     <element name="pga_cgi" nillable="true" type="soapenc:string"/>
+     <element name="pga_cin" nillable="true" type="soapenc:string"/>
+     <element name="pga_cnd" nillable="true" type="soapenc:string"/>
+     <element name="pga_crp" nillable="true" type="soapenc:string"/>
+     <element name="pga_crt" nillable="true" type="soapenc:string"/>
+     <element name="pga_cte" nillable="true" type="soapenc:string"/>
+     <element name="pga_cto" nillable="true" type="soapenc:string"/>
+     <element name="pga_des" nillable="true" type="soapenc:string"/>
+     <element name="pga_eco" nillable="true" type="soapenc:string"/>
+     <element name="pga_eje" nillable="true" type="soapenc:string"/>
+     <element name="pga_fun" nillable="true" type="soapenc:string"/>
+     <element name="pga_gas_aut" nillable="true" type="soapenc:string"/>
+     <element name="pga_gco" nillable="true" type="soapenc:string"/>
+     <element name="pga_irc" nillable="true" type="soapenc:string"/>
+     <element name="pga_mod_afe" nillable="true" type="soapenc:string"/>
+     <element name="pga_mod_cre" nillable="true" type="soapenc:string"/>
+     <element name="pga_mod_gen" nillable="true" type="soapenc:string"/>
+     <element name="pga_obr" nillable="true" type="soapenc:string"/>
+     <element name="pga_org" nillable="true" type="soapenc:string"/>
+     <element name="pga_pam" nillable="true" type="soapenc:string"/>
+     <element name="pga_pge" nillable="true" type="soapenc:string"/>
+     <element name="pga_pgo" nillable="true" type="soapenc:string"/>
+     <element name="pga_por" nillable="true" type="soapenc:string"/>
+     <element name="pga_rei" nillable="true" type="soapenc:string"/>
+     <element name="pga_ret_cre" nillable="true" type="soapenc:string"/>
+     <element name="pga_sco" nillable="true" type="soapenc:string"/>
+     <element name="pga_scr" nillable="true" type="soapenc:string"/>
+     <element name="pga_sdi" nillable="true" type="soapenc:string"/>
+     <element name="pga_sga" nillable="true" type="soapenc:string"/>
+     <element name="pga_sor" nillable="true" type="soapenc:string"/>
+     <element name="pga_spo" nillable="true" type="soapenc:string"/>
+     <element name="pga_srp" nillable="true" type="soapenc:string"/>
+     <element name="pga_srt" nillable="true" type="soapenc:string"/>
+     <element name="pga_tcn" nillable="true" type="soapenc:string"/>
+     <element name="pga_tcp" nillable="true" type="soapenc:string"/>
+     <element name="pga_vin" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffApGastosBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:ApGastosBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ApIngresosBean">
+    <sequence>
+     <element name="api_ali" nillable="true" type="soapenc:string"/>
+     <element name="api_anu" nillable="true" type="soapenc:string"/>
+     <element name="api_aum" nillable="true" type="soapenc:string"/>
+     <element name="api_com_con" nillable="true" type="soapenc:string"/>
+     <element name="api_com_pen" nillable="true" type="soapenc:string"/>
+     <element name="api_cre" nillable="true" type="soapenc:string"/>
+     <element name="api_des" nillable="true" type="soapenc:string"/>
+     <element name="api_dis" nillable="true" type="soapenc:string"/>
+     <element name="api_drc_anu" nillable="true" type="soapenc:string"/>
+     <element name="api_drc_can" nillable="true" type="soapenc:string"/>
+     <element name="api_drc_net" nillable="true" type="soapenc:string"/>
+     <element name="api_drc_rec" nillable="true" type="soapenc:string"/>
+     <element name="api_eco" nillable="true" type="soapenc:string"/>
+     <element name="api_epc" nillable="true" type="soapenc:string"/>
+     <element name="api_fjv" nillable="true" type="soapenc:string"/>
+     <element name="api_fun" nillable="true" type="soapenc:string"/>
+     <element name="api_ipc" nillable="true" type="soapenc:string"/>
+     <element name="api_ipr" nillable="true" type="soapenc:string"/>
+     <element name="api_ite" nillable="true" type="soapenc:string"/>
+     <element name="api_org" nillable="true" type="soapenc:string"/>
+     <element name="api_pce" nillable="true" type="soapenc:string"/>
+     <element name="api_pcf" nillable="true" type="soapenc:string"/>
+     <element name="api_por" nillable="true" type="soapenc:string"/>
+     <element name="api_pvi" nillable="true" type="soapenc:string"/>
+     <element name="api_pvt" nillable="true" type="soapenc:string"/>
+     <element name="api_rec_liq" nillable="true" type="soapenc:string"/>
+     <element name="api_str_dad" nillable="true" type="soapenc:string"/>
+     <element name="api_str_dae" nillable="true" type="soapenc:string"/>
+     <element name="api_str_daf" nillable="true" type="soapenc:string"/>
+     <element name="api_str_dai" nillable="true" type="soapenc:string"/>
+     <element name="api_str_dal" nillable="true" type="soapenc:string"/>
+     <element name="api_str_dao" nillable="true" type="soapenc:string"/>
+     <element name="api_str_dev" nillable="true" type="soapenc:string"/>
+     <element name="api_str_dre" nillable="true" type="soapenc:string"/>
+     <element name="api_str_odi" nillable="true" type="soapenc:string"/>
+     <element name="api_str_osi" nillable="true" type="soapenc:string"/>
+     <element name="api_str_psi" nillable="true" type="soapenc:string"/>
+     <element name="api_str_rec" nillable="true" type="soapenc:string"/>
+     <element name="api_str_rej" nillable="true" type="soapenc:string"/>
+     <element name="api_str_rsi" nillable="true" type="soapenc:string"/>
+     <element name="api_str_sin" nillable="true" type="soapenc:string"/>
+     <element name="api_str_trn" nillable="true" type="soapenc:string"/>
+     <element name="api_str_trp" nillable="true" type="soapenc:string"/>
+     <element name="api_tot_mod" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffApIngresosBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:ApIngresosBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="AplicacionesIngresosBean">
+    <sequence>
+     <element name="api_des" nillable="true" type="soapenc:string"/>
+     <element name="api_eco" nillable="true" type="soapenc:string"/>
+     <element name="api_org" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffAplicacionesIngresosBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:AplicacionesIngresosBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="AplicacionesPresupuestariasBean">
+    <sequence>
+     <element name="apg_arg" nillable="true" type="soapenc:string"/>
+     <element name="apg_des" nillable="true" type="soapenc:string"/>
+     <element name="apg_eco" nillable="true" type="soapenc:string"/>
+     <element name="apg_eje" nillable="true" type="soapenc:string"/>
+     <element name="apg_fun" nillable="true" type="soapenc:string"/>
+     <element name="apg_org" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffAplicacionesPresupuestariasBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:AplicacionesPresupuestariasBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="BancosBean">
+    <sequence>
+     <element name="bcoCod" nillable="true" type="soapenc:string"/>
+     <element name="bcoDes" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffBancosBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:BancosBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="BicsBean">
+    <sequence>
+     <element name="bic_cod" nillable="true" type="soapenc:string"/>
+     <element name="bic_cpo" nillable="true" type="soapenc:string"/>
+     <element name="bic_des" nillable="true" type="soapenc:string"/>
+     <element name="bic_dom" nillable="true" type="soapenc:string"/>
+     <element name="bic_dpa" nillable="true" type="soapenc:string"/>
+     <element name="bic_pai" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffBicsBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:BicsBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="CentrosGestoresBean">
+    <sequence>
+     <element name="cge_cod" nillable="true" type="soapenc:string"/>
+     <element name="cge_ent" nillable="true" type="soapenc:string"/>
+     <element name="cge_nom" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffCentrosGestoresBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:CentrosGestoresBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="EstadosTramitacionBean">
+    <sequence>
+     <element name="ets_cod" nillable="true" type="soapenc:string"/>
+     <element name="ets_nom" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffEstadosTramitacionBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:EstadosTramitacionBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ExpedientesProyectosGastosBean">
+    <sequence>
+     <element name="edg_cte" nillable="true" type="soapenc:string"/>
+     <element name="edg_exp" nillable="true" type="soapenc:string"/>
+     <element name="edg_prya" nillable="true" type="soapenc:string"/>
+     <element name="edg_pryn" nillable="true" type="soapenc:string"/>
+     <element name="edg_pryo" nillable="true" type="soapenc:string"/>
+     <element name="edg_pryt" nillable="true" type="soapenc:string"/>
+     <element name="edg_txt" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffExpedientesProyectosGastosBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:ExpedientesProyectosGastosBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="GpcBean">
+    <sequence>
+     <element name="gpc_ali" nillable="true" type="soapenc:string"/>
+     <element name="gpc_cte" nillable="true" type="soapenc:string"/>
+     <element name="gpc_des" nillable="true" type="soapenc:string"/>
+     <element name="gpc_eco" nillable="true" type="soapenc:string"/>
+     <element name="gpc_eje" nillable="true" type="soapenc:string"/>
+     <element name="gpc_fun" nillable="true" type="soapenc:string"/>
+     <element name="gpc_opr" nillable="true" type="soapenc:string"/>
+     <element name="gpc_org" nillable="true" type="soapenc:string"/>
+     <element name="gpc_pam" nillable="true" type="soapenc:string"/>
+     <element name="gpc_por" nillable="true" type="soapenc:string"/>
+     <element name="gpc_ppr" nillable="true" type="soapenc:string"/>
+     <element name="gpc_pre" nillable="true" type="soapenc:string"/>
+     <element name="gpc_rpo" nillable="true" type="soapenc:string"/>
+     <element name="gpc_rso" nillable="true" type="soapenc:string"/>
+     <element name="gpc_sdo_obr" nillable="true" type="soapenc:string"/>
+     <element name="gpc_sdo_pgo" nillable="true" type="soapenc:string"/>
+     <element name="gpc_sio" nillable="true" type="soapenc:string"/>
+     <element name="gpc_sip" nillable="true" type="soapenc:string"/>
+     <element name="gpc_sor" nillable="true" type="soapenc:string"/>
+     <element name="gpc_spo" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffGpcBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:GpcBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="SacBean">
+    <sequence>
+     <element name="sac_ali" nillable="true" type="soapenc:string"/>
+     <element name="sac_dae" nillable="true" type="soapenc:string"/>
+     <element name="sac_daf" nillable="true" type="soapenc:string"/>
+     <element name="sac_dai" nillable="true" type="soapenc:string"/>
+     <element name="sac_dal" nillable="true" type="soapenc:string"/>
+     <element name="sac_dao" nillable="true" type="soapenc:string"/>
+     <element name="sac_dap" nillable="true" type="soapenc:string"/>
+     <element name="sac_der_can" nillable="true" type="soapenc:string"/>
+     <element name="sac_des" nillable="true" type="soapenc:string"/>
+     <element name="sac_dra" nillable="true" type="soapenc:string"/>
+     <element name="sac_drb" nillable="true" type="soapenc:string"/>
+     <element name="sac_dre" nillable="true" type="soapenc:string"/>
+     <element name="sac_dre_anu" nillable="true" type="soapenc:string"/>
+     <element name="sac_dri" nillable="true" type="soapenc:string"/>
+     <element name="sac_eco" nillable="true" type="soapenc:string"/>
+     <element name="sac_org" nillable="true" type="soapenc:string"/>
+     <element name="sac_rec" nillable="true" type="soapenc:string"/>
+     <element name="sac_sdo_pen" nillable="true" type="soapenc:string"/>
+     <element name="sac_str_trn" nillable="true" type="soapenc:string"/>
+     <element name="sac_str_trp" nillable="true" type="soapenc:string"/>
+     <element name="sac_tot_dre" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffSacBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:SacBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="IvaBean">
+    <sequence>
+     <element name="iva_bex" nillable="true" type="soapenc:string"/>
+     <element name="iva_bse1" nillable="true" type="soapenc:string"/>
+     <element name="iva_bse2" nillable="true" type="soapenc:string"/>
+     <element name="iva_bse3" nillable="true" type="soapenc:string"/>
+     <element name="iva_civ1" nillable="true" type="soapenc:string"/>
+     <element name="iva_civ2" nillable="true" type="soapenc:string"/>
+     <element name="iva_iva1" nillable="true" type="soapenc:string"/>
+     <element name="iva_iva2" nillable="true" type="soapenc:string"/>
+     <element name="iva_iva3" nillable="true" type="soapenc:string"/>
+     <element name="iva_opg" nillable="true" type="soapenc:string"/>
+     <element name="iva_pct1" nillable="true" type="soapenc:string"/>
+     <element name="iva_pct2" nillable="true" type="soapenc:string"/>
+     <element name="iva_pct3" nillable="true" type="soapenc:string"/>
+     <element name="iva_sbs1" nillable="true" type="soapenc:string"/>
+     <element name="iva_sbs2" nillable="true" type="soapenc:string"/>
+     <element name="iva_sbs3" nillable="true" type="soapenc:string"/>
+     <element name="iva_tiv1" nillable="true" type="soapenc:string"/>
+     <element name="iva_tiv2" nillable="true" type="soapenc:string"/>
+     <element name="iva_tiv3" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffIvaBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:IvaBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="OperacionBean">
+    <sequence>
+     <element name="ann_proyecto" nillable="true" type="soapenc:string"/>
+     <element name="anualidad_futuros" nillable="true" type="soapenc:string"/>
+     <element name="cte_aplicacion" nillable="true" type="soapenc:string"/>
+     <element name="economica_aplicacion" nillable="true" type="soapenc:string"/>
+     <element name="ejercicio_aplicacion" nillable="true" type="soapenc:string"/>
+     <element name="filaso" nillable="true" type="soapenc:string"/>
+     <element name="funcional_aplicacion" nillable="true" type="soapenc:string"/>
+     <element name="importe" nillable="true" type="soapenc:string"/>
+     <element name="num_ope_nap_sical" nillable="true" type="soapenc:string"/>
+     <element name="num_ope_sgsp" nillable="true" type="soapenc:string"/>
+     <element name="num_ope_sical" nillable="true" type="soapenc:string"/>
+     <element name="num_ref_sical" nillable="true" type="soapenc:string"/>
+     <element name="numero_apg_sub" nillable="true" type="soapenc:string"/>
+     <element name="numero_proyecto" nillable="true" type="soapenc:string"/>
+     <element name="organica_aplicacion" nillable="true" type="soapenc:string"/>
+     <element name="organo_proyecto" nillable="true" type="soapenc:string"/>
+     <element name="pam_aplicacion" nillable="true" type="soapenc:string"/>
+     <element name="tipo_proyecto" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffOperacionBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:OperacionBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="OperacionesBean">
+    <sequence>
+     <element name="lista" nillable="true" type="tns3:Vector"/>
+     <element name="opcAsc" nillable="true" type="soapenc:string"/>
+     <element name="opcCod" nillable="true" type="soapenc:string"/>
+     <element name="opcEnt" nillable="true" type="soapenc:string"/>
+     <element name="opcImp" nillable="true" type="soapenc:string"/>
+     <element name="opcNum" nillable="true" type="soapenc:string"/>
+     <element name="opcOpe" nillable="true" type="soapenc:string"/>
+     <element name="opcSgn" nillable="true" type="soapenc:string"/>
+     <element name="opcSit" nillable="true" type="soapenc:string"/>
+     <element name="opcSub" nillable="true" type="soapenc:string"/>
+     <element name="opgTpg" nillable="true" type="soapenc:string"/>
+     <element name="sitDes" nillable="true" type="soapenc:string"/>
+     <element name="sml" nillable="true" type="soapenc:string"/>
+     <element name="terApe1" nillable="true" type="soapenc:string"/>
+     <element name="terApe2" nillable="true" type="soapenc:string"/>
+     <element name="terDoc" nillable="true" type="soapenc:string"/>
+     <element name="terNom" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffOperacionesBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:OperacionesBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="PrestamosBean">
+    <sequence>
+     <element name="prp_ann" nillable="true" type="soapenc:string"/>
+     <element name="prp_des" nillable="true" type="soapenc:string"/>
+     <element name="prp_eje" nillable="true" type="soapenc:string"/>
+     <element name="prp_num" nillable="true" type="soapenc:string"/>
+     <element name="prp_num_lin" nillable="true" type="soapenc:string"/>
+     <element name="prp_tip" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffPrestamosBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:PrestamosBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ProyectosGastosBean">
+    <sequence>
+     <element name="pry_ani" nillable="true" type="soapenc:string"/>
+     <element name="pry_num" nillable="true" type="soapenc:string"/>
+     <element name="pry_ord" nillable="true" type="soapenc:string"/>
+     <element name="pry_org" nillable="true" type="soapenc:string"/>
+     <element name="pry_tpr" nillable="true" type="soapenc:string"/>
+     <element name="pry_txt" nillable="true" type="soapenc:string"/>
+     <element name="ter_doc" nillable="true" type="soapenc:string"/>
+     <element name="ter_nom" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffProyectosGastosBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:ProyectosGastosBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="SucursalesBean">
+    <sequence>
+     <element name="desMun" nillable="true" type="soapenc:string"/>
+     <element name="sucBco" nillable="true" type="soapenc:string"/>
+     <element name="sucCod" nillable="true" type="soapenc:string"/>
+     <element name="sucCpo" nillable="true" type="soapenc:string"/>
+     <element name="sucDes" nillable="true" type="soapenc:string"/>
+     <element name="sucDom" nillable="true" type="soapenc:string"/>
+     <element name="sucMun" nillable="true" type="soapenc:string"/>
+     <element name="sucPro" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffSucursalesBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:SucursalesBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="VinculacionBean">
+    <sequence>
+     <element name="vin_cre" nillable="true" type="soapenc:string"/>
+     <element name="vin_cre_dis" nillable="true" type="soapenc:string"/>
+     <element name="vin_cte" nillable="true" type="soapenc:string"/>
+     <element name="vin_dis" nillable="true" type="soapenc:string"/>
+     <element name="vin_dis_rea" nillable="true" type="soapenc:string"/>
+     <element name="vin_dis_rem" nillable="true" type="soapenc:string"/>
+     <element name="vin_eco" nillable="true" type="soapenc:string"/>
+     <element name="vin_fun" nillable="true" type="soapenc:string"/>
+     <element name="vin_gas" nillable="true" type="soapenc:string"/>
+     <element name="vin_gas_prg" nillable="true" type="soapenc:string"/>
+     <element name="vin_gas_prv" nillable="true" type="soapenc:string"/>
+     <element name="vin_grc" nillable="true" type="soapenc:string"/>
+     <element name="vin_irc" nillable="true" type="soapenc:string"/>
+     <element name="vin_org" nillable="true" type="soapenc:string"/>
+     <element name="vin_pam" nillable="true" type="soapenc:string"/>
+     <element name="vin_pry" nillable="true" type="soapenc:string"/>
+     <element name="vin_rlt_dis" nillable="true" type="soapenc:string"/>
+     <element name="vin_rlt_fin" nillable="true" type="soapenc:string"/>
+     <element name="vin_rlt_gas" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOffVinculacionBean">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:VinculacionBean[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="RetornoBean">
+    <sequence>
+     <element name="apGastos" nillable="true" type="tns1:ArrayOffApGastosBean"/>
+     <element name="apIngresos" nillable="true" type="tns1:ArrayOffApIngresosBean"/>
+     <element name="aplicacionesIngresos" nillable="true" type="tns1:ArrayOffAplicacionesIngresosBean"/>
+     <element name="aplicacionesPresupuestarias" nillable="true" type="tns1:ArrayOffAplicacionesPresupuestariasBean"/>
+     <element name="bancos" nillable="true" type="tns1:ArrayOffBancosBean"/>
+     <element name="bics" nillable="true" type="tns1:ArrayOffBicsBean"/>
+     <element name="cabeceraGastos" nillable="true" type="tns1:ArrayOffOpgBean"/>
+     <element name="cabeceraIngresos" nillable="true" type="tns1:ArrayOffIogBean"/>
+     <element name="centrosGestores" nillable="true" type="tns1:ArrayOffCentrosGestoresBean"/>
+     <element name="datosBancarios" nillable="true" type="tns1:ArrayOffTdbBean"/>
+     <element name="descuentos" nillable="true" type="tns1:ArrayOffDtoBean"/>
+     <element name="errores" nillable="true" type="tns2:ArrayOffString"/>
+     <element name="estadosTramitacion" nillable="true" type="tns1:ArrayOffEstadosTramitacionBean"/>
+     <element name="expedientesProyectosGastos" nillable="true" type="tns1:ArrayOffExpedientesProyectosGastosBean"/>
+     <element name="faas" nillable="true" type="tns1:ArrayOffFaaBean"/>
+     <element name="facturas" nillable="true" type="tns1:ArrayOffFacturaBean"/>
+     <element name="gastosCerrados" nillable="true" type="tns1:ArrayOffGpcBean"/>
+     <element name="ingresosCerrados" nillable="true" type="tns1:ArrayOffSacBean"/>
+     <element name="iva" nillable="true" type="tns1:ArrayOffIvaBean"/>
+     <element name="lineaGastos" nillable="true" type="tns1:ArrayOffIagBean"/>
+     <element name="lineaIngresos" nillable="true" type="tns1:ArrayOffIoiBean"/>
+     <element name="numeroOperacionesDevueltas" nillable="true" type="soapenc:string"/>
+     <element name="operaciones" nillable="true" type="tns1:ArrayOffOperacionBean"/>
+     <element name="operacionesSub" nillable="true" type="tns1:ArrayOffOperacionesBean"/>
+     <element name="prestamos" nillable="true" type="tns1:ArrayOffPrestamosBean"/>
+     <element name="proyectosGastos" nillable="true" type="tns1:ArrayOffProyectosGastosBean"/>
+     <element name="resultado" type="xsd:boolean"/>
+     <element name="sucursales" nillable="true" type="tns1:ArrayOffSucursalesBean"/>
+     <element name="terceros" nillable="true" type="tns1:ArrayOffTerBean"/>
+     <element name="vinculaciones" nillable="true" type="tns1:ArrayOffVinculacionBean"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://localhost:8080/desarrollo/services/Sgsp" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://util.java"/>
+   <import namespace="http://sicalwin.sw.aytos"/>
+   <import namespace="http://lang.java"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOf_xsd_anyType">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:anyType[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://util.java" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://sicalwin.sw.aytos"/>
+   <import namespace="http://localhost:8080/desarrollo/services/Sgsp"/>
+   <import namespace="http://lang.java"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="Vector">
+    <complexContent>
+     <extension base="impl:ArrayOf_xsd_anyType">
+      <sequence>
+       <element name="size" type="xsd:int"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="sgspRequest1">
+
+      <wsdl:part name="funcion" type="xsd:int"/>
+
+      <wsdl:part name="params" type="tns1:ParametrosBean"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="sgspResponse1">
+
+      <wsdl:part name="sgspReturn" type="tns1:RetornoBean"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="sgspResponse">
+
+      <wsdl:part name="sgspReturn" type="soapenc:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="sgspRequest">
+
+      <wsdl:part name="sml" type="soapenc:string"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="SWXSgsp">
+
+      <wsdl:operation name="sgsp" parameterOrder="sml">
+
+         <wsdl:input message="impl:sgspRequest" name="sgspRequest"/>
+
+         <wsdl:output message="impl:sgspResponse" name="sgspResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sgsp" parameterOrder="funcion params">
+
+         <wsdl:input message="impl:sgspRequest1" name="sgspRequest1"/>
+
+         <wsdl:output message="impl:sgspResponse1" name="sgspResponse1"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="SgspSoapBinding" type="impl:SWXSgsp">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="sgsp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sgspRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sicalwin.sw.aytos" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sgspResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/desarrollo/services/Sgsp" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sgsp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sgspRequest1">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sicalwin.sw.aytos" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sgspResponse1">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/desarrollo/services/Sgsp" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="SWXSgspService">
+
+      <wsdl:port binding="impl:SgspSoapBinding" name="Sgsp">
+
+         <wsdlsoap:address location="http://localhost:8080/desarrollo/services/Sgsp"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

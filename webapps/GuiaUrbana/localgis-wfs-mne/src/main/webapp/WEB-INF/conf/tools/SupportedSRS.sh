@@ -1,0 +1,1 @@
+java -cp ../../lib/deegree2.jar:../../lib/jai/jai_core.jar org.deegree.tools.srs.SRSInfo

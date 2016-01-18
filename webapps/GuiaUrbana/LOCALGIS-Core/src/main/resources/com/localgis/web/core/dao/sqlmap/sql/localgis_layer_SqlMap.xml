@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="localgis_layer">
+
+  <resultMap id="LocalgisLayerResult" class="com.localgis.web.core.model.LocalgisLayer" >
+    <result column="layerid" jdbcType="INTEGER" property="layerid"/>
+    <result column="layeridgeopista" jdbcType="INTEGER" property="layeridgeopista"/>
+    <result column="layername" jdbcType="VARCHAR" property="layername"/>
+    <result column="layerquery" jdbcType="VARCHAR" property="layerquery"/>
+    <result column="geometrytype" jdbcType="VARCHAR" property="geometrytype"/>
+  </resultMap>
+
+  <resultMap id="LocalgisLayerExtResult" class="com.localgis.web.core.model.LocalgisLayerExt" >
+    <result column="layerid" jdbcType="INTEGER" property="layerid"/>
+    <result column="layeridgeopista" jdbcType="INTEGER" property="layeridgeopista"/>
+    <result column="layername" jdbcType="VARCHAR" property="layername"/>
+    <result column="layerquery" jdbcType="VARCHAR" property="layerquery"/>
+    <result column="geometrytype" jdbcType="VARCHAR" property="geometrytype"/>
+    <result column="nametranslated" jdbcType="VARCHAR" property="nametranslated"/>
+    <result column="position" jdbcType="INTEGER" property="position"/>
+    <result column="position_layer_family" jdbcType="INTEGER" property="positionLayerFamily"/>
+    <result column="customlegend" jdbcType="SMALLINT" property="customlegend"/>
+    <result column="isvisible" jdbcType="BOOLEAN" property="visible"/>
+    <result column="versionable" jdbcType="INTEGER" property="versionable"/>
+  </resultMap>
+  
+  <select id="selectLayerByIdEntidadAndIdGeopista" parameterClass="java.util.Map" resultMap="LocalgisLayerResult">
+    select * 
+    from localgisguiaurbana.layer l
+    where l.layeridgeopista = #idGeopista# and
+          exists (select ml.layerid as layerid
+                  from localgisguiaurbana.map m, localgisguiaurbana.maplayer ml
+                  where m.mapid = ml.mapid and 
+                        l.layerid = ml.layerid and
+                        m.mapidentidad = #idEntidad# and
+                        m.mappublic = #publicMaps#)
+    <!--
+    De esta forma el resultado es correcto pero en Oracle no se puede hacer un distinct sobre un campo CLOB (layerquery). 
+    -->
+    <!--  
+    select distinct l.layerid as layerid,
+           l.layeridgeopista as layeridgeopista,
+           l.layername as layername,
+           l.layerquery as layerquery,
+           l.geometrytype as geometrytype
+    from localgisguiaurbana.map m, localgisguiaurbana.layer l, localgisguiaurbana.maplayer ml
+    where m.mapid = ml.mapid and 
+          l.layerid = ml.layerid and
+          m.mapidentidad = #idEntidad# and
+          m.mappublic = #publicMaps# and
+          l.layeridgeopista = #idGeopista#
+    -->
+  </select>
+  
+  <select id="selectUnreferenceLayers" resultMap="LocalgisLayerResult">
+    select l.layerid as layerid, 
+           l.layeridgeopista as layeridgeopista,
+           l.layername as layername,
+           l.layerquery as layerquery,
+           l.geometrytype as geometrytype
+    from localgisguiaurbana.layer l 
+         left outer join localgisguiaurbana.maplayer ml on l.layerid = ml.layerid
+    where ml.layerid is null
+  </select>
+  
+  <update id="updateByPrimaryKey" parameterClass="com.localgis.web.core.model.LocalgisLayer" >
+    update localgisguiaurbana.layer
+    set layeridgeopista = #layeridgeopista:INTEGER#,
+      layername = #layername:VARCHAR#,
+      layerquery = #layerquery:VARCHAR#,
+      geometrytype = #geometrytype:VARCHAR#
+    where layerid = #layerid:INTEGER#
+  </update>
+
+  <delete id="deleteByPrimaryKey" parameterClass="com.localgis.web.core.model.LocalgisLayer" >
+    delete from localgisguiaurbana.layer
+    where layerid = #layerid:INTEGER#
+  </delete>
+
+  <select id="selectLayersByIdMap" parameterClass="java.util.Map" resultMap="LocalgisLayerExtResult">
+    <!--  Con esta query se perdian resultados
+    select l.layerid as layerid,
+           l.layeridgeopista as layeridgeopista,
+           l.layername as layername,
+           l.layerquery as layerquery,
+           l.geometrytype as geometrytype,
+           ml.position as position,
+           d.traduccion as nametranslated
+    from localgisguiaurbana.layer l, localgisguiaurbana.maplayer ml, layers gl, dictionary d
+    where gl.id_layer = l.layeridgeopista and 
+          d.id_vocablo = gl.id_name and
+          d.locale = #locale# and
+          ml.mapid = #idMap# and 
+          l.layerid = ml.layerid
+    -->
+    select l.layerid as layerid,
+           l.layeridgeopista as layeridgeopista,
+           l.layername as layername,
+           l.layerquery as layerquery,
+           l.geometrytype as geometrytype,
+           ml.position as position,
+           ml.position_layer_family as position_layer_family,
+           ml.isvisible as isvisible,
+           d.traduccion as nametranslated,
+           case when leg.img is not null then 1 else 0 end as customlegend,
+           gl.versionable
+    from localgisguiaurbana.maplayer ml
+         inner join localgisguiaurbana.layer l on l.layerid = ml.layerid and ml.mapid = #idMap#
+         inner join localgisguiaurbana.map m on m.mapid = ml.mapid
+         left outer join localgisguiaurbana.legend leg on l.layeridgeopista = leg.layeridgeopista and m.mapidentidad = leg.identidad and m.mappublic = leg.mappublic
+         inner join layers gl on gl.id_layer = l.layeridgeopista 
+         left outer join dictionary d on d.id_vocablo = gl.id_name and d.locale = #locale#
+  </select>
+  
+  <select id="selectLayersByIdMapGeopista" parameterClass="java.util.Map" resultMap="LocalgisLayerExtResult">
+    select l.layerid as layerid,
+           l.layeridgeopista as layeridgeopista,
+           l.layername as layername,
+           l.layerquery as layerquery,
+           l.geometrytype as geometrytype,
+           ml.position as position,
+           ml.position_layer_family as position_layer_family,
+           ml.isvisible as isvisible,
+           d.traduccion as nametranslated,
+           case when leg.img is not null then 1 else 0 end as customlegend,
+           gl.versionable
+    from localgisguiaurbana.maplayer ml
+         inner join localgisguiaurbana.layer l on l.layerid = ml.layerid
+         inner join localgisguiaurbana.map m on m.mapid = ml.mapid and m.mapidgeopista = #idMapGeopista#
+         left outer join localgisguiaurbana.legend leg on l.layeridgeopista = leg.layeridgeopista and m.mapidentidad = leg.identidad and m.mappublic = leg.mappublic
+         inner join layers gl on gl.id_layer = l.layeridgeopista 
+         left outer join dictionary d on d.id_vocablo = gl.id_name and d.locale = #locale#
+    order by position
+  </select>
+  
+ <select id="selectLayersByIdMapGeopistaAndEntidad" parameterClass="java.util.Map" resultMap="LocalgisLayerExtResult">
+    select l.layerid as layerid,
+           l.layeridgeopista as layeridgeopista,
+           l.layername as layername,
+           l.layerquery as layerquery,
+           l.geometrytype as geometrytype,
+           ml.position as position,
+           ml.position_layer_family as position_layer_family,
+           ml.isvisible as isvisible,
+           d.traduccion as nametranslated,
+           case when leg.img is not null then 1 else 0 end as customlegend,
+           gl.versionable
+    from localgisguiaurbana.maplayer ml
+         inner join localgisguiaurbana.layer l on l.layerid = ml.layerid
+         inner join localgisguiaurbana.map m on m.mapid = ml.mapid and m.mapidgeopista = #idMapGeopista# and m.mapidentidad=#idEntidad# and m.mappublic=#tipoPublicacion#
+         left outer join localgisguiaurbana.legend leg on l.layeridgeopista = leg.layeridgeopista and m.mapidentidad = leg.identidad and m.mappublic = leg.mappublic
+         inner join layers gl on gl.id_layer = l.layeridgeopista 
+         left outer join dictionary d on d.id_vocablo = gl.id_name and d.locale = #locale#
+         
+    order by position
+  </select>
+  
+    <select id="selectFechaPrimeraVersion" parameterClass="com.localgis.web.core.model.LocalgisLayer" resultClass="java.sql.Timestamp">
+        select fecha 
+          from versiones 
+         where versiones.revision = 0 and id_table_versionada in 
+         (select id_table from tables where name=#layername:VARCHAR#) 
+    </select>
+    
+    <select id="selectGeometryFromLayer" parameterClass="java.util.Map" resultClass="java.lang.String"> 
+    
+      
+    	<!--SELECT astext($tabla$."GEOMETRY") as geometry_localgis
+		FROM $tabla$ WHERE $tabla$."id_municipio" IN (#municipio:INTEGER#)-->
+		<!--  Convertimos de 4230 a 23029 y realizamos la transformacion a 4326 con la modificacion towgs84 -->
+		<!-- SELECT astext(transform_geometry(transform($tabla$."GEOMETRY",23029),
+					' +proj=utm +ellps=intl +zone=29 +units=m  +towgs84=-95,-108.2,-121,0,0,0,0 +no_defs'::text,
+                    ' +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs'::text,4326)) as geometry_localgis
+					FROM $tabla$ WHERE $tabla$."id_municipio" IN (#municipio:INTEGER#)-->
+					
+		SELECT astext(transform($tabla$."GEOMETRY",4326)) as geometry_localgis
+					FROM $tabla$ WHERE $tabla$."id_municipio" IN (#municipio:INTEGER#)					
+    </select>
+    
+    <select id="selectLayerIdFromGuiaUrbana" parameterClass="java.util.Map" resultClass="java.lang.String">
+       select l.layeridgeopista as layeridgeopista
+       from localgisguiaurbana.maplayer ml
+             inner join localgisguiaurbana.layer l on l.layerid = ml.layerid
+       where ml.layerid=#layerId#
+
+       LIMIT 1
+    </select>    
+    
+
+  <select id="selectLayerByName" parameterClass="java.util.Map" resultMap="LocalgisLayerResult">
+    select * 
+    from localgisguiaurbana.layer l
+    where l.layername=#layername#
+   
+  </select>
+  
+  
+   <select id="selectLayerById" parameterClass="java.util.Map" resultMap="LocalgisLayerExtResult">
+    <!-- select * from localgisguiaurbana.layer l where l.layerid=#idLayer#-->
+    
+    select l.layerid as layerid,
+           l.layeridgeopista as layeridgeopista,
+           l.layername as layername,
+           l.layerquery as layerquery,
+           l.geometrytype as geometrytype,
+           ml.position as position,
+           ml.position_layer_family as position_layer_family,
+           ml.isvisible as isvisible,
+           d.traduccion as nametranslated,
+           case when leg.img is not null then 1 else 0 end as customlegend,
+           gl.versionable
+    from localgisguiaurbana.maplayer ml
+         inner join localgisguiaurbana.layer l on l.layerid = ml.layerid and ml.mapid = #idMap# and l.layerid=#idLayer#
+         inner join localgisguiaurbana.map m on m.mapid = ml.mapid
+         left outer join localgisguiaurbana.legend leg on l.layeridgeopista = leg.layeridgeopista and m.mapidentidad = leg.identidad and m.mappublic = leg.mappublic
+         inner join layers gl on gl.id_layer = l.layeridgeopista 
+         left outer join dictionary d on d.id_vocablo = gl.id_name and d.locale = #locale#
+  </select>
+    
+  <select id="selectPublicAnexosByIdLayerAndIdFeature" parameterClass="java.util.Map" resultClass="java.util.HashMap">
+    select *
+    from documento d, anexofeature a
+    where d.id_documento=a.id_documento and a.id_layer=#id_layer# and a.id_feature=#id_feature# and d.publico=1 order by d.is_imgdoctext
+  </select>	    
+
+  <select id="selectAllAnexosByIdLayerAndIdFeature" parameterClass="java.util.Map" resultClass="java.util.HashMap">
+    select *
+    from documento d, anexofeature a
+    where d.id_documento=a.id_documento and a.id_layer=#id_layer# and a.id_feature=#id_feature# order by d.is_imgdoctext
+  </select>	   
+    
+  <select id="getLayersInArea" parameterClass="java.util.Map" resultClass="java.lang.String">    
+ 	   select distinct(tipo) from ($tabla$)
+  </select>   
+   
+  <select id="getLayersInAreaSimple" parameterClass="java.util.Map" resultClass="java.lang.String">    
+ 	   select tipo from ($tabla$)
+  </select>   
+
+</sqlMap>

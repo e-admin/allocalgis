@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.localgis</groupId>
+  <artifactId>Vigo</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+  <name>Vigo</name>
+  <repositories>
+<!--    <repository>
+			<id>satec_repository</id>
+			<name>Viavansi Repositorio</name>
+			<url>http://rossi.malab.satec.es:8080/artifactory/repo</url>
+		</repository>
+		<repository>
+			<id>opengeo</id>
+			<name>Geotools repository</name>
+			<url>http://download.osgeo.org/webdav/geotools/</url>
+		</repository>-->
+  </repositories>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.localgis</groupId>
+  		<artifactId>coreFinal</artifactId>
+  		<version>1.0</version>
+  		<type>jar</type>
+  		<scope>compile</scope>
+  	</dependency>
+  </dependencies>
+  <distributionManagement>
+<!--    <repository>
+      <id>satec_repository</id>
+      <name>Repositorio de SATEC</name>
+      <url>scp://angela.malab.satec.es/backup/maven2_repositories/satec_repository</url>
+    </repository>-->
+  </distributionManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <modules>
+  	<module>BuscadorCallejeroPlugin</module>
+  	<module>ConexAplicExternasJava</module>
+  	<module>ExtensionBusquedas</module>
+  	<module>GeorreferenciacionExterna</module>
+  	<module>ImportadorAutomaticoPlugins</module>
+  	<module>ImportadorDatos</module>
+  </modules>
+</project>

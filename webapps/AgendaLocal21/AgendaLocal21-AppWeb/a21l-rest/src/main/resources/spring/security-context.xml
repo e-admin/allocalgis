@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:sec="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+    	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd
+    ">
+
+	<sec:authentication-manager alias="_authenticationManager">
+		<!-- <sec:authentication-provider ref="authenticationProvider"/> -->
+		<sec:authentication-provider>
+			<sec:user-service id="userDetailsService">
+				<sec:user name="anonimo" password="anonimo" authorities="ROLE_ANONIMO" />
+			</sec:user-service>
+		</sec:authentication-provider>
+	</sec:authentication-manager>
+
+	<bean id="springSecurityFilterChain" class="org.springframework.security.web.FilterChainProxy">
+		<sec:filter-chain-map path-type="ant">
+			<sec:filter-chain pattern="/**"
+				filters="resetSecurityContextFilter,anonymousFilter,exceptionTranslationFilter,filterSecurityInterceptor" />
+		</sec:filter-chain-map>
+	</bean>
+
+	<bean id="resetSecurityContextFilter" class="es.dc.a21l.servicio.comun.utils.ResetSecurityContextFilter"/>
+	<bean id="anonymousFilter" class="es.dc.a21l.servicio.comun.utils.AnonymousFilter"/>
+
+	<bean id="filterSecurityInterceptor"
+		class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
+		<property name="authenticationManager" ref="_authenticationManager" />
+		<property name="accessDecisionManager" ref="accessDecisionManager" />
+
+		<property name="securityMetadataSource">
+			<sec:filter-security-metadata-source>
+				<sec:intercept-url pattern="/**" access="ROLE_ANONIMO" />
+			</sec:filter-security-metadata-source>
+		</property>
+	</bean>
+
+	<bean id="accessDecisionManager"
+		class="org.springframework.security.access.vote.AffirmativeBased">
+		<property name="allowIfAllAbstainDecisions" value="false" />
+		<property name="decisionVoters">
+			<list>
+				<bean class="org.springframework.security.access.vote.RoleVoter">
+					<property name="rolePrefix" value="ROLE_" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exceptionTranslationFilter"
+		class="org.springframework.security.web.access.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint" ref="authenticationEntryPoint" />
+		<property name="accessDeniedHandler" ref="accessDeniedHandler" />
+	</bean>
+
+	<bean id="accessDeniedHandler"
+		class="org.springframework.security.web.access.AccessDeniedHandlerImpl">
+	</bean>
+
+	<bean id="authenticationEntryPoint"
+		class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint">
+	</bean>
+
+	<!-- <bean id="authenticationProvider" class="org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider"> 
+		<property name="preAuthenticatedUserDetailsService" ref="userDetailsService"/> 
+		</bean> -->
+
+
+	<bean id="methodSecurityInterceptor"
+		class="org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor">
+		<property name="authenticationManager" ref="_authenticationManager" />
+		<property name="accessDecisionManager" ref="accessDecisionManager" />
+		<property name="rejectPublicInvocations" value="true" />
+		<property name="securityMetadataSource">
+			<value>
+				es.dc.a21l.usuario.modelo.UsuarioRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.usuario.cu.GestorCUUsuario.*=ROLE_ANONIMO
+				
+				es.dc.a21l.fuente.modelo.FuenteRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.fuente.cu.GestorCUFuente.*=ROLE_ANONIMO
+				
+				es.dc.a21l.usuario.modelo.RolRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.usuario.cu.GestorCURol.*=ROLE_ANONIMO
+				
+				es.dc.a21l.usuario.modelo.UsuarioRolRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.usuario.cu.GestorCUUsuarioRol.*=ROLE_ANONIMO
+				
+				es.dc.a21l.usuario.modelo.impl.UsuarioElementoJerarquiaRepositorioImpl.*=ROLE_ANONIMO
+				es.dc.a21l.usuario.cu.impl.GestorCUUsuarioPermisoImpl.*=ROLE_ANONIMO
+				
+				es.dc.a21l.elementoJerarquia.modelo.IndicadorRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.elementoJerarquia.cu.GestorCUIndicador.*=ROLE_ANONIMO
+				
+				es.dc.a21l.elementoJerarquia.modelo.CategoriaRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.elementoJerarquia.cu.GestorCUCategoria.*=ROLE_ANONIMO
+				
+				es.dc.a21l.metadatos.modelo.MetadatosRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.metadatos.cu.GestorCUMetadatos.*=ROLE_ANONIMO
+				
+				es.dc.a21l.fuente.modelo.TablaFuenteDatosRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.fuente.cu.GestorCUTablaFuenteDatos.*=ROLE_ANONIMO
+				
+				es.dc.a21l.fuente.modelo.AtributoFuenteDatosRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.fuente.cu.GestorCUAtributoFuenteDatos.*=ROLE_ANONIMO
+				
+				es.dc.a21l.fuente.modelo.AtributoRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.fuente.cu.GestorCUAtributo.*=ROLE_ANONIMO
+				
+				es.dc.a21l.visualizacion.modelo.EstiloVisualizacionTablaRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.visualizacion.cu.GestorCUEstiloVisualizacionTabla.*=ROLE_ANONIMO
+				
+				es.dc.a21l.visualizacion.modelo.EstiloVisualizacionDiagramaBarrasRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.visualizacion.cu.GestorCUEstiloVisualizacionDiagramaBarras.*=ROLE_ANONIMO
+				
+				es.dc.a21l.visualizacion.modelo.EstiloVisualizacionDiagramaSectoresRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.visualizacion.cu.GestorCUEstiloVisualizacionDiagramaSectores.*=ROLE_ANONIMO
+				
+				es.dc.a21l.visualizacion.modelo.EstiloVisualizacionMapaRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.visualizacion.cu.GestorCUEstiloVisualizacionMapa.*=ROLE_ANONIMO
+				
+				es.dc.a21l.visualizacion.modelo.RangosVisualizacionMapaRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.visualizacion.cu.GestorCURangosVisualizacionMapa.*=ROLE_ANONIMO
+				
+				es.dc.a21l.expresion.modelo.ExpresionRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.expresion.cu.GestorCUExpresion.*=ROLE_ANONIMO
+
+				es.dc.a21l.elementoJerarquia.modelo.IndicadorExpresionRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.elementoJerarquia.cu.GestorCUIndicadorExpresion.*=ROLE_ANONIMO
+				
+				es.dc.a21l.elementoJerarquia.cu.GestorCUIndicadorUsuario.*=ROLE_ANONIMO
+				es.dc.a21l.elementoJerarquia.modelo.IndicadorUsuarioRepositorio.*=ROLE_ANONIMO
+				
+				es.dc.a21l.elementoJerarquia.cu.GestorCUIndicadorUsuarioModificacion.*=ROLE_ANONIMO
+				es.dc.a21l.elementoJerarquia.modelo.IndicadorUsuarioModificacionRepositorio.*=ROLE_ANONIMO
+
+				es.dc.a21l.NEM.cu.GestorCUAtributoNEM.*=ROLE_ANONIMO
+				es.dc.a21l.NEM.modelo.AtributoNEMRepositorio.*=ROLE_ANONIMO
+
+				es.dc.a21l.historico.modelo.HistoricoRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.historico.cu.GestorCUHistorico.*=ROLE_ANONIMO
+				
+				es.dc.a21l.elementoJerarquia.modelo.RelacionRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.elementoJerarquia.cu.GestorCURelacion.*=ROLE_ANONIMO
+				
+				es.dc.a21l.publicacion.modelo.PublicacionRepositorio.*=ROLE_ANONIMO
+				es.dc.a21l.publicacion.cu.GestorCUPublicacion.*=ROLE_ANONIMO
+				
+				es.dc.a21l.criterio.cu.GestorCUCriterio.*=ROLE_ANONIMO
+				es.dc.a21l.criterio.modelo.CriterioRepositorio.*=ROLE_ANONIMO
+				
+			</value>
+		</property>
+	</bean>
+
+</beans>

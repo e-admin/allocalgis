@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+    <tocitem text="(EU)Contenidos">
+        <tocitem text="(EU)Introducción" target="licenciasIntro"/>
+        <tocitem text="(EU)Usuarios">
+            <tocitem text="(EU)Usuarios y permisos" target="licenciasUsuarios"/>
+        </tocitem>
+        <tocitem text="(EU)WorkFlow">
+            <tocitem text="(EU)Actividad Calificada" target="licenciasWFActividadCalificada"/>
+			<tocitem text="(EU)Actividad No Calificada" target="licenciasWFActividadNoCalificada"/>
+        </tocitem>
+        <tocitem text="(EU)Opciones de Menú" target="licenciasOpcionesMenu"/>
+        <tocitem text="(EU)Creación de una Licencia">
+            <tocitem text="(EU)Actividad Calificada y No Calificada" target="licenciasCreacionActividad"/>
+        </tocitem>
+        <tocitem text="(EU)Modificación de una Licencia">
+            <tocitem text="(EU)Actividad Calificada y No Calificada" target="licenciasModificacionActividad"/>
+        </tocitem>
+        <tocitem text="(EU)Consulta de una Licencia">
+            <tocitem text="(EU)Actividad Calificada y No Calificada" target="licenciasConsultaActividad"/>
+        </tocitem>
+        <tocitem text="(EU)Informes" target="licenciasInformes"/>
+        <tocitem text="(EU)Eventos">
+            <tocitem text="(EU)Consulta de Eventos" target="licenciasConsultarEventos"/>
+            <tocitem text="(EU)Últimos Eventos" target="licenciasUltimosEventos"/>
+        </tocitem>
+        <tocitem text="(EU)Generación de Planos" target="licenciasPlanos"/>
+        <tocitem text="(EU)Consulta de Notificaciones" target="licenciasNotificaciones"/>
+        <tocitem text="(EU)Consulta del Histórico" target="licenciasHistorico"/>
+        <tocitem text="(EU)Consulta de las Tareas Pendientes" target="licenciasTareasPendientes"/>
+		<tocitem text="(EU)Configuración" target="licenciasConfiguracion"/>
+        <tocitem text="(EU)Cambio de Idioma" target="licenciasIdioma"/>
+    </tocitem>    
+</toc>

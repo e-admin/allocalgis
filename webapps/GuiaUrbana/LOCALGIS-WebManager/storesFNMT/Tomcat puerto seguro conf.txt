@@ -1,0 +1,16 @@
+En tomcat/conf/server.xml
+añadir 
+
+en Windows
+    <Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"
+               maxThreads="150" scheme="https" secure="true"        
+               clientAuth="true" sslProtocol="TLS" keystoreFile="C:\storesFNMT\keystore" 
+               keystorePass="password" truststoreFile="C:\storesFNMT\truststore" 
+               truststorePass="password"/>
+  
+en Linux
+
+    <Connector SSLEnabled="true" clientAuth="true" keystoreFile="/usr/local/LocalGIS/storesFNMT/keystore" keystorePass="password" maxThreads="150" port="8443" protocol="HTTP/1.1" scheme="https" secure="true" sslProtocol="TLS" truststoreFile="/usr/local/LocalGIS/storesFNMT/truststore" truststorePass="password"/>
+    
+    
+    y en Connector 8080 "redirectPort=8443"

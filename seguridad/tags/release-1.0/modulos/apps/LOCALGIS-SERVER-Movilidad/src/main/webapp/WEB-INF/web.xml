@@ -1,0 +1,31 @@
+<web-app>
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>config</servlet-name>
+    <servlet-class>es.satec.localgismobile.server.web.Config</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>authenticationFilter</filter-name>
+    <filter-class>es.satec.localgismobile.server.web.filters.AuthenticationFilter</filter-class>
+    <init-param>
+      <param-name>loginAction</param-name>
+      <param-value>/login.do</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>authenticationFilter</filter-name>
+    <url-pattern>/sync/*</url-pattern>
+  </filter-mapping>
+</web-app>

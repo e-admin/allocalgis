@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--*****************************************************************************************************************-->
+<!--*****************************************************************************************************************-->
+<!--                                            ActualizaCatastroRequest                                                                  -->
+<!--																																						-->
+<!-- 											Tipo de documento:      Mensaje												     			-->
+<!--*****************************************************************************************************************-->
+<!--*****************************************************************************************************************-->
+<!--**********************************************************-->
+<!--       						09-12-2009                               -->
+<!--**********************************************************-->
+<!--
+Cambios realizados respecto a la versión anterior:
+
+09-12-2009
+Se añade el expediente anterior en el elemento exp.
+Se adapta el tipo movreacrq a la mofificación del tipo de datos rexpg.
+19-05-2009
+El código de la descripción de la alteración catastral pasa a ser de 3 posiciones.
+29-02-2008
+Se añade la opción G en el tipo de entidad generadora (tegracrq).
+25-01-2008
+Se modifican los nombres de algunos tipos, pero la estructura no cambia.
+20-11-2007
+Se incluye el esquema varpad.xsd y se modifica la lista de elementos (tipo lelemfesw) para permitir expedientes de titularidad.
+Se añade la identificación de bien inmueble en el identificador de diálogo.
+El elemento expg pasa a ser obligatorio.
+16-07-07
+Los elementos ffi, fm, fac y fre pasan a ser de tipo fecha.
+22-05-2007
+El campo idoco pasa a ser opcional.
+11-05-2007
+Se modifican varios tipos para impedir cadenas rellenas unicamente con blancos.
+19-01-2007
+Se reduce el tipo de intercambio del expediente a sólo el valor F o V
+10-08-2006
+La ocurrencia de elemv pasa a ser 1
+
+04-08-2006
+Se cambia el nombre de las etiquetas luvp y uvp por luden y uden 
+
+10-07-2006
+Dentro del código de la entidad generadora se sustituye el tipo de datos locat por el tipo de datos engf
+-->
+<xsd:schema xmlns="http://www.catastro.meh.es/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.catastro.meh.es/" elementFormDefault="qualified" version="1.0">
+	<xsd:include schemaLocation="ldc.xsd"/>
+	<xsd:include schemaLocation="finentrada.xsd"/>
+	<xsd:include schemaLocation="varpad.xsd"/>
+	<!--REDUCCIÓN DEL TIPO SIMPLE TIPO DE ENTIDAD GENERADORA-->
+	<xsd:simpleType name="tegracrq">
+		<xsd:restriction base="teg">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="G"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--REDUCCIÓN DE LA ENTIDAD CABECERA-->
+	<xsd:complexType name="cabreducacrq">
+		<xsd:complexContent>
+			<xsd:restriction base="cab">
+				<xsd:sequence>
+					<!--Identificación de la entidad generadora-->
+					<xsd:element name="ieg">
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="ieg">
+									<xsd:sequence>
+										<xsd:element name="teg" type="tegracrq"/>
+										<xsd:element name="ceg">
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="ceg">
+														<xsd:choice>
+															<xsd:element name="engf" type="engf"/>
+														</xsd:choice>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="neg" type="neg"/>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<!--Información del fichero-->
+					<xsd:element name="ifi">
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="ifi">
+									<xsd:sequence>
+										<xsd:element name="ffi" type="fecha"/>
+										<xsd:element name="hfi" type="xsd:time"/>
+										<xsd:element name="tfi" type="tfi" fixed="WTAE"/>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="liddf">
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="liddf">
+									<xsd:sequence>
+										<xsd:element name="iddf" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="iddf">
+														<xsd:sequence>
+															<xsd:element name="idd" type="idd"/>
+															<xsd:choice>
+																<xsd:element name="idfcat" type="idfcat"/>
+																<xsd:element name="idbicat" type="idcat"/>
+															</xsd:choice>
+														</xsd:sequence>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="sol" type="idp"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--Lista de unidades de varpad-->
+	<xsd:complexType name="lufesw">
+		<xsd:sequence>
+			<xsd:element name="uden" type="ufesw"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ufesw">
+		<xsd:complexContent>
+			<xsd:restriction base="uden">
+				<xsd:sequence>
+					<xsd:element name="exp" type="movreacrq"/>
+					<xsd:element name="lelem" type="lelemfesw"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="lelemfesw">
+		<xsd:complexContent>
+			<xsd:restriction base="lelem">
+				<xsd:choice>
+					<xsd:element name="elemv" type="elemvp" maxOccurs="unbounded"/>
+					<xsd:element name="elemf" type="elemffe" maxOccurs="unbounded"/>
+				</xsd:choice>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--reducción del envío-->
+	<xsd:complexType name="envracrq">
+		<xsd:complexContent>
+			<xsd:restriction base="env">
+				<xsd:sequence>
+					<xsd:element name="cen" type="xsd:int"/>
+					<xsd:element name="fen" type="xsd:date"/>
+					<xsd:element name="est" type="est"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="ActualizaCatastroRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="control" type="cabreducacrq"/>
+				<xsd:element name="pregunta">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="luden" type="lufesw"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="tintacrq">
+		<xsd:restriction base="tint">
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="V"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--REDUCCIÓN DE LA ENTIDAD MOVIMIENTO-->
+	<xsd:complexType name="movreacrq">
+		<xsd:complexContent>
+			<xsd:restriction base="mov">
+				<xsd:sequence>
+					<xsd:element name="tint" type="tintacrq">
+						<xsd:annotation>
+							<xsd:documentation>Tipo de Intercambio:           F: Intercambio basado en estados finales                      V: Intercambio basado en variaciones</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<!--Tipo de expediente (motivo del movimiento)-->
+					<xsd:element name="texp" type="texpjrfe">
+						<xsd:annotation>
+							<xsd:documentation>Tipo de expediente</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="fac" type="fecha">
+						<xsd:annotation>
+							<xsd:documentation>Fecha de la alteración catastral</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="expg" type="expg">
+						<xsd:annotation>
+							<xsd:documentation>Expediente de la Gerencia</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="expec" type="expec">
+						<xsd:annotation>
+							<xsd:documentation>Expediente administrativo origen</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="expa" type="expg" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Expediente anterior</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="fre" type="fecha">
+						<xsd:annotation>
+							<xsd:documentation>Fecha de registro</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="fhm">
+						<xsd:annotation>
+							<xsd:documentation>Fecha y hora del movimiento</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="fhm">
+									<xsd:sequence>
+										<xsd:element name="fm" type="fecha">
+											<xsd:annotation>
+												<xsd:documentation>Fecha del movimiento</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="hm" type="xsd:time">
+											<xsd:annotation>
+												<xsd:documentation>Hora del movimiento</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<!--INFORMACIÓN DE NOTARIOS Y REGISTRADORES-->
+					<xsd:element name="inr" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>información notarial</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="inr">
+									<xsd:sequence>
+										<xsd:element name="npn" type="npn" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Número de protocolo notarial</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="decl" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Datos de la declaración</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="decl">
+									<xsd:sequence>
+										<!--Documento origen de la alteración-->
+										<xsd:element name="doco" type="doco">
+											<xsd:annotation>
+												<xsd:documentation>Documento origen de la alteración: P: Público, R: Privado</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="idoco" type="idoco" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Información del documento origen de la alteración</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="nbi" type="nbi">
+											<xsd:annotation>
+												<xsd:documentation>Número de bienes inmuebles implicados en la declaración</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="cdeac" type="cdeac" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Código descriptivo de la alteración</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="deac" type="deac" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Descripción de la alteración</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="einfg" type="ie">
+						<xsd:annotation>
+							<xsd:documentation>Descripción de la alteración</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dec">
+						<xsd:annotation>
+							<xsd:documentation>Presentador del expediente</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="dec">
+									<xsd:sequence>
+										<xsd:element name="idp" type="idp">
+											<xsd:annotation>
+												<xsd:documentation>Identificación</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="dfn">
+											<xsd:annotation>
+												<xsd:documentation>Domicilio de notificación</xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:complexContent>
+													<xsd:restriction base="dfn">
+														<xsd:sequence>
+															<xsd:element name="loine" type="loine">
+																<xsd:annotation>
+																	<xsd:documentation>Localización INE</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="cmc" type="cmc">
+																<xsd:annotation>
+																	<xsd:documentation>Código de municipio de la DGC</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="np" type="np">
+																<xsd:annotation>
+																	<xsd:documentation>Nombre de provincia</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="nm" type="nm">
+																<xsd:annotation>
+																	<xsd:documentation>Nombre de municipio</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="nem" type="nem" minOccurs="0">
+																<xsd:annotation>
+																	<xsd:documentation>Nombre de entidad menor</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="dir">
+																<xsd:annotation>
+																	<xsd:documentation>Dirección</xsd:documentation>
+																</xsd:annotation>
+																<xsd:complexType>
+																	<xsd:complexContent>
+																		<xsd:restriction base="dir">
+																			<xsd:sequence>
+																				<xsd:element name="cv" type="cv" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Código de vía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="tv" type="tv">
+																					<xsd:annotation>
+																						<xsd:documentation>Tipo de vía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="nv" type="nv">
+																					<xsd:annotation>
+																						<xsd:documentation>Nombre de vía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="pnp" type="pnp" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Primer número de policía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="plp" type="plp" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Primera letra asociada al número de policía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="snp" type="snp" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Segundo número de policía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="slp" type="slp" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Segunda letra asociada al número de policía</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="km" type="km" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Kilómetro</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="td" type="dne" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>Texto de dirección no estructurada</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																			</xsd:sequence>
+																		</xsd:restriction>
+																	</xsd:complexContent>
+																</xsd:complexType>
+															</xsd:element>
+															<xsd:element name="loint" type="loint" minOccurs="0">
+																<xsd:annotation>
+																	<xsd:documentation>Localización interna</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="pos" type="pos">
+																<xsd:annotation>
+																	<xsd:documentation>Datos postales</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+														</xsd:sequence>
+													</xsd:restriction>
+												</xsd:complexContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

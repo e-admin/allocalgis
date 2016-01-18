@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration >
+  <classPathEntry location="C:\Documents and Settings\david.caaveiro\.m2\repository\postgresql\postgresql\8.0-311.jdbc3\postgresql-8.0-311.jdbc3.jar"/>
+  <ibatorContext id="contextPrincipal" >
+    <jdbcConnection driverClass="org.postgresql.Driver" connectionURL="jdbc:postgresql://192.168.1.59:5433/geopista" userId="geopista" password="geopista" />
+	    <javaModelGenerator targetPackage="com.localgis.web.core.model" targetProject="localgis-core-geowfst/src/main/java" />
+    <sqlMapGenerator targetPackage="sqlMaps" targetProject="localgis-core-geowfst/src/main/resources" />
+    <daoGenerator targetPackage="com.localgis.web.core.dao" targetProject="localgis-core-geowfst/src/main/java" type="IBATIS" implementationPackage="com.localgis.web.core.dao.sqlmap"/>
+    <table schema="geowfst" tableName="entidadlocalgis_entidadext" domainObjectName="EntidadlocalgisEntidadext" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableInsert="true" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true"/>
+ 	<table schema="geowfst" tableName="entidad_tipo_map" domainObjectName="EntidadTipoMap" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableInsert="true" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true"/>
+ 	<table schema="geowfst" tableName="procedures" domainObjectName="Procedures" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableInsert="true" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true"/>
+    <table schema="geowfst" tableName="procedure_properties" domainObjectName="ProcedureProperties" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableInsert="true" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true"/>
+ 	<table schema="geowfst" tableName="procedure_defaults" domainObjectName="ProcedureDefaults" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableInsert="true" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true"/>
+  </ibatorContext>
+</ibatorConfiguration>

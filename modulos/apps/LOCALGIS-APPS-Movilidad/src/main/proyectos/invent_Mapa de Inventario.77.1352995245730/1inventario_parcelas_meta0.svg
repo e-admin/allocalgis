@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg viewBox="0.0 0.0 5341.7266 2876.418" despX="691534.7300008934" despY="4794863.489998339" >
+  <g l1="ID de Parcela" l2="ID de Municipio" l3="Numero de Bienes" geometryType="5" systemId="inventario_parcelas" stroke-dasharray="" editable="true" fill="none" id="Inventario de Parcelas" >
+    <path d="M1.0 2.0 L3.0 4.0 5.0 6.0 z" v1="-1" v2="-1" v3="-1" id="16606885557" >
+    <metadata><![CDATA[
+<skeleton>
+<tab classId="BienBean" label="Datos Generales">
+	<item rm="SuperPatron" name="tiposBienes" edit="true" modif="false" label="Tipos de Bienes" />
+	<item rm="IdString" name="" edit="false" updatable="true" label="Nº Inventario" />
+	<item rm="Organizacion" name="" edit="true" label="Organización:" />  
+	<item rm="Tipo" name="subTipoBienes" edit="true" modif="false" label="Tipo de Bien:" />
+	<item rm="Nombre" name="" edit="true" label="Nombre:" />
+	<item rm="NumInventario" name="" edit="false" updatable="true" label="Núm. Inventario:" />	
+	<item rm="Uso" name="usoJuridico" edit="true" label="Uso:" />
+	<item rm="Descripcion" name="" edit="true" label="Descripción:" />
+</tab>
+</skeleton>
+]]></metadata>
+  </path>
+  <path d="M2414.2305 848.9922 L2421.0586 845.84766 2422.2383 848.2031 2423.3828 856.7539 2419.3828 860.47266 2413.1445 863.0 2409.3242 858.1914 2414.2305 848.9922 z" v1="5174038" v2="-1" v3="-1" id="6159089557" >
+  <metadata><![CDATA[<?xml version="1.0"?>
+<skeleton>
+ <tab classId="BienBean" label="Datos Generales">
+  <item rm="SuperPatron" name="tiposBienes" edit="true" modif="false" label="Tipos de Bienes" modified="true">
+1
+  </item>
+  <item rm="IdString" name="" edit="false" updatable="true" label="Nº Inventario">
+
+  </item>
+  <item rm="Organizacion" name="" edit="true" label="Organización:" modified="true">
+PRUEBA2012
+  </item>
+  <item rm="Tipo" name="subTipoBienes" edit="true" modif="false" label="Tipo de Bien:" modified="true">
+2
+  </item>
+  <item rm="Nombre" name="" edit="true" label="Nombre:" modified="true">
+PRUEBA2012
+  </item>
+  <item rm="NumInventario" name="" edit="false" updatable="true" label="Núm. Inventario:">
+
+  </item>
+  <item rm="Uso" name="usoJuridico" edit="true" label="Uso:" modified="true">
+3
+  </item>
+  <item rm="Descripcion" name="" edit="true" label="Descripción:" modified="true">
+PRUEBA2012
+  </item>
+
+ </tab>
+
+</skeleton>
+]]></metadata>
+</path>
+<path d="M2243.2852 775.2969 L2234.9414 768.08594 2222.6875 758.65625 2216.6875 753.91797 2208.1875 745.14844 2199.7617 735.22266 2196.3906 730.75 2195.879 729.89844 2195.3477 729.03516 2194.8906 728.125 2194.4375 727.2383 2194.0 726.33594 2193.5625 725.4297 2193.1797 724.5 2192.754 723.58594 2192.3477 722.66797 2191.879 721.77344 2191.4766 720.8594 2191.0625 719.9375 2190.6914 719.0 2190.3672 718.0469 2190.0586 717.08594 2189.7383 716.125 2189.379 715.1875 2189.0352 714.25 2187.9883 711.4375 2184.8594 700.75 2182.5117 690.0625 2181.1094 677.65625 2184.3828 668.8125 2192.2188 661.34766 2197.0625 657.16797 2201.7969 650.6172 2219.9297 639.91797 2238.5117 634.125 2254.379 637.1875 2279.9297 656.25 2279.9375 659.25 2280.1914 661.5625 2280.7188 663.8594 2281.4883 666.0625 2282.4883 668.1797 2282.6094 668.375 2283.6914 670.16797 2285.1328 672.0 2296.004 687.0039 2298.0469 689.8125 2311.0469 706.1875 2323.918 722.375 2325.2852 723.8594 2326.5586 725.4297 2327.7266 727.0625 2327.9297 727.39844 2328.7969 728.77344 2329.75 730.5586 2330.5625 732.39844 2331.2969 734.27344 2331.879 736.1914 2332.3594 738.16797 2332.6875 740.15625 2332.918 742.15625 2333.3086 745.16797 2333.7266 748.1797 2333.836 748.9375 2334.1875 751.1797 2334.6914 754.16797 2335.25 757.15625 2335.8125 760.125 2336.4375 763.1094 2337.1094 766.0625 2337.7969 769.0039 2338.5352 771.96875 2338.6172 772.3086 2339.3086 774.89844 2342.8906 787.0625 2347.2969 800.875 2347.0 803.83594 2346.8125 804.8125 2346.6875 805.83594 2346.5977 806.83594 2346.2266 808.9297 2345.1328 812.5625 2344.918 813.5625 2344.5625 814.52344 2344.1875 815.46875 2343.75 816.375 2342.1328 818.52344 2333.379 813.53516 2331.3594 812.625 2330.4375 812.22266 2329.504 811.84766 2328.5469 811.5 2327.5625 811.2383 2326.9375 811.0586 2326.6094 810.9414 2325.6172 810.72266 2324.6328 810.4414 2323.6406 810.21875 2322.668 809.9883 2320.1328 809.3594 2311.836 804.90625 2311.086 804.5 2300.336 800.15625 2293.586 797.1875 2285.1914 793.89844 2274.5469 789.89844 2264.1797 785.6797 2261.336 784.3594 2254.9375 781.375 2243.2852 775.2969 z" v1="5173897" v2="-1" v3="-1" id="143426922970" >
+<metadata><![CDATA[<?xml version="1.0"?>
+<skeleton>
+ <tab classId="BienBean" label="Datos Generales">
+  <item rm="SuperPatron" name="tiposBienes" edit="true" modif="false" label="Tipos de Bienes" modified="true">
+1
+  </item>
+  <item rm="IdString" name="" edit="false" updatable="true" label="Nº Inventario">
+
+  </item>
+  <item rm="Organizacion" name="" edit="true" label="Organización:" modified="true">
+PRUEBAMOV1
+  </item>
+  <item rm="Tipo" name="subTipoBienes" edit="true" modif="false" label="Tipo de Bien:" modified="true">
+2
+  </item>
+  <item rm="Nombre" name="" edit="true" label="Nombre:" modified="true">
+PRUEBAMOV1
+  </item>
+  <item rm="NumInventario" name="" edit="false" updatable="true" label="Núm. Inventario:">
+
+  </item>
+  <item rm="Uso" name="usoJuridico" edit="true" label="Uso:" modified="true">
+1
+  </item>
+  <item rm="Descripcion" name="" edit="true" label="Descripción:" modified="true">
+PRUEBAMOV1
+  </item>
+
+ </tab>
+
+</skeleton>
+]]></metadata>
+</path>
+</g>
+</svg>

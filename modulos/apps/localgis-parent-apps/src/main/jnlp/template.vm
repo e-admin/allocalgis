@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="$codebaseJnlp" href="$urlFileJnlp">
+ <information>
+	<title>$informationTitle</title>
+	<vendor>$informationVendor</vendor>
+	<homepage href="http://www.geopista.com" />
+	<description>$informationDescription</description>
+	<icon href="logo_geopista.gif" />
+	<offline-allowed />
+	<icon kind="splash" href="splash_geopista.gif" />
+	<shortcut online="false">
+	  <desktop />
+	  <menu submenu="LocalGIS" />
+	</shortcut>
+ </information>
+ <resources>
+    <j2se version="1.7" initial-heap-size="128m" max-heap-size="512m"/>
+    <jar href="$relativePathJar/$jarFileMain" main="true"/>
+    $dependencies
+    <extension name="$idExtensionName" href="$urlFileExtensionJnlp"/>
+ </resources>
+ 
+ <application-desc main-class="$mainClassJnlp">
+ 	## Posibles parametros a procesar
+	#if ($argProperties)
+		<argument>-properties</argument>
+		<argument>$argProperties</argument>
+	#end
+ </application-desc>
+ 
+ <security><all-permissions/></security>
+ 
+</jnlp>

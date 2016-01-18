@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <name>Metamodulo instalacion modulos localgis de COTESA</name>
+  <version>3.0.0</version>
+  <artifact>
+    <groupId>null</groupId>
+    <artifactId>null</artifactId>
+    <version>null</version>
+    <install>package</install>
+  </artifact>
+  <dependencyInfo>
+    <dependencies>
+      <module>
+        <name>Modulo backup de LOCALGIS 3.0</name>
+        <version>3.0.0</version>
+        <artifact>
+          <groupId>com.localgis.app</groupId>
+          <artifactId>localgis-apps-backup</artifactId>
+          <version>3.0</version>
+          <install>clientJNLP</install>
+        </artifact>
+      </module>
+    </dependencies>
+  </dependencyInfo>
+</module>

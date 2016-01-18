@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+    "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="baseTiles" template="/WEB-INF/views/comun/layout.jsp">
+		<put-attribute name="title" value="Agenda 21 Local" />
+		<put-attribute name="header" value="/WEB-INF/views/comun/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/comun/menu.jsp"/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/comun/footer.jsp" />
+	</definition>
+	
+	<definition name="reportTile" template="/WEB-INF/views/comun/layout-report.jsp">
+		<put-attribute name="title" value="Agenda 21 Local" />
+		<put-attribute name="body" value="" />
+	</definition>	
+	
+ 	<definition name="loginTile" template="/WEB-INF/views/layoutLogin.jsp">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+
+	<!-- Usuarios -->
+	<definition name="usuarioTile" extends="baseTiles">
+		<put-attribute name="title" value="Usuario" />
+		<put-attribute name="body" value="/WEB-INF/views/usuarios/usuario.jsp" />
+	</definition>
+	
+	<definition name="usuariosTile" extends="baseTiles">
+		<put-attribute name="title" value="Usuarios" />
+		<put-attribute name="body" value="/WEB-INF/views/usuarios/usuarios.jsp" />
+	</definition>
+	
+	<definition name="usuarioMoficicarTile" extends="baseTiles">
+		<put-attribute name="title" value="Usuario Modificar" />
+		<put-attribute name="body" value="/WEB-INF/views/usuarios/usuarioModificar.jsp" />
+	</definition>
+	
+	<definition name="usuarioRestablecerContrasenhaTile" extends="baseTiles">
+		<put-attribute name="title" value="Usuario Restablecer Contraseña" />
+		<put-attribute name="body" value="/WEB-INF/views/usuarios/usuarioRestablecerContrasenha.jsp" />
+	</definition>
+	
+	<definition name="usuarioCambiarContrasenhaTile" extends="baseTiles">
+		<put-attribute name="title" value="Cambiar Contraseña" />
+		<put-attribute name="body" value="/WEB-INF/views/usuarios/usuarioCambiarContrasenha.jsp" />
+	</definition>
+	
+	<definition name="usuarioAsignarRolesTile" extends="baseTiles">
+		<put-attribute name="title" value="Asignar Roles" />
+		<put-attribute name="body" value="/WEB-INF/views/usuarios/usuarioAsignaRoles.jsp" />
+	</definition>
+	
+	<definition name="usuarioAsignarPermisosTile" extends="baseTiles">
+		<put-attribute name="title" value="Gestionar Permisos" />
+		<put-attribute name="body" value="/WEB-INF/views/usuarios/usuarioAsignarPermisos.jsp" />
+	</definition>
+	
+	<!-- Roles -->
+	<definition name="rolesTile" extends="baseTiles">
+		<put-attribute name="title" value="Roles" />
+		<put-attribute name="body" value="/WEB-INF/views/roles/roles.jsp" />
+	</definition>
+	
+	<definition name="rolTile" extends="baseTiles">
+		<put-attribute name="title" value="Rol" />
+		<put-attribute name="body" value="/WEB-INF/views/roles/rol.jsp" />
+	</definition>
+	
+	<definition name="rolDetalleTile" extends="baseTiles">
+		<put-attribute name="title" value="Rol Modificar" />
+		<put-attribute name="body" value="/WEB-INF/views/roles/rolDetalle.jsp" />
+	</definition>
+	
+	<!-- Indicadores  -->
+	<definition name="indicadoresTile" extends="baseTiles">
+		<put-attribute name="title" value="Indicadores" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/indicadores.jsp" />
+	</definition>
+	
+	<definition name="indicadorTile" extends="baseTiles">
+		<put-attribute name="title" value="Indicador" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/indicador.jsp" />
+	</definition>
+	
+	<definition name="generarPdfTile" extends="reportTile">
+		<put-attribute name="title" value="Informe PDF" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/generarPdf.jsp" />
+	</definition>	
+	
+	<definition name="visualizarIndicadorTablaTile" extends="baseTiles">
+		<put-attribute name="title" value="Visualizar Indicador como Tabla" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/visualizarIndicadorTabla.jsp" />
+	</definition>
+	
+	<definition name="visualizarIndicadorMapaTile" extends="baseTiles">
+		<put-attribute name="title" value="Visualizar Indicador como Mapa" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/visualizarIndicadorMapa.jsp" />
+	</definition>
+	
+	<definition name="visualizarIndicadorDiagramaBarrasTile" extends="baseTiles">
+		<put-attribute name="title" value="Visualizar Indicador como Diagrama de Barras" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/visualizarIndicadorDiagramaBarras.jsp" />
+	</definition>
+	
+	<definition name="visualizarIndicadorDiagramaSectoresTile" extends="baseTiles">
+		<put-attribute name="title" value="Visualizar Indicador como Diagrama de Sectores" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/visualizarIndicadorDiagramaSectores.jsp" />
+	</definition>
+	
+	<definition name="mostrarEvolucionTile" extends="baseTiles">
+		<put-attribute name="title" value="Evolucion Indicador" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/mostrarEvolucion.jsp" />
+	</definition>
+	
+	<definition name="verDetallesIndicadorTile" extends="baseTiles">
+		<put-attribute name="title" value="Ver detalles indicador" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/verDetallesIndicador.jsp" />
+	</definition>
+	
+	<definition name="modificarDetallesIndicadorTile" extends="baseTiles">
+		<put-attribute name="title" value="Modificar detalles indicador" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/modificarDetallesIndicador.jsp" />
+	</definition>
+	
+	<definition name="indicadoresBusquedaTile" extends="baseTiles">
+		<put-attribute name="title" value="Indicadores" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/indicadoresBusqueda.jsp" />
+	</definition>
+	
+	<definition name="categoriaTile" extends="baseTiles">
+		<put-attribute name="title" value="Categoria" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/categoria.jsp" />
+	</definition>
+	
+	<definition name="indicadoresBusquedaAvanzadaTile" extends="baseTiles">
+		<put-attribute name="title" value="Búsqueda Avanzada Indicadores" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/indicadoresBusquedaAvanzada.jsp" />
+	</definition>
+	
+	<definition name="indicadoresBusquedaAvanzadaResultadoTile" extends="baseTiles">
+		<put-attribute name="title" value="Búsqueda Avanzada Indicadores" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/indicadoresBusquedaAvanzadaResultado.jsp" />
+	</definition>
+	
+	
+	<!-- Fuentes -->
+	<definition name="fuentesTile" extends="baseTiles">
+		<put-attribute name="title" value="Fuentes" />
+		<put-attribute name="body" value="/WEB-INF/views/fuentes/fuentes.jsp" />
+	</definition>
+	<definition name="fuenteTile" extends="baseTiles">
+		<put-attribute name="title" value="Edición Fuente" />
+		<put-attribute name="body" value="/WEB-INF/views/fuentes/fuente.jsp" />
+	</definition>
+	<definition name="datosFuenteTile" extends="baseTiles">
+		<put-attribute name="title" value="Ver Datos Fuente" />
+		<put-attribute name="body" value="/WEB-INF/views/fuentes/datosFuente.jsp" />
+	</definition>
+	
+	<!-- Publicacion -->
+	<definition name="publicacionTile" extends="baseTiles">
+		<put-attribute name="title" value="Publicación" />
+		<put-attribute name="body" value="/WEB-INF/views/publicacion/publicacion.jsp" />
+	</definition>
+
+	<definition name="catalogoSistemaTile" extends="baseTiles">
+		<put-attribute name="title" value="Ver Datos Fuente" />
+		<put-attribute name="body" value="/WEB-INF/views/fuentes/catalogoSistema.jsp" />
+	</definition>
+		
+	
+	<definition name="listaIndicadoresPendientesTile" extends="baseTiles">
+		<put-attribute name="title" value="Lista de indicadores pendientes" />
+		<put-attribute name="body" value="/WEB-INF/views/publicacion/listaIndicadoresPendientes.jsp" />
+	</definition>
+	
+	<definition name="listaIndicadoresPublicosTile" extends="baseTiles">
+		<put-attribute name="title" value="Lista de indicadores públicos" />
+		<put-attribute name="body" value="/WEB-INF/views/publicacion/listaIndicadoresPublicos.jsp" />
+	</definition>
+	
+	<!-- Publicacion Web -->
+	<definition name="publicacionWebTile" extends="baseTiles">
+		<put-attribute name="title" value="Publicación Web" />
+		<put-attribute name="body" value="/WEB-INF/views/publicacionWeb/publicacion.jsp" />
+	</definition>
+	
+	<definition name="listaIndicadoresPendientesWebTile" extends="baseTiles">
+		<put-attribute name="title" value="Lista de indicadores pendientes de publicación Web" />
+		<put-attribute name="body" value="/WEB-INF/views/publicacionWeb/listaIndicadoresPendientes.jsp" />
+	</definition>
+	
+	<definition name="indicadorPublicadoTablaWebTile" template="/WEB-INF/views/comun/layout_publicacion_web.jsp">
+		<put-attribute name="title" value="Visualización Indicador" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadorPublicado/indicadorPublicoTabla.jsp" />
+	</definition>
+	
+	<definition name="indicadorPublicadoBarrasWebTile" template="/WEB-INF/views/comun/layout_publicacion_web.jsp">
+		<put-attribute name="title" value="Visualización Indicador" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadorPublicado/indicadorPublicoBarras.jsp" />
+	</definition>
+	
+	<definition name="indicadorPublicadoSectoresWebTile" template="/WEB-INF/views/comun/layout_publicacion_web.jsp">
+		<put-attribute name="title" value="Visualización Indicador" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadorPublicado/indicadorPublicoSectores.jsp" />
+	</definition>
+	
+	<definition name="indicadorPublicadoMapaWebTile" template="/WEB-INF/views/comun/layout_publicacion_web.jsp">
+		<put-attribute name="title" value="Visualización Indicador" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadorPublicado/indicadorPublicoMapa.jsp" />
+	</definition>
+	
+	<!-- Mostrar Evolución (Publicación Web) -->
+		<definition name="indicadorPublicoMostrarEvolucionTile" template="/WEB-INF/views/comun/layout_publicacion_web.jsp">
+		<put-attribute name="title" value="Evolucion Indicador" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadorPublicado/mostrarPublicoEvolucion.jsp" />
+	</definition>
+	
+	<!-- Exportacion PDF (Parte Pública) -->
+		<definition name="paginaExportarIndicadorPublicoPdfTile" template="/WEB-INF/views/comun/layout_publicacion_web.jsp">
+		<put-attribute name="title" value="Exportar Indicador Publico PDF" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadorPublicado/exportarIndicadorPublicoPdf.jsp" />
+	</definition>
+	
+	<!-- Exportacion PDF -->
+	<definition name="paginaExportarIndicadorPdfTile" extends="baseTiles">
+		<put-attribute name="title" value="Exportar Indicador PDF" />
+		<put-attribute name="body" value="/WEB-INF/views/indicadores/exportarIndicadorPdf.jsp" />
+	</definition>
+	
+	<!-- Errores  -->
+
+	<definition name="errorTile" extends="baseTiles">
+		<put-attribute name="title" value="Error Aplicación" />
+		<put-attribute name="body" value="/WEB-INF/views/errores/error.jsp" />
+	</definition>
+	
+	<definition name="errorSwTile" extends="baseTiles">
+		<put-attribute name="title" value="Error Servicio Web" />
+		<put-attribute name="body" value="/WEB-INF/views/errores/errorSW.jsp" />
+	</definition>
+	
+	<definition name="noAutorizadoPublica" template="/WEB-INF/views/comun/layout_publicacion_web.jsp">
+	  <put-attribute name="title" value="Sin permisos" />
+	  <put-attribute name="body" value="/WEB-INF/views/errores/noAutorizado.jsp" />
+	</definition>
+	
+	<definition name="PublicacionWebDeshabilitada" template="/WEB-INF/views/comun/layout_publicacion_web.jsp">
+	  <put-attribute name="title" value="Publicacion web deshabilitada" />
+	  <put-attribute name="body" value="/WEB-INF/views/errores/publicacionDeshabilitada.jsp" />
+	</definition>
+	
+	<definition name="404" extends="baseTiles">
+	  <put-attribute name="title" value="No encontrado" />
+	  <put-attribute name="body" value="/WEB-INF/views/errores/404.jsp" />
+	</definition>
+	
+	<definition name="500" extends="baseTiles">
+	  <put-attribute name="title" value="Error Servicio Web" />
+	  <put-attribute name="body" value="/WEB-INF/views/errores/500.jsp" />
+	</definition>
+	
+	<definition name="403" extends="baseTiles">
+	  <put-attribute name="title" value="Sin permisos" />
+	  <put-attribute name="body" value="/WEB-INF/views/errores/noAutorizado.jsp" />
+	</definition>
+	
+</tiles-definitions>

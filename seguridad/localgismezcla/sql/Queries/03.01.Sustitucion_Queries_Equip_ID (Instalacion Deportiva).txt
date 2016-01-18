@@ -1,0 +1,42 @@
+-- ID (Instalacion Deportiva)
+--
+-- Sustitucion de la select query
+--
+select selectquery  from queries
+where id_layer=(select id_layer from layers where name='ID')
+
+select replace(selectquery,'"eiel_c_id"."GEOMETRY"','transform("eiel_c_id"."GEOMETRY" , ?T) as "GEOMETRY"') from queries
+where id_layer=(select id_layer from layers where name='ID')
+
+update queries set selectquery=(select replace(selectquery,'"eiel_c_id"."GEOMETRY",','transform("eiel_c_id"."GEOMETRY" , ?T) as "GEOMETRY"') from queries
+where id_layer=(select id_layer from layers where name='ID')) 
+where id_layer=(select id_layer from layers where name='ID');
+
+
+--
+-- Sustitucion de la update query
+--
+select updatequery  from queries
+where id_layer=(select id_layer from layers where name='ID')
+
+select replace(updatequery,'=GeometryFromText(?1,?S)','=transform(GeometryFromText(text(?1),?S), ?T)') from queries
+where id_layer=(select id_layer from layers where name='ID')
+
+update queries set updatequery=(select replace(updatequery,'=GeometryFromText(?1,?S)','=transform(GeometryFromText(text(?1),?S), ?T)') from queries
+where id_layer=(select id_layer from layers where name='ID')) 
+where id_layer=(select id_layer from layers where name='ID')
+
+
+--
+-- Sustitucion de la insert query
+--
+select insertquery  from queries
+where id_layer=(select id_layer from layers where name='ID')
+
+select replace(insertquery,'(GeometryFromText(?1,?S)','(transform(GeometryFromText(text(?1),?S), ?T)') from queries
+where id_layer=(select id_layer from layers where name='ID')
+
+update queries set insertquery=(select replace(insertquery,'(GeometryFromText(?1,?S)','(transform(GeometryFromText(text(?1),?S), ?T)') from queries
+where id_layer=(select id_layer from layers where name='ID')) 
+where id_layer=(select id_layer from layers where name='ID');
+

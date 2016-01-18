@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<root>
+	<element xml-name="xmin" java-name="xmin"/>
+	<element xml-name="ymin" java-name="ymin"/>
+	<element xml-name="xmax" java-name="xmax"/>
+	<element xml-name="ymax" java-name="ymax"/>
+	<element xml-name="nombreMarcador" java-name="nombreMarcador"/>
+</root>

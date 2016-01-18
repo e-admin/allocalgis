@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="LOCALGIS-SERVER-Geopista">
+        <wb-resource deploy-path="/WEB-INF/web.xml" source-path="/src/main/webapp/WEB-INF/web.xml"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="localgis-servercontext-inventario-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-servercontext-inventario/localgis-servercontext-inventario">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-utils-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-utils/localgis-utils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-security-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-security/localgis-security">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-context-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-context/localgis-context">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-servercontext-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-servercontext/localgis-servercontext">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/LOCALGIS-SERVER-Geopista/build/classes"/>
+        <property name="context-root" value="localgis-server-geopista"/>
+    </wb-module>
+</project-modules>

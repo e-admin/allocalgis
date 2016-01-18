@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.workbench</groupId>
+	<artifactId>localgis-workbench-basic</artifactId>
+	<name>LOCALGIS Workbench-Basic</name>
+
+	<parent>
+		<groupId>com.localgis</groupId>
+		<artifactId>localgis-parent</artifactId>
+		<version>3.0</version>
+	</parent>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jfrog.maven.plugins</groupId>
+				<artifactId>jfrog-jnlp-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jnlp</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<templateFileName>template.vm</templateFileName>
+					<verbose>true</verbose>
+					<targetDirectory>target/classes/jnlp</targetDirectory>
+					<targetFile>${artifactId}-${version}.jnlp</targetFile>
+					<mainClass>com.geopista.ui.GEOPISTAWorkbench</mainClass>
+					<useMavenLayout>true</useMavenLayout>
+					<attach>true</attach>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>jfrog-plugins-dist</id>
+			<name>jfrog-plugins-dist</name>
+			<url>http://repo.jfrog.org/artifactory/plugins-releases-local</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.localgis.workbench</groupId>
+			<artifactId>localgis-workbench</artifactId>
+			<version>3.0</version>
+		</dependency>
+	</dependencies>
+
+</project>

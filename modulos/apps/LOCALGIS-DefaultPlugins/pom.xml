@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+   
+  <groupId>com.localgis.plugin</groupId>
+  <artifactId>localgis-defaultplugins</artifactId>
+  <name>LOCALGIS-defaultPlugins</name>
+  <description>Plugins mínimos para un workbench operativo.</description>
+  
+  <parent>
+    <groupId>com.localgis</groupId>
+    <artifactId>localgis-parent</artifactId>
+    <version>3.0</version>
+  </parent>
+ 
+  <dependencies>
+  	<!-- 
+	<dependency>
+	  <groupId>com.localgis</groupId>
+	  <artifactId>ireport</artifactId>
+	  <version>2.0.1</version>
+	</dependency>
+	-->
+	<dependency>
+		<groupId>com.localgis.utils</groupId>
+		<artifactId>localgis-utils-plugin</artifactId>
+		<version>3.0</version>
+	</dependency>
+	<dependency>
+		<groupId>com.localgis.const</groupId>
+		<artifactId>localgis-const</artifactId>
+		<version>3.0</version>
+	</dependency>
+	<dependency>
+		<groupId>com.localgis.utils</groupId>
+		<artifactId>localgis-utils-document</artifactId>
+		<version>3.0</version>
+	</dependency>
+	 <dependency>
+   	<groupId>commons-logging</groupId>
+   	<artifactId>commons-logging</artifactId>
+   	<version>1.1.1</version>
+   </dependency>
+    <dependency>
+   	<groupId>commons-logging</groupId>
+   	<artifactId>commons-logging</artifactId>
+   	<version>1.1.1</version>
+   </dependency>
+    <dependency>
+    	<groupId>com.localgis.utils</groupId>
+    	<artifactId>localgis-utils-report</artifactId>
+    	<version>3.0</version>
+    </dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="localgis_municipios">
+
+  <resultMap class="com.localgis.web.core.model.BoundingBox" id="BoundingBoxResult">
+    <result column="minx" jdbcType="NUMERIC" property="minx" nullValue="0"/>
+    <result column="miny" jdbcType="NUMERIC" property="miny" nullValue="0"/>
+    <result column="maxx" jdbcType="NUMERIC" property="maxx" nullValue="0"/>
+    <result column="maxy" jdbcType="NUMERIC" property="maxy" nullValue="0"/>
+  </resultMap>
+  
+  <resultMap class="com.localgis.web.core.model.GeopistaMunicipio" id="GeopistaMunicipioResult">
+    <result column="id" jdbcType="NUMERIC" property="id" nullValue="0"/>
+
+  </resultMap>
+    
+  
+
+</sqlMap>

@@ -1,0 +1,114 @@
+<!DOCTYPE daoConfig
+PUBLIC "-//ibatis.apache.org//DTD DAO Configuration 2.0//EN"
+"http://ibatis.apache.org/dtd/dao-2.dtd">
+<daoConfig>
+
+	<!-- Example SQL Maps DAO Configuration -->
+	<context>
+		<transactionManager type="SQLMAP">
+			<property name="SqlMapConfigResource"
+				value="com/localgis/web/core/dao/sqlmap/sql/sqlMapConfig${jdbc.environment}.xml" />
+			<!--<property name="SqlMapConfigResource"
+				value="com/localgis/web/core/dao/sqlmap/sql/sqlMapConfig.xml" />-->
+		</transactionManager>
+	
+	<!-- DAOs relacionados con la bd de geopista -->
+	
+    <dao interface="com.localgis.web.core.dao.GeopistaAuthenticationDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaAuthenticationDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.GeopistaColumnDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaColumnDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.GeopistaCoverageLayerDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaCoverageLayerDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.GeopistaEntidadSupramunicipalDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaEntidadSupramunicipalDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.GeopistaLayerDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaLayerDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.GeopistaMapServerLayerDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaMapServerLayerDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.GeopistaMapDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaMapDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.GeopistaMapGenericElementDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaMapGenericElementDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.GeopistaMunicipioDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaMunicipioDAOImpl"/>
+         
+    <dao interface="com.localgis.web.core.dao.GeopistaNucleoDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaNucleoDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.GeopistaNumeroPoliciaDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaNumeroPoliciaDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.GeopistaParcelaDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaParcelaDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.GeopistaTableDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaTableDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.GeopistaViaDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.GeopistaViaDAOImpl"/>
+
+	<!-- DAOs relacionados con la bd de localgis -->
+    <dao interface="com.localgis.web.core.dao.LocalgisAttributeDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.LocalgisAttributeDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.LocalgisCSSDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.LocalgisCSSDAOImpl"/>             
+    
+    <dao interface="com.localgis.web.core.dao.LocalgisLayerDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.LocalgisLayerDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.LocalgisLegendDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.LocalgisLegendDAOImpl"/>       
+    
+	<dao interface="com.localgis.web.core.dao.LocalgisMapDAO"
+	     implementation="com.localgis.web.core.dao.sqlmap.LocalgisMapDAOImpl"/>
+	     
+    <dao interface="com.localgis.web.core.dao.LocalgisMapLayerDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.LocalgisMapLayerDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.LocalgisMapServerLayerDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.LocalgisMapServerLayerDAOImpl"/>
+
+    <dao interface="com.localgis.web.core.dao.LocalgisMarkerDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.LocalgisMarkerDAOImpl"/>             
+
+    <dao interface="com.localgis.web.core.dao.LocalgisIncidenciaDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.LocalgisIncidenciaDAOImpl"/>   
+
+    <dao interface="com.localgis.web.core.dao.LocalgisMunicipioDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.LocalgisMunicipioDAOImpl"/>   
+    
+           
+    
+    <dao interface="com.localgis.web.core.dao.LocalgisRestrictedAttributesDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.LocalgisRestrictedAttributesDAOImpl"/>
+    
+	<dao interface="com.localgis.web.core.dao.LocalgisStyleDAO"
+	     implementation="com.localgis.web.core.dao.sqlmap.LocalgisStyleDAOImpl"/>
+
+	<dao interface="com.localgis.web.core.dao.LocalgisSpatialRefSysDAO"
+	     implementation="com.localgis.web.core.dao.sqlmap.LocalgisSpatialRefSysDAOImpl"/>
+	
+	</context>
+	
+	<context>
+		<transactionManager type="SQLMAP">
+			<property name="SqlMapConfigResource"
+				value="com/localgis/web/core/dao/sqlmap/sql/sqlMapConfigIncidencias.xml" />
+		</transactionManager>
+	
+	<!-- DAOs relacionados con la bd de geopista -->
+	
+    <dao interface="com.localgis.web.core.dao.IncidenciasAuthenticationDAO"
+         implementation="com.localgis.web.core.dao.sqlmap.IncidenciasAuthenticationDAOImpl"/>
+	</context>
+</daoConfig>

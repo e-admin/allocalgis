@@ -1,0 +1,3 @@
+sunpkcs11.jar es una librería de gestión de claves de encriptado PKCS11 las cuales son utilizadas por el DNIe.
+La version para 64bits del SDK de JAVA no contiene esta librería por lo cual hay que copiar este jar en la siguiente dirección:
+%JRE_HOME%/lib/ext/

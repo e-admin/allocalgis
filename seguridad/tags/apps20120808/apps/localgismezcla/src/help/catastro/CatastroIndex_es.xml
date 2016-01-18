@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+
+<index version="1.0">
+    <indexitem text="Contenidos">
+    
+        <indexitem text="Gestión de Expedientes">
+	    	<indexitem text="Inicio Gestión de Expedientes" target="GestionExpedientes"/>
+            <indexitem text="Búsqueda de Expedientes">
+                <indexitem text="Búsqueda" target="BusquedaExpedientes"/>
+            </indexitem>
+            <indexitem text="Nuevo Expediente">
+                <indexitem text="Nuevo" target="NuevoExpediente"/>
+            </indexitem>
+            <indexitem text="Asociar Parcelas al Expediente">
+                <indexitem text="Asociar" target="AsociarParcelas"/>
+            </indexitem>
+            <indexitem text="Gestión de Expedientes">
+                <indexitem text="Gestión" target="GestionDeExpedientes"/>
+            </indexitem>
+            <indexitem text="Modificar Datos de Expediente">
+                <indexitem text="Modicar Datos" target="ModificarDatosExpediente"/>
+            </indexitem>
+            <indexitem text="Editar Información Catastral">
+                <indexitem text="Editar Inf. Catastral" target="EditarInformacionCatastral"/>
+            </indexitem>
+            <indexitem text="Exportar Expediente">
+                <indexitem text="Exportar" target="ExportarExpediente"/>
+            </indexitem>
+            <indexitem text="Asocirar Información Gráfica al Expediente">
+                <indexitem text="Asociar Inf. Gráfica" target="AsociarInformacionGrafica"/>
+            </indexitem>
+            <indexitem text="Ver Estado Expediente">
+                <indexitem text="Ver Estado" target="VerEstadoExpediente"/>
+            </indexitem>
+        </indexitem>
+    
+    
+        <indexitem text="Edición">
+	    	<indexitem text="Modificación de la información catastral" target="introduccion"/>
+	    	
+	        <indexitem text="Finca">
+	            <indexitem text="Más datos de la Finca" target="masDatosFinca"/>
+	            <indexitem text="Nueva Finca" target="NuevaFinca"/>
+	            <indexitem text="Eliminar Finca" target="EliminarFinca"/>
+	        </indexitem>
+	                      
+	       <indexitem text="Bien Inmueble">
+	            <indexitem text="Más datos del Bien Inmueble" target="MasDatosBI"/>
+	            <indexitem text="Nuevo Bien Inmueble" target="NuevoBI"/>
+	            <indexitem text="Eliminar Bien Inmueble" target="EliminarBI"/>
+	            <indexitem text="Definir representante" target="DefinirRepresentante"/>
+	        </indexitem>
+	        
+	        <indexitem text="Construcciones">
+	            <indexitem text="Más Datos del Local" target="MasDatosLocales"/>
+	            <indexitem text="Nuevo Local" target="NuevoLocal"/>
+	        	<indexitem text="Nuevo Local Común" target="NuevoLocalComun"/>
+	        	<indexitem text="Eliminar Local" target="EliminarLocal"/>
+	        </indexitem>
+	        
+	        <indexitem text="Cultivos">
+	            <indexitem text="Nuevo Cultivo" target="NuevoCultivo"/>
+	        	<indexitem text="Nuevo Cultivo Común" target="NuevoCultivoComun"/>
+	        	<indexitem text="Eliminar Cultivo" target="EliminarCultivo"/>
+	        </indexitem>
+	        
+	        <indexitem text="Titulares">
+	            <indexitem text="Más Datos del Titular" target="MasDatosTitular"/>
+	        	<indexitem text="Nuevo Titular" target="NuevoTitular"/>
+	        	<indexitem text="Eliminar Titular" target="EliminarTitular"/>
+	        	<indexitem text="Comunidad de bienes" target="ComunidadBienes"/>
+	        </indexitem>
+	        
+	        <indexitem text="Suelos" target="Suelo"/>
+	        <indexitem text="Unidades Constructivas" target="UnidadConstructiva"/>
+	        <indexitem text="Reparto" target="Reparto"/>
+	</indexitem>
+	
+	<indexitem text="Exportación de expedientes">
+	    	<indexitem text="Exportación" target="Exportacion"/>
+    </indexitem>
+
+    <indexitem text="Histórico de Ficheros y Configuración">
+        <indexitem text="Histórico de Ficheros" target="HistoricoDeFicheros"/>
+        <indexitem text="Configuración" target="Configuracion"/>
+    </indexitem>
+
+    <indexitem text="herramientas de Edición">
+	        
+		<indexitem text="Herramientas de Edición. Introducción" target="introduccionHerrEdic"/>
+		<indexitem text="Panel de Herramientas de Edición" target="PanelEdicion"/>
+		<indexitem text="Gestión de Coordenadas Absolutas y Relativas" target="CoordAbsolutasRelativas"/>
+		<indexitem text="Creación de Guías de Dibujo" target="GuiasDeDibujo"/>
+		<indexitem text="Selección por Polígono" target="SeleccionarPorPoligono"/>
+		<indexitem text="Selección por Círculo" target="SeleccionPorCirculo"/>
+		<indexitem text="Tratamiento de Simetrías" target="Simetria"/>
+		<indexitem text="Girado de Elementos" target="Girado"/>
+		<indexitem text="Escalado de Elementos" target="Escalado"/>
+		<indexitem text="Recortar los Elementos del Dibujo" target="Recortar"/>
+		<indexitem text="Generación de Geometrías Paralelas" target="GeometriasParalelas"/>
+		<indexitem text="Fusión de Elementos" target="FusionElementos"/>
+		<indexitem text="División de una Entidad en Múltiples Entidades" target="DivisionElementos"/>
+		<indexitem text="Explosión de Entidades" target="ExplosionEntidades"/>
+		<indexitem text="Selección de Entidades por Tipode Geometría" target="SeleccionPorTipo"/>
+		<indexitem text="Selección de una única Entidad" target="SeleccionUnaEntidad"/>	    	
+		<indexitem text="Dibujar Círculo" target="DibujarCirculo"/>	    	
+		<indexitem text="Dibujar Arco" target="DibujarArco"/>		      
+	</indexitem>
+	
+	<indexitem text="Importadores de Información Catastral">
+		<indexitem text="Introducción" target="introduccionImpotadores"/>
+		    	
+		<indexitem text="Importadores de Información Catastral. Descripción">
+			<indexitem text="Importación de la Información del padrón Catastral" target="PadronCatastral"/>
+		        <indexitem text="Importación del Fichero FIN de Salida" target="FinSalida"/>
+		        <indexitem text="Importación del Fichero FIN de Retorno Masivo" target="FinRetorno"/>
+		        <indexitem text="Fichero de Intercambio de Información de Titularidad" target="InformacionTitularidad"/>
+		        <indexitem text="Fichero de Intercambio de Información Catastral" target="InformacionCatastral"/>
+		        <indexitem text="Fichero de Intercambio de Información Catastral de Retorno" target="InformacionRetorno"/>
+		</indexitem>	                      
+		       
+	</indexitem>
+	
+        <indexitem text="Gestor de Capas">
+        
+	    	<indexitem text="Introducción" target="introduccionGestorCapas"/>
+	    	<indexitem text="Terminología Utilizada" target="Terminologia"/>
+	    	<indexitem text="Contenidos del Gestor de Capas">
+	    		<indexitem text="Contenidos del Gestor de Capas" target="ContenidosGestorDeCapas"/>
+	    		<indexitem text="Pestaña1: Tablas">
+	    			<indexitem text="Pestaña1: Tablas" target="Pestania1Tablas"/>
+	    			<indexitem text="Forma de Utilización">
+	    				<indexitem text="Forma de Utilización" target="FormaDeUtilizacionTablas"/>
+	    				<indexitem text="Creación de una Nueva Tabla de Base de Datos" target="CreacionTabla"/>
+	    				<indexitem text="Eliminación de una Tabla de Base de Datos" target="EliminacionTabla"/>
+	    				<indexitem text="Edición de una Tabla de Base de Datos" target="EdicionTabla"/>
+	    				<indexitem text="Creación de una Nueva Columna de Base de Datos" target="CreacionColumna"/>
+	    				<indexitem text="Eliminación de una Columna de Base de Datos" target="EliminacionColumna"/>
+	    				<indexitem text="Generación de Columna de Sistema Asociada a una Columna de Base de Datos" target="GeneracionColumnaAsociada"/>
+	    			</indexitem>
+	    		</indexitem>
+	    		<indexitem text="Pestaña2: Dominios">
+				 <indexitem text="Pestaña2: Dominios" target="Pestania2Dominios"/>
+				 <indexitem text="Forma de Utilización">
+				    	<indexitem text="Forma de Utilización" target="FormaDeUtilizacionDominios"/>				    				
+				 </indexitem>
+	    		</indexitem>	
+	    		<indexitem text="Pestaña3: Capas">
+				<indexitem text="Pestaña3: Capas" target="Pestania3Capas"/>
+				<indexitem text="Forma de Utilización">
+					<indexitem text="Forma de Utilización" target="FormaDeUtilizacionCapas"/>
+					<indexitem text="Creación de una nueva Capa" target="CreacionCapa"/>
+					<indexitem text="Modificación de una capa existente" target="ModificacionCapa"/>
+					<indexitem text="Eliminación de una capa existente" target="EliminacionCapa"/>
+				</indexitem>
+	    		</indexitem>	
+	    		<indexitem text="Pestaña4: Familia de Capas">
+				<indexitem text="Pestaña4: Familia de Capas" target="Pestania4FamiliaCapas"/>
+				<indexitem text="Forma de Utilización">
+					<indexitem text="Forma de Utilización" target="FormaUtilizacionFamiliaCapas"/>
+					<indexitem text="Crear una nueva familia o categoría de capas" target="CrearNuevaFamiliaCapas"/>
+					<indexitem text="Añadir una o más capas a una familia de capas" target="AniadirCapaFamiliaCapas"/>
+					<indexitem text="Modificar el nombre de una familia de capas" target="ModificarNombreFamiliaCapas"/>
+					<indexitem text="Eliminar una capa de una layerfamily" target="EliminarCapaFamiliaCapas"/>
+					<indexitem text="Modificar el orden de las capas dentro de una familia de capas" target="ModificarOrdenFamiliaCapas"/>
+					<indexitem text="Eliminar una familia de capas existente" target="EliminarFamiliaCapas"/>
+				</indexitem>
+	    		</indexitem>	
+	    	</indexitem>
+	    	
+	</indexitem>	
+	
+    </indexitem>
+</index>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+    <gpx version="1.1"
+        creator="Marengo Route Creator"
+        xmlns="http://www.topografix.com/GPX/1/1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.topografix.com/GPX/1/1 
+        http://www.topografix.com/GPX/1/1/gpx.xsd">
+        <rte>
+            <name>RICHMNDPK</name>    
+            <rtept lat="51.44978141819847" lon="-0.29534339904785156">
+                <name>1-START</name>
+            </rtept>
+            <rtept lat="51.45373948545901" lon="-0.2574920654296875">
+                <name>2-RIGHT</name>
+            </rtept>
+            <rtept lat="51.42179772664755" lon="-0.28594493865966797">
+                <name>3-RIGHT</name>
+            </rtept>
+            <rtept lat="51.44967443864507" lon="-0.2954292297363281">
+                <name>4-END</name>
+            </rtept>
+        </rte>
+    </gpx>

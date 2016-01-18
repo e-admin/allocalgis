@@ -1,0 +1,1501 @@
+<LocalGISXmlLayer>
+  <Tables>
+    <table>
+      <name>eiel_c_municipios</name>
+      <idTabla>10152</idTabla>
+      <description>eiel_c_municipios</description>
+      <columns/>
+      <geometryType>11</geometryType>
+      <external>0</external>
+    </table>
+  </Tables>
+  <ColumnsDB>
+    <entry>
+      <style>eiel_c_municipios</style>
+      <htDescripcion>
+        <entry>
+          <int>1</int>
+          <columnDB>
+            <name>id</name>
+            <type>numeric</type>
+            <length>8</length>
+            <precission>0</precission>
+            <isNotNull>true</isNotNull>
+            <isUnique>true</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_municipios</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>2</int>
+          <columnDB>
+            <name>id_municipio</name>
+            <type>numeric</type>
+            <length>5</length>
+            <precission>0</precission>
+            <isNotNull>true</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_municipios</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>3</int>
+          <columnDB>
+            <name>GEOMETRY</name>
+            <type>geometry</type>
+            <length>0</length>
+            <precission>0</precission>
+            <isNotNull>false</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_municipios</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>4</int>
+          <columnDB>
+            <name>codprov</name>
+            <type>varchar</type>
+            <length>2</length>
+            <precission>0</precission>
+            <isNotNull>true</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_municipios</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>5</int>
+          <columnDB>
+            <name>nombre_oficial</name>
+            <type>varchar</type>
+            <length>50</length>
+            <precission>0</precission>
+            <isNotNull>false</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_municipios</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>6</int>
+          <columnDB>
+            <name>cod_catastro</name>
+            <type>varchar</type>
+            <length>3</length>
+            <precission>0</precission>
+            <isNotNull>false</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_municipios</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>7</int>
+          <columnDB>
+            <name>codmunic</name>
+            <type>varchar</type>
+            <length>3</length>
+            <precission>0</precission>
+            <isNotNull>true</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_municipios</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>8</int>
+          <columnDB>
+            <name>uso_utm</name>
+            <type>varchar</type>
+            <length>5</length>
+            <precission>0</precission>
+            <isNotNull>false</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_municipios</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>9</int>
+          <columnDB>
+            <name>id_comarca</name>
+            <type>int4</type>
+            <length>0</length>
+            <precission>0</precission>
+            <isNotNull>false</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <tableName>eiel_c_municipios</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>10</int>
+          <columnDB>
+            <name>revision_actual</name>
+            <type>numeric</type>
+            <length>10</length>
+            <precission>0</precission>
+            <isNotNull>true</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <defaultValue>0</defaultValue>
+            <tableName>eiel_c_municipios</tableName>
+          </columnDB>
+        </entry>
+        <entry>
+          <int>11</int>
+          <columnDB>
+            <name>revision_expirada</name>
+            <type>numeric</type>
+            <length>10</length>
+            <precission>0</precission>
+            <isNotNull>false</isNotNull>
+            <isUnique>false</isUnique>
+            <isPrimary>false</isPrimary>
+            <defaultValue>9999999999</defaultValue>
+            <tableName>eiel_c_municipios</tableName>
+          </columnDB>
+        </entry>
+      </htDescripcion>
+    </entry>
+  </ColumnsDB>
+  <Domains>
+    <hDom>
+      <entry>
+        <style>10003</style>
+        <domain>
+          <idDomain>10003</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>100003</style>
+                <domainNode>
+                  <idNode>100003</idNode>
+                  <type>1</type>
+                  <hDict/>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>10003</idDomain>
+                  <patron>?5[.*]</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Texto de 5 caracteres no obligatorio</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>86</style>
+        <domain>
+          <idDomain>86</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>584</style>
+                <domainNode>
+                  <idNode>584</idNode>
+                  <type>1</type>
+                  <hDict/>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>86</idDomain>
+                  <patron>3[.*]</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Texto de 3 caracteres</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>10002</style>
+        <domain>
+          <idDomain>10002</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>100002</style>
+                <domainNode>
+                  <idNode>100002</idNode>
+                  <type>1</type>
+                  <hDict/>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>10002</idDomain>
+                  <patron>?3[.*]</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Texto de 3 caracteres no obligatorio</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>85</style>
+        <domain>
+          <idDomain>85</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>583</style>
+                <domainNode>
+                  <idNode>583</idNode>
+                  <type>1</type>
+                  <hDict/>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>85</idDomain>
+                  <patron>2[.*]</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Texto de 2 caracteres</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>10037</style>
+        <domain>
+          <idDomain>10037</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>100037</style>
+                <domainNode>
+                  <idNode>100037</idNode>
+                  <type>3</type>
+                  <hDict/>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>10037</idDomain>
+                  <patron>?[0:9999999999]</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Numero entre 0-9999999999 no obligatorio
+</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>93</style>
+        <domain>
+          <idDomain>93</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>591</style>
+                <domainNode>
+                  <idNode>591</idNode>
+                  <type>1</type>
+                  <hDict/>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>93</idDomain>
+                  <patron>50[.*]</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Texto de 50 caracteres</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>10069</style>
+        <domain>
+          <idDomain>10069</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>957</style>
+                <domainNode>
+                  <idNode>957</idNode>
+                  <idDes>597</idDes>
+                  <type>8</type>
+                  <hDict>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Municipio obligatorio</style>
+                    </entry>
+                  </hDict>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>10069</idDomain>
+                  <patron>ENV_VAR:geopista.DefaultCityId</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Municipio obligatorio</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+      <entry>
+        <style>10067</style>
+        <domain>
+          <idDomain>10067</idDomain>
+          <listaNodes>
+            <hDom>
+              <entry>
+                <style>955</style>
+                <domainNode>
+                  <idNode>955</idNode>
+                  <idDes>595</idDes>
+                  <type>8</type>
+                  <hDict>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Autonumérico incremental</style>
+                    </entry>
+                  </hDict>
+                  <lHijos>
+                    <hDom/>
+                  </lHijos>
+                  <idDomain>10067</idDomain>
+                  <patron>ID</patron>
+                  <settedLocale>false</settedLocale>
+                  <forceDelete>false</forceDelete>
+                </domainNode>
+              </entry>
+            </hDom>
+          </listaNodes>
+          <name>Autonumérico incremental</name>
+          <idCategory>10</idCategory>
+        </domain>
+      </entry>
+    </hDom>
+    <hDomByName>
+      <entry>
+        <style>Texto de 2 caracteres</style>
+        <domain reference="../../../hDom/entry[4]/domain"/>
+      </entry>
+      <entry>
+        <style>Texto de 5 caracteres no obligatorio</style>
+        <domain reference="../../../hDom/entry/domain"/>
+      </entry>
+      <entry>
+        <style>Texto de 3 caracteres</style>
+        <domain reference="../../../hDom/entry[2]/domain"/>
+      </entry>
+      <entry>
+        <style>Texto de 3 caracteres no obligatorio</style>
+        <domain reference="../../../hDom/entry[3]/domain"/>
+      </entry>
+      <entry>
+        <style>Numero entre 0-9999999999 no obligatorio
+</style>
+        <domain reference="../../../hDom/entry[5]/domain"/>
+      </entry>
+      <entry>
+        <style>Autonumérico incremental</style>
+        <domain reference="../../../hDom/entry[8]/domain"/>
+      </entry>
+      <entry>
+        <style>Texto de 50 caracteres</style>
+        <domain reference="../../../hDom/entry[6]/domain"/>
+      </entry>
+      <entry>
+        <style>Municipio obligatorio</style>
+        <domain reference="../../../hDom/entry[7]/domain"/>
+      </entry>
+    </hDomByName>
+    <vectSorted>
+      <style>10067</style>
+      <style>10069</style>
+      <style>10037</style>
+      <style>85</style>
+      <style>86</style>
+      <style>10002</style>
+      <style>10003</style>
+      <style>93</style>
+    </vectSorted>
+  </Domains>
+  <Layer>
+    <layer>
+      <layerManager>
+        <undoableEditReceiver>
+          <undoManager>
+            <hasBeenDone>true</hasBeenDone>
+            <alive>true</alive>
+            <inProgress>true</inProgress>
+            <edits/>
+            <indexOfNextAdd>0</indexOfNextAdd>
+            <limit>100</limit>
+          </undoManager>
+          <newUndoableEdits/>
+          <transactions>0</transactions>
+          <nothingToUndoReported>false</nothingToUndoReported>
+          <irreversibleChangeReported>false</irreversibleChangeReported>
+          <undoManagerCouldUndoAtStart>false</undoManagerCouldUndoAtStart>
+          <listeners/>
+          <aborted>false</aborted>
+        </undoableEditReceiver>
+        <coordinateSystem class="com.vividsolutions.jump.coordsys.CoordinateSystem$1">
+          <name>Unspecified</name>
+          <epsgCode>0</epsgCode>
+          <zone>0</zone>
+        </coordinateSystem>
+        <categories/>
+        <layerReferencesToDispose/>
+        <firingEvents>false</firingEvents>
+        <layerListeners>
+          <com.vividsolutions.jump.workbench.model.Layer_-4>
+            <outer-class reference="../../../.."/>
+          </com.vividsolutions.jump.workbench.model.Layer_-4>
+        </layerListeners>
+        <firstColors class="java.util.AbstractList$Itr">
+          <cursor>0</cursor>
+          <lastRet>-1</lastRet>
+          <expectedModCount>17</expectedModCount>
+          <outer-class class="LayerFamilies">
+            <awt-color>
+              <red>0</red>
+              <green>180</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>180</red>
+              <green>0</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>0</red>
+              <green>180</green>
+              <blue>180</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>152</red>
+              <green>78</green>
+              <blue>163</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>255</red>
+              <green>127</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>255</red>
+              <green>255</green>
+              <blue>51</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>255</red>
+              <green>192</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>204</red>
+              <green>204</green>
+              <blue>255</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>255</red>
+              <green>204</green>
+              <blue>204</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>204</red>
+              <green>255</green>
+              <blue>204</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>166</red>
+              <green>86</green>
+              <blue>40</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>247</red>
+              <green>129</green>
+              <blue>191</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>0</red>
+              <green>255</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>255</red>
+              <green>0</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>0</red>
+              <green>0</green>
+              <blue>255</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>0</red>
+              <green>255</green>
+              <blue>255</blue>
+              <alpha>255</alpha>
+            </awt-color>
+            <awt-color>
+              <red>255</red>
+              <green>0</green>
+              <blue>255</blue>
+              <alpha>255</alpha>
+            </awt-color>
+          </outer-class>
+        </firstColors>
+        <blackboard>
+          <properties/>
+        </blackboard>
+        <orderLayers/>
+      </layerManager>
+      <name>227492</name>
+      <visible>true</visible>
+      <scaleDependentRenderingEnabled>false</scaleDependentRenderingEnabled>
+      <description>TTMM</description>
+      <drawingLast>false</drawingLast>
+      <styles/>
+      <synchronizingLineColor>true</synchronizingLineColor>
+      <editable>true</editable>
+      <dinamica>false</dinamica>
+      <versionable>true</versionable>
+      <validator>com.geopista.protocol.VersionValidator</validator>
+      <layerListener class="com.vividsolutions.jump.workbench.model.Layer$4" reference="../layerManager/layerListeners/com.vividsolutions.jump.workbench.model.Layer_-4"/>
+      <blackboard class="com.vividsolutions.jump.workbench.model.Layer$1">
+        <properties>
+          <entry>
+            <style>com.vividsolutions.jump.workbench.model.Layer - FIRING APPEARANCE CHANGED ON ATTRIBUTE CHANGE</style>
+            <boolean>true</boolean>
+          </entry>
+        </properties>
+        <outer-class reference="../.."/>
+      </blackboard>
+      <featureCollectionModified>false</featureCollectionModified>
+    </layer>
+    <idLayer>12174</idLayer>
+    <htNombre>
+      <entry>
+        <style>es_ES</style>
+        <style>Municipios EIEL</style>
+      </entry>
+      <entry>
+        <style>gl_ES</style>
+        <style>[gl]Municipios EIEL</style>
+      </entry>
+      <entry>
+        <style>va_ES</style>
+        <style>[va]Municipios EIEL</style>
+      </entry>
+      <entry>
+        <style>eu_ES</style>
+        <style>[eu]Municipios EIEL</style>
+      </entry>
+      <entry>
+        <style>ca_ES</style>
+        <style>[cat]Municipios EIEL</style>
+      </entry>
+    </htNombre>
+    <acl>
+      <id>147</id>
+      <nombre>Municipios EIEL</nombre>
+      <permisos>
+        <hPermisos/>
+        <hPermisosSorted/>
+      </permisos>
+    </acl>
+    <idEntidadLayer>0</idEntidadLayer>
+  </Layer>
+  <Attributes>
+    <attribute>
+      <column>
+        <Name>GEOMETRY</Name>
+        <idColumn>101400</idColumn>
+        <table>
+          <name>eiel_c_municipios</name>
+          <idTabla>10152</idTabla>
+          <columns>
+            <entry>
+              <style>id</style>
+              <column>
+                <Name>id</Name>
+                <idColumn>101401</idColumn>
+                <domain class="com.geopista.feature.AutoFieldDomain">
+                  <children/>
+                  <systemID>10067</systemID>
+                  <Name>Autonumérico incremental</Name>
+                  <pattern>ID</pattern>
+                  <originalPattern>ID</originalPattern>
+                  <aproxLenght>0</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>false</nullable>
+                  <type>ID</type>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>102126</systemID>
+                  <idAlias>227494</idAlias>
+                  <idLayer>12174</idLayer>
+                  <position>2</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>id</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>codprov</style>
+              <column>
+                <Name>codprov</Name>
+                <idColumn>101403</idColumn>
+                <domain class="com.geopista.feature.StringDomain">
+                  <children/>
+                  <systemID>85</systemID>
+                  <Name>Texto de 2 caracteres</Name>
+                  <pattern>2[.*]</pattern>
+                  <originalPattern>2[.*]</originalPattern>
+                  <aproxLenght>10</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>false</nullable>
+                  <patternReg>
+                    <pattern>.*</pattern>
+                    <flags>0</flags>
+                  </patternReg>
+                  <maxLength>2</maxLength>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>102128</systemID>
+                  <idAlias>227496</idAlias>
+                  <idLayer>12174</idLayer>
+                  <position>4</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Código provincia</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Código provincia</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Código provincia</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Código provincia</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Código provincia</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>codmunic</style>
+              <column>
+                <Name>codmunic</Name>
+                <idColumn>101406</idColumn>
+                <domain class="com.geopista.feature.StringDomain">
+                  <children/>
+                  <systemID>86</systemID>
+                  <Name>Texto de 3 caracteres</Name>
+                  <pattern>3[.*]</pattern>
+                  <originalPattern>3[.*]</originalPattern>
+                  <aproxLenght>10</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>false</nullable>
+                  <patternReg>
+                    <pattern>.*</pattern>
+                    <flags>0</flags>
+                  </patternReg>
+                  <maxLength>3</maxLength>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>102131</systemID>
+                  <idAlias>227499</idAlias>
+                  <idLayer>12174</idLayer>
+                  <position>7</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Código Municipio</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Código Municipio</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Código Municipio</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Código Municipio</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Código Municipio</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>uso_utm</style>
+              <column>
+                <Name>uso_utm</Name>
+                <idColumn>101407</idColumn>
+                <domain class="com.geopista.feature.StringDomain">
+                  <children/>
+                  <systemID>10003</systemID>
+                  <Name>Texto de 5 caracteres no obligatorio</Name>
+                  <pattern>5[.*]</pattern>
+                  <originalPattern>?5[.*]</originalPattern>
+                  <aproxLenght>10</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>true</nullable>
+                  <patternReg>
+                    <pattern>.*</pattern>
+                    <flags>0</flags>
+                  </patternReg>
+                  <maxLength>5</maxLength>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>102132</systemID>
+                  <idAlias>227500</idAlias>
+                  <idLayer>12174</idLayer>
+                  <position>8</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Huso UTM</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Huso UTM</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Huso UTM</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Huso UTM</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Huso UTM</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>GEOMETRY</style>
+              <column reference="../../../.."/>
+            </entry>
+            <entry>
+              <style>cod_catastro</style>
+              <column>
+                <Name>cod_catastro</Name>
+                <idColumn>101405</idColumn>
+                <domain class="com.geopista.feature.StringDomain">
+                  <children/>
+                  <systemID>10002</systemID>
+                  <Name>Texto de 3 caracteres no obligatorio</Name>
+                  <pattern>3[.*]</pattern>
+                  <originalPattern>?3[.*]</originalPattern>
+                  <aproxLenght>10</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>true</nullable>
+                  <patternReg>
+                    <pattern>.*</pattern>
+                    <flags>0</flags>
+                  </patternReg>
+                  <maxLength>3</maxLength>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>102130</systemID>
+                  <idAlias>227498</idAlias>
+                  <idLayer>12174</idLayer>
+                  <position>6</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Código catastro</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Código catastro</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Código catastro</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Código catastro</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Código catastro</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>nombre_oficial</style>
+              <column>
+                <Name>nombre_oficial</Name>
+                <idColumn>101404</idColumn>
+                <domain class="com.geopista.feature.StringDomain">
+                  <children/>
+                  <systemID>93</systemID>
+                  <Name>Texto de 50 caracteres</Name>
+                  <pattern>50[.*]</pattern>
+                  <originalPattern>50[.*]</originalPattern>
+                  <aproxLenght>10</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>false</nullable>
+                  <patternReg>
+                    <pattern>.*</pattern>
+                    <flags>0</flags>
+                  </patternReg>
+                  <maxLength>50</maxLength>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>102129</systemID>
+                  <idAlias>227497</idAlias>
+                  <idLayer>12174</idLayer>
+                  <position>5</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Nombre Oficial</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Nombre Oficial</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Nombre Oficial</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Nombre Oficial</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Nombre Oficial</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>id_municipio</style>
+              <column>
+                <Name>id_municipio</Name>
+                <idColumn>101402</idColumn>
+                <domain class="com.geopista.feature.AutoFieldDomain">
+                  <children/>
+                  <systemID>10069</systemID>
+                  <Name>Municipio obligatorio</Name>
+                  <pattern>ENV_VAR:geopista.DefaultCityId</pattern>
+                  <originalPattern>ENV_VAR:geopista.DefaultCityId</originalPattern>
+                  <format></format>
+                  <aproxLenght>8</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>false</nullable>
+                  <type>ENV_VAR</type>
+                  <expression>geopista.DefaultCityId</expression>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>102127</systemID>
+                  <idAlias>227495</idAlias>
+                  <idLayer>12174</idLayer>
+                  <position>3</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]IdMunicip</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>IdMunicip</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]IdMunicip</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]IdMunicip</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]IdMunicip</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>revision_actual</style>
+              <column>
+                <Name>revision_actual</Name>
+                <idColumn>101491</idColumn>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>102215</systemID>
+                  <idAlias>227588</idAlias>
+                  <idLayer>12174</idLayer>
+                  <position>10</position>
+                  <editable>false</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Revisión actual</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Revisión actual</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Revisión actual</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Revisión actual</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Revisión actual</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+            <entry>
+              <style>id_comarca</style>
+              <column>
+                <Name>id_comarca</Name>
+                <idColumn>101408</idColumn>
+                <domain class="com.geopista.feature.NumberDomain">
+                  <children/>
+                  <systemID>10037</systemID>
+                  <Name>Numero entre 0-9999999999 no obligatorio
+</Name>
+                  <pattern>[0:9999999999]</pattern>
+                  <originalPattern>?[0:9999999999]</originalPattern>
+                  <format></format>
+                  <aproxLenght>13</aproxLenght>
+                  <permissionLevel>1</permissionLevel>
+                  <nullable>true</nullable>
+                  <minValue>0.0</minValue>
+                  <maxValue>9.999999999E9</maxValue>
+                </domain>
+                <table reference="../../../.."/>
+                <level>0</level>
+                <attribute>
+                  <column reference="../.."/>
+                  <accessType>R/W</accessType>
+                  <systemID>102133</systemID>
+                  <idAlias>227501</idAlias>
+                  <idLayer>12174</idLayer>
+                  <position>9</position>
+                  <editable>true</editable>
+                  <htTraducciones>
+                    <entry>
+                      <style>gl_ES</style>
+                      <style>[gl]Id Comarca</style>
+                    </entry>
+                    <entry>
+                      <style>es_ES</style>
+                      <style>Id Comarca</style>
+                    </entry>
+                    <entry>
+                      <style>va_ES</style>
+                      <style>[va]Id Comarca</style>
+                    </entry>
+                    <entry>
+                      <style>eu_ES</style>
+                      <style>[eu]Id Comarca</style>
+                    </entry>
+                    <entry>
+                      <style>ca_ES</style>
+                      <style>[cat]Id Comarca</style>
+                    </entry>
+                  </htTraducciones>
+                </attribute>
+              </column>
+            </entry>
+          </columns>
+          <geometryType>0</geometryType>
+          <external>0</external>
+        </table>
+        <level>0</level>
+        <attribute>
+          <column reference="../.."/>
+          <accessType>R/W</accessType>
+          <systemID>102125</systemID>
+          <idAlias>227493</idAlias>
+          <idLayer>12174</idLayer>
+          <position>1</position>
+          <editable>true</editable>
+          <htTraducciones>
+            <entry>
+              <style>gl_ES</style>
+              <style>[gl]Geometria</style>
+            </entry>
+            <entry>
+              <style>es_ES</style>
+              <style>Geometria</style>
+            </entry>
+            <entry>
+              <style>va_ES</style>
+              <style>[va]Geometria</style>
+            </entry>
+            <entry>
+              <style>eu_ES</style>
+              <style>[eu]Geometria</style>
+            </entry>
+            <entry>
+              <style>ca_ES</style>
+              <style>[cat]Geometria</style>
+            </entry>
+          </htTraducciones>
+        </attribute>
+      </column>
+      <accessType>R/W</accessType>
+      <systemID>102125</systemID>
+      <idAlias>227493</idAlias>
+      <idLayer>12174</idLayer>
+      <position>1</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Geometria</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Geometria</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Geometria</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Geometria</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Geometria</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry/column"/>
+      <accessType>R/W</accessType>
+      <systemID>102126</systemID>
+      <idAlias>227494</idAlias>
+      <idLayer>12174</idLayer>
+      <position>2</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>es_ES</style>
+          <style>id</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[8]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>102127</systemID>
+      <idAlias>227495</idAlias>
+      <idLayer>12174</idLayer>
+      <position>3</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]IdMunicip</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>IdMunicip</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]IdMunicip</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]IdMunicip</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]IdMunicip</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[2]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>102128</systemID>
+      <idAlias>227496</idAlias>
+      <idLayer>12174</idLayer>
+      <position>4</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Código provincia</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Código provincia</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Código provincia</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Código provincia</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Código provincia</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[7]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>102129</systemID>
+      <idAlias>227497</idAlias>
+      <idLayer>12174</idLayer>
+      <position>5</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Nombre Oficial</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Nombre Oficial</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Nombre Oficial</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Nombre Oficial</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Nombre Oficial</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[6]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>102130</systemID>
+      <idAlias>227498</idAlias>
+      <idLayer>12174</idLayer>
+      <position>6</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Código catastro</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Código catastro</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Código catastro</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Código catastro</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Código catastro</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[3]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>102131</systemID>
+      <idAlias>227499</idAlias>
+      <idLayer>12174</idLayer>
+      <position>7</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Código Municipio</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Código Municipio</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Código Municipio</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Código Municipio</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Código Municipio</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[4]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>102132</systemID>
+      <idAlias>227500</idAlias>
+      <idLayer>12174</idLayer>
+      <position>8</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Huso UTM</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Huso UTM</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Huso UTM</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Huso UTM</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Huso UTM</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[10]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>102133</systemID>
+      <idAlias>227501</idAlias>
+      <idLayer>12174</idLayer>
+      <position>9</position>
+      <editable>true</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Id Comarca</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Id Comarca</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Id Comarca</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Id Comarca</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Id Comarca</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+    <attribute>
+      <column reference="../../attribute/column/table/columns/entry[9]/column"/>
+      <accessType>R/W</accessType>
+      <systemID>102215</systemID>
+      <idAlias>227588</idAlias>
+      <idLayer>12174</idLayer>
+      <position>10</position>
+      <editable>false</editable>
+      <htTraducciones>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]Revisión actual</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>Revisión actual</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]Revisión actual</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]Revisión actual</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]Revisión actual</style>
+        </entry>
+      </htTraducciones>
+    </attribute>
+  </Attributes>
+  <Queries>
+    <entry>
+      <int>1</int>
+      <query>
+        <idQuery>10227</idQuery>
+        <tipoDatabase>1</tipoDatabase>
+        <idLayer>12174</idLayer>
+        <selectQuery>SELECT transform(&quot;eiel_c_municipios&quot;.&quot;GEOMETRY&quot; , ?T) as &quot;GEOMETRY&quot;, &quot;eiel_c_municipios&quot;.&quot;id&quot;, &quot;eiel_c_municipios&quot;.&quot;id_municipio&quot;,&quot;eiel_c_municipios&quot;.&quot;codprov&quot;,&quot;eiel_c_municipios&quot;.&quot;nombre_oficial&quot;,&quot;eiel_c_municipios&quot;.&quot;cod_catastro&quot;,&quot;eiel_c_municipios&quot;.&quot;codmunic&quot;,&quot;eiel_c_municipios&quot;.&quot;uso_utm&quot;,&quot;eiel_c_municipios&quot;.&quot;id_comarca&quot;  FROM &quot;eiel_c_municipios&quot; WHERE &quot;eiel_c_municipios&quot;.&quot;id_municipio&quot; in (?M)</selectQuery>
+      </query>
+    </entry>
+  </Queries>
+  <LayerFamilies>
+    <layerFamilyTable>
+      <layerFamily>
+        <layerables/>
+        <systemLayerFamily>false</systemLayerFamily>
+        <systemId>340</systemId>
+        <description>227477</description>
+      </layerFamily>
+      <htNombre>
+        <entry>
+          <style>gl_ES</style>
+          <style>[gl]EIEL OTRAS CAPAS</style>
+        </entry>
+        <entry>
+          <style>es_ES</style>
+          <style>EIEL OTRAS CAPAS</style>
+        </entry>
+        <entry>
+          <style>va_ES</style>
+          <style>[va]EIEL OTRAS CAPAS</style>
+        </entry>
+        <entry>
+          <style>eu_ES</style>
+          <style>[eu]EIEL OTRAS CAPAS</style>
+        </entry>
+        <entry>
+          <style>ca_ES</style>
+          <style>[cat]EIEL OTRAS CAPAS</style>
+        </entry>
+      </htNombre>
+      <htDescripcion/>
+      <hmPosLayers/>
+    </layerFamilyTable>
+  </LayerFamilies>
+  <Styles>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;&#xd;
+&lt;StyledLayerDescriptor version=&quot;1.0.0&quot; xmlns=&quot;http://www.opengis.net/sld&quot; xmlns:gml=&quot;http://www.opengis.net/gml&quot; xmlns:ogc=&quot;http://www.opengis.net/ogc&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&#xd;
+&lt;NamedLayer&gt;&lt;Name&gt;TTMM&lt;/Name&gt;&lt;UserStyle&gt;&lt;Name&gt;TTMM:_:EIEL MUNICIPIOS&lt;/Name&gt;&lt;Title&gt;TTMM:_:EIEL MUNICIPIOS&lt;/Title&gt;&lt;Abstract&gt;TTMM:_:EIEL MUNICIPIOS&lt;/Abstract&gt;&lt;FeatureTypeStyle&gt;&lt;Name&gt;TTMM&lt;/Name&gt;&lt;Rule&gt;&lt;Name&gt;default&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;MinScaleDenominator&gt;0.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;25000.0&lt;/MaxScaleDenominator&gt;&lt;PolygonSymbolizer&gt;&lt;Fill&gt;&lt;CssParameter name=&apos;fill-opacity&apos;&gt;0.1&lt;/CssParameter&gt;&lt;CssParameter name=&apos;fill&apos;&gt;#ffffcc&lt;/CssParameter&gt;&lt;/Fill&gt;&lt;Stroke&gt;&lt;CssParameter name=&apos;stroke&apos;&gt;#000000&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-linejoin&apos;&gt;round&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-opacity&apos;&gt;1.0&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-linecap&apos;&gt;round&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-width&apos;&gt;&lt;ogc:Literal&gt;1.0&lt;/ogc:Literal&gt;&lt;/CssParameter&gt;&lt;/Stroke&gt;&lt;/PolygonSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Hasta 250.000&lt;/Name&gt;&lt;MinScaleDenominator&gt;25001.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;250000.0&lt;/MaxScaleDenominator&gt;&lt;PolygonSymbolizer&gt;&lt;Fill&gt;&lt;CssParameter name=&apos;fill-opacity&apos;&gt;0.6&lt;/CssParameter&gt;&lt;CssParameter name=&apos;fill&apos;&gt;#f8fbc8&lt;/CssParameter&gt;&lt;/Fill&gt;&lt;Stroke&gt;&lt;CssParameter name=&apos;stroke&apos;&gt;#000000&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-linejoin&apos;&gt;round&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-opacity&apos;&gt;1.0&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-linecap&apos;&gt;round&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-width&apos;&gt;&lt;ogc:Literal&gt;1&lt;/ogc:Literal&gt;&lt;/CssParameter&gt;&lt;/Stroke&gt;&lt;/PolygonSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Desde 250.000 hasta 1.100.000&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;MinScaleDenominator&gt;250001.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;1100000.0&lt;/MaxScaleDenominator&gt;&lt;PolygonSymbolizer&gt;&lt;Fill&gt;&lt;CssParameter name=&apos;fill-opacity&apos;&gt;0.25&lt;/CssParameter&gt;&lt;CssParameter name=&apos;fill&apos;&gt;#ffffff&lt;/CssParameter&gt;&lt;/Fill&gt;&lt;Stroke&gt;&lt;CssParameter name=&apos;stroke&apos;&gt;#666666&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-linejoin&apos;&gt;mitre&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-opacity&apos;&gt;1.0&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-linecap&apos;&gt;butt&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-width&apos;&gt;&lt;ogc:Literal&gt;1.0&lt;/ogc:Literal&gt;&lt;/CssParameter&gt;&lt;/Stroke&gt;&lt;/PolygonSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Revision expirada Temporal Textos&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;ogc:Filter xmlns:ogc=&apos;http://www.opengis.net/ogc&apos;&gt;&lt;ogc:PropertyIsEqualTo&gt;&lt;ogc:PropertyName&gt;Revision Expirada&lt;/ogc:PropertyName&gt;&lt;ogc:Literal&gt;9899999999&lt;/ogc:Literal&gt;&lt;/ogc:PropertyIsEqualTo&gt;&lt;/ogc:Filter&gt;
+&lt;MinScaleDenominator&gt;0.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;25000.0&lt;/MaxScaleDenominator&gt;&lt;TextSymbolizer&gt;&lt;Label&gt;Elemento Temporal&lt;/Label&gt;&lt;Font&gt;&lt;CssParameter name=&apos;font-family&apos;&gt;Agency FB&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-color&apos;&gt;#6666ff&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-weight&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-size&apos;&gt;18.0&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-style&apos;&gt;normal&lt;/CssParameter&gt;&lt;/Font&gt;&lt;LabelPlacement&gt;&lt;PointPlacement&gt;&lt;AnchorPoint&gt;&lt;AnchorPointX&gt;0.0&lt;/AnchorPointX&gt;&lt;AnchorPointY&gt;0.0&lt;/AnchorPointY&gt;&lt;/AnchorPoint&gt;&lt;Displacement&gt;&lt;DisplacementX&gt;0.0&lt;/DisplacementX&gt;&lt;DisplacementY&gt;0.0&lt;/DisplacementY&gt;&lt;/Displacement&gt;&lt;Rotation&gt;0.0&lt;/Rotation&gt;&lt;/PointPlacement&gt;&lt;/LabelPlacement&gt;&lt;/TextSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Revision expirada Publicable Textos&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;ogc:Filter xmlns:ogc=&apos;http://www.opengis.net/ogc&apos;&gt;&lt;ogc:PropertyIsEqualTo&gt;&lt;ogc:PropertyName&gt;Revision Expirada&lt;/ogc:PropertyName&gt;&lt;ogc:Literal&gt;9799999999&lt;/ogc:Literal&gt;&lt;/ogc:PropertyIsEqualTo&gt;&lt;/ogc:Filter&gt;
+&lt;MinScaleDenominator&gt;0.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;25000.0&lt;/MaxScaleDenominator&gt;&lt;TextSymbolizer&gt;&lt;Label&gt;Elemento Publicable&lt;/Label&gt;&lt;Font&gt;&lt;CssParameter name=&apos;font-family&apos;&gt;Agency FB&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-color&apos;&gt;#6666ff&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-weight&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-size&apos;&gt;18.0&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-style&apos;&gt;normal&lt;/CssParameter&gt;&lt;/Font&gt;&lt;LabelPlacement&gt;&lt;PointPlacement&gt;&lt;AnchorPoint&gt;&lt;AnchorPointX&gt;0.0&lt;/AnchorPointX&gt;&lt;AnchorPointY&gt;0.0&lt;/AnchorPointY&gt;&lt;/AnchorPoint&gt;&lt;Displacement&gt;&lt;DisplacementX&gt;0.0&lt;/DisplacementX&gt;&lt;DisplacementY&gt;0.0&lt;/DisplacementY&gt;&lt;/Displacement&gt;&lt;Rotation&gt;0.0&lt;/Rotation&gt;&lt;/PointPlacement&gt;&lt;/LabelPlacement&gt;&lt;/TextSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Revision expirada Borrable Textos&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;ogc:Filter xmlns:ogc=&apos;http://www.opengis.net/ogc&apos;&gt;&lt;ogc:PropertyIsEqualTo&gt;&lt;ogc:PropertyName&gt;Revision Expirada&lt;/ogc:PropertyName&gt;&lt;ogc:Literal&gt;9599999999&lt;/ogc:Literal&gt;&lt;/ogc:PropertyIsEqualTo&gt;&lt;/ogc:Filter&gt;
+&lt;MinScaleDenominator&gt;0.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;25000.0&lt;/MaxScaleDenominator&gt;&lt;TextSymbolizer&gt;&lt;Label&gt;Elemento Borrable&lt;/Label&gt;&lt;Font&gt;&lt;CssParameter name=&apos;font-family&apos;&gt;Agency FB&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-color&apos;&gt;#ff0000&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-weight&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-size&apos;&gt;18.0&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-style&apos;&gt;normal&lt;/CssParameter&gt;&lt;/Font&gt;&lt;LabelPlacement&gt;&lt;PointPlacement&gt;&lt;AnchorPoint&gt;&lt;AnchorPointX&gt;0.0&lt;/AnchorPointX&gt;&lt;AnchorPointY&gt;0.0&lt;/AnchorPointY&gt;&lt;/AnchorPoint&gt;&lt;Displacement&gt;&lt;DisplacementX&gt;0.0&lt;/DisplacementX&gt;&lt;DisplacementY&gt;0.0&lt;/DisplacementY&gt;&lt;/Displacement&gt;&lt;Rotation&gt;0.0&lt;/Rotation&gt;&lt;/PointPlacement&gt;&lt;/LabelPlacement&gt;&lt;/TextSymbolizer&gt;&lt;/Rule&gt;&lt;/FeatureTypeStyle&gt;&lt;/UserStyle&gt;&lt;UserStyle&gt;&lt;Name&gt;TTMM:_:default:TTMM&lt;/Name&gt;&lt;Title&gt;TTMM:_:default:TTMM&lt;/Title&gt;&lt;Abstract&gt;TTMM:_:default:TTMM&lt;/Abstract&gt;&lt;FeatureTypeStyle&gt;&lt;Name&gt;TTMM&lt;/Name&gt;&lt;Rule&gt;&lt;Name&gt;Hasta 250.000&lt;/Name&gt;&lt;MinScaleDenominator&gt;25000.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;250000.0&lt;/MaxScaleDenominator&gt;&lt;PolygonSymbolizer&gt;&lt;Fill&gt;&lt;CssParameter name=&apos;fill-opacity&apos;&gt;0.85&lt;/CssParameter&gt;&lt;CssParameter name=&apos;fill&apos;&gt;#f8fbc8&lt;/CssParameter&gt;&lt;/Fill&gt;&lt;Stroke&gt;&lt;CssParameter name=&apos;stroke&apos;&gt;#000000&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-linejoin&apos;&gt;round&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-opacity&apos;&gt;1.0&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-linecap&apos;&gt;round&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-width&apos;&gt;&lt;ogc:Literal&gt;1&lt;/ogc:Literal&gt;&lt;/CssParameter&gt;&lt;/Stroke&gt;&lt;/PolygonSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Desde 250.000 hasta 1.100.000&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;MinScaleDenominator&gt;250001.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;1100000.0&lt;/MaxScaleDenominator&gt;&lt;PolygonSymbolizer&gt;&lt;Fill&gt;&lt;CssParameter name=&apos;fill-opacity&apos;&gt;0.0&lt;/CssParameter&gt;&lt;CssParameter name=&apos;fill&apos;&gt;#ffffff&lt;/CssParameter&gt;&lt;/Fill&gt;&lt;Stroke&gt;&lt;CssParameter name=&apos;stroke-linejoin&apos;&gt;mitre&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke&apos;&gt;#666666&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-opacity&apos;&gt;1.0&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-linecap&apos;&gt;butt&lt;/CssParameter&gt;&lt;CssParameter name=&apos;stroke-width&apos;&gt;&lt;ogc:Literal&gt;1.0&lt;/ogc:Literal&gt;&lt;/CssParameter&gt;&lt;/Stroke&gt;&lt;/PolygonSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Revision expirada Temporal Textos&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;ogc:Filter xmlns:ogc=&apos;http://www.opengis.net/ogc&apos;&gt;&lt;ogc:PropertyIsEqualTo&gt;&lt;ogc:PropertyName&gt;Revision Expirada&lt;/ogc:PropertyName&gt;&lt;ogc:Literal&gt;9899999999&lt;/ogc:Literal&gt;&lt;/ogc:PropertyIsEqualTo&gt;&lt;/ogc:Filter&gt;
+&lt;MinScaleDenominator&gt;0.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;25000.0&lt;/MaxScaleDenominator&gt;&lt;TextSymbolizer&gt;&lt;Label&gt;Elemento Temporal&lt;/Label&gt;&lt;Font&gt;&lt;CssParameter name=&apos;font-color&apos;&gt;#6666ff&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-family&apos;&gt;Agency FB&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-weight&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-style&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-size&apos;&gt;18.0&lt;/CssParameter&gt;&lt;/Font&gt;&lt;LabelPlacement&gt;&lt;PointPlacement&gt;&lt;AnchorPoint&gt;&lt;AnchorPointX&gt;0.0&lt;/AnchorPointX&gt;&lt;AnchorPointY&gt;0.0&lt;/AnchorPointY&gt;&lt;/AnchorPoint&gt;&lt;Displacement&gt;&lt;DisplacementX&gt;0.0&lt;/DisplacementX&gt;&lt;DisplacementY&gt;0.0&lt;/DisplacementY&gt;&lt;/Displacement&gt;&lt;Rotation&gt;0.0&lt;/Rotation&gt;&lt;/PointPlacement&gt;&lt;/LabelPlacement&gt;&lt;/TextSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Revision expirada Publicable Textos&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;ogc:Filter xmlns:ogc=&apos;http://www.opengis.net/ogc&apos;&gt;&lt;ogc:PropertyIsEqualTo&gt;&lt;ogc:PropertyName&gt;Revision Expirada&lt;/ogc:PropertyName&gt;&lt;ogc:Literal&gt;9799999999&lt;/ogc:Literal&gt;&lt;/ogc:PropertyIsEqualTo&gt;&lt;/ogc:Filter&gt;
+&lt;MinScaleDenominator&gt;0.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;25000.0&lt;/MaxScaleDenominator&gt;&lt;TextSymbolizer&gt;&lt;Label&gt;Elemento Publicable&lt;/Label&gt;&lt;Font&gt;&lt;CssParameter name=&apos;font-color&apos;&gt;#6666ff&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-family&apos;&gt;Agency FB&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-weight&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-style&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-size&apos;&gt;18.0&lt;/CssParameter&gt;&lt;/Font&gt;&lt;LabelPlacement&gt;&lt;PointPlacement&gt;&lt;AnchorPoint&gt;&lt;AnchorPointX&gt;0.0&lt;/AnchorPointX&gt;&lt;AnchorPointY&gt;0.0&lt;/AnchorPointY&gt;&lt;/AnchorPoint&gt;&lt;Displacement&gt;&lt;DisplacementX&gt;0.0&lt;/DisplacementX&gt;&lt;DisplacementY&gt;0.0&lt;/DisplacementY&gt;&lt;/Displacement&gt;&lt;Rotation&gt;0.0&lt;/Rotation&gt;&lt;/PointPlacement&gt;&lt;/LabelPlacement&gt;&lt;/TextSymbolizer&gt;&lt;/Rule&gt;&lt;Rule&gt;&lt;Name&gt;Revision expirada Borrable Textos&lt;/Name&gt;&lt;Title&gt;default&lt;/Title&gt;&lt;Abstract&gt;default&lt;/Abstract&gt;&lt;ogc:Filter xmlns:ogc=&apos;http://www.opengis.net/ogc&apos;&gt;&lt;ogc:PropertyIsEqualTo&gt;&lt;ogc:PropertyName&gt;Revision Expirada&lt;/ogc:PropertyName&gt;&lt;ogc:Literal&gt;9599999999&lt;/ogc:Literal&gt;&lt;/ogc:PropertyIsEqualTo&gt;&lt;/ogc:Filter&gt;
+&lt;MinScaleDenominator&gt;0.0&lt;/MinScaleDenominator&gt;&lt;MaxScaleDenominator&gt;25000.0&lt;/MaxScaleDenominator&gt;&lt;TextSymbolizer&gt;&lt;Label&gt;Elemento Borrable&lt;/Label&gt;&lt;Font&gt;&lt;CssParameter name=&apos;font-color&apos;&gt;#ff0000&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-family&apos;&gt;Agency FB&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-weight&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-style&apos;&gt;normal&lt;/CssParameter&gt;&lt;CssParameter name=&apos;font-size&apos;&gt;18.0&lt;/CssParameter&gt;&lt;/Font&gt;&lt;LabelPlacement&gt;&lt;PointPlacement&gt;&lt;AnchorPoint&gt;&lt;AnchorPointX&gt;0.0&lt;/AnchorPointX&gt;&lt;AnchorPointY&gt;0.0&lt;/AnchorPointY&gt;&lt;/AnchorPoint&gt;&lt;Displacement&gt;&lt;DisplacementX&gt;0.0&lt;/DisplacementX&gt;&lt;DisplacementY&gt;0.0&lt;/DisplacementY&gt;&lt;/Displacement&gt;&lt;Rotation&gt;0.0&lt;/Rotation&gt;&lt;/PointPlacement&gt;&lt;/LabelPlacement&gt;&lt;/TextSymbolizer&gt;&lt;/Rule&gt;&lt;/FeatureTypeStyle&gt;&lt;/UserStyle&gt;&lt;/NamedLayer&gt;&#xd;
+&lt;/StyledLayerDescriptor&gt;&#xd;
+</Styles>
+</LocalGISXmlLayer>

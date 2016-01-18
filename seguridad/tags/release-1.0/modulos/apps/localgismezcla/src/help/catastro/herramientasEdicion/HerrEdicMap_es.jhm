@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/map_1_0.dtd">
+
+<map version="1.0">
+
+    <mapID target="HerrEdicIntro" url="Pages/es/Introduccion.html" />
+    
+    <mapID target="introduccion" url="Pages/es/Introduccion.html"/>    
+    <mapID target="SeleccionPorCirculo" url="Pages/es/SeleccionPorCirculo.html"/>
+    <mapID target="Escalado" url="Pages/es/Escalado.html"/>
+    <mapID target="Girado" url="Pages/es/Girado.html"/>
+    <mapID target="Simetria" url="Pages/es/Simetria.html"/>
+    <mapID target="SeleccionarPorPoligono" url="Pages/es/SeleccionarPorPoligono.html"/>
+    <mapID target="GuiasDeDibujo" url="Pages/es/GuiasDeDibujo.html"/>
+    <mapID target="CoordAbsolutasRelativas" url="Pages/es/CoordAbsolutasRelativas.html"/>
+    <mapID target="PanelEdicion" url="Pages/es/PanelEdicion.html"/>
+    <mapID target="Recortar" url="Pages/es/Recortar.html"/>
+    <mapID target="GeometriasParalelas" url="Pages/es/GeometriasParalelas.html"/>
+    <mapID target="ExplosionEntidades" url="Pages/es/ExplosionEntidades.html"/>    
+    <mapID target="DivisionElementos" url="Pages/es/DivisionElementos.html"/>
+    <mapID target="SeleccionUnaEntidad" url="Pages/es/SeleccionUnaEntidad.html"/>
+    <mapID target="SeleccionPorTipo" url="Pages/es/SeleccionPorTipo.html"/>
+    <mapID target="DibujarCirculo" url="Pages/es/DibujarCirculo.html"/>
+ 	<mapID target="DibujarArco" url="Pages/es/DibujarArco.html"/>    
+   	<mapID target="FusionElementos" url="Pages/es/FusionElementos.html"/>
+    <mapID target="dbHelp" url="dbHelp/"/>    
+    
+    
+</map>

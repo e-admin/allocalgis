@@ -1,0 +1,24 @@
+<!--<Context>
+	<Resource name="jdbc/LocalGISMobileDS" auth="Container"
+		type="javax.sql.DataSource" username="geopista" password="geopista"
+		driverClassName="org.postgresql.Driver"
+		url="jdbc:postgresql://localhost/geopista"
+		maxActive="50" maxIdle="20" validationQuery="SELECT 1"/>
+</Context>-->
+
+<Context>
+	<Resource name="jdbc/LocalGISMobileDS" auth="Container"
+		type="javax.sql.DataSource" username="geopista" password="01g7PT3a"
+		driverClassName="org.postgresql.Driver"
+		url="jdbc:postgresql://pamod-pre.c.ovd.interhost.com:5432/geopista"
+		maxActive="50" maxIdle="20" validationQuery="SELECT 1"/>
+</Context>
+<!--
+<Context>
+	<Resource name="jdbc/LocalGISMobileDS" auth="Container"
+		type="javax.sql.DataSource" username="geopista" password="01g7PT3a"
+		driverClassName="org.postgresql.Driver"
+		url="jdbc:postgresql://pamod-dev.c.ovd.interhost.com:5432/geopista"
+		maxActive="50" maxIdle="20" validationQuery="SELECT 1"/>
+</Context>
+-->

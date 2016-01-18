@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<root>
+  <attribute xml-name="name" java-name="name"/>
+  <attribute xml-name="visible" java-name="visible"/>
+  <attribute xml-name="editable" java-name="editable"/>
+  <element xml-name="description" java-name="description"/>
+  <element xml-name="data-source-query" java-name="dataSourceQuery"/>
+  <attribute xml-name="drawnLast" java-name="drawingLast"/>
+  <attribute xml-name="activa" java-name="activa"/>
+  <attribute xml-name="systemId" java-name="systemId"/>
+  <element xml-name="local" java-name="local"/>
+  <element xml-name="fieldExtendedForm" java-name="fieldExtendedForm"/>
+  <attribute xml-name="synchronizedLineColor" java-name="synchronizingLineColor"/>
+  <element xml-name="styles">
+    <element xml-name="style" java-name="style"/>
+  </element>
+  <element xml-name="extracted" java-name="extracted"/>
+  
+  
+</root>

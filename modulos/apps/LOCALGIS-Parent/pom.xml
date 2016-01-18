@@ -1,0 +1,706 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis</groupId>
+	<artifactId>localgis-parent</artifactId>
+	<packaging>pom</packaging>
+	<version>3.0</version>
+	<name>localgis-parent</name>
+	<!-- <url>http://maven.apache.org</url> -->
+
+
+	<properties>
+		<maven.test.skip>true</maven.test.skip>
+		<maven.test.failure.ignore>true</maven.test.failure.ignore>
+
+		<jts.version>1.12</jts.version>
+		<!-- Firma jars -->
+		<jarsigner.keystoreDirectory>${localgis.jarsigner.keystoreDirectory}</jarsigner.keystoreDirectory>
+		<jarsigner.keystore>${localgis.jarsigner.keystore}</jarsigner.keystore>
+		<jarsigner.alias>${localgis.jarsigner.alias}</jarsigner.alias>
+		<jarsigner.storepass>${localgis.jarsigner.storepass}</jarsigner.storepass>
+		<jarsigner.keypass>${localgis.jarsigner.keypass}</jarsigner.keypass>
+		<!--jarsigner.skip>true</jarsigner.skip-->
+
+		<!-- property name="jarfile" value="${artifactId}-${version}.jar"/>
+		<property name="jarfile.signed" value="${artifactId}-${version}.signed.jar"/>
+		<property name="remote.dir" value="${user.home}\Documents\0.Localgis.Patches\${fecha}"/-->
+
+		<jarfile>${project.artifactId}-${project.version}.jar</jarfile>
+		<warfile>${project.artifactId}-${project.version}.war</warfile>
+		<jarfile.signed>${project.artifactId}-${project.version}.signed.jar</jarfile.signed>
+		<warfile.signed>${project.artifactId}-${project.version}.signed.war</warfile.signed>
+		<remote.dir>${user.home}\Documents\0.Localgis.Patches\${fecha}\jar</remote.dir>
+
+		<remote.dir.minetur>${user.home}\Documents\0.Localgis.Patches\${fecha}\minetur.sinfirma\jar.librerias.localgis</remote.dir.minetur>
+
+	</properties>
+	
+	<!-- Estos profiles hay que incluirlos en el localgis-parent para que este accesible para todos los modulos -->
+	<!-- Aparte tambien esta incoporarlo en el pom_init0.xml cuando se realiza la compilacion global del sistema-->
+	<profiles>
+		<profile>
+			<id>localgis3_default</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+			</build>
+		</profile>
+		<profile>
+			<id>manage_geopista_license</id>			
+			<build>
+				
+				<plugins>
+					<plugin>
+						<groupId>com.mycila</groupId>
+						<artifactId>license-maven-plugin</artifactId>
+						<version>2.6.1</version>
+						<configuration>
+							<!--basedir>localgis-parent</basedir-->
+							<!--header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header-->
+							<header>com/localgis/license/templates/GPLMINETUR.txt</header>
+							<!--header>../localgis-parent/src/main/resources/com/localgis/license/templates/GEOPISTA.txt</header-->
+							<properties>
+								<owner>MINETUR</owner>
+								<year>2014</year>
+								<email>pals@minetur.es</email>
+							</properties>		
+							<keywords>
+								<!--keyword>© MINETUR</keyword-->
+								<keyword>Copyright (C) 2004 INZAMAC-SATEC UTE</keyword>
+							</keywords>
+							<includes>
+								<!--include>**/CAnexosTableModel.java</include-->
+								<include>**/*.java</include>
+							</includes>
+							<dryRun>false</dryRun>
+							<encoding>ISO8859-1</encoding>		
+							<failIfMissing>false</failIfMissing>		
+							<concurrencyFactor>1</concurrencyFactor>
+						</configuration>
+						<!--executions>
+							<execution>
+								<goals>
+									<goal>format</goal>
+								</goals>
+							</execution>
+						</executions-->
+						<dependencies>
+							<dependency>
+								<groupId>com.localgis</groupId>
+								<artifactId>localgis-license</artifactId>
+								<version>3.0</version>
+							</dependency>
+							<dependency>
+								<groupId>org.springframework</groupId>
+								<artifactId>spring-core</artifactId>
+								<version>3.1.3.RELEASE</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>manage_minetur_gpl_license</id>
+			<build>
+				
+				<plugins>
+					<plugin>
+						<groupId>com.mycila</groupId>
+						<artifactId>license-maven-plugin</artifactId>
+						<version>2.6.1</version>						
+						<configuration>
+							<!--basedir>localgis-parent</basedir-->
+							<!--header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header-->
+							<header>com/localgis/license/templates/GPLMINETUR.txt</header>
+							<!--header>../localgis-parent/src/main/resources/com/localgis/license/templates/GEOPISTA.txt</header-->
+							<properties>
+								<owner>MINETUR</owner>
+								<year>2014</year>
+								<email>pals@minetur.es</email>
+							</properties>		
+							<keywords>
+								<keyword>© MINETUR</keyword>
+								<keyword>Copyright (C) 2003 Vivid Solutions</keyword>
+								<keyword>Copyright</keyword>
+								<!--keyword>Copyright (C) 2004 INZAMAC-SATEC UTE</keyword-->
+							</keywords>
+							<includes>
+								<!--include>**/ReloadLayerPlugIn.java</include-->
+								<include>**/*.java</include>
+								<!--include>**/ProvinciaOT.java</include-->
+								<!--include>**/WfsG.java</include-->
+							</includes>
+
+							<dryRun>false</dryRun>
+							<encoding>ISO8859-1</encoding>		
+							<failIfMissing>false</failIfMissing>
+							<concurrencyFactor>1</concurrencyFactor>
+							<skipExistingHeaders>true</skipExistingHeaders>							
+						</configuration>						
+						<dependencies>
+							<dependency>
+								<groupId>com.localgis</groupId>
+								<artifactId>localgis-license</artifactId>
+								<version>3.0</version>
+							</dependency>
+							<dependency>
+								<groupId>org.springframework</groupId>
+								<artifactId>spring-core</artifactId>
+								<version>3.1.3.RELEASE</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>manage_minetur_eupl_license</id>
+			<build>
+				
+				<plugins>
+					<plugin>
+						<groupId>com.mycila</groupId>
+						<artifactId>license-maven-plugin</artifactId>
+						<version>2.6.1</version>						
+						<configuration>
+							<!--basedir>localgis-parent</basedir-->
+							<!--header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header-->
+							<header>com/localgis/license/templates/EUPLMINETUR.txt</header>
+							<!--header>../localgis-parent/src/main/resources/com/localgis/license/templates/GEOPISTA.txt</header-->
+							<properties>
+								<owner>MINETUR</owner>
+								<year>2014</year>
+								<email>pals@minetur.es</email>
+							</properties>		
+							<keywords>
+								<keyword>© MINETUR</keyword>
+								<keyword>Copyright (C) 2003 Vivid Solutions</keyword>
+								<keyword>Copyright</keyword>
+								<!--keyword>Copyright (C) 2004 INZAMAC-SATEC UTE</keyword-->
+							</keywords>
+							<includes>
+								<!--include>**/ReloadLayerPlugIn.java</include-->
+								<include>**/*.java</include>
+								<!--include>**/ProvinciaOT.java</include-->
+								<!--include>**/WfsG.java</include-->
+							</includes>
+
+							<dryRun>false</dryRun>
+							<encoding>ISO8859-1</encoding>		
+							<failIfMissing>false</failIfMissing>
+							<concurrencyFactor>1</concurrencyFactor>
+							<skipExistingHeaders>true</skipExistingHeaders>							
+						</configuration>						
+						<dependencies>
+							<dependency>
+								<groupId>com.localgis</groupId>
+								<artifactId>localgis-license</artifactId>
+								<version>3.0</version>
+							</dependency>
+							<dependency>
+								<groupId>org.springframework</groupId>
+								<artifactId>spring-core</artifactId>
+								<version>3.1.3.RELEASE</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<target>1.7</target>
+					<source>1.7</source>
+				</configuration>
+			</plugin>
+
+			<!-- plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<configuration>
+					<excludeDefaultDirectories>true</excludeDefaultDirectories>
+					<filesets>
+						<fileset>
+							<directory>target</directory>
+							<includes>
+								<include>**/**</include>
+							</includes>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin-->
+			<plugin> 
+				<groupId>org.apache.maven.plugins</groupId> 
+				<artifactId>maven-jar-plugin</artifactId> 
+				<version>2.3.1</version> 
+				<configuration>
+					<archive>
+						<index>false</index>
+						<addMavenDescriptor>false</addMavenDescriptor> 
+
+						<manifest>
+							<addClasspath>false</addClasspath>
+						</manifest>
+						<manifestEntries>
+							<Built-By>LocalGIS3</Built-By>
+							<Application-Name>LocalGIS3</Application-Name>
+							<Permissions>all-permissions</Permissions>
+							<Codebase>*</Codebase>
+							<Trusted-Only>false</Trusted-Only>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin> 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jarsigner-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<phase>pre-integration-test</phase>
+						<id>sign-jars</id>
+						<goals><goal>sign</goal></goals>
+					</execution>
+				</executions>
+				<configuration>
+					<keystore>${jarsigner.keystoreDirectory}/${jarsigner.keystore}</keystore>
+					<alias>${jarsigner.alias}</alias>
+					<storepass>${jarsigner.storepass}</storepass>
+					<keypass>${jarsigner.keypass}</keypass>
+				</configuration>
+			</plugin>	      
+			<!--plugin> 
+      			  <groupId>org.apache.maven.plugins</groupId> 
+       			  <artifactId>maven-jar-plugin</artifactId> 
+			        <version>2.3.1</version> 
+			        <configuration> 
+			          <archive> 
+			            <addMavenDescriptor>false</addMavenDescriptor> 
+			          </archive> 
+			        </configuration> 
+			        <executions>
+						<execution>
+							<phase>package</phase>
+							<configuration>
+								<tasks>		
+									<echo>Generando jar</echo>
+								</tasks>
+							</configuration>
+							<goals><goal>jar</goal></goals>
+						</execution>
+					</executions>
+	        </plugin--> 
+
+			<!-- plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jarsigner-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<phase>pre-integration-test</phase>
+						<id>sign-jars</id>
+						<goals><goal>sign</goal></goals>
+					</execution>
+				</executions>
+				<configuration>
+					<keystore>${jarsigner.keystoreDirectory}/${jarsigner.keystore}</keystore>
+					<alias>${jarsigner.alias}</alias>
+					<storepass>${jarsigner.storepass}</storepass>
+					<keypass>${jarsigner.keypass}</keypass>
+				</configuration>
+			</plugin-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.3</version>
+				<executions>
+					<execution>
+						<id>1</id>
+						<phase>compile</phase>
+						<configuration>
+							<tasks>		
+								<tstamp>
+									<format property="hora" pattern="yyyy-MM-dd_HH-mm-ss"/>
+								</tstamp>
+								<mkdir dir="target/classes"/>
+								<touch file="target/classes/lcgIII.${hora}"/>				
+							</tasks>
+						</configuration>
+						<goals><goal>run</goal></goals>
+					</execution>						
+					<execution>
+						<id>2</id>
+						<phase>package</phase>
+						<configuration>
+							<tasks>		
+								<tstamp>
+									<format property="fecha" pattern="yyyy-MM-dd"/>
+								</tstamp>							
+
+								<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
+								<if>
+									<available file="target\${jarfile}"/>
+									<then>
+										<echo>Copiando el jar target\${jarfile} sin firmar</echo>								
+										<mkdir dir="${remote.dir}"></mkdir>
+										<copy file="target\${jarfile}" tofile="${remote.dir}.notsigned\${jarfile}"/>
+										
+										<mkdir dir="${remote.dir.minetur}"></mkdir>
+										<copy file="target\${jarfile}" tofile="${remote.dir.minetur}\${jarfile}"/>
+										<echo file="${remote.dir.minetur}\libreriasLocalGIS.bat" append="true">
+echo Desplegando : ${jarfile}
+mvn -s settings_lcg3_batch_deploy.xml install:install-file deploy:deploy-file -DgroupId=${groupId}  -DartifactId=${artifactId} -Dversion=${version} -Dpackaging=${packaging} -Dfile=${jarfile}  -DrepositoryId=LocalGISIII -Durl=%URL%
+IF ERRORLEVEL 1 GOTO ERROR
+
+										</echo>  
+									</then>
+
+									<else>
+										<if>
+											<available file="target\${warfile}"/>
+											<then>
+												<echo>Copiando el war target\${warfile} sin firmar</echo>								
+												<mkdir dir="${remote.dir}"></mkdir>
+												<copy file="target\${warfile}" tofile="${remote.dir}.notsigned\${warfile}"/>
+											</then>
+
+											<else>
+												<echo>El fichero jar target\${jarfile} o target\${warfile} sin firmar no existe</echo>	
+											</else>
+										</if>
+									</else>
+								</if>
+
+							</tasks>
+						</configuration>
+						<goals><goal>run</goal></goals>
+					</execution>
+					<execution>
+						<id>3</id>
+						<phase>pre-integration-test</phase>
+						<configuration>
+							<tasks>		
+								<tstamp>
+									<format property="fecha" pattern="yyyy-MM-dd"/>
+								</tstamp>
+								<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
+								<if>
+									<available file="target\${jarfile}"/>
+									<then>
+										<echo>Copiando el jar target\${jarfile} firmado ${artifactId}</echo>								
+										<!--mkdir dir="${remote.dir}"></mkdir-->
+										<mkdir dir="${remote.dir}.signed"></mkdir>
+										<!--copy file="target\${jarfile}" tofile="${remote.dir}\${jarfile.signed}"/-->
+										<copy file="target\${jarfile}" tofile="${remote.dir}.signed\${jarfile}"/>
+									</then>
+
+									<else>
+										<echo>El fichero jar target\${jarfile} firmado no existe</echo>	
+									</else>
+								</if>
+							</tasks>
+						</configuration>
+						<goals><goal>run</goal></goals>
+					</execution>
+				</executions>
+				<dependencies>
+				<dependency>
+	<groupId>jencks</groupId>
+	<artifactId>xapool-without-pool</artifactId>
+	<version>1.4</version>
+</dependency>
+
+					<dependency>
+						<groupId>org.apache.ant</groupId>
+						<artifactId>ant-nodeps</artifactId>
+						<version>1.7.1</version>
+					</dependency>
+					<dependency>
+						<groupId>ant</groupId>
+						<artifactId>ant-apache-regexp</artifactId>
+						<version>1.6.5</version>
+					</dependency>
+					<dependency>
+						<artifactId>jakarta-regexp</artifactId>
+						<groupId>jakarta-regexp</groupId>
+						<version>1.4</version>
+					</dependency>
+					<dependency>
+						<groupId>ant-contrib</groupId>
+						<artifactId>ant-contrib</artifactId>
+						<version>20020829</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.*gif</include>
+					<include>**/*.*GIF</include>
+					<include>**/*.*jpg</include>
+					<include>**/*.*png</include>
+					<include>**/*.*xml</include>
+					<include>**/*.*properties</include>
+					<include>**/*.*txt</include>
+					<include>**/*.*log</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+			</resource>
+		</resources>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.castor</groupId>
+			<artifactId>castor-xml</artifactId>
+			<version>1.3.2</version>			
+		</dependency>		  
+		<dependency>
+			<groupId>org.codehaus.castor</groupId>
+			<artifactId>castor-core</artifactId>
+			<version>1.3.2</version>			
+		</dependency>		  
+		<dependency>
+			<groupId>rhino</groupId>
+			<artifactId>js</artifactId>
+			<version>1.5R4.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>3.1.3.RELEASE</version>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>			
+			<id>LocalGISIII</id>
+			<name>LocalGISIII</name>
+			<url>http://localgis3.minetur.gob.es/nexus/content/groups/localgisgroup/</url>
+		</repository>
+		<repository>			
+			<id>LocalGISIII.Cotesa</id>
+			<name>LocalGISIII.Cotesa</name>
+			<url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+		</repository>
+		<repository>			
+			<id>repo1</id>
+			<name>repo1</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+		<repository>			
+			<id>forgeRock</id>
+			<name>forgeRock</name>
+			<url>http://maven.forgerock.org/repo/repo</url>
+		</repository>
+		<repository>
+			<id>geotools</id>
+			<name>Geotools repository</name>
+			<url>http://download.osgeo.org/webdav/geotools/</url>
+		</repository>
+		<repository>
+			<id>opengeo</id>
+			<name>OpenGeo Maven Repository</name>
+			<url>http://repo.opengeo.org/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>deegree-repo</id>
+			<url>http://artefacts.deegree.org/repo</url>
+			<releases>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>repo.pentaho.org</id>
+			<name>repo.pentaho.org-releases</name>
+			<url>http://repository.pentaho.org/artifactory/repo</url>			
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>repo.alfresco</id>
+			<name>repo.alfresco</name>
+			<url>https://maven.alfresco.com/nexus/content/groups/public/</url>			
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>repo.objectweb</id>
+			<name>repo.objectweb</name>
+			<url>http://nexus.emergya.es/nexus/content/repositories/thirdparty/</url>			
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>repo.jasperreport</id>
+			<name>repo.jasperreport</name>
+			<url>http://jasperreports.sourceforge.net/maven2/</url>			
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>repo.jcmdline</id>
+			<name>repo.jcmdline</name>
+			<url>http://wiki.bytter.com/nexus/content/repositories/thirdparty/</url>			
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>repo.mlibwrapper</id>
+			<name>repo.mlibwrapper</name>
+			<url>http://corp.array.ca/nest-web/maven/</url>			
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>repo.pentaho2</id>
+			<name>repo.pentaho2</name>
+			<url>http://haiti.production.ampdev.net/artifactory/list/thirdparty.repo.pentaho.org/</url>			
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>repo.gnucrypto</id>
+			<name>repo.gnucrypto</name>
+			<url>http://maven.simexplorer.org/repo/</url>			
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>repo.javaws</id>
+			<name>repo.javaws</name>
+			<url>http://violet.sourceforge.net/maven2/repo</url>			
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>repo.microba</id>
+			<name>repo.microba</name>
+			<url>http://repository.ops4j.org/maven2</url>			
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>ITAST_Maven</id>
+			<name>IDELAB repository</name>
+			<url>http://rep.idelab.uva.es/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>ibatis2</id>
+			<name>ibatis2 repository</name>
+			<url>http://ibcorp.com.br/repository/</url>
+		</repository>
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>Datavision</id>
+			<name>Datavision</name>
+			<url>http://mvnrepository.com/artifact/net.sf.datavision/DataVision</url>
+		</repository>
+
+		<repository>
+			<id>forgerock</id>
+			<url>http://maven.forgerock.org/repo/releases</url>
+		</repository>
+
+
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>jfrog-plugins-dist</id>
+			<name>jfrog-plugins-dist</name>
+			<url>http://repo.jfrog.org/artifactory/plugins-releases-local</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	<distributionManagement>
+		<repository>
+			<id>serverCotesa</id>
+			<name>LocalGISIII</name>
+			<url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+		</repository>
+		<snapshotRepository>
+			<id>serverCotesa</id>
+			<name>LocalGISIII</name>
+			<url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

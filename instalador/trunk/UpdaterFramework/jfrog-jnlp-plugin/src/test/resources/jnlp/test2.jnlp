@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="http://localhost/jnlp/" href="master.jnlp">
+    <information>
+        <title>test1</title>
+        <vendor>yossis</vendor>
+        <homepage href="http://localhost/jnlp/"/>
+    </information>
+    <resources>
+        <j2se version="1.5+"/>
+        $dependencies
+    </resources>
+    <application-desc main-class="com.blabla.Main"/>
+</jnlp>

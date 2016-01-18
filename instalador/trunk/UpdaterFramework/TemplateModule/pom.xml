@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ <parent>
+		<groupId>com.localgis.modules</groupId>
+		<version>3.0</version>
+<!-- 		optativo relativepath -->
+		<relativePath>../testModules/updaterModuleParent</relativePath> 
+		<artifactId>updaterModuleParent</artifactId>
+  </parent>
+<!--   identificador interno del paquete de instalacion por ejemplo licenciascuenca-->
+  <artifactId>TemplateModule</artifactId>
+<!--   version interna -->
+  <version>0.0.1</version>
+<!--   nombre interno -->
+  <name>Template Intaller Module</name>
+  <packaging>jar</packaging>
+  <description>
+  Module for archetype creation.
+  After built, use it with:
+  
+  mvn archetype:generate -DarchetypeCatalog=local
+  
+  WARNING!! groupId Should be com.localgis.modules
+  
+  NOTE: Generate the archetype with command:
+   mvn archetype:create-from-project -Darchetype.properties=src/main/archetype.properties -DarchetypePostPhase=install -Darchetype.filteredExtensions=xml
+   
+   cd target/generated-sources/archetype
+   mvn install
+  </description>
+  <properties>
+		<module.title>LocalGIS Identification Name</module.title>
+		<module.version>localGISVersion</module.version>
+		<module.installType>clientJNLP|sysWAR|appWAR|dataModel</module.installType>
+		<module.artifact.groupId>com.localgis.XXX</module.artifact.groupId>
+		<module.artifact.id>Binary Packaged ArtifactId</module.artifact.id>
+		<module.artifact.version>Binary Packaged Artifact Version</module.artifact.version>
+		<module.artifact.type>jar|zip|war</module.artifact.type>
+		<module.artifact.finalName>localGISFinalName</module.artifact.finalName>
+<!-- 	Lo normal es que sea el mismo artifactId pero distinta versión,
+		por lo que esta propiedad es optativa en este ejemplo se cambia 
+		el artifactId por simplificar los módulos y demostrar la flexibilidad. -->
+		<module.upgraded.artifactId>exampleModule2</module.upgraded.artifactId>
+		<module.upgraded.version>3.0</module.upgraded.version>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.localgis.maven.plugin</groupId>
+				<artifactId>updaterPlugin</artifactId>
+				</plugin>
+		</plugins>
+	</build>
+</project>

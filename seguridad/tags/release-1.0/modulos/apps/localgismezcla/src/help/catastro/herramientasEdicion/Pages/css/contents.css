@@ -1,0 +1,29 @@
+.contenidonormal{font-family:arial; font-size:10px;color:#000000}
+.contenidonormalfondo{font-family:arial; font-size:10px;color:#000000;background-color:#E5F8E9}
+.contenidoazul{font-family:arial; font-size:10px;color:#3333cc}
+.contenidoazul4pxn{font-family:arial; font-size:14px;color:#3333cc;font-weight:bold}
+.contenidogris{font-family:arial; font-size:10px;color:#888888}
+.contenidogris2{font-family:arial; font-size:10px;color:#888888;text-decoration:none}
+.contenidogris2:hover{font-family:arial; font-size:10px;color:#888888;text-decoration:none}
+.contenidopeque{font-family:arial; font-size:10px;color:#000000;}
+.contenidolocalizador{font-family:arial; font-size:8pt;color:#3333cc}
+.contenidonegrita{font-family:arial; font-size:10px;color:#000000;font-weight:bold}
+.enlaceazul{font-family:arial; font-size:10px;color:#3333cc; text-decoration:none}
+.enlaceazul:hover {font-family:arial; font-size:10px;color:black; text-decoration:none}
+.contenidonormalblanco{font-family:arial; font-size:10px;color:#FFFFFF;font-weight:bold}
+.contenidoazuloscuro{font-family:arial; font-size:10px;color:#3333cc}
+.contenidoazuloscuro:link{font-family:arial; font-size:10px;color:#3333cc;text-decoration:none}
+.contenidoazuloscuro:visited{font-family:arial; font-size:10px;color:#3333cc;text-decoration:none}
+.contenidoazuloscuron{font-family:arial; font-size:10px;color:#3333cc;font-weight:bold}
+.arial12pxboldblanco{font-family:arial; font-size:12px;color:#FFFFFF;font-weight:bold}
+.arial12px{font-family:arial; font-size:12px;color:#000000}
+.arial14px{font-family:arial; font-size:14px;color:#000000}
+.enlaceazulclaro{font-family:arial; font-size:10px;color:#7be4a2; text-decoration:none}
+.enlaceazulclaro:hover {font-family:arial; font-size:10px;color:white; text-decoration:none}
+.enlaceazuloscuro{font-family:arial; font-size:10px;color:#3333cc;text-decoration:none}
+.enlaceazuloscuro:hover{font-family:arial; font-size:10px;color:black;text-decoration:none}
+.cabecera2azuloscuro{font-family:arial; font-size:13px;color:#3333cc;font-weight:bold}
+.cabecera3azuloscuro{font-family:arial; font-size:13px;color:#3333cc;text-decoration:underline;font-weight:bold}
+.cabeceraazuloscuro{font-family:arial; font-size:16px;color:#3333cc;text-decoration:underline;font-weight:bold}
+.enlacelocalizador{font-family:arial; font-size:8pt;color:#3333cc;text-decoration:none}
+.enlacelocalizador:hover{font-family:arial; font-size:8pt;color:black;text-decoration:underline}

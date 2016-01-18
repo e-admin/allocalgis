@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+
+<!-- The Galician langpack -->
+
+<langpack>
+	
+    <!-- General installer strings -->
+    <str id="installer.idioma" txt="[glg]Selección de idioma"/>
+    <str id="installer.title" txt="Instalazón de LocalGIS"/>
+    <str id="installer.next" txt="Próximo"/>
+    <str id="installer.prev" txt="Anterior"/>
+    <str id="installer.quit" txt="Sair"/>
+    <str id="installer.madewith" txt=""/>
+    <str id="installer.quit.title" txt="Ten a certeza de que desexa sair?"/>
+    <str id="installer.quit.message" txt="Quere cancelar a instalación?"/>
+    <str id="installer.warning" txt="Aviso!"/>
+    <str id="installer.yes" txt="Si"/>
+    <str id="installer.no" txt="Non"/>
+    <str id="installer.cancel" txt="Cancelar"/>
+    <str id="installer.error" txt="Erro"/>
+    <str id="installer.step" txt="[glg]Paso"/>
+    <str id="installer.of" txt="[glg]de"/>
+
+    <!-- Uninstaller specific strings -->
+    <str id="uninstaller.warning" txt="Isto eliminará a(s) aplicación(s) instalada(s) !"/>
+    <str id="uninstaller.destroytarget" txt=" Forzar o borrado de  "/>
+    <str id="uninstaller.uninstall" txt="Desinstalar"/>
+    <str id="uninstaller.uninstall-postgres" txt="[glg]¿Desea desinstalar Postgres?"/>
+    
+    <!-- The strings for the 'official' IzPack plugins -->
+    <str id="HelloPanel.welcome1" txt="Benvido à instalación de "/>
+    <str id="HelloPanel.welcome2" txt=" !"/>
+    <str id="HelloPanel.authors" txt="O(s) autor(es) deste programa é(son) : "/>
+    <str id="HelloPanel.url" txt="A páxina do programa é : "/>
+  
+    <str id="LicencePanel.info" txt="Por favor, lea o seguinte contrato de licenza :"/>
+    <str id="LicencePanel.agree" txt="Eu estou de acordo con este contrato de licenza."/>
+	<str id="LicencePanel.notagree" txt="Eu non estou de acordo con este contrato de licenza."/>
+    <str id="LicencePanel.yes" txt="Si"/>
+    <str id="LicencePanel.no" txt="Non"/>
+    
+    <str id="InfoPanel.info" txt="Por favor, lea a seguinte información :"/>
+    <str id="PathInputPanel.required" txt="[glg]Debe indicar la ruta en la que ha instalado el JSDK"/>
+    
+    <str id="JDKPathPanel.info" txt="[glg]Indique la ruta en la que ha instalado el JSDK (Java Software Development Kit) (válidas versiones 1.6_x):"/>
+	
+    <str id="TargetPanel.info" txt="Selecione a ruta para a instalación :"/>
+    <str id="TargetPanel.browse" txt="Procurar ..."/>
+    <str id="TargetPanel.warn" 
+         txt="O diretório xá existe ! Ten certeza de que quere instalar neste diretorio e sobrescrever arquivos existentes?"/>
+    <str id="TargetPanel.empty_target"
+         txt="Non especificou un local! Isto está correcto?"/>
+	<str id="TargetPanel.createdir" txt="O directório especificado será criado :" />
+	
+    <str id="PacksPanel.info" txt="Seleccione os paquetes que desexa instalar :"/>
+    <str id="PacksPanel.tip" txt="Nota: paquetes cinzas son requeridos."/>
+    <str id="PacksPanel.space" txt="Espazo total requerido: "/>
+	<str id="PacksPanel.description" txt="Descrición"/>
+	<str id="PacksPanel.notEnoughSpace" txt="[glg]La instalación excede el espacio en disco."/>
+	<str id="PacksPanel.notPossibleSelectionPostgres" txt="[glg]La selección deseada necesita también de la instalación del módulo de PosgreSQL."/>
+	<str id="PacksPanel.notPossibleSelectionTomcat" txt="[glg]La selección deseada necesita también de la instalación del módulo de Tomcat."/>
+	<str id="PacksPanel.notPossibleSelectionGuiaUrbana" txt="[glg]La selección deseada necesita también de la instalación del módulo LOCALGIS GuiaUrbana."/>
+	<str id="PacksPanel.notPossibleSelectionWMSManager" txt="[glg]La selección deseada necesita también de la instalación del módulo LOCALGIS WMSManager."/>
+	<str id="PacksPanel.notPossibleSelectionSSL" txt="[glg]La selección deseada necesita también de la instalación del módulo Administrador de cartografía."/>
+    
+    <str id="InstallPanel.info" txt="Clique 'Instalar !' para iniciar o processo de instalación"/>
+    <str id="InstallPanel.install" txt="Instalar !"/>
+    <str id="InstallPanel.tip" txt="Progreso da instalación :"/>
+    <str id="InstallPanel.begin" txt="[Nada]"/>
+    <str id="InstallPanel.finished" txt="[Terminado]"/>
+	<str id="InstallPanel.progress" txt="Progreso total da instalación:"/>
+    <str id="InstallPanel.overwrite.title" txt="O arquivo xa existe."/>
+    <str id="InstallPanel.overwrite.question" txt="O seguinte arquivo xa existe. Sobrescribi-lo?"/>
+    
+    <str id="FinishPanel.success" txt="Instalación realizada con éxito."/>
+    <str id="FinishPanel.done" txt="Feito"/>
+    <str id="FinishPanel.fail" txt="A instalación fallou!"/>
+    <str id="FinishPanel.uninst.info" txt="Un programa desinstalador foi creado en:"/>
+    <str id="FinishPanel.auto" txt="Xenerar un script para instalación automática"/>
+    <str id="FinishPanel.auto.tip" 
+         txt="Utilize este script para repetir esta instalación en outros ordenadores."/>
+    
+    <str id="ImgPacksPanel.packs" txt="Os seguintes paquetes están dispoñibles :"/>
+    <str id="ImgPacksPanel.snap" txt="Visualización da tela do paquete  :"/>
+    <str id="ImgPacksPanel.checkbox" txt=" Instalar este paquete"/>
+    
+    <str id="ShortcutPanel.headline" txt="[glg]Creación de accesos directos"/>
+    <str id="ShortcutPanel.regular.list" txt="Seleccione unha Categoria de Programas para os Accesos directos"/>
+    <str id="ShortcutPanel.regular.default" txt="Limpar"/>
+    <str id="ShortcutPanel.regular.desktop" txt="Crear os accesos directos no desktop"/>
+    <str id="ShortcutPanel.regular.create" txt="Crear accesos directos"/>
+    <str id="ShortcutPanel.regular.userIntro" txt="crear acceso directo para:"/>
+    <str id="ShortcutPanel.regular.currentUser" txt="usuário actual"/>
+    <str id="ShortcutPanel.regular.allUsers" txt="todos usuários"/>
+	
+    <str id="ShortcutPanel.alternate.apology" txt="Desculpe, mais IzPack non pode crear accesos directos neste sistema operativo. Para crear os accesos directos, por favor consultar o manual de seu sistema operativo."/>
+    <str id="ShortcutPanel.alternate.targetsLabel" txt="Esta é a lista de executábles aos cuales o productor deste programa lle deu acesso."/>
+    <str id="ShortcutPanel.alternate.textFileExplanation" txt="Vostede pode salvar informacións detalladas sobre os arquivos executábles nun arquivo de texto para referência futura."/>
+    <str id="ShortcutPanel.alternate.saveButton" txt="Salvar Arquivo de Texto"/>
+	
+    <str id="ShortcutPanel.textFile.header" txt="Información Sobre Accesos directos\n====================\n\nA seguinte é unha lista de toda a información relevante sobre os accesos directos\ndesexados. Esta información debe posibilitar a creación manual de accesos directos.\n"/>
+    
+    <str id="ShortcutPanel.textFile.name"         txt="Acceso directo             : "/>
+    <str id="ShortcutPanel.textFile.location"     txt="Local Desexado        : "/>
+    <str id="ShortcutPanel.textFile.description"  txt="Descrición             : "/>
+    <str id="ShortcutPanel.textFile.target"       txt="Arquivo Executábel    : "/>
+    <str id="ShortcutPanel.textFile.command"      txt="Liña de Comando      : "/>
+    <str id="ShortcutPanel.textFile.iconName"     txt="Arquivo do Icono      : "/>
+    <str id="ShortcutPanel.textFile.iconIndex"    txt="Índice do Icono       : "/>
+    <str id="ShortcutPanel.textFile.work"         txt="Directorio de Traballo : "/>
+	
+    <str id="ShortcutPanel.location.desktop"      txt="Desktop"/>
+    <str id="ShortcutPanel.location.applications" txt="Menu de Aplicacións"/>
+    <str id="ShortcutPanel.location.startMenu"    txt="Menu Iniciar"/>
+    <str id="ShortcutPanel.location.startup"      txt="Grupo Iniciar"/>
+	
+    <str id="UserInputPanel.error.caption"        txt="Erro de entrada"/>
+	<str id="UserInputPanel.search.autodetect"    txt="Autodetección"/>
+	
+    <!-- more descriptive error message would be cool, like specifying what file we looked for -->
+    <str id="UserInputPanel.search.autodetect.failed.message"    txt="Autodetección fallou."/>
+    <str id="UserInputPanel.search.autodetect.failed.caption"    txt="Autodetección fallou."/>
+    <str id="UserInputPanel.search.autodetect.tooltip"           txt="Busque polo arquivo ou directorio nas rutas de abaixo."/>
+    <str id="UserInputPanel.search.location"           txt="Entre a localización de {0}."/>
+    <str id="UserInputPanel.search.location.checkedfile" txt="A existencia de (0) é checada."/>
+    <str id="UserInputPanel.search.browse"           txt="Atopar..."/>
+    <str id="UserInputPanel.search.wrongselection.message"   txt="O arquivo ou directorio escollido non existe ou é non é apropriado."/>
+    <str id="UserInputPanel.search.wrongselection.caption"   txt="Selección inválida."/>
+	
+    <str id="CompilePanel.heading" txt="Compilación" />
+    <str id="CompilePanel.tip" txt="Progreso do traballo de compilación:" />
+    <str id="CompilePanel.browse" txt="Atopar..." />
+    <str id="CompilePanel.browse.approve" txt="Usar como compilador" />
+    <str id="CompilePanel.start" txt="Iniciar" />
+    <str id="CompilePanel.progress.initial" txt="[Clique no botón Iniciar para instalar]" />
+    <str id="CompilePanel.progress.finished" txt="[Terminado]" />
+	<str id="CompilePanel.progress.overall" txt="Progreso total da compilación:" />
+    <str id="CompilePanel.error" txt="Compilación fallou" />
+    <str id="CompilePanel.error.reconfigure" txt="Reconfigure" />
+    <str id="CompilePanel.error.ignore" txt="Ignorar" />
+    <str id="CompilePanel.error.abort" txt="Abortar" />
+    <str id="CompilePanel.error.seebelow" txt="Vexa abaixo o comando que fallou e a súa saída." />
+    <str id="CompilePanel.error.nofiles" txt="Erro durante a busca polos arquivos para compilación." />
+    <str id="CompilePanel.error.compilernotfound" txt="O compilador non pode ser executado." />
+    <str id="CompilePanel.error.invalidarguments" txt="O compilador recusou os argumentos fornecidos." />
+    <str id="CompilePanel.error.noclassfile" txt="O compilador non xerou un arquivo class para o código fonte " />
+    <str id="CompilePanel.choose_compiler" txt="Compilador a ser usado:" />
+    <str id="CompilePanel.additional_arguments" txt="Argumentos adicionais de compilación:" />
+	
+	
+    <!-- Add your own panels specific strings here if you need -->
+
+	<str id="CommonPanel.buttonYes" txt="[glg]SI"/>
+	<str id="CommonPanel.buttonNo" txt="[glg]NO"/>
+	<str id="CommonPanel.nextValuesAreIncorrect" txt="[glg]Los siguientes valores son incorrectos:"/>							
+	<str id="CommonPanel.add" txt="[glg]Añadir"/>		
+	<str id="CommonPanel.delete" txt="[glg]Borrar"/>		
+	<str id="CommonPanel.insert" txt="[glg]Insertar"/>		
+    <str id="PacksPanel.freespace" txt="Espazo dispoñibel: "/>
+    <str id="PacksPanel.dependencyList" txt="Dependenzas: "/>
+
+
+
+
+    <str id="ProcessPanel.heading" txt="Procesando" />
+    
+	<!-- Panel ContactInformationPanel-->																		 				  	
+	<str id="ContactInformationPanel.deegreeParameters" txt="[glg]Parametros de configuración de Deegree: no modifique sus valores si no está seguro de lo que hace"/>	 
+    <str id="ContactInformationPanel.cacheFormatNotValid" txt="[glg]El valor de la caché debe ser numérico"/>	 
+    <str id="ContactInformationPanel.requestTimeLimitFormatNotValid" txt="[glg]El valor del máximo tiempo de petición debe ser numérico"/>	
+    <str id="ContactInformationPanel.maxLifeTimeFormatNotValid" txt="[glg]El valor del tiempo máximo de procesamiento debe ser numérico"/>	    
+    <str id="ContactInformationPanel.maxWidthFormatNotValid" txt="[glg]El valor del máximo ancho del mapa debe ser numérico"/>	    
+    <str id="ContactInformationPanel.maxHeightFormatNotValid" txt="[glg]El valor del máximo alto del mapa debe ser numérico"/>	        
+    <str id="ContactInformationPanel.eMailFormatNotValid" txt="[glg]La dirección de correo electrónico no es válida"/>	        
+    <str id="ContactInformationPanel.cacheSize" txt="[glg]Tamaño caché (en Mb.):"/>	        
+    <str id="ContactInformationPanel.maxLifeTime" txt="[glg]Máximo tiempo de vida (seg.):"/>	        
+    <str id="ContactInformationPanel.requestTimeLimit" txt="[glg]Máximo tiempo de petición (seg.):"/>	        
+    <str id="ContactInformationPanel.mapQuality" txt="[glg]Calidad del mapa:"/>	        
+    <str id="ContactInformationPanel.maxWidth" txt="[glg]Ancho máximo del mapa (pixels):"/>	        
+    <str id="ContactInformationPanel.maxHeight" txt="[glg]Alto máximo del mapa (pixels):"/>	        
+    <str id="ContactInformationPanel.deegreeParams" txt="[glg]Parámetros Deegree"/>	        
+    <str id="ContactInformationPanel.contactPerson" txt="[glg]Persona de contacto:"/>	        
+    <str id="ContactInformationPanel.contactOrganization" txt="[glg]Empresa:"/>	        
+    <str id="ContactInformationPanel.contactPosition" txt="[glg]Cargo que ocupa:"/>	        
+    <str id="ContactInformationPanel.personalInformation" txt="[glg]Información personal"/>	        
+    <str id="ContactInformationPanel.addressType" txt="[glg]Tipo de dirección:"/>	        
+    <str id="ContactInformationPanel.street" txt="[glg]Calle"/>	        
+    <str id="ContactInformationPanel.square" txt="[glg]Plaza"/>	
+    <str id="ContactInformationPanel.avenue" txt="[glg]Avenida"/>	                
+    <str id="ContactInformationPanel.road" txt="[glg]Carretera"/>	        
+    <str id="ContactInformationPanel.alameda" txt="[glg]Alameda"/>	        
+    <str id="ContactInformationPanel.way" txt="[glg]Camino"/>	        
+    <str id="ContactInformationPanel.glorieta" txt="[glg]Glorieta"/>	        
+    <str id="ContactInformationPanel.paseo" txt="[glg]Paseo"/>	        
+    <str id="ContactInformationPanel.ronda" txt="[glg]Ronda"/>	        
+    <str id="ContactInformationPanel.address" txt="[glg]Dirección:"/>	        
+    <str id="ContactInformationPanel.city" txt="[glg]Ciudad:"/>	        
+    <str id="ContactInformationPanel.province" txt="[glg]Provincia:"/>	        
+    <str id="ContactInformationPanel.postCode" txt="[glg]Código postal:"/>	        
+    <str id="ContactInformationPanel.country" txt="[glg]Pais:"/>	        
+    <str id="ContactInformationPanel.localizationInformation" txt="[glg]Información localización:"/>	        
+    <str id="ContactInformationPanel.phone" txt="[glg]Teléfono:"/>	        
+    <str id="ContactInformationPanel.email" txt="[glg]E-Mail:"/>	        
+    <str id="ContactInformationPanel.contactInformation" txt="[glg]Información de contacto"/>	        
+    <str id="ContactInformationPanel.personOrganizationError" txt="[glg]Se tienen que proporcionar la persona de contacto y la emrpesa, o ninguna"/>	        
+    
+	<!-- Panel GeopistaDataBasePanel-->
+    <str id="GeopistaDataBasePanel.databaseName" txt="[glg]Nombre de la base de datos:"/>	
+    <str id="GeopistaDataBasePanel.geopistaUserName" txt="[glg]Nombre del usuario localgis"/>	
+    <str id="GeopistaDataBasePanel.geopistaUserPassword" txt="[glg]Password para la base de datos:"/>	 
+    <str id="GeopistaDataBasePanel.geopistaRetypePassword" txt="[glg]Introduzca de nuevo el password:"/>	 
+    <str id="GeopistaDataBasePanel.requiredName" txt="[glg]Es obligatorio especificar un nombre para la base de datos"/>	
+    <str id="GeopistaDataBasePanel.requiredUser" txt="[glg]Es obligatorio especificar un usuario"/>	    
+    <str id="GeopistaDataBasePanel.requiredPassword" txt="[glg]Es obligatorio especificar un password para el usuario"/>	        
+    <str id="GeopistaDataBasePanel.incorrectPassword" txt="[glg]Debe reintroducir el password, puesto que no coincide con el especificado inicialmente"/>	        
+
+    <!-- Panel MunicipalityIDsPanel-->
+    <str id="MunicipalityPanel.ineCodeSRIDTitle" txt="[glg]Códigos INE de municipios y SRIDs para el Administrador de cartografía"/>	
+    <str id="MunicipalityPanel.ineCodeSRIDWMSManagerTitle" txt="[glg]Código INE de municipio y SRID para el WMSManager"/>	
+    <str id="MunicipalityPanel.ineCodeTitle" txt="[glg]Código INE"/>	
+    <str id="MunicipalityPanel.sridTitle" txt="[glg]SRID"/>	
+    <str id="MunicipalityPanel.requiredINECode" txt="[glg]El código INE es obligatorio"/>	
+    <str id="MunicipalityPanel.ineCodeFormatNotValid" txt="[glg]El código INE debe ser numérico"/>
+    <str id="MunicipalityPanel.ineCodeFormatLengthNotValid" txt="[glg]El código INE debe tener 5 carácteres numéricos"/>	
+    <str id="MunicipalityPanel.requiredINECodes" txt="[glg]Debe haber, como mínimo, 1 municipio definido"/>	
+    <str id="MunicipalityPanel.requiredINECode" txt="[glg]Se debe especificar también un código del municipio para configurar el WMSManager (Parte inferior del panel)"/>	    
+
+ 	<!-- Panel PostgresParamsPanel-->   
+    <str id="PostgresPanelParams.isPostgresInstalled" txt="[glg]¿Tiene ya instalado una base de datos PostgreSQL 8.0 con PostGIS?"/>
+	<str id="PostgresPanelParams.postgresPath" txt="[glg]Ruta de instalación de Postgres:"/>
+	<str id="PostgresPanelParams.postgresUser" txt="[glg]Nombre de usuario administrador de la base de datos:"/>	
+	<str id="PostgresPanelParams.postgresPassword" txt="[glg]Password de usuario:"/>		
+	<str id="PostgresPanelParams.retypePostgresPassword" txt="[glg]Reintroduzca password:"/>		
+	<str id="PostgresPanelParams.computerIP" txt="[glg]IP de la máquina:"/>	
+	<str id="PostgresPanelParams.postgresPort" txt="[glg]Puerto de escucha:"/>			
+	<str id="PostgresPanelParams.allowedIPs" txt="[glg]IPs con acceso a la bd:"/>	
+	<str id="PostgresPanelParams.ip" txt="[glg]IP"/>		
+	<str id="PostgresPanelParams.mask" txt="[glg]Máscara"/>	
+	<str id="PostgresPanelParams.ipTitle" txt="[glg]Dirección IP"/>			
+	<str id="PostgresPanelParams.maskTitle" txt="[glg]Máscara de red"/>						
+	<str id="PostgresPanelParams.postgresAsService" txt="[glg]¿Desea instalar PostgreSQL 8.0 con PostGIS como un servicio?"/>			
+	<str id="PostgresPanelParams.requiredIPMessage" txt="[glg]La dirección IP es obligatoria"/>				
+	<str id="PostgresPanelParams.ipFormatNotCorrect" txt="[glg]El formato de la dirección IP no es correcto"/>					
+	<str id="PostgresPanelParams.maskFormatNotCorrect" txt="[glg]El formato de la máscara de red no es correcto"/>
+	<str id="PostgresPanelParams.requiredPath" txt="[glg]Es obligatorio especificar un path que apunte al directorio de instalación/datos de PostgreSQL"/>	
+	<str id="PostgresPanelParams.requiredUser" txt="[glg]Es obligatorio especificar un usuario para la base de datos"/>
+	<str id="PostgresPanelParams.requiredPassword" txt="[glg]Es obligatorio especificar un password para el usuario"/>								
+	<str id="PostgresPanelParams.incorrectPassword" txt="[glg]Debe reintroducir el password, puesto que no coincide con el especificado inicialmente"/>								
+	<str id="PostgresPanelParams.IPFormatNotValid" txt="[glg]La dirección IP proporcionada no tiene un formato válido"/>							
+	<str id="PostgresPanelParams.requiredIP" txt="[glg]Es obligatorio especificar una dirección IP"/>														
+	<str id="PostgresPanelParams.requiredPort" txt="[glg]Es obligatorio especificar un puerto de escucha"/>														
+	<str id="PostgresPanelParams.portFormatNotValid" txt="[glg]El puerto de escucha debe ser numérico"/>														
+
+	<!--Panel PostgresPanel-->			
+	<str id="PostgresPanel.startingPostgresInstall" txt="[glg]Comienza la instalación de PostgreSQL. Espere unos instantes, por favor..."/>
+    <str id="PostgresPanel.sucess" txt="[glg]La instalación terminó con éxito"/>
+    <str id="PostgresPanel.failure" txt="[glg]Se produjo un fallo en la instalación de la base de datos Postgres."/>
+    <str id="PostgresPanel.failureRPMsPostgres" txt="[glg]Se produjo un fallo en la instalación. No se instalaron correctamente los rpms de Postgres"/>
+    <str id="PostgresPanel.failureCreateDataDir" txt="[glg]Se produjo un fallo en la instalación. No se pudo crear el directorio de datos"/>
+    <str id="PostgresPanel.failureChangeDataDirOwner" txt="[glg]Se produjo un fallo en la instalación. No se pudieron cambiar los derechos del directorio de datos"/>
+    <str id="PostgresPanel.failureInitDataBase" txt="[glg]Se produjo un fallo en la instalación. No se pudo inicializar correctamente la base de datos"/>
+    <str id="PostgresPanel.failurePostgresAsService" txt="[glg]Se produjo un fallo en la instalación. No se pudo cargar como servicio la base de datos"/>
+    <str id="PostgresPanel.failureRPMsPostgis" txt="[glg]Se produjo un fallo en la instalación. No se instalaron correctamente los rpms de Postgis"/>
+    <str id="PostgresPanel.failureCopyPostGISLibraries" txt="[glg]Se produjo un fallo en la instalación. No se copiaron correctamente las librerías de Postgis"/>    
+    <str id="PostgresPanel.failureStartingPostgres" txt="[glg]Se produjo un fallo en la instalación. No se ha arrancado el servicio de la base de datos"/>        
+    <str id="PostgresPanel.failureCreatelang" txt="[glg]Se produjo un fallo en la instalación. No se efectuó correctamente la llamada a la función createlang"/>
+    <str id="PostgresPanel.failureCreateUserWin" txt="[glg]Se produjo un fallo en la instalación durante la creación del usuario postgres"/>
+    <str id="PostgresPanel.failureGrantRightsWin" txt="[glg]Se produjo un fallo en la instalación. No se han podido darle los permisos necesarios al usuario postgres para arrancar servicios"/>
+    <str id="PostgresPanel.failureChangePostgresPassword" txt="[glg]Se produjo un fallo en la instalación. No se ha podido modificar el password al usuario postgres"/>
+    <str id="PostgresPanel.found" txt="Servidor PostgreSQL atopado no enderezo: "/>
+    <str id="PostgresPanel.notfound" txt="Servidor PostgreSQL non atopado. Non se pode continuar."/>
+    <str id="PostgresPanel.install" txt="Pulsando no seguinte botón instalarase PostgreSQL"/>
+    <str id="PostgresPanel.progressInstall" txt="[glg]Progreso de la instalación de PostgreSQL"/>    
+    <str id="PostgresPanel.progressCheck" txt="[glg]Comprobación de la instalación de PostgreSQL"/>        
+    <str id="PostgresPanel.actionInstall" txt="Instalar"/>
+    <str id="PostgresPanel.check" txt="Pulsando no seguiente botón comprobarase a conexión con PostgreSQL"/>
+    <str id="PostgresPanel.actionCheck" txt="Comprobar"/>
+    <str id="PostgresPanel.packsPath" txt="[glg]Indique una ruta donde buscar paquetes para la instalación"/>
+    <str id="PostgresPanel.checkingSystemLibraries" txt="[glg]Comprobando librerias del sistema"/>
+    <str id="PostgresPanel.checkDebianLibsOK" txt="[glg]El sistema parece contar con todas las librerias necesarias. Se procede a la instalación de PostgreSQL "/>
+    <str id="PostgresPanel.checkDebianLibsNOTOK" txt="[glg]El sistema no ha encontrado todas las librerias necesarias. ¿Desea ejecutar la herramienta de Ayuda?"/>
+    <str id="PostgresPanel.buttonHelp" txt="[glg]Ayuda"/>
+
+ 	<!-- Panel TomcatParamsPanel--> 
+    <str id="TomcatParamsPanel.isTomcatInstalled" txt="[glg]¿Tiene ya instalado un servidor de aplicaciones web Tomcat?"/>	
+    <str id="TomcatParamsPanel.tomcatPath" txt="[glg]Ruta de instalación de Tomcat:"/>
+    <str id="TomcatParamsPanel.tomcatUser" txt="[glg]Nombre del usuario-administrador de Tomcat"/>    
+    <str id="TomcatParamsPanel.tomcatPassword" txt="[glg]Password del usuario-administrador de Tomcat"/>    
+    <str id="TomcatParamsPanel.retypeTomcatPassword" txt="[glg]Reintroduzca password:"/>    
+    <str id="TomcatParamsPanel.requiredPath" txt="[glg]Es obligatorio especificar un path que apunte al directorio de instalación de Tomcat"/>    
+    <str id="TomcatParamsPanel.requiredUser" txt="[glg]Es obligatorio especificar un usuario administrador de Tomcat"/>         	
+    <str id="TomcatParamsPanel.requiredPassword" txt="[glg]Es obligatorio especificar un password para el usuario administrador de Tomcat"/>         	     	
+    <str id="TomcatParamsPanel.incorrectPassword" txt="[glg]Debe reintroducir el password, puesto que no coincide con el especificado inicialmente"/>								
+    <str id="TomcatParamsPanel.tomcatIP" txt="[glg]IP de la máquina en la que se instala Tomcat"/>   
+	<str id="TomcatParamsPanel.tomcatPort" txt="[glg]Puerto de instalación de Tomcat"/>             	     	
+	<str id="TomcatParamsPanel.requiredIP" txt="[glg]Es obligatorio especificar la IP de la máquina en la que se encuentra Tomcat"/>         	     	
+	<str id="TomcatParamsPanel.requiredPort" txt="[glg]Es obligatorio especificar el puerto de instalación de Tomcat"/>         	     	     	
+	<str id="TomcatParamsPanel.ipFormatNotCorrect" txt="[glg]La dirección IP especificada no tiene un formato correcto"/>         	     	     	
+	<str id="TomcatParamsPanel.portFormatNotValid" txt="[glg]El puerto especificado no tiene un valor numérico"/>
+
+    <!--Panel TomcatPanel-->	
+    <str id="TomcatPanel.startingTomcatInstall" txt="[glg]Comienza la instalación de Tomcat. Espere unos instantes, por favor..."/>
+    <str id="TomcatPanel.sucess" txt="A instalación rematou con éxito"/>
+    <str id="TomcatPanel.failure" txt="Produciuse un erro na instalación. Non se pode continuar."/>
+    <str id="TomcatPanel.failureUnpacking" txt="Produciuse un erro na instalación ó desempaquetar Tomcat."/>    
+    <str id="TomcatPanel.failureCreatingNewUser" txt="Produciuse un erro na instalación ó crear o novo usuario tomcat."/>
+    <str id="TomcatPanel.failureChangingOwner" txt="Produciuse un erro na instalación ó cambiar de propietario no directorio de instalación de tomcat."/>    
+    <str id="TomcatPanel.failureExecutingScript" txt="Produciuse un erro na instalación ó lanzar tomcat como servizo."/>        
+    <str id="TomcatPanel.found" txt="Servidor Tomcat atopado no enderezo: "/>	
+    <str id="TomcatPanel.notfound" txt="Servidor Tomcat non atopado. Non se pode continuar."/>    
+    <str id="TomcatPanel.install" txt="Pulsando no seguinte botón instalarase Tomcat"/>
+    <str id="TomcatPanel.progressInstall" txt="[glg]Progreso de la instalación de Tomcat"/>  
+    <str id="TomcatPanel.progressCheck" txt="[glg]Comprobación de la instalación de Tomcat"/>       
+    <str id="TomcatPanel.actionInstall" txt="Instalar"/>
+    <str id="TomcatPanel.check" txt="Pulsando no seguiente botón comprobarase a conexión con Tomcat"/>
+    <str id="TomcatPanel.actionCheck" txt="Comprobar"/>
+    <str id="OptionPane.incorrectLinuxType" txt="A distribución de Linux no é compatible para este instalador"/>
+    <str id="OptionPane.incorrectOS" txt="[glg]El sistema operativo en el que se está ejecutando este instalador no está soportado por LocalGIS"/>
+    <str id="OptionPane.postgresAlreadyInstalled" txt="[glg]Se ha detectado una instalación de PostgreSQL que se encuentra activa. Por favor, desinstálela o bien instale el nuevo PostgreSQL en un puerto diferente"/>
+    <str id="OptionPane.tomcatAlreadyInstalled" txt="[glg]Se ha detectado una instalación de Tomcat que se encuentra activa. Por favor, desinstálela o bien instale el nuevo Tomcat en un puerto diferente"/>
+
+ 	<!-- Panel MapServerPanel--> 
+    <str id="MapServerPanel.requiredUrl" txt="[glg]Debe rellenar la URL de Map Server"/>	
+    <str id="MapServerPanel.ipMapServer" txt="[glg]IP Map Server:"/>
+    <str id="MapServerPanel.portMapServer" txt="[glg]Puerto Map Server:"/>
+    <str id="MapServerPanel.userMapServer" txt="[glg]Usuario Map Server:"/>
+    <str id="MapServerPanel.tip.IP" txt="[glg]  IP: Se recomienda que la direccion IP introducida sea una dirección accesible desde el exterior."/>
+    <str id="MapServerPanel.tip.Usuario" txt="[glg]  Usuario: Usuario con el que se ejecutará el MapServer."/>
+    
+ 	<!-- Panel SSLPanel--> 
+    <str id="SSLPanel.malportSSL" txt="[glg]Puerto incorrecto"/>	
+    <str id="SSLPanel.nopassSSL" txt="[glg]Debe introducir un password"/>
+    <str id="SSLPanel.difpassSSL" txt="[glg]Son diferentes los passwords introducidos"/>
+    <str id="SSLPanel.portSSL" txt="[glg]Puerto sobre el que se realizará la conexión segura"/>
+    <str id="SSLPanel.passSSL" txt="[glg]Introduzca el password para el almacén de claves"/>
+    <str id="SSLPanel.repassSSL" txt="[glg]Vuelva a introducir el password"/>
+    <str id="SSLPanel.nombre" txt="[glg]Nombre y apellidos"/>
+    <str id="SSLPanel.unitOrg" txt="[glg]Unidad de la organización"/>
+    <str id="SSLPanel.org" txt="[glg]Nombre de la organización"/>
+    <str id="SSLPanel.ciudad" txt="[glg]Ciudad"/>
+    <str id="SSLPanel.provincia" txt="[glg]Provincia"/>
+    <str id="SSLPanel.letras" txt="[glg]Dos primeras letras del país"/>
+    <str id="SSLPanel.datosVacios" txt="[glg]Debe rellenar todos los campos"/>
+    <str id="SSLPanel.validaCampoLetras" txt="[glg]Debe introducir dos caracteres en el campo 'Dos primeras letras del país'"/>
+    <str id="SSLPanel.lengthPass" txt="[glg]La longitud del password debe ser como mínimo de 6 caracteres"/>
+
+ 	<!-- Panel Finalizacion Configuracion--> 
+    <str id="FinishConfigPanel.tip" txt="[glg]Finalizacion de la configuracion:"/>
+    <str id="FinishConfigPanel.heading" txt="[glg]Finalizacion de la configuracion"/>
+    <str id="FinishConfigPanel.progress" txt="[glg]Progreso"/>
+  	
+ 	
+    </langpack>

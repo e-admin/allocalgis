@@ -1,0 +1,13 @@
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f add_backup_entidad.sql
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f capas_dinamicas_entidad.sql
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f 01-09-2010.sql
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f 27-10-2010.sql
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f actualizar_capa_Parcelas.sql
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f inventario_patrimonio.sql
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f asociarViasCatastroINE.sql
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f 05-01-2011.sql
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f 16-03-2011.sql
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f 22-03-2011.sql
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f 4-05-2011.sql
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f 31-05-2011.sql
+psql.exe -d geopista -U geopista -h 213.164.32.203 -f contornoMunicipios.sql

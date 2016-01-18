@@ -1,0 +1,20 @@
+ <Call name="addListener">
+    <Arg>
+      <New class="org.mortbay.http.SslListener">
+        <Set name="Port">
+          <SystemProperty name="jetty.port" default="9443" />
+        </Set>
+		<Set name="Keystore"><SystemProperty name="jetty.home" default="C:/storesFNMT/"/>keystore</Set>
+		<Set name="password">password</Set>
+        <Set name="keyPassword">password</Set>
+        <Set name="Truststore"><SystemProperty name="jetty.home" default="C:/storesFNMT/"/>truststore</Set>
+		<Set name="TruststorePassword">password</Set>
+        <Set name="MinThreads">10</Set>
+        <Set name="MaxThreads">100</Set>
+        <Set name="MaxIdleTimeMs">30000</Set>
+        <Set name="LowResourcePersistTimeMs">5000</Set>
+        <Set name="NeedClientAuth">true</Set>  
+        <Set name="WantClientAuth">true</Set>         
+      </New>
+    </Arg>
+  </Call>  

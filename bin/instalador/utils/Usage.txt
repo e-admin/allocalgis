@@ -1,0 +1,23 @@
+
+Nos colocamos en el directorio donde se descomprimen todos los war (Directorio work) y ejecutamos esto
+desde el directorio 
+
+/opt/jetty/work
+
+
+
+export CLASSPATH=$CLASSPATH:/usr/local/LocalGIS/bin/instalador/utils
+for file in `find . -name "*.jar" -exec grep -l "GEOPISTA.DSA" {} \; `; do java RemoveSign $file; done
+
+
+
+Para subir ficheros y jar individuales
+No firmados
+(alias cp='cp -vf';for file in *.jar; do echo $file; for file2 in `find /opt/jetty/work -name $file`;  do echo $file2;cp $file $file2; done; done)
+cp localgis-security-3.0.jar /opt/jetty/lib/ext/localgis-security-3.0.jar
+
+Firmados
+(alias cp='cp -vf';for file in *.jar; do echo $file; for file2 in `find /var/lib/tomcat7/webapps/software -name $file`;  do echo $file2;cp $file $file2; done; done)
+(alias cp='cp -vf';for file in *.jar; do echo $file; for file2 in `find /opt/apache-tomcat-7.0.41/webapps/software/ -name $file`;  do echo $file2;cp $file $file2; done; done)
+
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geopista_nucleo">
+
+  <resultMap class="com.localgis.web.core.model.GeopistaNucleo" id="GeopistaNucleoResult">
+    <result column="id" jdbcType="NUMERIC" property="id"/>   
+    <result column="id_municipio" jdbcType="VARCHAR" property="idMunicipio"/>   
+    <result column="codprov" jdbcType="VARCHAR" property="idProvincia"/>  
+    <result column="codentidad" jdbcType="VARCHAR" property="codEntidad"/>  
+    <result column="codpoblamiento" jdbcType="VARCHAR" property="idPoblamiento"/>  
+    <result column="nombre_oficial" jdbcType="VARCHAR" property="nombreoficial"/>
+    <result column="geometria" jdbcType="VARCHAR" property="geometria"/>
+     
+  </resultMap>
+
+  <resultMap class="com.localgis.web.core.model.BoundingBox" id="BoundingBoxResult">
+    <result column="minx" jdbcType="NUMERIC" property="minx"/>
+    <result column="miny" jdbcType="NUMERIC" property="miny"/>
+    <result column="maxx" jdbcType="NUMERIC" property="maxx"/>
+    <result column="maxy" jdbcType="NUMERIC" property="maxy"/>
+  </resultMap>
+
+  <select id="selectAll" resultMap="GeopistaNucleoResult">
+        select id, id_municipio, codprov,  codentidad, 
+       codpoblamiento, nombre_oficial, box(transform("GEOMETRY",4258)) as geometria 
+  	from eiel_c_nucleo_poblacion;      
+  </select>
+
+  <select id="selectNucleoById" resultMap="GeopistaNucleoResult">
+    select id, id_municipio, codprov,  codentidad, 
+       codpoblamiento, nombre_oficial, box(transform("GEOMETRY",4258)) as geometria 
+  	from eiel_c_nucleo_poblacion
+    where id_municipio = #idMunicipio#
+  </select>
+
+  <select id="selectNucleoByIdMunicipio" resultMap="GeopistaNucleoResult">
+    select id, id_municipio, codprov,  codentidad, 
+       codpoblamiento, nombre_oficial, box(transform("GEOMETRY",4258)) as geometria 
+  	from eiel_c_nucleo_poblacion
+    where id_municipio = #idMunicipio#
+  </select>
+
+</sqlMap>

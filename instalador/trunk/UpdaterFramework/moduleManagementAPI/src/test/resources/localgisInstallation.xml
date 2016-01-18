@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules>
+	<module id="LocalGIS Core">
+		<name>LocalGIS Core</name>
+		<version>1.0.0</version>
+		<dependencyInfo>
+			<incompatibilities>
+				<module>
+					<name>moduleIncompatible</name>
+					<version>1.0.2</version>
+				</module>
+			</incompatibilities>
+		</dependencyInfo>
+	</module>
+
+	<module id="Workbench-2.1.3">
+		<name>Workbench</name>
+		<version>2.1.3</version>
+		<dependencyInfo>
+			<dependencies>
+				<module>
+					<name>LocalGIS Core</name>
+					<version>1.0.0</version>
+				</module>
+				<module>
+					<name>Core</name>
+					<version>1.0.0</version>
+				</module>
+			</dependencies>
+			<incompatibilities>
+				<module>
+					<name>moduleIncompatible</name>
+					<version>1.0.2</version>
+				</module>
+			</incompatibilities>
+		</dependencyInfo>
+	</module>
+	<module id="Core-1.0.0">
+		<name>Core</name>
+		<version>1.0.0</version>
+		<dependencyInfo>
+			<dependencies>
+				<module>
+					<name>LocalGIS Core</name>
+					<version>1.0.0</version>
+				</module>
+			</dependencies>
+			<incompatibilities>
+				<module>
+					<name>moduleIncompatible</name>
+					<version>1.0.2</version>
+				</module>
+			</incompatibilities>
+		</dependencyInfo>
+	</module>
+</modules>

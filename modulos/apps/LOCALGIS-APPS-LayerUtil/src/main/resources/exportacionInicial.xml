@@ -1,0 +1,46 @@
+<InitialExport>
+	<Tables>
+		<Table>eiel_tr_abast_de_pobl</Table>
+		<Table>eiel_t_nucl_encuest_1</Table>
+		<Table>eiel_t_nucl_encuest_2</Table>
+	</Tables>
+	<Domains>
+		<Domain>Aprovechamiento</Domain>
+		<Domain>Clase Bien Revertible</Domain>
+		<Domain>Clase Credito</Domain>
+		<Domain>Clase Derechos Reales</Domain>
+		<Domain>Clase Muebles</Domain>
+		<Domain>Clase Rustica</Domain>
+		<Domain>Clase Urbana</Domain>
+		<Domain>Clase Valor Mobiliario</Domain>
+		<Domain>Clasificación contable</Domain>
+		<Domain>Clasificacion de los Bienes del Patrimonio</Domain>
+		<Domain>Concepto Credito y Derecho</Domain>
+		<Domain>Diagnosis</Domain>
+		<Domain>Estado de conservación</Domain>
+		<Domain>Etapas crecimiento y Desarrollo semoviente</Domain>
+		<Domain>Forma de adquisicion</Domain>
+		<Domain>Formato Informe</Domain>
+		<Domain>Raza Semoviente</Domain>
+		<Domain>Subclase Credito</Domain>
+		<Domain>Tipo de Amortizacion</Domain>
+		<Domain>Tipo de bien patrimonial</Domain>
+		<Domain>Tipo de carpintería</Domain>
+		<Domain>Tipo de construcción</Domain>
+		<Domain>Tipo de cubierta</Domain>
+		<Domain>Tipo de fachada</Domain>
+		<Domain>Tipo de propiedad patrimonial</Domain>
+		<Domain>Tipo Documento</Domain>
+		<Domain>Tipo lotes</Domain>
+		<Domain>Tipos de via normalizados del INE</Domain>
+		<Domain>Tipo Vehiculo</Domain>
+		<Domain>Traccion</Domain>
+		<Domain>Transmision</Domain>
+		<Domain>Uso Funcional</Domain>
+		<Domain>Uso jurídico del bien</Domain>
+	</Domains>
+<!-- <Layers>
+		<Layer>CA_TC</Layer>
+		<Layer>39100calles</Layer>
+	</Layers> -->
+</InitialExport>

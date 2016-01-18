@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="com.localgis.webapp.RegistryWebApp-0.0.1-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="localgis-model-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-model/localgis-model">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-context-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-context/localgis-context">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-security-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-security/localgis-security">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-resources-context-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-resources-context/localgis-resources-context">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-cifrado-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-cifrado/localgis-cifrado">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-const-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-const/localgis-const">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-geotools-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-geotools/localgis-geotools">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-xml2java-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-xml2java/localgis-xml2java">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-contextutils-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-contextutils/localgis-contextutils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-utils-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/localgis-utils/localgis-utils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/com.localgis.webapp.RegistryWebApp-0.0.1-SNAPSHOT/target/classes"/>
+        <property name="context-root" value="localgis-gestorfip-ws"/>
+    </wb-module>
+</project-modules>

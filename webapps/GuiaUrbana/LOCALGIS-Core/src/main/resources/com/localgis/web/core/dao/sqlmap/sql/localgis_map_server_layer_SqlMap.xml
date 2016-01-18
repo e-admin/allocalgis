@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="localgis_map_server_layer">
+
+  <resultMap class="com.localgis.web.core.model.LocalgisMapServerLayer" id="LocalgisMapServerLayerResult">
+    <result column="id" jdbcType="INTEGER" property="id"/>
+    <result column="service" jdbcType="VARCHAR" property="service"/>
+    <result column="url" jdbcType="VARCHAR" property="url"/>
+    <result column="layers" jdbcType="VARCHAR" property="layers"/>
+    <result column="srs" jdbcType="VARCHAR" property="srs"/>
+    <result column="format" jdbcType="VARCHAR" property="format"/>
+    <result column="version" jdbcType="VARCHAR" property="version"/>
+    <result column="activa" jdbcType="NUMERIC" property="activa"/>
+    <result column="visible" jdbcType="NUMERIC" property="visible"/>
+    <result column="mapid" jdbcType="INTEGER" property="mapid"/>
+    <result column="position" jdbcType="INTEGER" property="position"/>
+    <result column="idgeopista" jdbcType="INTEGER" property="idgeopista"/>
+  </resultMap>
+
+  <select id="selectMapServerLayersByIdMap" parameterClass="java.util.Map" resultMap="LocalgisMapServerLayerResult">
+    select l.id as id,
+           l.service as service,
+           l.url as url,
+           l.layers as layers,
+           l.srs as srs,
+           l.format as format,
+           l.version as version,
+           l.activa as activa,
+           l.visible as visible,
+           l.mapid as mapid,
+           l.position as position,
+           l.idgeopista as idgeopista
+    from localgisguiaurbana.map_server_layer l
+    where l.mapid = #idMap#
+  </select>
+
+  <select id="selectMapServerLayersByIdMunicipio" parameterClass="java.util.Map" resultMap="LocalgisMapServerLayerResult">
+    select l.id as id,
+           l.service as service,
+           l.url as url,
+           l.layers as layers,
+           l.srs as srs,
+           l.format as format,
+           l.version as version,
+           l.activa as activa,
+           l.visible as visible,
+           l.mapid as mapid,
+           l.position as position,
+           l.idgeopista as idgeopista
+    from localgisguiaurbana.map m, localgisguiaurbana.map_server_layer l
+    where m.mapid = l.mapid and
+          m.mapidmunicipio = #idMunicipio# and
+          m.mappublic = #publicMaps#
+  </select>
+
+  <delete id="deleteMapServerLayersByIdMap" parameterClass="java.util.Map" >
+    delete from localgisguiaurbana.map_server_layer
+    where mapid = #idMap#
+  </delete>
+
+</sqlMap>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="localgis_restricted_attribute" >
+
+  <resultMap id="LocalgisRestrictedAttributeResult" class="com.localgis.web.core.model.LocalgisRestrictedAttribute" >
+    <result column="layeridgeopista" property="layeridgeopista" jdbcType="INTEGER" />
+    <result column="attributeidgeopista" property="attributeidgeopista" jdbcType="INTEGER" />
+    <result column="identidad" property="identidad" jdbcType="INTEGER" />
+    <result column="mappublic" property="mappublic" jdbcType="SMALLINT" />
+    <result column="idalias" property="idalias" jdbcType="INTEGER" />
+    <result column="alias" property="alias" jdbcType="VARCHAR" />
+  </resultMap>
+
+   
+  <delete id="deleteByPrimaryKey" parameterClass="com.localgis.web.core.model.LocalgisRestrictedAttribute" >
+    delete from localgisguiaurbana.restricted_attribute
+    where layeridgeopista = #layeridgeopista:INTEGER# and
+    	  attributeidgeopista = #attributeidgeopista:INTEGER# and
+    	  mappublic = #mappublic:SMALLINT# and
+    	  identidad = #identidad:INTEGER#
+  </delete>
+   
+  <insert id="insertRestrictedAttribute" parameterClass="com.localgis.web.core.model.LocalgisRestrictedAttribute" >
+      insert into localgisguiaurbana.restricted_attribute (layeridgeopista,attributeidgeopista,identidad,mappublic,idalias) values (#layeridgeopista:INTEGER#, #attributeidgeopista:INTEGER#, #identidad:INTEGER#,#mappublic:SMALLINT# ,#idalias:INTEGER#)
+  </insert>
+   
+  <select id="selectRestrictedAttributesByLayerAndByPublic" parameterClass="java.util.Map" resultMap="LocalgisRestrictedAttributeResult">
+      select r.layeridgeopista as layeridgeopista,
+      		 r.attributeidgeopista as attributeidgeopista,
+       		 r.identidad as identidad,
+       		 r.mappublic as mappublic,
+       		 r.idalias as idalias,
+       		 d.traduccion as alias
+	  from localgisguiaurbana.restricted_attribute r
+	        left outer join dictionary d on (r.idalias=d.id_vocablo) and d.locale = #locale#
+	  where r.layeridgeopista = #idLayer# 
+      		and r.mappublic = #mapasPublicos#
+      		and r.identidad = #idEntidad#
+  </select>
+
+</sqlMap>

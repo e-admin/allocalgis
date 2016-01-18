@@ -1,0 +1,61 @@
+Guide for developers for creating a new release
+-----------------------------------------------
+
+0. Make sure, the current version compiles and works
+   nicely.
+
+1. Change Version number (N.N.N) in VERSION 
+   in src/de/latlon/deejump/plugin/wfs/Version.java
+
+
+2. Update file
+   Changes.txt
+   which summarizes ChangeLog for normal users.
+
+3. Check in the three files together with ChangeLog.
+   See the last release information in ChangLog.
+
+4. $ ant clean dist
+   $ cd ..
+
+5. $ export VERSION=1.1.0
+   $ mkdir WFSPlugin-${VERSION}
+   $ cp WFSPlugin/INSTALL.txt WFSPlugin-${VERSION}
+   $ cp WFSPlugin/dist/wfsplugin-YYYYMMDD.jar WFSPlugin-${VERSION}/wfsplugin.jar
+   $ cd WFSPlugin-${VERSION}
+   $ svn export
+   http://jump-pilot.svn.sourceforge.net/svnroot/jump-pilot/plug-ins/WFSPlugin/trunk WFSPlugin-${VERSION}
+
+   (check whether the anonymous SVN is in sync with the master SVN.
+   The following command should not result anything, ie. files are
+   identical. If the diff commands shows differences, you need
+   to wait until the anonymous SVN has catched up or use your
+   write access acount for getting the current contents)
+   $ diff WFSPlugin/ChangeLog ../WFSPlugin/ChangeLog
+
+   $ zip -r WFSPlugin-N.N.N.src.zip WFSPlugin
+   $ rm -rf WFSPlugin
+   $ cd ..
+   $ zip -r WFSPlugin-N.N.N.zip WFSPlugin-N.N.N
+
+6. Tag release:
+   $ svn copy . ../tags/release_WFSPlugin-N.N.N
+   
+7. Upload to SourceForge:
+   $ ftp upload.sourceforge.net
+   Login as "anonymous"
+   Use your e-mail address as the password for this login
+   ftp> bin
+   ftp> cd /incoming
+   ftp> put WFSPlugin-N.N.N.zip
+   ftp> exit
+
+8. Create release "N.N.N" on SourceForge
+
+9. Send a announcement mail to jump-users@lists.jump-project.org,
+   jump-devel@lists.jump-project.org, freegis-list@intevation.de, 
+   geoserver-users@lists.sourceforge.net,
+   deegree-users@lists.sourceforge.net,
+   deegree-devel@lists.sourceforge.net
+
+

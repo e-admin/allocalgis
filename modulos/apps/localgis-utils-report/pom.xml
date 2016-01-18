@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.localgis.utils</groupId>
+  <artifactId>localgis-utils-report</artifactId>
+  <name>LOCALGIS-UTILS-report</name>
+  <parent>
+		<artifactId>localgis-parent</artifactId>
+		<groupId>com.localgis</groupId>
+		<version>3.0</version>
+	</parent>
+	
+    <dependencies>
+
+    <dependency>
+    	<groupId>com.localgis.const</groupId>
+    	<artifactId>localgis-const</artifactId>
+    	<version>3.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.localgis.model</groupId>
+    	<artifactId>localgis-model-eiel</artifactId>
+    	<version>3.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.localgis.web</groupId>
+    	<artifactId>localgis-core</artifactId>
+    	<version>3.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.localgis.model</groupId>
+    	<artifactId>localgis-model-report</artifactId>
+    	<version>3.0</version>
+    </dependency>
+        <!-- 
+    <dependency>
+  		<groupId>jasperreports</groupId>
+  		<artifactId>jasperreports</artifactId>
+  		<version>3.5.3</version>
+  	</dependency>
+    -->	    
+	<dependency>
+		<groupId>commons-collections</groupId>
+		<artifactId>commons-collections</artifactId>
+		<version>3.2.1</version>
+	</dependency>
+    <dependency>
+    	<groupId>net.sf.jasperreports</groupId>
+    	<artifactId>jasperreports</artifactId>
+    	<version>5.0.1</version>
+    </dependency>
+    </dependencies>
+</project>

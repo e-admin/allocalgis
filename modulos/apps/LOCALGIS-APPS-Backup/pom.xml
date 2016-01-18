@@ -1,0 +1,73 @@
+<!-- Configuracion jnlp --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.app</groupId>
+	<artifactId>localgis-apps-backup</artifactId>
+	<version>3.0</version>
+	<name>LocalGIS BACKUP</name>
+	<organization>
+		<name>MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO</name>
+	</organization>
+	<description>Open Source GIS client. Backup</description>
+	
+	<parent>
+		<groupId>com.localgis</groupId>
+		<artifactId>localgis-parent-apps</artifactId>
+		<version>3.0</version>
+	</parent>
+	
+	<properties>
+		<!-- Configuracion jnlp -->
+		<mainClassJnlp>com.geopista.app.backup.ui.BackupApp</mainClassJnlp>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.localgis.context</groupId>
+			<artifactId>localgis-context</artifactId>
+			<version>3.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>postgis-stubs</artifactId>
+					<groupId>org.postgis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.protocol</groupId>
+			<artifactId>localgis-protocol</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.ui</groupId>
+			<artifactId>localgis-ui</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.utils</groupId>
+			<artifactId>localgis-utils</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.model</groupId>
+			<artifactId>localgis-model</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.workbench</groupId>
+			<artifactId>localgis-workbench</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<!--version>9.0-801.jdbc3</version-->
+			<version>8.0-318.jdbc3</version>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+	</dependencies>
+</project>

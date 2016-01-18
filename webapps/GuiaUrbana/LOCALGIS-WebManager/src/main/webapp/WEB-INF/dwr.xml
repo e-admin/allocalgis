@@ -1,0 +1,40 @@
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN"
+    "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+
+<dwr>
+  <allow>
+    <create creator="new" javascript="JAttribute">
+      <param name="class" value="com.localgis.web.wm.dwr.Attributes"/>
+    </create>   
+    <create creator="new" javascript="JMap">
+      <param name="class" value="com.localgis.web.wm.dwr.Map"/>
+    </create>
+	<create creator="new" javascript="JCSS">
+      <param name="class" value="com.localgis.web.wm.dwr.CSS"/>
+    </create>  
+    	<create creator="new" javascript="JLegend">
+      <param name="class" value="com.localgis.web.wm.dwr.Legend"/>
+    </create>   
+    <create creator="new" javascript="SSOAuthCheckService">
+      <param name="class" value="com.localgis.web.wm.dwr.SSOAuthCheckService"/>
+    </create>             
+    <convert converter="bean" match="com.localgis.web.core.model.GeopistaColumn">
+    	 <param name="include" value="idAttributeGeopista,alias,idAlias,name"/>
+	</convert>
+	<convert match="com.localgis.web.core.model.LocalgisRestrictedAttribute" converter="bean">
+		<param name="include" value="attributeidgeopista,alias,idalias"/>
+	</convert>
+	<convert match="com.localgis.web.core.model.LocalgisMap" converter="bean">
+		<param name="include" value="mapdefault,mapidgeopista,mapidentidad,mapid,name"/>
+	</convert>
+		<convert match="com.localgis.web.core.model.GeopistaMap" converter="bean">
+		<param name="include" value="entidadId,idMap,name"/>
+	</convert>
+	<convert match="java.lang.Exception" converter="exception">
+		 <param name='include' value='message,lineNumber'/>
+	</convert>
+	 
+	  
+  </allow>
+</dwr>

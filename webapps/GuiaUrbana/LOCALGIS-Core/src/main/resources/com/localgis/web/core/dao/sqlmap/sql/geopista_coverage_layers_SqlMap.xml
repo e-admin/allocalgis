@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="geopista_coverage_layers" >
+  
+  <resultMap id="GeopistaCoverageLayerResult" class="com.localgis.web.core.model.GeopistaCoverageLayer" >
+    <result column="idMunicipio" property="idMunicipio" jdbcType="NUMERIC" />
+    <result column="idName" property="idName" jdbcType="NUMERIC" />
+    <result column="descPath" property="descPath" jdbcType="VARCHAR" />
+    <result column="srs" property="srs" jdbcType="VARCHAR" />
+    <result column="extension" property="extension" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <select id="selectCoverageLayerByIdMunicipio" resultMap="GeopistaCoverageLayerResult" parameterClass="java.util.Map" >
+    select cl.id_municipio as idMunicipio, cl.id_name as idName, cl.desc_path as descPath, cl.srs as srs, cl.extension as extension
+    from coverage_layers cl
+    where cl.id_municipio = #idMunicipio#
+  </select>
+
+</sqlMap>

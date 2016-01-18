@@ -1,0 +1,36 @@
+﻿&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>
+<br>
+&lt;!--<br>
+    Document   : iReportPlugin.dtd<br>
+    Created on : 19 maggio 2004, 8.09<br>
+    Author     : Giulio Toffoli<br>
+    Description: This DTD define the XML descriptor for an iReport plugin.    <br>
+--&gt;<br>
+<br>
+&lt;!-- <br>
+    iReportPlugin is the root element.<br>
+    ATTRIBUTES:<br>
+    name          The name of plugin<br>
+    class         The class that extends <br>
+                            it.businesslogic.ireport.plugin.IReportPlugin<br>
+    loadOnStartup If true, the plugin will be instanced on iReport startup<br>
+    hide          If true, this plugin will be not visible on plugin menu<br>
+--&gt;        <br>
+&lt;!ELEMENT iReportPlugin (Author?,Description?, IconFile?)&gt;<br>
+&lt;!ATTLIST iReportPlugin<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name NMTOKEN #REQUIRED<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class NMTOKEN #REQUIRED<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loadOnStartup (true | false) "false"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hide (true | false) "false"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;congigurable (true | false) "false"<br>
+&gt;<br>
+<br>
+&lt;!ELEMENT Author (#PCDATA)&gt;<br>
+&lt;!ELEMENT Description (#PCDATA)&gt;<br>
+<br>
+&lt;!--<br>
+    Icon file should be a file in the classpath i.e. com/my/plug/in/icon.gif<br>
+    Is used as optional icon for menu.<br>
+    Dim: 16x16 <br>
+--&gt;<br>
+&lt;!ELEMENT IconFile (#PCDATA)&gt;<br>

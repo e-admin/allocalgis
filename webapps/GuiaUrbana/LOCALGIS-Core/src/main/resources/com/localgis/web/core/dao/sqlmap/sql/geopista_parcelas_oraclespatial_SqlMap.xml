@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geopista_parcelas">
+
+  <select id="selectParcelaByReferenciaCatastral" resultMap="GeopistaParcelaResult">
+    select id, id_municipio, referencia_catastral, SDO_GEOM.SDO_CENTROID("GEOMETRY", metadata.diminfo).SDO_POINT.X as x_centered, SDO_GEOM.SDO_CENTROID("GEOMETRY", metadata.diminfo).SDO_POINT.Y as y_centered
+    from parcelas, user_sdo_geom_metadata metadata
+    where lower(referencia_catastral) = lower(#referenciaCatastral#) and fecha_baja is null and metadata.table_name = 'PARCELAS' and metadata.column_name = 'GEOMETRY'
+  </select>
+  
+  <select id="selectBox3DByReferenciaCatastral" parameterClass="java.util.Map" resultMap="BoundingBoxResult">
+    select SDO_GEOM.SDO_MIN_MBR_ORDINATE("GEOMETRY", 1) as minx, SDO_GEOM.SDO_MIN_MBR_ORDINATE("GEOMETRY", 2) as miny, SDO_GEOM.SDO_MAX_MBR_ORDINATE("GEOMETRY", 1) as maxx, SDO_GEOM.SDO_MAX_MBR_ORDINATE("GEOMETRY", 2) as maxy
+    from parcelas 
+    where lower(referencia_catastral) = lower(#referenciaCatastral#) and fecha_baja is null
+  </select>
+
+</sqlMap>

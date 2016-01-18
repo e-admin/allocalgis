@@ -1,0 +1,37 @@
+<index version="1.0">
+    <indexitem text="(C)Contenidos">
+        <indexitem text="(C)Introducción" target="licenciasIntro"/>
+        <indexitem text="(C)Usuarios">
+            <indexitem text="(C)Usuarios y permisos" target="licenciasUsuarios"/>
+        </indexitem>
+        <indexitem text="(C)WorkFlow">
+            <indexitem text="(C)Obra Mayor" target="licenciasWFObraMayor"/>
+            <indexitem text="(C)Obra Menor" target="licenciasWFObraMenor"/>
+        </indexitem>
+        <indexitem text="(C)Opciones de Menú" target="licenciasOpcionesMenu"/>
+        <indexitem text="(C)Creación de una Licencia">
+            <indexitem text="(C)Obra Mayor" target="licenciasCreacionObraMayor"/>
+            <indexitem text="(C)Obra Menor" target="licenciasCreacionObraMenor"/>
+        </indexitem>
+        <indexitem text="(C)Modificación de una Licencia">
+            <indexitem text="(C)Obra Mayor" target="licenciasModificacionObraMayor"/>
+            <indexitem text="(C)Obra Menor" target="licenciasModificacionObraMenor"/>
+        </indexitem>
+        <indexitem text="(C)Consulta de una Licencia">
+            <indexitem text="(C)Obra Mayor" target="licenciasConsultaObraMayor"/>
+            <indexitem text="(C)Obra Menor" target="licenciasConsultaObraMenor"/>
+        </indexitem>
+        <indexitem text="(C)Informes" target="licenciasInformes"/>
+        <indexitem text="(C)Eventos">
+            <indexitem text="(C)Consulta de Eventos" target="licenciasConsultarEventos"/>
+            <indexitem text="(C)Últimos Eventos" target="licenciasUltimosEventos"/>
+        </indexitem>
+        <indexitem text="(C)Generación de Planos" target="licenciasPlanos"/>
+        <indexitem text="(C)Consulta de Notificaciones" target="licenciasNotificaciones"/>
+        <indexitem text="(C)Consulta del Histórico" target="licenciasHistorico"/>
+        <indexitem text="(C)Consulta de las Tareas Pendientes" target="licenciasTareasPendientes"/>
+		<indexitem text="(C)Configuración" target="licenciasConfiguracion"/>
+        <indexitem text="(C)Cambio de Idioma" target="licenciasIdioma"/>
+    </indexitem>
+</index>
+

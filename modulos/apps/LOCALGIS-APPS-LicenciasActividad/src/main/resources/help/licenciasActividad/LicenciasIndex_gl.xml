@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN" 
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+
+<index version="1.0">
+    <indexitem text="(GL)Contenidos">
+        <indexitem text="(GL)Introducción" target="licenciasIntro"/>
+        <indexitem text="(GL)Usuarios">
+            <indexitem text="(GL)Usuarios y permisos" target="licenciasUsuarios"/>
+        </indexitem>
+        <indexitem text="(GL)WorkFlow">
+            <indexitem text="(GL)Actividad Calificada" target="licenciasWFActividadCalificada"/>
+            <indexitem text="(GL)Actividad No Calificada" target="licenciasWFActividadNoCalificada"/>			
+        </indexitem>
+        <indexitem text="(GL)Opciones de Menú" target="licenciasOpcionesMenu"/>
+        <indexitem text="(GL)Creación de una Licencia">
+            <indexitem text="(GL)Actividad Calificada y No Calificada" target="licenciasCreacionActividad"/>
+        </indexitem>
+        <indexitem text="(GL)Modificación de una Licencia">
+            <indexitem text="(GL)Actividad Calificada y No Calificada" target="licenciasModificacionActividad"/>
+        </indexitem>
+        <indexitem text="(GL)Consulta de una Licencia">
+            <indexitem text="(GL)Actividad Calificada y No Calificada" target="licenciasConsultaActividad"/>
+        </indexitem>
+        <indexitem text="(GL)Informes" target="licenciasInformes"/>
+        <indexitem text="(GL)Eventos">
+            <indexitem text="(GL)Consulta de Eventos" target="licenciasConsultarEventos"/>
+            <indexitem text="(GL)Últimos Eventos" target="licenciasUltimosEventos"/>
+        </indexitem>
+        <indexitem text="(GL)Generación de Planos" target="licenciasPlanos"/>
+        <indexitem text="(GL)Consulta de Notificaciones" target="licenciasNotificaciones"/>
+        <indexitem text="(GL)Consulta del Histórico" target="licenciasHistorico"/>
+        <indexitem text="(GL)Consulta de las Tareas Pendientes" target="licenciasTareasPendientes"/>
+		<indexitem text="(GL)Configuración" target="licenciasConfiguracion"/>
+        <indexitem text="(GL)Cambio de Idioma" target="licenciasIdioma"/>
+    </indexitem>
+</index>
+

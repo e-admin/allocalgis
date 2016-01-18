@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench-state>
+  <properties>
+    <mapping>
+      <key class="java.lang.String">CONSTRAIN_ANGLE - ENABLED</key>
+      <value class="java.lang.Boolean">false</value>
+    </mapping>
+    <mapping>
+      <key class="java.lang.String">CONSTRAIN_LENGTH - ENABLED</key>
+      <value class="java.lang.Boolean">false</value>
+    </mapping>
+    <mapping>
+      <key class="java.lang.String">com.vividsolutions.jump.workbench.datasource.LoadFileDataSourceQueryChooser - FILE CHOOSER COORDINATE SYSTEM</key>
+      <value class="java.lang.String">UTM 28N WGS84</value>
+    </mapping>
+    <mapping>
+      <key class="java.lang.String">com.vividsolutions.jump.workbench.datasource.LoadFileDataSourceQueryChooser - FILE CHOOSER DIRECTORY</key>
+      <value class="java.lang.String">C:\Satec\Proyectos\LOCALGIS\Localgis.svn\LOCALGISIII.Arrecife\6Documentacion Externa\poligonos_municipio_etrs89</value>
+    </mapping>
+    <mapping>
+      <key class="java.lang.String">com.vividsolutions.jump.workbench.datasource.LoadDatasetPlugIn - LAST FORMAT</key>
+      <value class="java.lang.String">ESRI Shapefile</value>
+    </mapping>
+    <mapping>
+      <key class="java.lang.String">CONSTRAIN_INCREMENTAL_ANGLE - ENABLED</key>
+      <value class="java.lang.Boolean">false</value>
+    </mapping>
+  </properties>
+</workbench-state>
+

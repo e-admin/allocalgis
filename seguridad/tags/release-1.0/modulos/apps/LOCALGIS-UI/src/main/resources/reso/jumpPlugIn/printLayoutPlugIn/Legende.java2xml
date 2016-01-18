@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<root>
+  <element xml-name="titre" java-name="titre"/>
+  <element xml-name="element" java-name="element"/>
+</root>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<root>
+    <element xml-name="name" java-name="name"/>
+    <element xml-name="pattern" java-name="pattern"/>
+    <element xml-name="description" java-name="description"/>
+    <element xml-name="child" java-name="child"/>
+</root>

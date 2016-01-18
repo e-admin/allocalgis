@@ -1,0 +1,171 @@
+<workbench>	
+<!--<plug-in>net.surveyos.sourceforge.openjump.plugins.gpx.GpxReaderPlugIn</plug-in>-->
+<plug-in>com.geopista.ui.plugin.features.GetFeatureInfoPlugin</plug-in>
+<plug-in>com.geopista.ui.cursortool.editing.DrawPolygonPlugIn</plug-in>
+<plug-in>com.geopista.ui.cursortool.editing.DrawLineStringPlugIn</plug-in>
+<plug-in>com.geopista.ui.cursortool.editing.DrawPointPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.grid.GridOptionsPanelPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.selectitemsbyfencefromselectedlayers.SelectItemsByFenceFromSelectedLayersPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.selectitemsbycirclefromselectedlayers.SelectItemsByCircleFromSelectedLayersPlugIn</plug-in>
+<plug-in>com.geopista.ui.cursortool.symmetrictool.SymmetricPlugIn</plug-in>
+<plug-in>com.geopista.ui.cursortool.rotateselecteditems.RotateSelectedItemsPlugIn</plug-in>
+<plug-in>com.geopista.ui.cursortool.scaleselecteditemstool.ScaleSelectedItemsPlugIn</plug-in>
+<plug-in>com.geopista.ui.cursortool.cliptool.ClipPlugIn</plug-in>
+<plug-in>com.geopista.ui.cursortool.parallelitemstool.ParallelItemsPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.explodeselectedfeatures.ExplodeSelectedFeaturesPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.zoom.ZoomToLayerPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.zoom.ZoomToFullExtentPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.GeopistaAddNewLayerPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.NewMapPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.GeopistaLoadMapPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.GeopistaSaveMapPlugIn</plug-in>
+<plug-in> com.geopista.ui.plugin.GeopistaMapPropertiesPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.clipboard.GeopistaPasteItemsPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.GeopistaPrintPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.SeriePrintPlugIn</plug-in>
+<plug-in> com.geopista.ui.plugin.LoadSystemLayersPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.analysis.GeometryToPointPlugIn</plug-in>
+<plug-in> org.agil.core.jump.plugin.ScalableShapeFilePlugIn</plug-in>
+<!--<plug-in> org.agil.core.jump.plugin.DxfPlugIn</plug-in> -->
+<plug-in> org.agil.core.jump.plugin.ImageCoveragePlugIn</plug-in>  
+<plug-in>com.vividsolutions.jump.workbench.ui.plugin.UndoPlugIn</plug-in>
+<plug-in>com.vividsolutions.jump.workbench.ui.plugin.RedoPlugIn</plug-in>
+<plug-in>com.geopista.style.sld.ui.plugin.ChangeSLDStylesPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.GeopistaValidatePlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.GeopistaDeleteSelectedItemsPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.edit.GeopistaFeatureSchemaPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.edit.DocumentManagerPlugin</plug-in>
+<!--<plug-in>com.geopista.ui.plugin.edit.ImageManagerPlugin</plug-in>-->
+<plug-in>com.geopista.ui.plugin.edit.TextManagerPlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.edit.InventarioManagerPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.GeopistaOptionsPlugIn </plug-in> 
+<plug-in>com.geopista.ui.plugin.GeopistaBookmarksPlugIn</plug-in>
+<plug-in>fr.michaelm.jump.query.QueryPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.GeopistaNumerosPoliciaPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.analysis.GeopistaFusionPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.analysis.SegregatePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.GeopistaActivateLayerPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.ShowLegendPlugIn</plug-in>
+<!-- plug-in>com.geopista.ui.plugin.analysis.GeopistaFusionViasPlugIn</plug-in-->
+<plug-in>com.geopista.ui.plugin.analysis.GeopistaFusionViasStandalonePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.analysis.DistanceLinkingPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.InstallLegendPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.edit.GeopistaFeatureSchemaMultiplePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.LockFeaturesPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.InstallLockRendererPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.edit.EditSelectedFeaturePlugIn </plug-in>
+<plug-in>com.geopista.ui.plugin.io.dxf.DxfPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.edit.GeopistaFeatureCalculateMultiplePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.io.dgn.DGNDataSourcePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.io.arcIMS.AddArcIMSQueryPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.io.mrsid.AddSIDLayerPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.SynchronizePlugIn</plug-in>
+<plug-in>com.vividsolutions.jump.coordsys.ChangeCoordinateSystemPlugIn</plug-in>
+<!--<plug-in>com.geopista.ui.plugin.consultarOVCPlugIn</plug-in>-->
+<plug-in>com.vividsolutions.jump.coordsys.ChangeCoordinateSystemPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.tools.ChangeLayerCoordinateSystem</plug-in>
+<plug-in>com.geopista.ui.plugin.ExtractPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.searchplot.SearchPlotPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.ConnectMapPlugin</plug-in>
+<plug-in>com.vividsolutions.jump.workbench.ui.plugin.wms.AddWMSQueryPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.wms.ZoomToWMSPlugIn</plug-in>
+<plug-in>com.vividsolutions.jump.workbench.ui.plugin.wms.EditWMSQueryPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.profiles3D.Profiles3DPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.georeference.FileGeoreferencePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.georeference.FileGeoreferenceDataPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.georeference.FileGeoreferenceXYPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.selectallfeatures.SelectAllFeaturesPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.switchselection.SwitchSelectionPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.searchcatreference.SearchReferenciaCatastralPlugIn</plug-in>
+<!--
+Se quita de aqu� porque se ha a�adido en la clase GeopistaEditingPlugIn para que aparezca en los distintos
+modulos: licencias, ocupacion, ... 
+
+<plug-in>com.geopista.ui.cursortool.selectoneitem.SelectOneItemPlugIn</plug-in>
+-->
+
+<plug-in>com.geopista.ui.plugin.selectbytype.SelectByTypePlugIn</plug-in>
+<plug-in>com.geopista.ui.cursortool.drawconstrainedarc.DrawConstrainedArcPlugIn</plug-in>
+<plug-in>com.geopista.ui.cursortool.drawconstrainedcircle.DrawConstrainedCirclePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.external.ExternalDataSourcePlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.external.QueryExternalDataSourcePlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.external.CapasExtendidasPlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.zoomtoarea.ZoomToAreaPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.extractautocad.ExtractAutoCADPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.loadautocadmap.LoadAutoCADMapPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.synchronizeautocad.SynchronizeAutoCADPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.wfs.WfsClientPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.features.GetFeatureInfoPlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.MunicipalitiesPlugIn</plug-in>
+<!--  Herramientas de Aguas
+<plug-in>com.geopista.ui.plugin.waternetwork.toolbox.WaterNetworkPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.waternetwork.join.JoinPipePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.waternetwork.join.JoinReservoirPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.waternetwork.join.JoinValvePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.waternetwork.join.JoinPoliceNumberPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.waternetwork.network.NetworkPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.waternetwork.epanet.EpanetPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.waternetwork.shutoff.ShutOffPoliceNumberPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.waternetwork.shutoff.ShutOffValvePlugIn</plug-in>
+-->
+
+<!--<plug-in>com.geopista.ui.plugin.routeenginetools.leerreddelocal.LeerRedDeLocalPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.leerreddebase.LeerRedDeBasePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.guardarredenbase.GuardarRedEnBasePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.guardarredenlocal.GuardarRedEnLocalPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.toolboxnetwork.GeopistaNetworkEditingPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.dibujarredplugin.DibujarRedPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.genredplugin.GenerarRedPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.streetnetworkfactory.StreetNetworkFactoryPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.streetnetworkfactory.PMRStreetNetworkFactoryPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.networkfusion.NetworkFusionPlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.networklinks.NetworkLinksPlugin</plug-in> 
+<plug-in>com.geopista.ui.plugin.routeenginetools.deletenetworksplugin.RouteEngineDeleteNetworksPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.calculaterouteplugin.CalcularRutaPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.calculaterouteplugin.CalcularRutaClick</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.calculaterouteplugin.CalcularRutaDragClickPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.tsp.TSPClickPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.tsp.TSPAbiertoPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.tsp.TSPAbiertoForzadoPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.tsp.TSPCerradoPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.withincost.WithinCostPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.maxspeedplugin.MaxSpeedEditPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.trafficregulationplugin.TrafficRegulationViewPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.trafficregulationplugin.TrafficRegulationInvertPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.trafficregulationplugin.TrafficRegulationBidirectionalPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.turnimpedancesplugin.TurnImpedancesPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.incidents.IncidentInsertionPlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.temporalincidents.AddTemporalIncidentsPlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.temporalincidents.RemoveTemporalIncidentsPlugin</plug-in>-->
+<plug-in>com.geopista.ui.plugin.mobile.MobileExtractPlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.mobile.MobileAssignCellsPlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.mobile.MobileModifyPlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.selectalldynamicfence.SelectAllDynamicFencePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.deselectalldynamicfence.DeselectAllDynamicFencePlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.layers.LoadVersionedLayersPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.features.erased.RecoverErasedFeaturesPlugIn</plug-in>
+<!--<plug-in>com.localgis.app.gestionciudad.plugins.geomarketing.CircleInformationGeoMarketingPlugIn</plug-in>
+<plug-in>com.localgis.app.gestionciudad.plugins.geomarketing.DrawGeometryGeomarketingPlugIn</plug-in>
+<plug-in>com.localgis.app.gestionciudad.plugins.geomarketing.SelectedGeometryGeomarketingInfoPlugIn</plug-in>
+<plug-in>com.localgis.app.gestionciudad.plugins.geomarketing.LayerFeaturesGeoMarketingPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.importer.ImporterPlugIn</plug-in>
+<plug-in>com.geopista.app.eiel.plugin.eielloadmap.EIELLoadMapPlugIn</plug-in>
+<plug-in>com.geopista.app.eiel.plugin.eielsavemap.EIELSaveMapPlugIn</plug-in>-->
+<!--<plug-in>com.vividsolutions.jump.workbench.ui.cursortool.GenerateZebraCrossingPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.streetnetworkfactory.AddPMRParametersPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.loadparametersplugin.LoadParametersPlugIn</plug-in>-->
+<plug-in>de.latlon.deejump.wfs.plugin.WFSPlugIn</plug-in>
+<!--<plug-in>com.geopista.ui.plugin.edicionalfanum.DatosAlfanumericosManagerPlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.sadim.WSOtrosOrganismosPlugin</plug-in>
+<plug-in>com.geopista.ui.plugin.sadim.InteroperabilidadGestorExpedientesPlugin</plug-in>
+    <plug-in>com.geopista.app.eiel.plugin.unmarkall.UnmarkAllPlugIn</plug-in>
+   	<plug-in>com.geopista.app.eiel.plugin.invertselection.InvertSelectionPlugIn</plug-in>
+   	<plug-in>com.geopista.app.eiel.plugin.selectall.SelectAllPlugIn</plug-in>
+   	<plug-in>com.geopista.app.eiel.plugin.selectfamilylayers.SelectFamilyLayersPlugIn</plug-in>
+   	<plug-in>com.geopista.app.eiel.plugin.unmarkfamilylayers.UnmarkFamilyLayersPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.reload.ReloadLayerPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.streetnetworkfactory.AddPMRParametersPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.loadparametersplugin.LoadParametersPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.pavementfactory.GeneratePavementPlugIn</plug-in>
+<plug-in>com.geopista.ui.plugin.routeenginetools.pavementfactory.GenerateZebraCrossingAutoPlugIn</plug-in>-->
+</workbench>

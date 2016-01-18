@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.localgis.lib</groupId>
+  <artifactId>localgis-piroplugins</artifactId>
+  <name>LOCALGIS piroPlugins</name>
+  <version>3.0</version>
+  <url>http://maven.apache.org</url>
+  <parent>
+    <groupId>com.localgis</groupId>
+    <artifactId>localgis-parent</artifactId>
+    <version>3.0</version>
+  </parent>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.vividsolutions</groupId>
+  		<artifactId>jts</artifactId>
+  		<version>1.12</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.localgis.workbench</groupId>
+  		<artifactId>localgis-workbench</artifactId>
+  		<version>3.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>java3d</groupId>
+  		<artifactId>j3d-core</artifactId>
+  		<version>1.3.1</version>
+  	</dependency>
+  </dependencies>
+</project>

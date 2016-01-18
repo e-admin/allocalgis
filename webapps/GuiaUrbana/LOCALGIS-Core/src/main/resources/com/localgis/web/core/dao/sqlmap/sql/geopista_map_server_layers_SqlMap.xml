@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geopista_map_server_layers">
+
+  <resultMap class="com.localgis.web.core.model.GeopistaMapServerLayer" id="GeopistaMapServerLayerResult">
+    <result column="id" jdbcType="INTEGER" property="id"/>
+    <result column="service" jdbcType="VARCHAR" property="service"/>
+    <result column="url" jdbcType="VARCHAR" property="url"/>
+    <result column="params" jdbcType="VARCHAR" property="params"/>
+    <result column="srs" jdbcType="VARCHAR" property="srs"/>
+    <result column="format" jdbcType="VARCHAR" property="format"/>
+    <result column="version" jdbcType="VARCHAR" property="version"/>
+    <result column="activa" jdbcType="NUMERIC" property="activa"/>
+    <result column="visible" jdbcType="NUMERIC" property="visible"/>
+    <result column="position" jdbcType="INTEGER" property="position"/>
+  </resultMap>
+  
+  <select id="selectLayersByIdMapAndIdEntidad" parameterClass="java.util.Map" resultMap="GeopistaMapServerLayerResult">
+<!-- select msl.id, msl.service, msl.url, msl.params, msl.srs, msl.format, msl.version, msl.activa, msl.visible, mmslr."position"
+    from map_server_layers msl, maps_wms_relations mmslr
+    where msl.id = mmslr.id_mapserver_layer and
+          mmslr.id_map = #idMap# and
+           (mmslr.id_entidad = #idEntidad# or mmslr.id_entidad =0)
+    -->
+           
+    select distinct on (msl.id, msl.service, msl.url, msl.params, msl.srs, msl.format, msl.version, msl.activa, msl.visible)
+     msl.id, msl.service, msl.url, msl.params, msl.srs, msl.format, msl.version, msl.activa, msl.visible,mmslr."position",mmslr.id_entidad     
+     from map_server_layers msl, maps_wms_relations mmslr
+    	where msl.id = mmslr.id_mapserver_layer and
+          mmslr.id_map = #idMap# and
+           (mmslr.id_entidad = #idEntidad# or mmslr.id_entidad =0) order by 
+           msl.id, msl.service, msl.url, msl.params, msl.srs, msl.format, msl.version, msl.activa,
+            msl.visible,mmslr.id_entidad desc     
+  </select>
+  
+</sqlMap>

@@ -1,0 +1,1 @@
+266#"\Archivos de Programa\pMEA PP\bin\cvm.exe" "-Xopt:stdioPrefix=\LocalGIS3,useConsole=true"  -Dapp_path=\LocalGIS3 -cp "\LocalGIS3\lib\all.jar;\LocalGIS3" es.satec.localgismobile.core.LocalGISMobile

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Maven">
+  <bannerLeft>
+    <name>${project.name}</name>
+    <src>https://www.planavanza.es/avanzalocal/Soluciones/PublishingImages/AL%20LocalGIS.jpg</src>
+    <href>https://www.planavanza.es/avanzalocal/soluciones/paginas/localgis.aspx</href>
+  </bannerLeft>
+  <bannerRight>
+    <src>https://www.planavanza.es/avanzalocal/Soluciones/PublishingImages/AL%20LocalGIS.jpg</src>
+  </bannerRight>
+  <body>
+    <links>
+      <item name="LocalGIS" href="https://www.planavanza.es/avanzalocal/Soluciones/AL_GIS/Paginas/Index.aspx" />
+      <item name="GrupoTecopy" href="http://www.grupotecopy.es/es/"/>
+      <item name="SATEC" href="http://www.satec.es/"/>
+    </links>
+
+    <menu name="${project.name}">
+      <item name="Introduction" href="index.html"/>
+      <item name="Download" href="download.html"/>
+      <item name="Release Notes" href="release-notes.html" />
+      <item name="General Information" href="about.html"/>
+      <item name="Road Map" href="roadmap.html" />
+    </menu>
+
+    <menu ref="reports"/>
+  </body>
+</project>

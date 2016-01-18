@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="localgis_incidencia" >
+  <resultMap id="LocalgisIncidenciaResult" class="com.localgis.web.core.model.LocalgisIncidencia" >
+    <result column="incidenciaId" property="incidenciaId" jdbcType="INTEGER" />
+    <result column="id_municipio" property="mapid" jdbcType="INTEGER" />
+    <result column="srid" property="mapid" jdbcType="INTEGER" />
+    <result column="mapid" property="mapid" jdbcType="INTEGER" />
+    <result column="identificador" property="identificador" jdbcType="VARCHAR" />
+ <!--   <result column="geometry" property="geometry" jdbcType="VARCHAR" /> -->
+    <result column="layer_name" property="layer_name" jdbcType="VARCHAR" />
+    <result column="id_feature" property="id_feature" jdbcType="INTEGER" />
+    <result column="tipo_incidencia" property="tipo_incidencia" jdbcType="VARCHAR" />
+    <result column="gravedad_incidencia" property="gravedad_incidencia" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="descripcion" property="descripcion" jdbcType="VARCHAR" />
+  </resultMap>
+  
+     <resultMap id="LocalgisDomain" class="com.localgis.web.core.model.LocalgisDomain" >
+    <result column="pattern" property="pattern" jdbcType="VARCHAR" />
+    <result column="traduccion" property="traduccion" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  
+  
+   <select id="getDomain" parameterClass="java.util.Map" resultMap="LocalgisDomain">
+   select domainnodes.pattern as pattern,dictionary.traduccion as traduccion from  domainnodes LEFT OUTER JOIN dictionary ON (domainnodes.id_description=dictionary.id_vocablo)
+   	 where domainnodes.id_municipio in 	(select id_municipio from entidades_municipios where id_entidad=#idEntidad#) or domainnodes.id_municipio 
+   	 is null and type=7 and domainnodes.id_domain=(select domains.id as id_domain from domains
+   	  where name=#domainName# order by id_category, id_domain ) order by id_domain
+  </select>
+</sqlMap>

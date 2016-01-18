@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN" 
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+
+<index version="1.0">
+      <indexitem text="(C)Introducción" target="geopistaIntro"/>
+      <indexitem text="(C)Acceso" target="geopistaAcceso"/>
+      <indexitem text="(C)ActividadesContaminantes" target="geopistaContaminantes">
+          <indexitem text="(C)Ver expedientes" target="geopistaVerCon"/>
+          <indexitem text="(C)Buscar" target="geopistaBuscarCon"/>
+          <indexitem text="(C)Inspectores" target="geopistaInspectores"/>
+          <indexitem text="(C)Informes" target="geopistaInformesCon"/>
+      </indexitem>
+      <indexitem text="(C)Escombreras" target="geopistaVerVer">
+          <indexitem text="(C)Ver" target="geopistaVerVer">
+              <indexitem text="(C)Editar" target="geopistaVerEditar"/>
+              <indexitem text="(C)Borrar" target="geopistaVerBorrar"/>
+              <indexitem text="(C)Crear" target="geopistaVerCrear"/>
+           </indexitem>
+          <indexitem text="(C)Informes" target="geopistaInformesVer"/>
+
+      </indexitem>
+
+      <indexitem text="(C)Arbolado" target="geopistaArboladoVer">
+          <indexitem text="(C)Ver" target="geopistaArboladoVer">
+              <indexitem text="(C)Editar" target="geopistaArboladoEditar"/>
+              <indexitem text="(C)Borrar" target="geopistaArboladoBorrar"/>
+              <indexitem text="(C)Crear" target="geopistaArboladoCrear"/>
+          </indexitem>
+          <indexitem text="(C)Informes" target="geopistaInformesArbolado"/>
+      </indexitem>
+      <indexitem text="(C)Planos" target="geopistaPlanos"/>
+      <indexitem text="(C)Histórico" target="geopistaHistorico"/>
+      <indexitem text="(C)Idioma" target="geopistaIdioma"/>
+ </index>
+

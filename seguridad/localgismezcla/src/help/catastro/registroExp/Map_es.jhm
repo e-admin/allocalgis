@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/map_1_0.dtd">
+
+<map version="1.0">
+
+    <mapID target="GestionExpedientes" url="Pages/es/GestionExpedientes.html" />
+    <mapID target="BusquedaExpedientes" url="Pages/es/BusquedaExpedientes.html" />
+    <mapID target="NuevoExpediente" url="Pages/es/NuevoExpediente.html" />
+    <mapID target="AsociarParcelas" url="Pages/es/AsociarParcelas.html" />
+    <mapID target="GestionDeExpedientes" url="Pages/es/GestionDeExpedientes.html" />
+    <mapID target="ModificarDatosExpediente" url="Pages/es/ModificarDatosExpediente.html" />
+    <mapID target="EditarInformacionCatastral" url="Pages/es/EditarInformacionCatastral.html" />
+    <mapID target="ExportarExpediente" url="Pages/es/ExportarExpediente.html" />
+    <mapID target="AsociarInformacionGrafica" url="Pages/es/AsociarInformacionGrafica.html" />
+    <mapID target="VerEstadoExpediente" url="Pages/es/VerEstadoExpediente.html" />    
+    
+    <mapID target="introduccion" url="Pages/es/Introduccion.html"/>
+    <mapID target="masDatosFinca" url="Pages/es/MasDatosFinca.html"/>
+    <mapID target="MasDatosBI" url="Pages/es/MasDatosBI.html"/>
+    <mapID target="MasDatosLocales" url="Pages/es/MasDatosLocales.html"/>
+    <mapID target="MasDatosTitular" url="Pages/es/MasDatosTitular.html"/>
+    <mapID target="NuevaFinca" url="Pages/es/NuevaFinca.html"/>
+    <mapID target="NuevoBI" url="Pages/es/NuevoBI.html"/>
+    <mapID target="NuevoLocal" url="Pages/es/NuevoLocal.html"/>
+    <mapID target="NuevoLocalComun" url="Pages/es/NuevoLocalComun.html"/>
+    <mapID target="NuevoCultivo" url="Pages/es/NuevoCultivo.html"/>
+    <mapID target="NuevoCultivoComun" url="Pages/es/NuevoCultivoComun.html"/>
+    <mapID target="NuevoTitular" url="Pages/es/NuevoTitular.html"/>
+    
+    <mapID target="EliminarFinca" url="Pages/es/EliminarFinca.html"/>
+    <mapID target="EliminarBI" url="Pages/es/EliminarBI.html"/>
+    <mapID target="EliminarLocal" url="Pages/es/EliminarLocal.html"/>
+    <mapID target="EliminarCultivo" url="Pages/es/EliminarCultivo.html"/>
+    <mapID target="EliminarTitular" url="Pages/es/EliminarTitular.html"/>
+    
+    <mapID target="DefinirRepresentante" url="Pages/es/DefinirRepresentante.html"/>
+    <mapID target="ComunidadBienes" url="Pages/es/ComunidadBienes.html"/>
+    <mapID target="Suelo" url="Pages/es/Suelo.html"/>
+    <mapID target="UnidadConstructiva" url="Pages/es/UnidadConstructiva.html"/>
+    <mapID target="Reparto" url="Pages/es/Reparto.html"/>
+
+    <mapID target="ExportacionExpedientes" url="Pages/es/ExportacionExpedientes.html"/>
+
+    <mapID target="HistoricoDeFicheros" url="Pages/es/HistoricoDeFicheros.html"/>
+    <mapID target="Configuracion" url="Pages/es/Configuracion.html"/>
+    
+    <mapID target="ExportacionExpedientes" url="Pages/es/ExportacionExpedientes.html"/>
+    
+    
+    <mapID target="dbHelp" url="dbHelp/"/>    
+    
+    
+</map>

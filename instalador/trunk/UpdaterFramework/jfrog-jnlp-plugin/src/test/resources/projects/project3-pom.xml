@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <name>test3</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jfrog.maven.plugins</groupId>
+                <artifactId>jfrog-jnlp-plugin</artifactId>
+                <configuration>
+                    <mainClass>il.Main</mainClass>
+                    <mavenStyleResourceLinks>true</mavenStyleResourceLinks>
+                    <additionalParameters>
+                        <offlineAllowed>false</offlineAllowed>
+                        <allPermissions>true</allPermissions>
+                        <j2seVersion>1.5+</j2seVersion>
+                    </additionalParameters>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jnlp</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

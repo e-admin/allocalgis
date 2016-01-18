@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.installers</groupId>
+	<artifactId>installers-web-agendalocal21</artifactId>
+	<version>3.0.0</version>
+	<packaging>pom</packaging>
+	<name>AgrupadorModulosAgendaLocal21</name>
+	<description>Agrupador modulos AgendaLocal21</description>
+	
+	<parent>
+		<relativePath>../..</relativePath>
+		<version>3.0.0</version>
+		<artifactId>installers</artifactId>
+		<groupId>com.localgis</groupId>
+	</parent>
+	
+	<modules>
+		<module>A21LRestModule</module>
+		<module>A21LWebModule</module>
+		<module>AgendaLocal21Module</module>
+	</modules>
+	
+</project>

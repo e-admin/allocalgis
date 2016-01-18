@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="LocalGis-WMSManager" default="distVersionToInstall" basedir=".">
+
+    <property file="build.properties" />
+
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" classpath="lib/ant/ant-contrib-1.0b2.jar"/>
+	<taskdef resource="org/satec/ant/taskdefs/setup/setupApplicacion.properties" classpath="lib/ant/setupApplication.jar"/>
+	<target name="distrib">
+	
+		<!--
+		<property name="project.name" value="localgis-guiaurbana"/>
+		<property name="project.version" value="1.4.0"/>
+		<property name="entorno" value="MODELO_PRO"/>
+	
+		<echo>${project.name}</echo>
+		-->
+		
+		<IsPropertyDefined property="${entorno}" addproperty="entorno.undefined"/>
+		
+		<echo>${entorno} ${entorno.undefined}</echo>
+		<if>
+		<equals arg1="${entorno.undefined}" arg2="true"/>
+			<then>
+				<echo>No se realizan sustituciones de parametros. Especifique el profile adecuado. Entorno ${entorno}</echo>
+				<echo>mvn package -P profile </echo>			
+			</then>
+			<else>
+				<antcall target="distVersionToDistrib">
+					<param name="entorno" value="${entorno}"/>	
+				</antcall>	
+			</else>
+		</if>
+		
+	</target>
+	
+    <target name="clean">
+        <delete dir="target/localgisDistributions" includeemptydirs="true" />
+    </target>
+
+    <target name="prepare">
+        <mkdir dir="target/localgisDistributions" />
+        <mkdir dir="target/localgisDistributions/${project.name}" />
+        <unzip dest="target/localgisDistributions/${project.name}" src="target/${project.name}-${project.version}.war"/>
+    </target>
+
+    <target name="distVersionToInstall" depends="clean, prepare">
+        <replaceregexp file="target/localgisDistributions/${project.name}/WEB-INF/classes/localgis.properties" flags="gm" match="^mapserver.directory=(.*)" replace="mapserver.directory=${localgis.installation.geopista_root_mapserver}/mapserver" />
+        <replaceregexp file="target/localgisDistributions/${project.name}/WEB-INF/classes/localgis.properties" flags="gm" match="^mapserver.url.server=http://(.*)" replace="mapserver.url.server=http://${localgis.installation.ip_mapserver}:${localgis.installation.port_mapserver}" />
+        <replaceregexp file="target/localgisDistributions/${project.name}/WEB-INF/classes/localgis.properties" flags="gm" match="^mapserver.configFile.ortofotosDirectory=(.*)" replace="mapserver.configFile.ortofotosDirectory=${localgis.installation.geopista_root}/Ortofotos" />
+        <replaceregexp file="target/localgisDistributions/${project.name}/WEB-INF/classes/localgis.properties" flags="gm" match="^db.username=(.*)" replace="db.username=${localgis.installation.db.username}" />
+        <replaceregexp file="target/localgisDistributions/${project.name}/WEB-INF/classes/localgis.properties" flags="gm" match="^db.password=(.*)" replace="db.password=${localgis.installation.db.password}" />
+        <replaceregexp file="target/localgisDistributions/${project.name}/WEB-INF/classes/localgis.properties" flags="gm" match="^db.host=(.*)" replace="db.host=${localgis.installation.db.host}" />
+        <replaceregexp file="target/localgisDistributions/${project.name}/WEB-INF/classes/localgis.properties" flags="gm" match="^db.port=(.*)" replace="db.port=${localgis.installation.db.port}" />
+        <replaceregexp file="target/localgisDistributions/${project.name}/WEB-INF/classes/localgis.properties" flags="gm" match="^db.name=(.*)" replace="db.name=${localgis.installation.db.name}" />
+        <replaceregexp file="target/localgisDistributions/${project.name}/WEB-INF/classes/localgis.properties" flags="gm" match="^guiaurbana.urlPublicMap=http://(.*)" replace="guiaurbana.urlPublicMap=http://${localgis.installation.tomcat.ip}:${localgis.installation.tomcat.port}/localgis-guiaurbana/public/showMap.do" />
+        <replaceregexp file="target/localgisDistributions/${project.name}/WEB-INF/classes/localgis.properties" flags="gm" match="^guiaurbana.urlPrivateMap=http://(.*)" replace="guiaurbana.urlPrivateMap=http://${localgis.installation.tomcat.ip}:${localgis.installation.tomcat.port}/localgis-guiaurbana/private/showMap.do" />
+        <zip destfile="target/${project.name}-installer.zip" basedir="target/localgisDistributions/"/>
+        <antcall target="clean"/>
+    </target>
+
+	
+	<!--
+		Distribucion para un entorno determinado
+	-->
+	<target name="distVersionToDistrib">
+		<if>
+		<available file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" type="file" />
+			<then>
+			<echo>El fichero a sustituir existe</echo>
+			</then>
+			<else>
+				<echo>El fichero a sustituir no existe target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties</echo>
+				<ExitApps></ExitApps>
+			</else>
+			
+		</if>
+
+		<!-- localgis.properties-->
+		<propertycopy name="cadena" from="${entorno}.db.username" override="true"/>
+		<replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^db.username=(.*)" replace="db.username=${cadena}" />
+		
+		<propertycopy name="cadena" from="${entorno}.db.password" override="true"/>
+		<replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^db.password=(.*)" replace="db.password=${cadena}" />
+
+		<propertycopy name="cadena" from="${entorno}.db.host" override="true"/>
+		<replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^db.host=(.*)" replace="db.host=${cadena}" />
+		
+		<propertycopy name="cadena" from="${entorno}.db.port" override="true"/>
+		<replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^db.port=(.*)" replace="db.port=${cadena}" />
+		
+		<propertycopy name="cadena" from="${entorno}.db.name" override="true"/>
+		<replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^db.name=(.*)" replace="db.name=${cadena}" />
+
+		<propertycopy name="cadena" from="${entorno}.mapserver.ftp.activar" override="true"/>
+		<replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^mapserver.ftp.activar=(.*)" replace="mapserver.ftp.activar=${cadena}" />		
+
+		<propertycopy name="cadena" from="${entorno}.mapserver.publicarcapasversionables" override="true"/>
+		<replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^mapserver.publicarcapasversionables=(.*)" replace="mapserver.publicarcapasversionables=${cadena}" />		
+
+		
+		<propertycopy name="cadena" from="${entorno}.mapserver.directory" override="true"/>
+        <replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^mapserver.directory=(.*)" replace="mapserver.directory=${cadena}" />
+		
+		<propertycopy name="cadena" from="${entorno}.mapserver.url.server" override="true"/>
+        <replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^mapserver.url.server=(.*)" replace="mapserver.url.server=${cadena}" />
+
+		<propertycopy name="cadena" from="${entorno}.mapserver.configFile.ortofotosDirectory" override="true"/>
+        <replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^mapserver.configFile.ortofotosDirectory=(.*)" replace="mapserver.configFile.ortofotosDirectory=${cadena}" />
+
+		<propertycopy name="cadena" from="${entorno}.guiaurbana.urlPublicMap" override="true"/>
+        <replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^guiaurbana.urlPublicMap=(.*)" replace="guiaurbana.urlPublicMap=${cadena}" />
+		
+		<propertycopy name="cadena" from="${entorno}.guiaurbana.urlPrivateMap" override="true"/>
+        <replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^guiaurbana.urlPrivateMap=(.*)" replace="guiaurbana.urlPrivateMap=${cadena}" />
+		
+		<!--
+		<propertycopy name="cadena" from="${entorno}.wpsRutas" override="true"/>
+		<echo>${cadena}</echo>
+        <replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^wpsRutas=(.*)" replace="wpsRutas=${cadena}"/>
+		-->
+		
+		<propertycopy name="cadena" from="${entorno}.sso.connection.server" override="true"/>
+        <replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^sso.connection.server=(.*)" replace="sso.connection.server=${cadena}" />		
+		
+		<propertycopy name="cadena" from="${entorno}.TrustStore" override="true"/>
+        <replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgis.properties" flags="gm" match="^TrustStore=(.*)" replace="TrustStore=${cadena}" />		
+
+		<!-- localgisweb.properties-->
+		<!--
+		<propertycopy name="cadena" from="${entorno}.streetInfo.service" override="true"/>
+        <replaceregexp file="target/${project.name}-${project.version}/WEB-INF/classes/localgisweb.properties" flags="gm" match="^streetInfo.service=(.*)" replace="streetInfo.service=${cadena}" />		
+		-->
+		<tstamp>
+			<format property="hora" pattern="yyyy-MM-dd hh:mm aa"/>
+		</tstamp>
+		<touch file="target/${project.name}-${project.version}/tstamp.txt.${hora}"/>
+		 <zip destfile="target/${project.name}-${project.version}.war" basedir="target/${project.name}-${project.version}/"/>
+		<!--
+		
+        <replaceregexp file="target/localgisDistributions/${project.name}/WEB-INF/classes/localgisweb.properties" flags="gm" match="http://localhost:8082/localgis-wfsg-sample" replace="http://${localgis.installation.tomcat.ip}:${localgis.installation.tomcat.port}/localgis-wfsg-sample" />
+
+		-->
+		
+		<!--Lo copiamos al directorio de patches-->
+		
+		<property environment="env"/>
+		
+		<if>
+			<equals arg1="${entorno.undefined}" arg2="true"/>
+				<then>
+				</then>
+				<else>
+					<if>
+						<equals arg1="${localgis.installation.misdocumentos.activado}" arg2="true"/>
+							<then>
+							<property name="misdocumentos" value="${localgis.installation.misdocumentos}"/>
+							<echo>localgis.installation.misdocumentos.activado=true</echo>
+							</then>
+							<else>
+								<echo>localgis.installation.misdocumentos.activado=false</echo>
+								<property name="misdocumentos" value="C:\Documents and Settings\${env.USERNAME}\Mis documentos"/>
+							</else>	
+					</if>
+					<tstamp>
+							<format property="patch" pattern="yyyy-MM-dd"/>
+						</tstamp>
+						<echo>Directorio default patches:${patch}</echo>
+						<property name="directorioFinal" value="${misdocumentos}\0.Localgis.Patches\${patch}"/>
+						<mkdir dir="${directorioFinal}"/>
+						<copy todir="${directorioFinal}/war" failonerror="false">
+								<fileset dir="target" includes="*.war"/>
+						</copy>	
+				</else>
+		</if>
+		
+	
+    </target>
+
+	
+</project>

@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.app</groupId>
+	<artifactId>localgis-apps-cargadormasivo</artifactId>
+	<version>3.0</version>
+	<name>LOCALGIS-APPS-CargadorMasivo</name>
+	<description>Open Source GIS client. Cargador Masivo</description>
+	<url>http://aytogu28v06:8080/software/</url>
+	<organization>
+		<name>MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO</name>
+		<url>${artifactId}-${version}.jnlp</url>
+	</organization>
+	
+	<parent>
+		<artifactId>localgis-parent-apps</artifactId>
+		<groupId>com.localgis</groupId>
+		<version>3.0</version>
+	</parent>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<target>1.7</target>
+					<source>1.7</source>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<properties>
+		<!-- Establecer mainClass para generacion fichero jnlp -->
+		<mainClassJnlp>com.geopista.app.loadEIELData.EIELLoader</mainClassJnlp>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.localgis.jump</groupId>
+			<artifactId>localgis-context</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.jump</groupId>
+			<artifactId>localgis-model</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.jump</groupId>
+			<artifactId>localgis-utils</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.jump</groupId>
+			<artifactId>localgis-protocol</artifactId>
+			<version>3.0</version>
+		</dependency>
+	</dependencies>
+	
+</project>

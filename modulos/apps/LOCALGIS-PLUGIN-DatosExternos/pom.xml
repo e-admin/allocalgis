@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.localgis.plugin</groupId>
+  <artifactId>localgis-plugin-datosexternos</artifactId>
+  <version>3.0</version>
+  <name>LOCALGIS-PLUGIN-DatosExternos</name>
+ 
+ <parent>
+    <groupId>com.localgis</groupId>
+    <artifactId>localgis-parent</artifactId>
+    <version>3.0</version>
+  </parent>
+ 
+  <dependencies>
+  	<dependency>
+  		<groupId>com.localgis.protocol</groupId>
+  		<artifactId>localgis-protocol</artifactId>
+  		<version>3.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.localgis.workbench</groupId>
+  		<artifactId>localgis-workbench</artifactId>
+  		<version>3.0</version>
+  	</dependency>
+  	
+  	 	<dependency>
+  		<groupId>com.localgis.ui</groupId>
+  		<artifactId>localgis-ui</artifactId>
+  		<version>3.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.localgis.context</groupId>
+  		<artifactId>localgis-context</artifactId>
+  		<version>3.0</version>
+  	</dependency>  	  	
+	<dependency>
+	  	<groupId>com.localgis.model</groupId>
+	  	<artifactId>localgis-model-layer</artifactId>
+	  	<version>3.0</version>
+	</dependency>
+  	<dependency>
+		<groupId>com.sun.woodstock.dependlibs</groupId>
+		<artifactId>jhall</artifactId>
+		<version>2.0</version>
+	</dependency>
+	<dependency>
+		<groupId>net.sourceforge.jtds</groupId>
+		<artifactId>jtds</artifactId>
+		<version>1.2</version>
+	</dependency>	
+	<dependency>
+	  <groupId>nickyb</groupId>
+	  <artifactId>sqleonardo</artifactId>
+	  <version>2009.03.rc1</version>
+	</dependency>
+  </dependencies>
+</project>

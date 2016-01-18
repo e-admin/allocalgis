@@ -1,0 +1,28 @@
+<root>
+    <element xml-name="idd" java-name="identificadorDialogo" case-sensitive="true"/>
+	<element xml-name="idfcat" java-condition="isFincaCatastro">
+		<element xml-name="cn" java-name="bice"/>
+		<element xml-name="pc">
+			<element xml-name="pc1" java-name="pc1"/>
+			<element xml-name="pc2" java-name="pc2"/>
+		</element>
+		<element xml-name="locat">
+			<element xml-name="cd" java-name="codigoDelegacion"/>
+			<element xml-name="cmc" java-name="codigoMunicipioDGC"/>
+		</element>
+	</element>
+	<element xml-name="idbicat" java-condition="isBienCatastro">
+		<element xml-name="cn" java-name="claseBienInmueble"/>
+		<element xml-name="rc">
+			<element xml-name="pc1" java-name="idBienInmueble.parcelaCatastral.refCatastral1"/>
+			<element xml-name="pc2" java-name="idBienInmueble.parcelaCatastral.refCatastral2"/>
+			<element xml-name="car" java-name="idBienInmueble.numCargo"/>
+			<element xml-name="cc1" java-name="idBienInmueble.digControl1"/>
+			<element xml-name="cc2" java-name="idBienInmueble.digControl2"/>
+		</element>
+		<element xml-name="locat">
+			<element xml-name="cd" java-name="codigoDelegacion"/>
+			<element xml-name="cmc" java-name="codigoMunicipioDGC"/>
+		</element>
+	</element>
+</root>

@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.app</groupId>
+	<artifactId>localgis-apps-centralizadorsso</artifactId>
+	<version>3.0</version>
+	<name>LOCALGIS-APPS-CentralizadorSSO</name>
+	<description>Open Source GIS client. CentralizadorSSO</description>
+	<organization>
+		<name>MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO</name>
+	</organization>
+	
+	<parent>
+		<artifactId>localgis-parent-apps</artifactId>
+		<groupId>com.localgis</groupId>
+		<version>3.0</version>
+	</parent>
+	
+	<properties>
+		<!-- Configuracion jnlp -->
+		<mainClassJnlp>com.geopista.app.centralizadorsso.CMainCentralizadorSSO</mainClassJnlp>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>1.5</version>
+			</dependency>
+		<dependency>
+			<groupId>com.localgis.model</groupId>
+			<artifactId>localgis-model</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.ui</groupId>
+			<artifactId>localgis-ui</artifactId>
+			<version>3.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.axis</groupId>
+					<artifactId>axis</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.protocol</groupId>
+			<artifactId>localgis-protocol</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.utils</groupId>
+			<artifactId>localgis-utils</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.resources</groupId>
+			<artifactId>localgis-resources</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.context</groupId>
+			<artifactId>localgis-context</artifactId>
+			<version>3.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.axis</groupId>
+					<artifactId>axis</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.security</groupId>
+			<artifactId>localgis-security</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<!--dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaws</artifactId>
+			<version>1.1</version>
+		</dependency-->
+		<dependency>
+			<groupId>javax.javaws</groupId>
+			<artifactId>javaws</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+		<dependency>
+		  <groupId>net.java.dev.flexdock</groupId>
+		  <artifactId>flexdock</artifactId>
+		  <version>0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.plugin</groupId>
+			<artifactId>localgis-plugin-impresion</artifactId>
+			<version>3.0</version>
+		</dependency>
+	</dependencies>
+</project>

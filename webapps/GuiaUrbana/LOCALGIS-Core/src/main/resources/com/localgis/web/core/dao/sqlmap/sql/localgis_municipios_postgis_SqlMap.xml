@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="localgis_municipios">
+
+  <select id="selectBoundingBoxByIdMunicipio" parameterClass="java.util.Map" resultMap="BoundingBoxResult">
+    select xmin(box3d(transform("GEOMETRY", #srid#))) as minx, ymin(box3d(transform("GEOMETRY", #srid#))) as miny, xmax(box3d(transform("GEOMETRY", #srid#))) as maxx, ymax(box3d(transform("GEOMETRY", #srid#))) as maxy 
+    from municipios 
+    where id = #idMunicipio#
+  </select>
+
+  <select id="selectBoundingBoxByIdEntidad" parameterClass="java.util.Map" resultMap="BoundingBoxResult">
+    select min(xmin(box3d(transform("GEOMETRY", #srid#)))) as minx, min(ymin(box3d(transform("GEOMETRY", #srid#)))) as miny, max(xmax(box3d(transform("GEOMETRY", #srid#)))) as maxx, max(ymax(box3d(transform("GEOMETRY", #srid#)))) as maxy 
+    from public.entidades_municipios em, municipios m
+    where em.id_municipio = m.id and em.id_entidad = #idEntidad#
+  </select>
+  
+  <select id="selectMunicipioByGeometryPoint" parameterClass="java.util.Map" resultMap="GeopistaMunicipioResult">   
+    select m.id as id
+    from  municipios as m 
+    where 
+    ST_Within(Transform(GeometryFromText(#geometrypoint#::text,#srid#::integer),4258), Transform(m."GEOMETRY",4258));
+   
+    
+  </select>
+  
+
+</sqlMap>

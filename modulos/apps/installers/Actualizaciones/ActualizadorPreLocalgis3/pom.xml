@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>installers</artifactId>
+		<groupId>com.localgis</groupId>
+		<version>3.0.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<groupId>com.localgis.modules</groupId>
+	<artifactId>ActualizadorPreLocalgis3</artifactId>
+	<name>ActualizadorPreLocalgis3</name>
+	<description>Metamodulo Actualizacion a Pre Localgis 3</description>
+	<packaging>jar</packaging>
+
+	<properties>
+		<module.title>Modulo Instalacion a Pre Localgis 3</module.title>
+		<module.version>3.0.0</module.version>
+		<module.installType>package</module.installType>
+		<!-- Establecer parametros con valor nulo (en este caso no se usan pero son obligatorios) -->
+		<module.artifact.groupId>null</module.artifact.groupId>
+		<module.artifact.id>null</module.artifact.id>
+		<module.artifact.version>null</module.artifact.version>
+		<module.artifact.type>null</module.artifact.type>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.localgis.maven.plugin</groupId>
+				<artifactId>updaterPlugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>		
+		<dependency>
+			<groupId>com.localgis.modules.datamodel</groupId>
+			<artifactId>PreLocalGIS3DataModelModule</artifactId>
+			<version>3.0.0</version>
+		</dependency>		
+	</dependencies>
+	<version>3.0.0</version>
+</project>

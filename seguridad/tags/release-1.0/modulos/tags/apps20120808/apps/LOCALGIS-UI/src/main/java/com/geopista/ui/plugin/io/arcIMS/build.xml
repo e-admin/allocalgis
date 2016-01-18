@@ -1,0 +1,24 @@
+<project name="arcImsPlugin" default="Jar"  >
+	<property name="dest.file" location="c:/geopista/plugins/ArcIMS.jar"/>
+	 <property name="base.home" value="c:/desarrollo"/>
+	 <property name="libs.home"     location="${base.home}/lib"/>
+    <!-- ================================= 
+          target: Jar              
+         ================================= -->
+    <target name="Jar"  description="--> Package plugin's jar">
+        <jar destfile="${dest.file}" >
+        	<fileset dir="c:/desarrollo/eclipse_old/geopista/" id="plugin_files">
+        		 <include name="com/geopista/ui/plugin/io/arcIMS/*.class"/>
+        		 <include name="com/geopista/ui/plugin/io/arcIMS/*.java2xml"/>
+        		<include name="cz/vsb/gisak/jump/plugin/arcims/**.class"/>
+        		<exclude name="cz/vsb/gisak/jump/plugin/arcims/AddArcIMSQueryExtension.class"/>
+        	</fileset>
+        </jar>
+    	</target>
+<target name="sign" depends="Jar">
+	<signjar  alias="geopista" keystore="${base.home}/lib/GeopistaKeyStore" keypass="geopista99" storepass="geopista99" 
+	    						jar="${dest.file}"/>
+	    
+	</target>
+
+</project>

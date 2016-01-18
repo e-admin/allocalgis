@@ -1,0 +1,4 @@
+1. Ejecutar configuraLocalGISMobile.bat
+2. Ejecutar makecab.bat
+
+Se generará un fichero configLocalGIS.CAB que deberemos copiar en la PDA.

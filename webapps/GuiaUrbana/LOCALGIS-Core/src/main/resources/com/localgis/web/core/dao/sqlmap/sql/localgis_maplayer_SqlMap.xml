@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="localgis_maplayer" >
+
+  <resultMap id="LocalgisMapLayerResult" class="com.localgis.web.core.model.LocalgisMapLayer" >
+    <result column="mapid" property="mapid" jdbcType="INTEGER" />
+    <result column="layerid" property="layerid" jdbcType="INTEGER" />
+    <result column="styleid" property="styleid" jdbcType="INTEGER" />
+    <result column="position" property="position" jdbcType="NUMERIC" />
+    <result column="position_layer_family" property="positionLayerFamily" jdbcType="NUMERIC" />
+    <result column="isvisible" property="visible" jdbcType="BOOLEAN" />
+  </resultMap>
+
+  <insert id="insert" parameterClass="com.localgis.web.core.model.LocalgisMapLayer" >
+    insert into localgisguiaurbana.maplayer (mapid, layerid, styleid, position, position_layer_family, isvisible)
+    values (#mapid:INTEGER#, #layerid:INTEGER#, #styleid:INTEGER#, #position:NUMERIC#, #positionLayerFamily:NUMERIC#,
+    #visible:BOOLEAN#)
+  </insert>
+  
+  <delete id="deleteLayersByIdMap" parameterClass="java.util.Map" >
+    delete from localgisguiaurbana.maplayer
+    where mapid = #idMap#
+  </delete>
+
+</sqlMap>

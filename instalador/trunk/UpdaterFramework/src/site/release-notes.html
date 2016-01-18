@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Release Notes- ${project.name}</title>
+</head>
+<body>
+
+<h1>Presentación</h1>Este instalador está basado en el modo de funcionar de Maven.<br>Maven gestiona automáticamente las dependencias binarias de un proyecto por lo que tendremos en el repositorio local las versiones adecuadas tras cada ejecución.<br><h1>Gestión de módulos LocalGIS</h1>Los  módulos de localGIS son conjuntos de dependencias binarias (grupos de JAR, paquetes ZIP o paquetes WAR).<br>Los módulos de localGIS reciben un nombre y una versión y pertenecen todos al grupo com.localgis.modules.<br>Para permitir que el instalador pueda detectar un nuevo módulo se debe crear un proyecto maven como los de ejemplo, particularizando las propiedades:<br><pre>        &lt;properties&gt;
+		&lt;module.title&gt;Example DataModel module 2&lt;/module.title&gt;
+		&lt;module.version&gt;3.1.0&lt;/module.version&gt;
+		&lt;module.installType&gt;dataModel&lt;/module.installType&gt;
+		&lt;module.groupId&gt;com.localgis.model&lt;/module.groupId&gt;
+		&lt;module.artifactId&gt;ficticiousDataModel&lt;/module.artifactId&gt;
+		&lt;module.version&gt;3.1.0&lt;/module.version&gt;
+		&lt;module.artifactType&gt;jar&lt;/module.artifactType&gt;
+	&lt;/properties&gt;</pre>
+	<br>El plugin de maven <pre>updaterPlugin:moduleDescriptor</pre><p> se encarga de escribir automáticamente el descriptor de dependencias que se necesita para la distribución:<br>
+	<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;module&gt;
+&lt;name&gt;TestModule&lt;/name&gt;
+&lt;version&gt;1.0.0&lt;/version&gt;
+&lt;artifact&gt;
+		&lt;groupId&gt;${groupId}&lt;/groupId&gt;
+		&lt;artifactId&gt;${artifactId}&lt;/artifactId&gt;
+		&lt;version&gt;${version}&lt;/version&gt;
+		&lt;install&gt;${install}&lt;/install&gt;
+&lt;/artifact&gt;
+&lt;dependencyInfo&gt;
+	&lt;dependencies&gt;
+		&lt;module&gt;
+		&lt;name&gt;LocalGIS Core&lt;/name&gt;
+		&lt;version&gt;1.0.0&lt;/version&gt;
+		&lt;/module&gt;
+	&lt;/dependencies&gt;
+	&lt;incompatibilities&gt;
+		&lt;module&gt;
+		&lt;name&gt;moduleIncompatible&lt;/name&gt;
+		&lt;version&gt;1.0.2&lt;/version&gt;
+		&lt;/module&gt;
+	&lt;/incompatibilities&gt;
+&lt;/dependencyInfo&gt;
+&lt;/module&gt;</pre>
+<h2><p>Descriptor de la instalación actual</h2><br>El proceso de instalación necesita conocer el estado de la instancia de Localgis en cada momento. Y cada proceso de instalación envía peticiones de actualización de los nuevos módulos que se van a instalar.<br>Para ello se hacen consultas a unos servicios Web que deben  aceptar objetos Module serializados y, en su caso,devolver un documento como el que está en:<br> <pre>moduleManagementAPI/src/test/resources/localgisInstallation.xml</pre><br>Toda la gestión del XML está implementada en los objetos  del API, incluyendo la serialización  y deserialización.<br>La estructura es la siguiente:<br>
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;servers&gt;
+	&lt;modules&gt;
+	&lt;module id=&quot;LocalGIS Core&quot;&gt;
+			&lt;name&gt;LocalGIS Core&lt;/name&gt;
+			&lt;version&gt;1.0.0&lt;/version&gt;
+			&lt;dependencyInfo&gt;
+				&lt;incompatibilities&gt;
+					&lt;module&gt;
+					&lt;name&gt;moduleIncompatible&lt;/name&gt;
+					&lt;version&gt;1.0.2&lt;/version&gt;
+					&lt;/module&gt;
+				&lt;/incompatibilities&gt;
+			&lt;/dependencyInfo&gt;
+		&lt;/module&gt;
+		
+		&lt;module id=&quot;Workbench-2.1.3&quot;&gt;
+			&lt;name&gt;Workbench&lt;/name&gt;
+			&lt;version&gt;2.1.3&lt;/version&gt;
+			&lt;dependencyInfo&gt;
+				&lt;dependencies&gt;
+					&lt;module&gt;
+					&lt;name&gt;LocalGIS Core&lt;/name&gt;
+					&lt;version&gt;1.0.0&lt;/version&gt;
+					&lt;/module&gt;
+					&lt;module&gt;
+					&lt;name&gt;Core&lt;/name&gt;
+					&lt;version&gt;1.0.0&lt;/version&gt;
+					&lt;/module&gt;
+				&lt;/dependencies&gt;
+				&lt;incompatibilities&gt;
+					&lt;module&gt;
+					&lt;name&gt;moduleIncompatible&lt;/name&gt;
+					&lt;version&gt;1.0.2&lt;/version&gt;
+					&lt;/module&gt;
+				&lt;/incompatibilities&gt;
+			&lt;/dependencyInfo&gt;
+		&lt;/module&gt;
+		&lt;module id=&quot;Core-1.0.0&quot;&gt;
+			&lt;name&gt;Core&lt;/name&gt;
+			&lt;version&gt;1.0.0&lt;/version&gt;
+			&lt;dependencyInfo&gt;
+				&lt;dependencies&gt;
+					&lt;module&gt;
+					&lt;name&gt;LocalGIS Core&lt;/name&gt;
+					&lt;version&gt;1.0.0&lt;/version&gt;
+					&lt;/module&gt;
+				&lt;/dependencies&gt;
+				&lt;incompatibilities&gt;
+					&lt;module&gt;
+					&lt;name&gt;moduleIncompatible&lt;/name&gt;
+					&lt;version&gt;1.0.2&lt;/version&gt;
+					&lt;/module&gt;
+				&lt;/incompatibilities&gt;
+			&lt;/dependencyInfo&gt;
+		&lt;/module&gt;
+	&lt;/modules&gt;
+&lt;/servers&gt;</pre>
+<h2>Operaciones del instalador</h2>
+<p>El instalador resolverá las dependencias e inconsistencias de las operaciones y se encargará de descargar todos los ficheros necesarios.</p>
+<p>La fase final de cada subproceso de instalación consiste en realizar las copias y configuraciones que necesita <p>LocalGIS. Los parámetros de configuración local están en un fichero de properties que contiene los paths y datos necesarios para las operaciones.</p>
+<p>Hay varios tipos de instalaciones (definidos en ArtifactImpl.PACKAGING_TYPES):
+<ul>
+<li>sysWAR:Módulo de servidor de sistema: WAR que se desplegará en el Jetty de servicios centrales. Mediante copiado del WAR y posible configuración.</li>
+<li>appWAR:Módulo de servidor de aplicaciones: WAR que se desplegará en el Tomcat de aplicaciones. Mediante copiado del WAR y posible configuración.</li>
+<li>clientJNLP: se instalará mediante copiado de jnlp y dependencias binarias en la carpeta previamente habilitada por el módulo WAR para gestión de JNLPs. (Uno de los primeros módulos de servidor a instalar.)</li>
+<li>dataModel: Paquete que contiene scripts SQL para actualización y creación de modelos de datos desde la versión anterior a la actual. Se instalará mediante la ejecución directa del SQL en una transacción con la base de datos.</ul>
+<h2>Implementación de instaladores</h2>
+<p>Las fases finales de los instaladores se implementarán de forma independiente de Maven para facilitar su desarrollo y pruebas.</p>
+<p>Se realizará unos casos de prueba con cada uno de ellos y los parámetros de entrada serán:</p>
+<ul>
+  <li> Properties con las variables de ambiente. </li>
+  <li> Lista de dependencias transitivas ya disponibles en el repositorio local.</li>
+  <li> Objetos Module y ModuleRegistry para consultar el módulo actual a instalar y el estado del servidor.</li>
+  <li> Otras referencias de utilidad al API.</li>
+</ul>
+<p>Los casos de uso deben validar las condiciones de éxito y posibles condiciones de fallo.</p>
+  
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+  <tocitem text="Contenidos">
+      <tocitem text="Introducción" target="geopistaIntro"/>
+      <tocitem text="Acceso" target="geopistaAcceso"/>
+      <tocitem text="Gestión de Usuarios y Roles" target="geopistaUsuariosyRoles">
+        <tocitem text="Usuarios" target="geopistaUsuarios">
+             <tocitem text="Operaciones" target="geopistaUsuariosOperaciones"/>
+        </tocitem>
+        <tocitem text="Roles" target="geopistaRoles">
+             <tocitem text="Operaciones" target="geopistaRolesOperaciones"/>
+        </tocitem>
+      </tocitem>
+      <tocitem text="Gestión de Dominios" target="geopistaDominios">
+          <tocitem text="Tipos" target="geopistaTipos"/>
+          <tocitem text="Operaciones" target="geopistaDominiosOperaciones"/>
+          <tocitem text="Iconos" target="geopistaIconos"/>
+      </tocitem>
+      <tocitem text="Gestión de sesiones" target="geopistaSesiones"/>
+      <tocitem text="Idioma" target="geopistaIdioma"/>
+  </tocitem>
+</toc>

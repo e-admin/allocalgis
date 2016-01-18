@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="Condiciones_subreport0"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="535"
+		 pageHeight="802"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="NUM_EXPEDIENTE" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[select DISTINCT * from expediente_licencia A 
+LEFT JOIN solicitud_licencia E ON a.ID_SOLICITUD=e.ID_SOLICITUD 
+LEFT JOIN persona_juridico_fisica F2 ON e.propietario=f2.id_persona
+LEFT JOIN datos_notificacion DN on DN.id_persona=f2.id_persona AND E.id_solicitud=DN.id_solicitud
+LEFT JOIN tipo_obra TIO on e.id_tipo_obra=tio.id_tipo_obra 
+LEFT JOIN tipo_licencia TIL on e.id_tipo_licencia=til.id_tipo_licencia
+WHERE a.num_expediente = $P{NUM_EXPEDIENTE}]]></queryString>
+
+	<field name="id_solicitud" class="java.math.BigDecimal"/>
+	<field name="num_expediente" class="java.lang.String"/>
+	<field name="id_tramitacion" class="java.math.BigDecimal"/>
+	<field name="id_finalizacion" class="java.math.BigDecimal"/>
+	<field name="id_estado" class="java.math.BigDecimal"/>
+	<field name="servicio_encargado" class="java.lang.String"/>
+	<field name="asunto" class="java.lang.String"/>
+	<field name="silencio_administrativo" class="java.lang.String"/>
+	<field name="forma_inicio" class="java.lang.String"/>
+	<field name="num_folios" class="java.math.BigDecimal"/>
+	<field name="fecha_apertura" class="java.sql.Timestamp"/>
+	<field name="responsable" class="java.lang.String"/>
+	<field name="plazo_resolucion" class="java.sql.Timestamp"/>
+	<field name="habiles" class="java.lang.String"/>
+	<field name="num_dias" class="java.math.BigDecimal"/>
+	<field name="observaciones" class="java.lang.String"/>
+	<field name="silencio_event" class="java.lang.String"/>
+	<field name="plazo_event" class="java.lang.String"/>
+	<field name="silencio_triggered" class="java.lang.String"/>
+	<field name="fecha_cambio_estado" class="java.sql.Timestamp"/>
+	<field name="vu" class="java.lang.String"/>
+	<field name="cnae" class="java.lang.String"/>
+	<field name="app_string" class="java.lang.String"/>
+	<field name="bloqueado" class="java.lang.String"/>
+	<field name="id_sigem" class="java.math.BigDecimal"/>
+	<field name="presupuesto_actualizado" class="java.lang.Double"/>
+	<field name="presupuesto_antiguo" class="java.lang.Double"/>
+	<field name="condiciones_especiales" class="java.lang.String"/>
+	<field name="id_tipo_licencia" class="java.math.BigDecimal"/>
+	<field name="id_tipo_obra" class="java.math.BigDecimal"/>
+	<field name="propietario" class="java.math.BigDecimal"/>
+	<field name="representante" class="java.math.BigDecimal"/>
+	<field name="tecnico" class="java.math.BigDecimal"/>
+	<field name="promotor" class="java.math.BigDecimal"/>
+	<field name="num_administrativo" class="java.lang.String"/>
+	<field name="codigo_entrada" class="java.lang.String"/>
+	<field name="unidad_tramitadora" class="java.lang.String"/>
+	<field name="unidad_de_registro" class="java.lang.String"/>
+	<field name="motivo" class="java.lang.String"/>
+	<field name="nombre_comercial" class="java.lang.String"/>
+	<field name="fecha" class="java.sql.Timestamp"/>
+	<field name="fecha_entrada" class="java.sql.Timestamp"/>
+	<field name="tasa" class="java.math.BigDecimal"/>
+	<field name="tipo_via_afecta" class="java.lang.String"/>
+	<field name="nombre_via_afecta" class="java.lang.String"/>
+	<field name="numero_via_afecta" class="java.lang.String"/>
+	<field name="portal_afecta" class="java.lang.String"/>
+	<field name="planta_afecta" class="java.lang.String"/>
+	<field name="letra_afecta" class="java.lang.String"/>
+	<field name="cpostal_afecta" class="java.lang.String"/>
+	<field name="municipio_afecta" class="java.lang.String"/>
+	<field name="provincia_afecta" class="java.lang.String"/>
+	<field name="id_municipio" class="java.math.BigDecimal"/>
+	<field name="observaciones_doc_entregada" class="java.lang.String"/>
+	<field name="fecha_resolucion" class="java.sql.Timestamp"/>
+	<field name="impuesto" class="java.math.BigDecimal"/>
+	<field name="fecha_limite_obra" class="java.sql.Timestamp"/>
+	<field name="id_persona" class="java.math.BigDecimal"/>
+	<field name="dni_cif" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="apellido1" class="java.lang.String"/>
+	<field name="apellido2" class="java.lang.String"/>
+	<field name="colegio" class="java.lang.String"/>
+	<field name="visado" class="java.lang.String"/>
+	<field name="titulacion" class="java.lang.String"/>
+	<field name="id_via_notificacion" class="java.math.BigDecimal"/>
+	<field name="fax" class="java.lang.String"/>
+	<field name="telefono" class="java.lang.String"/>
+	<field name="movil" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="tipo_via" class="java.lang.String"/>
+	<field name="nombre_via" class="java.lang.String"/>
+	<field name="numero_via" class="java.lang.String"/>
+	<field name="portal" class="java.lang.String"/>
+	<field name="planta" class="java.lang.String"/>
+	<field name="escalera" class="java.lang.String"/>
+	<field name="letra" class="java.lang.String"/>
+	<field name="cpostal" class="java.lang.String"/>
+	<field name="municipio" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<field name="notificar" class="java.lang.String"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="observacion" class="java.lang.String"/>
+	<field name="impuesto_construccion" class="java.lang.Double"/>
+	<field name="tasa_licencia" class="java.lang.Double"/>
+
+	<variable name="nombreCompleto" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[(($F{nombre} != null && $F{nombre}.length() > 0) ?
+$F{nombre} : "")+
+" "+(($F{apellido1} != null && $F{apellido1}.length() > 0) ?
+$F{apellido1} : "")+
+" "+(($F{apellido2} != null && $F{apellido2}.length() > 0) ?
+$F{apellido2} : "").toString()]]></variableExpression>
+	</variable>
+	<variable name="domicilio" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[((($F{tipo_via} != null && $F{tipo_via}.length() > 0) ?
+$F{tipo_via} : "") +
+" "+(($F{nombre_via} != null && $F{nombre_via}.length() > 0) ?
+$F{nombre_via} : "")+
+" "+(($F{numero_via} != null && $F{numero_via}.length() > 0) ?
+$F{numero_via}: "")+
+" "+(($F{portal} != null && $F{portal}.length() > 0) ?
+$F{portal}: "")+
+" "+(($F{planta} != null && $F{planta}.length() > 0) ?
+$F{planta} : "")+
+(($F{letra} != null && $F{letra}.length() > 0) ?
+$F{letra} : "")).toString()]]></variableExpression>
+	</variable>
+	<variable name="domicilioAfectado" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[((($F{tipo_via_afecta} != null && $F{tipo_via_afecta}.length() > 0) ?
+$F{tipo_via_afecta} : "") +
+" "+(($F{nombre_via_afecta} != null && $F{nombre_via_afecta}.length() > 0) ?
+$F{nombre_via_afecta} : "")+
+" "+(($F{numero_via_afecta} != null && $F{numero_via_afecta}.length() > 0) ?
+$F{numero_via_afecta} : "")+
+" "+(($F{portal_afecta} != null && $F{portal_afecta}.length() > 0) ?
+$F{portal_afecta}: "")+
+" "+(($F{planta_afecta} != null && $F{planta_afecta}.length() > 0) ?
+$F{planta_afecta} : "")+
+(($F{letra_afecta} != null && $F{letra_afecta}.length() > 0) ?
+$F{letra_afecta} : "")).toString()]]></variableExpression>
+	</variable>
+	<variable name="TOTAL" class="java.lang.Double" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[new java.lang.Double($F{presupuesto_actualizado}.doubleValue()*($F{impuesto_construccion}.doubleValue()+$F{tasa_licencia}.doubleValue()))]]></variableExpression>
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="624"  isSplitAllowed="true" >
+				<rectangle radius="3" >
+					<reportElement
+						x="10"
+						y="470"
+						width="520"
+						height="90"
+						key="rectangle-7"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle radius="3" >
+					<reportElement
+						x="10"
+						y="417"
+						width="520"
+						height="30"
+						key="rectangle-6"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle radius="3" >
+					<reportElement
+						x="10"
+						y="345"
+						width="520"
+						height="30"
+						key="rectangle-5"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle radius="3" >
+					<reportElement
+						x="10"
+						y="200"
+						width="520"
+						height="40"
+						key="rectangle-3"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle radius="3" >
+					<reportElement
+						x="10"
+						y="80"
+						width="520"
+						height="92"
+						key="rectangle-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle radius="3" >
+					<reportElement
+						x="110"
+						y="0"
+						width="380"
+						height="70"
+						key="rectangle-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<staticText>
+					<reportElement
+						x="200"
+						y="-4"
+						width="220"
+						height="20"
+						key="staticText-5"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[LLICENCIA MUNICIPAL D'0BRES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="160"
+						y="20"
+						width="120"
+						height="20"
+						key="staticText-6"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true" isItalic="false"/>
+					</textElement>
+				<text><![CDATA[EXPEDIENT NÚMERO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="160"
+						y="40"
+						width="120"
+						height="20"
+						key="staticText-7"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true" isItalic="false"/>
+					</textElement>
+				<text><![CDATA[LLICENCIA NÚMERO]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="280"
+						y="20"
+						width="170"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{NUM_EXPEDIENTE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="60"
+						width="140"
+						height="20"
+						key="staticText-8"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[INTERESSAT:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="20"
+						y="90"
+						width="90"
+						height="20"
+						key="staticText-9"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<text><![CDATA[Nom:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="20"
+						y="110"
+						width="90"
+						height="20"
+						key="staticText-10"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<text><![CDATA[Domicili:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="20"
+						y="130"
+						width="90"
+						height="20"
+						key="staticText-11"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<text><![CDATA[Població:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="20"
+						y="150"
+						width="90"
+						height="20"
+						key="staticText-12"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<text><![CDATA[DNI/CIF:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="120"
+						y="90"
+						width="280"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{nombreCompleto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="120"
+						y="110"
+						width="280"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{domicilio}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="120"
+						y="130"
+						width="280"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{municipio}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="120"
+						y="150"
+						width="280"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dni_cif}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="180"
+						width="220"
+						height="20"
+						key="staticText-13"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[EMPLACAMENT DE LES OBRES:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="20"
+						y="210"
+						width="100"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{domicilioAfectado}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="247"
+						width="220"
+						height="20"
+						key="staticText-14"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[CONTRACTISTA RESPONSABLE:]]></text>
+				</staticText>
+				<rectangle radius="3" >
+					<reportElement
+						x="10"
+						y="267"
+						width="520"
+						height="50"
+						key="rectangle-4"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<staticText>
+					<reportElement
+						x="10"
+						y="325"
+						width="220"
+						height="20"
+						key="staticText-15"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[TIPOLOGIA DE L'OBRA:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="20"
+						y="350"
+						width="100"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{observacion}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="397"
+						width="270"
+						height="20"
+						key="staticText-16"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[TERMINI D'EXEJUCIÓ DE LES OBRES:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="20"
+						y="422"
+						width="100"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{fecha_limite_obra} != null) ?
+$F{fecha_limite_obra}.toString() : ""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="449"
+						width="100"
+						height="20"
+						key="staticText-17"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[LIQUIDACIÓ:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="250"
+						y="449"
+						width="110"
+						height="20"
+						key="staticText-18"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[PRESSUPOST:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="20"
+						y="480"
+						width="230"
+						height="20"
+						key="staticText-19"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true" isItalic="false"/>
+					</textElement>
+				<text><![CDATA[IMPOST SOBRE CONSTRUCCIONS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="20"
+						y="500"
+						width="230"
+						height="20"
+						key="staticText-20"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true" isItalic="false"/>
+					</textElement>
+				<text><![CDATA[TAXA DE LlICÉNCIES URBANÍSTIQUES]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="262"
+						y="480"
+						width="28"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{impuesto_construccion}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="262"
+						y="500"
+						width="28"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{tasa_licencia}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="290"
+						y="500"
+						width="20"
+						height="20"
+						key="staticText-21"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[%]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="290"
+						y="480"
+						width="20"
+						height="20"
+						key="staticText-22"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[%]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="360"
+						y="449"
+						width="150"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{presupuesto_actualizado} != null) ?
+$F{presupuesto_actualizado}.toString() : ""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="270"
+						y="530"
+						width="60"
+						height="20"
+						key="staticText-23"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[TOTAL:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="360"
+						y="530"
+						width="100"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($V{TOTAL} != null) ?
+$V{TOTAL}.toString() : ""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="560"
+						width="450"
+						height="60"
+						key="staticText-24"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[En virtud de ...]]></text>
+				</staticText>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

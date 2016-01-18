@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <name>test2</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jfrog.maven.plugins</groupId>
+                <artifactId>jfrog-jnlp-plugin</artifactId>
+                <configuration>
+                    <!-- the alias doesn't work -->
+                    <templateFileName>test2.jnlp</templateFileName>
+                    <targetFileName>launche.jnlp</targetFileName>
+                    <mavenStyleResourceLinks>true</mavenStyleResourceLinks>
+                    <excludes>
+                        <exclude>group1:artifact1:*</exclude>
+                        <!-- exclude all artifacts with group id 'group2' -->
+                        <exclude>group2</exclude>
+                        <!-- exclude all artifacts with version 1.1 -->
+                        <exclude>*:*:1.1</exclude>
+                        <!-- excluye todos los artefactos por debajo de group.group2 -->
+                        <exclude>group.group2.*:*:*</exclude>
+                    </excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jnlp</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

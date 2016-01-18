@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geowfst_procedures">
+  <resultMap class="com.localgis.web.core.model.Procedure" id="ibatorgenerated_BaseResultMap">
+    <result column="id" jdbcType="VARCHAR" property="id" />
+    <result column="table_name" jdbcType="VARCHAR" property="tableName" />
+    <result column="layer_name" jdbcType="VARCHAR" property="layerName" />
+    <result column="map_name" jdbcType="VARCHAR" property="mapName" />
+    <result column="procedure_type" jdbcType="VARCHAR" property="procedureType" />    
+  </resultMap>
+  <select id="ibatorgenerated_selectAll" parameterClass="com.localgis.web.core.model.Procedure" resultMap="ibatorgenerated_BaseResultMap">
+    select id, table_name, layer_name, map_name, procedure_type
+    from geowfst.procedures
+  </select>
+  <select id="ibatorgenerated_selectByPrimaryKey" parameterClass="com.localgis.web.core.model.Procedure" resultMap="ibatorgenerated_BaseResultMap">
+    select id, table_name, layer_name, map_name, procedure_type
+    from geowfst.procedures
+    where id = #id:VARCHAR#
+  </select>
+  <select id="ibatorgenerated_selectByLayerName" parameterClass="com.localgis.web.core.model.Procedure" resultMap="ibatorgenerated_BaseResultMap">
+    select id, table_name, layer_name, map_name, procedure_type
+    from geowfst.procedures
+    where layer_name = #layerName:VARCHAR#
+  </select>
+  <select id="ibatorgenerated_selectByMapName" parameterClass="com.localgis.web.core.model.Procedure" resultMap="ibatorgenerated_BaseResultMap">
+    select id, table_name, layer_name, map_name, procedure_type
+    from geowfst.procedures
+    where map_name = #mapName:VARCHAR#
+  </select>
+  <select id="ibatorgenerated_selectByProcedureType" parameterClass="com.localgis.web.core.model.Procedure" resultMap="ibatorgenerated_BaseResultMap">
+    select id, table_name, layer_name, map_name, procedure_type
+    from geowfst.procedures
+    where procedure_type = #procedureType:VARCHAR#
+  </select>
+  <delete id="ibatorgenerated_deleteByPrimaryKey" parameterClass="com.localgis.web.core.model.Procedure">
+    delete from geowfst.procedures
+    where id = #id:VARCHAR#
+  </delete>
+  <insert id="ibatorgenerated_insert" parameterClass="com.localgis.web.core.model.Procedure">
+    insert into geowfst.procedures (id, table_name, layer_name, map_name, procedure_type)
+    values (#id:VARCHAR#, #tableName:VARCHAR#, #layerName:VARCHAR#, #mapName:VARCHAR#, #procedureType:VARCHAR#)
+  </insert>
+  <insert id="ibatorgenerated_insertSelective" parameterClass="com.localgis.web.core.model.Procedure">
+    insert into geowfst.procedures
+    <dynamic prepend="(">
+      <isNotNull prepend="," property="id">
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="tableName">
+        table_name
+      </isNotNull>
+      <isNotNull prepend="," property="layerName">
+        layer_name
+      </isNotNull>
+      <isNotNull prepend="," property="mapName">
+        map_name
+      </isNotNull>
+      <isNotNull prepend="," property="procedureType">
+        procedure_type
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(">
+      <isNotNull prepend="," property="id">
+        #id:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="tableName">
+        #tableName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="layerName">
+        #layerName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="mapName">
+        #mapName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="procedureType">
+        #procedureType:VARCHAR#
+      </isNotNull>
+      )
+    </dynamic>
+  </insert>
+  <update id="ibatorgenerated_updateByPrimaryKeySelective" parameterClass="com.localgis.web.core.model.Procedure">
+    update geowfst.procedures
+    <dynamic prepend="set">
+      <isNotNull prepend="," property="id">
+        id = #id:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="id">
+        table_name = #tableName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="id">
+        layer_name = #layerName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="id">
+        map_name = #mapName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="id">
+        procedure_type = #procedureType:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    where id = #id:VARCHAR#
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKey" parameterClass="com.localgis.web.core.model.Procedure">
+    update geowfst.procedures
+    set id = #id:VARCHAR#,
+    table_name = #tableName:VARCHAR#,
+    layer_name = #layerName:VARCHAR#,
+    map_name = #mapName:VARCHAR#,
+    procedure_type = #procedureType:VARCHAR#
+    where id = #id:VARCHAR#
+  </update>
+</sqlMap>

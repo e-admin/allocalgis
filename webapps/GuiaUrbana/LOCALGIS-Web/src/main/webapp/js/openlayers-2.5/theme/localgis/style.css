@@ -1,0 +1,666 @@
+.olControlLayerSwitcher {
+	border: 0px solid black;
+	position: relative;
+	font-size: medium;
+}
+
+.olControlToolbarLocalgis {
+	display: inline;
+}
+
+.olControlToolbarLocalgis div {
+	position: relative;
+	float: left;
+	background-position: bottom;
+	margin-right: 6px;
+    margin-left: 6;
+}
+
+.modifyOpacity {
+	float:right;
+	width:30px;
+	top:1px;
+}
+
+.olControlToolbarLocalgisIncidencias {
+	display: inline;
+	position: relative;
+}
+
+.olControlToolbarLocalgisIncidencias div {
+	position: relative;
+	float: left;
+	background-position: bottom;
+	margin-right: 5px;
+    margin-left: 0px;
+}
+
+
+.olControlToolbarLocalgisReduced {
+    display: inline;
+}
+
+.olControlToolbarLocalgisReduced div {
+    position: relative;
+    float: left;
+    background-position: bottom;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.olControlNavigationLocalgisItemActive {
+	background-image: url("img/hand_50.gif");
+	background-repeat: no-repeat;
+    width: 20px;
+    height: 28px;
+}
+
+.olControlNavigationLocalgisItemInactive {
+	background-image: url("img/hand.gif");
+	background-repeat: no-repeat;
+	width: 20px;
+    height: 28px;
+}
+
+.olControlZoomBoxItemActive {
+	background-image: url("img/encuadrar_50.gif");
+	background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.olControlZoomBoxItemInactive {
+	background-image: url("img/encuadrar.gif");
+	background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.olControlZoomToMaxExtentItemInactive {
+	background-image: url("img/spain.gif");
+	background-repeat: no-repeat;
+    width: 26px;
+    height: 30px;
+}
+
+.olControlZoomToMaxExtentItemActive {
+	background-image: url("img/spain_50.gif");
+	background-repeat: no-repeat;
+    width: 26px;
+    height: 30px;
+}
+
+.olControlZoomToEntidadLocalgisItemInactive {
+    background-image: url("img/globo.gif");
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 30px;
+}
+
+.olControlZoomToEntidadLocalgisItemActive {
+    background-image: url("img/globo_50.gif");
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 30px;
+}
+
+.olControlZoomToComunidadLocalgisItemInactive {
+    background-image: url("img/icono-comunidad.gif");
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 30px;
+    display: none;
+}
+
+.olControlZoomToComunidadLocalgisItemActive {
+    background-image: url("img/icono-comunidad.gif");
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 30px;
+}
+
+
+.olControlZoomInLocalgisItemInactive {
+	background-image: url("img/acercar.gif");
+	background-repeat: no-repeat;
+    width: 31px;
+    height: 30px;
+}
+
+.olControlZoomInLocalgisItemActive {
+	background-image: url("img/acercar_50.gif");
+	background-repeat: no-repeat;
+    width: 31px;
+    height: 30px;
+}
+
+.olControlZoomOutLocalgisItemInactive {
+	background-image: url("img/alejar.gif");
+	background-repeat: no-repeat;
+    width: 31px;
+    height: 30px;
+}
+
+.olControlZoomOutLocalgisItemActive {
+	background-image: url("img/zoom_out_on.png");
+	background-repeat: no-repeat;
+    width: 31px;
+    height: 30px;
+}
+
+.olControlIncidenciaLocalgisItemInactive {
+	background-image: url("img/incidencia_off.png");
+	background-repeat: no-repeat;
+    width: 23px;
+    height: 30px;
+}
+
+.olControlIncidenciaLocalgisItemActive {
+	background-image: url("img/incidencia_on.png");
+	background-repeat: no-repeat;
+    width: 23px;
+    height: 30px;
+}
+
+.olControlGetFeatureInfoLocalgisItemInactive {
+	background-image: url("img/info.gif");
+	background-repeat: no-repeat;
+    width: 23px;
+    height: 30px;
+}
+
+.olControlGetFeatureInfoLocalgisItemActive {
+	background-image: url("img/info_50.gif");
+	background-repeat: no-repeat;
+    width: 23px;
+    height: 30px;
+}
+
+.olControlMarkerLocalgisItemInactive {
+	background-image: url("img/marca.gif");
+	background-repeat: no-repeat;
+    width: 15px;
+    height: 30px;
+}
+
+.olControlMarkerLocalgisItemActive {
+	background-image: url("img/marca_50.gif");
+	background-repeat: no-repeat;
+    width: 15px;
+    height: 30px;
+}
+
+.olControlPrintLocalgisItemInactive {
+	background-image: url("img/print.gif");
+	background-repeat: no-repeat;
+    width: 22px;
+    height: 30px;
+}
+
+.olControlPrintLocalgisItemActive {
+	background-image: url("img/print_50.gif");
+	background-repeat: no-repeat;
+    width: 22px;
+    height: 30px;
+}
+
+.olControlSearchLocalgisItemInactive {
+	background-image: url("img/prisma.gif");
+	background-repeat: no-repeat;
+    width: 26px;
+    height: 30px;
+}
+
+.olControlSearchLocalgisItemActive {
+	background-image: url("img/prisma_50.gif");
+	background-repeat: no-repeat;
+    width: 26px;
+    height: 30px;
+}
+
+.olControlSaveLocalgisItemInactive {
+	background-image: url("img/save.gif");
+	background-repeat: no-repeat;
+    width: 20px;
+    height: 30px;
+}
+
+.olControlSaveLocalgisItemActive {
+	background-image: url("img/save_50.gif");
+	background-repeat: no-repeat;
+    width: 20px;
+    height: 30px;
+}
+
+.olControlGpxLocalgisItemInactive {
+	background-image: url("img/gpx.gif");
+	background-repeat: no-repeat;
+    width: 20px;
+    height: 30px;
+}
+
+.olControlGpxLocalgisItemActive {
+	background-image: url("img/gpx.gif");
+	background-repeat: no-repeat;
+    width: 20px;
+    height: 30px;
+}
+
+.olScaleBarBar {
+	background-color: #E3E3E3;
+	background-image: url(img/bar.png);
+	background-position: 0pt;
+	background-repeat: repeat-x;
+	height: 11px;
+	opacity: 0.85;
+	top: 12px;
+}
+
+.olScaleBarBarAlt {
+	background-color: #E3E3E3;
+	background-image: url(img/barAlt.png);
+	background-position: 0pt;
+	background-repeat: repeat-x;
+	height: 11px;
+	opacity: 0.85;
+	top: 12px;
+}
+
+.scaleBarLeft {
+	background-color: #E3E3E3;
+	background-image: url(img/scaleLeft.png);
+	background-position: 0pt;
+	background-repeat: no-repeat;
+	height: 11px;
+	top: 12px;
+}
+
+.scaleBarRight {
+	background-color: #E3E3E3;
+	background-image: url(img/scaleRight.png);
+	background-position: 0pt;
+	background-repeat: no-repeat;
+	height: 11px;
+	top: 12px;
+}
+
+.olScaleBarNumbersBox {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: xx-small; /* IE5.x */
+    font-size: x-small; /* Estandares */
+    font-weight: bold;
+	height: 13px;
+	text-decoration: none;
+	top: 24px;
+	width: 40px;
+}
+
+.olScaleBarLabelBox {
+	font-size: 9px;
+	font-weight: bold;
+	text-decoration: none;
+	top: 10px;
+}
+
+.sbContainer {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 9px;
+	bottom: 40px;
+	left: 5px;
+}
+
+.olLayerSwitcherLocalgisLayerExpanded {
+	background-image: url(img/arrowDown.gif);
+	background-repeat: no-repeat;
+	display: inline;
+	cursor: pointer;
+}
+
+.olLayerSwitcherLocalgisLayerCollapsed {
+	background-image: url(img/arrowRight.gif);
+	background-repeat: no-repeat;
+	display: inline;
+	cursor: pointer;
+}
+
+.olLayerSwitcherLocalgisLegendVisible {
+	display: block;
+	margin-left: 25px;
+}
+
+.olLayerSwitcherLocalgisLegendHidden {
+	display: none;
+	margin-left: 25px;
+}
+
+.olLayerSwitcherLocalgisLayerInactive {
+	background-color: transparent;
+	width:10;
+	height:25px;
+	position:relative;
+}
+
+.olLayerSwitcherLocalgisLayerActive {
+	background-color: #CEABC9;
+	width:10;
+	height:25px;
+	position:relative;
+}
+
+.olLayerSwitcherLocalgisLayerLabel {
+	display: block;
+	cursor: default;
+	font-size: 9px;
+	position:absolute;
+	left:40px;
+	width:170px;
+	top:0px;
+
+}
+
+#Popup {
+    margin-top: 80px;
+}
+
+
+.olPopupContent {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+	padding: 5px;
+	max-height: 220px;
+    /*top: 10px;*/
+    /*height: 280px;*/
+}
+
+
+#popupLocalgisTitle {
+	width: 100%;
+	margin-top: auto;
+	margin-right: auto;
+	text-align: center;
+	height: 18px;
+}
+
+#popupLocalgisFirstLine {
+	background-color: #932483;
+	height: 10px;
+}
+
+#popupLocalgisSecondLine {
+	background-color: #d4a7ce;
+	height: 3px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+#popupLocalgisBody {
+	max-height: 160px;
+	overflow: auto;
+	text-align: center;
+	height: 160px;
+}
+#popupLocalgis2 {
+	/*height: 80px;*/
+	height: 260px;
+	width:360px;
+}
+#popupLocalgisBodyBig {
+	max-height: 210px;
+	overflow: auto;
+	text-align: center;
+	height: 210px;
+}
+
+.olLayerSwitcherLocalgisLayerWithoutLegend {
+    display: inline;
+}
+
+.popupLocalgisList {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size:10px;
+    font-weight: bold;
+}
+
+.popupLocalgisListItem {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size:10px;
+    font-weight:normal;
+    margin-right:5px;
+    cursor: pointer;
+}
+
+.popupLocalgisListItemSelected {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size:10px;
+    font-weight:normal;
+    margin-right:5px;
+    cursor: pointer;
+    background-color: #d4a7ce;
+}
+
+#popupLocalgisListResults {
+    max-height: 90px;
+    overflow: auto;
+    text-align: left;
+}
+
+#popupLocalgisListGoResult {
+    background-image: url(img/globo.gif);
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 23px;
+    margin-top: 5px;
+    margin-left: 46%;
+    cursor: pointer;
+}
+
+#popupLocalgisListGoResultAddOrigen {
+    background-image: url(img/A.gif);
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 23px;
+    margin-top: 5px;
+    margin-left: 46%;
+    cursor: pointer;
+}
+
+#popupLocalgisListGoResultAddDestino {
+    background-image: url(img/B.gif);
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 23px;
+    margin-top: 5px;
+    margin-left: 46%;
+    cursor: pointer;
+}
+
+#popupLocalgisListGoResultAddAddDestino {
+    background-image: url(img/C.gif);
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 23px;
+    margin-top: 5px;
+    margin-left: 46%;
+    cursor: pointer;
+}
+
+.imageButton {
+    cursor: pointer;
+}
+
+.olMarkerListLocalgisElement {
+	background-image: url(img/marca_peq.gif);
+	background-repeat: no-repeat;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;   
+    color: #707070;   
+    background-color: transparent;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.olMarkerListLocalgisElementLabel {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;   
+    color: #707070;   
+    background-color: transparent;
+    margin-left: 15px;
+    padding-top: 2px;
+    cursor: pointer;
+}
+
+.olControlLayerSwitcherLocalgis {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.olControlOverviewMapLocalgisContainer {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-left: 1px solid darkgray;
+    border-top: 1px solid darkgray;
+}
+
+.olControlOverviewMapLocalgisElement {
+    padding: 10px 18px 10px 10px;
+    background-color: #f9f9f9;
+}
+
+.olControlOverviewMapLocalgisMinimizeButton {
+    right: 0px;
+    bottom: 0px;
+}    
+
+.olControlOverviewMapLocalgisMaximizeButton {
+    right: 0px;
+    bottom: 0px;
+}
+
+.olControlOverviewMapLocalgisExtentRectangle {
+   cursor: move;
+    border: 1px solid #851C79;
+    opacity: 0.40;
+    filter: alpha(opacity=40);
+    background-color: #CDACC7
+}
+
+div.olControlMousePosition {
+    bottom: 0em;
+    right: 30px;
+    display: block;
+    position: absolute;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+.olControlRutasLocalgisItemInactive {
+	background-image: url("img/rutas_off.gif");
+	background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.olControlRutasLocalgisItemActive {
+	background-image: url("img/rutas.gif");
+	background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+.olControlWithinCostLocalgisItemInactive {
+	background-image: url("img/area_inf_off.gif");
+	background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.olControlWithinCostLocalgisItemActive {
+	background-image: url("img/area_inf.gif");
+	background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+.olControlSalesManLocalgisItemInactive {
+	background-image: url("img/viajante_off.gif");
+	background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.olControlSalesManLocalgisItemActive {
+	background-image: url("img/viajante.gif");
+	background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.olControlWMSTimeItemInactive{
+	background-image: url("img/wmst.gif");
+	background-repeat: no-repeat;
+    width: 25px;
+    height: 30px;
+}
+.olControlWMSTimeItemActive{
+	background-image: url("img/wmst_50.gif");
+	background-repeat: no-repeat;
+    width: 25px;
+    height: 30px;
+}
+.layerswitcherHide{
+
+}
+.olControlMeasureLocalgisItemInactive {
+    background-image: url("img/measure.gif");
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+}
+.olControlMeasureLocalgisItemActive {
+    background-image: url("img/measure_50.gif");
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+}
+.olControlMeasureAreaLocalgisItemInactive {
+    background-image: url("img/measure_area.gif");
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+}
+.olControlMeasureAreaLocalgisItemActive {
+    background-image: url("img/measure_area_50.gif");
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+}
+.olControlScale {
+    bottom: 0;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: bold;
+    left: 15px;
+    position: absolute;
+    text-align: left;
+    width: 25%;
+}
+
+.olControlZoomNucleoItemInactive{
+	background-image: url("img/zoomNuc.png");
+	background-repeat: no-repeat;
+    width: 25px;
+    height: 30px;
+}
+.olControlZoomNucleoItemActive{
+	background-image: url("img/zoomNuc.png");
+	background-repeat: no-repeat;
+    width: 25px;
+    height: 30px;
+}
+

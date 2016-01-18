@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geopista_parcelas">
+
+  <resultMap class="com.localgis.web.core.model.GeopistaParcela" id="GeopistaParcelaResult">
+    <result column="id" jdbcType="NUMERIC" property="id"/>
+    <result column="id_municipio" jdbcType="NUMERIC" property="idMunicipio"/>
+    <result column="referencia_catastral" jdbcType="NUMERIC" property="referenciaCatastral"/>
+    <result column="x_centered" jdbcType="NUMERIC" property="x"/>
+    <result column="y_centered" jdbcType="NUMERIC" property="y"/>
+  </resultMap>
+
+  <resultMap class="com.localgis.web.core.model.BoundingBox" id="BoundingBoxResult">
+    <result column="minx" jdbcType="NUMERIC" property="minx"/>
+    <result column="miny" jdbcType="NUMERIC" property="miny"/>
+    <result column="maxx" jdbcType="NUMERIC" property="maxx"/>
+    <result column="maxy" jdbcType="NUMERIC" property="maxy"/>
+  </resultMap>
+
+</sqlMap>

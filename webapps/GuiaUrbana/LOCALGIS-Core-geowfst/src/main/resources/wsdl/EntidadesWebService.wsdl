@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://server.ws.entidades.sgm.tecdoc.ieci" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://server.ws.entidades.sgm.tecdoc.ieci" xmlns:intf="http://server.ws.entidades.sgm.tecdoc.ieci" xmlns:tns1="http://dto.services.core.sgm.tecdoc.ieci" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.3
+Built on Oct 05, 2005 (05:23:37 EDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://server.ws.entidades.sgm.tecdoc.ieci" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://dto.services.core.sgm.tecdoc.ieci"/>
+   <element name="nuevaEntidad">
+    <complexType>
+     <sequence>
+      <element name="poEntidad" type="impl:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Entidad">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="codigoINE" nillable="true" type="xsd:string"/>
+       <element name="identificador" nillable="true" type="xsd:string"/>
+       <element name="nombreCorto" nillable="true" type="xsd:string"/>
+       <element name="nombreLargo" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="nuevaEntidadResponse">
+    <complexType>
+     <sequence>
+      <element name="nuevaEntidadReturn" type="impl:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="eliminarEntidad">
+    <complexType>
+     <sequence>
+      <element name="poEntidad" type="impl:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="eliminarEntidadResponse">
+    <complexType>
+     <sequence>
+      <element name="eliminarEntidadReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="actualizarEntidad">
+    <complexType>
+     <sequence>
+      <element name="poEntidad" type="impl:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="actualizarEntidadResponse">
+    <complexType>
+     <sequence>
+      <element name="actualizarEntidadReturn" type="impl:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerEntidad">
+    <complexType>
+     <sequence>
+      <element name="identificador" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerEntidadResponse">
+    <complexType>
+     <sequence>
+      <element name="obtenerEntidadReturn" type="impl:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="buscarEntidades">
+    <complexType>
+     <sequence>
+      <element name="poCriterio" type="impl:CriterioBusquedaEntidades"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="CriterioBusquedaEntidades">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="nombreCorto" nillable="true" type="xsd:string"/>
+       <element name="nombreLargo" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="buscarEntidadesResponse">
+    <complexType>
+     <sequence>
+      <element name="buscarEntidadesReturn" type="impl:Entidades"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOfEntidad">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:Entidad"/>
+    </sequence>
+   </complexType>
+   <complexType name="Entidades">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="entidades" nillable="true" type="impl:ArrayOfEntidad"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="obtenerEntidades">
+    <complexType/>
+   </element>
+   <element name="obtenerEntidadesResponse">
+    <complexType>
+     <sequence>
+      <element name="obtenerEntidadesReturn" type="impl:Entidades"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerIdentificadorEntidad">
+    <complexType/>
+   </element>
+   <element name="obtenerIdentificadorEntidadResponse">
+    <complexType>
+     <sequence>
+      <element name="obtenerIdentificadorEntidadReturn" type="impl:RetornoCadena"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="RetornoCadena">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="valor" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://dto.services.core.sgm.tecdoc.ieci" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://server.ws.entidades.sgm.tecdoc.ieci"/>
+   <complexType name="RetornoServicio">
+    <sequence>
+     <element name="errorCode" nillable="true" type="xsd:string"/>
+     <element name="returnCode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="obtenerIdentificadorEntidadResponse">
+
+      <wsdl:part element="impl:obtenerIdentificadorEntidadResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="obtenerEntidadRequest">
+
+      <wsdl:part element="impl:obtenerEntidad" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="buscarEntidadesRequest">
+
+      <wsdl:part element="impl:buscarEntidades" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="eliminarEntidadRequest">
+
+      <wsdl:part element="impl:eliminarEntidad" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="actualizarEntidadRequest">
+
+      <wsdl:part element="impl:actualizarEntidad" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="obtenerEntidadesResponse">
+
+      <wsdl:part element="impl:obtenerEntidadesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="nuevaEntidadRequest">
+
+      <wsdl:part element="impl:nuevaEntidad" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="actualizarEntidadResponse">
+
+      <wsdl:part element="impl:actualizarEntidadResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="nuevaEntidadResponse">
+
+      <wsdl:part element="impl:nuevaEntidadResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="obtenerEntidadResponse">
+
+      <wsdl:part element="impl:obtenerEntidadResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="obtenerIdentificadorEntidadRequest">
+
+      <wsdl:part element="impl:obtenerIdentificadorEntidad" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="buscarEntidadesResponse">
+
+      <wsdl:part element="impl:buscarEntidadesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="obtenerEntidadesRequest">
+
+      <wsdl:part element="impl:obtenerEntidades" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="eliminarEntidadResponse">
+
+      <wsdl:part element="impl:eliminarEntidadResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="EntidadesWebService">
+
+      <wsdl:operation name="nuevaEntidad">
+
+         <wsdl:input message="impl:nuevaEntidadRequest" name="nuevaEntidadRequest"/>
+
+         <wsdl:output message="impl:nuevaEntidadResponse" name="nuevaEntidadResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="eliminarEntidad">
+
+         <wsdl:input message="impl:eliminarEntidadRequest" name="eliminarEntidadRequest"/>
+
+         <wsdl:output message="impl:eliminarEntidadResponse" name="eliminarEntidadResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="actualizarEntidad">
+
+         <wsdl:input message="impl:actualizarEntidadRequest" name="actualizarEntidadRequest"/>
+
+         <wsdl:output message="impl:actualizarEntidadResponse" name="actualizarEntidadResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="obtenerEntidad">
+
+         <wsdl:input message="impl:obtenerEntidadRequest" name="obtenerEntidadRequest"/>
+
+         <wsdl:output message="impl:obtenerEntidadResponse" name="obtenerEntidadResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="buscarEntidades">
+
+         <wsdl:input message="impl:buscarEntidadesRequest" name="buscarEntidadesRequest"/>
+
+         <wsdl:output message="impl:buscarEntidadesResponse" name="buscarEntidadesResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="obtenerEntidades">
+
+         <wsdl:input message="impl:obtenerEntidadesRequest" name="obtenerEntidadesRequest"/>
+
+         <wsdl:output message="impl:obtenerEntidadesResponse" name="obtenerEntidadesResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="obtenerIdentificadorEntidad">
+
+         <wsdl:input message="impl:obtenerIdentificadorEntidadRequest" name="obtenerIdentificadorEntidadRequest"/>
+
+         <wsdl:output message="impl:obtenerIdentificadorEntidadResponse" name="obtenerIdentificadorEntidadResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="EntidadesWebServiceSoapBinding" type="impl:EntidadesWebService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="nuevaEntidad">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="nuevaEntidadRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="nuevaEntidadResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="eliminarEntidad">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="eliminarEntidadRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="eliminarEntidadResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="actualizarEntidad">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="actualizarEntidadRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="actualizarEntidadResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="obtenerEntidad">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="obtenerEntidadRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="obtenerEntidadResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="buscarEntidades">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="buscarEntidadesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="buscarEntidadesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="obtenerEntidades">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="obtenerEntidadesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="obtenerEntidadesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="obtenerIdentificadorEntidad">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="obtenerIdentificadorEntidadRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="obtenerIdentificadorEntidadResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="EntidadesWebServiceService">
+
+      <wsdl:port binding="impl:EntidadesWebServiceSoapBinding" name="EntidadesWebService">
+
+         <wsdlsoap:address location="http://192.168.1.60:8080/SIGEM_EntidadesWS/services/EntidadesWebService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

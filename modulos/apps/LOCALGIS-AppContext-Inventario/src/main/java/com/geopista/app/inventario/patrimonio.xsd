@@ -1,0 +1,2233 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">
+			El campo ref_catastral de bienes_inventario está obsoleto, para georreferenciar un bien se debe de utilizar el elemento georreferenciacion
+		</xs:documentation>
+	</xs:annotation>
+	
+	<xs:annotation>
+		<xs:documentation xml:lang="es">
+			Para poder utilizar el campo opcionales y meter otro tipo de informacion que se gestionar como observacaciones en la aplicacion
+			es preciso incluir los valores de esta forma (ejemplo)
+			<datos_adicionales>
+				<dato_adicional>
+					<nombre>Motor</nombre>
+					<descripcion>300cc</descripcion>
+				</dato_adicional>
+				<dato_adicional>
+					<nombre>Pedania</nombre>
+					<descripcion>Nombre de la Pedania</descripcion>
+				</dato_adicional>
+			................
+		</datos_adicionales>
+		</xs:documentation>
+	</xs:annotation>
+	<xs:element name="patrimonio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="creditos_derechos" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="georreferenciacion" type="tipoGeorreferenciacion" minOccurs="0"/>
+							<xs:element name="bienes_inventario" type="tipoBienesInventario"/>
+							<xs:element name="amortizacion" type="tipoAmortizacion" minOccurs="0"/>
+							<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+							<xs:element name="datos_credito" type="tipoDatosCredito" minOccurs="0"/>
+							<xs:element name="datos_registro" type="tipoDatosRegistro" minOccurs="0"/>
+							<xs:element name="datos_contables" type="tipoDatosContables" minOccurs="0"/>
+							<xs:element name="datos_observaciones" type="tipoDatosObservaciones" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_adicionales" type="tipoDatosAdicionales" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="derechos_reales" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="georreferenciacion" type="tipoGeorreferenciacion" minOccurs="0"/>
+							<xs:element name="bienes_inventario" type="tipoBienesInventario"/>
+							<xs:element name="amortizacion" type="tipoAmortizacion" minOccurs="0"/>
+							<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+							<xs:element name="datos_derecho" type="tipoDatosDerecho" minOccurs="0"/>
+							<xs:element name="datos_registro" type="tipoDatosRegistro" minOccurs="0"/>
+							<xs:element name="datos_contables" type="tipoDatosContables" minOccurs="0"/>
+							<xs:element name="datos_observaciones" type="tipoDatosObservaciones" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_adicionales" type="tipoDatosAdicionales" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inmuebles_rusticos" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="georreferenciacion" type="tipoGeorreferenciacion" minOccurs="0"/>
+							<xs:element name="bienes_inventario" type="tipoBienesInventario"/>
+							<xs:element name="amortizacion" type="tipoAmortizacion" minOccurs="0"/>
+							<xs:element name="datos_inmuebles" type="tipoDatosInmuebles" minOccurs="0"/>
+							<xs:element name="datos_registro" type="tipoDatosRegistro" minOccurs="0"/>
+							<xs:element name="datos_rusticos" type="tipoDatosRusticos" minOccurs="0"/>
+							<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+							<xs:element name="datos_contables" type="tipoDatosContables" minOccurs="0"/>
+							<xs:element name="datos_mejoras" type="tipoDatosMejoras" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_observaciones" type="tipoDatosObservaciones" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_refcatastrales" type="tipoDatosRefCatastrales" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_usos" type="tipoDatosUsosFuncionales" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_adicionales" type="tipoDatosAdicionales" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inmuebles_urbanos" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="georreferenciacion" type="tipoGeorreferenciacion" minOccurs="0"/>
+							<xs:element name="bienes_inventario" type="tipoBienesInventario"/>
+							<xs:element name="amortizacion" type="tipoAmortizacion" minOccurs="0"/>
+							<xs:element name="datos_inmuebles" type="tipoDatosInmuebles" minOccurs="0"/>
+							<xs:element name="datos_registro" type="tipoDatosRegistro" minOccurs="0"/>
+							<xs:element name="datos_urbanos" type="tipoDatosUrbanos" minOccurs="0"/>
+							<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+							<xs:element name="datos_contables" type="tipoDatosContables" minOccurs="0"/>
+							<xs:element name="datos_mejoras" type="tipoDatosMejoras" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_observaciones" type="tipoDatosObservaciones" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_refcatastrales" type="tipoDatosRefCatastrales" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_usos" type="tipoDatosUsosFuncionales" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_adicionales" type="tipoDatosAdicionales" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="historicos_artisticos" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="georreferenciacion" type="tipoGeorreferenciacion" minOccurs="0"/>
+							<xs:element name="bienes_inventario" type="tipoBienesInventario"/>
+							<xs:element name="amortizacion" type="tipoAmortizacion" minOccurs="0"/>
+							<xs:element name="datos_muebles" type="tipoDatosMuebles" minOccurs="0"/>
+							<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+							<xs:element name="datos_contables" type="tipoDatosContables" minOccurs="0"/>
+							<xs:element name="datos_observaciones" type="tipoDatosObservaciones" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_adicionales" type="tipoDatosAdicionales" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="otros_muebles" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="georreferenciacion" type="tipoGeorreferenciacion" minOccurs="0"/>
+							<xs:element name="bienes_inventario" type="tipoBienesInventario"/>
+							<xs:element name="amortizacion" type="tipoAmortizacion" minOccurs="0"/>
+							<xs:element name="datos_muebles" type="tipoDatosMuebles" minOccurs="0"/>
+							<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+							<xs:element name="datos_contables" type="tipoDatosContables" minOccurs="0"/>
+							<xs:element name="datos_observaciones" type="tipoDatosObservaciones" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_adicionales" type="tipoDatosAdicionales" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="semovientes" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="georreferenciacion" type="tipoGeorreferenciacion" minOccurs="0"/>
+							<xs:element name="bienes_inventario" type="tipoBienesInventario"/>
+							<xs:element name="amortizacion" type="tipoAmortizacion" minOccurs="0"/>
+							<xs:element name="datos_semovientes" type="tipoDatosSemovientes" minOccurs="0"/>
+							<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+							<xs:element name="datos_contables" type="tipoDatosContables" minOccurs="0"/>
+							<xs:element name="datos_observaciones" type="tipoDatosObservaciones" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_adicionales" type="tipoDatosAdicionales" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="valores_mobiliarios" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="georreferenciacion" type="tipoGeorreferenciacion" minOccurs="0"/>
+							<xs:element name="bienes_inventario" type="tipoBienesInventario"/>
+							<xs:element name="amortizacion" type="tipoAmortizacion" minOccurs="0"/>
+							<xs:element name="datos_mobiliario" type="tipoDatosMobiliarios" minOccurs="0"/>
+							<xs:element name="datos_registro" type="tipoDatosRegistro" minOccurs="0"/>
+							<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+							<xs:element name="datos_contables" type="tipoDatosContables" minOccurs="0"/>
+							<xs:element name="datos_observaciones" type="tipoDatosObservaciones" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_adicionales" type="tipoDatosAdicionales" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="vehiculos" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="georreferenciacion" type="tipoGeorreferenciacion" minOccurs="0"/>
+							<xs:element name="bienes_inventario" type="tipoBienesInventario"/>
+							<xs:element name="amortizacion" type="tipoAmortizacion" minOccurs="0"/>
+							<xs:element name="datos_vehiculo" type="tipoDatosVehiculo" minOccurs="0"/>
+							<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+							<xs:element name="datos_contables" type="tipoDatosContables" minOccurs="0"/>
+							<xs:element name="datos_observaciones" type="tipoDatosObservaciones" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_adicionales" type="tipoDatosAdicionales" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="vias_rusticas" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="georreferenciacion" type="tipoGeorreferenciacion" minOccurs="0"/>
+							<xs:element name="bienes_inventario" type="tipoBienesInventario"/>
+							<xs:element name="amortizacion" type="tipoAmortizacion" minOccurs="0"/>
+							<xs:element name="datos_via" type="tipoVia" minOccurs="0"/>
+							<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+							<xs:element name="datos_contables" type="tipoDatosContables" minOccurs="0"/>
+							<xs:element name="datos_mejoras" type="tipoDatosMejoras" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_refcatastrales" type="tipoDatosRefCatastrales" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_observaciones" type="tipoDatosObservaciones" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_adicionales" type="tipoDatosAdicionales" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="vias_urbanas" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="georreferenciacion" type="tipoGeorreferenciacion" minOccurs="0"/>
+							<xs:element name="bienes_inventario" type="tipoBienesInventario"/>
+							<xs:element name="amortizacion" type="tipoAmortizacion" minOccurs="0"/>
+							<xs:element name="datos_via" type="tipoVia" minOccurs="0"/>
+							<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+							<xs:element name="datos_contables" type="tipoDatosContables" minOccurs="0"/>
+							<xs:element name="datos_mejoras" type="tipoDatosMejoras" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_refcatastrales" type="tipoDatosRefCatastrales" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_observaciones" type="tipoDatosObservaciones" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_adicionales" type="tipoDatosAdicionales" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="lotes" type="tipoDatosLote" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="bienes_revertibles" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="datos_bienes_revertibles" type="tipoDatosBienesRevertibles" minOccurs="0"/>
+							<xs:element name="amortizacion" type="tipoAmortizacion" minOccurs="0"/>
+							<xs:element name="datos_observaciones" type="tipoDatosObservaciones" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="datos_adicionales" type="tipoDatosAdicionales" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="resumen_contenido" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="bienes" type="tipoResumen"/>
+							<xs:element name="documentos" type="tipoResumen"/>
+							<xs:element name="totales" type="tipoResumenTotales"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id_municipio" type="xs:integer" use="required"/>
+		</xs:complexType>
+		<xs:unique name="uniqNumInventario">
+			<xs:selector xpath=".//bienes_inventario"/>
+			<xs:field xpath="numinventario"/>
+		</xs:unique>
+	</xs:element>
+	<xs:complexType name="tipoGeorreferenciacion">
+		<xs:sequence>
+			<xs:element name="capa_parcela" type="tipoCapaParcela" minOccurs="0"/>
+			<xs:element name="capa_via" type="tipoCapaVia" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCapaParcela">
+		<xs:sequence>
+			<xs:element name="ref_catastral" minOccurs="0" maxOccurs="unbounded">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="coordenadas" type="tipoCoordenadasXY" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="calle_numero" type="tipoCalleNumero" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCapaVia">
+		<xs:sequence>
+			<xs:element name="calle" type="tipoCalle" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCoordenadasXY">
+		<xs:sequence>
+			<xs:element name="coordenadasXY">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="sistemaReferencia" type="tipoSistemaReferencia"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="tipoSistemaReferencia">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="UTM28ED50"/>
+			<xs:enumeration value="UTM29ED50"/>
+			<xs:enumeration value="UTM30ED50"/>
+			<xs:enumeration value="UTM31ED50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="tipoCalleNumero">
+		<xs:sequence>
+			<xs:element name="idViaIne">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>			
+			<xs:element name="idEntidadSingularIne">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="idEntidadColectivaIne">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>			
+			<xs:element name="numeroPolicia">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCalle">
+		<xs:sequence>
+			<xs:element name="idViaIne">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="idEntidadColectivaIne">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>	
+			<xs:element name="idEntidadSingularIne">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoBienesInventario">
+		<xs:sequence>
+			<xs:element name="numinventario">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ref_catastral" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_alta" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_baja" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_ultima_modificacion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="nombre">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_uso_jur" type="tipoCatalogoUso" minOccurs="0"/>
+			<xs:element name="organizacion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="patrimonio_municipal_suelo" type="tipoPatrimonioMunicipalSuelo" minOccurs="0"/>
+			<xs:element name="fecha_adquisicion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_aprobacion_pleno" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_adquisicion" type="tipoCatalogoAdquisicion" minOccurs="0"/>
+			<xs:element name="datos_diagnosis" type="tipoDatosDiagnosis" minOccurs="0"/>
+			<xs:element name="ultimo_inventario" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="listado_documentos" type="tipoDocumentos" minOccurs="0"/>
+			<xs:element name="revision_actual" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="revision_expirada" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="frutos" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="importe_frutos" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="modificado" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Si"/>
+						<xs:enumeration value="No"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoAmortizacion">
+		<xs:sequence>
+			<xs:element name="cuenta" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="anios" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="porcentaje" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="4"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="total_amortizado" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_amortizacion" type="tipoCatalogoAmortizacion" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosCredito">
+		<xs:sequence>
+			<xs:element name="cat_cred_der" type="tipoCatalogoCredDerecho" minOccurs="0"/>
+			<xs:element name="deudor" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>			
+			<xs:element name="destino" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="importe" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_vencimiento" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="concepto_desc" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_inicio" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+				<!-- CAMPO NUEVO -->
+			</xs:element>
+			<xs:element name="caracteristicas" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+				<!-- CAMPO NUEVO -->
+			</xs:element>
+			<xs:element name="amortizacion_anual" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+					<!--xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction-->
+				</xs:simpleType>
+				<!-- CAMPO NUEVO -->
+			</xs:element>
+			<xs:element name="acreedor" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="150"/>
+					</xs:restriction>
+				</xs:simpleType>
+				<!-- CAMPO NUEVO -->
+			</xs:element>
+			<xs:element name="cat_clase_cred" type="tipoCatalogoClaseCredito" minOccurs="0"/>
+			<xs:element name="cat_subclase" type="tipoCatalogoSubclaseCredito" minOccurs="0"/>
+			<xs:element name="arrendamiento" type="tipoArrendamiento" minOccurs="0"/>
+			<!-- CAMPO NUEVO -->
+			<!-- CAMPO NUEVO -->
+			<!-- CAMPO NUEVO -->
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosDerecho">
+		<xs:sequence>
+			<xs:element name="destino" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="bien" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="coste" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_clase_der" type="tipoCatalogoClaseDerecho" minOccurs="0"/>
+			<!-- CAMPO NUEVO -->
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosInmuebles">
+		<xs:sequence>
+			<xs:element name="direccion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="lindero_norte" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="lindero_sur" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="lindero_este" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="lindero_oeste" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="registro" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="calificacion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="superficie_registral_suelo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="8"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="superficie_catastral_suelo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="8"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="superficie_real_suelo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="8"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="superficie_registral_construccion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="8"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="superficie_catastral_construccion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="8"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="superficie_real_construccion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="8"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="derechosrealesfavor" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_derechos_favor" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="derechosrealescontra" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_derechos_contra" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="derechospersonales" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fechaobra" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="destino" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_propiedad" type="tipoCatalogoPropPatrimonial" minOccurs="0"/>
+			<xs:element name="ref_catastral" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="num_plantas" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_est_cons" type="tipoCatalogoEstConservacion" minOccurs="0"/>
+			<xs:element name="cat_construccion" type="tipoCatalogoConstruccion" minOccurs="0"/>
+			<xs:element name="cat_cubierta" type="tipoCatalogoCubierta" minOccurs="0"/>
+			<xs:element name="cat_carpinteria" type="tipoCatalogoCarpinteria" minOccurs="0"/>
+			<xs:element name="cat_fachada" type="tipoCatalogoFachada" minOccurs="0"/>
+			<xs:element name="edificabilidad" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="8"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fachada_desc" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cubierta_desc" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="carpinteria_desc" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="tipoconstruccion_desc" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="estadoconservacion_desc" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="superficie_ocupada_construccion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="8"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="superficie_construida_construccion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="8"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="superficie_enplanta_construccion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="8"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_adquisicion_suelo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_catastral_suelo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_actual_suelo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_adquisicion_construccion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_catastral_construccion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_actual_construccion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_adquisicion_inmueble" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_catastral_inmueble" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_actual_inmueble" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="numero_orden" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="numero_propiedad" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="anio_valor_catastral" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+				<!-- CAMPO NUEVO -->
+			</xs:element>
+			<xs:element name="edificabilidad_descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1024"/>
+					</xs:restriction>
+				</xs:simpleType>
+				<!-- CAMPO NUEVO -->
+			</xs:element>
+			<xs:element name="fecha_adquisicion_obra" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosRegistro">
+		<xs:sequence>
+			<xs:element name="registro_tomo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="registro_folio" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="registro_libro" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="registro_finca" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="6"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="registro_inscripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="registro_protocolo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="registro_notario" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="registro_propiedad" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosRusticos">
+		<xs:sequence>
+			<xs:element name="poligono" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="subparcela" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="paraje" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="parcela" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_aprovechamiento" type="tipoCatalogoAprovechamiento" minOccurs="0"/>
+			<xs:element name="cat_clase_rust" type="tipoCatalogoClaseRustica" minOccurs="0"/>
+			<xs:element name="cultivo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="zona" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<!-- CAMPO NUEVO -->
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosUrbanos">
+		<xs:sequence>
+			<xs:element name="parcela" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="manzana" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="14"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_clase_urb" type="tipoCatalogoClaseUrbana" minOccurs="0"/>
+			<xs:element name="uso" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<!-- CAMPO NUEVO -->
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosMuebles">
+		<xs:sequence>
+			<xs:element name="cat_clase" type="tipoCatalogoClaseMueble" minOccurs="0"/>
+			<xs:element name="cat_est_cons" type="tipoCatalogoEstConservacion" minOccurs="0"/>
+			<xs:element name="caracteristicas" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="coste_adquisicion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="destino" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_fin_garantia" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="num_serie" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="25"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="marca" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="modelo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="direccion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ubicacion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_actual" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="material" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="autor" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_propiedad" type="tipoCatalogoPropPatrimonial" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosSemovientes">
+		<xs:sequence>
+			<xs:element name="cat_propiedad" type="tipoCatalogoPropPatrimonial" minOccurs="0"/>
+			<xs:element name="cat_clase" type="tipoCatalogoRazaSemo" minOccurs="0"/>
+			<xs:element name="raza" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="25"/>
+					</xs:restriction>
+				</xs:simpleType>
+				<!-- CAMPO NUEVO -->
+			</xs:element>
+			<xs:element name="cat_crec_desarrollo" type="tipoCatalogoCrecimientoSemoviente" minOccurs="0"/>
+			<xs:element name="cat_est_cons" type="tipoCatalogoEstConservacion" minOccurs="0"/>
+			<xs:element name="identificacion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="25"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="especie" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="destino" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cantidad" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="9"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="coste_adquisicion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_actual" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_nacimiento" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosMobiliarios">
+		<xs:sequence>
+			<xs:element name="depositado_en" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="emitido_por" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="numero" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="25"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="serie" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="num_titulos" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="8"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="destino" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_mobiliario" type="tipoCatalogoMobiliario" minOccurs="0"/>
+			<xs:element name="coste_adquisicion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_actual" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="precio" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="capital" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_acuerdo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="registro" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+				<!-- CAMPO NUEVO -->
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosVehiculo">
+		<xs:sequence>
+			<xs:element name="matricula_vieja" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="matricula_nueva" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="num_bastidor" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="marca" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="modelo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="motor" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fuerza" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="servicio" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="destino" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_vehiculo" type="tipoCatalogoVehiculo" minOccurs="0"/>
+			<xs:element name="cat_est_cons" type="tipoCatalogoEstConservacion" minOccurs="0"/>
+			<xs:element name="cat_traccion" type="tipoCatalogoTraccion" minOccurs="0"/>
+			<xs:element name="cat_propiedad" type="tipoCatalogoPropPatrimonial" minOccurs="0"/>
+			<xs:element name="coste_adquisicion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_actual" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoVia">
+		<xs:sequence>
+			<xs:element name="categoria" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="codigo" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="nombre" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="inicio" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fin" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="destino" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="num_apliques" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="9"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="num_bancos" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="9"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="num_papeleras" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="9"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="metros_pavimentados" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="metros_no_pavimentados" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="zonas_verdes" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="longitud" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ancho" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="valor_actual" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosSeguros">
+		<xs:sequence>
+			<xs:element name="nombre" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="prima" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="12"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="poliza" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="12"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_inicio" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_vencimiento" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="descripcion_seguro" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+				<!-- CAMPO NUEVO -->
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosContables">
+		<xs:sequence>
+			<xs:element name="cuenta_contable" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="8"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cuenta" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosMejoras">
+		<xs:sequence>
+			<xs:element name="descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_ejecucion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_ultima_modificacion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="importe" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="14"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosObservaciones">
+		<xs:sequence>
+			<xs:element name="descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_ultima_modificacion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosRefCatastrales">
+		<xs:sequence>
+			<xs:element name="ref_catastral" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosUsosFuncionales">
+		<xs:sequence>
+		<xs:element name="cat_uso_func" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<!-- <xs:element name="cat_uso_func" type="tipoCatalogoUsoFuncional" minOccurs="0"/> -->
+			<xs:element name="superficie" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="8"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosDiagnosis">
+		<xs:sequence>
+			<xs:element name="cat_diagnosis" type="tipoCatalogoDiagnosis"/>
+			<xs:element name="descripcion_diagnosis">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosLote">
+		<xs:sequence>
+			<xs:element name="nombre" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="num_lote">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_alta" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_baja" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_ultima_modificacion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+			<!--
+			<xs:element name="id_seguro" type="xs:integer" minOccurs="0"/>
+			-->
+			<xs:element name="listado_documentos" type="tipoDocumentos" minOccurs="0"/>
+			<xs:element name="descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="destino" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="bienes_lote" type="tipoBienesLote"/>
+			<xs:element name="datos_seguros" type="tipoDatosSeguros" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosBienesRevertibles">
+		<xs:sequence>
+			<xs:element name="cat_clase" type="tipoCatalogoClaseBienRev" minOccurs="0"/>
+			<xs:element name="numinventario">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="listado_bienes" type="tipoBienInventario" minOccurs="0"/>
+			<xs:element name="descripcion_bien" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_transmision" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_inicio" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_vencimiento" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="poseedor" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="titulo_posesion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="condiciones_reversion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_transmision" type="tipoCatalogoTransmision" minOccurs="0"/>
+			<xs:element name="importe" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="10"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="listado_documentos" type="tipoDocumentos" minOccurs="0"/>
+			<xs:element name="fecha_alta" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_baja" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_ultima_modificacion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="nombre" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="organizacion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="patrimonio_municipal_suelo" type="tipoPatrimonioMunicipalSuelo" minOccurs="0"/>
+			<xs:element name="fecha_adquisicion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fecha_aprobacion_pleno" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="cat_adquisicion" type="tipoCatalogoAdquisicion" minOccurs="0"/>
+			<xs:element name="datos_diagnosis" type="tipoDatosDiagnosis" minOccurs="0"/>
+			<xs:element name="ultimo_inventario" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="revision_actual" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoBienesLote">
+		<xs:sequence>
+			<xs:element name="id_inventario" minOccurs="0" maxOccurs="unbounded">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDocumentos">
+		<xs:sequence>
+			<xs:element name="documento" minOccurs="0" maxOccurs="unbounded">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosAdicionales">
+		<xs:sequence>
+			<xs:element name="dato_adicional" type="tipoDatosDatoAdicional" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoDatosDatoAdicional">
+		<xs:sequence>
+			<xs:element name="nombre" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="descripcion" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoBienInventario">
+		<xs:sequence>
+			<xs:element name="id_bien_inventario" minOccurs="0" maxOccurs="unbounded">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="tipoPatrimonioMunicipalSuelo">
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoBienRevertible">
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoArrendamiento">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Si"/>
+			<xs:enumeration value="No"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="tipoCatalogoClaseCredito">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Clase Credito"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoSubclaseCredito">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Subclase Credito"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoTransmision">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Transmision"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoClaseBienRev">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Clase Bien Revertible"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoUso">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Uso jurídico del bien"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoAmortizacion">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Tipo de Amortizacion"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoAdquisicion">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Forma de adquisicion"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoCredDerecho">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Concepto Credito y Derecho"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoPropPatrimonial">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Tipo de propiedad patrimonial"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoEstConservacion">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Estado de conservación"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoConstruccion">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Tipo de construcción"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoCubierta">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Tipo de cubierta"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoCarpinteria">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Tipo de carpintería"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoFachada">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Tipo de fachada"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoAprovechamiento">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Aprovechamiento"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoRazaSemo">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Raza Semoviente"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoMobiliario">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Clase Valor Mobiliario"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoVehiculo">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Tipo Vehiculo"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoTraccion">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Traccion"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoUsoFuncional">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Uso Funcional"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoDiagnosis">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Diagnosis"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoClaseDerecho">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Clase Derechos Reales"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoClaseMueble">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Clase Muebles"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoClaseUrbana">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Clase Urbana"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoClaseRustica">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Clase Rustica"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoCatalogoCrecimientoSemoviente">
+		<xs:sequence>
+			<xs:element name="tipo" type="xs:string" fixed="Etapas crecimiento y Desarrollo semoviente"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoResumen">
+		<xs:sequence>
+			<xs:element name="creditos_derechos" type="tipoResumenBien"/>
+			<xs:element name="derechos_reales" type="tipoResumenBien"/>
+			<xs:element name="inmuebles_rusticos" type="tipoResumenBien"/>
+			<xs:element name="inmuebles_urbanos" type="tipoResumenBien"/>
+			<xs:element name="historico_artisticos" type="tipoResumenBien"/>
+			<xs:element name="otros_muebles" type="tipoResumenBien"/>
+			<xs:element name="semovientes" type="tipoResumenBien"/>
+			<xs:element name="valores_mobiliarios" type="tipoResumenBien"/>
+			<xs:element name="vehiculos" type="tipoResumenBien"/>
+			<xs:element name="vias_urbanas" type="tipoResumenBien"/>
+			<xs:element name="vias_rusticas" type="tipoResumenBien"/>
+			<xs:element name="lotes" type="tipoResumenBien"/>
+			<xs:element name="bienes_revertibles" type="tipoResumenBien"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoResumenBien">
+		<xs:sequence>
+			<xs:element name="total" type="xs:integer"/>
+			<xs:element name="procesados" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tipoResumenTotales">
+		<xs:sequence>
+			<xs:element name="total_bienes" type="xs:integer"/>
+			<xs:element name="total_bienes_procesados" type="xs:integer"/>
+			<xs:element name="total_documentos" type="xs:integer"/>
+			<xs:element name="total_documentos_procesados" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,238 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title></title>
+<link href="../css/contents.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body bgcolor="#FFFFFF">
+<h3 class="cabecera3azuloscuro">Creaci&oacute;n de una nueva capa</h3>
+<p class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para crear una nueva capa es  necesario que &eacute;sta sea incluida en una familia o categor&iacute;a de capas. Adem&aacute;s  debe d&aacute;rsele un nombre y una descripci&oacute;n para poder referirse a ella dentro del  sistema, as&iacute; como un ACL o grupo de permisos.<br>
+  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El proceso de creaci&oacute;n de una  capa es el que sigue:</p>
+<ul>
+  <li>
+    <div align="justify" class="contenidonormal"> 
+      <div align="left">Pinchar sobre el bot&oacute;n Crear  nueva capa de la parte superior izquierda de la pantalla. Para crear una nueva  capa, habr&aacute; que rellenar obligatoriamente los siguientes campos: </div>
+    </div>
+  </li>
+</ul>
+<div align="center"><img src="./img/CreacionCapa1.jpg" alt="1" width="642" height="49">  </div>
+  <ul>
+    <ul>
+      <li>
+        <div align="justify" class="contenidonormal">
+          <div align="left">Nombre de la capa. Se puede  incluir adem&aacute;s el nombre que tendr&aacute; esta capa en otros idiomas, pinchando para  ello en el bot&oacute;n de la bandera <img src="./img/CreacionCapa2.jpg" alt="2" width="22" height="19">. Aparecer&aacute; una pantalla en la que se  introducir&aacute;n las traducciones a los idiomas que se desee.</div>
+        </div>
+      </li>
+    </ul>
+  </ul>
+  <div align="center"><img src="./img/CreacionCapa3.jpg" alt="3" width="600" height="500">    </div>
+    <ul>
+      <ul>
+        <li>
+          <div align="justify" class="contenidonormal">
+            <div align="left">ID de la capa. Se trata del  identificador que se le dar&aacute; a la capa en el sistema, por lo que s&oacute;lo est&aacute;  permitido que su nombre est&eacute; compuesto por alfanum&eacute;ricos y guiones de subrayado  (_).</div>
+          </div>
+        </li>
+        <li>
+          <div align="justify" class="contenidonormal"> 
+            <div align="left">Familia a la que va a  pertenecer la capa. El hecho de asociar la capa a una categor&iacute;a concreta no  limita el poder agregarla m&aacute;s tarde a otras. El proceso para realizar esta  operaci&oacute;n se expondr&aacute; detenidamente en el apartado <em>Pesta&ntilde;a  4: Familias de Capas</em>.</div>
+          </div>
+        </li>
+        <li>
+          <div align="justify" class="contenidonormal"> 
+            <div align="left">ACL que se le dar&aacute; a la capa,  y que determinar&aacute; para qu&eacute; usuarios y desde qu&eacute; aplicaciones ser&aacute; visible esta  capa. <br>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <li>
+        <div align="justify" class="contenidonormal"> 
+          <div align="left">Una vez elegido un nombre e  identificador para la capa, y seleccionada la categor&iacute;a y ACL a los que se  asociar&aacute; la nueva capa, se procede a a&ntilde;adir los distintos atributos del esquema  de la capa. Para ello se seleccionan las columnas correspondientes del &aacute;rbol de  Tablas del sistema. Es posible seleccionar varias a la vez, para lo cual basta  con mantener pulsado el bot&oacute;n Ctrl. mientras se pinchan con el rat&oacute;n. Pulsando  sobre el bot&oacute;n <img src="./img/CreacionCapa4.gif" alt="4" width="25" height="25">, las columnas seleccionadas pasar&aacute;n a la  lista de atributos.<        </div>
+        </div>
+      </li>
+    </ul>
+    <div align="center"><img src="./img/CreacionCapa5.jpg" alt="6" width="642" height="257">  </div>
+    <blockquote>
+      <p class="contenidonormal">En dicha lista se mostrar&aacute;n,  para cada una de las columnas, los siguientes datos:</p>
+      <ul>
+          <li>
+            <div align="justify" class="contenidonormal"> 
+              <div align="left">Origen de datos: Se trata del  nombre completo de la columna seleccionada, representado en el formato &lt;<em class="contenidonormal">Nombre_tabla&gt;.&lt;Nombre_columna&gt;.</em> </div>
+            </div>
+        </li>
+        <li>
+          <div align="justify" class="contenidonormal"> 
+            <div align="left">Nombre del atributo: Indica  el nombre que se le dar&aacute; al atributo en la capa. Si no se le ha asignado ning&uacute;n  nombre, aparecer&aacute; etiquetado con el nombre de la columna origen de datos, que  se asignar&aacute; como nombre en el idioma local actual<em>.</em> Al pulsar sobre esta celda de la tabla, se mostrar&aacute; la ventana de  diccionario. Una vez rellenada, se mostrar&aacute; en la celda el valor que se haya dado  para el idioma en el que est&eacute; configurado GeoPISTA o, en caso de no haberlo  introducido, el idioma por defecto del sistema. Si no se ha rellenado ninguno  de estos campos, se mostrar&aacute; el etiquetado por defecto <em>&ldquo;Pinche para rellenar&rdquo;.</em> </div>
+          </div>
+        </li>
+        <li>
+          <div align="justify" class="contenidonormal"> 
+            <div align="left">SQL: Esta celda se reserva  para la introducci&oacute;n manual de consultas SQL. Para ello, habr&aacute; que a&ntilde;adir a la  lista de atributos del esquema una columna cualquiera de las diez con las que  cuenta la tabla virtual SYSTEM, que ha sido introducida con este prop&oacute;sito. Una  vez a&ntilde;adida, se rellena la celda SQL con la sentencia deseada. Este atributo  s&oacute;lo se utilizar&aacute; para la generaci&oacute;n del SQL, en ning&uacute;n caso se dispondr&aacute; de un  atributo nuevo en el esquema de la capa generada. </div>
+          </div>
+        </li>
+      </ul>
+    </blockquote>
+    <div align="center"><img src="./img/CreacionCapa6.jpg" alt="7" width="642" height="140">  </div>
+    <ul>
+      <ul>
+        <li>
+          <div align="justify" class="contenidonormal">
+            <div align="left">Editable: Este campo se  incluir&aacute; marcado por defecto, lo que significa que el atributo en cuesti&oacute;n ser&aacute;  editable, es decir, que se puede modificar su valor. En caso de desear que el  valor del campo no se pueda alterar, habr&aacute; que desmarcar la casilla  correspondiente<br>
+          .</div>
+          </div>
+        </li>
+      </ul>
+      <li>
+        <div align="justify" class="contenidonormal"> 
+          <div align="left">La lista de atributos del  esquema de la capa se puede modificar a trav&eacute;s de las flechas de eliminar (<img src="./img/CreacionCapa7.gif" alt="8" width="25" height="25">), subir (<img src="./img/CreacionCapa8.gif" alt="9" width="25" height="25">) y bajar atributo (<img src="./img/CreacionCapa9.gif" alt="10" width="25" height="25">). Para ello, previamente habr&aacute; que tener  seleccionada una de las filas de la lista de atributos. N&oacute;tese que en caso  contrario los botones correspondientes no estar&aacute;n habilitados. <br>
+            <br>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div align="justify" class="contenidonormal"> 
+          <div align="left">El siguiente paso consiste en  determinar la serie de claves que se utilizar&aacute;n en la generaci&oacute;n de la  sugerencia de consulta SQL de selecci&oacute;n. Para ello, habr&aacute; que a&ntilde;adir a la lista  de claves una o m&aacute;s parejas de valores, que se transformar&aacute;n en condiciones de  igualdad. El proceso a seguir es el siguiente:<br>  
+            <br>  
+          </div>
+          <ul>
+            <li>
+              <div align="left"> Seleccionar del &aacute;rbol de  Tablas del Sistema dos columnas cuyo valor se desea que sea id&eacute;ntico como  condici&oacute;n.</div>
+            </li>
+            <li>
+              <div align="left"> Pulsar el bot&oacute;n <img src="./img/CreacionCapa4.gif" alt="5" width="25" height="25">&nbsp;para  a&ntilde;adir la condici&oacute;n a la Lista  de Claves.</div>
+            </li>
+            <li>
+              <div align="left"> En caso de querer eliminar  alguna de las claves, bastar&aacute; con seleccionarla y pulsar el bot&oacute;n <img src="./img/CreacionCapa10.gif" alt="11" width="25" height="25">&nbsp;situado a la derecha de la lista. </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <div align="center"><img src="./img/CreacionCapa11.jpg" alt="12" width="642" height="255">  </div>
+    <ul>
+      <li>
+        <div align="justify" class="contenidonormal">
+          <div align="left">Para finalizar con el proceso  de creaci&oacute;n de la capa, se <strong>generar&aacute;n las  sentencias SQL</strong> necesarias para la selecci&oacute;n, inserci&oacute;n, actualizaci&oacute;n y  borrado de las entidades que formar&aacute;n parte de la capa. Dichas sentencias  pueden generarse autom&aacute;ticamente o de forma manual. <br>
+            <br>
+        Los pasos a seguir para el  correcto almacenado de las sentencias SQL son los siguientes:<br>  
+        <br>  
+          </div>
+          <ul>
+          <li>
+            <div align="left"> En primer lugar, habr&aacute; que  seleccionar en los combos correspondientes el tipo de Base de Datos y el tipo  de sentencia SQL que se va a introducir.</div>
+          </li>
+          <li>
+            <div align="left"> A continuaci&oacute;n, se genera la  sentencia SQL dentro del cuadro de texto de la parte inferior de la pantalla.  Si se desea realizar a mano, basta con escribir la sentencia en dicho cuadro.  Si se desea generar autom&aacute;ticamente, se pulsa sobre el bot&oacute;n <em>Generar SQL</em> situado sobre el cuadro de  texto. No obstante, debe tener presente que la utilidad de generaci&oacute;n  autom&aacute;tica de SQL tiene las siguientes limitaciones:<br>  
+              <br>  
+              <ul>
+                <li> Los atributos de tipo geometr&iacute;a s&oacute;lo se  detectar&aacute;n si la columna de sistema de la que provienen se denomina GEOMETRY.</li>
+                <li> La generaci&oacute;n de las consultas de UPDATE y  DELETE necesita que en el esquema haya un atributo de tipo identificador  incremental, puesto que estas operaciones realizan modificaciones de entidades  teniendo en cuenta su identificador.</li>
+                <li> La consulta de SELECT a&ntilde;ade una cl&aacute;usula WHERE  en la que se introduce el identificador de municipio de la tabla del esquema  que la contenga. En caso de no haber introducido un identificador de municipio  en dicho esquema, se utilizar&aacute; por defecto el identificador de municipio de la  primera tabla de la que se extraen los atributos del esquema de la capa. </li>
+                <li> Los atributos de tipo identificador incremental  s&oacute;lo se detectar&aacute;n si tienen asociado un dominio de tipo AutoDomain ID. Este  dominio se encuentra actualmente en Dominios generales-&gt;Autonum&eacute;rico  incremental.</li>
+                <li> Los atributos de tipo municipio s&oacute;lo se  detectar&aacute;n si tienen asociado un dominio de tipo AutoDomain con variable de  entorno municipio (Tipo: ENV_VAR y Tipo de variable de entorno: geopista.DefaultCityId).  Este dominio se encuentra actualmente en Dominios generales-&gt;Municipio.</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        </div>
+      </li>
+    </ul>
+    <blockquote>
+      <p class="contenidonormal"><br>
+        <img src="./img/CreacionCapa12.jpg" alt="13" width="21" height="20">&nbsp;Por  todo ello, antes de generar autom&aacute;ticamente las sentencias SQL, habr&aacute; que asegurarse  de que las variables a utilizar tienen asociados los dominios correspondientes.  Adem&aacute;s de esto, siempre es recomendable revisar las sentencias generadas para  evitar sorpresas futuras a la hora de cargar la capa en el GIS.</p>
+      <ul>
+        <li>
+          <div align="justify" class="contenidonormal"> 
+            <div align="left">Para seguir introduciendo sentencias  SQL, bastar&aacute; con posicionar los combos de selecci&oacute;n con las opciones deseadas y  rellenar el cuadro de texto con las sentencias correspondientes. No es  necesario pulsar el bot&oacute;n <em>Grabar</em> cada  vez que se escriben las sentencias, ya que &eacute;stas quedar&aacute;n almacenadas  temporalmente mientras se crea la capa.</div>
+          </div>
+        </li>
+        <li>
+          <div align="justify" class="contenidonormal"> 
+            <div align="left">Si en alg&uacute;n momento se desea  probar el funcionamiento de una sentencia sobre la base de datos, se pulsar&aacute; el  bot&oacute;n <em class="contenidonormal">Test</em>. Hay que tener en cuenta  que los signos &ldquo;?&rdquo; deben ser sustituidos por valores reales, excepto en el caso  del municipio y el SRID, cuyos valores se sustituyen autom&aacute;ticamente teniendo  en cuenta los valores del sistema. </div>
+          </div>
+        </li>
+      </ul>
+    </blockquote>
+    <div align="center"><img src="./img/CreacionCapa13.jpg" alt="14" width="624" height="298">
+      </p>
+  </div>
+    <ul>
+      <li>
+        <div align="justify" class="contenidonormal">
+          <div align="left">Una vez realizados todos  estos pasos, se pulsa sobre el bot&oacute;n Grabar. Si el proceso de grabaci&oacute;n es  satisfactorio, aparecer&aacute; un mensaje indicando que la capa se ha creado  satisfactoriamente. </div>
+        </div>
+      </li>
+    </ul>
+    <div align="center"><img src="./img/CreacionCapa14.jpg" alt="15" width="268" height="115">    </div>
+    <ul>
+      <li>
+        <div align="justify" class="contenidonormal"><div align="left">En caso contrario, se  mostrar&aacute; un mensaje de error que indique las causas del mismo. La grabaci&oacute;n  puede fallar en cualquiera de estos casos:<br>  
+          <br>  
+          </div>
+        <ul>
+            <li>
+              <div align="left"> No se ha rellenado  correctamente el campo Identificador de la capa, en cuyo caso se mostrar&aacute; el  siguiente mensaje:</div>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <div align="center"><img src="./img/CreacionCapa15.jpg" alt="16" width="506" height="115">  </div>
+    <ul>
+      <ul>
+        <li>
+          <div align="justify" class="contenidonormal">
+            <div align="left">No se han introducido  atributos en el esquema de la capa, en cuyo caso se mostrar&aacute; el siguiente  mensaje de error:</div>
+          </div>
+        </li>
+      </ul>
+    </ul>
+    <div align="center"><img src="./img/CreacionCapa16.jpg" alt="17" width="506" height="115">    </div>
+    <ul>
+      <ul>
+        <li>
+          <div align="justify" class="contenidonormal">
+            <div align="left">No se han completado los  campos obligatorios de la capa (nombre, identificador, familia de capas y ACL),  en cuyo caso se mostrar&aacute; el siguiente mensaje de error:</div>
+          </div>
+        </li>
+      </ul>
+    </ul>
+    <div align="center"><img src="./img/CreacionCapa17.jpg" alt="18" width="424" height="115">    </div>
+    <ul>
+      <ul>
+        <li>
+          <div align="justify" class="contenidonormal">
+            <div align="left">La consulta de selecci&oacute;n  sobre PostgreSQL no es correcta. Antes de grabar se comprueba que lo sea para  evitar que la capa generada no funcione correctamente a la hora de abrirla con  el GIS.</div>
+          </div>
+        </li>
+      </ul>
+    </ul>
+    <div align="center"><img src="./img/CreacionCapa18.jpg" alt="19" width="506" height="115">    </div>
+    <ul>
+      <ul>
+        <li>
+          <div align="justify" class="contenidonormal">
+            <div align="left">La consulta de selecci&oacute;n  sobre PostgreSQL no contiene cl&aacute;usula WHERE. Antes de grabar se comprueba que tenga  dicha cl&aacute;usula para evitar que la capa generada no funcione correctamente a la  hora de abrirla con el GIS.</div>
+          </div>
+        </li>
+      </ul>
+    </ul>
+    <div align="center"><img src="./img/CreacionCapa19.jpg" alt="20" width="506" height="115">    </div>
+    <blockquote>
+      <p class="contenidonormal"><strong><img src="./img/CreacionCapa20.jpg" alt="21" width="22" height="19">&nbsp;NOTA</strong>: La generaci&oacute;n de una nueva capa supone la creaci&oacute;n de una <strong>secuencia SQL sobre el identificador de la  tabla que contiene la geometr&iacute;a del esquema de la capa</strong>. La creaci&oacute;n de esta  secuencia puede no realizarse si existe previamente una capa que utilice la  misma geometr&iacute;a, por lo que se indica esta circunstancia mediante un mensaje  con el siguiente aspecto y se contin&uacute;a con la grabaci&oacute;n de la capa:</p>
+    </blockquote>
+    <div align="center"><img src="./img/CreacionCapa21.jpg" alt="22" width="512" height="315">    </div>
+    <ul>
+      <ul>
+        <li>
+          <div align="justify" class="contenidonormal">
+            <div align="left">Se indica adem&aacute;s al usuario  mediante un mensaje de advertencia que no se ha podido generar la secuencia, y  los posibles motivos de esta circunstancia. </div>
+          </div>
+        </li>
+      </ul>
+    </ul>
+    <div align="center"><img src="./img/CreacionCapa22.jpg" alt="23" width="528" height="127"></div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<feature id="NUMEXP" fullId="SPAC_EXPEDIENTES.NUMEXP">
+  <propertyandname>
+    <grouptitle>Expediente</grouptitle>
+    <property>SPAC_EXPEDIENTES.NUMEXP</property>
+    <name>Nº de Expediente</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Expediente</grouptitle>
+    <property>SPAC_EXPEDIENTES.POBLACION</property>
+    <name>Población</name>
+    <type>string</type>
+    <searchactive>false</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Expediente</grouptitle>
+    <property>SPAC_EXPEDIENTES.MUNICIPIO</property>
+    <name>Municipio</name>
+    <type>string</type>
+    <searchactive>false</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Expediente</grouptitle>
+    <property>SPAC_EXPEDIENTES.LOCALIZACION</property>
+    <name>Localización</name>
+    <type>string</type>
+    <searchactive>false</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Interesado</grouptitle>
+    <property>SPAC_EXPEDIENTES.IDENTIDADTITULAR</property>
+    <name>Nombre</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Interesado</grouptitle>
+    <property>SPAC_EXPEDIENTES.NIFCIFTITULAR</property>
+    <name>NIF/CIF</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Interesado</grouptitle>
+    <property>SPAC_EXPEDIENTES.TIPOPERSONA</property>
+    <name>Tipo de Persona</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Interesado</grouptitle>
+    <property>SPAC_EXPEDIENTES.DOMICILIO</property>
+    <name>Domicilio</name>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Interesado</grouptitle>
+    <property>SPAC_EXPEDIENTES.CPOSTAL</property>
+    <name>Código Postal</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Interesado</grouptitle>
+    <property>SPAC_EXPEDIENTES.CIUDAD</property>
+    <name>Ciudad</name>
+    <type>string</type>
+    <searchactive>false</searchactive>
+    <active>true</active>
+  </propertyandname>  
+   <propertyandname>
+    <grouptitle>Interesado</grouptitle>
+    <property>SPAC_EXPEDIENTES.REGIONPAIS</property>
+    <name>Región/País</name>
+    <type>string</type>
+    <searchactive>false</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Interesado</grouptitle>
+    <property>SPAC_EXPEDIENTES.DIRECCIONTELEMATICA</property>
+    <name>Dirección Telemática</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Interesado</grouptitle>
+    <property>SPAC_EXPEDIENTES.TFNOFIJO</property>
+    <name>Teléfono Fijo</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Interesado</grouptitle>
+    <property>SPAC_EXPEDIENTES.TFNOMOVIL</property>
+    <name>Teléfono Movil</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Vado</grouptitle>
+    <property>VADO.NUMLICENCIA</property>
+    <name>Número de Licencia</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Vado</grouptitle>
+    <property>VADO.UBICACION</property>
+    <name>Ubicación</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Vado</grouptitle>
+    <property>VADO.TIPO</property>
+    <name>Tipo de Vado</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <!-- 
+  <propertyandname>
+    <grouptitle>Vado</grouptitle>
+    <property>tipo_vado.sustituto</property>
+    <name>Tipo de Vado</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>  
+   -->
+  <propertyandname>
+    <grouptitle>Vado</grouptitle>
+    <property>VADO.LARGOENTRADA</property>
+    <name>Largo de la Entrada</name>
+    <type>decimal</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>
+  <propertyandname>
+    <grouptitle>Vado</grouptitle>
+    <property>VADO.ANCHOACERA</property>
+    <name>Ancho de la Acera</name>
+    <type>decimal</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>  
+  <propertyandname>
+    <grouptitle>Vado</grouptitle>
+    <property>VADO.SUPERFICIELOCAL</property>
+    <name>Superficie Local</name>
+    <type>decimal</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>  
+  <propertyandname>
+    <grouptitle>Vado</grouptitle>
+    <property>VADO.ACTIVIDAD</property>
+    <name>Actividad del Local</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>  
+  <propertyandname>
+    <grouptitle>Vado</grouptitle>
+    <property>VADO.REBAJE</property>
+    <name>Rebaje de la Acera</name>
+    <type>string</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>  
+  <propertyandname>
+    <grouptitle>Vado</grouptitle>
+    <property>VADO.TASAS</property>
+    <name>Tasas de la Licencia</name>
+    <type>decimal</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>  
+  <propertyandname>
+    <grouptitle>Vado</grouptitle>
+    <property>VADO.NUMVEHICULOS</property>
+    <name>Nº de Plazas para Vehículos</name>
+    <type>integer</type>
+    <searchactive>true</searchactive>
+    <active>true</active>
+  </propertyandname>  
+</feature>

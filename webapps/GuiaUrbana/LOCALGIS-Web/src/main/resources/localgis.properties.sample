@@ -1,0 +1,102 @@
+# Configuracion de la base de datos. 
+# En el caso de oraclespatial har� falta una nueva propiedad 
+#llamada db.oracleservice con el descriptor de red que aparece en el fichero tnsnames.ora
+#db.oracleservice=servicename
+db.connectiontype=postgis
+
+db.username=postgres
+db.password=localgis3
+db.host=localgis3.grupotecopy.es
+db.port=5432
+db.name=geopista
+
+# Driver JDBC a utilizar
+jdbc.driver=org.postgresql.Driver
+
+#Configurador WMS
+wmsconfigurator.class=com.localgis.web.core.wms.WMSSimpleConfigurator
+
+# Configuracion de las locales
+locales.available=es_ES,ca_ES,gl_ES,eu_ES
+locales.default=es_ES
+
+# Configuracion del Map Server
+mapserver.encoding=UTF-8
+mapserver.directory=/usr/local/LocalGIS/mapserver
+mapserver.url.server=http://localgis3.grupotecopy.es:80
+mapserver.url.server.internal=http://localgis3.grupotecopy.es:80
+mapserver.url.directory=/mapserver
+mapserver.url.file=mapserv
+mapserver.url.stylesDirectory=/mapserverstyles
+
+mapserver.configFile.ortofotosDirectory=/usr/local/LocalGIS.III/Ortofotos
+mapserver.configFile.provinciasOutlinecolor=102 102 102
+mapserver.configFile.provinciasNameAttribute=nombreoficial
+mapserver.configFile.provinciasNameColor=97 24 88
+mapserver.configFile.provinciasNameSize=8
+mapserver.configFile.municipiosOutlinecolor=205 172 199
+mapserver.configFile.reports.polygonSelectedOutlineColor=255 0 0
+mapserver.configFile.reports.polygonSelectedFillColor=255 150 150
+mapserver.configFile.reports.lineSelectedColor=255 0 0
+mapserver.configFile.reports.pointSelectedColor=255 0 0
+
+# Configuracion de las capas para los informes
+reports.layers=lcg_parcelas
+reports.layerParcelas=lcg_parcelas
+
+#Proyeccion que se va a usar
+#displayprojection=4230
+displayprojection=4326
+#displayprojection=4258
+
+# BBOX de Espa�a y su sistema de proyeccion
+spain.bbox.epsgCode=23030
+spain.minX=-1178301.3735306475
+spain.minY=2849375.421096337
+spain.maxX=1069687.9321801807
+spain.maxY=5045568.449258616
+
+
+comunidad.bbox.epsgCode=23030
+comunidad.minX=161598.5
+comunidad.minY=4741975.7
+comunidad.maxX=376479
+comunidad.maxY=4850431.4
+
+
+# Configuracion de la guia urbana
+guiaurbana.urlPublicMap=http://localgis3.grupotecopy.es:8080/localgis-guiaurbana/public/showMap.do
+guiaurbana.urlPrivateMap=http://localgis3.grupotecopy.es:8080/localgis-guiaurbana/private/showMap.do
+
+wpsRutas = http://localgis3.grupotecopy.es:8080/LOCALGIS-WPS-MVN/WebProcessingService
+
+# SSO
+
+sso.authactive=true
+sso.connection.server=http://localgis3.grupotecopy.es:8081
+sso.username=SSOADMIN
+sso.password=SSOpass!123
+
+#Puerto SSL Service /GetOneSesion
+geopista.conexion.port = 8081
+
+
+
+# DNIe @Firma
+dnie.authactive=true
+afirma.active=false
+Aplicacion=map.sgsapau.pptasas
+TrustStore=/usr/local/LocalGIS/certificados/truststore
+PlantillaValidarCertificado=/validarCertificado.xml
+ValidarCertificadoEndPoint=https://afirma.redsara.es/afirmaws/services/ValidarCertificado
+
+ValidarCertificadoOperationName=http://soapinterop.org/
+ValidarCertificadoOperation=ValidarCertificado
+#peticionSincrona
+ValidarCertificadoModo=1
+ValidarCertificadoObtenerInfo=true
+
+# REPORTS
+reports.directory.temp=/usr/local/LocalGIS/reports.tmp
+reports.plantillas.genericas=/opt/jetty/webapps/localgis-principal
+reports.plantillas.entidad=/usr/local/LocalGIS/plantillas.entidad/

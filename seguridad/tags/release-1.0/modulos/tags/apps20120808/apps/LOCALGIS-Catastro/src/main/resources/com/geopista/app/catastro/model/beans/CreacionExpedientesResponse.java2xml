@@ -1,0 +1,35 @@
+<root>
+
+<element xml-name="CreacionExpedientesResponse">
+    <element xml-name="control">
+     	<element xml-name="ieg">
+	        <element xml-name="teg" java-name="tipoEntidadGeneradora"/>
+	        <element xml-name="ceg">
+	        	<element xml-name="cd" java-name="gerenciaCatastro"/>
+	        </element>
+	        <element xml-name="neg" java-name="nombreEntidadGeneradora"/>
+	    </element>
+		<element xml-name="ifi">
+	        <element xml-name="ffi" java-name="fechaGeneracionFichero"/>
+	        <element xml-name="hfi" java-name="horaGeneracionFichero"/>
+	        <element xml-name="tfi" java-name="tipo"/>
+	    </element>
+		<element xml-name="cde" java-name="codigoEnvio"/>
+ 	</element>
+
+	<element xml-name="respuesta">
+		<element xml-name="exp">
+			<element xml-name="expg">
+				<element xml-name="aexpg" java-name="expediente.annoExpedienteGerencia"/>
+		        <element xml-name="rexpg" java-name="expediente.referenciaExpedienteGerencia"/>
+		        <element xml-name="ero" java-name="expediente.codigoEntidadRegistroDGCOrigenAlteracion" length="3"/>
+	    	</element>
+		    <element xml-name="expec">
+		        <element xml-name="aexpec" java-name="expediente.annoExpedienteAdminOrigenAlteracion"/>
+		        <element xml-name="rexpec" java-name="expediente.referenciaExpedienteAdminOrigen"/>
+		        <element xml-name="eoa" java-name="expediente.entidadGeneradora.codigo"/>
+		    </element>
+		</element>
+	</element>
+</element>
+</root>

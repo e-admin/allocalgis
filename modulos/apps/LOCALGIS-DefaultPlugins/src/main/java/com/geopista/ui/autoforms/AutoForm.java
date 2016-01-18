@@ -1,0 +1,116 @@
+/**
+ * AutoForm.java
+ * © MINETUR, Government of Spain
+ * This program is part of LocalGIS
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.geopista.ui.autoforms;
+
+import java.util.Collection;
+import java.util.Set;
+
+import javax.swing.JComponent;
+
+import com.geopista.feature.ValidationError;
+import com.geopista.util.ApplicationContext;
+
+
+/**
+ * @uml.dependency   supplier="com.geopista.ui.autoforms.FormBuilder"
+ * @uml.dependency   supplier="com.geopista.ui.autoforms.FormController"
+ */
+public interface AutoForm extends FieldPanelAccessor {
+
+	public abstract boolean getBoolean(String fieldName);
+
+	public abstract Double getDouble(String fieldName);
+
+	public abstract Integer getInteger(String fieldName);
+
+	public abstract String getText(String fieldName);
+
+	/**
+	 * Realiza la comprobación de los atributos del panel según los dominios
+	 * 
+	 * @param updateView
+	 *            si es true se actualiza el interfaz de usuario marcando los
+	 *            campos erróneos
+	 * @return
+	 */
+	public abstract boolean checkPanel(boolean updateView);
+
+	
+ 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.geopista.util.FeatureExtendedForm#setApplicationContext(com.geopista.util.AppContext)
+	 */
+	public abstract void setApplicationContext(ApplicationContext context);
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.geopista.util.FeatureExtendedForm#checkPanels()
+	 */
+	public abstract boolean checkPanels();
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.geopista.util.FeatureExtendedPanel#enter()
+	 */
+	public abstract void enter();
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.geopista.util.FeatureExtendedPanel#exit()
+	 */
+	public abstract void exit();
+
+	public abstract void disableAll();
+	/**
+	 * Remarks the erroneous field with data stored in err
+	 * @param err
+	 * @return true if the component erroneous is really in this Form/Panel
+	 */
+	public boolean highLightFieldError(ValidationError err);
+	/**
+	 * Clears all error highlighting
+	 *
+	 */
+	public void restoreFieldsDecoration();
+
+	public abstract JComponent getComponent(String fieldName);
+
+	public abstract JComponent getComponentByFieldName(String attName);
+
+	/**
+	 * @return
+	 */
+	public abstract Collection getFieldComponents();
+
+	/**
+	 * @return
+	 */
+	public abstract Collection getFieldLabels();
+
+	/**
+	 * @return
+	 */
+	public abstract Set getFieldNames();
+
+	/**
+	 * Devuelve el valor asociado a cada campo. Un Date si es un DateField si es
+	 * DATE Un Integer si es tipo INTEGER Un Double si es tipo DOUBLE Un String
+	 * si es tipo STRING Lanza una assertion si es tipo GEOMETRY o OBJECT
+	 * Devuelve Null si hay un error de parse
+	 * 
+	 * @param attName
+	 * @return
+	 */
+	public abstract Object getValue(String attName);
+}

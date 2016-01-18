@@ -1,0 +1,162 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    version="2.5">
+    
+	<display-name>Localgis</display-name>
+
+    <!-- Session Config -->
+    <session-config>
+        <session-timeout>120</session-timeout>
+    </session-config>
+
+    <!-- Standard Action Servlet Configuration (with debugging) -->
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>
+            org.apache.struts.action.ActionServlet
+        </servlet-class>
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>/WEB-INF/struts-config.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>2</param-value>
+        </init-param>
+        <init-param>
+            <param-name>detail</param-name>
+            <param-value>2</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- DWR Servlet -->
+    <servlet>
+    	<servlet-name>dwr-invoker</servlet-name>
+    	<servlet-class>
+    		org.directwebremoting.servlet.DwrServlet
+    	</servlet-class>
+    	<init-param>
+    		<param-name>debug</param-name>
+    		<param-value>false</param-value>
+    	</init-param>
+    	<init-param>
+        	<param-name>crossDomainSessionSecurity</param-name>
+        	<param-value>false</param-value>
+		</init-param>
+    	<load-on-startup>2</load-on-startup>
+    </servlet>
+
+    <!--  GetFeatureInfo proxy servlet -->
+    <servlet>
+        <servlet-name>getFeatureInfoProxy</servlet-name>
+        <servlet-class>
+            com.localgis.web.gwfst.servlets.GetFeatureInfoProxy
+        </servlet-class>
+        <load-on-startup>3</load-on-startup>
+    </servlet>
+
+	<servlet>
+	  <servlet-name>cgi</servlet-name>
+	  <servlet-class>org.apache.catalina.servlets.CGIServlet</servlet-class>
+	  <init-param>
+	   <param-name>debug</param-name>
+	   <param-value>0</param-value>
+	  </init-param>
+	  <init-param>
+	   <param-name>cgiPathPrefix</param-name>
+	   <param-value>WEB-INF/cgi</param-value>
+	  </init-param>
+	  <init-param>
+	   <param-name>passShellEnvironment</param-name>
+	   <param-value>true</param-value>
+	  </init-param>
+	  <init-param>
+	   <param-name>executable</param-name>
+	   <param-value>${localgis_python}</param-value>
+	   <!--<param-value>/usr/bin/python</param-value> -->
+	  </init-param>  
+	  <load-on-startup>5</load-on-startup>
+	</servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>dwr-invoker</servlet-name>
+        <url-pattern>/features/dwr/*</url-pattern>
+    </servlet-mapping>
+        
+    <servlet-mapping>
+        <servlet-name>cgi</servlet-name>
+        <url-pattern>/cgi-bin/*</url-pattern>
+    </servlet-mapping>
+        
+    <filter>
+        <filter-name>setFeaturesConfiguration</filter-name>
+        <filter-class>com.localgis.web.gwfst.filters.SetConfigurationFilter</filter-class>
+        <init-param>
+            <param-name>configurationLocalgisWeb</param-name>
+            <param-value>features</param-value>
+        </init-param>
+    </filter>
+    
+    <filter>
+        <filter-name>loginFilterFeatures</filter-name>
+        <filter-class>com.localgis.web.gwfst.filters.LoginFilterFeatures</filter-class>
+		<init-param>
+            <param-name>loginAction</param-name>
+            <param-value>/features/loginFeatures.do</param-value>
+        </init-param>
+    </filter>
+	
+	<filter>
+		<filter-name>DNIeFilter</filter-name>
+		<filter-class>com.localgis.web.gwfst.dnie.filters.DNIeFilter</filter-class>
+	</filter>
+    
+    <filter-mapping>
+        <filter-name>setFeaturesConfiguration</filter-name>
+        <url-pattern>/features/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>    
+  	
+  	<filter-mapping>
+        <filter-name>loginFilterFeatures</filter-name>
+        <url-pattern>/features/*</url-pattern>
+    </filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>DNIeFilter</filter-name>
+		<url-pattern>/dnie/*</url-pattern>
+	</filter-mapping>
+  	
+	<!-- The Usual Welcome File List -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Contents</web-resource-name>
+			<description> Contents</description>
+			<url-pattern>/dnie/*</url-pattern>
+		</web-resource-collection>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+<!--	
+	<login-config>
+		<auth-method>CLIENT-CERT</auth-method>
+	</login-config>
+  -->
+  
+
+</web-app>

@@ -1,0 +1,61 @@
+<<<<<<< .mine
+﻿
+
+.olLayerSwitcherLocalgisLayerLabel {
+	display: block !important; 
+	cursor: default !important;
+	font-size: 15px !important;
+	position:absolute !important;
+	left:40px !important;
+	width:220px !important;
+	top:0px !important;
+
+}
+
+#bannerMapaLeft {
+	float: left;
+    height: 50px;
+    width: 300px;
+    background-repeat:no-repeat;
+    /*background-image: url(img/banner_left.gif);*/
+    background-image: url("http://www.allande.es/image/organization_logo?img_id=208483") !important;
+	
+}
+
+#footer {
+        #background-image: url(../img/footer.gif);
+		background-image: url("http://www.allande.es/image/organization_logo?img_id=208483") !important;
+        background-position: right;
+        background-repeat: no-repeat;
+        height: 64px;
+}=======
+
+
+.olLayerSwitcherLocalgisLayerLabel {
+	display: block !important; 
+	cursor: default !important;
+	font-size: 15px !important;
+	position:absolute !important;
+	left:40px !important;
+	width:220px !important;
+	top:0px !important;
+
+}
+
+#bannerMapaLeft {
+	float: left;
+    height: 50px;
+    width: 300px;
+    background-repeat:no-repeat;
+    /*background-image: url(img/banner_left.gif);*/
+    background-image: url("http://www.allande.es/image/organization_logo?img_id=208483") !important;
+	
+}
+
+#footer {
+        #background-image: url(../img/footer.gif);
+		background-image: url("http://www.allande.es/image/organization_logo?img_id=208483") !important;
+        background-position: right;
+        background-repeat: no-repeat;
+        height: 64px;
+}>>>>>>> .r3192

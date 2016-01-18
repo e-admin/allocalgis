@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+codebase="@SITE@"
+href="localgis.jnlp">
+<information>
+<title>LOCALGIS GIS</title>
+<vendor>LocalGIS</vendor>
+<homepage href="http://www.geopista.com" />
+<description>Open Source GIS client. Administrador.(@SITE@)</description>
+<icon href="logo_geopista.gif" />
+<offline-allowed />
+<icon kind="splash" href="splash_geopista.gif" />
+<shortcut online="false">
+      <desktop />
+      <menu submenu="LocalGIS" />
+    </shortcut>
+</information><resources>
+<j2se version="1.5 1.4+" initial-heap-size="128m" max-heap-size="1024m"/>
+<jar href="geopista_workbench.jar" main="true"/>
+<jar href="productos/gt2-2.3.3/gt2-referencing-2.3.3.jar"/>
+<jar href="productos/gt2-2.3.3/hsqldb-1.8.0.1.jar"/>
+<jar href="productos/gt2-2.3.3/gt2-epsg-hsql-2.3.3.jar"/>
+<jar href="productos/gt2-2.3.3/gt2-epsg-wkt-2.3.3.jar"/>
+<jar href="productos/gt2-2.3.3/jsr108-0.01.jar"/>
+<jar href="productos/gt2-2.3.3/vecmath-1.3.1.jar"/>
+<jar href="analysis.jar" />
+<jar href="edit.jar" />
+<jar href="editing.jar" />
+<jar href="dxf.jar" />
+<jar href="grid.jar" />
+<jar href="explodeselectedfeatures.jar" />
+<jar href="selectbytype.jar" />
+<jar href="selectitemsbycirclefromselectedlayers.jar" />
+<jar href="selectitemsbyfence.jar" />
+<jar href="cliptool.jar" />
+<jar href="drawconstrainedarc.jar" />
+<jar href="drawconstrainedcircle.jar" />
+<jar href="editingtool.jar" />
+<jar href="parallelitemcursortool.jar" />
+<jar href="rotateselecteditemstool.jar" />
+<jar href="scaleselecteditemstool.jar" />
+<jar href="selectoneitem.jar" />
+<jar href="symmetrictool.jar" />
+<jar href="catastro_client.jar" />
+<jar href="zoomtoarea.jar" />
+<jar href="extractautocad.jar" />
+<jar href="loadautocadmap.jar" />
+<jar href="synchronizeautocad.jar" />
+<jar href="geopista_plugin.jar" />
+<jar href="geopista_images.jar" />
+<jar href="geopista_img.jar" />
+<jar href="jumppatched.jar" />
+<jar href="geopista_apps.jar" />
+<jar href="helpset.jar" />
+<jar href="pirolplugin.jar" />
+<jar href="geopista_server.jar" />
+<jar href="geopista_protocol.jar" />
+<jar href="geopista_utilidades.jar" />
+<jar href="productos/javahelp/jhall.jar"/>
+<jar href="productos/degree/deegree2004-05-07.jar"></jar>
+<jar href="productos/JEP/jep-2.24.jar"></jar>
+<jar href="productos/jai/jai_codec.jar"></jar>
+<jar href="productos/jai/jai_core.jar"></jar>
+<jar href="productos/vividsolutions/Jama-1.0.1.jar"></jar>
+<jar href="productos/JCalendar/jcalendar-1.3.2.jar"></jar>
+<jar href="productos/xml/jdom.jar"></jar>
+<jar href="productos/vividsolutions/jts-1.5.jar"></jar>
+<jar href="productos/DataVision/DataVision.jar"></jar>
+<jar href="productos/DataVision/iText.jar"></jar>
+<jar href="productos/DataVision/jRuby.jar"></jar>
+<jar href="productos/DataVision/MinML2.jar"></jar>
+<jar href="productos/postgre/pg74.213.jdbc2.jar"></jar>
+<jar href="productos/xfire/commons-httpclient-3.0.jar"></jar>
+<jar href="productos/httpclient/commons-logging.jar"></jar>
+<jar href="productos/log4j/log4j-1.2.6.jar"></jar>
+<jar href="productos/castor/castor-0.9.5.3.jar"></jar>
+<jar href="productos/jetty/lib/javax.servlet.jar"></jar>
+<jar href="productos/jetty/extra/lib/org.mortbay.jaas.jar"></jar>
+<jar href="productos/jetty/lib/org.mortbay.jetty.jar"></jar>
+<jar href="productos/jetty/extra/lib/org.mortbay.jetty.plus.jar"></jar>
+<jar href="productos/agile/agile_core.jar"></jar>
+<jar href="productos/hibernate/hibernate-2.1.jar"></jar>
+<jar href="productos/buoy/Buoy.jar"></jar>
+<jar href="productos/crypto/xmlsec-1.3.0.jar"></jar>
+<jar href="productos/freechart/jcommon-1.0.0.jar"></jar>
+<jar href="productos/freechart/jfreechart-1.0.1.jar"></jar>
+<jar href="productos/netbeans/AbsoluteLayout.jar"></jar>
+<jar href="geopista_patrimonio.jar"></jar>
+<jar href="productos/xml/xml-apis.jar" />
+<jar href="productos/xml/jdom.jar" />
+<jar href="productos/xml/jaxen-core.jar" />
+<jar href="productos/xml/jaxen-jdom.jar" />
+<jar href="productos/xml/saxpath.jar" />
+<jar href="productos/xml/xalan.jar" />
+<jar href="productos/xml/xerces.jar" />
+<jar href="productos/xml/xercesImpl.jar" />
+<jar href="productos/jakarta/commons-fileupload-1.0.jar" />
+<jar href="productos/Java3D/j3dcore.jar" />
+<jar href="productos/jdbc/mysql-connector-java-5.0.4-bin.jar" />
+<jar href="productos/jdbc/ojdbc14.jar" />
+<jar href="productos/sql/sqleonardo-2007.03.jar"/>
+<jar href="productos/jasperreports/poi-3.0.1-FINAL-20070705.jar"/>
+<jar href="productos/jasperreports/jdt-compiler-3.1.1.jar"/>
+<jar href="productos/jasperreports/jcommon-1.0.0.jar"/>
+<jar href="productos/jasperreports/jasperreports-2.0.1-javaflow.jar"/>
+<jar href="productos/jasperreports/jasperreports-2.0.1-applet.jar"/>
+<jar href="productos/jasperreports/jasperreports-2.0.1.jar"/>
+<jar href="productos/jasperreports/itext-1.3.1.jar"/>
+<jar href="productos/jasperreports/commons-logging-api-1.0.2.jar"/>
+<jar href="productos/jasperreports/commons-logging-1.0.2.jar"/>
+<jar href="productos/jasperreports/commons-javaflow-20060411.jar"/>
+<jar href="productos/jasperreports/commons-digester-1.7.jar"/>
+<jar href="productos/jasperreports/commons-collections-2.1.jar"/>
+<jar href="productos/jasperreports/commons-beanutils-1.7.jar"/>
+<jar href="productos/jasperreports/bsh-2.0b4.jar"/>
+<jar href="productos/jasperreports/antlr-2.7.5.jar"/>
+<jar href="productos/gt2-2.3.3/geoapi-nogenerics-2.1-M2.jar"/>
+<jar href="productos/gt2-2.3.3/gt2-api-2.3.3.jar"/>
+<jar href="productos/gt2-2.3.3/gt2-main-2.3.3.jar"/>
+<jar href="wfsmne.jar" />
+<jar href="productos/xfire/commons-codec-1.3.jar" />
+<jar href="productos/xfire/commons-httpclient-3.0.jar" />
+<property name="geopista.jdbc.driver.oracle.class" value="oracle.jdbc.driver.OracleDriver"/>
+<property name="geopista.jdbc.driver.oracle.url" value="jdbc:oracle:thin:@&lt;server&gt;[:1521]:database_name"/>
+<property name="geopista.jdbc.driver.postgres.class" value="org.postgresql.Driver"/>
+<property name="geopista.jdbc.driver.postgres.url" value="jdbc:postgresql:[&lt;//host&gt;[:&lt;5432&gt;/]]&lt;database&gt;"/>
+<property name="geopista.jdbc.driver.mysql.class" value="com.mysql.jdbc.Driver"/>
+<property name="geopista.jdbc.driver.mysql.url" value="jdbc:mysql://&lt;hostname&gt;[:&lt;3306&gt;]/&lt;dbname&gt;"/>
+</resources>
+<application-desc main-class="com.geopista.ui.GEOPISTAWorkbench">
+<argument>-properties</argument>
+<argument>workbench-properties.xml</argument>
+<argument>-plug-in-directory</argument>
+<argument>/Geopista/plugins</argument>
+</application-desc>
+<security><all-permissions/></security>
+</jnlp>

@@ -1,0 +1,45 @@
+import java.io.*;
+import org.apache.commons.io.IOUtils;
+
+    File jnlpFile = new File(basedir, "target/jnlp/default-javafx.jnlp");   // default target file name
+    if (!jnlpFile.isFile()) {
+        System.out.println("Target jnlp file not found: " + jnlpFile.getAbsolutePath());
+        return false;
+    }
+
+    String appJnlpString = IOUtils.toString(new FileInputStream(jnlpFile));
+    if (appJnlpString.contains("$")) {
+        System.out.println("Not all variables were replaced in the application template");
+        return false;
+    }
+
+    String extension = "<extension href=\"http://dl.javafx.com/1.2/javafx-rt.jnlp\" name=\"JavaFX Runtime\"/>";
+    if (!appJnlpString.contains(extension)) {
+        System.out.println("JavaFX extension not found in app jnlp");
+        return false;
+    }
+
+    File javafxJnlpFile = new File(basedir, "target/jnlp/default-javafx-browser.jnlp");
+    if (!javafxJnlpFile.isFile()) {
+        System.out.println("Target javafx jnlp file not found: " + javafxJnlpFile.getAbsolutePath());
+        return false;
+    }
+
+    String jnlpString = IOUtils.toString(new FileInputStream(javafxJnlpFile));
+    if (jnlpString.contains("$")) {
+        System.out.println("Not all variables were replaced");
+        return false;
+    }
+
+    if (!jnlpString.contains(extension)) {
+        System.out.println("JavaFX extension not found in applet jnlp");
+        return false;
+    }
+
+    if (!jnlpString.contains("<jar href=\"default-javafx-1.0.jar\"/>")) {
+        System.out.println("Module jar wasn't included or not detected");
+        return false;
+    }
+
+    return true;
+

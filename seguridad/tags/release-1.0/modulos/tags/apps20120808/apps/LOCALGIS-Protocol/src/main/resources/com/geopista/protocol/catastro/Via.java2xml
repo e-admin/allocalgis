@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<root>
+    <element xml-name="id" java-name="id"/>
+    <element xml-name="codigoIne" java-name="codigoIne"/>
+    <element xml-name="codigoCatastro" java-name="codigoCatastro"/>
+    <element xml-name="tipoViaIne" java-name="tipoViaIne"/>    
+    <element xml-name="nombreViaIne" java-name="nombreViaIne"/>
+    <element xml-name="nombreViaCortoIne" java-name="nombreViaCortoIne"/>
+    <element xml-name="nombreCatastro" java-name="nombreCatastro"/>
+    <element xml-name="idalp" java-name="idalp"/>
+    <element xml-name="fechaGrabacionAyto" java-name="fechaGrabacionAyto"/>
+    <element xml-name="fechaGrabacionCierre" java-name="fechaGrabacionCierre"/>
+    <element xml-name="fechaEjecucion" java-name="fechaEjecucion"/>
+</root>

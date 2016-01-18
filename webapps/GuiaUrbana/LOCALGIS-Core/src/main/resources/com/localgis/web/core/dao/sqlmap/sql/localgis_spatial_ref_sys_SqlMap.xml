@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="localgis_spatial_ref_sys">
+
+  <resultMap class="com.localgis.web.core.model.LocalgisSpatialRefSys" id="LocalgisSpatialRefSysResult">
+    <result column="srid" jdbcType="INTEGER" property="srid"/>
+    <result column="auth_name" jdbcType="VARCHAR" property="authName"/>
+    <result column="auth_srid" jdbcType="INTEGER" property="authSrid"/>
+    <result column="srtext" jdbcType="VARCHAR" property="srText"/>
+    <result column="proj4text" jdbcType="VARCHAR" property="proj4Text"/>
+  </resultMap>
+
+  <select id="selectSpatialRefSysBySrid" parameterClass="java.util.Map" resultMap="LocalgisSpatialRefSysResult">
+    select s.srid as srid, 
+           s.auth_name as auth_name,
+           s.auth_srid as auth_srid,
+           s.srtext as srtext,
+           s.proj4text as proj4text
+    from spatial_ref_sys s
+    where s.srid = #srid#
+  </select>
+
+</sqlMap>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="localgis_map">
+
+  <insert id="insert" parameterClass="com.localgis.web.core.model.LocalgisMap">
+    <selectKey keyProperty="mapid" resultClass="java.lang.Integer">
+      select nextval('localgisguiaurbana.mapsequence')
+    </selectKey>
+    insert into localgisguiaurbana.map (mapid, mapidgeopista, minx, miny, maxx, maxy, mapidentidad,
+      mappublic, srid, mapdefault)
+    values (#mapid:INTEGER#, #mapidgeopista:INTEGER#, #minx:DOUBLE#, #miny:DOUBLE#, #maxx:DOUBLE#,
+      #maxy:DOUBLE#, #mapidentidad:NUMERIC#, #mappublic:SMALLINT#, #srid:VARCHAR#, #mapdefault:SMALLINT#)
+  </insert>
+  
+</sqlMap>

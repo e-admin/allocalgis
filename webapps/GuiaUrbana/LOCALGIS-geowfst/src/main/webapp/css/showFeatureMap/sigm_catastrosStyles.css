@@ -1,0 +1,202 @@
+/* ----- HEAD ----------------------------------------------------- */
+#headBorderLeft{
+	background: transparent url(../../img/showFeatureMap/headBorderLeft.gif) no-repeat left center;  
+    height:84px; 
+    width:18px;  
+    position: absolute;
+    top:0px;
+    left:0px;
+    
+}
+
+#headImgLeft{
+	background: #ffffff url(../../img/showFeatureMap/sigm_catastros/logoType.gif) no-repeat 6px center;  
+    height:80px;
+    width:75px;  
+    border:2px solid black;  
+    border-left:0px;
+    position: absolute;
+    top:0px;
+    left:15px;
+}
+ 
+#headImgRight{
+	background: #ffffff url(../../img/showFeatureMap/logoRegion.gif) no-repeat center center;    
+    height:80px;
+    width:161px;    
+    border:2px solid black;  
+    border-right:0px; 
+    position: absolute;
+    top:0px;
+    right:13px;    
+}
+
+#headBorderRight{
+	background: transparent url(../../img/showFeatureMap/headBorderRight.gif) no-repeat right center;  
+    height:84px;
+    width:18px;  
+    position: absolute;
+    top:0px;
+    right:0px;   
+}
+
+/*----- OpenLayers Styles ----------------*/
+
+.olControlSelectFeatureLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureSelect.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlSelectFeatureLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureSelect_over.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlSelectFeatureLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureSelect_over.gif");
+	cursor: pointer;
+}
+
+.olControlDrawFeaturePolygonLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureDraw.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlDrawFeaturePolygonLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureDraw_over.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlDrawFeaturePolygonLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureDraw_over.gif");
+	cursor: pointer;
+}
+
+.olControlModifyFeatureItemInactive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarNavZoomOut.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureItemActive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarNavZoomOut_over.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarNavZoomOut_over.gif");
+	cursor: pointer;
+}
+
+
+.olControlModifyFeatureReshapeLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureReshape.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureReshapeLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureReshape_over.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureReshapeLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureReshape_over.gif");
+	cursor: pointer;
+}
+
+.olControlModifyFeatureResizeLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureResize.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureResizeLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureResize_over.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureResizeLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureResize_over.gif");
+	cursor: pointer;
+}
+
+
+.olControlModifyFeatureRotateLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureRotate.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureRotateLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureRotate_over.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureRotateLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureRotate_over.gif");
+	cursor: pointer;
+}
+
+
+.olControlModifyFeatureDragLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureDrag.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureDragLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureDrag_over.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureDragLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureDrag_over.gif");
+	cursor: pointer;
+}
+
+
+
+.olControlDeleteFeatureLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureDelete.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlDeleteFeatureLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureDelete_over.gif");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlDeleteFeatureLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/sigm_catastros/toolbarFeatureDelete_over.gif");
+	cursor: pointer;
+}
+
+

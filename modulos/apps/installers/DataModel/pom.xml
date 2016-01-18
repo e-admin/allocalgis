@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<packaging>pom</packaging>
+	<name>AgrupadorModulosDataModel</name>
+	<description>Agrupador modulos DataModel para Instalación y Actualización LocalGis</description>
+	<groupId>com.localgis.installers</groupId>
+	<artifactId>installers-datamodel</artifactId>
+	<version>3.0.0</version>
+	<parent>
+		<groupId>com.localgis</groupId>
+		<artifactId>installers</artifactId>
+		<version>3.0.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+	
+	<modules>
+		<!--<module>LocalGisBasicDataModelModule</module>-->
+		
+		
+		<module>ToledoDataModelModule</module>
+		<module>VigoDataModelModule</module>
+		<module>ModeloDataModelModule</module>
+		<module>PostModeloDataModelModule</module>
+		<module>PreLocalGIS3DataModelModule</module>
+		<module>LocalGIS3DataModelModule</module>
+		<module>LocalGIS2.1DataModelModule</module>
+		
+		<module>RegistryWSDataModelModule</module>
+		<module>AgendaLocal21DataModelModule</module>
+		<module>GeorreferenciaExternaDataModelModule</module>
+		<module>GuiaUrbanaAppWebDataModelModule</module>
+		<module>WMSManagerAppWebDataModelModule</module>
+		
+		<module>AdministacionAppDataModelModule</module>
+		<module>AsistenteInformesAppDataModelModule</module>
+		<module>BackupAppDataModelModule</module>
+		<module>CatastroAppDataModelModule</module>
+		<module>CementeriosAppDataModelModule</module>
+		<module>ContaminantesAppDataModelModule</module>
+		<module>EditorAppDataModelModule</module>
+		<module>EIELAppDataModelModule</module>
+		<module>EspacioPublicoAppDataModelModule</module>
+		<module>GestorCapasAppDataModelModule</module>
+		<module>GestorFipAppDataModelModule</module>
+		<module>InicioAppDataModelModule</module>
+		<module>InventarioAppDataModelModule</module>
+		<module>IReportAppDataModelModule</module>
+		<module>LicenciasActividadAppDataModelModule</module>
+		<module>LicenciasObraAppDataModelModule</module>
+		<module>MetadatosAppDataModelModule</module>
+		<module>OcupacionesAppDataModelModule</module>
+		
+	</modules>
+	
+</project>

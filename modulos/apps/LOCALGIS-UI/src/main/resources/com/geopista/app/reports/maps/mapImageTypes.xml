@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<mapImageTypeList>
+    <mapImageType>
+        <id>parcelas</id>
+        <table>parcelas</table>
+        <column>referencia_catastral</column>
+        <description>Parcela mediante referencia catastral</description>
+        <layers>lcg_parcelas</layers>
+        <style>
+            <![CDATA[
+                <sld:StyledLayerDescriptor xmlns:sld="http://www.opengis.net/sld" xmlns:java="java" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:wfs="http://www.opengis.net/wfs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml" xmlns:ogc="http://www.opengis.net/ogc" xmlns="http://www.opengis.net/sld" version="1.0.0">
+                    <NamedLayer>
+                        <Name>lcg_parcelas</Name>
+                        <UserStyle>
+                            <FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc">
+                                <Name>lcg_parcelas</Name>
+                                <Rule>
+                                    <Name>Parcela seleccionada</Name>
+                                    <Title>default</Title>
+                                    <Abstract>default</Abstract>
+                                    <ogc:Filter>
+                                        <ogc:PropertyIsEqualTo>
+                                            <ogc:PropertyName>referencia_catastral</ogc:PropertyName>
+                                            <ogc:Literal>$identifier</ogc:Literal>
+                                        </ogc:PropertyIsEqualTo>
+                                    </ogc:Filter>
+                                    <PolygonSymbolizer>
+                                        <Fill>
+                                            <CssParameter name="fill">#ff0000</CssParameter>
+                                            <CssParameter name="fill-opacity">0.54</CssParameter>
+                                        </Fill>
+                                        <Stroke>
+                                            <CssParameter name="stroke">#000000</CssParameter>
+                                            <CssParameter name="stroke-linecap">butt</CssParameter>
+                                            <CssParameter name="stroke-linejoin">mitre</CssParameter>
+                                            <CssParameter name="stroke-opacity">1.0</CssParameter>
+                                            <CssParameter name="stroke-width">1.0</CssParameter>
+                                        </Stroke>
+                                    </PolygonSymbolizer>
+                                </Rule>
+                                <Rule>
+                                    <Name>Parcelas no seleccionadas</Name>
+                                    <Title>default</Title>
+                                    <Abstract>default</Abstract>
+                                    <ogc:ElseFilter>
+                                    </ogc:ElseFilter>
+                                    <PolygonSymbolizer>
+                                        <Fill>
+                                            <CssParameter name="fill">#ffcc99</CssParameter>
+                                            <CssParameter name="fill-opacity">0.54</CssParameter>
+                                        </Fill>
+                                        <Stroke>
+                                            <CssParameter name="stroke">#000000</CssParameter>
+                                            <CssParameter name="stroke-linecap">butt</CssParameter>
+                                            <CssParameter name="stroke-linejoin">mitre</CssParameter>
+                                            <CssParameter name="stroke-opacity">1.0</CssParameter>
+                                            <CssParameter name="stroke-width">1.0</CssParameter>
+                                        </Stroke>
+                                    </PolygonSymbolizer>
+                                </Rule>
+                            </FeatureTypeStyle>
+                        </UserStyle>
+                    </NamedLayer>
+                </sld:StyledLayerDescriptor>
+            ]]>
+        </style>
+    </mapImageType>
+
+</mapImageTypeList>

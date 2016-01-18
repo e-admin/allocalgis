@@ -1,0 +1,756 @@
+/* ----- MAP ----------------------------------------------------- */
+#mapDetail {
+    width: 800px;
+    height: 500px;
+    position:absolute;
+    top:0;
+    left:0;
+    border: 0px solid black;
+    background-color: white;
+}
+
+
+#mapTopShadow {
+    background: transparent url(../../img/showFeatureMap/mapTopShadow.png) repeat-x left top;
+	height:10px;
+	width:inherit;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1000;
+}
+
+#mapLeftShadow {
+    background: transparent url(../../img/showFeatureMap/mapLeftShadow.png) repeat-y left top;
+	height:inherit;
+	width:10px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1000;
+}
+
+#mapRightShadow {
+    background: transparent url(../../img/showFeatureMap/mapRightShadow.png) repeat-y right top;
+	height:inherit;
+	width:10px;
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:1000;
+}
+
+#mapBottomShadow {
+    background: transparent url(../../img/showFeatureMap/mapBottomShadow.png) repeat-x left bottom;
+	height:10px;
+	width:inherit;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	z-index:1000;
+}
+
+/* ----- CURSORS ----------------------------------------------------- */
+
+.cursorDefault{
+	cursor: default;
+}
+
+.cursorHandDefault{
+	cursor: url("../../img/showFeatureMap/cursor_hand_default.png"), default;
+}
+
+.cursorHandDrag{
+	cursor: url("../../img/showFeatureMap/cursor_hand_drag.png"), default;
+}
+
+.cursorZoomBox{
+	cursor: url("../../img/showFeatureMap/cursor_zoom_box.png"), default;
+}
+
+
+/* ----- MESSAGE ----------------------------------------------------- */
+#messageBox{
+	width: 800px;
+	height: 500px;
+	position:absolute;
+    top:0;
+    left:0;
+    background-color: blue;
+    filter:alpha(opacity=10);
+    opacity:0.1;
+    z-index:1500;
+}
+
+#message{
+	width: 250px;
+	height: 150px;
+	position:relative;
+    top:180px;
+    left:250px;
+    font-family: Arial;
+    color: #ffffff;   
+    font-size:25px;
+    border: 1px solid black;
+    background-color: white;
+    z-index: 1500;
+}
+
+/* ----- GENERIC ----------------------------------------------------- */
+.BorderBottomBtn_expanded{
+	background: transparent url(../../img/showFeatureMap/BorderBottomBtn_expanded.png) no-repeat center center;      
+}
+
+.BorderBottomBtn_expanded:hover{
+	background: transparent  url(../../img/showFeatureMap/BorderBottomBtn_expanded_over.png) no-repeat center center;      
+	cursor: pointer; 
+}
+
+.BorderBottomBtn_collapsed{
+	background: transparent  url(../../img/showFeatureMap/BorderBottomBtn_collapsed.png) no-repeat center center;  
+}
+
+.BorderBottomBtn_collapsed:hover{
+	background: transparent  url(../../img/showFeatureMap/BorderBottomBtn_collapsed_over.png) no-repeat center center;
+	cursor: pointer; 
+}
+
+
+
+.BorderLeftSemiBtn_expanded{
+	background: transparent url(../../img/showFeatureMap/BorderLeftSemiBtn_expanded.png) no-repeat center center;      
+}
+
+.BorderLeftSemiBtn_expanded:hover{
+	background: transparent  url(../../img/showFeatureMap/BorderLeftSemiBtn_expanded_over.png) no-repeat center center;      
+	cursor: pointer; 
+}
+
+.BorderLeftSemiBtn_collapsed{
+	background: transparent  url(../../img/showFeatureMap/BorderLeftSemiBtn_collapsed.png) no-repeat center center;  
+}
+
+.BorderLeftSemiBtn_collapsed:hover{
+	background: transparent  url(../../img/showFeatureMap/BorderLeftSemiBtn_collapsed_over.png) no-repeat center center;
+	cursor: pointer; 
+}
+
+
+
+.BorderBottomSemiBtn_expanded{
+	background: transparent url(../../img/showFeatureMap/BorderBottomSemiBtn_expanded.png) no-repeat center center;      
+}
+
+.BorderBottomSemiBtn_expanded:hover{
+	background: transparent  url(../../img/showFeatureMap/BorderBottomSemiBtn_expanded_over.png) no-repeat center center;      
+	cursor: pointer; 
+}
+
+.BorderBottomSemiBtn_collapsed{
+	background: transparent  url(../../img/showFeatureMap/BorderBottomSemiBtn_collapsed.png) no-repeat center center;  
+}
+
+.BorderBottomSemiBtn_collapsed:hover{
+	background: transparent  url(../../img/showFeatureMap/BorderBottomSemiBtn_collapsed_over.png) no-repeat center center;
+	cursor: pointer; 
+}
+
+
+.SelectionBtn{
+	/*background: transparent url(../../img/showFeatureMap/SelectionBtn.png) no-repeat center center;  */
+	background-color:black;
+	margin-top:2px;
+    height:16px;
+    width:100%;  
+    text-align:center;
+    font-size:12px;
+    font-weight:bold;
+    font-family:Arial;
+    color:white;
+}
+
+.SelectionBtn:hover{
+	/*background: transparent url(../../img/showFeatureMap/SelectionBtn_over.png) no-repeat center center;  */
+	background-color:rgb(85,125,193);	
+    cursor:pointer;
+}
+
+/* ----- INFOPANEL ----------------------------------------------------- */
+
+#infoPanelBox{
+	position: absolute;
+    top: 50px;
+    left:21px;
+	z-index: 999;
+}
+
+#infoPanelConceleable{  
+    width: 225px;
+    overflow: hidden; 
+    position: relative;
+}
+
+#infoPanel{  
+    width: 216px;
+    border: 1px solid black;
+    border-bottom: 0px;
+    overflow: hidden;
+    background-color: white;  
+    position: absolute;
+    left:2px;
+}
+
+.infoPanelConceleable_expanded{
+	 height: 354px;
+}
+
+.infoPanelConceleable_collapsed{
+	 height: 0px;
+}
+
+#infoPanelBorderLeft{
+	background: transparent url(../../img/showFeatureMap/infoPanelBorderLeft.png) repeat-y left bottom;
+	width:10px;	
+	height: inherit;
+	position: absolute;
+	top:1px;
+	left:-1px;
+}
+
+#infoPanelBorderRight{
+	background: transparent url(../../img/showFeatureMap/infoPanelBorderRight.png) repeat-y right bottom;
+	width:10px;	
+	height: inherit;
+	position: absolute;
+	top:1px;
+	left:213px;
+}
+
+#infoPanelBorderBottom{
+	background: transparent url(../../img/showFeatureMap/infoPanelBorderBottom.png) no-repeat center top;  
+    height:30px;
+    width:222px;
+    top:0px;
+    left:-10px;  
+}
+
+#infoPanelBorderBottomSemiBtn{
+	height:20px;
+    width:35px;  
+    position:relative;
+    top:14px;
+    left:92px;  
+}
+
+#layerSwitcher{
+	overflow: hidden;
+	margin-top:4px;
+}
+
+#featureInfo{
+	overflow: hidden;
+}
+
+#featureInfoLocalgis{
+	cursor: default;
+	margin:5px;
+	font-size:12px;
+    font-weight:bold;
+    font-family:Arial;    
+	height:267px;
+    overflow: auto;
+}
+
+.propertyAndName{
+	margin-left:15px;
+	color: rgb(85,125,193);
+}
+
+#featureSearch{
+	overflow: hidden;
+}
+
+#featureSearchLocalgis{
+	cursor: default;
+	margin:5px;
+	font-size:12px;
+    font-weight:bold;
+    font-family:Arial;    
+	height:267px;
+    overflow: auto;
+}
+
+#streetSearch{
+	overflow: hidden;
+}
+
+#streetSearchLocalgis{
+	cursor: default;
+	margin:5px;
+	font-size:12px;
+    font-weight:bold;
+    font-family:Arial;    
+	height:267px;
+    overflow: auto;
+}
+
+.infoPanelChild_collapsed{
+	height: 18px;
+}
+
+.infoPanelChild_expanded{
+	/*height: 295x;*/	
+}
+
+
+
+/* ----- TOOLBAR NAV ----------------------------------------------------- */
+#toolbarNavBox{
+	position: absolute;
+    top:94px;
+    left:727px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+#toolbarNav{		
+   /* background-color: white;
+    border: 1px solid black;
+    border-bottom: 0px; */
+    position:relative;
+    width: 40px;
+    overflow: hidden; 
+    /* display: inline-block; */    
+}
+
+.toolbarNav_expanded{
+	 height: 247px;
+	 /*title:"Ocultar las herramientas de navegación";*/
+}
+
+.toolbarNav_collapsed{
+	 height: 0px;
+	/* title:"Mostrar las herramientas de navegación";*/
+}
+
+#toolbarNavBorderBottom{
+	/*background: transparent url(../../img/showFeatureMap/toolbarBorderBottom.png) no-repeat center bottom;  */ 
+    width:40px;  
+    height:40px;
+}
+
+#toolbarNavBorderBottomBtn{
+	height:35px;
+    width:35px;  
+    position:relative;
+    top:0px;
+    left:3px;     
+}
+
+
+
+/* ----- TOOLBAR WFST ----------------------------------------------------- */
+
+#toolbarWfstBox{
+	float: right;
+	position: absolute;
+    background-color: transparent;
+    top:94px;
+    left:657px; 
+    z-index: 999;
+}
+
+#toolbarWfst{	
+   /* background-color: white;
+    border: 1px solid black;
+    border-bottom: 0px; */
+    position:relative;
+    width: 40px;
+    overflow: hidden; 
+    /* display: inline-block; */
+}
+
+.toolbarWfst_expanded{
+	 height: 287px;
+	 /*title:"Ocultar las herramientas de gestión de vados";*/
+}
+
+.toolbarWfst_collapsed{
+	 height: 0px;
+	 /*title:"Mostrar las herramientas de gestión de vados";*/
+}
+
+
+#toolbarWfstBorderBottom{
+	/*background: transparent url(../../img/showFeatureMap/toolbarBorderBottom.png) no-repeat center bottom; */  
+    width:40px;  
+    height:40px; 
+}
+
+#toolbarWfstBorderBottomBtn{
+	height:35px;
+    width:35px;  
+    position:relative;
+    top:0px;
+    left:3px;   
+}
+
+
+
+
+/* ----- HEAD ----------------------------------------------------- */
+#head{
+	position: absolute;
+	height:50px;
+	width:800px;
+	top:10px;
+	left:0px;
+	z-index: 1000;
+}
+
+#headBox{
+	width:inherit;
+	height:inherit;
+}
+
+#headConceleable{
+	position: absolute;
+	height:inherit;
+	overflow: hidden; 
+}
+
+.headConceleable_expanded{
+	width:800px;
+}
+
+.headConceleable_collapsed{
+	width:0px;	
+}
+
+#headBorderLeftSemiBtn{
+	height:35px;
+    width:20px;  
+    position:absolute;
+    top:5px;       
+}
+
+#headImgLeftFrame{
+	background: transparent url(../../img/showFeatureMap/headImgLeftFrame.png) no-repeat center center;  
+    height:50px;
+    width:55px;  
+    position: relative;
+    top:-2px;
+    left:16px;
+
+}
+ 
+#headTitleLeftFrame{
+	background: transparent url(../../img/showFeatureMap/headTitleLeftFrame.png) no-repeat center center;  
+    height:50px;
+    width:180px;  
+    position: absolute;
+    top:-2px;
+    left:68px;
+}
+
+#headTitleLeft{
+    height:50px;
+    width:180px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Arial;
+    font-weight: Bold;
+    color: #666666;   
+    font-size:14px;
+    top: 50%;
+    /*left: 25%;*/
+    display: table-cell;
+}
+
+#headImgCenter{
+	background: transparent url(../../img/showFeatureMap/infoPanelCenter.png) no-repeat left center;  
+    height:45px;
+	width:730px;
+    position: absolute;
+    top:0px;
+    left:32px;
+}
+
+#headImgRightFrame{
+	background: transparent url(../../img/showFeatureMap/headImgRightFrame.png) no-repeat center center;    
+    height:90px;
+    width:168px;    
+    position: absolute;
+    top:-4px;
+    right:6px;    
+} 
+
+.googleNoneBtn{
+	background: transparent url(../../img/showFeatureMap/GoogleNoneBtn.png) no-repeat center center;
+	height:31px;
+    width:31px; 
+    position: absolute;   
+	top: 7px;
+	left: 225px;
+	z-index: 1500;
+}
+
+.googleNoneBtn:hover{
+	background: transparent url(../../img/showFeatureMap/GoogleNoneBtn_over.png) no-repeat center center;
+	cursor: pointer; 
+}
+
+.googleStreetBtn{
+	background: transparent url(../../img/showFeatureMap/GoogleStreetBtn.png) no-repeat center center;
+	height:31px;
+    width:31px; 
+    position: absolute;   
+	top: 7px;
+	left: 260px;
+	z-index: 1500;
+}
+
+.googleStreetBtn:hover{
+	background: transparent url(../../img/showFeatureMap/GoogleStreetBtn_over.png) no-repeat center center;
+	cursor: pointer; 
+}
+
+.googleSatelliteBtn{
+	background: transparent url(../../img/showFeatureMap/GoogleSatelliteBtn.png) no-repeat center center;
+	height:31px;
+    width:31px; 
+    position: absolute;   
+	top: 7px;
+	left: 295px;
+	z-index: 1500;
+}
+
+.googleSatelliteBtn:hover{
+	background: transparent url(../../img/showFeatureMap/GoogleSatelliteBtn_over.png) no-repeat center center;
+	cursor: pointer; 
+}
+
+.googleHybridBtn{
+	background: transparent url(../../img/showFeatureMap/GoogleHybridBtn.png) no-repeat center center;
+	height:31px;
+    width:31px; 
+    position: absolute;   
+	top: 7px;
+	left: 330px;
+	z-index: 1500;
+}
+
+.googleHybridBtn:hover{
+	background: transparent url(../../img/showFeatureMap/GoogleHybridBtn_over.png) no-repeat center center;
+	cursor: pointer; 
+}
+
+#GoogleSelectorBtn{
+	background: transparent url(../../img/showFeatureMap/GoogleSelectorBtn.png) no-repeat center center;
+	height:35px;
+    width:37px; 
+    position: absolute;  
+    top: 5px;
+    z-index: 1400;
+}
+
+.googleSelectorBtnNone{
+	left: 222px;
+}
+
+.googleSelectorBtnStreet{
+	left: 257px;
+}
+
+.googleSelectorBtnSatellite{
+	left: 292px;
+}
+
+.googleSelectorBtnHybrid{
+	left: 327px;
+}
+
+.LoadBtn{
+	top:9px;
+	left:450px;
+	position: relative;
+	height:27px;
+	width:150px;
+	text-align:center;	
+	vertical-align: middle;
+    font-size:12px;
+    font-weight:bold;
+    font-family:Arial;
+    line-height:27px;
+    color:white;
+	background: transparent url(../../img/showFeatureMap/LoadBtn.png) no-repeat center center;      
+}
+
+.LoadBtn:hover{
+	background: transparent  url(../../img/showFeatureMap/LoadBtn_over.png) no-repeat center center;      
+	cursor: pointer; 
+}
+
+/* ----- CONTROLS ----------------------------------------------------- */
+
+.olControlToolbarNavLocalgis {
+	position: relative;
+}
+
+.olControlToolbarNavLocalgis div {
+    margin-top:1px;   
+    background-position: center center; 
+}
+
+.olControlToolbarWfstLocalgis {
+	position: relative;
+}
+
+.olControlToolbarWfstLocalgis div {
+    margin-top:1px;
+    background-position: center center; 
+}
+
+.olControlToolbarWfstPointLocalgis {
+	position: relative;
+}
+
+.olControlToolbarWfstPointLocalgis div {
+    margin-top:1px;
+    background-position: center center; 
+}
+
+.olControlToolbarWfstPathLocalgis {
+	position: relative;
+}
+
+.olControlToolbarWfstPathLocalgis div {
+    margin-top:1px;
+    background-position: center center; 
+}
+
+.olControlToolbarWfstPolygonLocalgis {
+	position: relative;
+}
+
+.olControlToolbarWfstPolygonLocalgis div {
+    margin-top:1px;
+    background-position: center center; 
+}
+
+.olControlNavigationLocalgisItemActive {
+	background-image: url("../../img/showFeatureMap/toolbarNavNavigation_over.png");
+	background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlNavigationLocalgisItemInactive {
+	background-image: url("../../img/showFeatureMap/toolbarNavNavigation.png");
+	background-repeat: no-repeat;
+	width: 40px;
+    height: 40px;
+}
+
+.olControlNavigationLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/toolbarNavNavigation_over.png");
+	cursor: pointer;
+}
+
+
+.olControlZoomBoxLocalgisItemActive {
+	background-image: url("../../img/showFeatureMap/toolbarNavZoomBox_over.png");
+	background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlZoomBoxLocalgisItemInactive {
+	background-image: url("../../img/showFeatureMap/toolbarNavZoomBox.png");
+	background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlZoomBoxLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/toolbarNavZoomBox_over.png");
+	cursor: pointer;
+}
+
+
+.olControlZoomToMaxExtentItemInactive {
+	background-image: url("../../img/showFeatureMap/toolbarNavMaxExtent.png");
+	background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlZoomToMaxExtentItemActive {
+	background-image: url("../../img/showFeatureMap/toolbarNavMaxExtent_over.png");
+	background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlZoomToMaxExtentItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/toolbarNavMaxExtent_over.png");
+	cursor: pointer;
+}
+
+.olControlZoomToEntidadLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/toolbarNavZoomToEntity.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlZoomToEntidadLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/toolbarNavZoomToEntity_over.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlZoomToEntidadLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/toolbarNavZoomToEntity_over.png");
+	cursor: pointer;
+}
+
+.olControlZoomInLocalgisItemInactive {
+	background-image: url("../../img/showFeatureMap/toolbarNavZoomIn.png");
+	background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlZoomInLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/toolbarNavZoomIn_over.png");
+	cursor: pointer;
+}
+
+.olControlZoomInLocalgisItemActive {
+	background-image: url("../../img/showFeatureMap/toolbarNavZoomIn_over.png");
+	background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlZoomOutLocalgisItemInactive {
+	background-image: url("../../img/showFeatureMap/toolbarNavZoomOut.png");
+	background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlZoomOutLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/toolbarNavZoomOut_over.png");
+	cursor: pointer;
+}
+
+.olControlZoomOutLocalgisItemActive {
+	background-image: url("../../img/showFeatureMap/toolbarNavZoomOut_over.png");
+	background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/core/src/com/geopista/ui/GEOPISTAWorkbench.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.core.appendEnvironmentVariables" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.geopista.ui.GEOPISTAWorkbench"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-properties workbench-properties.xml -plug-in-directory /Geopista/plugins"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="core.modelo"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xmx1024M -Djetty.home=c:\certificados\&#13;&#10;-Dlog4j.debug=true -Dlog4j.configuration=log4j.properties -Dgeopista.jdbc.driver.oracle.class=oracle.jdbc.driver.OracleDriver -Dgeopista.jdbc.driver.oracle.url=jdbc:oracle:thin:@&lt;server&gt;[:1521]:database_name -Dgeopista.jdbc.driver.postgres.class=org.postgresql.Driver -Dgeopista.jdbc.driver.postgres.url=jdbc:postgresql:[&lt;//host&gt;[:&lt;5432&gt;/]]&lt;database&gt; -Dgeopista.jdbc.driver.mysql.class=com.mysql.jdbc.Driver -Dgeopista.jdbc.driver.mysql.url=jdbc:mysql://&amp;lt;hostname&amp;gt;[:&amp;lt;3306&amp;gt;]/&amp;lt;dbname&amp;gt;"/>
+</launchConfiguration>

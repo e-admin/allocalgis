@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<name>TestModule</name>
+	<version>1.0.0</version>
+	<artifact>
+		<groupId>${groupId}</groupId>
+		<artifactId>${artifactId}</artifactId>
+		<version>${version}</version>
+		<install>${install}</install>
+	</artifact>
+	<dependencyInfo>
+		<dependencies>
+			<module>
+				<name>LocalGIS Core</name>
+				<version>1.0.0</version>
+			</module>
+		</dependencies>
+		<incompatibilities>
+			<module>
+				<name>moduleIncompatible</name>
+				<version>1.0.2</version>
+			</module>
+		</incompatibilities>
+	</dependencyInfo>
+</module>

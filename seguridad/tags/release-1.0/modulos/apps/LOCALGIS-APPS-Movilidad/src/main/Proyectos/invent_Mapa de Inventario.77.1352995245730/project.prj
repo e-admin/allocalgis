@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Localgis2Me>
+<gridfile>cuadricula.svg</gridfile>
+<users2grid>permisos_celdas.properties</users2grid>
+<srid>23029</srid>
+<numFichLic>1</numFichLic>
+<detail>
+<item>
+<label>Identificador del proyecto</label>
+<value>1352995245730</value>
+</item>
+<item>
+<label>Fecha de extracción</label>
+<value>15/11/2012 17:01:52</value>
+</item>
+<item>
+<label>Identificador del mapa</label>
+<value>40</value>
+</item>
+<item>
+<label>Nombre del mapa</label>
+<value>invent_Mapa de Inventario.77</value>
+</item>
+</detail>
+<appsconfig>
+<inventario_parcelas_meta enabled="true"/>
+<inventario_vias_meta enabled="true"/>
+</appsconfig>
+</Localgis2Me>

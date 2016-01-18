@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updateSystem httpBase="http://geopista.grupotecopy.es/softwarelocalgis" version="20071115">
+	<AdmCar>
+		<fileVerify>admcar/lib/server.jar</fileVerify>
+		<basePath>admCar</basePath>
+		<version id="20071115">
+			<file>
+				<sourceFile>server.jar</sourceFile>
+				<targetFile>lib/server.jar</targetFile>
+			</file>
+		</version>
+	</AdmCar>
+	<WmsManager>
+	</WmsManager>
+	<WmsManagerIntranet>
+	</WmsManagerIntranet>
+	<Guiaurbana>
+	</Guiaurbana>
+	<Visualizador>
+	</Visualizador>
+	<Tomcat install="yes">
+	</Tomcat>
+	<Localgis_guiaurbana install="yes">
+		<fileVerify>webapps/localgis-guiaurbana/WEB-INF/web.xml</fileVerify>
+		<basePath/>
+		<moduleName>/localgis-guiaurbana</moduleName>
+		<version id="20071115">
+			<zipfile>
+				<sourceZipFile>updates/20071115/localgis-guiaurbana.zip</sourceZipFile>
+				<replaceStringFile>webapps/localgis-guiaurbana/WEB-INF/classes/localgis.properties</replaceStringFile>	
+				<targetDirectory>webapps</targetDirectory>
+			</zipfile>
+			<modifytextfiles>
+				<textfile>
+					<file>webapps/localgis-guiaurbana/WEB-INF/classes/localgis.properties</file>
+					<modification>
+						<oldstring>C:/ms4w</oldstring>
+						<newstring>%GEOPISTA_ROOT%/ms4</newstring>
+					</modification>
+				</textfile>
+				<textfile os="windows">
+					<file>webapps/localgis-guiaurbana/WEB-INF/classes/localgis.properties</file>
+					<modification>
+						<oldstring>%ORTOFOTOS_DIRECTORY%</oldstring>
+						<newstring>c:\Ortofotos</newstring>
+					</modification>
+				</textfile>
+				<textfile os="linux">
+					<file>webapps/localgis-guiaurbana/WEB-INF/classes/localgis.properties</file>
+					<modification>
+						<oldstring>%ORTOFOTOS_DIRECTORY%</oldstring>
+						<newstring>%GEOPISTA_ROOT%/Ortofotos</newstring>
+					</modification>
+				</textfile>				
+				<textfile>
+					<file>webapps/localgis-guiaurbana/WEB-INF/classes/localgis.properties</file>
+					<modification>
+						<oldstring>jdbc.password=geopista</oldstring>
+						<newstring>jdbc.password=%PASSWORD%</newstring>
+					</modification>
+				</textfile>
+				<textfile>
+					<file>webapps/localgis-guiaurbana/WEB-INF/classes/localgis.properties</file>
+					<modification>
+						<oldstring>mapserver.db.user=postgres</oldstring>
+						<newstring>mapserver.db.user=geopista</newstring>
+					</modification>
+				</textfile>
+				<textfile>
+					<file>webapps/localgis-guiaurbana/WEB-INF/classes/localgis.properties</file>
+					<modification>
+						<oldstring>mapserver.db.password=postgres</oldstring>
+						<newstring>mapserver.db.password=%PASSWORD%</newstring>
+					</modification>
+				</textfile>
+			
+			</modifytextfiles>
+		</version>
+	</Localgis_guiaurbana>
+	<Localgis_wmsmanager install="yes">
+		<fileVerify>webapps/localgis-wmsmanager/WEB-INF/web.xml</fileVerify>
+		<basePath/>
+		<moduleName>/localgis-wmsmanager</moduleName>
+		<version id="20071115">
+			<zipfile>
+				<sourceZipFile>updates/20071115/localgis-wmsmanager.zip</sourceZipFile>
+				<replaceStringFile>webapps/localgis-guiaurbana/WEB-INF/classes/localgis.properties</replaceStringFile>	
+				<targetDirectory>webapps</targetDirectory>
+			</zipfile>
+			<modifytextfiles>
+				<textfile>
+					<file>../localgis-wmsmanager/WEB-INF/classes/localgis.properties</file>
+					<modification>
+						<oldstring>C:/ms4w</oldstring>
+						<newstring>%GEOPISTA_ROOT%//ms4</newstring>
+					</modification>
+				</textfile>
+			<textfile os="windows">
+					<file>webapps/localgis-wmsmanager/WEB-INF/classes/localgis.properties</file>
+					<modification>
+						<oldstring>%ORTOFOTOS_DIRECTORY%</oldstring>
+						<newstring>c:\Ortofotos</newstring>
+					</modification>
+				</textfile>
+				<textfile os="linux">
+					<file>webapps/localgis-wmsmanager/WEB-INF/classes/localgis.properties</file>
+					<modification>
+						<oldstring>%ORTOFOTOS_DIRECTORY%</oldstring>
+						<newstring>%GEOPISTA_ROOT%/Ortofotos</newstring>
+					</modification>
+				</textfile>		
+				<textfile>
+					<file>webapps/localgis-wmsmanager/WEB-INF/classes/localgis.properties</file>
+					<modification>
+						<oldstring>jdbc.password=geopista</oldstring>
+						<newstring>jdbc.password=%PASSWORD%</newstring>
+					</modification>
+				</textfile>
+				<textfile>
+					<file>webapps/localgis-wmsmanager/WEB-INF/classes/localgis.properties</file>
+					<modification>
+						<oldstring>mapserver.db.user=postgres</oldstring>
+						<newstring>mapserver.db.user=geopista</newstring>
+					</modification>
+				</textfile>
+				<textfile>
+					<file>webapps/localgis-wmsmanager/WEB-INF/classes/localgis.properties</file>
+					<modification>
+						<oldstring>mapserver.db.password=postgres</oldstring>
+						<newstring>mapserver.db.password=%PASSWORD%</newstring>
+					</modification>
+				</textfile>
+				
+			</modifytextfiles>	
+		</version>
+	</Localgis_wmsmanager>
+	<Software>
+		<fileVerify/>
+		<basePath>webapps/software</basePath>
+		<version id="20071115">
+			<jnlps>
+				<jnlp>
+					<sourceFile>geopista.jnlp</sourceFile>
+					<targetFile>geopista.jnlp</targetFile>
+				</jnlp>
+				<jnlp>
+					<sourceFile>geopista_backup.jnlp</sourceFile>
+					<targetFile>geopista_backup.jnlp</targetFile>
+				</jnlp>
+			</jnlps>
+			<file>
+				<sourceFile>geopista_plugin.jar</sourceFile>
+				<targetFile>geopista_plugin.jar</targetFile>
+			</file>
+			<file>
+				<sourceFile>geopista_workbench.jar</sourceFile>
+				<targetFile>geopista_workbench.jar</targetFile>
+			</file>
+			<file>
+				<sourceFile>geopista_administrador.jar</sourceFile>
+				<targetFile>geopista_administrador.jar</targetFile>
+			</file>
+			<file>
+				<sourceFile>geopista_apps.jar</sourceFile>
+				<targetFile>geopista_apps.jar</targetFile>
+			</file>
+			<file>
+				<sourceFile>geopista_server.jar</sourceFile>
+				<targetFile>geopista_server.jar</targetFile>
+			</file>
+			<file>
+				<sourceFile>catastro_client.jar</sourceFile>
+				<targetFile>catastro_client.jar</targetFile>
+			</file>
+			<file>
+				<sourceFile>catastro_server.jar</sourceFile>
+				<targetFile>catastro_server.jar</targetFile>
+			</file>
+			<file>
+				<sourceFile>geopista_cartografia.jar</sourceFile>
+				<targetFile>geopista_cartografia.jar</targetFile>
+			</file>
+			<file>
+				<sourceFile>productos/gt2-2.3.3/geoapi-nogenerics-2.1-M2.jar</sourceFile>
+				<targetFile>productos/gt2-2.3.3/geoapi-nogenerics-2.1-M2.jar</targetFile>
+			</file>
+			<file>
+				<sourceFile>productos/gt2-2.3.3/gt2-api-2.3.3.jar</sourceFile>
+				<targetFile>productos/gt2-2.3.3/gt2-api-2.3.3.jar</targetFile>
+			</file>
+			<file>
+				<sourceFile>productos/gt2-2.3.3/gt2-main-2.3.3.jar</sourceFile>
+				<targetFile>productos/gt2-2.3.3/gt2-main-2.3.3.jar</targetFile>
+			</file>
+			<file>
+				<sourceFile>productos/gt2-2.3.3/gt2-referencing-2.3.3.jar</sourceFile>
+				<targetFile>productos/gt2-2.3.3/gt2-referencing-2.3.3.jar</targetFile>
+			</file>
+		</version>
+	</Software>
+	<Database>
+		<fileVerify/>
+		<basePath/>
+		<version id="20071115">
+			<!--Guia urbana-->
+			<sqlExpression>CREATE TABLE localgisguiaurbana.restricted_attribute( layeridgeopista int4 NOT NULL, attributeidgeopista int8 NOT NULL, mappublic int2 NOT NULL, idmunicipio numeric(5) NOT NULL, idalias numeric(7) NOT NULL, CONSTRAINT pk_restricted_attribute PRIMARY KEY (layeridgeopista, attributeidgeopista, mappublic, idmunicipio)) ;</sqlExpression>
+			<sqlExpression>create table localgisguiaurbana.attribute_temp as select la.attributeid, la.attributename, la.attributeidgeopista, la.layerid, pa.id_alias as attributeidalias from localgisguiaurbana.attribute la, public.attributes pa where la.attributeidgeopista = pa.id;</sqlExpression>
+			<sqlExpression>drop table localgisguiaurbana.attribute;</sqlExpression>
+			<sqlExpression>alter table localgisguiaurbana.attribute_temp rename to attribute;</sqlExpression>
+			<sqlExpression>CREATE TABLE localgisguiaurbana.legend( layeridgeopista int4 NOT NULL, idmunicipio numeric(5) NOT NULL, mappublic int2 NOT NULL, img bytea, CONSTRAINT pk_legend PRIMARY KEY (layeridgeopista, idmunicipio, mappublic)) WITHOUT OIDS;</sqlExpression>
+			<sqlExpression>ALTER TABLE localgisguiaurbana.legend OWNER TO guiaurbana;</sqlExpression>
+			<sqlExpression>DELETE FROM localgisguiaurbana.attribute WHERE attributeid IN (SELECT a.attributeid FROM localgisguiaurbana.attribute a left outer join localgisguiaurbana.layer l on a.layerid = l.layerid WHERE l.layerid IS NULL);</sqlExpression>
+			<sqlExpression>ALTER TABLE localgisguiaurbana.attribute ADD CONSTRAINT fk_attribute_layer FOREIGN KEY (layerid) REFERENCES localgisguiaurbana.layer (layerid) MATCH SIMPLE ON UPDATE CASCADE ON DELETE CASCADE;</sqlExpression>
+			<sqlExpression>ALTER TABLE localgisguiaurbana.map ADD COLUMN mapdefault smallint;</sqlExpression>
+			<sqlExpression>UPDATE localgisguiaurbana.map SET mapdefault = 0;</sqlExpression>
+			<sqlExpression>ALTER TABLE localgisguiaurbana.map ALTER COLUMN mapdefault SET NOT NULL;</sqlExpression>
+			<sqlExpression>CREATE TABLE localgisguiaurbana.css (idmunicipio numeric(5) NOT NULL, content text NOT NULL, CONSTRAINT pk_css PRIMARY KEY (idmunicipio));</sqlExpression>
+			<sqlExpression>ALTER TABLE localgisguiaurbana.css OWNER TO geopista;</sqlExpression>
+			<sqlExpression>REATE TABLE localgisguiaurbana.marker (markerid numeric(5) NOT NULL, mapid integer NOT NULL, x double precision NOT NULL, y double precision NOT NULL, zoom smallint, markname character varying(100), marktext text, CONSTRAINT pk_marker PRIMARY KEY (markerid), CONSTRAINT fk_marker_map FOREIGN KEY (mapid) REFERENCES localgisguiaurbana.map (mapid) MATCH SIMPLE ON UPDATE CASCADE ON DELETE CASCADE);</sqlExpression>
+			<sqlExpression>ALTER TABLE localgisguiaurbana.marker OWNER TO geopista;</sqlExpression>
+			<sqlExpression>ALTER TABLE localgisguiaurbana.map ADD CONSTRAINT unique_map UNIQUE(mapidgeopista, mapidmunicipio, mappublic);</sqlExpression>
+			<!--Historico de licencias-->
+			<sqlExpression>INSERT INTO public.dictionary(id_vocablo, locale, traduccion) VALUES('111143', 'es_ES', 'Se ha modificado el valor de tasa de {0} a {1}');</sqlExpression>
+			<sqlExpression>INSERT INTO public.dictionary(id_vocablo, locale, traduccion) VALUES('111143', 'ca_ES', 'Se ha modificado el valor de tasa de {0} a {1}');</sqlExpression>
+			<sqlExpression>INSERT INTO public.dictionary(id_vocablo, locale, traduccion) VALUES('111143', 'gl_ES', 'Se ha modificado el valor de tasa de {0} a {1}');</sqlExpression>
+			<sqlExpression>INSERT INTO public.dictionary(id_vocablo, locale, traduccion) VALUES('111143', 'va_ES', 'Se ha modificado el valor de tasa de {0} a {1}');</sqlExpression>
+			<sqlExpression>INSERT INTO public.dictionary(id_vocablo, locale, traduccion) VALUES('111144', 'es_ES', 'Se ha modificado el valor de impuesto de {0} a {1}');</sqlExpression>
+			<sqlExpression>INSERT INTO public.dictionary(id_vocablo, locale, traduccion) VALUES('111144', 'ca_ES', 'Se ha modificado el valor de impuesto de {0} a {1}');</sqlExpression>
+			<sqlExpression>INSERT INTO public.dictionary(id_vocablo, locale, traduccion) VALUES('111144', 'gl_ES', 'Se ha modificado el valor de impuesto de {0} a {1}');</sqlExpression>
+			<sqlExpression>INSERT INTO public.dictionary(id_vocablo, locale, traduccion) VALUES('111144', 'va_ES', 'Se ha modificado el valor de impuesto de {0} a {1}');</sqlExpression>
+			<!--Backup-->
+			<sqlExpression>insert into USRGROUPERM(idperm,def,type) values (10090,'Geopista.Administracion.BackupData',null);</sqlExpression>
+			<sqlExpression>insert into R_ACL_PERM (idperm,idacl) values (10090,1);</sqlExpression>
+			<sqlExpression>insert into r_usr_perm(userid,idperm,idacl,aplica) values ('100','10090','1','1');</sqlExpression>
+			<sqlExpression>insert into r_usr_perm(userid,idperm,idacl,aplica) values ('99','10090','1','1');</sqlExpression>
+			<!--Estilos Capas WMS-->
+			<sqlExpression>ALTER TABLE map_server_layers ADD COLUMN styles varchar(1000)</sqlExpression>
+		</version>
+	</Database>
+	<Deegree install="yes">
+ </Deegree>
+	<LocalWebWS install="yes">
+ </LocalWebWS>
+	<MapServer install="yes">
+		<fileVerify>webapps/ms4/Apache/conf/httpd.conf</fileVerify>
+		<basePath/>
+		<moduleName>/ms4</moduleName>
+		<version id="20071115">
+				<zipfile os="windows">
+					<sourceZipFile>updates/20071115/ms4-patch-fonts.zip</sourceZipFile>							
+					<targetDirectory></targetDirectory>
+				<file os="linux">
+					<sourceFile>updates/20071115/ms4_5.0.tar.gz</sourceFile>
+					<targetFile>ms4_5.0.tar.gz</targetFile>
+				</file>				
+				<file os="linux">
+					<sourceFile>updates/20071115/ms4-patch-fonts.tar.gz</sourceFile>
+					<targetFile>ms4-patch-fonts.tar.gz</targetFile>
+				</file>						
+				</zipfile>
+				<modifytextfiles>
+					<textfile os="linux">
+						<file>ms4/www/conf/httpd.conf</file>
+						<modification>
+							<oldstring>"/ms4w</oldstring>
+							<newstring>"%GEOPISTA_ROOT%/ms4</newstring>
+						</modification>
+					</textfile>
+				</modifytextfiles>	
+					
+			<execute>
+				<exec os="linux">sh -c cd %GEOPISTA_ROOT%;ls</exec>			
+				<exec os="linux">mv %GEOPISTA_ROOT%/ms4 %GEOPISTA_ROOT%/ms4.8</exec>			
+				<exec os="linux">tar xzf %GEOPISTA_ROOT%/ms4_5.0.tar.gz</exec>		
+				<!-- Fonts Mapserver-->	
+				<exec os="linux">tar xzf %GEOPISTA_ROOT%/ms4-patch-fonts.tar.gz</exec>			
+				<exec os="linux">mv -f ms4 %GEOPISTA_ROOT%</exec>		
+				<exec os="linux">mkdir %GEOPISTA_ROOT%/webapps/localgis-guiaurbana/work</exec>			
+				<exec os="linux">chown -R tomcat %GEOPISTA_ROOT%/webapps/localgis-guiaurbana/work</exec>			
+				<exec os="linux">mkdir %GEOPISTA_ROOT%/webapps/localgis-wmsmanager/work</exec>			
+				<exec os="linux">chown -R tomcat %GEOPISTA_ROOT%/webapps/localgis-wmsmanager/work</exec>			
+				<exec os="linux">chown -R tomcat %GEOPISTA_ROOT%/ms4/www/htdocs</exec>			
+				<exec os="linux">chown -R tomcat %GEOPISTA_ROOT%/ms4/apps/localgis</exec>		
+				<exec os="linux">chmod 777 %GEOPISTA_ROOT%/ms4/apps/localgis/tmp</exec>  	
+				
+			
+			</execute>	
+
+		</version>
+	</MapServer>
+</updateSystem>

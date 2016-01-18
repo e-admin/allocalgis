@@ -1,0 +1,30 @@
+<ActionForwards>
+	<ActionForward>
+		<Key>InsertUpdateFilter</Key>
+		<Class>com.geopista.style.filtereditor.ui.impl.panels.InsertUpdateFilterPanel</Class>
+	</ActionForward>
+	<ActionForward>
+		<Key>InsertUpdatePropertyName</Key>
+		<Class>com.geopista.style.filtereditor.ui.impl.panels.InsertUpdatePropertyNamePanel</Class>
+	</ActionForward>
+	<ActionForward>
+		<Key>InsertUpdateLiteral</Key>
+		<Class>com.geopista.style.filtereditor.ui.impl.panels.InsertUpdateLiteralPanel</Class>
+	</ActionForward>
+	<ActionForward>
+		<Key>InsertUpdateGMLGeometry</Key>
+		<Class>com.geopista.style.filtereditor.ui.impl.panels.InsertUpdateGMLGeometryPanel</Class>
+	</ActionForward>
+	<ActionForward>
+		<Key>InsertUpdateGMLBox</Key>
+		<Class>com.geopista.style.filtereditor.ui.impl.panels.InsertUpdateGMLBoxPanel</Class>
+	</ActionForward>
+	<ActionForward>
+		<Key>InsertUpdateBBOXOp</Key>
+		<Class>com.geopista.style.filtereditor.ui.impl.panels.InsertUpdateBBOXOpPanel</Class>
+	</ActionForward>
+	<ActionForward>
+		<Key>InsertUpdateDistanceBufferOp</Key>
+		<Class>com.geopista.style.filtereditor.ui.impl.panels.InsertUpdateDistanceBufferOpPanel</Class>
+	</ActionForward>
+</ActionForwards>

@@ -1,0 +1,65 @@
+CREATE TABLE COUNTRY (
+    ID              NUMBER             PRIMARY KEY, 
+    NAME            VARCHAR2 (100),
+    GEOM            MDSYS.SDO_GEOMETRY
+);
+
+INSERT INTO USER_SDO_GEOM_METADATA VALUES (
+    'COUNTRY',
+    'GEOM',
+    SDO_DIM_ARRAY (
+        SDO_DIM_ELEMENT (
+            'LONGITUDE',
+            -180,
+            180,
+            0.00005
+        ),    
+        SDO_DIM_ELEMENT (
+            'LATITUDE',
+            -90,
+            90,
+            0.00005
+        )
+    ),
+    8192
+);
+
+CREATE INDEX COUNTRY_SPATIAL_IDX ON COUNTRY(GEOM) INDEXTYPE IS MDSYS.SPATIAL_INDEX;
+
+CREATE TABLE PLACE (
+    ID              NUMBER             PRIMARY KEY, 
+    COUNTRY_ID      NUMBER             REFERENCES COUNTRY, 
+    NAME            VARCHAR2 (100)
+);
+
+CREATE TABLE PHILOSOPHER (
+    ID              NUMBER             PRIMARY KEY, 
+    NAME            VARCHAR2 (100),
+    SEX             CHAR(1),
+    DATE_OF_BIRTH   DATE,
+    PLACE_OF_BIRTH  NUMBER             REFERENCES PLACE,
+    DATE_OF_DEATH   DATE,
+    PLACE_OF_DEATH  NUMBER             REFERENCES PLACE
+);
+
+CREATE TABLE IS_FRIEND_OF (
+    PHILOSOPHER1_ID NUMBER,
+    PHILOSOPHER2_ID NUMBER,
+    PRIMARY KEY (PHILOSOPHER1_ID, PHILOSOPHER2_ID)
+);
+
+CREATE TABLE SUBJECT (
+	PHILOSOPHER_ID  NUMBER             REFERENCES PHILOSOPHER,
+	NAME            VARCHAR2 (100),
+	PRIMARY KEY (PHILOSOPHER_ID, NAME)
+);
+
+CREATE TABLE BOOK (
+  ID              NUMBER             PRIMARY KEY, 
+  PHILOSOPHER_ID  NUMBER             REFERENCES PHILOSOPHER, 
+  TITLE           VARCHAR2 (200),
+  PUB_DATE        DATE
+);
+
+CREATE SEQUENCE FID_seq;
+COMMIT;

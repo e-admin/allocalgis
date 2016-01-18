@@ -1,0 +1,5 @@
+Estas clases
+
+
+GeopistaMostrarParcelas y GeopistaSeleccionarFicheroParcelas  estan aqui porque
+se necesitan tanto desde el modulo de catastro como desde el modulos localgis-apps-cargadormasivo

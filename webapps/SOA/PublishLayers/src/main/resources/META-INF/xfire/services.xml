@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xfire.codehaus.org/config/1.0">
+
+	<service>
+		<name>PublishMaps</name>
+		<serviceClass>
+			com.geopista.server.administrador.web.IPublishMaps
+		</serviceClass>
+		<implementationClass>
+			com.geopista.server.administrador.web.PublishMapsImpl
+		</implementationClass>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service></beans>

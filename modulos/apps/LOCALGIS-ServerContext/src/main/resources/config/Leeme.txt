@@ -1,0 +1,31 @@
+Configurar cargas predefinidas en el fichero cargas.properties
+
+	Incluye los ficheros y los municipios de carga (junto con un alias)
+
+	Permite la activacion/desactivacion de ficheros de carga concretos
+
+	Permite la activacion/desactivacion de municipios de carga concretos
+
+
+Configurar cargas en los ficheros de carga
+
+	Incluye las configuraciones de carga a nivel de tablas y campos (junto con un alias)	
+	
+	Permite la activacion/desactivacion de cargas concretas
+
+
+Configurar conexiones en el fichero conexiones.properties
+
+	Incluye los datos de conexion de la base de datos de destino (junto con un alias)
+
+
+Llamada:
+
+	cargaMasiva.bat EIEL_SERPA DEV
+
+	cargaMasiva.bat EIEL_SERPA PRE
+
+	cargaMasiva.bat EIEL_SERPA PRO
+
+
+

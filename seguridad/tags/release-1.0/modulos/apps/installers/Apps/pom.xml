@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<packaging>pom</packaging>
+	<name>AgrupadorModulosApps</name>
+	<description>Agrupador modulos Apps para Instalación y Actualización LocalGis</description>
+
+	<modules>
+		<module>AlpModule</module>
+		<module>AdministracionModule</module>
+		<module>CatastroModule</module>
+		<module>CementeriosModule</module>
+		<module>ContaminantesModule</module>
+		<module>EIELModule</module>
+		<module>EIELIndicadoresBatchModule</module>
+		<module>EspacioPublicoModule</module>
+		<module>InventarioModule</module>
+		<module>LayerUtilModule</module>
+		<module>LicenciasActividadModule</module>
+		<module>LicenciasObraModule</module>
+		<module>OcupacionesModule</module>
+		<module>WorkbenchBasicModule</module>
+		<module>WorkbenchModule</module>
+		<module>BackupModule</module>
+		<module>CargadorMasivoModule</module>
+		<module>CentralizadorSSOModule</module>
+		<module>ConfiguracionModule</module>
+		<module>EditorModule</module>
+		<module>InstalacionLocalGisModule</module>
+		<module>LuceneIndexerModule</module>
+		<module>MetadatosModule</module>
+		<module>MovilidadModule</module>
+		<module>IReportModule</module>
+	</modules>
+	
+	<groupId>com.localgis.installers</groupId>
+	<artifactId>installers-apps</artifactId>
+	<version>3.0.0</version>
+	<parent>
+		<groupId>com.localgis</groupId>
+		<artifactId>installers</artifactId>
+		<version>3.0.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+</project>

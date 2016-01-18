@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form style="Swing" ide="eclipse" builder="jigloo" version="2.7.2">
+<NonVisualComponents>
+		<Component class="java.lang.Object" name="object1">
+			<Constraints>
+				<LayoutConstraint/>
+			</Constraints>
+			<Properties>
+			</Properties>
+		</Component></NonVisualComponents>
+	<Component class="javax.swing.JPanel" name="printPanel02">
+		<Constraints>
+			<LayoutConstraint/>
+		</Constraints>
+		<Layout class="Anchor">
+		</Layout>
+		<Events>
+		</Events>
+		<Properties>
+			<Property name="preferredSize" type="Dimension">
+				<Dimension value="[556, 365]"/>
+			</Property>
+			<Property name="bounds" type="Rectangle">
+				<Rectangle value="[0, 0, 556, 365]"/>
+			</Property>
+		</Properties>
+		<SubComponents>
+			<Component class="javax.swing.JCheckBox" name="jCheckBox1">
+				<Constraints>
+					<Constraint class="com.cloudgarden.layout.AnchorConstraint"/>
+					<LayoutConstraint class="com.cloudgarden.layout.AnchorConstraint">
+						<Property name="top" type="int" value="439"/>
+						<Property name="bottom" type="int" value="697"/>
+						<Property name="left" type="int" value="108"/>
+						<Property name="right" type="int" value="864"/>
+						<Property name="topType" type="int" value="1"/>
+						<Property name="bottomType" type="int" value="0"/>
+						<Property name="rightType" type="int" value="1"/>
+						<Property name="leftType" type="int" value="1"/>
+					</LayoutConstraint>
+				</Constraints>
+				<Events>
+				</Events>
+				<Properties>
+					<Property name="text" type="String" value="PrintWizard.Leyenda"/>
+					<Property name="visible" type="boolean" value="true"/>
+					<Property name="preferredSize" type="Dimension">
+						<Dimension value="[420, 40]"/>
+					</Property>
+					<Property name="bounds" type="Rectangle">
+						<Rectangle value="[60, 160, 420, 40]"/>
+					</Property>
+				</Properties>
+			</Component>
+			<Component class="javax.swing.JLabel" name="jLabel1">
+				<Constraints>
+					<Constraint class="com.cloudgarden.layout.AnchorConstraint"/>
+					<LayoutConstraint class="com.cloudgarden.layout.AnchorConstraint">
+						<Property name="top" type="int" value="384"/>
+						<Property name="bottom" type="int" value="366"/>
+						<Property name="left" type="int" value="108"/>
+						<Property name="right" type="int" value="324"/>
+						<Property name="topType" type="int" value="1"/>
+						<Property name="bottomType" type="int" value="0"/>
+						<Property name="rightType" type="int" value="1"/>
+						<Property name="leftType" type="int" value="1"/>
+					</LayoutConstraint>
+				</Constraints>
+				<Events>
+				</Events>
+				<Properties>
+					<Property name="text" type="String" value="PrintWizard.Escala"/>
+					<Property name="enabled" type="boolean" value="true"/>
+					<Property name="visible" type="boolean" value="true"/>
+					<Property name="preferredSize" type="Dimension">
+						<Dimension value="[120, 20]"/>
+					</Property>
+					<Property name="bounds" type="Rectangle">
+						<Rectangle value="[60, 140, 120, 20]"/>
+					</Property>
+					<Property name="externalizeStrings" type="boolean" value="true"/>
+				</Properties>
+			</Component>
+			<Component class="javax.swing.JComboBox" name="jComboBox1">
+				<Constraints>
+					<Constraint class="com.cloudgarden.layout.AnchorConstraint"/>
+					<LayoutConstraint class="com.cloudgarden.layout.AnchorConstraint">
+						<Property name="top" type="int" value="384"/>
+						<Property name="bottom" type="int" value="348"/>
+						<Property name="left" type="int" value="324"/>
+						<Property name="right" type="int" value="900"/>
+						<Property name="topType" type="int" value="1"/>
+						<Property name="bottomType" type="int" value="0"/>
+						<Property name="rightType" type="int" value="1"/>
+						<Property name="leftType" type="int" value="1"/>
+					</LayoutConstraint>
+				</Constraints>
+				<Events>
+				</Events>
+				<Properties>
+					<Property name="visible" type="boolean" value="true"/>
+					<Property name="preferredSize" type="Dimension">
+						<Dimension value="[320, 20]"/>
+					</Property>
+					<Property name="bounds" type="Rectangle">
+						<Rectangle value="[180, 140, 320, 20]"/>
+					</Property>
+				</Properties>
+			</Component>
+		</SubComponents>
+	</Component>
+</Form>

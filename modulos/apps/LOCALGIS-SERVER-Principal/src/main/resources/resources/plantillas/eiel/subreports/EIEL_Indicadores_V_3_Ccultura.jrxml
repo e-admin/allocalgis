@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="EIEL_Indicadores_V_3_Ccultura"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="535"
+		 pageHeight="802"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="id_municipio" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["-1"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sqlWhereClausule" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="cod_provincia" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sqlWhereEntidad" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[SELECT traduccion
+,COALESCE(sum(s_cubierta_b),0) as s_cubierta_b
+,COALESCE(sum(s_cubierta_r),0) as s_cubierta_r
+,COALESCE(sum(s_cubierta_m),0) as s_cubierta_m
+FROM (SELECT traduccion
+,s_cubierta_b as s_cubierta_b
+,s_cubierta_r as s_cubierta_r
+,s_cubierta_m as s_cubierta_m
+FROM (
+SELECT 
+	a.traduccion
+	,a.pattern
+	,n.codprov
+	,n.codmunic
+	,n.codentidad
+	,(select sum(cu.s_cubierta)
+	from eiel_t_cu cu, eiel_t_cu_usos u
+	where cu.codprov=u.codprov and cu.codmunic=u.codmunic and cu.codentidad=u.codentidad and cu.codpoblamiento=u.codpoblamiento
+		and cu.codpoblamiento=u.codpoblamiento and cu.orden_cu=u.orden_cu
+		and estado='B' and cu.revision_expirada=9999999999 and u.revision_expirada=9999999999
+		and cu.codprov=n.codprov and cu.codmunic=n.codmunic and cu.codentidad=n.codentidad and u.uso=a.pattern limit 1
+	) as s_cubierta_b
+	,(select sum(cu.s_cubierta)
+	from eiel_t_cu cu, eiel_t_cu_usos u
+	where cu.codprov=u.codprov and cu.codmunic=u.codmunic and cu.codentidad=u.codentidad and cu.codpoblamiento=u.codpoblamiento
+		and cu.codpoblamiento=u.codpoblamiento and cu.orden_cu=u.orden_cu
+		and estado='R' and cu.revision_expirada=9999999999 and u.revision_expirada=9999999999
+		and cu.codprov=n.codprov and cu.codmunic=n.codmunic and cu.codentidad=n.codentidad and u.uso=a.pattern limit 1
+	) as s_cubierta_r
+	,(select sum(cu.s_cubierta)
+	from eiel_t_cu cu, eiel_t_cu_usos u
+	where cu.codprov=u.codprov and cu.codmunic=u.codmunic and cu.codentidad=u.codentidad and cu.codpoblamiento=u.codpoblamiento
+		and cu.codpoblamiento=u.codpoblamiento and cu.orden_cu=u.orden_cu
+		and estado='M' and cu.revision_expirada=9999999999 and u.revision_expirada=9999999999
+		and cu.codprov=n.codprov and cu.codmunic=n.codmunic and cu.codentidad=n.codentidad and u.uso=a.pattern limit 1
+	) as s_cubierta_m 
+FROM
+   eiel_t_cu_usos n,
+   (
+	select pattern, substring(traduccion,0,CASE position('(' in traduccion) WHEN 0 THEN char_length(traduccion)+1 ELSE position('(' in traduccion) END) as traduccion
+	from domainnodes,dictionary 
+	where id_domain IN 
+		(select id from domains where name = 'eiel_Tipos de usos de los Centros culturales') 
+		and id_description = id_vocablo and locale = 'es_ES' and pattern != ''
+     ) a     
+WHERE n.codprov=$P{cod_provincia} and n.codmunic=$P{id_municipio}$P!{sqlWhereEntidad}
+	and n.revision_expirada=9999999999 and n.uso=a.pattern
+) d
+group by traduccion, s_cubierta_b, s_cubierta_r, s_cubierta_m
+order by traduccion
+) d
+group by traduccion
+order by traduccion]]></queryString>
+
+	<field name="traduccion" class="java.lang.String"/>
+	<field name="s_cubierta_b" class="java.math.BigDecimal"/>
+	<field name="s_cubierta_r" class="java.math.BigDecimal"/>
+	<field name="s_cubierta_m" class="java.math.BigDecimal"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="86"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="6"
+						y="0"
+						width="526"
+						height="31"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="Century" size="24"/>
+					</textElement>
+				<text><![CDATA[Centros culturales]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="16"
+						y="42"
+						width="114"
+						height="34"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-2"
+						positionType="Float"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Superficie cubierta. Usos.Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="230"
+						y="60"
+						width="83"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-3"
+						positionType="Float"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Bueno]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="333"
+						y="60"
+						width="83"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-4"
+						positionType="Float"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Regular]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="433"
+						y="60"
+						width="83"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-5"
+						positionType="Float"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Malo]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="119"
+						y="78"
+						width="405"
+						height="2"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="23"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						x="219"
+						y="-26"
+						width="1"
+						height="48"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="30"
+						y="0"
+						width="182"
+						height="18"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{traduccion}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="333"
+						y="0"
+						width="83"
+						height="18"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{s_cubierta_r}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="433"
+						y="0"
+						width="83"
+						height="18"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{s_cubierta_m}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="230"
+						y="0"
+						width="88"
+						height="18"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{s_cubierta_b}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

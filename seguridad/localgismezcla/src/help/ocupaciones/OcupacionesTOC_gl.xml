@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+    <tocitem text="(GL)Contenidos">
+        <tocitem text="(GL)Introducción" target="ocupacionesIntro"/>        
+        <tocitem text="(GL)Usuarios y Permisos" target="ocupacionesUsuarios"/>        
+        <tocitem text="(GL)Opciones de Menú" target="ocupacionesOpcionesMenu"/>        
+        <tocitem text="(GL)WorkFlow" target="ocupacionesWorkflow"/>
+        <tocitem text="(GL)Consulta de una Licencia" target="ocupacionesConsulta"/>
+        <tocitem text="(GL)Creación de una Licencia" target="ocupacionesCreacion"/>
+        <tocitem text="(GL)Modificación de una Licencia" target="ocupacionesModificacion"/>
+        <tocitem text="(GL)Generación de informes" target="ocupacionesInformes"/>
+        <tocitem text="(GL)Gestión de Eventos">
+            <tocitem text="(GL)Consulta de Eventos" target="ocupacionesConsultaEventos"/>
+            <tocitem text="(GL)Últimos Eventos" target="ocupacionesUltimosEventos"/>
+        </tocitem>
+       <tocitem text="(GL)Generación de Planos" target="ocupacionesPlanos"/>
+       <tocitem text="(GL)Consulta de Notificaciones" target="ocupacionesConsultaNotificaciones"/>
+       <tocitem text="(GL)Consulta de Histórico" target="ocupacionesConsultaHistorico"/>
+       <tocitem text="(GL)Tareas Pendientes" target="ocupacionesTareasPendientes"/>
+   	   <tocitem text="(GL)Configuración" target="ocupacionesConfiguracion"/>   	   
+       <tocitem text="(GL)Cambio de Idioma" target="ocupacionesIdiomas"/>
+    </tocitem>    
+</toc>

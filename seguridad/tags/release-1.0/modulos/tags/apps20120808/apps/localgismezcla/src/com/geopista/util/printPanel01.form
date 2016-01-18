@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form style="Swing" ide="eclipse" builder="jigloo" version="2.7.2">
+<NonVisualComponents>
+		<Component class="java.lang.Object" name="object1">
+			<Constraints>
+				<LayoutConstraint/>
+			</Constraints>
+			<Properties>
+			</Properties>
+		</Component></NonVisualComponents>
+	<Component class="javax.swing.JPanel" name="printPanel01">
+		<Constraints>
+			<LayoutConstraint/>
+		</Constraints>
+		<Layout class="Anchor">
+		</Layout>
+		<Events>
+		</Events>
+		<Properties>
+			<Property name="preferredSize" type="Dimension">
+				<Dimension value="[371, 196]"/>
+			</Property>
+			<Property name="bounds" type="Rectangle">
+				<Rectangle value="[0, 0, 371, 196]"/>
+			</Property>
+		</Properties>
+		<SubComponents>
+			<Component class="javax.swing.JPanel" name="jPanel1">
+				<Constraints>
+					<LayoutConstraint class="com.cloudgarden.layout.AnchorConstraint">
+						<Property name="top" type="int" value="150"/>
+						<Property name="bottom" type="int" value="798"/>
+						<Property name="left" type="int" value="95"/>
+						<Property name="right" type="int" value="915"/>
+						<Property name="topType" type="int" value="1"/>
+						<Property name="bottomType" type="int" value="1"/>
+						<Property name="rightType" type="int" value="1"/>
+						<Property name="leftType" type="int" value="1"/>
+					</LayoutConstraint>
+				</Constraints>
+				<Layout class="Anchor">
+				</Layout>
+				<Events>
+				</Events>
+				<Properties>
+					<Property name="visible" type="boolean" value="true"/>
+					<Property name="preferredSize" type="Dimension">
+						<Dimension value="[304, 127]"/>
+					</Property>
+					<Property name="bounds" type="Rectangle">
+						<Rectangle value="[35, 29, 304, 127]"/>
+					</Property>
+				</Properties>
+				<SubComponents>
+					<Component class="javax.swing.JTextField" name="jTextField2">
+						<Constraints>
+							<LayoutConstraint class="com.cloudgarden.layout.AnchorConstraint">
+								<Property name="top" type="int" value="52"/>
+								<Property name="bottom" type="int" value="964"/>
+								<Property name="left" type="int" value="102"/>
+								<Property name="right" type="int" value="955"/>
+								<Property name="topType" type="int" value="2"/>
+								<Property name="bottomType" type="int" value="1"/>
+								<Property name="rightType" type="int" value="1"/>
+								<Property name="leftType" type="int" value="2"/>
+							</LayoutConstraint>
+						</Constraints>
+						<Events>
+						</Events>
+						<Properties>
+							<Property name="horizontalAlignment" type="int" value="10"/>
+							<Property name="text" type="String" value=""/>
+							<Property name="visible" type="boolean" value="true"/>
+							<Property name="preferredSize" type="Dimension">
+								<Dimension value="[188, 70]"/>
+							</Property>
+							<Property name="bounds" type="Rectangle">
+								<Rectangle value="[102, 52, 188, 70]"/>
+							</Property>
+							<Property name="externalizeStrings" type="boolean" value="false"/>
+						</Properties>
+					</Component>
+					<Component class="javax.swing.JTextField" name="jTextField1">
+						<Constraints>
+							<LayoutConstraint class="com.cloudgarden.layout.AnchorConstraint">
+								<Property name="top" type="int" value="18"/>
+								<Property name="bottom" type="int" value="311"/>
+								<Property name="left" type="int" value="101"/>
+								<Property name="right" type="int" value="13"/>
+								<Property name="topType" type="int" value="2"/>
+								<Property name="bottomType" type="int" value="0"/>
+								<Property name="rightType" type="int" value="2"/>
+								<Property name="leftType" type="int" value="2"/>
+							</LayoutConstraint>
+						</Constraints>
+						<Events>
+							<EventHandler event="caretUpdate" listener="javax.swing.event.CaretListener" handler="jTextField1CaretUpdate"/>
+						</Events>
+						<Properties>
+							<Property name="text" type="String" value=""/>
+							<Property name="preferredSize" type="Dimension">
+								<Dimension value="[190, 21]"/>
+							</Property>
+							<Property name="bounds" type="Rectangle">
+								<Rectangle value="[101, 18, 190, 21]"/>
+							</Property>
+						</Properties>
+					</Component>
+					<Component class="javax.swing.JLabel" name="jLabel2">
+						<Constraints>
+							<LayoutConstraint class="com.cloudgarden.layout.AnchorConstraint">
+								<Property name="top" type="int" value="54"/>
+								<Property name="bottom" type="int" value="555"/>
+								<Property name="left" type="int" value="10"/>
+								<Property name="right" type="int" value="258"/>
+								<Property name="topType" type="int" value="2"/>
+								<Property name="bottomType" type="int" value="0"/>
+								<Property name="rightType" type="int" value="0"/>
+								<Property name="leftType" type="int" value="2"/>
+							</LayoutConstraint>
+						</Constraints>
+						<Events>
+						</Events>
+						<Properties>
+							<Property name="text" type="String" value="Descripción"/>
+							<Property name="preferredSize" type="Dimension">
+								<Dimension value="[68, 16]"/>
+							</Property>
+							<Property name="bounds" type="Rectangle">
+								<Rectangle value="[10, 54, 68, 16]"/>
+							</Property>
+						</Properties>
+					</Component>
+					<Component class="javax.swing.JLabel" name="jLabel1">
+						<Constraints>
+							<LayoutConstraint class="com.cloudgarden.layout.AnchorConstraint">
+								<Property name="top" type="int" value="153"/>
+								<Property name="bottom" type="int" value="279"/>
+								<Property name="left" type="int" value="9"/>
+								<Property name="right" type="int" value="133"/>
+								<Property name="topType" type="int" value="0"/>
+								<Property name="bottomType" type="int" value="0"/>
+								<Property name="rightType" type="int" value="0"/>
+								<Property name="leftType" type="int" value="2"/>
+							</LayoutConstraint>
+						</Constraints>
+						<Events>
+						</Events>
+						<Properties>
+							<Property name="text" type="String" value="Título"/>
+							<Property name="preferredSize" type="Dimension">
+								<Dimension value="[31, 16]"/>
+							</Property>
+							<Property name="bounds" type="Rectangle">
+								<Rectangle value="[9, 19, 31, 16]"/>
+							</Property>
+						</Properties>
+					</Component>
+				</SubComponents>
+			</Component>
+		</SubComponents>
+	</Component>
+</Form>

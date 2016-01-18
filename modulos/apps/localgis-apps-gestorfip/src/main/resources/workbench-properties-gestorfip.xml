@@ -1,0 +1,46 @@
+<workbench>
+	
+	<plug-in>com.geopista.ui.plugin.GeopistaPrintPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.SeriePrintPlugIn</plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.plugin.InstallStandardFeatureTextWritersPlugIn</plug-in>
+	<plug-in>com.gestorfip.ui.catasto.plugin.LoadCatastoLayersPlugIn</plug-in>
+	<plug-in>com.gestorfip.ui.plugin.opengestor.plugin.OpenGestorPlugIn</plug-in>
+	<plug-in>com.geopista.ui.cursortool.editing.GeopistaEditingPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.GeopistaOptionsPlugIn</plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.zoom.ZoomToFullExtentPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.grid.GridOptionsPanelPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.selectitemsbyfencefromselectedlayers.SelectItemsByFenceFromSelectedLayersPlugIn</plug-in>
+  	<plug-in>com.geopista.ui.plugin.GeopistaValidatePlugin</plug-in>  	
+	<plug-in>com.geopista.ui.plugin.GeopistaAddNewLayerPlugIn</plug-in>	
+	<plug-in> com.geopista.ui.plugin.LoadSystemLayersPlugIn</plug-in>
+	<plug-in>com.geopista.ui.snap.GeopistaInstallGridPlugIn</plug-in>
+	<plug-in>com.geopista.ui.cursortool.selectoneitem.SelectOneItemPlugIn</plug-in>
+	<plug-in>org.agil.core.jump.plugin.ImageCoveragePlugIn</plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.plugin.wms.AddWMSQueryPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.zoom.ZoomToLayerPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.wms.ZoomToWMSPlugIn</plug-in>
+  	<plug-in>com.geopista.ui.plugin.edit.GeopistaFeatureSchemaPlugIn</plug-in>
+	<plug-in>com.geopista.style.sld.ui.plugin.ChangeSLDStylesPlugIn</plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.plugin.ViewAttributesPlugIn</plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.plugin.RemoveSelectedLayersPlugIn</plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.plugin.clipboard.CopySelectedLayersPlugIn</plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.plugin.clipboard.PasteLayersPlugIn</plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.plugin.clipboard.CopySelectedItemsPlugIn</plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.plugin.clipboard.CopyThisCoordinatePlugIn</plug-in>
+    <plug-in>com.vividsolutions.jump.workbench.ui.plugin.ViewSchemaPlugIn</plug-in>
+    <plug-in>com.geopista.ui.plugin.io.dxf.DxfPlugIn</plug-in>
+    <plug-in>com.vividsolutions.jump.workbench.datasource.InstallStandardDataSourceQueryChoosersPlugIn</plug-in>
+    <plug-in>com.vividsolutions.jump.workbench.datasource.LoadDatasetPlugIn</plug-in>
+    <plug-in>com.vividsolutions.jump.workbench.datasource.SaveDatasetAsPlugIn</plug-in>
+    <plug-in>com.geopista.ui.plugin.edit.EditSelectedFeaturePlugIn</plug-in>
+   	<plug-in>com.geopista.ui.plugin.ShowLegendPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.InstallLockRendererPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.features.GetFeatureInfoPlugin</plug-in>
+	<plug-in>com.geopista.ui.plugin.edit.EditSelectedFeaturePlugIn </plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.plugin.FeatureInfoPlugIn</plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.zoom.ZoomPreviousPlugIn</plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.zoom.ZoomNextPlugIn</plug-in>
+	<plug-in>com.geopista.ui.plugin.GeopistaActivateLayerPlugIn</plug-in>
+	<plug-in>com.vividsolutions.jump.workbench.ui.plugin.EditablePlugIn</plug-in>
+</workbench>
+

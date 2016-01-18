@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="LOCALGIS-SERVER-Cementerios">
+        <wb-resource deploy-path="/WEB-INF/web.xml" source-path="/src/main/webapp/WEB-INF/web.xml"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="localgis-const-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-Const/LOCALGIS-Const">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-geotools-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-Geotools/LOCALGIS-Geotools">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="localgis-servercontext-ocupaciones-3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LOCALGIS-ServerContext-Ocupaciones/LOCALGIS-ServerContext-Ocupaciones">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/LOCALGIS-SERVER-Cementerios/build/classes"/>
+        <property name="context-root" value="localgis-server-ocupaciones"/>
+    </wb-module>
+</project-modules>

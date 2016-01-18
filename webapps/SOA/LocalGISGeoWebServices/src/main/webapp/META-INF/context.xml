@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+    <Resource 	auth="Container" 
+    			driverClassName="org.postgresql.Driver" 
+    			type="javax.sql.DataSource" 
+    			maxActive="100" 
+    			maxIdle="30" 
+    			maxWait="10000" 
+    			name="postgresql" 
+    			username="${localgis_database_username}"
+    			password="${localgis_database_password}" 
+    			url="${localgis_database_url}" />
+</Context>

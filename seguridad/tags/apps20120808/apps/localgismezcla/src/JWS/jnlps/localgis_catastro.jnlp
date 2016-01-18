@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+codebase="@SITE@"
+href="localgis_catastro.jnlp">
+<information>
+<title>LocalGIS Catastro</title>
+<vendor>MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO</vendor>
+<homepage href="http://www.geopista.com" />
+<description>Open Source GIS client. Catastro.(@SITE@)</description>
+<icon href="logo_geopista.gif"/>
+<offline-allowed/>
+<icon kind="splash" href="splash_geopista.gif"/>
+<shortcut online="false">
+      <desktop/>
+      <menu submenu="LocalGIS"/>
+    </shortcut>
+</information>
+<resources>
+<j2se initial-heap-size="128m" max-heap-size="1024m" version="1.6" />
+<jar href="catastro_client.jar" main="true" />
+<jar href="geopista_workbench.jar" />
+<jar href="catastro_server.jar"/>
+<jar href="gestor_capas.jar"/>
+<jar href="geopista_apps.jar"/>
+<jar href="geopista_utilidades.jar" />
+<jar href="analysis.jar" />
+<jar href="edit.jar" />
+<jar href="editing.jar" />
+<jar href="explodeselectedfeatures.jar" />
+<jar href="grid.jar" />
+<jar href="dxf.jar" />
+<jar href="selectbytype.jar" />
+<jar href="selectitemsbycirclefromselectedlayers.jar" />
+<jar href="selectitemsbyfence.jar" />
+<jar href="cliptool.jar" />
+<jar href="drawconstrainedarc.jar" />
+<jar href="drawconstrainedcircle.jar" />
+<jar href="editingtool.jar" />
+<jar href="parallelitemcursortool.jar" />
+<jar href="rotateselecteditemstool.jar" />
+<jar href="scaleselecteditemstool.jar" />
+<jar href="selectoneitem.jar" />
+<jar href="symmetrictool.jar" />
+<jar href="zoomtoarea.jar" />
+<jar href="geopista_plugin.jar" />
+<jar href="geopista_administrador.jar" />
+<jar href="geopista_img.jar" />
+<jar href="geopista_images.jar" />
+<jar href="geopista_sql.jar" />
+<jar href="helpset.jar" />
+<jar href="catastro_help.jar" />
+<jar href="pirolplugin.jar" />
+<jar href="geopista_server.jar" />
+<jar href="geopista_protocol.jar" />
+<jar href="jumppatched.jar" />
+<jar href="productos/javahelp/jhall.jar" />
+<jar href="productos/degree/deegree2004-05-07.jar" />
+<jar href="productos/JEP/jep-2.24.jar" />
+<jar href="productos/jai/jai_codec.jar" />
+<jar href="productos/jai/jai_core.jar" />
+<jar href="productos/vividsolutions/Jama-1.0.1.jar" />
+<jar href="productos/xml/jdom.jar" />
+<jar href="productos/vividsolutions/jts-1.5.jar" />
+<jar href="productos/xml/xercesImpl.jar" />
+<jar href="productos/xml/xml-apis.jar" />
+<jar href="productos/DataVision/DataVision.jar" />
+<jar href="productos/DataVision/iText.jar" />
+<jar href="productos/DataVision/jRuby.jar" />
+<jar href="productos/DataVision/MinML2.jar" />
+<jar href="productos/postgre/postgresql-8.0-311.jdbc3.jar" />
+<jar href="productos/xfire/commons-httpclient-3.0.jar"></jar>
+<jar href="productos/httpclient/commons-logging.jar" />
+<jar href="productos/jetty/extra/ext/log4j.jar" />
+<jar href="productos/castor/castor-0.9.5.3.jar" />
+<jar href="productos/httpclient/commons-logging.jar" />
+<jar href="productos/jetty/extra/ext/commons-logging.jar" />
+<jar href="productos/jetty/lib/javax.servlet.jar" />
+<jar href="productos/jetty/extra/lib/org.mortbay.jaas.jar" />
+<jar href="productos/jetty/lib/org.mortbay.jetty.jar" />
+<jar href="productos/jetty/extra/lib/org.mortbay.jetty.plus.jar" />
+<jar href="productos/jetty/extra/ext/log4j.jar" />
+<jar href="geopista_cartografia.jar" />
+<jar href="geopista_config.jar" />
+<jar href="geopista_protocol.jar" />
+<jar href="geopista_security.jar" />
+<jar href="geopista_security_sso.jar"/>
+<jar href="geopista_security_dnie.jar"/>
+<jar href="productos/JCalendar/jcalendar-1.3.2.jar" />
+<jar href="productos/castor/castor-0.9.5.3.jar" />
+<jar href="productos/netbeans/AbsoluteLayout.jar" />
+<jar href="productos/vividsolutions/Jama-1.0.1.jar" />
+<jar href="productos/log4j/log4j-1.2.6.jar" />
+<jar href="productos/jetty/lib/javax.servlet.jar" />
+<jar href="productos/agile/agile_core.jar" />
+<jar href="productos/hibernate/hibernate-2.1.jar" />
+<jar href="productos/buoy/Buoy.jar" />
+<jar href="productos/crypto/xmlsec-20050423.jar" />
+<jar href="productos/xfire/commons-codec-1.3.jar" />
+<jar href="productos/xfire/commons-httpclient-3.0.jar" />
+<jar href="productos/xfire/xfire-core-1.2.6.jar" />
+<jar href="productos/xfire/commons-discovery-0.2.jar" />
+<jar href="productos/xfire/wsdl4j-1.6.1.jar" />
+<jar href="productos/cifrado/cifrado.jar" />
+<jar href="wfsmne.jar" />
+<jar href="productos/geotools-2.5.5/geoapi-2.2.0.jar"/>
+<jar href="productos/geotools-2.5.5/gt-api-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-coverage-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-cql-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-data-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-epsg-extension-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-epsg-wkt-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-geotiff-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-jdbc-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-legacy-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-main-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-metadata-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-property-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-referencing-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-render-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-sample-data-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-shapefile-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/gt-xml-2.5.5.jar"/>
+<jar href="productos/geotools-2.5.5/jsr-275-1.0-beta-2.jar"/>
+<jar href="productos/geotools-2.5.5/vecmath-1.3.1.jar"/>
+<jar href="productos/geotools-2.5.5/jai_imageio-1.1.jar"/>
+<jar href="productos/vividsolutions/jts-1.5.jar"></jar>
+<jar href="productos/jetty/extra/ext/xapool.jar"></jar>
+
+<jar href="localgis_plantillas.jar" />
+<jar href="productos/ireport/iReport-2.0.1.jar" />
+<jar href="productos/commons-ssl/commons-ssl.jar" />
+<jar href="productos/axis/axis.jar" />
+<jar href="productos/jaxrpc/jaxrpc.jar" />
+<jar href="productos/axis2/axis2-saaj-1.4.1.jar" />
+<jar href="productos/axis2/axiom-impl-1.2.7.jar" />
+<jar href="productos/axis2/axiom-api-1.2.7.jar" />
+<jar href="productos/axis2/axiom-dom-1.2.7.jar" />
+<jar href="productos/mantisconnect-modelo/mantisconnect_modelo.jar" /> 
+<jar href="productos/axis2/backport-util-concurrent-3.1.jar"/>
+<jar href="productos/xfire/commons-discovery-0.2.jar"/>
+<jar href="productos/xfire/wsdl4j-1.6.1.jar" />
+</resources>
+<application-desc main-class="com.geopista.app.catastro.gestorcatastral.MainCatastro">
+<argument>-properties</argument>
+<argument>workbench-properties.xml</argument>
+</application-desc>
+<security><all-permissions /></security>
+</jnlp>

@@ -1,0 +1,21 @@
+<project name="SidLayers" default="Jar"  >
+	<property name="dest.file" location="c:/geopista/plugins/DGNsupport.jar"/>
+	 <property name="base.home" value="c:/desarrollo/eclipse_old/geopista/"/>
+	 <property name="libs.home"     location="${base.home}/lib"/>
+    <!-- ================================= 
+          target: Jar              
+         ================================= -->
+    <target name="Jar"  description="--> Package plugin's jar">
+        <jar destfile="${dest.file}" >
+        	<fileset dir="${base.home}" id="plugin_files">
+        		 <include name="com/geopista/ui/plugin/io/dgn/**/*.class"/>
+        	</fileset>
+        </jar>
+   	</target>
+<target name="sign" depends="Jar">
+	<signjar  alias="geopista" keystore="${libs.home}/GeopistaKeyStore" keypass="geopista99" storepass="geopista99" 
+	    						jar="${dest.file}"/>
+	    
+	</target>
+
+</project>

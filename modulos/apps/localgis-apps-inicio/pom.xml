@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.app</groupId>
+	<artifactId>localgis-apps-inicio</artifactId>
+	<packaging>jar</packaging>
+	<name>LOCALGIS Inicio</name>
+	<description>Open Source GIS client. Actividades contaminantes.</description>
+	<organization>
+		<name>MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO</name>
+	</organization>
+	<version>3.0</version>
+
+	<parent>
+		<groupId>com.localgis</groupId>
+		<artifactId>localgis-parent-apps</artifactId>
+		<version>3.0</version>
+	</parent>
+
+	<properties>
+		<!-- Configuracion jnlp -->
+		<mainClassJnlp>com.geopista.app.inicio.GeopistaInicio</mainClassJnlp>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.localgis.app</groupId>
+			<artifactId>localgis-apps-catastro</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.reports</groupId>
+			<artifactId>localgis-reports</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.app</groupId>
+			<artifactId>localgis-apps-planeamiento</artifactId>
+			<version>3.0</version>
+		</dependency>
+	</dependencies>
+</project>

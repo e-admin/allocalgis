@@ -1,0 +1,71 @@
+CARGA DE PADRÓN:
+
+Se ha desarrollado una pequeña utilidad encargada de cargar uno o varios ficheros de padrón de habitantes en formato txt, 
+realizando una validación previa de los mismos (en caso de que no sean válido se mostrará un mensaje por pantalla y 
+se volcará también al log dicha información).
+
+FUENTES:
+
+    1. Para ejecutar este programa se ha creado un script para Linux llamado: caragarPadron.sh 
+    (que se encuentra en el CVS en LOCALGIS.GeoCore/src/padron).
+
+    2. Por otro lado he creado dos clase nuevas, que se encuentra en LOCALGIS.GeoCore:    
+
+        com.geopista.app.catastro.intercambio.importacion.CargarFicheroPadron
+
+        com.geopista.app.catastro.intercambio.importacion.CargarPadronMunicipalMain
+
+    3. He arreglado además la clase ImportacionOperations.java (mejorando la gestión de conexiones), que se encuentra en LOCALGIS.GeoCore, 
+    en el paquete: com.geopista.app.catastro.intercambio.importacion.utils
+
+
+
+
+EJECUCIÓN:
+
+Para poder ejecutar este script y que se realice la carga de padrón tenemos que seguir los siguientes pasos:
+
+    1. Copiar los ficheros de padrón que queramos cargar a: src/padron.
+
+    2.Incluír en el fichero file_names (que se encuentra en src/padron) los nombres de los ficheros (uno por cada línea).
+
+    3.Generar el jar geopista_ficheros_padron.jar mediante el proyecto LOCALGIS.Distribucion y subirlo al servidor (LOCALGIS/webapps/software).
+
+    4.Ejecutar el script cargarPadron.sh (está pensado para ser ejecutado en el directorio: LOCALGIS/webapps/software):
+
+./cargarPadron.sh syssuperuser sysgeopass geopista geopista
+
+Como se puede observar el script recibe cuatro parámetros: usuario y contraseña para loguearnos y usuario y contraseña de la base de datos.
+
+LOGS:
+
+A medida que se van cargando los ficheros de padrón se va generando un fichero de log para cada uno de ellos, en el que es 
+posible verificar como ha ido el proceso de carga. Los ficheros de log se generan en el mismo directorio en el que se encuentra 
+el script de carga (está pensado para hacerse en LOCALGIS/webapps/software) y su nombre será: log-padron-nombreFicheroEntrada, 
+donde "nombreFicheroEntrada" será el nombre del fichero que estemos cargando.
+
+POSIBLE EXCEPCIÓN EN LA CARGA:
+
+Cuando necesiatmos cargar "muchos" registros de padrón de habitantes puede producirse la siguiente Excepción:
+SQLException: Too many files open (En realidad no se trata de una SQLException, sino de una java.net.SocketException camuflada en el código fuente).
+En Linux podemos resolver este problema aumentando el número máximos de posibles ficheros abiertos del sistema, de la siguiente manera:
+
+1. vi /etc/security/limits.conf
+
+Añadimos la siguiente línea en el fichero (donde valor es el número máximo de ficheros abiertos posible):
+
+usuario hard nofile valor
+
+2. vi ~/.bash_profile
+
+Añadimos la siguiente línea en el fichero (donde valor es el número máximo de ficheros abiertos posible):
+
+ulimit -n valor
+
+3. Salimos de sesión y volvemos a entrar.
+
+4. Para verificar que se ha cambiado el valor, ejecutamos el siguiente comando:
+ulimit -a
+
+
+

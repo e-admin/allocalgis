@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="localgis_municipios">
+
+  <select id="selectBoundingBoxByIdMunicipio" parameterClass="java.util.Map" resultMap="BoundingBoxResult">
+    select SDO_GEOM.SDO_MIN_MBR_ORDINATE("GEOMETRY_$srid$", 1) as minx, SDO_GEOM.SDO_MIN_MBR_ORDINATE("GEOMETRY_$srid$", 2) as miny, SDO_GEOM.SDO_MAX_MBR_ORDINATE("GEOMETRY_$srid$", 1) as maxx, SDO_GEOM.SDO_MAX_MBR_ORDINATE("GEOMETRY_$srid$", 2) as maxy
+    from localgisguiaurbana.municipios 
+    where id = #idMunicipio#
+  </select>
+
+  <select id="selectBoundingBoxByIdEntidad" parameterClass="java.util.Map" resultMap="BoundingBoxResult">
+    select min(SDO_GEOM.SDO_MIN_MBR_ORDINATE("GEOMETRY_$srid$", 1)) as minx, min(SDO_GEOM.SDO_MIN_MBR_ORDINATE("GEOMETRY_$srid$", 2)) as miny, max(SDO_GEOM.SDO_MAX_MBR_ORDINATE("GEOMETRY_$srid$", 1)) as maxx, max(SDO_GEOM.SDO_MAX_MBR_ORDINATE("GEOMETRY_$srid$", 2)) as maxy
+    from entidades_municipios em, localgisguiaurbana.municipios m
+    where em.id_municipio = m.id and em.id_entidad = #idEntidad#
+  </select>
+
+</sqlMap>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/map_1_0.dtd">
+
+<map version="1.0">
+    <mapID target="ocupacionesIntro" url="Pages/va/ocupacionesIntroduccion.html" />
+    <mapID target="ocupacionesUsuarios" url="Pages/va/ocupacionesUsuariosPermisos.html" />
+    <mapID target="ocupacionesOpcionesMenu" url="Pages/va/ocupacionesMenu.html" />
+    <mapID target="ocupacionesWorkflow" url="Pages/va/ocupacionesWorkflow.html" />
+    <mapID target="ocupacionesConsulta" url="Pages/va/ocupacionesConsulta.html" />
+	<mapID target="ocupacionesCreacion" url="Pages/va/ocupacionesCreacion.html" />
+    <mapID target="ocupacionesModificacion" url="Pages/va/ocupacionesModificacion.html" />
+    <mapID target="ocupacionesInformes" url="Pages/va/ocupacionesInformes.html" />
+    <mapID target="ocupacionesConsultaEventos" url="Pages/va/ocupacionesConsultaEventos.html" />
+    <mapID target="ocupacionesUltimosEventos" url="Pages/va/ocupacionesUltimosEventos.html" />
+    <mapID target="ocupacionesPlanos" url="Pages/va/ocupacionesPlanos.html" />
+    <mapID target="ocupacionesConsultaNotificaciones" url="Pages/va/ocupacionesConsultaNotificaciones.html" />
+    <mapID target="ocupacionesConsultaHistorico" url="Pages/va/ocupacionesConsultaHistorico.html" />
+    <mapID target="ocupacionesTareasPendientes" url="Pages/va/ocupacionesTareasPendientes.html" />
+	<mapID target="ocupacionesConfiguracion" url="Pages/va/ocupacionesConfiguracion.html"/>   
+    <mapID target="ocupacionesIdiomas" url="Pages/va/ocupacionesIdiomas.html" />
+</map>

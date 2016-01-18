@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<sld:StyledLayerDescriptor version="String" xmlns:sld="http://www.opengis.net/sld" xmlns:gml="http://www.opengis.net/gml" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sld:NamedLayer>
+		<sld:Name>alumbrado</sld:Name>
+		<sld:UserStyle>
+			<sld:Name>default:Alumbrado</sld:Name>
+			<sld:Title>Alumbrado</sld:Title>
+			<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+				<sld:Name>Alumbrado</sld:Name>
+				<sld:Rule>
+					<sld:Name>Alumbrado</sld:Name>
+					<sld:PointSymbolizer>
+						<sld:Graphic>
+							<sld:Mark>
+								<sld:WellKnownName>circle</sld:WellKnownName>
+								<sld:Fill>
+									<sld:CssParameter name="fill">#EEFF79</sld:CssParameter>
+								</sld:Fill>
+								<sld:Stroke>
+									<sld:CssParameter name="stroke">#D7E531</sld:CssParameter>
+									<sld:CssParameter name="stroke-width">1.0</sld:CssParameter>
+								</sld:Stroke>
+							</sld:Mark>
+							<sld:Size>8</sld:Size>
+						</sld:Graphic>
+					</sld:PointSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>
+	  	</sld:UserStyle>
+	</sld:NamedLayer>
+	<sld:NamedLayer>
+		<sld:Name>ejes</sld:Name>
+		<sld:UserStyle>
+			<sld:Name>default:Calles</sld:Name>
+			<sld:Title>Calles</sld:Title>
+         	<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Calles</sld:Name>
+           		<sld:Rule>
+             		<sld:Name>Calles</sld:Name>
+             		<sld:LineSymbolizer>
+               			<sld:Stroke>
+                 			<sld:CssParameter name="stroke">#7AA9E4</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-width">4</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-linecap">square</sld:CssParameter>
+               			</sld:Stroke>
+             		</sld:LineSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>
+	  	</sld:UserStyle>
+	</sld:NamedLayer>
+	<sld:NamedLayer>
+		<sld:Name>masa</sld:Name>	  	
+		<sld:UserStyle>
+			<sld:Name>default:AreaConstruida</sld:Name>
+			<sld:Title>Area construida</sld:Title>
+         	<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>AreaConstruida</sld:Name>
+           		<sld:Rule>
+             		<sld:Name>Area construida</sld:Name>
+					<sld:PolygonSymbolizer>
+						<sld:Fill>
+							<sld:CssParameter name="fill">#F5CD78</sld:CssParameter>
+						</sld:Fill>
+						<sld:Stroke>
+							<sld:CssParameter name="stroke">#BB9D5B</sld:CssParameter>
+					 		<sld:CssParameter name="stroke-width">2</sld:CssParameter>
+						</sld:Stroke>
+					</sld:PolygonSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>
+	  </sld:UserStyle>
+	</sld:NamedLayer>
+	<sld:NamedLayer>
+		<sld:Name>limites</sld:Name>	  	
+			<sld:UserStyle>
+			<sld:Name>default:Limites</sld:Name>
+			<sld:Title>Limites</sld:Title>
+         	<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Limite</sld:Name>
+           		<sld:Rule>
+             		<sld:Name>Limites</sld:Name>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+				<sld:CssParameter name="fill">#E2EBE0</sld:CssParameter>
+				</sld:Fill>
+				<sld:Stroke>
+				<sld:CssParameter name="stroke">#000000</sld:CssParameter>
+				<sld:CssParameter name="stroke-width">2</sld:CssParameter>
+				</sld:Stroke>
+				</sld:PolygonSymbolizer>
+             		<sld:LineSymbolizer>
+               			<sld:Stroke>
+                 			<sld:CssParameter name="stroke">#0000BB</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-width">2</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-linecap">square</sld:CssParameter>
+               			</sld:Stroke>
+             		</sld:LineSymbolizer>
+			
+			</sld:Rule>
+			</sld:FeatureTypeStyle>
+	  	</sld:UserStyle>
+		<sld:UserStyle>
+			<sld:Name>LimiteMunicipalRelleno</sld:Name>
+			<sld:Title>Limite Municipal Relleno</sld:Title>
+         	<sld:IsDefault>0</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Limite Municipal</sld:Name>
+           		<sld:Rule>
+             		<sld:Name>Limite Municipal</sld:Name>
+					<sld:PolygonSymbolizer>
+						<sld:Fill>
+							<sld:CssParameter name="fill">#E2EBE0</sld:CssParameter>
+						</sld:Fill>
+						<sld:Stroke>
+							<sld:CssParameter name="stroke">#B2BBB0</sld:CssParameter>
+					 		<sld:CssParameter name="stroke-width">2</sld:CssParameter>
+						</sld:Stroke>
+					</sld:PolygonSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>
+	  </sld:UserStyle>
+	</sld:NamedLayer>
+	<sld:NamedLayer>
+		<sld:Name>captaciones</sld:Name>	  	
+		<sld:UserStyle>
+			<sld:Name>default:Captaciones</sld:Name>
+			<sld:Title>Captaciones</sld:Title>
+			<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+				<sld:Name>Captaciones</sld:Name>
+				<sld:Rule>
+					<sld:Name>Captaciones</sld:Name>
+					<sld:PointSymbolizer>
+						<sld:Graphic>
+							<sld:Mark>
+								<sld:WellKnownName>square</sld:WellKnownName>
+								<sld:Fill>
+									<sld:CssParameter name="fill">#B8F5BF</sld:CssParameter>
+								</sld:Fill>
+								<sld:Stroke>
+									<sld:CssParameter name="stroke">#000000</sld:CssParameter>
+									<sld:CssParameter name="stroke-width">1.0</sld:CssParameter>
+								</sld:Stroke>
+							</sld:Mark>
+							<sld:Size>8</sld:Size>
+						</sld:Graphic>
+					</sld:PointSymbolizer>
+					<sld:TextSymbolizer>
+						<sld:Label>
+							<ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">NOMCAP</ogc:PropertyName>
+						</sld:Label>
+						<sld:Font>
+							<sld:CssParameter name="font-family">Serif</sld:CssParameter>
+							<sld:CssParameter name="font-style">normal</sld:CssParameter>
+							<sld:CssParameter name="font-weight">normal</sld:CssParameter>
+							<sld:CssParameter name="font-size">8</sld:CssParameter>
+							<sld:CssParameter name="font-color">#000000</sld:CssParameter>
+						</sld:Font>
+						<sld:LabelPlacement>
+							<sld:PointPlacement>
+								<sld:AnchorPoint>
+									<sld:AnchorPointX>0</sld:AnchorPointX>
+									<sld:AnchorPointY>1</sld:AnchorPointY>
+								</sld:AnchorPoint>
+								<sld:Displacement>
+									<sld:DisplacementX>0</sld:DisplacementX>
+									<sld:DisplacementY>10</sld:DisplacementY>
+								</sld:Displacement>
+								<sld:Rotation>0</sld:Rotation>
+							</sld:PointPlacement>
+						</sld:LabelPlacement>
+						<!--
+						<Halo>
+							<Radius>10</Radius>
+							<Fill>
+								<CssParameter name="fill">#BBBBBB</CssParameter>
+							</Fill>
+						</Halo>
+						<Fill>
+							<CssParameter name="fill">#BBBBBB</CssParameter>
+						</Fill>
+						-->
+					</sld:TextSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>
+	  	</sld:UserStyle>
+	</sld:NamedLayer>
+	<sld:NamedLayer>
+		<sld:Name>conducciones</sld:Name>	  	
+		<sld:UserStyle>
+			<sld:Name>default:Conducciones</sld:Name>
+			<sld:Title>Conducciones</sld:Title>
+         	<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Conducciones</sld:Name>
+           		<sld:Rule>
+             		<sld:Name>Conducciones</sld:Name>
+             		<sld:LineSymbolizer>
+               			<sld:Stroke>
+                 			<sld:CssParameter name="stroke">#83F789</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-width">5</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-linecap">square</sld:CssParameter>
+               			</sld:Stroke>
+             		</sld:LineSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>
+	  </sld:UserStyle>
+	<sld:UserStyle>
+			<sld:Name>RotulosDeConducciones</sld:Name>
+			<sld:Title>Rotulos de conducciones</sld:Title>
+         	<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Conducciones</sld:Name>
+				<sld:Rule>
+             		<sld:Name>Rotulos de conducciones</sld:Name>
+					<sld:TextSymbolizer>
+						<sld:Label>
+							<ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">TAMCON</ogc:PropertyName>
+						</sld:Label>
+						<sld:Font>
+							<sld:CssParameter name="font-family">Serif</sld:CssParameter>
+							<sld:CssParameter name="font-style">normal</sld:CssParameter>
+							<sld:CssParameter name="font-weight">normal</sld:CssParameter>
+							<sld:CssParameter name="font-size">8</sld:CssParameter>
+							<sld:CssParameter name="font-color">#000000</sld:CssParameter>
+						</sld:Font>
+						<sld:LabelPlacement>
+							<sld:LinePlacement>
+							</sld:LinePlacement>
+						</sld:LabelPlacement>
+					</sld:TextSymbolizer>
+				</sld:Rule>				
+			</sld:FeatureTypeStyle>
+	  </sld:UserStyle>
+	</sld:NamedLayer>
+	<sld:NamedLayer>
+		<sld:Name>depositos</sld:Name>	  	
+		<sld:UserStyle>
+			<sld:Name>default:Depositos</sld:Name>
+			<sld:Title>Depositos</sld:Title>
+			<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+				<sld:Name>Depositos</sld:Name>
+				<sld:Rule>
+					<sld:Name>Depositos</sld:Name>
+					<sld:PointSymbolizer>
+						<sld:Graphic>
+							<sld:Mark>
+								<sld:WellKnownName>circle</sld:WellKnownName>
+								<sld:Fill>
+									<sld:CssParameter name="fill">#B8F5BF</sld:CssParameter>
+								</sld:Fill>
+								<sld:Stroke>
+									<sld:CssParameter name="stroke">#000000</sld:CssParameter>
+									<sld:CssParameter name="stroke-width">1.0</sld:CssParameter>
+								</sld:Stroke>
+							</sld:Mark>
+							<sld:Size>12</sld:Size>
+						</sld:Graphic>
+					</sld:PointSymbolizer>
+					<sld:TextSymbolizer>
+						<sld:Label>
+							<ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">CAPDEP</ogc:PropertyName> m3
+						</sld:Label>
+						<sld:Font>
+							<sld:CssParameter name="font-family">Serif</sld:CssParameter>
+							<sld:CssParameter name="font-style">normal</sld:CssParameter>
+							<sld:CssParameter name="font-weight">normal</sld:CssParameter>
+							<sld:CssParameter name="font-size">10</sld:CssParameter>
+							<sld:CssParameter name="font-color">#000000</sld:CssParameter>
+						</sld:Font>
+						<sld:LabelPlacement>
+							<sld:PointPlacement>
+								<sld:AnchorPoint>
+									<sld:AnchorPointX>0</sld:AnchorPointX>
+									<sld:AnchorPointY>1</sld:AnchorPointY>
+								</sld:AnchorPoint>
+								<sld:Displacement>
+									<sld:DisplacementX>0</sld:DisplacementX>
+									<sld:DisplacementY>10</sld:DisplacementY>
+								</sld:Displacement>
+								<sld:Rotation>0</sld:Rotation>
+							</sld:PointPlacement>
+						</sld:LabelPlacement>
+						<!--
+						<Halo>
+							<Radius>10</sld:Radius>
+							<Fill>
+								<CssParameter name="fill">#BBBBBB</CssParameter>
+							</Fill>
+						</Halo>
+						<Fill>
+							<CssParameter name="fill">#BBBBBB</CssParameter>
+						</Fill>
+						-->
+					</sld:TextSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>
+	  </sld:UserStyle>
+	</sld:NamedLayer>
+	<sld:NamedLayer>
+		<sld:Name>redesdis</sld:Name>	  	
+		<sld:UserStyle>
+			<sld:Name>default:RedDeDistribucion</sld:Name>
+			<sld:Title>Red de distribucion</sld:Title>
+         	<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>RedDistribucion</sld:Name>
+           		<sld:Rule>
+             		<sld:Name>Red de distribucion</sld:Name>
+             		<sld:LineSymbolizer>
+               			<sld:Stroke>
+                 			<sld:CssParameter name="stroke">#83F789</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-width">3</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-linecap">square</sld:CssParameter>
+               			</sld:Stroke>
+             		</sld:LineSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>
+	  </sld:UserStyle>
+		<sld:UserStyle>
+			<sld:Name>RotulosDeRedDeDistribucion</sld:Name>
+			<sld:Title>Rotulos de red de distribucion</sld:Title>
+         	<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Rotulos de red de distribucion</sld:Name>
+				<sld:Rule>
+             		<sld:Name>Rotulos de red de distribucion</sld:Name>
+					<sld:TextSymbolizer>
+						<sld:Label>
+							<ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">TAMDIS</ogc:PropertyName>
+						</sld:Label>
+						<sld:Font>
+							<sld:CssParameter name="font-family">Serif</sld:CssParameter>
+							<sld:CssParameter name="font-style">normal</sld:CssParameter>
+							<sld:CssParameter name="font-weight">normal</sld:CssParameter>
+							<sld:CssParameter name="font-size">8</sld:CssParameter>
+							<sld:CssParameter name="font-color">#000000</sld:CssParameter>
+						</sld:Font>
+						<sld:LabelPlacement>
+							<sld:LinePlacement>
+							</sld:LinePlacement>
+						</sld:LabelPlacement>
+					</sld:TextSymbolizer>
+				</sld:Rule>				
+			</sld:FeatureTypeStyle>
+	  </sld:UserStyle>
+		<sld:UserStyle>
+			<sld:Name>RedDeDistribucionPorMaterial</sld:Name>
+			<sld:Title>Red de distribucion por Material</sld:Title>
+         	<sld:IsDefault>0</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Red de distribucion</sld:Name>
+           		<sld:Rule>
+             		<sld:Name>Red de distribucion [FC]</sld:Name>
+             		<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+             			<ogc:PropertyIsEqualTo>
+             				<ogc:PropertyName>MATDIS</ogc:PropertyName>
+             				<ogc:Literal>FC</ogc:Literal>
+             			</ogc:PropertyIsEqualTo>
+             		</ogc:Filter>
+             		<sld:LineSymbolizer>
+               			<sld:Stroke>
+                 			<sld:CssParameter name="stroke">#FF0000</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-width">3</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-linecap">square</sld:CssParameter>
+               			</sld:Stroke>
+             		</sld:LineSymbolizer>
+				</sld:Rule>
+           		<sld:Rule>
+             		<sld:Name>Red de distribucion [HO]</sld:Name>
+             		<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+             			<ogc:PropertyIsEqualTo>
+             				<ogc:PropertyName>MATDIS</ogc:PropertyName>
+             				<ogc:Literal>HO</ogc:Literal>
+             			</ogc:PropertyIsEqualTo>
+             		</ogc:Filter>
+             		<sld:LineSymbolizer>
+               			<sld:Stroke>
+                 			<sld:CssParameter name="stroke">#00FF00</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-width">3</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-linecap">square</sld:CssParameter>
+               			</sld:Stroke>
+             		</sld:LineSymbolizer>
+				</sld:Rule>
+           		<sld:Rule>
+             		<sld:Name>Red de distribucion [OT]</sld:Name>
+             		<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+             			<ogc:PropertyIsEqualTo>
+             				<ogc:PropertyName>MATDIS</ogc:PropertyName>
+             				<ogc:Literal>OT</ogc:Literal>
+             			</ogc:PropertyIsEqualTo>
+             		</ogc:Filter>
+             		<sld:LineSymbolizer>
+               			<sld:Stroke>
+                 			<sld:CssParameter name="stroke">#0000FF</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-width">3</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-linecap">square</sld:CssParameter>
+               			</sld:Stroke>
+             		</sld:LineSymbolizer>
+				</sld:Rule>
+           		<sld:Rule>
+             		<sld:Name>Red de distribucion [PC]</sld:Name>
+             		<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+             			<ogc:PropertyIsEqualTo>
+             				<ogc:PropertyName>MATDIS</ogc:PropertyName>
+             				<ogc:Literal>PC</ogc:Literal>
+             			</ogc:PropertyIsEqualTo>
+             		</ogc:Filter>
+             		<sld:LineSymbolizer>
+               			<sld:Stroke>
+                 			<sld:CssParameter name="stroke">#FFFF00</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-width">3</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-linecap">square</sld:CssParameter>
+               			</sld:Stroke>
+             		</sld:LineSymbolizer>
+				</sld:Rule>
+           		<sld:Rule>
+             		<sld:Name>Red de distribucion [PE]</sld:Name>
+             		<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+             			<ogc:PropertyIsEqualTo>
+             				<ogc:PropertyName>MATDIS</ogc:PropertyName>
+             				<ogc:Literal>PE</ogc:Literal>
+             			</ogc:PropertyIsEqualTo>
+             		</ogc:Filter>
+             		<sld:LineSymbolizer>
+               			<sld:Stroke>
+                 			<sld:CssParameter name="stroke">#00FFFF</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-width">3</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-linecap">square</sld:CssParameter>
+               			</sld:Stroke>
+             		</sld:LineSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>
+	  </sld:UserStyle>
+	</sld:NamedLayer>
+	<sld:NamedLayer>
+		<sld:Name>ramales</sld:Name>	  	
+			<sld:UserStyle>
+			<sld:Name>default:RamalDeSaneamiento</sld:Name>
+			<sld:Title>Ramal de saneamiento</sld:Title>
+         	<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Ramales</sld:Name>
+           		<sld:Rule>
+             		<sld:Name>Ramal de saneamiento</sld:Name>
+             		<sld:LineSymbolizer>
+               			<sld:Stroke>
+                 			<sld:CssParameter name="stroke">#F78389</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-width">3</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-linecap">square</sld:CssParameter>
+               			</sld:Stroke>
+             		</sld:LineSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>			
+	  </sld:UserStyle>
+		<sld:UserStyle>
+			<sld:Name>RotulosRamalDeSaneamiento</sld:Name>
+			<sld:Title>Rotulos de ramal de saneamiento</sld:Title>
+         	<sld:IsDefault>0</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Rotulos de ramal de saneamiento</sld:Name>
+				<sld:Rule>
+             		<sld:Name>Rotulos de ramal de saneamiento</sld:Name>
+					<sld:TextSymbolizer>
+						<sld:Label>
+							<ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">TAMSAN</ogc:PropertyName>
+						</sld:Label>
+						<sld:Font>
+							<sld:CssParameter name="font-family">Serif</sld:CssParameter>
+							<sld:CssParameter name="font-style">normal</sld:CssParameter>
+							<sld:CssParameter name="font-weight">normal</sld:CssParameter>
+							<sld:CssParameter name="font-size">8</sld:CssParameter>
+							<sld:CssParameter name="font-color">#000000</sld:CssParameter>
+						</sld:Font>
+						<sld:LabelPlacement>
+							<sld:LinePlacement>
+							</sld:LinePlacement>
+						</sld:LabelPlacement>
+					</sld:TextSymbolizer>
+				</sld:Rule>				
+			</sld:FeatureTypeStyle>			
+	  </sld:UserStyle>
+	</sld:NamedLayer>
+	<sld:NamedLayer>
+		<sld:Name>colectores</sld:Name>	  	
+		<sld:UserStyle>
+			<sld:Name>default:Colector</sld:Name>
+			<sld:Title>Colector</sld:Title>
+         	<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Colectores</sld:Name>
+           		<sld:Rule>
+             		<sld:Name>Colector</sld:Name>
+             		<sld:LineSymbolizer>
+               			<sld:Stroke>
+                 			<sld:CssParameter name="stroke">#F78389</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-width">5</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-linecap">square</sld:CssParameter>
+               			</sld:Stroke>
+             		</sld:LineSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>			
+	  </sld:UserStyle>
+		<sld:UserStyle>
+			<sld:Name>RotulosDeColectores</sld:Name>
+			<sld:Title>Rotulos de colectores</sld:Title>
+         	<sld:IsDefault>0</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Rotulos de colectores</sld:Name>
+				<sld:Rule>
+             		<sld:Name>Rotulos de colectores</sld:Name>
+					<sld:TextSymbolizer>
+						<sld:Label>
+							<ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">TAMCOL</ogc:PropertyName>
+						</sld:Label>
+						<sld:Font>
+							<sld:CssParameter name="font-family">Serif</sld:CssParameter>
+							<sld:CssParameter name="font-style">normal</sld:CssParameter>
+							<sld:CssParameter name="font-weight">normal</sld:CssParameter>
+							<sld:CssParameter name="font-size">8</sld:CssParameter>
+							<sld:CssParameter name="font-color">#000000</sld:CssParameter>
+						</sld:Font>
+						<sld:LabelPlacement>
+							<sld:LinePlacement>
+							</sld:LinePlacement>
+						</sld:LabelPlacement>
+					</sld:TextSymbolizer>
+				</sld:Rule>				
+			</sld:FeatureTypeStyle>			
+	  </sld:UserStyle>
+	</sld:NamedLayer>
+	<sld:NamedLayer>
+		<sld:Name>depurado</sld:Name>	  	
+		<sld:UserStyle>
+			<sld:Name>default:Depuradoras</sld:Name>
+			<sld:Title>Depuradoras</sld:Title>
+			<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+				<sld:Name>Depuradoras</sld:Name>
+				<sld:Rule>
+					<sld:Name>Depuradoras</sld:Name>
+					<sld:PointSymbolizer>
+						<sld:Graphic>
+							<sld:Mark>
+								<sld:WellKnownName>square</sld:WellKnownName>
+								<sld:Fill>
+									<sld:CssParameter name="fill">#F5B8BF</sld:CssParameter>
+								</sld:Fill>
+								<sld:Stroke>
+									<sld:CssParameter name="stroke">#000000</sld:CssParameter>
+									<sld:CssParameter name="stroke-width">1.0</sld:CssParameter>
+								</sld:Stroke>
+							</sld:Mark>
+							<sld:Size>8</sld:Size>
+						</sld:Graphic>
+					</sld:PointSymbolizer>
+					<sld:TextSymbolizer>
+						<sld:Label>
+							<ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">CAPDEP</ogc:PropertyName> m3
+						</sld:Label>
+						<sld:Font>
+							<sld:CssParameter name="font-family">Serif</sld:CssParameter>
+							<sld:CssParameter name="font-style">normal</sld:CssParameter>
+							<sld:CssParameter name="font-weight">normal</sld:CssParameter>
+							<sld:CssParameter name="font-size">10</sld:CssParameter>
+							<sld:CssParameter name="font-color">#000000</sld:CssParameter>
+						</sld:Font>
+						<sld:LabelPlacement>
+							<sld:PointPlacement>
+								<sld:AnchorPoint>
+									<sld:AnchorPointX>0</sld:AnchorPointX>
+									<sld:AnchorPointY>1</sld:AnchorPointY>
+								</sld:AnchorPoint>
+								<sld:Displacement>
+									<sld:DisplacementX>0</sld:DisplacementX>
+									<sld:DisplacementY>10</sld:DisplacementY>
+								</sld:Displacement>
+								<sld:Rotation>0</sld:Rotation>
+							</sld:PointPlacement>
+						</sld:LabelPlacement>
+						<!--
+						<Halo>
+							<Radius>10</Radius>
+							<Fill>
+								<CssParameter name="fill">#BBBBBB</CssParameter>
+							</Fill>
+						</Halo>
+						<Fill>
+							<CssParameter name="fill">#BBBBBB</CssParameter>
+						</Fill>
+						-->
+					</sld:TextSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>
+	  </sld:UserStyle>
+	</sld:NamedLayer>
+	<sld:NamedLayer>
+		<sld:Name>emisarios</sld:Name>	  	
+		<sld:UserStyle>
+			<sld:Name>default:Emisario</sld:Name>
+			<sld:Title>Emisario</sld:Title>
+         	<sld:IsDefault>1</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Emisarios</sld:Name>
+           		<sld:Rule>
+             		<sld:Name>Emisario</sld:Name>
+             		<sld:LineSymbolizer>
+               			<sld:Stroke>
+                 			<sld:CssParameter name="stroke">#F78389</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-width">7</sld:CssParameter>
+                 			<sld:CssParameter name="stroke-linecap">square</sld:CssParameter>
+               			</sld:Stroke>
+             		</sld:LineSymbolizer>
+				</sld:Rule>
+			</sld:FeatureTypeStyle>			
+	  </sld:UserStyle>
+	  <sld:UserStyle>
+			<sld:Name>RotulosDeEmisarios</sld:Name>
+			<sld:Title>Rotulos de emisarios</sld:Title>
+         	<sld:IsDefault>0</sld:IsDefault>
+			<sld:FeatureTypeStyle>
+           		<sld:Name>Rotulos de emisarios</sld:Name>
+				<sld:Rule>
+             		<sld:Name>Rotulos de emisarios</sld:Name>
+					<sld:TextSymbolizer>
+						<sld:Label>
+							<ogc:PropertyName xmlns:ogc="http://www.opengis.net/ogc">DNVEMI</ogc:PropertyName>
+						</sld:Label>
+						<sld:Font>
+							<sld:CssParameter name="font-family">Serif</sld:CssParameter>
+							<sld:CssParameter name="font-style">normal</sld:CssParameter>
+							<sld:CssParameter name="font-weight">normal</sld:CssParameter>
+							<sld:CssParameter name="font-size">8</sld:CssParameter>
+							<sld:CssParameter name="font-color">#000000</sld:CssParameter>
+						</sld:Font>
+						<sld:LabelPlacement>
+							<sld:PointPlacement />
+						</sld:LabelPlacement>
+					</sld:TextSymbolizer>
+				</sld:Rule>				
+			</sld:FeatureTypeStyle>			
+	  </sld:UserStyle>
+	</sld:NamedLayer>
+</sld:StyledLayerDescriptor>

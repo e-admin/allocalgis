@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<root>
+	<element xml-name="cbi">
+		<element xml-name="idcbf">
+			<element xml-name="nifcb" java-name="nif" length="9"/>
+			<element xml-name="nomcb" java-name="razonSocial"/> 
+		</element>
+		<element xml-name="df">
+			<element xml-name="loine">
+				<element xml-name="cp" java-name="bienInmueble.domicilioTributario.provinciaINE" length="2"/>
+				<element xml-name="cm" java-name="bienInmueble.domicilioTributario.municipioINE" length="3"/>
+			</element>
+			<element xml-name="cmc" java-name="bienInmueble.domicilioTributario.codigoMunicipioDGC"/>
+			<element xml-name="np" java-name="bienInmueble.domicilioTributario.nombreProvincia"/>
+			<element xml-name="nm" java-name="bienInmueble.domicilioTributario.nombreMunicipio"/>
+			<element xml-name="nem" java-name="bienInmueble.domicilioTributario.nombreEntidadMenor"/>
+			<element xml-name="dir">
+				<element xml-name="cv" java-name="bienInmueble.domicilioTributario.codigoVia" null-value="-1"/>
+				<element xml-name="tv" java-name="bienInmueble.domicilioTributario.tipoVia"/>
+				<element xml-name="nv" java-name="bienInmueble.domicilioTributario.nombreVia"/>
+				<element xml-name="pnp" java-name="bienInmueble.domicilioTributario.primerNumero" null-value="-1"/>
+				<element xml-name="plp" java-name="bienInmueble.domicilioTributario.primeraLetra"/>
+				<element xml-name="snp" java-name="bienInmueble.domicilioTributario.segundoNumero" null-value="-1"/>
+				<element xml-name="slp" java-name="bienInmueble.domicilioTributario.segundaLetra"/>
+				<element xml-name="km" java-name="bienInmueble.domicilioTributario.kilometro" null-value="-1.0"/>
+				<element xml-name="td" java-name="bienInmueble.domicilioTributario.direccionNoEstructurada"/>
+			</element>
+			<element xml-name="loint">
+				<element xml-name="bq" java-name="bienInmueble.domicilioTributario.bloque"/>
+				<element xml-name="es" java-name="bienInmueble.domicilioTributario.escalera"/>
+				<element xml-name="pt" java-name="bienInmueble.domicilioTributario.planta"/>
+				<element xml-name="pu" java-name="bienInmueble.domicilioTributario.puerta"/>
+			</element>
+			<element xml-name="pos">
+				<element xml-name="dp" java-name="bienInmueble.domicilioTributario.distrito"/>
+				<element xml-name="ac" java-name="bienInmueble.domicilioTributario.apartadoCorreos"/>
+			</element>
+		</element>
+	</element>
+</root>	

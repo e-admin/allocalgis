@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.datamodel</groupId>
+	<artifactId>datamodel-apps-ireport</artifactId>
+	<version>3.0.0</version>
+	<name>DataModel Apps IReports</name>
+	
+	<distributionManagement>
+		<repository>
+			<id>serverCotesa</id>
+			<name>LocalGISIII</name>
+			<url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+		</repository>
+		<snapshotRepository>
+			<id>serverCotesa</id>
+			<name>LocalGISIII</name>
+			<url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

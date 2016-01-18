@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<root>
+			<element xml-name="reparf">
+				<element xml-name="idrepcat">
+					<element xml-name="pc">
+						<element xml-name="pc1" java-name="idOrigen.refCatastral1"/> 
+						<element xml-name="pc2" java-name="idOrigen.refCatastral2"/> 
+					</element>
+					<element xml-name="ner">
+						<element xml-name="noec" java-condition="esLocal" java-name="numOrdenConsRepartir"/>
+						<element xml-name="lerep" java-condition="esLocal">
+							<element xml-name="irepc" java-name="lstBienes"/>
+							<element xml-name="irepl" java-name="lstLocales"/>
+						</element>
+						<element xml-name="cspr" java-condition="esCultivo" java-name="codSubparcelaElementoRepartir"/>
+						<element xml-name="ccc" java-condition="esCultivo" java-name="califCatastralElementoRepartir"/>
+						<element xml-name="lcrep" java-condition="esCultivo">
+							<element xml-name="irepc" java-name="lstBienes"/>
+						</element>
+					</element>
+					<element xml-name="locat">
+						<element xml-name="cd" java-name="codDelegacion"/>
+						<element xml-name="cmc" java-name="codMunicipio" length="3"/>
+				    </element>
+			    </element>
+			</element>
+			<element xml-name="movf">
+				<element xml-name="tmov" java-name="TIPO_MOVIMIENTO"/>
+			</element>
+	</root>

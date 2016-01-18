@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<updateSystem httpBase="http://localhost:9080/softwarelocalgis" version="20080204">
+    <AdmCar>
+        <fileVerify>admcar/lib/server.jar</fileVerify>
+        <basePath>admcar</basePath>
+        <moduleName>/admcar</moduleName>
+    </AdmCar>
+    <WmsManager>
+        <fileVerify>webapps/GeoPISTA-WMSManager/WEB-INF/struts-config.xml</fileVerify>
+        <basePath>webapps/GeoPISTA-WMSManager</basePath>
+        <moduleName>/WmsManager</moduleName>
+    </WmsManager>
+    <WmsManagerIntranet>
+        <fileVerify>webapps/GeoPISTA-WMSManager/WEB-INF/struts-config.xml</fileVerify>
+        <basePath>webapps/GeoPISTA-WMSManager-Intranet</basePath>
+        <moduleName>/WmsManagerIntranet</moduleName>
+    </WmsManagerIntranet>
+    <Guiaurbana>
+        <fileVerify>webapps/guiaurbana/WEB-INF/struts-config.xml</fileVerify>
+        <basePath>webapps/guiaurbana</basePath>
+        <moduleName>/Guiaurbana</moduleName>
+    </Guiaurbana>
+    <Visualizador>
+        <fileVerify>webapps/visualizador/WEB-INF/struts-config-visualizador.xml</fileVerify>
+        <basePath>webapps/visualizador</basePath>
+        <moduleName>/Visualizador</moduleName>
+    </Visualizador>
+    <Tomcat>
+        <fileVerify>apache-tomcat-6.0.14/bin/bootstrap.jar</fileVerify>
+        <moduleName>/apache-tomcat-6.0.14</moduleName>
+        <webApp></webApp>
+        <basePath></basePath>
+        <version id="20080204">
+            <file os="linux">
+                <sourceFile>updates/20080204/files/tomcatgeopista6</sourceFile>
+                <targetFile>../../../../../etc/init.d/tomcatgeopista6</targetFile>
+            </file>     
+            <file os="windows">
+                <sourceFile>updates/20080204/files/service.bat</sourceFile>
+                <targetFile>apache-tomcat-6.0.14/bin/service.bat</targetFile>
+            </file>
+            <!-- Sustituciones en los ficheros -->
+            <modifytextfiles>
+                    <!-- Fichero apache-tomcat-6.0.14/bin/service.bat -->
+                <textfile os="windows">
+                    <file>apache-tomcat-6.0.14/bin/service.bat</file>
+                    <modification>
+                        <oldstring>%GEOPISTA_ROOT%</oldstring>
+                        <newstring>%GEOPISTA_ROOT%</newstring>
+                    </modification>
+                </textfile>
+                <textfile os="linux">
+                    <file>../../../../../etc/init.d/tomcatgeopista6</file>
+                    <modification>
+                        <oldstring>%GEOPISTA_ROOT%</oldstring>
+                        <newstring>%GEOPISTA_ROOT%</newstring>
+                    </modification>
+                </textfile>
+                <textfile os="linux">
+                    <file>../../../../../etc/init.d/tomcatgeopista6</file>
+                    <modification>
+                        <oldstring>%JDK15%</oldstring>
+                        <newstring>%JDK15%</newstring>
+                    </modification>
+                </textfile>
+            </modifytextfiles>
+            <executeLast>
+                <exec os="windows">cmd /c (cd \&amp; cd "%GEOPISTA_ROOT%\apache-tomcat-6.0.14\bin" &amp; crearservicio.bat)</exec>
+                <exec os="linux">chmod -R 777 /etc/init.d/tomcatgeopista6</exec>  
+            </executeLast>
+        </version>
+    </Tomcat>
+    <Localgis_guiaurbana>
+        <fileVerify>webapps/localgis-guiaurbana/WEB-INF/web.xml</fileVerify>
+        <basePath></basePath>
+        <moduleName>/localgis-guiaurbana</moduleName>
+        <webApp>
+            <Context path="/localgis-guiaurbana" reloadable="true" docBase="%GEOPISTA_ROOT%/webapps/localgis-guiaurbana" workDir="%GEOPISTA_ROOT%/webapps/localgis-guiaurbana/work"/>
+        </webApp>
+        <!--  Se fuerza a realizar lo que se especifica en la version -->
+        <version id="20080204" force="yes">
+            <!--  Se elimina las posibles versiones anteriores -->
+            <executePrevious>
+                <exec os="linux">rm -rf %GEOPISTA_ROOT%/webapps/localgis-guiaurbana</exec>
+                <exec os="linux">rm -rf %GEOPISTA_ROOT%/webapps/localgis-guiaurbana.old</exec>
+                <exec os="windows">cmd /c (del /q /s "%GEOPISTA_ROOT%/webapps/localgis-guiaurbana")</exec>
+                <exec os="windows">cmd /c (rd /q /s "%GEOPISTA_ROOT%/webapps/localgis-guiaurbana")</exec>
+                <exec os="windows">cmd /c (del /q /s "%GEOPISTA_ROOT%/webapps/localgis-guiaurbana.old")</exec>
+                <exec os="windows">cmd /c (rd /q /s "%GEOPISTA_ROOT%/webapps/localgis-guiaurbana.old")</exec>
+            </executePrevious>
+            <zipfile>
+                <sourceZipFile>updates/20080204/zips/localgis-guiaurbana.zip</sourceZipFile>
+                <replaceStringFile>webapps/localgis-guiaurbana/WEB-INF/classes/localgisweb.properties</replaceStringFile>
+                <replaceStringFile>webapps/localgis-guiaurbana/WEB-INF/classes/localgis.properties</replaceStringFile>
+                <targetDirectory>webapps</targetDirectory>
+            </zipfile>
+            <modifytextfiles>
+                <textfile os="windows">
+                    <file>webapps/localgis-guiaurbana/WEB-INF/classes/localgis.properties</file>
+                    <modification>
+                        <oldstring>%ORTOFOTOS_DIRECTORY%</oldstring>
+                        <newstring>c:\Ortofotos</newstring>
+                    </modification>
+                </textfile>
+                <textfile os="linux">
+                    <file>webapps/localgis-guiaurbana/WEB-INF/classes/localgis.properties</file>
+                    <modification>
+                        <oldstring>%ORTOFOTOS_DIRECTORY%</oldstring>
+                        <newstring>%GEOPISTA_ROOT%/Ortofotos</newstring>
+                    </modification>
+                </textfile>                             
+            </modifytextfiles>
+            <executeLast>
+                <!--  Ejecutamos el script que carga en la base de datos (Tabla Municipios) aquellos
+                        municipios definidos en el srid.properties -->
+                <exec type="reflection">executeActualizacionMunicipios</exec>
+                <exec os="linux">mkdir %GEOPISTA_ROOT%/webapps/localgis-guiaurbana/work</exec>
+                <exec os="linux">chown -R tomcat %GEOPISTA_ROOT%/webapps/localgis-guiaurbana/work</exec>
+                <exec os="windows">cmd /c (md "%GEOPISTA_ROOT%/webapps/localgis-guiaurbana/work")</exec>
+            </executeLast>
+        </version>
+    </Localgis_guiaurbana>
+    <Localgis_wmsmanager>
+        <fileVerify>webapps/localgis-wmsmanager/WEB-INF/web.xml</fileVerify>
+        <basePath></basePath>
+        <moduleName>/localgis-wmsmanager</moduleName>
+        <webApp>
+            <Context path="/localgis-wmsmanager" reloadable="true" docBase="%GEOPISTA_ROOT%/webapps/localgis-wmsmanager" workDir="%GEOPISTA_ROOT%/webapps/localgis-wmsmanager/work"/>
+        </webApp>
+        <!--  Se fuerza a realizar lo que se especifica en la version -->
+        <version id="20080204" force="yes">
+            <!--  Se elimina las posibles versiones anteriores -->
+            <executePrevious>
+                <exec os="linux">rm -rf %GEOPISTA_ROOT%/webapps/localgis-wmsmanager</exec>
+                <exec os="linux">rm -rf %GEOPISTA_ROOT%/webapps/localgis-wmsmanager.old</exec>
+                <exec os="windows">cmd /c (del /q /s "%GEOPISTA_ROOT%/webapps/localgis-wmsmanager")</exec>
+                <exec os="windows">cmd /c (rd /q /s "%GEOPISTA_ROOT%/webapps/localgis-wmsmanager")</exec>
+                <exec os="windows">cmd /c (del /q /s "%GEOPISTA_ROOT%/webapps/localgis-wmsmanager.old")</exec>
+                <exec os="windows">cmd /c (rd /q /s "%GEOPISTA_ROOT%/webapps/localgis-wmsmanager.old")</exec>
+            </executePrevious>
+            <zipfile>
+                <sourceZipFile>updates/20080204/zips/localgis-wmsmanager.zip</sourceZipFile>
+                <replaceStringFile>webapps/localgis-wmsmanager/WEB-INF/classes/localgis.properties</replaceStringFile>
+                <targetDirectory>webapps</targetDirectory>
+            </zipfile>
+            <modifytextfiles>
+                <textfile os="windows">
+                    <file>webapps/localgis-wmsmanager/WEB-INF/classes/localgis.properties</file>
+                    <modification>
+                        <oldstring>%ORTOFOTOS_DIRECTORY%</oldstring>
+                        <newstring>c:\Ortofotos</newstring>
+                    </modification>
+                </textfile>
+                <textfile os="linux">
+                    <file>webapps/localgis-wmsmanager/WEB-INF/classes/localgis.properties</file>
+                    <modification>
+                        <oldstring>%ORTOFOTOS_DIRECTORY%</oldstring>
+                        <newstring>%GEOPISTA_ROOT%/Ortofotos</newstring>
+                    </modification>
+                </textfile>                             
+            </modifytextfiles>
+            <executeLast>
+                <!--  Ejecutamos el script que carga en la base de datos (Tabla Municipios) aquellos
+                        municipios definidos en el srid.properties -->
+                <exec type="reflection">executeActualizacionMunicipios</exec>
+                <exec os="linux">mkdir %GEOPISTA_ROOT%/webapps/localgis-wmsmanager/work</exec>
+                <exec os="linux">chown -R tomcat %GEOPISTA_ROOT%/webapps/localgis-wmsmanager/work</exec>
+                <exec os="windows">cmd /c (md "%GEOPISTA_ROOT%/webapps/localgis-wmsmanager/work")</exec>
+            </executeLast>
+        </version>
+    </Localgis_wmsmanager>
+    <MapServer>
+        <fileVerify>mapserver/Apache/conf/extra/httpd-mapserver-localgis.conf</fileVerify>
+        <basePath></basePath>
+        <moduleName>/mapserver</moduleName>
+        <version id="20080204" force="yes">
+            <executePrevious>
+                <!--  Borramos el mapserver anterior si lo hubiera. Directorios mapserver, mapserver.old, ms4, ms4.old ms4w y ms4w.old -->
+                <exec os="windows">cmd /c (cd \&amp; cd "%GEOPISTA_ROOT%\mapserver" &amp; apache-uninstall.bat)</exec>
+                <exec os="windows">cmd /c (cd \&amp; cd "%GEOPISTA_ROOT%\ms4" &amp; apache-uninstall.bat)</exec>
+                <exec os="windows">cmd /c (cd \&amp; cd "%GEOPISTA_ROOT%\ms4w" &amp; apache-uninstall.bat)</exec>
+                <exec os="windows">cmd /c (del /q /s "%GEOPISTA_ROOT%/mapserver")</exec>
+                <exec os="windows">cmd /c (rd /q /s "%GEOPISTA_ROOT%/mapserver")</exec>
+                <exec os="windows">cmd /c (del /q /s "%GEOPISTA_ROOT%/mapserver.old")</exec>
+                <exec os="windows">cmd /c (rd /q /s "%GEOPISTA_ROOT%/mapserver.old")</exec>
+                <exec os="windows">cmd /c (del /q /s "%GEOPISTA_ROOT%/ms4")</exec>
+                <exec os="windows">cmd /c (rd /q /s "%GEOPISTA_ROOT%/ms4")</exec>
+                <exec os="windows">cmd /c (del /q /s "%GEOPISTA_ROOT%/ms4.old")</exec>
+                <exec os="windows">cmd /c (rd /q /s "%GEOPISTA_ROOT%/ms4.old")</exec>
+                <exec os="windows">cmd /c (del /q /s "%GEOPISTA_ROOT%/ms4w")</exec>
+                <exec os="windows">cmd /c (rd /q /s "%GEOPISTA_ROOT%/ms4w")</exec>
+                <exec os="windows">cmd /c (del /q /s "%GEOPISTA_ROOT%/ms4w.old")</exec>
+                <exec os="windows">cmd /c (rd /q /s "%GEOPISTA_ROOT%/ms4w.old")</exec>
+                <exec os="linux">rm -rf %GEOPISTA_ROOT%/mapserver</exec>
+                <exec os="linux">rm -rf %GEOPISTA_ROOT%/mapserver.old</exec>
+                <exec os="linux">rm -rf %GEOPISTA_ROOT%/ms4")</exec>
+                <exec os="linux">rm -rf %GEOPISTA_ROOT%/ms4.old")</exec>
+                <exec os="linux">rm -rf %GEOPISTA_ROOT%/ms4w")</exec>
+                <exec os="linux">rm -rf %GEOPISTA_ROOT%/ms4w.old")</exec>
+            </executePrevious>
+            <!-- Descarga de los ficheros -->
+            <zipfile os="windows">
+                <sourceZipFile>updates/20080204/zips/mapserver-update-windows.zip</sourceZipFile>
+                <targetDirectory></targetDirectory>
+            </zipfile>
+            <file os="linux">
+                <sourceFile>updates/20080204/zips/mapserver-update-linux.tgz</sourceFile>
+                <targetFile>mapserver-update-linux.tgz</targetFile>
+            </file>
+            <!--  Reemplazo de ficheros  -->
+            <modifytextfiles>
+                <replaceStringFile>mapserver/Apache/conf/httpd.conf</replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/extra/httpd-autoindex.conf</replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/extra/httpd-dav.conf</replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/extra/httpd-manual.conf </replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/extra/httpd-mapserver-localgis.conf</replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/extra/httpd-multilang-errordoc.conf</replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/extra/httpd-ssl.conf</replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/extra/httpd-vhosts.conf</replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/original/httpd.conf</replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/original/extra/httpd-autoindex.conf</replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/original/extra/httpd-dav.conf</replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/original/extra/httpd-manual.conf </replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/original/extra/httpd-multilang-errordoc.conf</replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/original/extra/httpd-ssl.conf</replaceStringFile>
+                <replaceStringFile>mapserver/Apache/conf/original/extra/httpd-vhosts.conf</replaceStringFile>
+                <replaceStringFile os="linux">mapserver/Apache/bin/apachectl</replaceStringFile>
+                <replaceStringFile os="linux">mapserver/Apache/bin/envvars</replaceStringFile>
+                <replaceStringFile os="linux">mapserver/Apache/bin/envvars-std</replaceStringFile>
+            </modifytextfiles>
+            <!-- Ejecución de comandos -->
+            <executeLast>
+                <exec os="linux">tar xzf %GEOPISTA_ROOT%/mapserver-update-linux.tgz</exec>
+                <exec os="linux">chown -R tomcat %GEOPISTA_ROOT%/mapserver/htdocs</exec>
+                <exec os="linux">chown -R tomcat %GEOPISTA_ROOT%/mapserver/apps/localgis</exec>
+                <exec os="linux">chmod 777 %GEOPISTA_ROOT%/mapserver/apps/localgis/tmp</exec>
+                <exec os="linux">cp %GEOPISTA_ROOT%/mapserver/Apache/bin/apachectl /etc/init.d/mapserv</exec>
+                <exec os="linux">ln -fs /etc/init.d/mapserv /etc/rc2.d/S99mapserv</exec>
+                <exec os="windows">cmd /c (cd \&amp; cd "%GEOPISTA_ROOT%\mapserver" &amp; apache-install.bat)</exec>
+            </executeLast>
+        </version>
+    </MapServer>
+</updateSystem>

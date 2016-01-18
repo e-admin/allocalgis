@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN" 
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+
+<index version="1.0">
+      <indexitem text="(C)Introducción" target="geopistaIntro"/>
+      <indexitem text="(C)Acceso" target="geopistaAcceso"/>
+      <indexitem text="(C)Gestión de Usuarios y Roles" target="geopistaUsuariosyRoles">
+        <indexitem text="(C)Usuarios" target="geopistaUsuarios">
+             <indexitem text="(C)Operaciones" target="geopistaUsuariosOperaciones"/>
+        </indexitem>
+        <indexitem text="(C)Roles" target="geopistaRoles">
+             <indexitem text="(C)Operaciones" target="geopistaRolesOperaciones"/>
+        </indexitem>
+      </indexitem>
+      <indexitem text="(C)Gestión de Dominios" target="geopistaDominios">
+          <indexitem text="(C)Tipos" target="geopistaTipos"/>
+          <indexitem text="(C)Operaciones" target="geopistaDominiosOperaciones"/>
+          <indexitem text="(C)Iconos" target="geopistaIconos"/>
+      </indexitem>
+      <indexitem text="(C)Gestión de sesiones" target="geopistaSesiones"/>
+      <indexitem text="(C)Idioma" target="geopistaIdioma"/>
+ </index>
+

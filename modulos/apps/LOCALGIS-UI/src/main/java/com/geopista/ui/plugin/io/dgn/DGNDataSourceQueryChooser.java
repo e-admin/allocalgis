@@ -1,0 +1,99 @@
+/**
+ * DGNDataSourceQueryChooser.java
+ * © MINETUR, Government of Spain
+ * This program is part of LocalGIS
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+/*
+ * Created on 14-jun-2004
+ */
+package com.geopista.ui.plugin.io.dgn;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+
+import com.vividsolutions.jump.feature.FeatureCollection;
+import com.vividsolutions.jump.io.DriverProperties;
+import com.vividsolutions.jump.io.datasource.Connection;
+import com.vividsolutions.jump.io.datasource.DataSource;
+import com.vividsolutions.jump.io.datasource.DataSourceQuery;
+import com.vividsolutions.jump.task.TaskMonitor;
+import com.vividsolutions.jump.workbench.WorkbenchContext;
+import com.vividsolutions.jump.workbench.datasource.LoadFileDataSourceQueryChooser;
+
+/**
+ * @author Enxenio, SL
+ */
+public class DGNDataSourceQueryChooser extends LoadFileDataSourceQueryChooser {
+
+	public DGNDataSourceQueryChooser(Class dataSourceClass, String description, String[] extensions, WorkbenchContext context) {
+		super(dataSourceClass, description, extensions, context);
+	}
+			
+	public Collection getDataSourceQueries() {
+		ArrayList resultado = new ArrayList();
+		DGNReader reader = new DGNReader();
+		Collection dataSourceQueries = super.getDataSourceQueries();
+		Iterator iterator = dataSourceQueries.iterator();
+		while(iterator.hasNext()){
+			DataSourceQuery dataSourceQuery = (DataSourceQuery) iterator.next();
+			DataSource dataSource = dataSourceQuery.getDataSource();
+			final String selectedFile = (String)dataSource.getProperties().get(DataSource.FILE_KEY);
+			DriverProperties dp = new DriverProperties();
+			dp.put("File", selectedFile);
+			try {
+				reader.read(dp);
+				Iterator featureTypesIterator = reader.getFeatureTypesIterator();
+				while(featureTypesIterator.hasNext()) {
+					FeatureCollection featureCollection = (FeatureCollection) featureTypesIterator.next();
+					String layerName = reader.getFeatureCollectionName(featureCollection);
+					DataSourceWrapper dataSourceWrapper = new DataSourceWrapper(featureCollection);
+					DataSourceQuery dataSourceQueryWrapper = new DataSourceQuery(dataSourceWrapper, null, layerName);
+					resultado.add(dataSourceQueryWrapper);
+					//TODO: Pasar un properties...
+					HashMap properties= new HashMap();
+					properties.put(DataSource.COORDINATE_SYSTEM_KEY,null);
+					dataSourceWrapper.setProperties(properties);
+				}
+			} catch (Exception e) {
+				e.printStackTrace(System.err);
+			}
+		} //while
+		return resultado;
+	}
+
+	private class DataSourceWrapper extends DataSource{
+		private Connection connection;
+		private FeatureCollection featureCollection;
+		
+		// TODO: Implementar las propiedades que necesita JUMP para el sistema de coordenadas
+		public DataSourceWrapper(final FeatureCollection featureCollection){
+			this.featureCollection = featureCollection;
+			
+			this.connection = new Connection(){	
+				public FeatureCollection executeQuery(String query, Collection exceptions, TaskMonitor monitor) {
+					return featureCollection;
+				}
+
+				public FeatureCollection executeQuery(String query, TaskMonitor monitor) throws Exception {
+					return featureCollection;
+				}
+
+				public ArrayList executeUpdate(String query, FeatureCollection featureCollection, TaskMonitor monitor) throws Exception {
+					return null;
+				}
+
+				public void close() {
+				}
+			
+			};
+		}
+		public Connection getConnection() {
+			return connection;
+		}
+	}//DataSourceWrapper
+}

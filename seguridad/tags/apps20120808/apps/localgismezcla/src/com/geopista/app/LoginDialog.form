@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form style="Swing" ide="eclipse" builder="jigloo" version="2.7.2">
+<NonVisualComponents>
+		<Component class="java.lang.Object" name="object1">
+			<Constraints>
+				<LayoutConstraint/>
+			</Constraints>
+			<Properties>
+			</Properties>
+		</Component></NonVisualComponents>
+	<Component class="javax.swing.JDialog" name="LoginDialog">
+		<Constraints>
+			<LayoutConstraint/>
+		</Constraints>
+		<Layout class="Absolute">
+		</Layout>
+		<Events>
+		</Events>
+		<Properties>
+			<Property name="defaultCloseOperation" type="int" value="1"/>
+			<Property name="title" type="String" value="LoginDialogTitle"/>
+			<Property name="modal" type="boolean" value="true"/>
+			<Property name="name" type="String" value="LoginDialog"/>
+			<Property name="size" type="Dimension">
+				<Dimension value="[240, 150]"/>
+			</Property>
+			<Property name="bounds" type="Rectangle">
+				<Rectangle value="[0, 0, 240, 150]"/>
+			</Property>
+			<Property name="externalizeStrings" type="boolean" value="true"/>
+		</Properties>
+		<SubComponents>
+			<Component class="javax.swing.JLabel" name="loginLabel">
+				<Constraints>
+					<Constraint direction="Center"/>
+					<LayoutConstraint/>
+				</Constraints>
+				<Events>
+				</Events>
+				<Properties>
+					<Property name="text" type="String" value="loginName"/>
+					<Property name="preferredSize" type="Dimension">
+						<Dimension value="[75, 15]"/>
+					</Property>
+					<Property name="bounds" type="Rectangle">
+						<Rectangle value="[15, 30, 75, 15]"/>
+					</Property>
+					<Property name="externalizeStrings" type="boolean" value="true"/>
+				</Properties>
+			</Component>
+			<Component class="javax.swing.JTextField" name="loginNameText">
+				<Constraints>
+					<LayoutConstraint/>
+				</Constraints>
+				<Events>
+				</Events>
+				<Properties>
+					<Property name="preferredSize" type="Dimension">
+						<Dimension value="[105, 15]"/>
+					</Property>
+					<Property name="bounds" type="Rectangle">
+						<Rectangle value="[105, 30, 105, 15]"/>
+					</Property>
+					<Property name="externalizeStrings" type="boolean" value="true"/>
+				</Properties>
+			</Component>
+			<Component class="javax.swing.JLabel" name="passwordLabel">
+				<Constraints>
+					<LayoutConstraint/>
+				</Constraints>
+				<Events>
+				</Events>
+				<Properties>
+					<Property name="text" type="String" value="password"/>
+					<Property name="preferredSize" type="Dimension">
+						<Dimension value="[90, 15]"/>
+					</Property>
+					<Property name="bounds" type="Rectangle">
+						<Rectangle value="[15, 60, 90, 15]"/>
+					</Property>
+					<Property name="externalizeStrings" type="boolean" value="true"/>
+				</Properties>
+			</Component>
+			<Component class="javax.swing.JPasswordField" name="passwordField">
+				<Constraints>
+					<LayoutConstraint/>
+				</Constraints>
+				<Events>
+				</Events>
+				<Properties>
+					<Property name="preferredSize" type="Dimension">
+						<Dimension value="[105, 15]"/>
+					</Property>
+					<Property name="bounds" type="Rectangle">
+						<Rectangle value="[105, 60, 105, 15]"/>
+					</Property>
+					<Property name="externalizeStrings" type="boolean" value="false"/>
+				</Properties>
+			</Component>
+			<Component class="javax.swing.JButton" name="LoginButton">
+				<Constraints>
+					<LayoutConstraint/>
+				</Constraints>
+				<Events>
+				</Events>
+				<Properties>
+					<Property name="text" type="String" value="loginButtonText"/>
+					<Property name="preferredSize" type="Dimension">
+						<Dimension value="[75, 30]"/>
+					</Property>
+					<Property name="bounds" type="Rectangle">
+						<Rectangle value="[45, 105, 75, 30]"/>
+					</Property>
+					<Property name="externalizeStrings" type="boolean" value="true"/>
+				</Properties>
+			</Component>
+			<Component class="javax.swing.JButton" name="cancelButton">
+				<Constraints>
+					<LayoutConstraint/>
+				</Constraints>
+				<Events>
+				</Events>
+				<Properties>
+					<Property name="text" type="String" value="cancelButtonText"/>
+					<Property name="preferredSize" type="Dimension">
+						<Dimension value="[75, 30]"/>
+					</Property>
+					<Property name="bounds" type="Rectangle">
+						<Rectangle value="[135, 105, 75, 30]"/>
+					</Property>
+					<Property name="externalizeStrings" type="boolean" value="true"/>
+				</Properties>
+			</Component>
+		</SubComponents>
+	</Component>
+</Form>

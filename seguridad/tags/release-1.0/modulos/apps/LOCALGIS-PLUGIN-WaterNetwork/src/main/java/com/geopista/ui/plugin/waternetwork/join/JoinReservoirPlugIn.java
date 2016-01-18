@@ -1,0 +1,169 @@
+package com.geopista.ui.plugin.waternetwork.join;
+
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Locale;
+import java.util.ResourceBundle;
+import javax.swing.Icon;
+
+import com.vividsolutions.jts.geom.LineString;
+import com.vividsolutions.jts.geom.MultiLineString;
+import com.vividsolutions.jump.I18N;
+import com.vividsolutions.jump.feature.Feature;
+import com.vividsolutions.jump.feature.FeatureCollection;
+import com.vividsolutions.jump.util.StringUtil;
+import com.vividsolutions.jump.workbench.WorkbenchContext;
+import com.vividsolutions.jump.workbench.model.Layer;
+import com.vividsolutions.jump.workbench.model.StandardCategoryNames;
+import com.vividsolutions.jump.workbench.plugin.AbstractPlugIn;
+import com.vividsolutions.jump.workbench.plugin.EnableCheckFactory;
+import com.vividsolutions.jump.workbench.plugin.MultiEnableCheck;
+import com.vividsolutions.jump.workbench.plugin.PlugInContext;
+import com.vividsolutions.jump.workbench.ui.ErrorDialog;
+import com.vividsolutions.jump.workbench.ui.GUIUtil;
+import com.vividsolutions.jump.workbench.ui.MenuNames;
+import com.vividsolutions.jump.workbench.ui.LayerViewPanel;
+import com.vividsolutions.jump.workbench.ui.MultiInputDialog;
+import com.vividsolutions.jump.workbench.ui.task.TaskMonitorDialog;
+import com.vividsolutions.jump.workbench.ui.toolbox.ToolboxDialog;
+import com.geopista.app.AppContext;
+import com.geopista.ui.plugin.GeopistaAddNewLayerPlugIn;
+import com.geopista.ui.plugin.waternetwork.images.IconLoader;
+import com.geopista.ui.plugin.waternetwork.toolbox.WaterNetworkPlugIn;
+
+public class JoinReservoirPlugIn extends AbstractPlugIn{
+
+    private boolean selectLineString = true;
+    private boolean selectMultiLineString = true;
+    private boolean joinResevoirPlugIn = false;
+    public String getName() {return I18N.get("WaterNetworkPlugIn","JoinReservoir");}
+    private JoinTools joinTools = new JoinTools();
+    private String selectedReservoirLayer = I18N.get("WaterNetworkPlugIn","JoinReservoir.SelectedReservoirLayer");
+    private String selectedPipeLayer = I18N.get("WaterNetworkPlugIn","JoinReservoir.SelectedLayer");
+
+    @SuppressWarnings("unchecked")
+	public void initialize(PlugInContext context) throws Exception{
+    	Locale loc=Locale.getDefault();
+    	ResourceBundle bundle2 = ResourceBundle.getBundle("com.geopista.ui.plugin.waternetwork.languages.WaterNetworkPlugIni18n",loc,
+				this.getClass().getClassLoader());
+    	I18N.plugInsResourceBundle.put("WaterNetworkPlugIn",bundle2);
+        String pathMenuNames[] =new String[] { MenuNames.EDIT };
+		String name = I18N.get("WaterNetworkPlugIn",getName());
+        context.getFeatureInstaller().addMainMenuItem(this, pathMenuNames, name,
+    			false, null, createEnableCheck(context.getWorkbenchContext()));
+        WaterNetworkPlugIn moduloAguasPI = (WaterNetworkPlugIn) (context.getWorkbenchContext().getBlackboard().get(WaterNetworkPlugIn.KEY));
+        moduloAguasPI.addAditionalPlugIn(this);
+    }
+
+	@SuppressWarnings("unchecked")
+	public boolean execute(final PlugInContext context) throws Exception{
+    	reportNothingToUndoYet(context);
+        final LayerViewPanel layerViewPanel = (LayerViewPanel) context.getWorkbenchContext().getLayerViewPanel();
+        final ArrayList<Feature> selectedFeatures = new ArrayList<Feature>();
+        layerViewPanel.getSelectionManager().clear();
+        final Collection<Layer> layers;
+        layers = (Collection<Layer>) context.getWorkbenchContext().getLayerNamePanel().getLayerManager().getLayers();
+        MultiInputDialog dialog = new MultiInputDialog(AppContext.getApplicationContext().getMainFrame(),
+				"", true);
+        setDialogValues(dialog,layers);
+        dialog.setTitle(this.getName());
+        dialog.setVisible(true);
+        if (!dialog.wasOKPressed()){return false;}
+        final String layerNameR = dialog.getText(selectedReservoirLayer);
+        String layerNameP = dialog.getText(selectedPipeLayer);
+        for(final Layer layer : layers){
+            selectedFeatures.clear();
+            if (layer.getName().equals(layerNameP)){
+            	layer.setVisible(true);
+                FeatureCollection featureCollection = layer.getFeatureCollectionWrapper();
+                for (Iterator<Feature> i = featureCollection.iterator(); i.hasNext();){
+                    Feature feature = i.next();
+                    if (selectFeature(feature))
+                        selectedFeatures.add(feature);
+                }            
+            if (selectedFeatures.size() > 0){ 
+                final TaskMonitorDialog progressDialog= new TaskMonitorDialog(context.getWorkbenchFrame().getMainFrame(), null);
+                progressDialog.setTitle(I18N.get("WaterNetworkPlugIn","JoinReservoir.Loading"));
+                progressDialog.addComponentListener(new ComponentAdapter(){
+                    public void componentShown(ComponentEvent e){
+                        new Thread(new Runnable(){
+                            public void run(){
+                                try{
+                                	boolean copyLayer = false;
+                                    boolean auxiliarLayer = false;
+                                    for(Layer l : layers){
+                                    	if(l.getName().equals(I18N.get("WaterNetworkPlugIn","JoinReservoir.PipesCopy")))copyLayer = true;
+                                    	else if(l.getName().equals(I18N.get("WaterNetworkPlugIn","JoinReservoir.AuxLayer")))auxiliarLayer = true;
+                                    }
+                                    Layer newLayer,auxLayer = null;
+                                	if(!copyLayer){
+	                                    newLayer = layerViewPanel.getLayerManager().addLayer(StandardCategoryNames.WORKING,
+	                                			I18N.get("WaterNetworkPlugIn","JoinReservoir.PipesCopy"),
+	                            				GeopistaAddNewLayerPlugIn.createBlankFeatureCollection());
+	                            		newLayer.setVisible(true);
+	                            		newLayer.setEditable(true);
+	                            		newLayer.getFeatureCollectionWrapper().addAll(selectedFeatures);
+                                	}else newLayer = layerViewPanel.getLayerManager().getLayer(I18N.get("WaterNetworkPlugIn","JoinReservoir.PipesCopy"));
+                                	if(!auxiliarLayer){
+	                            		auxLayer = layerViewPanel.getLayerManager().addLayer(StandardCategoryNames.WORKING,
+	                            				I18N.get("WaterNetworkPlugIn","JoinReservoir.AuxLayer"),
+	                            				GeopistaAddNewLayerPlugIn.createBlankFeatureCollection());
+	                            		auxLayer.setVisible(true);
+	                            		auxLayer.setEditable(true);
+                                	}else auxLayer = layerViewPanel.getLayerManager().getLayer(I18N.get("WaterNetworkPlugIn","JoinReservoir.AuxLayer"));
+                                	progressDialog.report(I18N.get("WaterNetworkPlugIn","JoinReservoir.Create"));
+                                	Layer reservoirLayer = null;
+                                	for(Layer l : layers)if(l.getName().equals(layerNameR))reservoirLayer = l;
+                                	joinTools.newPipesReservoir(auxLayer, layerViewPanel, selectedFeatures, reservoirLayer);
+                                }catch(Exception e){
+                                    ErrorDialog.show(context.getWorkbenchFrame().getMainFrame(), I18N.get("WaterNetworkPlugIn","JoinReservoir.TitleError"), I18N.get("WaterNetworkPlugIn","JoinReservoir.Error"), StringUtil.stackTrace(e));
+                                    return;
+                                }finally{
+                                    progressDialog.setVisible(false);
+                                }
+                            }
+                      }).start();
+                  }
+               });
+               GUIUtil.centreOnWindow(progressDialog);
+               progressDialog.setVisible(true);
+			}
+            }
+        }
+        return true;
+    }
+	
+	private void setDialogValues(MultiInputDialog dialog,Collection<Layer> layers){
+		dialog.addComboBox(selectedPipeLayer, null, layers, "");
+    	dialog.addComboBox(selectedReservoirLayer, null, layers, "");
+    }
+
+    private boolean selectFeature(Feature feature){        
+        if ((feature.getGeometry() instanceof LineString) && selectLineString) return true;
+		if ((feature.getGeometry() instanceof MultiLineString) && selectMultiLineString) return true;
+        return false;
+    }
+
+    public MultiEnableCheck createEnableCheck(final WorkbenchContext workbenchContext){
+        EnableCheckFactory checkFactory = new EnableCheckFactory(workbenchContext);
+        return new MultiEnableCheck().add(checkFactory.createWindowWithLayerViewPanelMustBeActiveCheck())
+        		.add(checkFactory.createAtLeastNLayersMustExistCheck(1));
+    }
+
+    public void addButton(final ToolboxDialog toolbox){
+        if (!joinResevoirPlugIn){
+        	JoinReservoirPlugIn select = new JoinReservoirPlugIn();
+            toolbox.addPlugIn(select, null, select.getIcon());
+            toolbox.finishAddingComponents();
+            toolbox.validate();
+            joinResevoirPlugIn = true;
+        }
+    }
+
+    public Icon getIcon(){
+        return IconLoader.icon("aux_pipe.png");
+    }
+}

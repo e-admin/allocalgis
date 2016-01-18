@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>localgis-parent</artifactId>
+		<groupId>com.localgis</groupId>
+		<version>3.0</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+  <groupId>com.localgis.utils</groupId>
+  <artifactId>localgis-utils-inventario</artifactId>
+  <version>3.0</version>
+  <name>LOCALGIS-UTILS-Inventario</name>
+
+    <dependencies>
+    <dependency>
+  		<groupId>com.localgis.utils</groupId>
+  		<artifactId>localgis-utils</artifactId>
+  		<version>3.0</version>
+  	</dependency>  	
+	<dependency>
+		<groupId>com.localgis.model</groupId>
+		<artifactId>localgis-model-inventario</artifactId>
+		<version>3.0</version>
+	</dependency>
+  	<dependency>
+		<groupId>commons-httpclient</groupId>
+		<artifactId>commons-httpclient</artifactId>
+		<version>3.1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.codehaus.castor</groupId>
+		<artifactId>castor-xml</artifactId>
+		<version>1.3.2</version>
+	</dependency>
+  </dependencies>
+</project>

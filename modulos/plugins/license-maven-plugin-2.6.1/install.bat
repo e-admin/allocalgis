@@ -1,0 +1,1 @@
+call "c:\Program Files\apache-maven-3.2.2\bin\mvn"  -s settings_lcg3.xml install:install-file -DgroupId=com.mycila -DartifactId=license-maven-plugin -Dversion=2.6.1 -Dfile=target\license-maven-plugin-2.6.1.jar -Dpackaging=jar 

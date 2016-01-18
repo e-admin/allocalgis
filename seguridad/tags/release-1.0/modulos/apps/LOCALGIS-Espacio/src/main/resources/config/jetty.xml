@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure 1.2//EN" "http://jetty.mortbay.com/configure_1_2.dtd">
+
+<Configure class="org.mortbay.jetty.plus.Server">
+  <Call name="instance" class="org.mortbay.util.Log">
+    <Call name="disableLog" />
+    <Call name="add">
+      <Arg>
+        <New class="org.mortbay.util.log4j.Log4jSink">
+          <Call name="start" />
+        </New>
+      </Arg>
+    </Call>
+  </Call>
+  <Call name="addService">
+    <Arg>
+      <New class="org.mortbay.jetty.plus.JotmService">
+        <Set name="Name">TransactionMgr</Set>
+        <Call name="addDataSource">
+          <Arg>teletramitacion</Arg>
+          <Arg>
+            <New class="org.enhydra.jdbc.standard.StandardXADataSource">
+              <Set name="DriverName">org.postgresql.Driver</Set>
+							<Set name="Url">jdbc:postgresql://192.168.47.254:5432/geopista</Set>
+							<Set name="User">geopista</Set>
+							<Set name="Password">geopista2</Set>
+            </New>
+          </Arg>
+          <Arg>
+            <New class="org.enhydra.jdbc.pool.StandardXAPoolDataSource">
+              <Arg type="Integer">2</Arg>
+              <Set name="MinSize">2</Set>
+              <Set name="MaxSize">4</Set>
+            </New>
+          </Arg>
+        </Call>
+        <Call name="addDataSource">
+          <Arg>geopista</Arg>
+          
+          <Arg>
+            <New class="org.enhydra.jdbc.standard.StandardXADataSource">
+			  <Set name="DriverName">org.postgresql.Driver</Set>
+							<Set name="Url">jdbc:postgresql://192.168.47.254:5432/geopista</Set>
+							<Set name="User">geopista</Set>
+							<Set name="Password">geopista2</Set>
+            </New>
+          </Arg>
+          
+          <Arg>
+            <New class="org.enhydra.jdbc.pool.StandardXAPoolDataSource">
+              <Arg type="Integer">4</Arg>
+              <Set name="MinSize">4</Set>
+              <Set name="MaxSize">10</Set>
+            </New>
+          </Arg>
+        </Call>
+      </New>
+    </Arg>
+  </Call>
+  <Call name="addListener">
+    <Arg>
+      <New class="org.mortbay.http.SocketListener">
+        <Set name="Port">
+          <SystemProperty name="jetty.port" default="8081" />
+        </Set>
+        <Set name="MinThreads">10</Set>
+        <Set name="MaxThreads">100</Set>
+        <Set name="MaxIdleTimeMs">30000</Set>
+        <Set name="LowResourcePersistTimeMs">5000</Set>
+      </New>
+    </Arg>
+  </Call>
+  <Call name="addWebApplication">
+    <Arg>/licencias/</Arg>
+    <Arg>docroot/licencias/</Arg>
+    <Set name="Realm">
+      <!--New class="org.mortbay.jaas.JAASUserRealm"-->
+      <New class="com.geopista.security.GeopistaUserRealm">
+        <Set name="Name">Test JAAS Realm</Set>
+        <Set name="LoginModuleName">jdbc</Set>
+        <Set name="RoleCheckPolicy">
+          <New class="org.mortbay.jaas.StrictRoleCheckPolicy" />
+        </Set>
+        <Set name="CallbackHandler">
+          <!--New class="org.mortbay.jaas.callback.DefaultCallbackHandler"/-->
+          <New class="com.geopista.security.DefaultGeopistaCallbackHandler" />
+        </Set>
+      </New>
+    </Set>
+  </Call>
+  <Call name="addWebApplication">
+    <Arg>/administracion/</Arg>
+    <Arg>docroot/administracion/</Arg>
+    <Set name="Realm">
+      <New class="com.geopista.security.GeopistaUserRealm">
+        <Set name="Name">Test JAAS Realm</Set>
+        <Set name="LoginModuleName">jdbc</Set>
+        <Set name="RoleCheckPolicy">
+          <New class="org.mortbay.jaas.StrictRoleCheckPolicy" />
+        </Set>
+        <Set name="CallbackHandler">
+          <New class="com.geopista.security.DefaultGeopistaCallbackHandler" />
+        </Set>
+      </New>
+    </Set>
+  </Call>
+  <Call name="addWebApplication">
+    <Arg>/metadatos/</Arg>
+    <Arg>docroot/metadatos/</Arg>
+    <Set name="Realm">
+      <New class="com.geopista.security.GeopistaUserRealm">
+        <Set name="Name">Test JAAS Realm</Set>
+        <Set name="LoginModuleName">jdbc</Set>
+        <Set name="RoleCheckPolicy">
+          <New class="org.mortbay.jaas.StrictRoleCheckPolicy" />
+        </Set>
+        <Set name="CallbackHandler">
+          <New class="com.geopista.security.DefaultGeopistaCallbackHandler" />
+        </Set>
+      </New>
+    </Set>
+  </Call>
+  <Call name="addWebApplication">
+    <Arg>/anexos/</Arg>
+    <Arg>anexos/</Arg>
+  </Call>
+  <Call name="addWebApplication">
+    <Arg>/geopista/</Arg>
+    <Arg>docroot/geopista/</Arg>
+    <Set name="Realm">
+      <!--New class="org.mortbay.jaas.JAASUserRealm"-->
+      <New class="com.geopista.security.GeopistaUserRealm">
+        <Set name="Name">Test JAAS Realm</Set>
+        <Set name="LoginModuleName">jdbc</Set>
+        <Set name="RoleCheckPolicy">
+          <New class="org.mortbay.jaas.StrictRoleCheckPolicy" />
+        </Set>
+        <Set name="CallbackHandler">
+          <!--New class="org.mortbay.jaas.callback.DefaultCallbackHandler"/-->
+          <New class="com.geopista.security.DefaultGeopistaCallbackHandler" />
+        </Set>
+      </New>
+    </Set>
+  </Call>
+  <Call name="addWebApplication">
+    <Arg>/ocupaciones/</Arg>
+    <Arg>docroot/ocupaciones/</Arg>
+    <Set name="Realm">
+      <!--New class="org.mortbay.jaas.JAASUserRealm"-->
+      <New class="com.geopista.security.GeopistaUserRealm">
+        <Set name="Name">Test JAAS Realm</Set>
+        <Set name="LoginModuleName">jdbc</Set>
+        <Set name="RoleCheckPolicy">
+          <New class="org.mortbay.jaas.StrictRoleCheckPolicy" />
+        </Set>
+        <Set name="CallbackHandler">
+          <!--New class="org.mortbay.jaas.callback.DefaultCallbackHandler"/-->
+          <New class="com.geopista.security.DefaultGeopistaCallbackHandler" />
+        </Set>
+      </New>
+    </Set>
+  </Call>
+  <Call name="addWebApplication">
+    <Arg>/contaminantes/</Arg>
+    <Arg>docroot/contaminantes/</Arg>
+    <Set name="Realm">
+      <!--New class="org.mortbay.jaas.JAASUserRealm"-->
+      <New class="com.geopista.security.GeopistaUserRealm">
+        <Set name="Name">Test JAAS Realm</Set>
+        <Set name="LoginModuleName">jdbc</Set>
+        <Set name="RoleCheckPolicy">
+          <New class="org.mortbay.jaas.StrictRoleCheckPolicy" />
+        </Set>
+        <Set name="CallbackHandler">
+          <!--New class="org.mortbay.jaas.callback.DefaultCallbackHandler"/-->
+          <New class="com.geopista.security.DefaultGeopistaCallbackHandler" />
+        </Set>
+      </New>
+    </Set>
+  </Call>
+  <Call name="addWebApplication">
+    <Arg>/plantillas/</Arg>
+    <Arg>plantillas/</Arg>
+  </Call>
+  <Set name="RequestLog">
+    <New class="org.mortbay.http.NCSARequestLog">
+      <Arg>logs/yyyy_mm_dd.request.log</Arg>
+      <Set name="retainDays">90</Set>
+      <Set name="append">true</Set>
+      <Set name="extended">false</Set>
+      <Set name="buffered">false</Set>
+      <Set name="LogTimeZone">GMT</Set>
+    </New>
+  </Set>
+  <Set name="requestsPerGC">2000</Set>
+  <Set name="statsOn">false</Set>
+  <Call name="addWebApplication">
+    <Arg>/ortofoto/</Arg>
+    <Arg>docroot/ortofoto/</Arg>
+    <Set name="Realm">
+      <New class="com.geopista.security.GeopistaUserRealm">
+        <Set name="Name">Test JAAS Realm</Set>
+        <Set name="LoginModuleName">jdbc</Set>
+        <Set name="RoleCheckPolicy">
+          <New class="org.mortbay.jaas.StrictRoleCheckPolicy" />
+        </Set>
+        <Set name="CallbackHandler">
+          <New class="com.geopista.security.DefaultGeopistaCallbackHandler" />
+        </Set>
+      </New>
+    </Set>
+  </Call>
+  <Call name="addWebApplication">
+		<Arg>/inventario/</Arg>
+		<Arg>docroot/inventario/</Arg>
+		<Set name="Realm">
+    		<!--New class="org.mortbay.jaas.JAASUserRealm"-->
+			<New class="com.geopista.security.GeopistaUserRealm">
+				<Set name="Name">Test JAAS Realm</Set>
+				<Set name="LoginModuleName">jdbc</Set>
+				<Set name="RoleCheckPolicy">
+					<New class="org.mortbay.jaas.StrictRoleCheckPolicy"/>
+				</Set>
+				<Set name="CallbackHandler">
+					<!--New class="org.mortbay.jaas.callback.DefaultCallbackHandler"/-->
+					<New class="com.geopista.security.DefaultGeopistaCallbackHandler"/>
+				</Set>
+			</New>
+		</Set>
+	</Call>
+  <Call name="addWebApplication">
+    <Arg>/catastro/</Arg>
+    <Arg>docroot/catastro/</Arg>
+    <Set name="Realm">
+      <!--New class="org.mortbay.jaas.JAASUserRealm"-->
+      <New class="com.geopista.security.GeopistaUserRealm">
+        <Set name="Name">Test JAAS Realm</Set>
+        <Set name="LoginModuleName">jdbc</Set>
+        <Set name="RoleCheckPolicy">
+          <New class="org.mortbay.jaas.StrictRoleCheckPolicy" />
+        </Set>
+        <Set name="CallbackHandler">
+          <New class="com.geopista.security.DefaultGeopistaCallbackHandler" />
+        </Set>
+      </New>
+    </Set>
+  </Call>
+  <Call name="addWebApplication">
+            <Arg>/alptolocalgis/</Arg>
+            <Arg>docroot/alptolocalgis/</Arg>
+            <Set name="Realm">
+                  <!--New class="org.mortbay.jaas.JAASUserRealm"-->
+                  <New class="com.geopista.security.GeopistaUserRealm">
+                  <Set name="Name">Test JAAS Realm</Set>
+                  <Set name="LoginModuleName">jdbc</Set>
+                  <Set name="RoleCheckPolicy">
+                         <New class="org.mortbay.jaas.StrictRoleCheckPolicy"/>
+                  </Set>
+                       <Set name="CallbackHandler">
+                        <!--New class="org.mortbay.jaas.callback.DefaultCallbackHandler"/-->
+                        <New class="com.geopista.security.DefaultGeopistaCallbackHandler"/>
+                       </Set>
+                  </New>
+            </Set>
+      </Call>     
+<Call name="addListener">
+    <Arg>
+      <New class="org.mortbay.http.SunJsseListener">
+        <Set name="Port">
+          <SystemProperty name="jetty.port" default="8084" />
+        </Set>
+		<Set name="Keystore"><SystemProperty name="jetty.home" default="C:/certificados/"/>jettystore</Set>
+		<Set name="password">cotesa</Set>
+        <Set name="keyPassword">cotesa</Set>
+        <Set name="MinThreads">10</Set>
+        <Set name="MaxThreads">100</Set>
+        <Set name="MaxIdleTimeMs">30000</Set>
+        <Set name="LowResourcePersistTimeMs">5000</Set>
+      </New>
+    </Arg>
+  </Call>
+</Configure>
+

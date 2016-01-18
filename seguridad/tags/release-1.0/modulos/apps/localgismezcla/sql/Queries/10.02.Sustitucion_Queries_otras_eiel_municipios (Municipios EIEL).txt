@@ -1,0 +1,18 @@
+-- "eiel_municipios" (Municipios EIEL)
+--
+-- Sustitucion de la select query
+--
+select selectquery  from queries
+where id_layer=(select id_layer from layers where name='eiel_municipios')
+
+select replace(selectquery,'"eiel_c_municipios"."GEOMETRY"','transform("eiel_c_municipios"."GEOMETRY" , ?T) as "GEOMETRY"') from queries
+where id_layer=(select id_layer from layers where name='eiel_municipios')
+
+update queries set selectquery=(select replace(selectquery,'"eiel_c_municipios"."GEOMETRY",','transform("eiel_c_municipios"."GEOMETRY" , ?T) as "GEOMETRY"') from queries
+where id_layer=(select id_layer from layers where name='eiel_municipios')) 
+where id_layer=(select id_layer from layers where name='eiel_municipios');
+
+
+
+
+

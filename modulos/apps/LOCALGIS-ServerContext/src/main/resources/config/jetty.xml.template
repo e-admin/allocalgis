@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+<!-- =============================================================== --><!-- Configure the Jetty Server                                      --><!--                                                                 --><!-- Documentation of this file format can be found at:              --><!-- http://wiki.eclipse.org/Jetty/Reference/jetty.xml_syntax        --><!--                                                                 --><!-- Additional configuration files are available in $JETTY_HOME/etc --><!-- and can be mixed in.  For example:                              --><!--   java -jar start.jar etc/jetty-ssl.xml                         --><!--                                                                 --><!-- See start.ini file for the default configuraton files           --><!-- =============================================================== --><Configure class="org.eclipse.jetty.server.Server" id="Server">
+
+    <!-- =========================================================== -->
+    <!-- Server Thread Pool                                          -->
+    <!-- =========================================================== -->
+    <Set name="ThreadPool">
+      <!-- Default queued blocking threadpool -->
+      <New class="org.eclipse.jetty.util.thread.QueuedThreadPool">
+        <Set name="minThreads">10</Set>
+        <Set name="maxThreads">200</Set>
+        <Set name="detailedDump">false</Set>
+      </New>
+    </Set>
+
+    <!-- =========================================================== -->
+    <!-- Set connectors                                              -->
+    <!-- =========================================================== -->
+
+    <Call name="addConnector">
+      <Arg>
+          <New class="org.eclipse.jetty.server.nio.SelectChannelConnector">
+            <Set name="host"><SystemProperty name="jetty.host"/></Set>
+            <Set name="port"><SystemProperty default="8081" name="jetty.port"/></Set>
+            <Set name="maxIdleTime">300000</Set>
+            <Set name="Acceptors">2</Set>
+            <Set name="statsOn">false</Set>
+            <Set name="confidentialPort">8443</Set>
+	    <Set name="lowResourcesConnections">20000</Set>
+	    <Set name="lowResourcesMaxIdleTime">5000</Set>
+          </New>
+      </Arg>
+    </Call>
+	
+	<Call name="addConnector">
+		<Arg>
+			<New class="org.eclipse.jetty.server.ssl.SslSelectChannelConnector">
+				<Arg>
+					<New class="org.eclipse.jetty.http.ssl.SslContextFactory">
+						<Set name="keyStore">C:/localgis/certificados/jettystore</Set>
+						<Set name="keyStorePassword">geopista</Set>
+						<Set name="keyManagerPassword">geopista</Set>
+					</New>
+				</Arg>
+				<Set name="name">UserPassSSLConnector</Set>
+				<Set name="port">8085</Set>
+				<Set name="maxIdleTime">30000</Set>
+			</New>
+		</Arg>
+	</Call>
+	
+	<Call name="addConnector">
+		<Arg>
+			<New class="org.eclipse.jetty.server.ssl.SslSelectChannelConnector">
+				<Arg>
+					<New class="org.eclipse.jetty.http.ssl.SslContextFactory">
+						<Set name="keyStore">C:/localgis/certificados/keystore</Set>
+						<Set name="keyStorePassword">password</Set>
+						<Set name="keyManagerPassword">password</Set>
+						<Set name="trustStore">C:/localgis/certificados/truststore</Set>
+						<Set name="trustStorePassword">password</Set>
+						<Set name="needClientAuth">true</Set>
+						<Set name="wantClientAuth">true</Set>
+					</New>
+				</Arg>
+				<Set name="name">CertificateSSLConnector</Set>
+				<Set name="port">8443</Set>
+				<Set name="maxIdleTime">30000</Set>
+			</New>
+		</Arg>
+	</Call>
+
+    <!-- =========================================================== -->
+    <!-- Set handler Collection Structure                            --> 
+    <!-- =========================================================== -->
+    <Set name="handler">
+      <New class="org.eclipse.jetty.server.handler.HandlerCollection" id="Handlers">
+        <Set name="handlers">
+         <Array type="org.eclipse.jetty.server.Handler">
+           <Item>
+             <New class="org.eclipse.jetty.server.handler.ContextHandlerCollection" id="Contexts"/>
+           </Item>
+           <Item>
+             <New class="org.eclipse.jetty.server.handler.DefaultHandler" id="DefaultHandler"/>
+           </Item>
+         </Array>
+        </Set>
+      </New>
+    </Set>
+
+    <!-- =========================================================== -->
+    <!-- extra options                                               -->
+    <!-- =========================================================== -->
+    <Set name="stopAtShutdown">true</Set>
+    <Set name="sendServerVersion">true</Set>
+    <Set name="sendDateHeader">true</Set>
+    <Set name="gracefulShutdown">1000</Set>
+    <Set name="dumpAfterStart">false</Set>
+    <Set name="dumpBeforeStop">false</Set>
+
+	<!-- Equipo Javi -->
+	<New class="org.eclipse.jetty.plus.jndi.Resource" id="Localgis">
+	<Arg/>
+	<Arg>jdbc/localgis</Arg>
+	<Arg>
+	   <New class="org.postgresql.ds.PGPoolingDataSource">
+		  <Set name="User">postgres</Set>
+		  <Set name="Password">geopista</Set>
+		  <Set name="DatabaseName">localgis3</Set>
+		  <Set name="ServerName">localgis3.grupotecopy.es</Set>
+		  <Set name="PortNumber">5432</Set> 
+	   </New>
+		</Arg>
+	</New>		
+
+	<!-- Eliminamos el limite de post -->
+	<Call class="java.lang.System" name="setProperty">
+		<Arg>org.eclipse.jetty.server.Request.maxFormContentSize</Arg>
+		<Arg>1000000</Arg>
+	</Call>	
+	
+	<!-- Increase the maximum POST size to 1 MB to be able to handle large shard requests -->
+    <Call name="setAttribute">
+      <Arg>org.eclipse.jetty.server.Request.maxFormContentSize</Arg>
+      <Arg>1048576</Arg>
+    </Call>
+</Configure>

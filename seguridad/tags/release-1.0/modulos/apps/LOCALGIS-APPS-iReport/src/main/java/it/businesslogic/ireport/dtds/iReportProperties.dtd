@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT iReportProperties (iReportConnection*, iReportProperty*)>
+
+<!ELEMENT iReportProperty (#PCDATA)>
+<!ATTLIST iReportProperty
+	name NMTOKEN #REQUIRED
+>
+
+<!ELEMENT iReportConnection (connectionParameter*)>
+<!ATTLIST iReportConnection
+	name NMTOKEN #REQUIRED
+	connectionClass NMTOKEN "it.businesslogic.ireport.connection.JDBCConnection"
+>
+
+<!ELEMENT connectionParameter (#PCDATA)>
+<!ATTLIST connectionParameter
+	name NMTOKEN #REQUIRED
+>

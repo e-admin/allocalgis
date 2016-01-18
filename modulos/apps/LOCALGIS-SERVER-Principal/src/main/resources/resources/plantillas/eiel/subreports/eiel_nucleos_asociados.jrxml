@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="eiel_nucleos_asociados"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Landscape"
+		 pageWidth="535"
+		 pageHeight="40"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+	<import value="com.geopista.app.filter.LCGFilter" />
+
+	<parameter name="id_municipio" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="locale" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["es_ES"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[".\\src\\plantillas\\eiel\\subreports\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ID_ENTIDAD" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="codprov" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["33"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codmunic" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="orden" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tabla" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["eiel_tr_abast_ca_pobl"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="municipioactivo" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["33001"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="campo_codprov" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["codprov_ca"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="campo_codmunic" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["codmunic_ca"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="campo_orden" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["orden_ca"]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[select array_to_string (ARRAY (SELECT
+     '('||tabla_asignaciones.$P!{campo_codmunic}||')'||eiel_c_nucleo_poblacion."nombre_oficial"||
+     ' '||eiel_c_nucleo_poblacion."codentidad" ||'-'||eiel_c_nucleo_poblacion."codpoblamiento"
+FROM
+     "public".$P!{tabla} tabla_asignaciones 
+     LEFT JOIN "public"."eiel_c_nucleo_poblacion" eiel_c_nucleo_poblacion ON tabla_asignaciones."codprov_pobl" = eiel_c_nucleo_poblacion."codprov"
+     AND eiel_c_nucleo_poblacion."codmunic" = tabla_asignaciones."codmunic_pobl"
+     AND eiel_c_nucleo_poblacion."codentidad" = tabla_asignaciones."codentidad_pobl"
+     AND eiel_c_nucleo_poblacion."codpoblamiento" = tabla_asignaciones."codpoblamiento_pobl"
+WHERE
+(tabla_asignaciones.revision_expirada >= 9.699999999E9 or eiel_c_nucleo_poblacion.revision_expirada >= 9.699999999E9)
+ AND tabla_asignaciones.$P!{campo_codprov} = $P{codprov}
+ AND tabla_asignaciones.$P!{campo_codmunic} = $P{codmunic}
+ AND tabla_asignaciones.$P!{campo_orden} = $P{orden}
+ AND tabla_asignaciones."codmunic_pobl"=substring($P{municipioactivo} from char_length($P{municipioactivo})-2 for 5)),' , ' );]]></queryString>
+
+	<field name="array_to_string" class="java.lang.String"/>
+
+
+		<group  name="Prueba" >
+			<groupExpression><![CDATA[]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="false" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="1"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="38"  isSplitAllowed="false" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="20"
+						y="2"
+						width="460"
+						height="30"
+						forecolor="#000000"
+						key="textField-19"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{array_to_string}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

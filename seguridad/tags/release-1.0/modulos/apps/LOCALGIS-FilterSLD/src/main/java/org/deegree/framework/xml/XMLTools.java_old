@@ -1,0 +1,223 @@
+//$HeadURL: https://svn.wald.intevation.org/svn/deegree/base/trunk/src/org/deegree/framework/xml/XMLTools.java $
+/*----------------    FILE HEADER  ------------------------------------------
+
+ This file is part of deegree.
+ Copyright (C) 2001-2006 by:
+ EXSE, Department of Geography, University of Bonn
+ http://www.giub.uni-bonn.de/deegree/
+ lat/lon GmbH
+ http://www.lat-lon.de
+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+ Contact:
+
+ Andreas Poth 
+ lat/lon GmbH
+ Aennchenstr. 19
+ 53115 Bonn
+ Germany
+ E-Mail: poth@lat-lon.de
+
+ Prof. Dr. Klaus Greve
+ Department of Geography
+ University of Bonn
+ Meckenheimer Allee 166
+ 53115 Bonn
+ Germany
+ E-Mail: greve@giub.uni-bonn.de
+
+ ---------------------------------------------------------------------------*/
+
+package org.deegree.framework.xml;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+/*
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+ 
+ import org.deegree.datatypes.QualifiedName;
+import org.deegree.framework.log.ILogger;
+import org.deegree.framework.log.LoggerFactory;
+import org.deegree.framework.util.StringTools;
+import org.deegree.ogcbase.CommonNamespaces;
+import org.jaxen.JaxenException;
+import org.jaxen.XPath;
+import org.jaxen.dom.DOMXPath;
+*/
+import org.w3c.dom.Attr;
+import org.w3c.dom.CDATASection;
+import org.w3c.dom.Comment;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Text;
+
+/*
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+*/
+/**
+ * XML Tools based on JAXP 1.1 for parsing documents and retrieving node values/node attributes.
+ * Furthermore this utility class provides node retrieval based on XPath expressions.
+ * 
+ * @author <a href="mailto:mschneider@lat-lon.de">Markus Schneider </a>
+ * @author <a href="mailto:poth@lat-lon.de">Andreas Poth </a>
+ * @author last edited by: $Author: satec $
+ * 
+ * @version $Revision: 1.1 $, $Date: 2010/04/05 08:18:44 $
+ */
+public final class XMLTools {
+
+   // private static final ILogger LOG = LoggerFactory.getLogger( XMLTools.class );
+
+    private XMLTools() {
+        // hidden constructor to prevent instantiation
+    }
+
+    // ------------------------------------------------------------------------
+    // XPath based parsing methods
+    // ------------------------------------------------------------------------
+
+    /**
+     * @param contextNode
+     * @param xPathQuery
+     * @param nsContext
+     * @return Node
+     * @throws XMLParsingException
+     */
+  /*  public static ElementList getChildElements( String name, URI namespaceURI, Node node ) {
+
+        String namespace = namespaceURI == null ? null : namespaceURI.toString();
+
+        NodeList nl = node.getChildNodes();
+        Element element = null;
+        ElementList elementList = new ElementList();
+ 
+        if ( ( nl != null ) && ( nl.getLength() > 0 ) ) {
+            for ( int i = 0; i < nl.getLength(); i++ ) {
+                if ( nl.item( i ) instanceof Element ) {
+                    element = (Element) nl.item( i );
+
+                    //String s = element.getNamespaceURI();
+
+                    
+                    if ( ( s == null && namespace == null ) || ( namespace != null && namespace.equals( s ) ) ) {
+                        if ( element.getLocalName() .equals( name ) ) {
+                            elementList.addElement( element );
+                        }
+                    }
+                }
+            }
+        } 
+        return elementList;
+    }
+*/
+    public static URI getNamespaceForPrefix( String prefix, Node node )
+    throws URISyntaxException {
+    	if ( node == null ) {
+    		return null;
+    	}
+    	if ( node.getNodeType() == Node.ELEMENT_NODE ) {
+    		NamedNodeMap nnm = node.getAttributes();
+    		if ( nnm != null ) {
+    			System.out.println ( "(searching namespace for prefix (" + prefix
+    					+ "), resulted in a namedNodeMap for the currentNode: " + node.getNodeName() );
+    			for ( int i = 0; i < nnm.getLength(); i++ ) {
+    				Attr a = (Attr) nnm.item( i );
+    				System.out.println  ( "\t(searching namespace for prefix (" + prefix + "), resulted in an attribute: "
+    						+ a.getName() );
+
+    				if ( a.getName().startsWith( "xmlns:" ) && a.getName().endsWith( ':' + prefix ) ) {
+    					return new URI( a.getValue() );
+    				} else if ( prefix == null && a.getName().equals( "xmlns" ) ) {
+    					return new URI( a.getValue() );
+    				}
+    			}
+    		}
+    	} else if ( node.getNodeType() == Node.ATTRIBUTE_NODE ) {
+    		return getNamespaceForPrefix( prefix, ( (Attr) node ).getOwnerElement() );
+    	}
+    	return getNamespaceForPrefix( prefix, node.getParentNode() );
+    }
+
+    public static String getStringValue( Node node ) {
+        NodeList children = node.getChildNodes();
+        StringBuffer sb = new StringBuffer( children.getLength() * 500 );
+        if ( node.getNodeValue() != null ) {
+            sb.append( node.getNodeValue().trim() );
+        }
+        if ( node.getNodeType() != Node.ATTRIBUTE_NODE ) {
+            for ( int i = 0; i < children.getLength(); i++ ) {
+                if ( children.item( i ).getNodeType() == Node.TEXT_NODE
+                     || children.item( i ).getNodeType() == Node.CDATA_SECTION_NODE ) {
+                    sb.append( children.item( i ).getNodeValue() );
+                }
+            }
+        }
+        return sb.toString();
+    }
+
+    
+    public static ElementList getChildElements( Node node ) {
+        NodeList children = node.getChildNodes();
+        ElementList list = new ElementList();
+        for ( int i = 0; i < children.getLength(); i++ ) {
+            if ( children.item( i ).getNodeType() == Node.ELEMENT_NODE ) {
+                list.elements.add( (Element) children.item( i ) );
+            }
+        }
+        return list;
+    }
+ 
+
+public static Element getChildElement( String name, URI namespaceURI, Node node ) {
+
+    String namespace = namespaceURI == null ? null : namespaceURI.toString();
+
+    NodeList nl = node.getChildNodes();
+    Element element = null;
+    Element childElement = null;
+
+    if ( ( nl != null ) && ( nl.getLength() > 0 ) ) {
+        for ( int i = 0; i < nl.getLength(); i++ ) {
+            if ( nl.item( i ) instanceof Element ) {
+                element = (Element) nl.item( i );
+                String s = element.getNamespaceURI();
+                if ( ( s == null && namespace == null ) || ( namespace != null && namespace.equals( s ) ) ) {
+                    if ( element.getLocalName().equals( name ) ) {
+                        childElement = element;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    return childElement;
+}
+
+}

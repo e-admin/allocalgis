@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+codebase="
+@SITE@"
+href="localgis_nuevos.jnlp">
+<information>
+<title>LOCALGIS GENERICO</title>
+<vendor>LocalGIS</vendor>
+<homepage href="http://www.geopista.com" />
+<description>Open Source GIS client. Administrador.(@SITE@)</description>
+<icon href="logo_geopista.gif" />
+<offline-allowed />
+<icon kind="splash" href="splash_geopista.gif" />
+<shortcut online="false">
+      <desktop />
+      <menu submenu="LocalGIS" />
+    </shortcut>
+</information>
+<resources>
+<j2se version="1.6 1.5+" initial-heap-size="128m" max-heap-size="1024m"/>
+
+<jar href="productos/jsch/jsch-0.1.44.jar" />
+<jar href="productos/wfs/deegree2-wfs.jar" />
+<jar href="productos/wfs/wfsplugin.jar" />
+<jar href="productos/gnu-crypto/gnu-crypto.jar" />
+<jar href="productos/gnu-crypto/javax-crypto.jar" />
+<jar href="productos/gnu-crypto/javax-security.jar" />
+<jar href="productos/xstream/xstream-1.4.2.jar" />
+
+<jar href="productos/routeEngine/customizedGeotoolsGraph-0.0.1.jar" />
+<jar href="productos/routeEngine/localgis-routeengine-0.0.1.jar" />
+<jar href="productos/routeEngine/customizedGeotoolsGraph-0.0.1.jar" />
+<jar href="productos/routeEngine/routeEngine-0.0.1.jar" />
+<jar href="productos/routeEngine/routeEnginePluginToolsCore.jar" />
+<jar href="productos/routeEngine/plugins/routeEnginePMRRedGeneratorPlugin.jar" />  
+<jar href="productos/routeEngine/plugins/routeEngineRedGeneratorPlugin.jar" />  
+<jar href="productos/routeEngine/plugins/routeEngineCalculatePMRRoutePlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineDeleteNetworksPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineDrawPMRRedPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineGuardarRedPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineIncidentInsertionPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineLeerRedPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineMaxSpeedEditPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineNetworkFusionPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineNetworkLinksPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEnginePluginToolsCore.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineRedGeneratorPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineTemporalIncidentsPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineTrafficRegulationPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineTSPPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineTurnImpedancePlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/routeEngineWICPlugin.jar"/>  
+<jar href="productos/routeEngine/plugins/toolBoxNetworkPlugIn.jar"/>
+<jar href="productos/jts/jts-1.12.jar"/>  
+<jar href="productos/mantisconnect-modelo/mantisconnect_modelo.jar" />
+<jar href="productos/javaws/javaws.jar" />  
+
+
+</resources>
+<application-desc main-class="com.geopista.update.UpdateSystem">
+</application-desc>
+<security><all-permissions/></security>
+</jnlp>

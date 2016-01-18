@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="localgis_map">
+
+  <resultMap class="com.localgis.web.core.model.LocalgisMap" id="LocalgisMapResult">
+    <result column="mapid" jdbcType="INTEGER" property="mapid"/>
+    <result column="mapidgeopista" jdbcType="INTEGER" property="mapidgeopista"/>
+    <result column="minx" jdbcType="DOUBLE" property="minx"/>
+    <result column="miny" jdbcType="DOUBLE" property="miny"/>
+    <result column="maxx" jdbcType="DOUBLE" property="maxx"/>
+    <result column="maxy" jdbcType="DOUBLE" property="maxy"/>
+    <result column="mapidentidad" jdbcType="NUMERIC" property="mapidentidad"/>
+    <result column="mappublic" jdbcType="SMALLINT" property="mappublic"/>
+    <result column="name" jdbcType="VARCHAR" property="name"/>
+    <result column="srid" jdbcType="VARCHAR" property="srid"/>
+    <result column="mapdefault" jdbcType="SMALLINT" property="mapdefault"/>
+  </resultMap>
+  
+  
+  <resultMap class="com.localgis.web.core.model.EntidadLocalGis" id="LocalgisEntidadResult">
+    <result column="mapidentidad" jdbcType="INTEGER" property="mapidentidad"/>
+  </resultMap>
+  
+  
+
+  <select id="selectMapsByIdEntidad" parameterClass="java.util.Map" resultMap="LocalgisMapResult">
+    select map.mapid, map.mapidgeopista, map.minx, map.miny, map.maxx, map.maxy, map.mapidentidad, map.mappublic, dictionary.traduccion as name, map.srid, map.mapdefault
+    from localgisguiaurbana.map map 
+         inner join maps maps1 on map.mapidgeopista = maps1.id_map 
+         left outer join maps maps2 on maps1.id_entidad = 0 and maps2.id_entidad = #idEntidad# and maps1.id_map = maps2.id_map 
+         left outer join dictionary dictionary on dictionary.id_vocablo = maps1.id_name and dictionary.locale = #locale#
+    where maps2.id_map is null and (maps1.id_entidad = #idEntidad# or maps1.id_entidad = 0) and
+          map.mapidentidad = #idEntidad#
+    order by dictionary.traduccion, map.mapid
+  </select>
+
+  <select id="selectMapsByIdEntidadAndPublicMaps" parameterClass="java.util.Map" resultMap="LocalgisMapResult">
+    select map.mapid, map.mapidgeopista, map.minx, map.miny, map.maxx, map.maxy, map.mapidentidad, map.mappublic, dictionary.traduccion as name, map.srid, map.mapdefault
+    from localgisguiaurbana.map map 
+         inner join maps maps1 on map.mapidgeopista = maps1.id_map 
+         left outer join maps maps2 on maps1.id_entidad = 0 and maps2.id_entidad = #idEntidad# and maps1.id_map = maps2.id_map 
+         left outer join dictionary dictionary on dictionary.id_vocablo = maps1.id_name and dictionary.locale = #locale#
+    where maps2.id_map is null and (maps1.id_entidad = #idEntidad# or maps1.id_entidad = 0) and
+          map.mapidentidad = #idEntidad# and
+          map.mappublic = #mapasPublicos#
+    order by dictionary.traduccion, map.mapid
+  </select>
+
+  <select id="selectMapById" parameterClass="java.util.Map" resultMap="LocalgisMapResult">
+    select map.mapid, map.mapidgeopista, map.minx, map.miny, map.maxx, map.maxy, map.mapidentidad, map.mappublic, dictionary.traduccion as name, map.srid, map.mapdefault
+    from localgisguiaurbana.map map 
+         inner join maps maps1 on map.mapidgeopista = maps1.id_map 
+         left outer join maps maps2 on maps1.id_entidad = 0 and maps2.id_entidad = map.mapidentidad and maps1.id_map = maps2.id_map 
+         left outer join dictionary dictionary on dictionary.id_vocablo = maps1.id_name and dictionary.locale = #locale#
+    where maps2.id_map is null and (maps1.id_entidad = map.mapidentidad or maps1.id_entidad = 0) and
+          map.mapid = #idMap#          
+  </select>
+
+  <delete id="deleteByIdMapAndPublicMap" parameterClass="java.util.Map">
+    delete from localgisguiaurbana.map
+    where mapid = #idMap# and mappublic = #publicMap#
+  </delete>
+  
+  <update id="removeDefaultMap" parameterClass="java.util.Map">
+    update localgisguiaurbana.map
+    set mapdefault = 0
+    where mapidentidad = #idEntidad# and mappublic = #publicMap#
+  </update>
+
+  <update id="setDefaultMap" parameterClass="java.util.Map">
+    update localgisguiaurbana.map
+    set mapdefault = 1 
+    where mapidgeopista = #idGeopista# and mapidentidad = #idEntidad# and mappublic = #publicMap#
+  </update>
+
+  <select id="selectDefaultMap" parameterClass="java.util.Map" resultMap="LocalgisMapResult">
+    select map.mapid, map.mapidgeopista, map.minx, map.miny, map.maxx, map.maxy, map.mapidentidad, map.mappublic, dictionary.traduccion as name, map.srid, map.mapdefault
+    from localgisguiaurbana.map map 
+         inner join maps maps1 on map.mapidgeopista = maps1.id_map 
+         left outer join maps maps2 on maps1.id_entidad = 0 and maps2.id_entidad = map.mapidentidad and maps1.id_map = maps2.id_map 
+         left outer join dictionary dictionary on dictionary.id_vocablo = maps1.id_name and dictionary.locale = #locale#
+    where maps2.id_map is null and (maps1.id_entidad = map.mapidentidad or maps1.id_entidad = 0) and
+          map.mapidentidad = #idEntidad# and map.mapdefault = 1 and map.mappublic = #publicMap#
+  </select>
+  
+  <select id="selectMapByIdGeopista" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+   	 	select map.mapid
+    	from localgisguiaurbana.map map 
+         	inner join maps maps1 on map.mapidgeopista = maps1.id_map 
+         	left outer join maps maps2 on maps1.id_entidad = 0 and maps2.id_entidad = map.mapidentidad and maps1.id_map = maps2.id_map 
+         	left outer join dictionary dictionary on dictionary.id_vocablo = maps1.id_name and dictionary.locale = #locale#
+    		where maps2.id_map is null and (maps1.id_entidad = map.mapidentidad or maps1.id_entidad = 0) and
+          		map.mapidgeopista = #idMap# and map.mapidentidad=#idEntidad# and map.mappublic = #publicMap#
+  </select>
+  
+  <update id="updateMapByIdMap" parameterClass="com.localgis.web.core.model.LocalgisMap" >
+    update localgisguiaurbana.map
+    set mapidgeopista = #mapidgeopista:INTEGER#,
+        minx = #minx:DOUBLE#, 
+        miny = #miny:DOUBLE#,
+        maxx = #maxx:DOUBLE#,
+        maxy = #maxy:DOUBLE#,
+        mapidentidad = #mapidentidad:NUMERIC#,
+        mappublic = #mappublic:SMALLINT#,
+        srid = #srid:VARCHAR#,
+        mapdefault = #mapdefault:SMALLINT#
+    where mapid = #mapid:INTEGER#
+  </update>
+  
+ <select id="selectEntidadesByIdMapGeopista" parameterClass="java.util.Map" resultMap="LocalgisEntidadResult">
+   select mapidentidad from localgisguiaurbana."map"  where mapidgeopista=#mapidgeopista# and mappublic=#publicMap#
+  </select>
+
+  
+  
+</sqlMap>

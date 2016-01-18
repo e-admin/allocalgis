@@ -1,0 +1,37 @@
+<index version="1.0">
+    <indexitem text="Contenidos">
+        <indexitem text="Introducción" target="licenciasIntro"/>
+        <indexitem text="Usuarios">
+            <indexitem text="Usuarios y permisos" target="licenciasUsuarios"/>
+        </indexitem>
+        <indexitem text="WorkFlow">
+            <indexitem text="Obra Mayor" target="licenciasWFObraMayor"/>
+            <indexitem text="Obra Menor" target="licenciasWFObraMenor"/>
+        </indexitem>
+        <indexitem text="Opciones de Menú" target="licenciasOpcionesMenu"/>
+        <indexitem text="Creación de una Licencia">
+            <indexitem text="Obra Mayor" target="licenciasCreacionObraMayor"/>
+            <indexitem text="Obra Menor" target="licenciasCreacionObraMenor"/>
+        </indexitem>
+        <indexitem text="Modificación de una Licencia">
+            <indexitem text="Obra Mayor" target="licenciasModificacionObraMayor"/>
+            <indexitem text="Obra Menor" target="licenciasModificacionObraMenor"/>
+        </indexitem>
+        <indexitem text="Consulta de una Licencia">
+            <indexitem text="Obra Mayor" target="licenciasConsultaObraMayor"/>
+            <indexitem text="Obra Menor" target="licenciasConsultaObraMenor"/>
+        </indexitem>
+        <indexitem text="Informes" target="licenciasInformes"/>
+        <indexitem text="Eventos">
+            <indexitem text="Consulta de Eventos" target="licenciasConsultarEventos"/>
+            <indexitem text="Últimos Eventos" target="licenciasUltimosEventos"/>
+        </indexitem>
+        <indexitem text="Generación de Planos" target="licenciasPlanos"/>
+        <indexitem text="Consulta de Notificaciones" target="licenciasNotificaciones"/>
+        <indexitem text="Consulta del Histórico" target="licenciasHistorico"/>
+        <indexitem text="Consulta de las Tareas Pendientes" target="licenciasTareasPendientes"/>
+		<indexitem text="Configuración" target="licenciasConfiguracion"/>
+        <indexitem text="Cambio de Idioma" target="licenciasIdioma"/>
+    </indexitem>
+</index>
+

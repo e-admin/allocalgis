@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geopista_map_generic_element">
+
+
+  <select id="isValidTableName" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+    SELECT COUNT(t.table_name) FROM SYS.DBA_TABLES t WHERE t.table_name = #tableName#
+  </select>
+  
+  
+  
+  <select id="isValidColumnName" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+  	SELECT COUNT(c.column_name) FROM SYS.ALL_TAB_COLS c  WHERE c.column_name = #columnName# AND c.table_name = #tableName#
+  </select>
+  
+  
+  
+  
+  <select id="selectCenteredPointMapGenericElement" parameterClass="java.util.Map" resultMap="PointResult" remapResults="true">
+    select SDO_GEOM.SDO_CENTROID("GEOMETRY", metadata.diminfo).SDO_POINT.X as x_centered, SDO_GEOM.SDO_CENTROID("GEOMETRY", metadata.diminfo).SDO_POINT.Y as y_centered
+    from $tableName$, user_sdo_geom_metadata metadata
+    where $identifierColumnName$ = #identifierValue# and metadata.table_name = upper('$tableName$') and metadata.column_name = 'GEOMETRY'
+  </select>
+  
+  <select id="selectBoundingBoxMapGenericElement" parameterClass="java.util.Map" resultMap="BoundingBoxResult" remapResults="true">
+    select SDO_GEOM.SDO_MIN_MBR_ORDINATE("GEOMETRY", 1) as minx, SDO_GEOM.SDO_MIN_MBR_ORDINATE("GEOMETRY", 2) as miny, SDO_GEOM.SDO_MAX_MBR_ORDINATE("GEOMETRY", 1) as maxx, SDO_GEOM.SDO_MAX_MBR_ORDINATE("GEOMETRY", 2) as maxy
+    from $tableName$
+    where $identifierColumnName$ = #identifierValue#
+  </select>
+
+</sqlMap>

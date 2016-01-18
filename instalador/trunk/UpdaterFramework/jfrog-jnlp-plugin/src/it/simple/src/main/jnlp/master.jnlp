@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE jnlp PUBLIC "-//Sun Microsystems, Inc//DTD JNLP Descriptor 1.5//EN" "http://java.sun.com/dtd/JNLP-1.5.dtd">-->
+<jnlp spec="1.0+" codebase="http://localhost/jnlp/" href="$targetFile">
+    <information>
+        <title>JavaFXHello</title>
+        <vendor>$informationVendor</vendor>
+        <homepage href="http://localhost/jnlp/"/>
+        <description>JavaFXHello</description>
+        <icon href="$iconRef"/>
+        <offline-allowed/>
+    </information>
+    <resources>
+        <j2se version="1.5+"/>
+        <extension name="JavaFX Runtime" href="http://dl.javafx.com/1.1/javafx-rt.jnlp"/>
+        $dependencies
+    </resources>
+    <application-desc main-class="$mainClass">
+        <argument>$first_argument</argument>
+    </application-desc>
+</jnlp>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<root>
+    <element xml-name="name" java-name="name"/>
+    <element xml-name="type" java-name="type"/>
+    <element xml-name="column" java-name="column"/>
+    <element xml-name="accessType" java-name="accessType"/>    
+    <element xml-name="category" java-name="category"/>
+</root>

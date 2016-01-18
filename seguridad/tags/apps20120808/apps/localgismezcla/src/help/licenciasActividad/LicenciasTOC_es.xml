@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+    <tocitem text="Contenidos">
+        <tocitem text="Introducción" target="licenciasIntro"/>
+        <tocitem text="Usuarios">
+            <tocitem text="Usuarios y permisos" target="licenciasUsuarios"/>
+        </tocitem>
+        <tocitem text="WorkFlow">
+            <tocitem text="Actividad Calificada" target="licenciasWFActividadCalificada"/>
+            <tocitem text="Actividad No Calificada" target="licenciasWFActividadNoCalificada"/>			
+        </tocitem>
+        <tocitem text="Opciones de Menú" target="licenciasOpcionesMenu"/>
+        <tocitem text="Creación de una Licencia">
+            <tocitem text="Actividad Calificada y No Calificada" target="licenciasCreacionActividad"/>
+        </tocitem>
+        <tocitem text="Modificación de una Licencia">
+            <tocitem text="Actividad Calificada y No Calificada" target="licenciasModificacionActividad"/>
+        </tocitem>
+        <tocitem text="Consulta de una Licencia">
+            <tocitem text="Actividad Calificada y No Calificada" target="licenciasConsultaActividad"/>
+        </tocitem>
+        <tocitem text="Informes" target="licenciasInformes"/>
+        <tocitem text="Eventos">
+            <tocitem text="Consulta de Eventos" target="licenciasConsultarEventos"/>
+            <tocitem text="Últimos Eventos" target="licenciasUltimosEventos"/>
+        </tocitem>
+        <tocitem text="Generación de Planos" target="licenciasPlanos"/>
+        <tocitem text="Consulta de Notificaciones" target="licenciasNotificaciones"/>
+        <tocitem text="Consulta del Histórico" target="licenciasHistorico"/>
+        <tocitem text="Consulta de las Tareas Pendientes" target="licenciasTareasPendientes"/>
+		<tocitem text="Configuración" target="licenciasConfiguracion"/>
+        <tocitem text="Cambio de Idioma" target="licenciasIdioma"/>
+    </tocitem>    
+</toc>

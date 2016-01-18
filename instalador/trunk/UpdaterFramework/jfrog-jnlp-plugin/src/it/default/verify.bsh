@@ -1,0 +1,36 @@
+import java.io.*;
+
+    File jnlpFile = new File(basedir, "target/jnlp/default.jnlp");   // default jnlp target file name
+    if (!jnlpFile.isFile()) {
+        System.out.println("Target jnlp file not found: " + jnlpFile.getAbsolutePath());
+        return false;
+    }
+
+    String jnlpString = org.apache.commons.io.IOUtils.toString(new FileInputStream(jnlpFile));
+    if (jnlpString.contains("$")) {
+        System.out.println("Not all variables were replaced");
+        return false;
+    }
+
+    if (!jnlpString.contains("<jar href=\"default-1.0.jar\" main=\"true\"/>")) {
+        System.out.println("Main jar wasn't included or not detected");
+        return false;
+    }
+
+    if (jnlpString.contains("all-permissions")) {
+        System.out.println("all-permissions tag should not exist");
+        return false;
+    }
+
+    if (!jnlpString.contains("offline-allowed")) {
+        System.out.println("offline-allowed tag should be present");
+        return false;
+    }
+
+    if (!jnlpString.contains("commons-cli")) {
+        System.out.println("Dependency not included");
+        return false;
+    }
+
+    return true;
+

@@ -1,0 +1,32 @@
+
+DROP SEQUENCE hibernate_sequence;
+DROP SEQUENCE pk_usuario;
+
+DROP TABLE tb_a21l_atributo CASCADE;
+DROP TABLE tb_a21l_atributofuentedatos CASCADE;
+DROP TABLE tb_a21l_atributonem CASCADE;
+DROP TABLE tb_a21l_categoria CASCADE;
+DROP TABLE tb_a21l_configuracion_sistema CASCADE;
+DROP TABLE tb_a21l_criterio CASCADE;
+DROP TABLE tb_a21l_elementojerarquia CASCADE;
+DROP TABLE tb_a21l_estilovisualizacion CASCADE;
+DROP TABLE tb_a21l_estilovisualizaciondiagramabarras CASCADE;
+DROP TABLE tb_a21l_estilovisualizaciondiagramasectores CASCADE;
+DROP TABLE tb_a21l_estilovisualizacionmapa CASCADE;
+DROP TABLE tb_a21l_estilovisualizaciontabla;
+DROP TABLE tb_a21l_expresion CASCADE;
+DROP TABLE tb_a21l_fuente CASCADE;
+DROP TABLE tb_a21l_historico CASCADE;
+DROP TABLE tb_a21l_indicador CASCADE;
+DROP TABLE tb_a21l_indicador_expresion CASCADE;
+DROP TABLE tb_a21l_indicador_modificacion CASCADE;
+DROP TABLE tb_a21l_indicador_usuario CASCADE;
+DROP TABLE tb_a21l_metadatos CASCADE;
+DROP TABLE tb_a21l_rangosvisualizacionmapa CASCADE;
+DROP TABLE tb_a21l_relacion CASCADE;
+DROP TABLE tb_a21l_rol CASCADE;
+DROP TABLE tb_a21l_rol_elementojerarquia CASCADE;
+DROP TABLE tb_a21l_tablafuentedatos CASCADE;
+DROP TABLE tb_a21l_usuario CASCADE;
+DROP TABLE tb_a21l_usuario_elementojerarquia CASCADE;
+DROP TABLE tb_a21l_usuario_rol CASCADE;

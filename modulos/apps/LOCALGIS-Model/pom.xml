@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.localgis.model</groupId>
+  <artifactId>localgis-model</artifactId>
+  <packaging>jar</packaging>
+  <name>LOCALGIS Model</name>
+  <version>3.0</version>
+  <url>http://maven.apache.org</url>
+  <parent>
+    <groupId>com.localgis</groupId>
+    <artifactId>localgis-parent</artifactId>
+    <version>3.0</version>
+  </parent>
+
+  <dependencies>
+  	<dependency>
+  		<groupId>com.localgis.context</groupId>
+  		<artifactId>localgis-context</artifactId>
+  		<version>3.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>jep</groupId>
+  		<artifactId>jep</artifactId>
+  		<version>2.24</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.localgis.const</groupId>
+  		<artifactId>localgis-const</artifactId>
+  		<version>3.0</version>
+  	</dependency>
+
+  	<dependency>
+  		<groupId>com.localgis.lib</groupId>
+  		<artifactId>localgis-geotools</artifactId>
+  		<version>3.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.localgis.lib</groupId>
+  		<artifactId>localgis-xml2java</artifactId>
+  		<version>3.0</version>
+  	</dependency>  	
+	<dependency>
+		<groupId>com.localgis.utils</groupId>
+		<artifactId>localgis-utils</artifactId>
+		<version>3.0</version>
+	</dependency>
+	<dependency>
+	  <groupId>com.localgis</groupId>
+	  <artifactId>jama</artifactId>
+	  <version>1.0.1</version>
+	</dependency>
+  </dependencies>
+</project>

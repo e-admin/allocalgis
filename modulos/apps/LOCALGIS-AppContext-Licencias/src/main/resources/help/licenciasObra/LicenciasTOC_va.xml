@@ -1,0 +1,37 @@
+<toc version="1.0">
+    <tocitem text="(VA)Contenidos">
+        <tocitem text="(VA)Introducción" target="licenciasIntro"/>
+        <tocitem text="(VA)Usuarios">
+            <tocitem text="(VA)Usuarios y permisos" target="licenciasUsuarios"/>
+        </tocitem>
+        <tocitem text="(VA)WorkFlow">
+            <tocitem text="(VA)Obra Mayor" target="licenciasWFObraMayor"/>
+            <tocitem text="(VA)Obra Menor" target="licenciasWFObraMenor"/>
+        </tocitem>
+        <tocitem text="(VA)Opciones de Menú" target="licenciasOpcionesMenu"/>
+        <tocitem text="(VA)Creación de una Licencia">
+            <tocitem text="(VA)Obra Mayor" target="licenciasCreacionObraMayor"/>
+            <tocitem text="(VA)Obra Menor" target="licenciasCreacionObraMenor"/>
+            <!--tocitem text="Actividad" target="licenciasCreacionActividad"/-->
+        </tocitem>
+        <tocitem text="(VA)Modificación de una Licencia">
+            <tocitem text="(VA)Obra Mayor" target="licenciasModificacionObraMayor"/>
+            <tocitem text="(VA)Obra Menor" target="licenciasModificacionObraMenor"/>
+        </tocitem>
+        <tocitem text="(VA)Consulta de una Licencia">
+            <tocitem text="(VA)Obra Mayor" target="licenciasConsultaObraMayor"/>
+            <tocitem text="(VA)Obra Menor" target="licenciasConsultaObraMenor"/>
+        </tocitem>
+        <tocitem text="(VA)Informes" target="licenciasInformes"/>
+        <tocitem text="(VA)Eventos">
+            <tocitem text="(VA)Consulta de Eventos" target="licenciasConsultarEventos"/>
+            <tocitem text="(VA)Últimos Eventos" target="licenciasUltimosEventos"/>
+        </tocitem>
+        <tocitem text="(VA)Generación de Planos" target="licenciasPlanos"/>
+        <tocitem text="(VA)Consulta de Notificaciones" target="licenciasNotificaciones"/>
+        <tocitem text="(VA)Consulta del Histórico" target="licenciasHistorico"/>
+        <tocitem text="(VA)Consulta de las Tareas Pendientes" target="licenciasTareasPendientes"/>
+		<tocitem text="(VA)Configuración" target="licenciasConfiguracion"/>
+        <tocitem text="(VA)Cambio de Idioma" target="licenciasIdioma"/>
+    </tocitem>    
+</toc>

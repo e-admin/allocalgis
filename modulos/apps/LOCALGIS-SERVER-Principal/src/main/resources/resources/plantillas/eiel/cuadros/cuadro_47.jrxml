@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Eiel_modelo" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="83"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="FASE" class="java.lang.String"/>
+	<parameter name="ISLA" class="java.lang.String"/>
+	<parameter name="DIPU" class="java.lang.String"/>
+	<parameter name="CODPROV" class="java.lang.String"/>
+	<parameter name="MUNI" class="java.lang.String"/>
+	<parameter name="CODMUNI" class="java.lang.String"/>
+	<parameter name="WHERE" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\proyectos\\Local Gis\\MODELO\\EIEL\\iReport\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMG" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT v_mun_enc_dis.puntos_luz AS ptosLuzdis , COUNT(*) AS puntos_luz, sum(v_alumbrado.POT_INSTAL) as T_POT_INSTAL,v_alumbrado.PROVINCIA, v_alumbrado.MUNICIPIO,v_alumbrado.ENTIDAD, v_alumbrado.NUCLEO,
+ v_alumbrado.ah_ener_rl, v_alumbrado.ah_ener_ri, v_alumbrado.calidad
+ FROM v_alumbrado INNER JOIN  v_mun_enc_dis ON ( (v_alumbrado.PROVINCIA=v_mun_enc_dis.PROVINCIA)) AND (v_alumbrado.MUNICIPIO=v_mun_enc_dis.MUNICIPIO)
+ WHERE $P!{WHERE}
+ GROUP BY v_alumbrado.PROVINCIA,v_alumbrado.MUNICIPIO,v_alumbrado.ENTIDAD, v_alumbrado.NUCLEO, v_alumbrado.ah_ener_rl, v_alumbrado.ah_ener_ri, v_alumbrado.calidad,v_mun_enc_dis.puntos_luz]]>
+	</queryString>
+	<field name="ptosluzdis" class="java.lang.Long"/>
+	<field name="puntos_luz" class="java.lang.Long"/>
+	<field name="t_pot_instal" class="java.lang.Double"/>
+	<field name="provincia" class="java.lang.String"/>
+	<field name="municipio" class="java.lang.String"/>
+	<field name="entidad" class="java.lang.String"/>
+	<field name="nucleo" class="java.lang.String"/>
+	<field name="ah_ener_rl" class="java.lang.String"/>
+	<field name="ah_ener_ri" class="java.lang.String"/>
+	<field name="calidad" class="java.lang.String"/>
+	<variable name="t_puntos_luz" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{puntos_luz}]]></variableExpression>
+	</variable>
+	<variable name="t_puntos_luz_mun" class="java.lang.Long">
+		<variableExpression><![CDATA[new Long($V{t_puntos_luz}.longValue()+$F{ptosluzdis}.longValue())]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="126" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-1" y="0" width="803" height="126"/>
+			</rectangle>
+			<image>
+				<reportElement x="470" y="2" width="330" height="87"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{IMG}+"logoN.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="74" y="0" width="1" height="126"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="470" y="0" width="1" height="126"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="80" y="0" width="390" height="33"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ENCUESTA DE INFRAESTRUCTURA Y EQUIPAMIENTOS LOCALES]]></text>
+			</staticText>
+			<line>
+				<reportElement x="75" y="99" width="395" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="75" y="67" width="395" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="75" y="33" width="395" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="78" y="67" width="67" height="33"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[MUNICIPIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="33" width="170" height="35"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[C AUTÓNOMA, DIPUTACIÓN, CABILDO O C. INSULAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="99" width="67" height="27"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[PROVINCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="99" width="33" height="27"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ISLA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="99" width="58" height="27"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[MUNICIPIO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="250" y="34" width="220" height="34"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{DIPU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="100" width="71" height="26"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{CODPROV}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="249" y="99" width="74" height="27"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ISLA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="99" width="90" height="27"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{CODMUNI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="68" width="324" height="31"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{MUNI}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="14" y="10" width="428" height="13"/>
+				<textElement/>
+				<text><![CDATA[CUADRO 47.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="23" width="428" height="13"/>
+				<textElement/>
+				<text><![CDATA[. ALUMBRADO PÚBLICO.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="71" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="71"/>
+			</rectangle>
+			<line>
+				<reportElement x="98" y="1" width="1" height="70"/>
+			</line>
+			<line>
+				<reportElement x="382" y="50" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="99" y="50" width="704" height="1"/>
+			</line>
+			<line>
+				<reportElement x="627" y="0" width="1" height="71"/>
+			</line>
+			<staticText>
+				<reportElement x="-1" y="2" width="99" height="68"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[PERÍODO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="627" y="2" width="175" height="24"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ALUMBRADO PÚBLICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="50" width="112" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Rfi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="717" y="27" width="85" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Puntos de luz]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="509" y="2" width="118" height="48"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[CALIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="50" width="125" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Rfi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="2" width="237" height="47"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[AHORRO ENERGÉTICO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="266" y="1" width="1" height="70"/>
+			</line>
+			<staticText>
+				<reportElement x="99" y="2" width="170" height="47"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NUCLEO DE POBLACIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="50" width="171" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Código INE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="508" y="0" width="1" height="71"/>
+			</line>
+			<staticText>
+				<reportElement x="627" y="26" width="90" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Potencia Instalada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="509" y="49" width="118" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[CI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="717" y="47" width="85" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[nº]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="627" y="50" width="90" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Kw]]></text>
+			</staticText>
+			<line>
+				<reportElement x="628" y="26" width="174" height="1"/>
+			</line>
+			<line>
+				<reportElement x="716" y="26" width="1" height="45"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="23"/>
+			</rectangle>
+			<line>
+				<reportElement x="627" y="0" width="1" height="23"/>
+			</line>
+			<line>
+				<reportElement x="508" y="0" width="1" height="23"/>
+			</line>
+			<line>
+				<reportElement x="382" y="0" width="1" height="23"/>
+			</line>
+			<line>
+				<reportElement x="266" y="0" width="1" height="23"/>
+			</line>
+			<line>
+				<reportElement x="716" y="0" width="1" height="23"/>
+			</line>
+			<line>
+				<reportElement x="98" y="0" width="1" height="23"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="97" height="23" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{FASE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="508" y="0" width="120" height="23" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{calidad}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="382" y="0" width="125" height="23" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ah_ener_ri}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="268" y="0" width="113" height="23" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ah_ener_rl}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="98" y="0" width="169" height="23" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{provincia}.concat($F{municipio}).concat($F{entidad}).concat($F{nucleo})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="717" y="3" width="85" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{puntos_luz}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="628" y="3" width="88" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{t_pot_instal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="62">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="62"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="267" y="0" width="449" height="62" backcolor="#999999"/>
+			</rectangle>
+			<line>
+				<reportElement x="626" y="0" width="1" height="62"/>
+			</line>
+			<line>
+				<reportElement x="508" y="0" width="1" height="62"/>
+			</line>
+			<line>
+				<reportElement x="383" y="0" width="1" height="62"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="802" height="1"/>
+			</line>
+			<line>
+				<reportElement x="2" y="21" width="800" height="1"/>
+			</line>
+			<line>
+				<reportElement x="1" y="41" width="802" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="42" width="268" height="20"/>
+				<textElement/>
+				<text><![CDATA[TOTAL MUNICIPIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="22" width="267" height="20"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[TOTAL DISEMINADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="1" width="267" height="20"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[TOTAL NÚCLEO]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="717" y="2" width="85" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$V{t_puntos_luz}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="717" y="42" width="85" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$V{t_puntos_luz_mun}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="717" y="21" width="85" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{ptosluzdis}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

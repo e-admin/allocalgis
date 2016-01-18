@@ -1,0 +1,5 @@
+<config>
+    <connector id="ComentarioBean" class="com.localgis.mobile.server.connectors.ComentarioConnector"/>
+    <connector id="ExpedienteBean" class="com.localgis.mobile.server.connectors.ExpedienteConnector"/>
+    <connector id="ReferenciaCatastralBean" class="com.localgis.mobile.server.connectors.ReferenciaCatastralConnector"/>
+</config>

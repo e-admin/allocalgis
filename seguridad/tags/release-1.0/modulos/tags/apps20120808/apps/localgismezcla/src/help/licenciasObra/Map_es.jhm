@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/map_1_0.dtd">
+
+<map version="1.0">
+
+    <mapID target="licenciasIntro" url="Pages/es/licenciasIntro.html" />
+    <mapID target="licenciasUsuarios" url="Pages/es/licenciasUsuarios.html" />
+    <mapID target="licenciasWFObraMayor" url="Pages/es/licenciasWFObraMayor.html" />
+    <mapID target="licenciasWFObraMenor" url="Pages/es/licenciasWFObraMenor.html" />
+	<mapID target="licenciasOpcionesMenu" url="Pages/es/licenciasOpcionesMenu.html" />
+    <mapID target="licenciasCreacionObraMayor" url="Pages/es/licenciasCreacionObraMayor.html" />
+    <mapID target="licenciasCreacionObraMenor" url="Pages/es/licenciasCreacionObraMenor.html" />
+    <mapID target="licenciasModificacionObraMayor" url="Pages/es/licenciasModificacionObraMayor.html" />
+    <mapID target="licenciasModificacionObraMenor" url="Pages/es/licenciasModificacionObraMenor.html" />
+    <mapID target="licenciasConsultaObraMayor" url="Pages/es/licenciasConsultaObraMayor.html" />
+    <mapID target="licenciasConsultaObraMenor" url="Pages/es/licenciasConsultaObraMenor.html" />
+    <mapID target="licenciasInformes" url="Pages/es/licenciasInformes.html" />
+    <mapID target="licenciasConsultarEventos" url="Pages/es/licenciasConsultarEventos.html" />
+    <mapID target="licenciasUltimosEventos" url="Pages/es/licenciasUltimosEventos.html" />
+    <mapID target="licenciasPlanos" url="Pages/es/licenciasPlanos.html"/>
+    <mapID target="licenciasNotificaciones" url="Pages/es/licenciasNotificaciones.html"/>
+    <mapID target="licenciasHistorico" url="Pages/es/licenciasHistorico.html"/>
+    <mapID target="licenciasTareasPendientes" url="Pages/es/licenciasTareasPendientes.html"/> 
+	<mapID target="licenciasConfiguracion" url="Pages/es/licenciasConfiguracion.html"/>   
+    <mapID target="licenciasIdioma" url="Pages/es/licenciasIdioma.html"/>
+</map>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Principal</display-name>
+  
+  	<servlet>
+    	<servlet-name>autorun</servlet-name>
+    	<servlet-class>admcarApp.PasarelaAdmcar</servlet-class>
+    	<load-on-startup>1</load-on-startup>
+  	</servlet>
+  
+    <servlet>
+		<servlet-name>HeartBeat</servlet-name>
+		<servlet-class>com.geopista.server.control.web.HeartBeat</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+    	
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.geopista.server.control.web.Login</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+      
+    <servlet-mapping>
+		<servlet-name>HeartBeat</servlet-name>
+		<url-pattern>/HeartBeat</url-pattern>
+    </servlet-mapping>
+		
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JAAS Role</web-resource-name>
+			<url-pattern>/Login/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>Geopista.Administracion.Login</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>Jetty Demo Realm</realm-name>
+	</login-config>
+		
+	<security-role>
+		<role-name>Geopista.Administracion.Login</role-name>
+	</security-role>
+	
+</web-app>

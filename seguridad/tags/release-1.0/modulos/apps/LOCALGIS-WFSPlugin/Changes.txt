@@ -1,0 +1,93 @@
+Version 1.1.0 (2008-07-04)
+
+   This release includes the following new features and bugfixes:
+
+   Features:
+    - implemented WFS-T for WFS 1.1.0 (mainly tested against deegree
+      WFS-T-server
+    - added basic authentification-support for usage with deegree OWSProxy
+    - updated with current deegree2.jar 
+    - handling of empty featuretypes and fake geometries (useful for transactions)
+    - improved internal threading
+
+   Bugfixes:
+    - fix of WFSFrame for standalone usage
+    - fix for non-localized messages under Windows
+    - some cosmetics on the build-mechanism
+    - improved exceptions
+    - improved API for more generic use (outside the plugin)
+    - code-cleanup and
+    - fixed 'caching' of transaction requests
+    - fixed WFS 1.0.0 regarding feature types without namespaceregarding feature types without namespace
+    - convert long values to int since OpenJUMP dies not know them
+
+Version 1.0.0 (2007-06-03)
+
+  This release includes more fixes.
+
+  Features:
+  - support for EPSG:3067 in deegree2.jar
+  - updated I18N-translations (DE, FI)
+  - added more verbose logging-options
+  - WFSPlugin now uses the given proxy-entries from Java
+ 
+  Fixes:
+  - reenabled the Advanced-tab even if DescribeFeatureType fails -
+    essential feature for debugging.
+  - Some GUI-beautifying, rearranging buttons
+  - disabled GET/POST-selector
+  - Fix for DWithin-spatial filter
+  - Fix for the problems of null prefixes and false namespaces of 
+	misbehaving WFS 
+  - Fix for casting every attribute to strings
+  
+Version 0.3.0 (2007-05-10)
+
+  This release includes major bugfixes
+  
+  Fixes:
+  - Assertion Failed error in OpenJUMP 1.2b (now runs with OpenJUMP 1.0.1
+    and 1.2b)
+  - fix for compatibility to Vivid Solutions JUMP1.2
+  - fixes for a number of NullPointerExceptions
+  - no editable SRS-combo-box anymore (which throwed exceptions when
+    editing stuff inside
+  - fix maxFeature-Option
+  - Response-tab removed in Plugin-mode, only available as standalone tool
+  - reads gml:GeometryAssociationProperty from 2.1.2 schemas now
+  -
+
+  New Features:
+  - Implements threading for dataloading
+  
+Version 0.2.0 (2007-05-03)
+
+  This release includes major bugfixes and some new features:
+  
+  New Features:
+  - supports now WFS 1.0.0 and 1.1.0 (deegree WFS)
+  - Capabilities and DescribeFeatureType are shown as syntax-highlighted 
+    text and saveable to a file
+  - using the plugin in standalone mode GetFeature-Response is saveable to
+    a file
+  - EPSG-SRS-Support for 239{1,2,3,4} (needs an updated deegree2.jar)
+  - parsing of the supported SRS and update the GUI accordingly
+  - updated I18N-support for the WFSDialog
+  - updated Javadoc comments
+  - updated build-script
+  - added some needed jars
+  - number of bug-fixes and GUI improvements
+
+Version 0.1.0 (2007-05-01)
+
+  This is the inital release.
+
+  Features:
+  - supports GetCapabilities, DescribeFeatureType, GetFeature (obviously)
+  - supports WFS Version 1.0.0
+  - supports GET and POST requests
+  - supports GML2 and GML3.1.1
+  - supports spatial operations 
+  - also runs as a standalone generic WFS-client for testing WFS-services
+  - best tested against Geoserver 1.5.0
+

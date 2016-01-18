@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis</groupId>
+	<artifactId>localgis-license</artifactId>
+	<packaging>jar</packaging>
+	<name>LOCALGIS License</name>
+	<description></description>
+	<organization>
+		<name>MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO</name>
+	</organization>
+	<version>3.0</version>
+
+		
+	<distributionManagement>
+		<repository>
+			<id>serverLCGIII</id>
+			<name>LocalGISIII</name>
+			<url>http://localgis3.minetur.gob.es/nexus/content/groups/localgisgroup/</url>
+		</repository>
+		<snapshotRepository>
+			<id>serverLCGIII</id>
+			<name>LocalGISIII</name>
+			<url>http://localgis3.minetur.gob.es/nexus/content/groups/localgisgroup/</url>
+		</snapshotRepository>
+	</distributionManagement>	
+</project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xfire.codehaus.org/config/1.0">
+
+	<service>
+		<name>ILocalWebWS</name>
+		<serviceClass>com.localgis.ln.ILocalWebLNWS</serviceClass>
+		<implementationClass>			com.localgis.ln.LocalWebLNWS		</implementationClass>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>session</scope>
+		
+		<inHandlers>
+      <handler handlerClass="org.codehaus.xfire.util.dom.DOMInHandler" />
+      <bean class="org.codehaus.xfire.security.wss4j.WSS4JInHandler" xmlns="">
+        <property name="properties">
+        
+        <!-- <map xmlns="" >
+          <entry key="passwordCallbackRef" xmlns="">
+             <bean xmlns="" class="org.codehaus.xfire.demo.PasswordHandler" id="passHandler" name="passHandler"/>
+         </entry>
+        <entry key="action" value="UsernameToken" />
+   </map> -->
+        
+           <props>
+            <prop key="action">UsernameToken</prop>
+            <prop key="passwordCallbackClass">org.codehaus.xfire.demo.PasswordHandler</prop>
+          </props>
+        </property>
+      </bean>
+      <handler handlerClass="org.codehaus.xfire.demo.ValidateUserTokenHandler" />
+    </inHandlers>
+    
+	</service></beans>

@@ -1,0 +1,33 @@
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+
+   <Set name="contextPath">/dnie</Set>
+   <Set name="war"><SystemProperty default="." name="jetty.home"/>/wtpwebapps/localgis-server-dnie</Set>
+
+   <Set name="extractWAR">true</Set>
+   <Set name="copyWebDir">false</Set>
+
+  <Get name="securityHandler">
+		<Set name="loginService">
+			<New id="certificateLoginService" class="com.geopista.security.LocalgisJAASLoginService">
+				<Set name="Name">certificateLoginService</Set>
+				<Set name="LoginModuleName">dnielogin</Set>
+				<Set name="CallbackHandlerClass">
+					org.eclipse.jetty.plus.jaas.callback.DefaultLocalgisCallbackHandler
+				</Set>
+				<Set name="IdentityService">
+					<New class="org.eclipse.jetty.security.DefaultIdentityService"/>
+				</Set>
+				<Set name="roleClassNames">
+					<Array type="java.lang.String">
+						<Item>org.eclipse.jetty.plus.jaas.JAASRole</Item>
+						<Item>org.eclipse.jetty.plus.jaas.JAASGroup</Item>								
+						<Item>com.localgis.security.model.LocalgisJAASGroup</Item>
+					</Array>
+				</Set>
+			</New>
+		</Set>
+		<Set name="authenticator">
+			<New id="clientCertDNIeFNMTAuthenticator" class="org.eclipse.jetty.security.authentication.ClientCertDNIeFNMTAuthenticator"/>
+		</Set>
+   </Get>
+</Configure>

@@ -1,0 +1,157 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis</groupId>
+	<artifactId>localgis-apps</artifactId>
+	<packaging>pom</packaging>
+	<version>3.0</version>
+	<name>LocalGIS Workbench Parent</name>
+		<parent>
+		<artifactId>localgis-parent-artifacts</artifactId>
+		<groupId>com.localgis</groupId>
+		<version>3.0</version>
+	</parent>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<target>1.7</target>
+					<source>1.7</source>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<modules>		
+		
+		<module>${appModulesPath}/../ed50toetrs89/localgis-srid-converter</module>
+				
+		<module>${appModulesPath}/localgis-cifrado</module>
+		
+		<module>${appWebAppsPath}/GuiaUrbana/localgis-core</module>
+		<module>${appWebAppsPath}/GuiaUrbana/localgis-core-geowfst</module>
+
+		<module>${appModulesPath}/localgis-const</module>		
+		<module>${appModulesPath}/localgis-utils</module>
+		<module>${appModulesPath}/localgis-security</module>
+		<module>${appModulesPath}/localgis-resources-context</module>
+		<module>${appModulesPath}/localgis-context</module>
+		<module>${appModulesPath}/localgis-contextutils</module>
+		<module>${appModulesPath}/localgis-datavision</module>
+		<module>${appModulesPath}/localgis-xml2Java</module>
+		<module>${appModulesPath}/localgis-model</module>
+		<module>${appModulesPath}/localgis-agil</module>
+		<module>${appModulesPath}/localgis-sql</module>
+		<module>${appModulesPath}/localgis-deegree</module>
+		<module>${appModulesPath}/localgis-geotools</module>
+		<module>${appModulesPath}/localgis-minimal-workbench</module>
+		<module>${appModulesPath}/localgis-jnlp-servlet</module>
+		
+		<module>${appModulesPath}/localgis-plugin-datosexternos</module>
+		<module>${appModulesPath}/localgis-protocol</module>
+		<module>${appModulesPath}/localgis-workbench</module>
+		<module>${appModulesPath}/localgis-workbench-basic</module>
+		<!--module>${appModulesPath}/localgis-datamodel-basic</module-->
+		<module>${appModulesPath}/localgis-model-admcar</module>
+		<module>${appModulesPath}/localgis-model-alfresco</module>
+		<module>${appModulesPath}/localgis-model-catastro</module>
+		<module>${appModulesPath}/localgis-model-cementerios</module>
+		<module>${appModulesPath}/localgis-model-contaminantes</module>
+		<module>${appModulesPath}/localgis-model-eiel</module>
+		<module>${appModulesPath}/localgis-model-inventario</module>
+		<module>${appModulesPath}/localgis-model-espaciopublico</module>
+		<module>${appModulesPath}/localgis-model-layer</module>
+		<module>${appModulesPath}/localgis-model-ocupaciones</module>
+		<module>${appModulesPath}/localgis-model-report</module>
+		<module>${appModulesPath}/localgis-piroplugins</module>
+	
+		<module>${appModulesPath}/localgis-utils-plugin</module>
+		<module>${appModulesPath}/localgis-defaultplugins</module>
+		<module>${appModulesPath}/localgis-utils-alfresco</module>	
+		<module>${appModulesPath}/localgis-utils-catastro</module>
+		<module>${appModulesPath}/localgis-utils-cementerios</module>	
+		<module>${appModulesPath}/localgis-utils-contaminantes</module>	
+		<module>${appModulesPath}/localgis-utils-document</module>	
+		<module>${appModulesPath}/localgis-utils-eiel</module>	
+		<module>${appModulesPath}/localgis-utils-espaciopublico</module>	
+		<module>${appModulesPath}/localgis-utils-inventario</module>	
+		<module>${appModulesPath}/localgis-utils-report</module>	
+		<module>${appModulesPath}/localgis-utils-geomarketing</module>	
+		<module>${appModulesPath}/localgis-appcontext-alfresco</module>	
+		<module>${appModulesPath}/localgis-appcontext-licencias</module>	
+		<module>${appModulesPath}/localgis-appcontext-inventario</module>
+		<module>${appModulesPath}/localgis-appcontext-eiel</module>
+		<module>${appModulesPath}/localgis-appcontext-sigm</module>
+		<module>${appModulesPath}/localgis-ui</module>
+		<module>${appModulesPath}/localgis-coordinateconversion</module>
+		<module>${appModulesPath}/localgis-filtersld</module>
+		<module>${appModulesPath}/localgis-gps</module>		
+		<module>${appModulesPath}/localgis-plugin-cementerios</module>
+		<module>${appModulesPath}/localgis-plugin-exportshp</module>
+		<module>${appModulesPath}/localgis-plugin-gpx4j</module>
+		<module>${appModulesPath}/localgis-plugin-inventario</module>
+		<module>${appModulesPath}/localgis-plugin-geomarketing</module>
+		<module>${appModulesPath}/localgis-plugin-sigm</module>
+
+		<module>${appModulesPath}/localgis-padron-extendedform</module>
+		<module>${appModulesPath}/localgis-catastro-extendedform</module>
+
+		<module>${appModulesPath}/localgis-plugin-waternetwork</module>
+		<module>${appModulesPath}/localgis-plugin-eiel</module>
+		<module>${appModulesPath}/localgis-reports</module>
+		<module>${appModulesPath}/localgis-resources</module>
+		<module>${appModulesPath}/localgis-resources-administracion</module>
+		
+		<module>${appModulesPath}/localgis-servercontext</module>
+		
+		<module>${appModulesPath}/localgis-sldcontroler</module>
+		
+		<module>${appModulesPath}/localgis-svglocalgisviewer</module>
+		<module>${appModulesPath}/localgis-svgviewer</module>
+		<module>${appModulesPath}/localgis-tinyline</module>
+		<module>${appModulesPath}/localgis-ui-cargador</module>
+		
+		<!--plugins-->
+		<module>${appModulesPath}/localgis-wfsplugin</module> 
+		<module>${appPluginsPath}/Bsheditor</module>
+		<module>${appPluginsPath}/BuscadorCallejeroPlugin</module>
+		<module>${appPluginsPath}/ConexAplicExternasJava</module>
+		<module>${appPluginsPath}/Gpx</module>		
+		<module>${appPluginsPath}/localgis-plugin-impresion</module>
+		<module>${appPluginsPath}/ImportadorDatos</module>
+		
+		<!--Gestor FIP-->
+		<module>${appWebAppsPath}/LouRED/localgis-gestorfip-client</module>
+	 	<module>${appModulesPath}/localgis-utils-gestorfip</module>
+		<module>${appModulesPath}/localgis-plugin-fichaurbanistica</module>
+		<module>${appModulesPath}/localgis-plugin-loadcatastrolayers</module>
+		<module>${appModulesPath}/localgis-plugin-opengestor</module>
+		<module>${appModulesPath}/localgis-plugin-rpm</module>
+		<!--Georreferencia externa-->
+		<module>${appPluginsPath}/GeorreferenciacionExterna</module>	
+		<module>${appWebAppsPath}/GeorreferenciaExternaWeb/localgis-georreferenciaexterna-ws</module>
+		<module>${appWebAppsPath}/GeorreferenciaExternaWeb/localgis-georreferenciaexterna-client</module>
+
+		<module>${appModulesPath}/localgis-parent-server</module>
+
+		
+		<!--modulos web-->
+		<module>${appModulesPath}/localgis-root</module>
+		<module>${appModulesPath}/localgis-software</module>
+		
+		
+		<!-- Para compilar el apps-import-inicial es preciso el apps-layerutl-->
+		<module>${appModulesPath}/localgis-apps-layerutil</module>
+		<module>${appModulesPath}/localgis-apps-import-inicial</module>
+		<module>${appModulesPath}/localgis-apps-certificados</module>
+
+	</modules>	
+</project>

@@ -1,0 +1,11 @@
+#--------------------------------------------------------------------
+# (c) Copyright IBM Corp 1999, 2006
+
+#--------------------------------------------------------------------
+# options for jclFoundation11
+#--------------------------------------------------------------------
+
+-icp "{{current.file.dir}}{{/}}jclFoundation11{{/}}classes.zip"
+-icp "{{current.file.dir}}{{/}}charconv.zip"
+-icp "{{current.file.dir}}{{/}}jclFoundation11{{/}}locale.zip"
+

@@ -1,0 +1,1 @@
+java -cp . test.ConfiguraLocalGISMobile

@@ -1,0 +1,16 @@
+<serviceGroup>
+ 	<service name="Registry" targetNamespace="http://www.localgis.com/ws">
+		<description>Modules Registry Service</description>
+		<schema schemaNamespace="http://www.localgis.com/ws/registry/xsd/" />
+		<parameter name="ServiceClass" locked="false">com.localgis.ws.Registry</parameter>
+		<operation name="installModule">
+			<messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+		</operation>
+		<operation name="removeModule">
+			<messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+		</operation>
+		<operation name="getRegistry">
+			<messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+		</operation>
+	</service> 
+</serviceGroup>

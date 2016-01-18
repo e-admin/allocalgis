@@ -1,0 +1,23 @@
+<root>
+	<element xml-name="topLeftCornerx" java-name="topLeftCornerx" />
+	<element xml-name="topLeftCornery" java-name="topLeftCornery" />
+	<element xml-name="topRightCornerx" java-name="topRightCornerx" />
+	<element xml-name="topRightCornery" java-name="topRightCornery" />
+	<element xml-name="BottomLeftCornerx" java-name="BottomLeftCornerx" />
+	<element xml-name="BottomLeftCornery" java-name="BottomLeftCornery" />
+	<element xml-name="BottomRightCornerx" java-name="BottomRightCornerx" />
+	<element xml-name="BottomRightCornery" java-name="BottomRightCornery" />
+	<element xml-name="PrintHeight" java-name="PrintHeight" />
+	<element xml-name="PrintWidth" java-name="PrintWidth" />
+	<element xml-name="PrintX" java-name="PrintX" />
+	<element xml-name="PrintY" java-name="PrintY" />
+	<element xml-name="ScreenHeight" java-name="ScreenHeight" />
+	<element xml-name="ScreenWidth" java-name="ScreenWidth" />
+	<element xml-name="ScreenX" java-name="ScreenX" />
+	<element xml-name="ScreenY" java-name="ScreenY" />
+	<element xml-name="Transparency" java-name="Transparency" />
+	<element xml-name="IncrementCount" java-name="IncrementCount" />
+	<element xml-name="PaintingArea" java-name="PaintingArea" />
+	<element xml-name="Transparency" java-name="Transparency" />
+	<element xml-name="LinkedMapNumber" java-name="linkedToMapNumber" />
+</root>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="localgis_marker" >
+  
+  <insert id="insert" parameterClass="com.localgis.web.core.model.LocalgisMarker" >
+    <selectKey keyProperty="markerid" resultClass="java.lang.Integer">
+      select localgisguiaurbana.markersequence.nextval from dual
+    </selectKey>
+    insert into localgisguiaurbana.marker (markerid, mapid, username, x, y, scale, markname, marktext)
+    values (#markerid:NUMERIC#, #mapid:INTEGER#, #username:VARCHAR#, #x:DOUBLE#, #y:DOUBLE#, #scale:DOUBLE#,
+      #markname:VARCHAR#, #marktext:VARCHAR#)
+  </insert>
+
+</sqlMap>

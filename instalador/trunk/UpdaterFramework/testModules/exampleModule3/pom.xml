@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.localgis.modules</groupId>
+    <version>3.0</version>
+    <relativePath>../updaterModuleParent</relativePath>
+    <artifactId>updaterModuleParent</artifactId>
+  </parent>
+  <artifactId>exampleModule3</artifactId>
+  <name>Example client module 3</name>
+  	<properties>
+		<module.title>Example client module 3</module.title>
+		<module.version>3.1.0</module.version>
+		<module.installType>JAR</module.installType>
+		<module.artifact.groupId>com.localgis.workbench</module.artifact.groupId>
+		<module.artifact.id>ficticiousClient</module.artifact.id>
+		<module.artifact.version>3.0.20</module.artifact.version>
+		<module.artifact.type>jar</module.artifact.type>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.localgis.maven.plugin</groupId>
+				<artifactId>updaterPlugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>com.localgis.modules</groupId>
+			<artifactId>exampleModule2</artifactId>
+			<version>3.0</version>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration >
+  <classPathEntry location="/postgresql/postgresql-8.4-701.jdbc3.jar"/>
+  <ibatorContext id="contextPrincipal" >
+    <jdbcConnection driverClass="org.postgresql.Driver" connectionURL="jdbc:postgresql://213.164.32.203:5432/geopista" userId="geopista" password="geopista" />
+	    <javaModelGenerator targetPackage="com.geopista.app.cementerios.business.vo" targetProject="core.toledo/src" />
+    <sqlMapGenerator targetPackage="sqlMaps" targetProject="core.toledo/resources" />
+    <daoGenerator targetPackage="com.geopista.app.cementerios.business.dao.interfaces" targetProject="core.toledo/src" type="SPRING" implementationPackage="com.geopista.app.cementerios.business.dao.implementations"/>
+
+<!--   
+  	<table schema="cementerio" tableName="elem_cementerio" domainObjectName="elem_cementerio"   enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="true" enableUpdateByExample="false">
+    	 <generatedKey column="id" sqlStatement="SELECT nextVal('cementerio.elem_cementerio_id_seq')" identity="false" />
+    </table>    
+   
+ 	<table schema="cementerio" tableName="cementerio" domainObjectName="Cementerio" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+    </table>
+    
+    <table schema="cementerio" tableName="Bloque" domainObjectName="Bloque" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="true" enableUpdateByExample="false">
+    	<generatedKey column="id" sqlStatement="SELECT nextVal('cementerio.bloque_id_seq')" identity="false" />
+    </table>    
+     
+    <table schema="cementerio" tableName="Localizacion" domainObjectName="Localizacion" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+    	<generatedKey column="id" sqlStatement="SELECT nextVal('cementerio.localizacion_id_seq')" identity="false" />
+    </table>  
+      
+    <table schema="cementerio" tableName="UnidadEnterramiento" domainObjectName="UnidadEnterramiento" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="true" enableUpdateByExample="false">
+    	<generatedKey column="ID" sqlStatement="SELECT nextVal('cementerio.unidadenterramiento_id_seq')" identity="false" />
+    </table>
+     
+    <table schema="cementerio" tableName="Plaza" domainObjectName="Plaza" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="true" enableUpdateByExample="false">
+    	<generatedKey column="ID" sqlStatement="SELECT nextVal('cementerio.plaza_id_seq')" identity="false" />
+    </table>   
+       
+    <table schema="cementerio" tableName="Cementerio_feature" domainObjectName="CementerioFeature" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+    </table>
+        
+    <table schema="cementerio" tableName="Reltitular" domainObjectName="RelTitular" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+    </table>
+   
+    <table schema="cementerio" tableName="Persona" domainObjectName="Persona" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="true" enableUpdateByExample="false">
+    </table>
+   
+    <table schema="cementerio" tableName="Tarifa" domainObjectName="Tarifa" enableCountByExample="false" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true">
+    	<generatedKey column="ID" sqlStatement="SELECT nextVal('cementerio.tarifa_id_seq')" identity="false" />
+    </table>
+      
+    <table schema="cementerio" tableName="Concesion" domainObjectName="Concesion" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="true" enableUpdateByExample="false">
+    	<generatedKey column="ID" sqlStatement="SELECT nextVal('cementerio.concesion_id_seq')" identity="false" />
+    </table>
+     
+    <table schema="cementerio" tableName="Intervencion" domainObjectName="Intervencion" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+    	<generatedKey column="ID" sqlStatement="SELECT nextVal('cementerio.intervencion_id_seq')" identity="false" />
+    </table>
+    
+    <table schema="cementerio" tableName="Difunto" domainObjectName="Difunto" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="true" enableUpdateByExample="false">
+    	<generatedKey column="ID" sqlStatement="SELECT nextVal('cementerio.difunto_id_seq')" identity="false" />
+    </table>
+   
+    <table schema="cementerio" tableName="DatosFallecimiento" domainObjectName="DatosFallecimiento" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+    	<generatedKey column="ID" sqlStatement="SELECT nextVal('cementerio.fallecimiento_id_seq')" identity="false" />
+    </table>
+          
+    <table schema="cementerio" tableName="Intervencion" domainObjectName="Intervencion" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+    	<generatedKey column="ID" sqlStatement="Postgres" identity="true" />
+    </table>
+
+    <table schema="cementerio" tableName="Servicio" domainObjectName="Servicio" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+    	<generatedKey column="ID" sqlStatement="Postgres" identity="true" />
+    </table>
+   
+    <table schema="cementerio" tableName="elem_feature" domainObjectName="ElemFeature" enableCountByExample="false" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true">
+    	<generatedKey column="ID" sqlStatement="SELECT nextVal('cementerio.elem_feature_id_seq')" identity="false" />
+    </table>
+    
+    <table schema="cementerio" tableName="Inhumacion" domainObjectName="Inhumacion" enableCountByExample="false" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true">
+    	<generatedKey column="ID" sqlStatement="SELECT nextVal('cementerio.inhumacion_id_seq')" identity="false" />
+    </table>
+
+    <table schema="cementerio" tableName="Exhumacion" domainObjectName="Exhumacion" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+    	<generatedKey column="ID" sqlStatement="SELECT nextVal('cementerio.exhumacion_id_seq')" identity="false" />
+    </table>
+      
+     <table schema="cementerio" tableName="documento" domainObjectName="Documento" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="true" enableUpdateByExample="false">
+    	<generatedKey column="id_documento" sqlStatement="SELECT nextVal('cementerio.documento_id_seq')" identity="false" />
+    </table>
+   
+    <table schema="cementerio" tableName="documento_tipos" domainObjectName="DocumentoTipo" enableCountByExample="false" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true">
+    </table>
+
+    <table schema="cementerio" tableName="anexo_cementerio" domainObjectName="AnexoCementerio" enableCountByExample="false" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true">
+    </table>
+
+    <table schema="cementerio" tableName="anexo_feature" domainObjectName="AnexoFeature" enableCountByExample="false" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true">
+    </table>
+  
+    <table schema="cementerio" tableName="historico_difuntos" domainObjectName="HistoricoDifuntos" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+    	<generatedKey column="ID" sqlStatement="SELECT nextVal('cementerio.historico_difuntos_id_seq')" identity="false" />
+    </table>
+
+    <table schema="cementerio" tableName="intervencion" domainObjectName="Intervencion" enableCountByExample="false" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true">
+    	<generatedKey column="ID" sqlStatement="SELECT nextVal('cementerio.intervencion_id_seq')" identity="false" />
+    </table>
+-->    
+     <table schema="cementerio" tableName="anexo_cementerio" domainObjectName="AnexoCementerio" enableCountByExample="false" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true">
+    </table>
+      
+  </ibatorContext>
+</ibatorConfiguration>

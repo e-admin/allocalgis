@@ -1,0 +1,23 @@
+1. Generar el preinstalador con la maquina virtual
+	- Directorio preinstalador
+		Ejecutar makecab.bat
+			Se generará el fichero localgismobile-pm.CAB que habrá que subir a la PDA
+			Para distribuirlo automaticamente habrá que subirlo al directorio
+			localgis-apps-movilidad-cab\src\main\resources\
+			
+2. Generar el aplicativo
+	- Directorio LocalgisMobile
+		Ejecutar makecabMaven.bat
+			Se generará el fichero  que habrá que subir a la PDA
+			
+			Para distribuirlo automaticamente habrá que subirlo al directorio
+			localgis-apps-movilidad-cab\src\main\resources\
+
+3. Generar el configurador PDA
+	- Directorio configuradorPDA
+		Ejecutar configuraLocalGISMobile.bat
+		Ejecutar makecab.bat
+			Se generará el fichero configLocalGIS.CAB que habrá que subir a la PDA
+			
+			Para distribuirlo automaticamente habrá que subirlo al directorio
+			localgis-apps-movilidad-cab\src\main\resources\

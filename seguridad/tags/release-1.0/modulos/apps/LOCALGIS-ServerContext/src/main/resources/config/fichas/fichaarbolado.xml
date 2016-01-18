@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<documento>
+    <encabezadoI18N>Informe.Contaminante.arbolado.encabezado</encabezadoI18N>
+    <piepaginaI18N>Informe.Contaminante.arbolado.piePagina</piepaginaI18N>
+    <CabeceraI18N>Informe.Contaminante.arbolado.cabecera</CabeceraI18N>
+    <Plano width="250" height="250"/>
+    <PieI18N>Informe.Contaminante.arbolado.pie</PieI18N>
+    <p/>
+    <p/>
+    <SuperTituloI18N>Informe.Contaminante.arbolado.SuperTituloDatos</SuperTituloI18N>
+    <p/>
+    <TituloDetalleI18N>Informe.Contaminante.arbolado.TituloDetalleID</TituloDetalleI18N><Detalle tipo="campo">getId</Detalle>
+    <TituloDetalleI18N>Informe.Contaminante.arbolado.TituloDetalleObservaciones</TituloDetalleI18N><Detalle tipo="campo">getObs</Detalle>
+    <TituloDetalleI18N>Informe.Contaminante.arbolado.TituloDetalleExtension</TituloDetalleI18N><Detalle tipo="campo">getExt</Detalle>
+    <TituloDetalleI18N>Informe.Contaminante.arbolado.TituloDetalleTipo</TituloDetalleI18N><Detalle tipo="campo" clase="Domain" domsource="DocumentacionTipoZonaArbolada">getIdTipo</Detalle>
+    <TituloDetalleI18N>Informe.Contaminante.arbolado.TituloDetallePlantadoPor</TituloDetalleI18N><Detalle tipo="campo">getPlantadoPor</Detalle>
+    <TituloDetalleI18N>Informe.Contaminante.arbolado.TituloDetalleFechaPlantacion</TituloDetalleI18N><Detalle tipo="campo" clase="Date">getFechaPlanta</Detalle>
+    <TituloDetalleI18N>Informe.Contaminante.arbolado.TituloDetalleFechaUltimaTala</TituloDetalleI18N><Detalle tipo="campo" clase="Date">getFechaUltimaTala</Detalle>
+</documento>

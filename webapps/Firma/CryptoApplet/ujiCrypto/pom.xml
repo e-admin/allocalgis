@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>es.uji</groupId>
+  <artifactId>ujiCrypto</artifactId>
+  <version>2.0.5</version>
+  <name>ujiCrypto</name>
+  <url>http://proyectostic.uji.es/cryptoapplet/</url>
+
+  <parent>
+    <groupId>es.uji</groupId>
+    <artifactId>CryptoApplet</artifactId>
+    <version>2.0.5</version>
+  </parent>
+ 
+  <dependencies>
+    <dependency>
+      <groupId>es.uji</groupId>
+      <artifactId>ujiUtils</artifactId>
+      <version>2.0.5</version>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.16</version>
+    </dependency>
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcprov-jdk15</artifactId>
+      <version>1.43</version>
+    </dependency>
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcmail-jdk15</artifactId>
+      <version>1.43</version>
+    </dependency>
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bctsp-jdk15</artifactId>
+      <version>1.43</version>
+    </dependency>
+    <!--dependency>
+      <groupId>xml-security</groupId>
+      <artifactId>xmlsec</artifactId>
+      <version>1.4.1</version>
+    </dependency-->
+	<dependency>
+		<groupId>org.apache.santuario</groupId>
+		<artifactId>xmlsec</artifactId>
+		<version>1.4.1</version>
+	</dependency>
+    <dependency>
+      <groupId>com.lowagie</groupId>
+      <artifactId>itext</artifactId>
+      <version>1.4</version>
+    </dependency>
+  	<dependency>
+		<groupId>javax.pkcs11</groupId>
+		<artifactId>javax.pkcs11</artifactId>
+		<version>1.0</version>
+	</dependency>
+  
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <keystore>../GeopistaKeyStore</keystore>
+          <alias>geopista</alias>
+          <storepass>geopista99</storepass>
+          <signedjar>target/${project.build.finalName}-signed.jar</signedjar>
+          <verify>true</verify>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

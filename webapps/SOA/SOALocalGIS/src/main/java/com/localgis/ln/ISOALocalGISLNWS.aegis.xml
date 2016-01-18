@@ -1,0 +1,52 @@
+<mappings>
+    <mapping>
+       <method name="consultarCatastro">
+            <return-type componentType="com.localgis.model.ot.ParcelaOT"/>
+        </method>       
+        <method name="obtenerListaCapas">
+            <return-type componentType="com.localgis.model.ot.CapaOT"/>
+        </method>
+        <method name="altaPOI">            
+            <parameter index="0" componentType="com.localgis.model.ot.PoiOT"/>
+        </method>   
+        <method name="verPlanosPublicados">            
+            <return-type componentType="com.localgis.web.core.model.LocalgisMap"/>
+        </method>
+         <method name="selectLayersByIdMap">            
+            <return-type componentType="com.localgis.web.core.model.LocalgisLayer"/>
+        </method>
+         <method name="selectColumnsByLayerTranslated">            
+            <return-type componentType="com.localgis.web.core.model.GeopistaColumn"/>
+        </method>
+        <method name="verMunicipiosPublicados">            
+            <return-type componentType="com.localgis.web.core.model.GeopistaMunicipio"/>
+        </method>
+        <method name="altaCallejero">            
+            <parameter index="0" componentType="com.localgis.model.ot.CalleOT"/>
+        </method>      
+        <method name="modificacionCallejero">            
+            <parameter index="1" componentType="com.localgis.model.ot.CalleOT"/>
+        </method>  
+        <method name="altaNumerero">            
+            <parameter index="0" componentType="com.localgis.model.ot.NumeroOT"/>
+        </method>
+        <method name="modificacionNumerero">            
+            <parameter index="1" componentType="com.localgis.model.ot.NumeroOT"/>
+        </method>
+        <method name="bajaNumerero">            
+            <parameter index="2" componentType="com.localgis.model.ot.NumeroOT"/>
+        </method>
+        <method name="obtenerProvincias">
+            <return-type componentType="com.localgis.model.ot.ProvinciaOT"/>
+        </method>
+        <method name="obtenerMunicipios">
+            <return-type componentType="com.localgis.model.ot.MunicipioOT"/>
+        </method>   
+        <method name="obtenerEntidadMunicipios">
+            <return-type componentType="com.localgis.model.ot.EntidadOT"/>
+        </method>
+        <method name="obtenerTiposDeVia">
+            <return-type componentType="com.localgis.model.ot.TipoViaOT"/>
+        </method>        
+    </mapping>
+</mappings>

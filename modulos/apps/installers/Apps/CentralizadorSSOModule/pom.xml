@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>installers</artifactId>
+		<groupId>com.localgis</groupId>
+		<version>3.0.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<groupId>com.localgis.modules.app</groupId>
+	<artifactId>CentralizadorSSOModule</artifactId>
+	<name>CentralizadorSSOModule</name>
+	<description>Metamodulo para Instalar/Actualizar Centralizador SSO</description>
+	<packaging>jar</packaging>
+
+	<properties>
+		<module.title>Modulo Centralizador SSO de LOCALGIS 3.0</module.title>
+		<module.version>3.0.0</module.version>
+		<module.installType>clientJNLP</module.installType>
+		<module.artifact.groupId>com.localgis.app</module.artifact.groupId>
+		<module.artifact.id>localgis-apps-centralizadorsso</module.artifact.id>
+		<module.artifact.version>3.0</module.artifact.version>
+		<module.artifact.type>jar</module.artifact.type>
+		<!-- Lo normal es que sea el mismo artifactId pero distinta versión, por 
+			lo que esta propiedad es optativa en este ejemplo se cambia el artifactId 
+			por simplificar los módulos y demostrar la flexibilidad. -->
+		<!-- <module.upgraded.artifactId>exampleModule2</module.upgraded.artifactId> -->
+		<!-- <module.upgraded.version>0.0.1-SNAPSHOT</module.upgraded.version> -->
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.localgis.maven.plugin</groupId>
+				<artifactId>updaterPlugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.localgis.modules.app</groupId>
+			<artifactId>JnlpClientBasicModule</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="DeficienciasTecnicasRusticaObraMayor"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="NUM_EXPEDIENTE" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="imagen" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[".\\santanyi_escut.gif"]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[select 	
+	A.num_expediente,
+	F2.nombre AS nombre,
+	F2.apellido1 AS apellido1, 
+	F2.apellido2 AS apellido2,
+	E.*,
+	DN.*,
+	TIO.* from expediente_licencia A
+LEFT JOIN solicitud_licencia E ON a.ID_SOLICITUD=e.ID_SOLICITUD 
+LEFT JOIN persona_juridico_fisica F2 ON e.propietario=f2.id_persona
+LEFT JOIN datos_notificacion DN ON dn.id_persona=f2.id_persona
+LEFT JOIN tipo_obra TIO on e.id_tipo_obra=tio.id_tipo_obra 
+WHERE a.num_expediente = $P{NUM_EXPEDIENTE}]]></queryString>
+
+	<field name="num_expediente" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="apellido1" class="java.lang.String"/>
+	<field name="apellido2" class="java.lang.String"/>
+	<field name="id_solicitud" class="java.math.BigDecimal"/>
+	<field name="id_tipo_licencia" class="java.math.BigDecimal"/>
+	<field name="id_tipo_obra" class="java.math.BigDecimal"/>
+	<field name="propietario" class="java.math.BigDecimal"/>
+	<field name="representante" class="java.math.BigDecimal"/>
+	<field name="tecnico" class="java.math.BigDecimal"/>
+	<field name="promotor" class="java.math.BigDecimal"/>
+	<field name="num_administrativo" class="java.lang.String"/>
+	<field name="codigo_entrada" class="java.lang.String"/>
+	<field name="unidad_tramitadora" class="java.lang.String"/>
+	<field name="unidad_de_registro" class="java.lang.String"/>
+	<field name="motivo" class="java.lang.String"/>
+	<field name="nombre_comercial" class="java.lang.String"/>
+	<field name="asunto" class="java.lang.String"/>
+	<field name="fecha" class="java.sql.Timestamp"/>
+	<field name="fecha_entrada" class="java.sql.Timestamp"/>
+	<field name="tasa" class="java.math.BigDecimal"/>
+	<field name="tipo_via_afecta" class="java.lang.String"/>
+	<field name="nombre_via_afecta" class="java.lang.String"/>
+	<field name="numero_via_afecta" class="java.lang.String"/>
+	<field name="portal_afecta" class="java.lang.String"/>
+	<field name="planta_afecta" class="java.lang.String"/>
+	<field name="letra_afecta" class="java.lang.String"/>
+	<field name="cpostal_afecta" class="java.lang.String"/>
+	<field name="municipio_afecta" class="java.lang.String"/>
+	<field name="provincia_afecta" class="java.lang.String"/>
+	<field name="observaciones" class="java.lang.String"/>
+	<field name="id_municipio" class="java.math.BigDecimal"/>
+	<field name="observaciones_doc_entregada" class="java.lang.String"/>
+	<field name="fecha_resolucion" class="java.sql.Timestamp"/>
+	<field name="impuesto" class="java.math.BigDecimal"/>
+	<field name="fecha_limite_obra" class="java.sql.Timestamp"/>
+	<field name="id_persona" class="java.math.BigDecimal"/>
+	<field name="id_via_notificacion" class="java.math.BigDecimal"/>
+	<field name="fax" class="java.lang.String"/>
+	<field name="telefono" class="java.lang.String"/>
+	<field name="movil" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="tipo_via" class="java.lang.String"/>
+	<field name="nombre_via" class="java.lang.String"/>
+	<field name="numero_via" class="java.lang.String"/>
+	<field name="portal" class="java.lang.String"/>
+	<field name="planta" class="java.lang.String"/>
+	<field name="escalera" class="java.lang.String"/>
+	<field name="letra" class="java.lang.String"/>
+	<field name="cpostal" class="java.lang.String"/>
+	<field name="municipio" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<field name="notificar" class="java.lang.String"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="observacion" class="java.lang.String"/>
+
+	<variable name="nombreCompletoSolicitante" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[(($F{nombre} != null && $F{nombre}.length() > 0) ?
+$F{nombre} : "")+
+" "+(($F{apellido1} != null && $F{apellido1}.length() > 0) ?
+$F{apellido1} : "")+
+" "+(($F{apellido2} != null && $F{apellido2}.length() > 0) ?
+$F{apellido2} : "").toString()]]></variableExpression>
+	</variable>
+	<variable name="parrafo1" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA["En relación a la solicitud de Licencia Municipal de Obras formulada en fecha " + (new java.text.SimpleDateFormat("dd.MM.yyyy ")).format($F{fecha_entrada}).toString() + "por" +
+$V{nombreCompletoSolicitante} + " referente a " + $F{descripcion}]]></variableExpression>
+	</variable>
+	<variable name="fecha" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[(new java.text.SimpleDateFormat("dd MMMM yyyy ")).format(new Date()) ]]></variableExpression>
+	</variable>
+	<variable name="domicilioSolicitante" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[((($F{tipo_via} != null && $F{tipo_via}.length() > 0) ?
+$F{tipo_via} : "") +
+" "+(($F{nombre_via} != null && $F{nombre_via}.length() > 0) ?
+$F{nombre_via} : "")+
+" "+(($F{numero_via} != null && $F{numero_via}.length() > 0) ?
+$F{numero_via}: "")+
+" "+(($F{portal} != null && $F{portal}.length() > 0) ?
+$F{portal}: "")+
+" "+(($F{planta} != null && $F{planta}.length() > 0) ?
+$F{planta} : "")+
+(($F{letra} != null && $F{letra}.length() > 0) ?
+$F{letra} : "")).toString()]]></variableExpression>
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="117"  isSplitAllowed="true" >
+				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="60"
+						y="0"
+						width="56"
+						height="56"
+						key="image-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["c:\\LocalGIS\\Datos\\informes\\santanyi_escut.gif"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement
+						x="8"
+						y="56"
+						width="167"
+						height="15"
+						key="staticText-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica" size="12" isBold="false"/>
+					</textElement>
+				<text><![CDATA[AJUNTAMENT DE SANTANYÍ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="43"
+						y="71"
+						width="91"
+						height="14"
+						key="staticText-2"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[Tel. 971 65 3002]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="43"
+						y="85"
+						width="91"
+						height="14"
+						key="staticText-3"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[Fax. 971 16 3007]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="98"
+						width="177"
+						height="14"
+						key="staticText-4"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[07650 SANTANYí - ILLES BALEARS]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="515"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="10"
+						y="13"
+						width="520"
+						height="50"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{parrafo1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="163"
+						width="520"
+						height="99"
+						key="staticText-5"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Justified">
+						<font/>
+					</textElement>
+				<text><![CDATA[Lo que se le comunica para su conocimiento y efectos oportunos, haciéndole constar que en base al art. 42.5 de la ley 30/1992, de 26 de novicmbre, de Regimen Juridico de las. Administraciones Públicas y del Procedimicnto Administrativo Común, queda suspendido el plazo para que este Ayuntamiento dicte resoluclon administrativa expresa basta que subsane todas las deficiencias notificadas y, en base al art. 92 de la mcncionada Ley. si no subsana todas las deficienclas  en un plazo máximo de tres meses a contar desde la fecha de recepción del presente escrito. se iniciara expediente de caducidad.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="10"
+						y="273"
+						width="140"
+						height="20"
+						key="staticText-6"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[Atentamente,]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="10"
+						y="333"
+						width="140"
+						height="20"
+						key="staticText-7"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[EL ALCALDE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="9"
+						y="313"
+						width="50"
+						height="20"
+						key="staticText-8"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[Santanyí,]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="59"
+						y="313"
+						width="100"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{fecha}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="10"
+						y="423"
+						width="100"
+						height="20"
+						key="staticText-9"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[Miquel Vidal Vidal]]></text>
+				</staticText>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="81"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="18"
+						width="241"
+						height="17"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{nombreCompletoSolicitante}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="38"
+						width="240"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{domicilioSolicitante}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="58"
+						width="160"
+						height="20"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{telefono}]]></textFieldExpression>
+				</textField>
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

@@ -1,0 +1,6 @@
+<mappings>
+    <mapping>
+        <property name="lstBienesInmuebles" componentType="com.localgis.model.ot.BienInmuebleOT"/>
+    </mapping>
+</mappings>
+

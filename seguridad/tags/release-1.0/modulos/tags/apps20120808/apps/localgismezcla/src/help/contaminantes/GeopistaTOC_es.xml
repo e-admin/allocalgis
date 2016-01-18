@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+  <tocitem text="Contenidos">
+      <tocitem text="Introducción" target="geopistaIntro"/>
+      <tocitem text="Acceso" target="geopistaAcceso"/>
+      <tocitem text="ActividadesContaminantes" target="geopistaContaminantes">
+          <tocitem text="Ver expedientes" target="geopistaVerCon"/>
+          <tocitem text="Buscar" target="geopistaBuscarCon"/>
+          <tocitem text="Inspectores" target="geopistaInspectores"/>
+          <tocitem text="Informes" target="geopistaInformesCon"/>
+      </tocitem>
+      <tocitem text="Escombreras" target="geopistaVerVer">
+          <tocitem text="Ver" target="geopistaVerVer">
+              <tocitem text="Editar" target="geopistaVerEditar"/>
+              <tocitem text="Borrar" target="geopistaVerBorrar"/>
+              <tocitem text="Crear" target="geopistaVerCrear"/>
+           </tocitem>
+          <tocitem text="Informes" target="geopistaInformesVer"/>
+
+      </tocitem>
+
+      <tocitem text="Arbolado" target="geopistaArboladoVer">
+          <tocitem text="Ver" target="geopistaArboladoVer">
+              <tocitem text="Editar" target="geopistaArboladoEditar"/>
+              <tocitem text="Borrar" target="geopistaArboladoBorrar"/>
+              <tocitem text="Crear" target="geopistaArboladoCrear"/>
+          </tocitem>
+          <tocitem text="Informes" target="geopistaInformesArbolado"/>
+      </tocitem>
+      <tocitem text="Planos" target="geopistaPlanos"/>
+      <tocitem text="Histórico" target="geopistaHistorico"/>
+      <tocitem text="Idioma" target="geopistaIdioma"/>
+  </tocitem>
+</toc>

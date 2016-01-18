@@ -1,0 +1,113 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <title>Roles en la herramienta de administración</title>
+<!-- *************************************************************************************** -->
+<!-- content styles -->
+<link href="../css/contents.css" rel="stylesheet" type="text/css">
+<!-- *************************************************************************************** -->
+
+</head>
+<body bgcolor="#FFFFFF">
+<h1 class="cabeceraazuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(C)Dominios</h1>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gestiona todos los campos personalizables y
+dominios del sistema.</p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Un campo personalizable es cualquier atributo
+definido en una capa de información que es susceptible de tener unas propiedades específicas para adaptarse a normativas
+ específicas. Un dominio es un conjunto de códigos y descripciones adaptados a un campo personalizable
+específico.</p>
+
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para acceder a esta pantalla hay que elegir el menú
+<b>Dominios/Gestión de dominios</b></p>
+
+<p align="left" class="cabecera2azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="tipos">Tipos de dominios</A></p>
+<ul>
+    <li class="enlaceazuloscuro">StringDomain:</li><ul class="contenidonormal">Define un campo alfanumérico con un patrón opcional.</ul>
+    <li class="enlaceazuloscuro">TreeDomain:</li><ul class="contenidonormal">Un TreeDomain establece relaciones entre otros dominios
+    y columnas del modelo.
+    <p align="center"><IMG  src="./img/Arbol.gif"></p>
+    <p>Cada nivel en las jerarquías representa un dominio para una columna del modelo.
+     Por defecto los niveles se nombran como las columnas a las que se asigna.
+     En la validación se tienen en cuenta las dependencias arriba-abajo en el
+     árbol de dominios.</p>
+    <p>NOTA: En un TreeDomain no se incluye en ningún nivel ningún nodo CODEBOOKDOMAIN sino
+     directamente los códigos CODEDENTRYDOMAIN.</p></ul>
+    <li class="enlaceazuloscuro">NumberDomain:</li><ul class="contenidonormal">Representa un rango de valores numéricos.</ul>
+    <li class="enlaceazuloscuro">CodeBookDomain:</li><ul class="contenidonormal">Dominio que restringe el valor a uno de
+     los enumerados en sus hijos. Los dominios hijo serán de tipo CodeEntryDomain. Sólo tiene sentido un nivel de hijos.</ul>
+    <li class="enlaceazuloscuro">BooleanDomain:</li><ul class="contenidonormal">Un dominio Boolean representa dos posibles valores verdadero/falso.</ul>
+    <li class="enlaceazuloscuro">DateDomain:</li><ul class="contenidonormal">Dominio que codifica una fecha. Permite especificar un rango de fechas válidas.</ul>
+    <li class="enlaceazuloscuro">CodeEntryDomain:</li><ul class="contenidonormal">Entrada fija que tiene un valor de representación y un código asociado.</ul>
+    <li class="enlaceazuloscuro">AutoDomain:</li><ul class="contenidonormal">Un atributo que recibe el valor de otras propiedades de las capas o tablas.</ul>
+</ul>
+
+<p align="left" class="cabecera2azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="operaciones">Operaciones</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Todas las operaciones que se relatan a continuación
+pueden efectuarse a nivel general lo que significa que se aplicará a los dominios de todos los municipios del sistema o a
+nivel particular, en este casa los cambios sólo serán validos para un municipio. Dentro de la aplicación siempre prevalecerán
+ los dominios particulares a los generales.
+</p>
+<ul>
+    <li class="enlaceazuloscuro">Crear un dominio:</li><ul class="contenidonormal">Para crear un dominio padre hay que
+    posicionarse encima de la categoría donde se quiere añadir un dominio. Las categorías son agrupaciones de dominios
+    y sólo sirve, dentro del sistema, para que la visualización de los dominios se realice de forma más cómoda. Una vez
+    posicionados en la categoría elegida podemos o bien pulsar el botón derecho del ratón o pulsar el botón <b>Nuevo</b> de
+    la botonera, al hacer esto aparecerá la siguiente pantalla.
+    <p align="center"><IMG src="./img/dominioPadre.jpg"></p>
+    Introducir el nombre del dominio que se desea crear y pulsar el botón aceptar. El nombre debe ser identificativo al
+    contenido posterior del dominio. Este nombre no aparecerá posteriormente en el sistema, es por esta razón por la cual
+    no se necesita que sea multilingüe.
+    </ul>
+    <li class="enlaceazuloscuro">Borrar un dominio:</li><ul class="contenidonormal">Posicionarse en el dominio que se
+    desea borra y pulsar el botón <b>Eliminar</b>
+    de la botonera. También se puede pulsar el botón derecho y elegir del menú que aparece la opción <b>Borrar dominio padre</b><p>NOTA: Para borrar un dominio este no debe de tener ningún hijo.</p></ul>
+    <li class="enlaceazuloscuro">Crear un nodo de un dominio:</li><ul class="contenidonormal">Para crear un nodo posicionarse
+    en el dominio o nodo donde se quiere crear pulsar el botón <b>Nuevo</b> o elegir la opción <b>Crear nodo</b> que aparece pulsando el
+    botón derecho. Rellenar los datos que aparecen en la parte derecha de la pantalla, estos datos variarán dependiendo
+    del tipo de nodo que se quiera crear. Pulsar el botón <b>Aceptar</b>.</ul>
+    <li class="enlaceazuloscuro">Borrar un nodo de un dominio:</li><ul class="contenidonormal">Para borrar un nodo posicionarse en él y pulsar el botón <b>Eliminar</b>
+     o elegir la opción <b>Borrar nodo</b> que aparece al pulsar el botón derecho.<p>NOTA: Para borrar un nodo este no debe de tener ningún hijo.</p></ul>
+    <li class="enlaceazuloscuro">Editar un nodo de un dominio:</li><ul class="contenidonormal">Seleccionar el nodo que se quiere editar
+    y pulsar el botón <b>Editar</b> modificar los datos en la parte derecha de la pantalla y pulsar el botón <b>Aceptar</b>.</ul>
+</ul>
+
+<p align="center"><IMG height=435 width=560 src="./img/dominios.jpg"></p>
+
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Como se puede ver el listado de dominios esta separado en dos partes. Los
+dominios generales que son aquellos que sirven para todos los municipios del sistema y los dominios particulares de
+cada municipio. Si se quiere que un municipio tenga sus propios dominios habrá que añadirlos en el apartado correspondiente
+a este municipio.</p>
+
+
+
+<p align="left" class="cabecera2azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="iconos">Iconos</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sección que muestra el mapa del Municipio del
+que se están gestionando las Licencias de Obra. Se compone de una botonera que permite al usuario
+moverse por el mapa:
+<ul class="contenidonormal">
+<li><IMG src="./img/categorias.gif">&nbsp;&nbsp;Categoría.</li>
+<li><IMG src="./img/RootDomain.jpg">&nbsp;&nbsp;Dominio.</li>
+<li><IMG src="./img/StringDomain.gif">&nbsp;&nbsp;Nodo del dominio tipo <b>StringDomain</b>.</li>
+<li><IMG src="./img/TreeDomain.jpg">&nbsp;&nbsp;Nodo del dominio tipo <b>TreeDomain</b>.</li>
+<li><IMG src="./img/NumberDomain.gif">&nbsp;&nbsp;Nodo del dominio tipo <b>NumberDomain</b>.</li>
+<li><IMG src="./img/CodeBookDomain.gif">&nbsp;&nbsp;Nodo del dominio tipo <b>CodeBookDomain</b>.</li>
+<li><IMG src="./img/BooleanDomain.gif">&nbsp;&nbsp;Nodo del dominio tipo <b>BooleanDomain</b>.</li>
+<li><IMG src="./img/DateDomain.gif">&nbsp;&nbsp;Nodo del dominio tipo <b>DateDomain</b>.</li>
+<li><IMG src="./img/CodeEntryDomain.gif">&nbsp;&nbsp;Nodo del dominio tipo <b>CodeEntryDomain</b>.</li>
+<li><IMG src="./img/AutDomain.gif">&nbsp;&nbsp;Nodo del dominio tipo <b>AutoDomain</b>.</li>
+
+</ul>
+
+
+<p align="left" class="cabecera2azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="permisos">Permisos</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para poder entrar en esta pantalla el usuario debe
+de poseer el permiso <b>Geopista.Administracion.View</b>.</p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para hacer cualquier tipo de modificación el usuario
+ de poseer el permiso <b>Geopista.Administracion.Edit</b>.
+</p>
+
+</html>
+
+
+
+

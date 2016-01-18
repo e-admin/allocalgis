@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/map_1_0.dtd">
+
+<map version="1.0">
+    <mapID target="geopistaIntro" url="Pages/eu/geopistaIntro.html" />
+    <mapID target="geopistaAcceso" url="Pages/eu/geopistaAcceso.html" />
+    <mapID target="geopistaIdioma" url="Pages/eu/geopistaIdioma.html"/>
+    <mapID target="geopistaContaminantes" url="Pages/eu/geopistaContaminantes.html"/>
+    <mapID target="geopistaVerCon" url="Pages/eu/geopistaVerCon.html"/>
+    <mapID target="geopistaInformesCon" url="Pages/eu/geopistaInformesCon.html"/>
+    <mapID target="geopistaBuscarCon" url="Pages/eu/geopistaBuscarCon.html"/>
+    <mapID target="geopistaInspectores" url="Pages/eu/geopistaInspectores.html"/>
+    <mapID target="geopistaArboladoVer" url="Pages/eu/geopistaArboladoVer.html"/>
+    <mapID target="geopistaArboladoEditar" url="Pages/eu/geopistaArboladoVer.html#editar"/>
+    <mapID target="geopistaArboladoCrear" url="Pages/eu/geopistaArboladoVer.html#crear"/>
+    <mapID target="geopistaArboladoBorrar" url="Pages/eu/geopistaArboladoVer.html#borrar"/>
+    <mapID target="geopistaInformesArbolado" url="Pages/eu/geopistaInformesArbolado.html"/>
+     <mapID target="geopistaVerVer" url="Pages/eu/geopistaVertederos.html"/>
+    <mapID target="geopistaVerEditar" url="Pages/eu/geopistaVertederos.html#editar"/>
+    <mapID target="geopistaVerBorrar" url="Pages/eu/geopistaVertederos.html#borrar"/>
+    <mapID target="geopistaVerCrear" url="Pages/eu/geopistaVertederos.html#crear"/>
+    <mapID target="geopistaInformesVer" url="Pages/eu/geopistaInformesVer.html"/>
+     <mapID target="geopistaPlanos" url="Pages/eu/geopistaPlanos.html"/>
+     <mapID target="geopistaHistorico" url="Pages/eu/geopistaHistorico.html"/>
+</map>

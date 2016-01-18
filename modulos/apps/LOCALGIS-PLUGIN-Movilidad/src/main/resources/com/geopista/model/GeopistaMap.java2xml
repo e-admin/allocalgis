@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<root>
+
+  <element xml-name="layers">
+    <!-- Just "categor" for string matching [Jon Aquino] -->
+    <element xml-name="category" java-name="categor"/>
+  </element>
+
+
+  <attribute xml-name="name" java-name="name"/>
+  <attribute xml-name="isExtracted" java-name="Extracted"/>
+  <attribute xml-name="timeStamp" java-name="timeStamp"/>
+  <attribute xml-name="description" java-name="description"/>
+  <element xml-name="mapUnits" java-name="mapUnits"/>
+  <element xml-name="mapScale" java-name="mapScale"/>
+  <element xml-name="mapProjection" java-name="mapProjection"/>
+    <element xml-name="mapSrid" java-name="mapSrid"/>
+  <attribute xml-name="systemId" java-name="systemId"/>
+  <element xml-name="ordersLayer" java-name="ordersLayer"/>
+  <element xml-name="extractionTimeStamp" java-name="extractionTimeStamp"/>
+  <element xml-name="geometryEnvelope" java-name="geometryEnvelope"/>
+  <element xml-name="systemMap" java-name="systemMap"/>
+  <element xml-name="idMunicipio" java-name="idMunicipio"/>        
+</root>

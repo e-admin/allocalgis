@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Localgis2Me>
+<gridfile>cuadricula.svg</gridfile>
+<users2grid>permisos_celdas.properties</users2grid>
+<srid>23030</srid>
+<numFichLic>1</numFichLic>
+<detail>
+<item>
+<label>Identificador del proyecto</label>
+<value>1327054985993</value>
+</item>
+<item>
+<label>Fecha de extracción</label>
+<value>20/01/2012 11:23:15</value>
+</item>
+<item>
+<label>Identificador del mapa</label>
+<value>50</value>
+</item>
+<item>
+<label>Nombre del mapa</label>
+<value>PRU_Mapa EIEL.77</value>
+</item>
+</detail>
+<appsconfig>
+<CE_meta enabled="true"/>
+<NP_meta enabled="true"/>
+</appsconfig>
+</Localgis2Me>

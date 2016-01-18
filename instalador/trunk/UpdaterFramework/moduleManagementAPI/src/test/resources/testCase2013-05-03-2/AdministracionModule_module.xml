@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <name>Modulo de Administracion de LOCALGIS</name>
+  <version>3.0.0</version>
+  <artifact>
+    <groupId>com.localgis.app</groupId>
+    <artifactId>localgis-apps-administracion</artifactId>
+    <version>3.0</version>
+    <install>clientJNLP</install>
+  </artifact>
+  <dependencyInfo>
+    <dependencies>
+      <module>
+        <name>Agrupador modulos instalacion basica sys server</name>
+        <version>3.0.0</version>
+        <artifact>
+          <groupId>null</groupId>
+          <artifactId>null</artifactId>
+          <version>null</version>
+          <install>package</install>
+        </artifact>
+      </module>
+      <module>
+        <name>Modulo instalacion/actualizacion LOCALGIS-SERVER-Administracion</name>
+        <version>3.0.0</version>
+        <artifact>
+          <groupId>com.localgis.server</groupId>
+          <artifactId>localgis-server-administracion</artifactId>
+          <version>3.0</version>
+          <install>sysWAR</install>
+        </artifact>
+      </module>
+      <module>
+        <name>Modulo Software</name>
+        <version>3.0.0</version>
+        <artifact>
+          <groupId>com.localgis.web</groupId>
+          <artifactId>localgis-software</artifactId>
+          <version>3.0</version>
+          <install>appWAR</install>
+          <finalName>software</finalName>
+        </artifact>
+      </module>
+    </dependencies>
+  </dependencyInfo>
+</module>

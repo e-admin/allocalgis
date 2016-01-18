@@ -1,0 +1,28 @@
+1. Ejecutar lcg3_entorno.bat cambiando previamente la localizacion del maven 2.1
+2. Ejecutar lcg3_clean.bat
+3. Ejecutar lcg3_compile.bat o lcg3_install.bat
+
+
+4. Para compilar (y firmar) una aplicacion independiente
+	Ejecutar lcg_compile.bat sign localgis-apps-eiel 
+	Ejecutar lcg_install.bat sign localgis-apps-eiel 
+	
+	
+Para quitar la Licencia de localgis de los  distintos modulos hay que ejecutar
+
+	Borra todas las licencia de GEOPISTA
+		Usage lcg_compile/lcg_deploy/lcg3_install removeoldlicense
+	Borra la licencia de GEOPISTA del modulo
+		Usage lcg_compile/lcg_deploy/lcg3_install removeoldlicense localgis_const
+
+	Borra todas las licencia de LOCALGIS III
+		Usage lcg_compile/lcg_deploy/lcg3_install removelicense 
+	Borra la licencia de LOCALGIS III del modulo
+		Usage lcg_compile/lcg_deploy/lcg3_install removelicense localgis_const
+
+
+	Incluye la licencia de LOCALGIS III en todos los .java
+		Usage lcg_compile/lcg_deploy/lcg3_install addlicense 
+	Incluye la licencia de LOCALGIS III del modulo
+		Usage lcg_compile/lcg_deploy/lcg3_install addlicense localgis_const
+	

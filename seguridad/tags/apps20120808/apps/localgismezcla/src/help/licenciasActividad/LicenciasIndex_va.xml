@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN" 
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+
+<index version="1.0">
+    <indexitem text="(VA)Contenidos">
+        <indexitem text="(VA)Introducción" target="licenciasIntro"/>
+        <indexitem text="(VA)Usuarios">
+            <indexitem text="(VA)Usuarios y permisos" target="licenciasUsuarios"/>
+        </indexitem>
+        <indexitem text="(VA)WorkFlow">
+            <indexitem text="(VA)Actividad Calificada" target="licenciasWFActividadCalificada"/>
+            <indexitem text="(VA)Actividad No Calificada" target="licenciasWFActividadNoCalificada"/>			
+        </indexitem>
+        <indexitem text="(VA)Opciones de Menú" target="licenciasOpcionesMenu"/>
+        <indexitem text="(VA)Creación de una Licencia">
+            <indexitem text="(VA)Actividad Calificada y No Calificada" target="licenciasCreacionActividad"/>
+        </indexitem>
+        <indexitem text="(VA)Modificación de una Licencia">
+            <indexitem text="(VA)Actividad Calificada y No Calificada" target="licenciasModificacionActividad"/>
+        </indexitem>
+        <indexitem text="(VA)Consulta de una Licencia">
+            <indexitem text="(VA)Actividad Calificada y No Calificada" target="licenciasConsultaActividad"/>
+        </indexitem>
+        <indexitem text="(VA)Informes" target="licenciasInformes"/>
+        <indexitem text="(VA)Eventos">
+            <indexitem text="(VA)Consulta de Eventos" target="licenciasConsultarEventos"/>
+            <indexitem text="(VA)Últimos Eventos" target="licenciasUltimosEventos"/>
+        </indexitem>
+        <indexitem text="(VA)Generación de Planos" target="licenciasPlanos"/>
+        <indexitem text="(VA)Consulta de Notificaciones" target="licenciasNotificaciones"/>
+        <indexitem text="(VA)Consulta del Histórico" target="licenciasHistorico"/>
+        <indexitem text="(VA)Consulta de las Tareas Pendientes" target="licenciasTareasPendientes"/>
+		<indexitem text="(VA)Configuración" target="licenciasConfiguracion"/>
+        <indexitem text="(VA)Cambio de Idioma" target="licenciasIdioma"/>
+    </indexitem>
+</index>
+

@@ -1,0 +1,165 @@
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>es.uva.idelab</groupId>
+    <artifactId>folderdeployer</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+	<description>Ejemplo de módulo para automatizar el firmado y "deployment" de las dependencias de los proyectos.
+	Las dependencias deben copiarse en la carpeta indicada por deploy.basefolder en todos los módulos mediante el plugin dependency:copy-dependencies
+	mediante:
+	<![CDATA[
+	 <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>2.7</version>
+        <executions>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${deploy.basefolder}</outputDirectory>
+			  <copyPom>true</copyPom>
+			  <prependGroupId>false</prependGroupId>
+              <overWriteReleases>true</overWriteReleases>
+              <overWriteSnapshots>true</overWriteSnapshots>
+              <overWriteIfNewer>true</overWriteIfNewer>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+	]]>
+	</description>
+    <properties>
+        <!-- This is where your artifacts are -->
+        <deploy.basefolder>C:\desarrollo\workspaces\LocalGisUpdater\UpdaterFramework\moduleManagementAPI\target\dependencies</deploy.basefolder>
+    </properties>
+    <build>
+        <plugins>
+		<!-- FIRMA -->
+  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jarsigner-plugin</artifactId>
+        <version>1.2</version>
+        <executions>
+          <execution>
+            <id>sign</id>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+			<phase>package</phase>
+          </execution>
+        </executions>
+        <configuration>
+		<archiveDirectory>${deploy.basefolder}</archiveDirectory>
+          <keystore>${jarsigner.keystore}</keystore>
+          <alias>${jarsigner.alias}</alias>
+          <storepass>${jarsigner.storepass}</storepass>
+          <keypass>${jarsigner.keypass}</keypass>
+        </configuration>
+	<!-- DEPLOY SIGNED ARTIFACTS -->
+      </plugin>
+            <plugin>
+                <groupId>org.codehaus.groovy.maven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>1.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>commons-io</groupId>
+                        <artifactId>commons-io</artifactId>
+                        <version>1.4</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>deploy-files</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <source>
+                            <![CDATA[
+// read components from plexus container
+def layout = session.lookup('org.apache.maven.artifact.repository.layout.ArtifactRepositoryLayout');
+def repoFactory = session.lookup('org.apache.maven.artifact.repository.ArtifactRepositoryFactory');
+def repository = repoFactory.createDeploymentArtifactRepository(pom.distributionManagement.repository.id,
+    pom.distributionManagement.repository.url,
+    layout, true );
+def localRepository = session.localRepository;
+def helper =session.lookup("org.apache.maven.project.MavenProjectHelper");
+def afm = session.lookup('org.apache.maven.artifact.handler.manager.ArtifactHandlerManager');
+def factory = new org.apache.maven.artifact.factory.DefaultArtifactFactory();
+def builder =session.lookup("org.apache.maven.project.MavenProjectBuilder");
+
+factory.class.getDeclaredField("artifactHandlerManager").accessible = true;
+factory.artifactHandlerManager=afm;
+
+def deployer = session.lookup('org.apache.maven.artifact.deployer.ArtifactDeployer');
+
+// initialize properties
+def baseFolder = new File(pom.properties['deploy.basefolder']);
+def groupId = pom.properties['deploy.groupId'];
+def version = pom.properties['deploy.version'];
+
+// iterate over all files recursively
+baseFolder.eachFileRecurse{
+    if(it.isDirectory())return;
+	if(it.name.endsWith(".pom"))
+		{
+    // packaging = file.extension
+    def packaging = it.name.replaceAll( /.+\./ , '' );
+	
+	System.out.println("Packaging:"+packaging);
+    // artifactId = file.relativePath.replace '/' , '-'
+    def artifactId = it.absolutePath
+        .replace(baseFolder.absolutePath, '')
+        .substring(1)
+        .replaceFirst( "."+packaging , '');
+    
+	System.out.println("ArtifactId="+artifactId);
+    File pomFile = it;//new File( baseFolder.absolutePath,artifactId+".pom" );
+	File jarFile = new File( baseFolder.absolutePath,artifactId+".jar" );
+	System.out.println("pomFile="+pomFile);
+	System.out.println("jarFile="+jarFile);
+	System.out.println("Reading POM");
+	def conf = new org.apache.maven.project.DefaultProjectBuilderConfiguration();
+	conf.setLocalRepository(localRepository);
+	def proj=builder.build(pomFile,conf,false);
+
+	System.out.println(proj.name);
+	groupId=proj.groupId;
+	artifactId=proj.artifactId;
+	def artifact=proj.artifact;
+	
+	System.out.println(" Artifact:"+artifact );
+
+
+    // deploy file
+	System.out.println("Deploying file to "+repository);
+    deployer.deploy(jarFile, artifact, repository, localRepository );
+}// if .pom
+}
+                                    ]]>
+                            </source>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+<!-- ELIMINAR CUANDO HAYA UN PARENT QUE LO DEFINA-->
+    <distributionManagement>
+        <repository>
+            <id>targetRepo</id>
+            <url>scp://your.repo.url/here</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
+
+</project>

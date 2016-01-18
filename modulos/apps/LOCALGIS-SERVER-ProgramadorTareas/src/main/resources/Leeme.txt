@@ -1,0 +1,6 @@
+Formato database
+
+conexion.driver=org.postgresql.Driver
+conexion.url=jdbc:postgresql://localgis3bd.arrecife.es:5433/geopista
+conexion.user=postgres
+conexion.pass=postgres

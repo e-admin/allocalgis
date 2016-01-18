@@ -1,0 +1,29 @@
+<project name="printLayoutPlugin" default="Jar"  >
+	<property name="dest.file" location="c:/geopista/plugins/printLayout.jar"/>
+	 <property name="base.home" location="c:/desarrollo/eclipse_old/geopista/"/>
+	 <property name="keystore" location="c:/desarrollo/lib/GeopistaKeyStore"/>
+	<property name="libs.home"     location="${base.home}/lib"/>
+    <!-- ================================= 
+          target: Jar              
+         ================================= -->
+    <target name="Jar"  description="--> Package plugin's jar">
+        <jar destfile="${dest.file}" >
+        	<fileset dir="${base.home}" id="plugin_files">
+        		 <include name="com/geopista/ui/plugin/print/*.class"/>
+        		 <include name="com/geopista/ui/plugin/print/*.java2xml"/>
+        		<include name="reso/jumpPlugIn/printLayoutPlugIn/**.class"/>
+        		<include name="reso/jumpPlugIn/printLayoutPlugIn/**.gif"/>
+        		<include name="reso/jumpPlugIn/printLayoutPlugIn/**.java2xml"/>
+        		
+        		<exclude name="cz/vsb/gisak/jump/plugin/arcims/AddArcIMSQueryExtension.class"/>
+        	</fileset>
+        </jar>
+    	 <jar update="yes" destfile="${dest.file}" basedir="${base.home}" includes="language/printLayout*.properties"/>
+    	</target>
+<target name="sign" depends="Jar">
+	<signjar  alias="geopista" keystore="${keystore}" keypass="geopista99" storepass="geopista99" 
+	    						jar="${dest.file}"/>
+	    
+	</target>
+
+</project>

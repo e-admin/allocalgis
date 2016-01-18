@@ -1,0 +1,528 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (X11; U; Linux 2.4.1 i686) [Netscape]">
+   <title>Merge Demo Help and Master HelpSet
+</title>
+<!--
+ *         Copyright (C) 2003 Sun Microsystems, Inc
+ *                    All rights reserved.
+ *          Notice of copyright on this source code 
+ *          product does not indicate publication. 
+ * 
+ * RESTRICTED RIGHTS LEGEND: Use, duplication, or disclosure by 
+ * the U.S. Government is subject to restrictions as set forth 
+ * in subparagraph (c)(1)(ii) of the Rights in Technical Data
+ * and Computer Software Clause at DFARS 252.227-7013 (Oct. 1988) 
+ * and FAR 52.227-19 (c) (June 1987).
+ *
+ *    Sun Microsystems, Inc., 4150 Network Circle,
+ *    Santa Clara, California 95054, U.S.A.
+ *
+-->
+<!-- *************************************************************************************** -->
+<!-- content styles -->
+<link href="../css/contents.css" rel="stylesheet" type="text/css">
+<!-- *************************************************************************************** -->
+
+</head>
+<body bgcolor="#FFFFFF">
+
+<h1 class="cabeceraazuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consulta de Licencias de Obra Mayor</h1>
+
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Con esta opción el usuario podrá 
+consultar una Licencia de Obra Mayor del sistema.</p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En primer lugar el usuario 
+seleccionará la opción de menú correspondiente a la Consulta de una Licencia de Obra Mayor.</p>
+<p align="center"><IMG height=420 width=560 src="./img/licen_menu1.1.gif"></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Una vez seleccionada la opción, 
+la aplicación muestra el formulario de consulta. <b>Todos los campos están en modo no editable</b>.</p> 
+<p align="left" class="contenidonormal"><A name="formulario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El formulario se divide en:</A>
+
+
+<ul class="contenidonormal">
+<li>Pestaña con los datos del Expediente de la Licencia de Obra Mayor que se va a consultar:</li>
+<ul class="contenidonormal">
+<li class="enlaceazuloscuro"><A HREF="#pestanaExpediente">Expediente</A></li>
+</ul>
+<li>Pestaña con los datos de la Solicitud de la Licencia de Obra Mayor, a su vez se divide en:</li>
+<ul  class="contenidonormal"> 
+<li class="enlaceazuloscuro"><A HREF="#pestanaSolicitud">Solicitud</A></li>
+<li class="enlaceazuloscuro"><A HREF="#pestanaPropietario">Solicitante</A></li>
+<li class="enlaceazuloscuro"><A HREF="#pestanaRepresentante">Representante</A></li>
+<li class="enlaceazuloscuro"><A HREF="#pestanaTecnico">Técnicos</A></li>
+<li class="enlaceazuloscuro"><A HREF="#pestanaPromotor">Promotor</A></li>
+</ul>
+<li>Pestaña de la Documentación presentada:</li>
+<ul class="contenidonormal">
+<li class="enlaceazuloscuro"><A HREF="#pestanaDocumentacion">Documentación</A></li>
+</ul>
+<li>Pestaña de las Notificaciones realizadas y/o pendientes de realizar correspondientes a la Licencia de Obra:</li>
+<ul class="contenidonormal">
+<li class="enlaceazuloscuro"><A HREF="#pestanaNotificaciones">Notificaciones</A></li>
+</ul>
+<li>Pestaña de los eventos asociados a la Licencia de Obra:</li>
+<ul class="contenidonormal">
+<li class="enlaceazuloscuro"><A HREF="#pestanaEventos">Eventos</A></li>
+</ul>
+<li>Pestaña de Histórico de la licencia de Obra:</li>
+<ul class="contenidonormal">
+<li class="enlaceazuloscuro"><A HREF="#pestanaHistorico">Histórico</A></li>
+</ul>
+<li>Pestaña de los informes (técnicos, jurídicos, preceptivos...) generados para la Licencia de Obra:</li>
+<ul class="contenidonormal">
+<li class="enlaceazuloscuro"><A HREF="#pestanaInformes">Informes</A></li>
+</ul> 
+<li>Mapa</li>
+<ul>
+<li class="enlaceazuloscuro"><A HREF="#mapa">Mapa</A></li>
+</ul>
+<li>Botonera</li>
+<ul>
+<li class="enlaceazuloscuro"><A HREF="#botoneraModificar">Modificar</A></li>
+<li class="enlaceazuloscuro"><A HREF="#botoneraFicha">Generar Ficha</A></li>
+<li class="enlaceazuloscuro"><A HREF="#botoneraWorkflow">Ver Workflow</A></li>
+<li class="enlaceazuloscuro"><A HREF="#botoneraSalir">Salir</A></li>
+</ul>
+</ul>
+</p>
+
+<!-- Pestaña de Expediente -->
+
+<p align="left" class="cabecera3azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="pestanaExpediente">Expediente</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Corresponde a los datos de Expediente de Obra.</p>
+<p align="center"><IMG height=420 width=560 src="./img/licen_consulta_obramayor.gif"></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los campos que se presentan en 
+esta pestaña son:
+<ul class="contenidonormal">
+<li><b>Datos de Expediente</b></li>
+<ul>
+<li><b>Número de Expediente</b> que el usuario quiere consultar. El botón de la derecha del campo, abre una ventana de 
+diálogo de búsqueda de Expediente. Seleccionando uno de los Expedientes resultado de la búsqueda, 
+y pulsando el botón de <i>Aceptar</i>, la aplicación cargará los datos de dicho Expediente en el 
+formulario de consulta de Licencia de Obra. En el listado, aquellos expedientes que están siendo modificados por otros usuarios, 
+aparecen en rojo.<br>
+<p align="center"><IMG height=420 width=560 src="./img/licen_busqueda_expediente.gif"></p></li>
+<br>
+<li><b>Estado de Expediente</b>. Estado actual en el que se encuentra el Expediente.</li>
+<li><b>Servicio Encargado</b> de la tramitación de Expediente.</li>
+<li><b>Tipo Tramitación</b>. La tramitación puede ser <i>Ordinaria</i>, la normal y la habitual, y 
+<i>de Urgencia</i>, en la que todos los plazos se reducen a la mitad.</li>
+<li><b>Asunto</b></li>
+<li><b>Fecha Apertura</b> de Expediente.</li>
+<li><b>Forma de Inicio</b>. Los expedientes administrativos se inician  <i>de oficio</i>, comienza por la 
+propia voluntad de la Administración que va a resolver, y <i>a instancia de parte</i>, toda aquella que 
+no viene de la Administración que va a resolver, es decir, de cualquier administrado o de otra Administración.</li>
+<li><b>Silencio Administrativo</b>. Chequeado si resuelve a favor, y no chequeado si resuelve en contra.</li>
+<li><b>Número de Folios</b></li>
+<li><b>Responsable</b> del Expediente.</li>
+<li><b>Plazo de Vencimiento</b></li>
+<li><b>Observaciones</b> echas al crear el Expediente.</li>
+<li><b>Propuesta de Resolución</b>. Este panel contiene los datos propios de la Resolución de Expediente, si es que ésta se ha producido:
+<ul>
+<li>Chequear si la <b>Resolución es o no favorable</b>.</li>
+<li><b>Fecha de la Resolución</b>.</li>
+<li><b>Órgano de Aprobación</b>.</li>
+<li><b>Coletilla</b>.</li>
+<li><b>Asunto</b>.</li>
+</ul>
+<li><B>Finaliza</B>. Tipo de finalización del Expediente.</li>
+</ul>
+</ul>
+</p>
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+<!-- Pestaña de Solicitud -->
+
+<p align="left" class="cabecera3azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="pestanaSolicitud">Solicitud</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Corresponde a los datos propios a la 
+solicitud de obra.</p>
+<p align="center"><IMG height=420 width=560 src="./img/licen_consulta_datosOM.gif"></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los campos que se presentan en 
+esta pestaña son:
+<ul class="contenidonormal">
+<li><b>Datos de Solicitud</b></li>
+<ul>
+<li><b>Número de Registro</b></li>
+<li><b>Tipo de Obra</b> de la Solicitud de Licencia de Obra Mayor.</li>
+<li><b>Unidad de Registro</b></li>
+<li><b>Unidad Tramitadora</b></li>
+<li><b>Motivo</b></li>
+<li><b>Asunto</b></li>
+<li><b>Fecha Solicitud</b>. Fecha de entrada de la solicitud en el sistema.</li>
+<li><b>Tasa</b></li>
+<li><b>Observaciones</b></li>
+</ul>
+
+<li><b>Emplazamiento</b></li>
+<p align="left" class="contenidonormal">La tabla muestra la lista de las parcelas asociadas a la Licencia de Obra consultada.</p>
+</ul>
+</p>
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+<!-- Pestaña de Propietario -->
+
+<p align="left" class="cabecera2azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="pestanaPropietario">Solicitante</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Corresponde a los datos del solicitante de Licencia de Obra. 
+Una Licencia de Obra Mayor tiene que tener obligatoriamente asignado un titular.</p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los campos que se presentan en 
+esta pestaña son:
+<ul class="contenidonormal">
+<li><b>Datos Personales</b></li>
+<ul>
+<li><b>DNI/CIF</b></li>
+<li><b>Nombre</b></li>
+<li><b>Primer Apellido</b></li>
+<li><b>Segundo Apellido</b></li>
+</ul>
+<li><b>Datos Notificación</b></li>
+<ul>
+<li><b>Vía Notificación</b>. La forma en la que se realizará la notificación de un cambio de estado 
+del expediente, susceptible de notificación, al solicitante de la Licencia de Obra. Los valores pueden ser 
+<i>correo postal</i> o <i>email</i>.</li>
+<li><b>Fax</b></li>
+<li><b>Teléfono móvil</b></li>
+<li><b>Email</b></li>
+<li>Campos referentes a la dirección postal del solicitante:</li>
+<ul>
+<li><b>Nombre</b> de la vía.</li>
+<li><b>Número</b> de la vía.</li>
+<li><b>Planta</b></li>
+<li><b>Letra</b></li>
+<li><b>Portal</b></li>
+<li><b>Escalera</b></li>
+<li><b>Código Postal</b></li>
+<li><b>Municipio</b></li>
+<li><b>Provincia</b></li>
+</ul>
+<li><b>Notificar al Solicitante</b>. Chequeado si el solicitante de la Licencia de Obra, va a ser 
+notificado durante el transcurso de la tramitación de expediente.</li>
+</ul>
+</ul>
+</p>
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+<!-- Pestaña de Representante -->
+
+<p align="left" class="cabecera2azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="pestanaRepresentante">Representante</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Corresponde a los datos del representante del titular 
+de la Licencia de Obra. Una Licencia de Obra, puede tener representante. No es obligatorio.</p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los campos que se presentan en 
+esta pestaña son:
+<ul class="contenidonormal">
+<li><b>Datos Personales</b></li>
+<ul>
+<li><b>DNI/CIF</b></li>
+<li><b>Nombre</b></li>
+<li><b>Primer Apellido</b></li>
+<li><b>Segundo Apellido</b></li>
+</ul>
+<li><b>Datos Notificación</b></li>
+<ul>
+<li><b>Vía Notificación</b>. La forma en la que se realizará la notificación de un cambio de estado 
+del expediente, susceptible de notificación, al representante de la Licencia de Obra. Los valores pueden ser 
+<i>correo postal</i> o <i>email</i>.</li>
+<li><b>Fax</b></li>
+<li><b>Teléfono móvil</b></li>
+<li><b>Email</b></li>
+<li>Campos referentes a la dirección postal del representante:</li>
+<ul>
+<li><b>Nombre</b> de la vía.</li>
+<li><b>Número</b> de la vía.</li>
+<li><b>Planta</b></li>
+<li><b>Letra</b></li>
+<li><b>Portal</b></li>
+<li><b>Escalera</b></li>
+<li><b>Código Postal</b></li>
+<li><b>Municipio</b></li>
+<li><b>Provincia</b></li>
+</ul>
+<li><b>Notificar al Representante</b>. Chequeado si el representante de la Licencia de Obra, va a ser 
+notificado durante el transcurso de la tramitación de expediente.</li>
+</ul>
+</ul>
+</p>
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+<!-- Pestaña de Tecnico -->
+
+<p align="left" class="cabecera2azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="pestanaTecnico">Técnicos</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Corresponde a los datos de los técnicos de 
+la Licencia de Obra. Una Licencia de Obra Mayor tiene que tener obligatoriamente asignado al menos un técnico.</p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los campos que se presentan en 
+esta pestaña son:
+<ul class="contenidonormal">
+<li><b>Datos Personales</b></li>
+<ul>
+<li><b>DNI/CIF</b></li>
+<li><b>Nombre</b></li>
+<li><b>Primer Apellido</b></li>
+<li><b>Segundo Apellido</b></li>
+<li><b>Colegio</b> al que pertenece el técnico.</li>
+<li><b>Visado</b></li>
+<li><b>Titulación</b> del técnico.</li>
+<li><b>Perfil</b> del técnico. Si el técnico es Director de Obra, Director Adjunto, etc.</li>
+</ul>
+<li><b>Datos Notificación</b></li>
+<ul>
+<li><b>Vía Notificación</b>. La forma en la que se realizará la notificación de un cambio de estado 
+del expediente, susceptible de notificación, al técnico de la Licencia de Obra. Los valores pueden ser 
+<i>correo postal</i> o <i>email</i>.</li>
+<li><b>Fax</b></li>
+<li><b>Teléfono móvil</b></li>
+<li><b>Email</b></li>
+<li>Campos referentes a la dirección postal del técnico:</li>
+<ul>
+<li><b>Nombre</b> de la vía.</li>
+<li><b>Número</b> de la vía.</li>
+<li><b>Planta</b></li>
+<li><b>Letra</b></li>
+<li><b>Portal</b></li>
+<li><b>Escalera</b></li>
+<li><b>Código Postal</b></li>
+<li><b>Municipio</b></li>
+<li><b>Provincia</b></li>
+</ul>
+</ul>
+<li><b>Lista con los Técnicos añadidos</b> a la Licencia de Obra.</li>
+<ul>
+<li><IMG src="./img/add.gif">&nbsp;&nbsp;<b>Añadir un Técnico</b>. Deshabilitado.</li>
+<li><IMG src="./img/remove.gif">&nbsp;&nbsp;<b>Eliminar un Técnico</b>. Deshabilitado.</li>
+<li><IMG src="./img/editar.gif">&nbsp;&nbsp;<b>Editar los datos de un Técnico</b>. Una vez seleccionado un técnico de la lista, pulsando sobre el botón, 
+se mostrarán los <i>datos personales</i> y de <i>notificación</i> del técnico.</li>
+<li><IMG src="./img/ok.gif">&nbsp;&nbsp;<b>Modificar los datos de un Técnico</b>. Deshabilitado.</li>
+<li><b>Botón </b><IMG src="./img/x.gif">&nbsp;&nbsp;Pone a blanco los campos referentes a los <i>datos personales</i> y de <i>notificación</i>.</li>
+</ul>
+</ul>
+</p>
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+<!-- Pestaña de Promotor -->
+
+<p align="left" class="cabecera2azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="pestanaPromotor">Promotor</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Corresponde a los datos del promotor de 
+la Licencia de Obra. Una Licencia de Obra Mayor tiene que tener obligatoriamente asignado un promotor.</p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los campos que se presentan en 
+esta pestaña son:
+<ul class="contenidonormal">
+<li><b>Datos Personales</b></li>
+<ul>
+<li><b>DNI/CIF</b></li>
+<li><b>Nombre</b></li>
+<li><b>Primer Apellido</b></li>
+<li><b>Segundo Apellido</b></li>
+<li><b>Colegio</b> al que pertenece el promotor.</li>
+<li><b>Visado</b></li>
+<li><b>Titulación</b> del promotor.</li>
+</ul>
+<li><b>Datos Notificación</b></li>
+<ul>
+<li><b>Vía Notificación</b>. La forma en la que se realizará la notificación de un cambio de estado 
+del expediente, susceptible de notificación, al promotor de la Licencia de Obra. Los valores pueden ser 
+<i>correo postal</i> o <i>email</i>.</li>
+<li><b>Fax</b></li>
+<li><b>Teléfono móvil</b></li>
+<li><b>Email</b></li>
+<li>Campos referentes a la dirección postal del promotor:</li>
+<ul>
+<li><b>Nombre</b> de la vía.</li>
+<li><b>Número</b> de la vía.</li>
+<li><b>Planta</b></li>
+<li><b>Letra</b></li>
+<li><b>Portal</b></li>
+<li><b>Escalera</b></li>
+<li><b>Código Postal</b></li>
+<li><b>Municipio</b></li>
+<li><b>Provincia</b></li>
+</ul>
+</ul>
+</ul>
+</p>
+
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+<!-- Pestaña Documentacion -->
+
+<p align="left" class="cabecera3azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="pestanaDocumentacion">Documentación</A></p>
+<p align="center"><IMG height=420 width=560 src="./img/licen_tab_documentacion.gif"></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Corresponde a la documentación entregada por el solicitante de la Licencia de Obra.</p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los campos que se presentan en 
+esta pestaña son:
+<ul class="contenidonormal">
+<li><b>Documentación Requerida</b>. El usuario chequeará aquella documentación necesaria para la creación de la Licencia de Obra.</li>
+<li><b>Observaciones Generales</b>. Cualquier observación que considere oportuna el usuario.</li>
+<li><b>Anexos</b>. Corresponde a los anexos presentados en la Licencia de Obra y que no corresponden a una Mejora de Datos o a una Alegación.</li>
+<ul>
+<li><IMG src="./img/abrir.gif">&nbsp;&nbsp;<b>Visualizar anexo</b>. Permite guardar en local el fichero. Si además el sistema operativo es Windows, permite visualizar el contenido del anexo seleccionado.</li>
+<li><IMG src="./img/add.gif">&nbsp;&nbsp;<B>Añadir anexo</B>. Deshabilitado.</li>
+<li><IMG src="./img/remove.gif">&nbsp;&nbsp;<b>Eliminar anexo</b>. Deshabilitado.</li>
+<li><b>Tabla de anexos</b>. Contiene los documentos anexados a la Solicitud de Licencia de Obra.</li>
+</ul>
+<li><b>Anexos Mejora</b>. Este panel se visualiza sólo si el Expediente ha pasado por el estado de <i>Mejora de Datos</i>. Los anexos corresponden a la Mejora de Datos del Expediente.</li>
+<ul>
+<li><IMG src="./img/abrir.gif">&nbsp;&nbsp;<b>Visualizar anexo</b>. Permite guardar en local el fichero. Si además el sistema operativo es Windows, permite visualizar el contenido del anexo seleccionado.</li>
+<li><IMG src="./img/add.gif">&nbsp;&nbsp;<B>Añadir anexo</B>. Deshabilitado.</li>
+<li><IMG src="./img/remove.gif">&nbsp;&nbsp;<b>Eliminar anexo</b>. Deshabilitado.</li>
+<li><b>Tabla de anexos</b>. Contiene los documentos anexados a la Solicitud de Licencia de Obra durante el estado de <i>Mejora de Datos</i> del Expediente.</li>
+</ul>
+<li><b>Anexos Alegación</b>. Este panel se visualiza sólo si el Expediente ha pasado por el estado de <i>Espera de Alegaciones</i>.</li>
+<ul>
+<li><IMG src="./img/abrir.gif">&nbsp;&nbsp;<b>Visualizar anexo</b>. Permite guardar en local el fichero. Si además el sistema operativo es Windows, permite visualizar el contenido del anexo seleccionado.</li>
+<li><IMG src="./img/add.gif">&nbsp;&nbsp;<B>Añadir anexo</B>. Deshabilitado.</li>
+<li><IMG src="./img/remove.gif">&nbsp;&nbsp;<b>Eliminar anexo</b>. Deshabilitado.</li>
+<li><b>Tabla de anexos</b>. Contiene los documentos anexados a la Solicitud de Licencia de Obra durante el estado de <i>Espera de Alegaciones</i> del Expediente.</li>
+</ul>
+
+</ul>
+</p>
+
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+
+<!-- Pestaña Notificaciones -->
+
+<p align="left" class="cabecera3azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="pestanaNotificaciones">Notificaciones</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Muestra en una tabla las notificaciones del Expediente.</p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los campos que se muestran en esta pestaña son:
+<ul class="contenidonormal">
+<li class="contenidonormal">Notificaciones</li>
+<p align="left" class="contenidonormal">Para cada una de las notificaciones, se muestra:</p> 
+<ul class="contenidonormal">
+<li><b>Tipo de Notificación</b>. Una notificación puede ser de <i>Mejora de Datos</i>, de <i>Espera de Alegaciones</i>, 
+de <i>Resolución de Aprobación</i> o de <i>Resolución de Denegación</i>.</li>
+<li><b>Estado de la Notificación</b>. Los valores que puede tener son:</li>
+<ul>
+<li><b>Pendiente de Notificación</b></li>
+<li><b>En espera de Acuse de Envío</b>. Falta por recibir el acuse de recibo de la Notificación 
+que se ha enviado al solicitante y/o al representante.</li>
+<li><b>En espera de Acuse de Reenvío</b>. Al no recibir el <i>acuse de envío</i>, se vuelve a enviar la notificación 
+al solicitante y/o al representante.</li>
+<li><b>Notificada</b></li>
+</ul>
+<li><b>Fecha de Vencimiento</b>. Fecha antes de la cual se tiene que enviar la notificación al interesado.</li>
+<li><b>DNI Interesado</b> al que se envía la notificación.</li>
+<li><b>Fecha de Notificación</b>. Fecha en la que el estado de la notificación pasa a ser <i>notificada</i>.</li>
+<li><b>Fecha de Reenvío</b>. Fecha en la que el estado de la Notificación pasa a ser <i>acuse de reenvío</i></li>
+</ul>
+
+<li class="contenidonormal">Datos de Notificación de la Notificación Seleccionada</li>
+<p align="left" class="contenidonormal">Seleccionada una notificación de la tabla anterior, se muestran los siguientes datos:</p>
+<ul class="contenidonormal">
+<li><b>Nombre</b> y <b>Apellidos</b> del interesado al que se le enviará la notificación.</li>
+<li><b>Dirección</b> a la que se envía la notificación, si es por correo postal.</li>
+<li><b>Código Postal</b>, <b>Municipio</b> y <b>Provincia</b></li>
+<li><b>Notificar por</b>. Modo de notificar al interesado.</li>
+<li><b>Entregada a</b>. Persona a la que se ha entregado la notificación.</li>
+</ul>
+
+</ul>
+</p>
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+<!-- Pestaña Eventos -->
+
+<p align="left" class="cabecera3azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="pestanaEventos">Eventos</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Muestra en una tabla los eventos del Expediente.
+<li class="contenidonormal">Eventos</li>
+<p align="left" class="contenidonormal">Para cada una de los eventos, se muestra:</p>
+<ul class="contenidonormal">
+<li><b>Número de Evento</b></li>
+<li><b>Fecha</b> en la que se produjo el evento.</li>
+<li><b>Revisado</b>. Chequeado si ha sido revisado.</li>
+<li><b>Revisado por</b>. Usuario que ha chequeado el evento como revisado</i>. Si el evento 
+no ha sido marcado como revisado, el campo aparecerá en blanco.</li>
+<li><b>Descripción</b>. Detalle del evento.</li>
+</ul>
+
+<li class="contenidonormal">Descripción del Evento Seleccionado</li>
+<p align="left" class="contenidonormal">Seleccionado un evento de la tabla anterior, se muestra el detalle del mismo, facilitando así 
+su lectura al usuario.</p>
+</ul>
+</p>
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+<!-- Pestaña Historico -->
+
+<p align="left" class="cabecera3azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="pestanaHistorico">Histórico</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Muestra en una tabla las entradas al histórico del Expediente. El 
+histórico se compone de dos tipos de entradas: 
+<ul class="contenidonormal">
+<li><i>estados</i> por los que va pasando el Expediente. Entrada realizada por el sistema.</li>
+<li><i>apuntes</i> que inserta el usuario acerca del seguimiento que va haciendo del Expediente.</li>
+</ul>
+<ul class="contenidonormal">
+<li class="contenidonormal">Histórico</li>
+<p align="left" class="contenidonormal">Para cada una de las entradas, muestra:</p>
+<ul class="contenidonormal">
+<li><b>Estado</b> en el que se encontraba el expediente cuando se produjo su entrada en el sistema.</li>
+<li><b>Usuario</b> que introdujo el histórico. Puede ser una entrada de usuario o una entrada del sistema.</li>
+<li><b>Fecha</b> de entrada del histórico en el sistema.</li>
+<li><b>Apunte</b>. Detalle del histórico.</li>
+</ul>
+<li><IMG src="./img/generar_ficha.gif">&nbsp;&nbsp;<b>Generar Listado</b> del Histórico. Genera un fichero de texto con las entradas del Histórico del Expediente.</li>
+</ul>
+
+<li class="contenidonormal">Apunte del Histórico Seleccionado</li>
+<p align="left" class="contenidonormal">Seleccionado un histórico de la tabla anterior, se muestra 
+el detalle del apunte insertado por el usuario o por el sistema, facilitando así su lectura al usuario.</p>
+</ul>
+</p>
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+<!-- Pestaña Informes -->
+
+<p align="left" class="cabecera3azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="pestanaInformes">Informes</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Corresponde a los informes preceptivos, técnicos y jurídicos emitidos a favor o 
+en contra de la resolución de Expediente. La pestaña se divide en:</p>
+<ul class="contenidonormal">
+<li><p align="left" class="contenidonormal"><b>Lista de Informes</b>. Muestra en una lista, los informes de tipo preceptivo, jurídico, técnico... 
+emitidos a favor o en contra de la resolución del Expediente, por la propia Entidad Municipal o por Administraciones externas a la propia Entidad Municipal.</p>
+<li><p align="left" class="contenidonormal"><b>Informe</b>. A través de este panel, se puede visualizar un informe y guardarlo en local.</li>
+<ul>
+<li><p align="left" class="contenidonormal"><b>Visualizar Informes</b>. Para ello se selecciona un Informe de la lista y se pulsa sobre el botón <i>Visualizar Informe</i>. Sólo si el sistema operativo 
+es Windows, se visualizará el contenido del fichero.</p></li>
+<li><p align="left" class="contenidonormal"><b>Guardar el Informe</b> en local. Para ello se selecciona un Informe de la lista y se pulsa sobre el botón <i>Guardar Informe</i>. Se abrirá una 
+ventana de diálogo que permitirá al usuario seleccionar la ruta donde guardar el Informe en local.</p>
+</ul>
+</ul>
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+<!-- Mapa -->
+
+<p align="left" class="cabecera3azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="mapa">Mapa</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sección que muestra el mapa del Municipio del 
+que se están gestionando las Licencias de Obra. Se compone de una botonera que permite al usuario 
+moverse por el mapa:
+<ul class="contenidonormal">
+<li><IMG src="./img/toolbar_zoom.gif">&nbsp;&nbsp;Permite hacer un zoom del mapa. Para ello, basta con pulsar el botón, 
+colocarse sobre el mapa e ir pulsando el ratón hasta conseguir el zoom deseado. (*Nota: Si se desea se puede hacer un zoom
+directo también con esta herramienta, manteniendo pulsado el botón izquierdo del ratón e 
+inmediatamente enmarcar la imagen deseada. Con el botón derecho se consigue el efecto contrario).</li>
+<li><IMG src="./img/toolbar_panning.gif">&nbsp;&nbsp;Permite desplazar el mapa en las coordenadas Norte, Sur, Este y Oeste. Basta con pulsar el botón, 
+colocarse sobre el mapa y manteniendo pulsado el ratón, arrastrar el mapa hacia las coordenadas deseadas.</li>
+<li><IMG src="./img/toolbar_select.gif">&nbsp;&nbsp;Permite seleccionar una parcela del mapa. Basta con pulsar el botón, 
+y pulsar sobre la parcela que se desea seleccionar.</li>
+</ul>
+</p>
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+<!-- Botonera -->
+
+<p align="left" class="cabecera3azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="botoneraModificar">Botón Modificar</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abre la opción de menú de 
+<a href="licenciasModificacionObraMayor.html" class="enlaceazuloscuro">Modificación de Licencias de Obra Mayor</a>, para el Expediente que se está consultando.</p>
+
+<p align="left" class="cabecera3azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="botoneraFicha">Botón Generar Ficha</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Imprime la ficha del Expediente.</p>
+
+<p align="left" class="cabecera3azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="botoneraWorkflow">Ver WorkFlow</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Muestra el gráfico del workflow que se sigue en la administración de las licencias de Obra. 
+En el gráfico aparece resaltado el estado en el que actualmente se encuentra el Expediente.</p>
+
+
+<p align="left" class="cabecera3azuloscuro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name="botoneraSalir">Botón Salir</A></p>
+<p align="left" class="contenidonormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cierra el formulario de Consulta.</p>
+<p align="right" class="enlaceazul"><A HREF="#formulario">Volver</A></p>
+
+<br>
+</html>

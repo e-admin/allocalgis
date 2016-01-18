@@ -1,0 +1,35 @@
+2013-09-24 15:33:00,578 [main][] INFO  com.geopista.security.sso.SSOAuthManager - Entrando en el metodo de autenticacion para SSO
+2013-09-24 15:33:00,591 [main][] INFO  com.geopista.security.sso.SSOAuthManager - Autenticando como SSOADMIN
+2013-09-24 15:33:07,215 [main][] INFO  com.geopista.security.sso.SSOAuthManager - Existe Sesion. Usuario autenticado:satec_pro
+2013-09-24 15:34:20,959 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Loading map:
+2013-09-24 15:34:22,929 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Loading Map PASO1: Size of Message:513 bytes
+2013-09-24 15:34:36,535 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Loading layer:Vertedero SRID:25830
+2013-09-24 15:34:36,539 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Loading layer PASO1:Vertedero Size of Message:1089 bytes
+2013-09-24 15:34:39,527 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Layer loaded Step 1:Vertedero :2993 mils. Size of layer:0 bytes
+2013-09-24 15:34:42,617 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Layer loaded Step 2:Vertedero :6082 mils Size:0 Mb (0) Elementos:2
+2013-09-24 15:34:42,619 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Loading layer:parcelas SRID:25830
+2013-09-24 15:34:42,621 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Loading layer PASO1:parcelas Size of Message:1089 bytes
+2013-09-24 15:39:00,492 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Layer loaded Step 1:parcelas :257873 mils. Size of layer:0 bytes
+2013-09-24 15:39:06,462 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Cargando elementos de la capa..:parcelas Elementos:10000
+2013-09-24 15:39:10,444 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Cargando elementos de la capa..:parcelas Elementos:20000
+2013-09-24 15:39:14,372 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Cargando elementos de la capa..:parcelas Elementos:30000
+2013-09-24 15:39:16,221 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Layer loaded Step 2:parcelas :273602 mils Size:0 Mb (0) Elementos:34488
+2013-09-24 15:39:16,225 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Loading layer:numeros_policia SRID:25830
+2013-09-24 15:39:16,279 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Loading layer PASO1:numeros_policia Size of Message:1097 bytes
+2013-09-24 15:39:19,618 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Layer loaded Step 1:numeros_policia :3393 mils. Size of layer:0 bytes
+2013-09-24 15:39:19,683 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Layer loaded Step 2:numeros_policia :3458 mils Size:0 Mb (0) Elementos:136
+2013-09-24 15:39:19,814 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Loading layer:Arboleda SRID:25830
+2013-09-24 15:39:19,900 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Loading layer PASO1:Arboleda Size of Message:1089 bytes
+2013-09-24 15:39:20,514 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Layer loaded Step 1:Arboleda :700 mils. Size of layer:0 bytes
+2013-09-24 15:39:20,515 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Layer loaded Step 2:Arboleda :701 mils Size:0 Mb (0) Elementos:2
+2013-09-24 15:39:20,518 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Loading layer:actividades_contaminantes SRID:25830
+2013-09-24 15:39:20,521 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Loading layer PASO1:actividades_contaminantes Size of Message:1113 bytes
+2013-09-24 15:39:21,505 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Layer loaded Step 1:actividades_contaminantes :987 mils. Size of layer:0 bytes
+2013-09-24 15:39:21,507 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Layer loaded Step 2:actividades_contaminantes :989 mils Size:0 Mb (0) Elementos:1
+2013-09-24 15:39:21,507 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Map Loaded Step 1: :300548 mils
+2013-09-24 15:39:27,852 [Thread-5][] INFO  com.geopista.server.administradorCartografia.AdministradorCartografiaClient - Map Loaded Step 2: :300548 mils
+2013-09-24 15:39:27,852 [Thread-5][] INFO  com.geopista.util.GeopistaMapUtil - Tiempo Total carga Mapa Paso 1:Contaminantes :306928 mils IdMunicipio:33001
+2013-09-24 15:39:29,922 [Thread-5][] WARN  com.geopista.util.GeopistaMapUtil - Se ha producido un error al cargar la capa:null
+2013-09-24 15:41:57,435 [Thread-1][] INFO  com.geopista.security.TestConnection - Marcando la sesion como desconectado. Numero de listeners:1
+2013-09-24 15:44:04,722 [Thread-1][] INFO  com.geopista.security.TestConnection - Marcando la sesion como conectado. Numero de listeners:1
+2013-09-24 15:45:02,942 [Thread-1][] INFO  com.geopista.security.TestConnection - Marcando la sesion como desconectado. Numero de listeners:1

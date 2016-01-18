@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<DatastoreConfiguration name="parcelas" type="POSTGIS">
+  <Connection>
+    <driver>org.postgresql.Driver</driver>
+    <logon>jdbc:postgresql://$INSTALL_PGSQL_IP:$INSTALL_PGSQL_PORT/$INSTALL_GEOPISTA_DATABASE</logon>
+    <user>$INSTALL_GEOPISTA_USER</user>
+    <password>$INSTALL_GEOPISTA_PASSWORD</password>
+  </Connection>
+  <FeatureType name="Parcelas">
+    <!-- The OutputFormat element contains information about wich java
+         class is responsible for generating a named output
+         format. The name of the output format is given by the name of
+         the element; the responsible class is named by the
+         responsibleClass attribute. -->
+    <OutputFormat>
+      <GML2 responsibleClass="org.deegree_impl.services.wfs.postgis.PostgisDataStoreOutputGML">
+        <!-- URL where an application can find the schema of the
+             feature type schema -->
+        <SchemaLocation>file:///$INSTALL_PATH/geocoder/WEB-INF/xml/parcelas.xsd</SchemaLocation>
+      </GML2>
+      <XML responsibleClass="org.deegree_impl.services.wfs.postgis.PostgisDataStoreOutputXML">
+        <Param name="FILTER" value="file:///c:/geocoder/xml/sample_wfs/transform.xsl"/>
+        <!-- URL where an application can find the schema of the
+             feature type schema -->
+        <SchemaLocation>file:///$INSTALL_PATH/geocoder/WEB-INF/xml/parcelas.xsd</SchemaLocation>
+      </XML>
+      <FEATURECOLLECTION responsibleClass="org.deegree_impl.services.wfs.postgis.PostgisDataStoreOutputFC"/>
+    </OutputFormat>
+    <MappingField>
+      <Property name="/Parcelas/referencia_catastral" type="VARCHAR"/>
+      <DatastoreField name="parcelas.referencia_catastral" type="VARCHAR"/>
+    </MappingField>
+    <MappingField>
+      <Property name="/Parcelas/ID" type="INTEGER"/>
+      <DatastoreField name="parcelas.ID" type="INTEGER"/>
+    </MappingField>
+    <!--MappingField>
+      <Property name="/Parcelas/Geometry" type="GEOMETRY"/>
+      <DatastoreField name='Parcelas."Geometry"' type="GEOMETRY"/>
+    </MappingField-->
+      <MappingField>
+       <Property name="/Parcelas/Geometry" type="Geometry" />
+       <DatastoreField name='parcelas."GEOMETRY"' type="Geometry" alias="GEOMETRY" />
+      </MappingField>
+
+
+    <!-- name of the top level table if a relational schema is
+         used. otherwise this is the only table. -->
+    <MasterTable name="parcelas" targetName="Parcelas">
+      <!-- name of the table column that stores the id of a feature -->
+      <IdField number="true" auto="true">ID</IdField>
+      <GeoFieldIdentifier>GEOM</GeoFieldIdentifier>
+    </MasterTable>
+         <CRS>EPSG:23030</CRS>
+     </FeatureType>
+</DatastoreConfiguration>

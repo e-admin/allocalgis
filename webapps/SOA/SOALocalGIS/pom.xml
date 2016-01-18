@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.web</groupId>
+	<artifactId>SOALocalGIS</artifactId>
+	<packaging>war</packaging>
+	<version>3.0</version>
+	<name>SOALocalGIS</name>
+
+	<parent>
+		<groupId>com.localgis</groupId>
+		<artifactId>localgis-parent</artifactId>
+		<version>3.0</version>
+	</parent>
+
+	<repositories>
+		<repository>
+			<id>opengeo</id>
+			<name>Geotools repository</name>
+			<url>http://download.osgeo.org/webdav/geotools/</url>
+		</repository>
+	</repositories>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.2</version>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>org.codehaus.xfire</groupId>
+			<artifactId>xfire-all</artifactId>
+			<version>1.2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.web</groupId>
+			<artifactId>localgis-core</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.lib</groupId>
+			<artifactId>localgis-xml2java</artifactId>
+			<version>3.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>biz.futureware.mantis</groupId>
+					<artifactId>mantis-axis-soap-client</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!--dependency>
+			<groupId>org.mortbay</groupId>
+			<artifactId>jetty</artifactId>
+			<version>1.0</version>
+		</dependency-->
+		<dependency>
+			<groupId>jetty</groupId>
+			<artifactId>org.mortbay.jetty</artifactId>
+			<version>4.2.14</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.lib</groupId>
+			<artifactId>localgis-xml2java</artifactId>
+			<version>3.0</version>
+		</dependency>
+	</dependencies>
+
+</project>

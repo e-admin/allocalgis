@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="localgis_style">
+
+  <resultMap class="com.localgis.web.core.model.LocalgisStyle" id="LocalgisStyleResult">
+    <result column="styleid" jdbcType="INTEGER" property="styleid"/>
+    <result column="stylename" jdbcType="VARCHAR" property="stylename"/>
+    <result column="styletitle" jdbcType="VARCHAR" property="styletitle"/>
+    <result column="styleabstract" jdbcType="VARCHAR" property="styleabstract"/>
+    <result column="featuretypestyles" jdbcType="VARCHAR" property="featuretypestyles"/>
+  </resultMap>
+
+  <select id="selectUnreferenceStyles" resultMap="LocalgisStyleResult">
+    select s.styleid as styleid, 
+           s.stylename as stylename,
+           s.styletitle as styletitle,
+           s.styleabstract as styleabstract,
+           s.featuretypestyles as featuretypestyles
+    from localgisguiaurbana.style s
+         left outer join localgisguiaurbana.maplayer ml on s.styleid = ml.styleid
+    where ml.styleid is null
+  </select>
+
+  <select id="selectStylesByIdLayer" parameterClass="java.util.Map" resultMap="LocalgisStyleResult">
+    select s.styleid as styleid, 
+           s.stylename as stylename,
+           s.styletitle as styletitle,
+           s.styleabstract as styleabstract,
+           s.featuretypestyles as featuretypestyles
+    from localgisguiaurbana.style s, localgisguiaurbana.maplayer ml
+    where s.styleid = ml.styleid and 
+          ml.layerid = #idLayer#
+  </select>
+
+  <select id="selectStyleByIdLayerAndIdMap" parameterClass="java.util.Map" resultMap="LocalgisStyleResult">
+    select s.styleid as styleid, 
+           s.stylename as stylename,
+           s.styletitle as styletitle,
+           s.styleabstract as styleabstract,
+           s.featuretypestyles as featuretypestyles
+    from localgisguiaurbana.style s, localgisguiaurbana.maplayer ml
+    where s.styleid = ml.styleid and 
+          ml.layerid = #idLayer# and
+          ml.mapid = #idMap#
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterClass="com.localgis.web.core.model.LocalgisStyle" >
+    delete from localgisguiaurbana.style
+    where styleid = #styleid:INTEGER#
+  </delete>
+
+</sqlMap>

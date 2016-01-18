@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+    <tocitem text="(GL)Contenidos">
+        <tocitem text="(GL)Introducción" target="licenciasIntro"/>
+        <tocitem text="(GL)Usuarios">
+            <tocitem text="(GL)Usuarios y permisos" target="licenciasUsuarios"/>
+        </tocitem>
+        <tocitem text="(GL)WorkFlow">
+            <tocitem text="(GL)Actividad Calificada" target="licenciasWFActividadCalificada"/>
+			<tocitem text="(GL)Actividad No Calificada" target="licenciasWFActividadNoCalificada"/>
+        </tocitem>
+        <tocitem text="(GL)Opciones de Menú" target="licenciasOpcionesMenu"/>
+        <tocitem text="(GL)Creación de una Licencia">
+            <tocitem text="(GL)Actividad Calificada y No Calificada" target="licenciasCreacionActividad"/>
+        </tocitem>
+        <tocitem text="(GL)Modificación de una Licencia">
+            <tocitem text="(GL)Actividad Calificada y No Calificada" target="licenciasModificacionActividad"/>
+        </tocitem>
+        <tocitem text="(GL)Consulta de una Licencia">
+            <tocitem text="(GL)Actividad Calificada y No Calificada" target="licenciasConsultaActividad"/>
+        </tocitem>
+        <tocitem text="(GL)Informes" target="licenciasInformes"/>
+        <tocitem text="(GL)Eventos">
+            <tocitem text="(GL)Consulta de Eventos" target="licenciasConsultarEventos"/>
+            <tocitem text="(GL)Últimos Eventos" target="licenciasUltimosEventos"/>
+        </tocitem>
+        <tocitem text="(GL)Generación de Planos" target="licenciasPlanos"/>
+        <tocitem text="(GL)Consulta de Notificaciones" target="licenciasNotificaciones"/>
+        <tocitem text="(GL)Consulta del Histórico" target="licenciasHistorico"/>
+        <tocitem text="(GL)Consulta de las Tareas Pendientes" target="licenciasTareasPendientes"/>
+		<tocitem text="(GL)Configuración" target="licenciasConfiguracion"/>
+        <tocitem text="(GL)Cambio de Idioma" target="licenciasIdioma"/>
+    </tocitem>    
+</toc>

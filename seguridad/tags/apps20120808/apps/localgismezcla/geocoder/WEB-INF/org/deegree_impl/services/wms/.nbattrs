@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="GetMapHandler.java">
+        <attr name="class_dependency_org.deegree.services.OGCWebServiceClient" stringvalue="GetMapHandler.ServiceInvokerForNL"/>
+        <attr name="class_dependency_java.lang.Thread" stringvalue="GetMapHandler.ServiceInvokerForNL;GetMapHandler.ServiceInvokerForUL"/>
+    </fileobject>
+    <fileobject name="GetFeatureInfoHandler.java">
+        <attr name="class_dependency_java.lang.Thread" stringvalue="GetFeatureInfoHandler.ServiceInvoker"/>
+        <attr name="class_dependency_org.deegree.services.OGCWebServiceClient" stringvalue="GetFeatureInfoHandler.ServiceInvoker"/>
+    </fileobject>
+</attributes>

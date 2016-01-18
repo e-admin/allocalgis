@@ -1,0 +1,23 @@
+#Generated file - don't edit (please)
+#Thu Jan 25 17:49:54 CET 2007
+FtpServer.user.ortofotos.writepermission=true
+FtpServer.user.anonymous.enableflag=true
+FtpServer.user.ortofotos.idletime=0
+FtpServer.user.admin.downloadrate=0
+FtpServer.user.anonymous.writepermission=false
+FtpServer.user.ortofotos.enableflag=true
+FtpServer.user.admin.enableflag=true
+FtpServer.user.anonymous.downloadrate=4800
+FtpServer.user.anonymous.uploadrate=4800
+FtpServer.user.admin.homedirectory=./res/home
+FtpServer.user.ortofotos.homedirectory=C:/Archivos de Programa/LocalGIS/Ortofotos/Temp
+FtpServer.user.admin.idletime=0
+FtpServer.user.admin.userpassword=21232F297A57A5A743894A0E4A801FC3
+FtpServer.user.admin.writepermission=true
+FtpServer.user.ortofotos.userpassword=ortofotos
+FtpServer.user.ortofotos.uploadrate=0
+FtpServer.user.anonymous.idletime=300
+FtpServer.user.admin.uploadrate=0
+FtpServer.user.ortofotos.downloadrate=0
+FtpServer.user.anonymous.userpassword=D41D8CD98F00B204E9800998ECF8427E
+FtpServer.user.anonymous.homedirectory=./res/home

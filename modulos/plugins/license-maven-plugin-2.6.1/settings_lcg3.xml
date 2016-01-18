@@ -1,0 +1,19 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository>${env.USERPROFILE}\.m2\repository.localgis3</localRepository>
+  <interactiveMode>true</interactiveMode>
+  <usePluginRegistry>false</usePluginRegistry>
+  <offline>false</offline>
+  
+  <servers>			
+
+		<server>
+			<id>LocalGISIII</id>
+			<username>satec</username>
+			<password>EkdYb2mP</password>
+		</server>	
+  </servers>
+ 
+</settings>

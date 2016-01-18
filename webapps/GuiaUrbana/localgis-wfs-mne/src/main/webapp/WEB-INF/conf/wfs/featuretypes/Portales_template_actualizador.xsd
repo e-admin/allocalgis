@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:wfs="http://www.opengis.net/wfs" xmlns:ogc="http://www.opengis.net/ogc" xmlns:deegreewfs="http://www.deegree.org/wfs" xmlns:dgjdbc="http://www.deegree.org/jdbc" xmlns:app="http://www.deegree.org/app" targetNamespace="http://www.deegree.org/app" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/feature.xsd"/>
+  <xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/geometryAggregates.xsd"/>
+  <xsd:import namespace="http://www.opengis.net/wfs" schemaLocation="http://schemas.opengis.net/wfs/1.1.0/wfs.xsd"/>
+<!-- CONEXION A LA BASE DE DATOS -->
+	<xsd:annotation>
+    <xsd:appinfo>
+      <deegreewfs:Prefix>app</deegreewfs:Prefix>
+      <deegreewfs:Backend>POSTGIS</deegreewfs:Backend>
+      <deegreewfs:DefaultSRS>EPSG:4230</deegreewfs:DefaultSRS>
+      <dgjdbc:JDBCConnection>
+        <dgjdbc:Driver>org.postgresql.Driver</dgjdbc:Driver>
+        <dgjdbc:Url>${localgis_database_url}</dgjdbc:Url>
+        <dgjdbc:User>${localgis_database_username}</dgjdbc:User>
+        <dgjdbc:Password>${localgis_database_password}</dgjdbc:Password>
+        <dgjdbc:SecurityConstraints/>
+        <dgjdbc:Encoding>UTF-8</dgjdbc:Encoding>
+      </dgjdbc:JDBCConnection>
+      <deegreewfs:SuppressXLinkOutput>false</deegreewfs:SuppressXLinkOutput>
+    </xsd:appinfo>
+	</xsd:annotation>
+<!-- DESCRIPCION DE LA TABLA PORTALES -->
+	<!-- SECCION CLAVE PRINCIPAL -->
+	<xsd:element name="Portal" type="app:PortalType" substitutionGroup="gml:_Feature">
+		<xsd:annotation>
+			<xsd:appinfo>
+				<deegreewfs:table>NUMEROS_POLICIA</deegreewfs:table>
+				<deegreewfs:gmlId prefix="NUMEROS_POLICIA_">
+					<deegreewfs:MappingField field="ID" type="BIGINT"/>
+				</deegreewfs:gmlId>
+			</xsd:appinfo>
+		</xsd:annotation>	
+	</xsd:element>
+	<!-- SECCION CAMPOS A MOSTRAR -->
+	<xsd:complexType name="PortalType">
+		<xsd:complexContent>
+			<xsd:extension base="gml:AbstractFeatureType">
+				<xsd:sequence>
+				<!-- ID DE VIA -->
+					<xsd:element name="fid" type="xsd:integer">
+						<xsd:annotation>
+							<xsd:appinfo>
+								<deegreewfs:Content>
+									<deegreewfs:MappingField field="ID" type="BIGINT"/>
+								</deegreewfs:Content>
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+
+
+				<!-- NOMBRE ROTULO-->
+					<xsd:element name="nombreEntidad_nombre" type="xsd:string">
+						<xsd:annotation>
+							<xsd:appinfo>
+								<deegreewfs:Content>
+									<deegreewfs:MappingField field="ROTULO" type="VARCHAR"/>
+								</deegreewfs:Content>
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+				<!-- ID MUNICIPIO -->
+					<xsd:element name="entidadLocal_municipio" type="xsd:integer">
+						<xsd:annotation>
+							<xsd:appinfo>
+								<deegreewfs:Content>
+									<deegreewfs:MappingField field="id_municipio" type="BIGINT"/>
+								</deegreewfs:Content>
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+				<!-- ID PROVINCIA -->
+					<xsd:element name="entidadLocal_provincia" type="xsd:integer" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:appinfo>
+								<deegreewfs:Content>
+									<!-- CAMPO QUE SE MUESTRA DE LA TABLA RELACIONADA-->
+									<deegreewfs:MappingField field="ID_PROVINCIA" type="BIGINT"/> 
+									<deegreewfs:Relation>
+										<deegreewfs:From>
+											<!-- CAMPO ORIGEN -->
+											<deegreewfs:MappingField field="ID_MUNICIPIO" type="BIGINT"/>
+										</deegreewfs:From>
+										<deegreewfs:To fk="false">
+											<!-- CAMPO Y TABLA RELACIONADA CON EL ORIGEN -->
+											<deegreewfs:MappingField field="ID" type="BIGINT" table="MUNICIPIOS"/>
+										</deegreewfs:To>
+									</deegreewfs:Relation>
+								</deegreewfs:Content>
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+				<!-- CENTROIDE DEL PORTAL 
+					<xsd:element name="posicionEspacial_coordinates" type="xsd:string" >
+						<xsd:annotation>
+							<xsd:appinfo>
+                  		<deegreewfs:IdentityPart>false</deegreewfs:IdentityPart>
+                  		<deegreewfs:Content>
+                    			<deegreewfs:SQLFunctionCall call="centroid($1)" type="LONGVARCHAR">
+                      			<deegreewfs:FunctionParam>
+                        			<deegreewfs:MappingField field='"GEOMETRY"' type="GEOMETRY"/>
+                      			</deegreewfs:FunctionParam>
+                    		</deegreewfs:SQLFunctionCall>
+                  		</deegreewfs:Content>
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>-->
+				<!-- GEOMETR�A DEL PORTAL -->
+					<xsd:element name="posicionEspacial_coordinates" type="gml:GeometryPropertyType" >
+						<xsd:annotation>
+							<xsd:appinfo>
+                  					<deegreewfs:Content>
+									<deegreewfs:MappingField field='"GEOMETRY"' type="GEOMETRY" srs="4230"/>
+                  					</deegreewfs:Content>
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+				
+				<!-- ID PORTAL-->
+					<xsd:element name="entidadRelacionada_idEntidad" type="xsd:string">
+						<xsd:annotation>
+							<xsd:appinfo>
+								<deegreewfs:Content>
+									<deegreewfs:MappingField field="ID_VIA" type="VARCHAR"/>
+								</deegreewfs:Content>
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+<!-- FIN DE LA TABLA PORTALES-->
+<!-- ====================================================================== -->
+<!--<xsd:element name="Municipio_" type="app:MunicipioType" substitutionGroup="gml:_Feature">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <deegreewfs:table>MUNICIPIOS</deegreewfs:table>
+        <deegreewfs:gmlId prefix="MUNICIPIOS_">
+			<deegreewfs:MappingField field="ID" type="INTEGER"/>
+			<deegreewfs:IdGenerator type="DB_SEQ">
+			<deegreewfs:param name="sequence">FID_seq</deegreewfs:param>
+			</deegreewfs:IdGenerator>
+        </deegreewfs:gmlId>
+        <deegreewfs:visible>false</deegreewfs:visible>
+        <deegreewfs:transaction update="true" delete="true" insert="true"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+</xsd:element>-->
+
+<!-- ======================================================================-->
+<!--	<xsd:complexType name="app:MunicipioType">
+		<xsd:complexContent>
+			<xsd:extension base="gml:AbstractFeatureType">
+				<xsd:sequence>
+					<xsd:element name="entidadLocal_municipio" type="xsd:string">
+						<xsd:annotation>
+							<xsd:appinfo>
+								<deegreewfs:Content>
+									<deegreewfs:MappingField field="nombreoficial" type="VARCHAR"/>
+								</deegreewfs:Content>
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="entidadLocal_provincia" type="xsd:string" minOccurs="1" >
+						<xsd:annotation>
+							<xsd:appinfo>
+								<deegreewfs:Content>
+									<deegreewfs:MappingField field="nombreoficial" type="VARCHAR"/>
+									<deegreewfs:Relation>
+										<deegreewfs:From fk="true">
+											<deegreewfs:MappingField field="ID_PROVINCIA" type="BIGINT"/>
+										</deegreewfs:From>
+										<deegreewfs:To>
+											<deegreewfs:MappingField field="ID" type="BIGINT" table="PROVINCIAS"/>
+										</deegreewfs:To>
+									</deegreewfs:Relation>								
+								</deegreewfs:Content>
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>-->
+<!-- FIN DE LA TABLA MUNICIPIOS-->
+	<!-- ====================================================================== -->
+</xsd:schema>

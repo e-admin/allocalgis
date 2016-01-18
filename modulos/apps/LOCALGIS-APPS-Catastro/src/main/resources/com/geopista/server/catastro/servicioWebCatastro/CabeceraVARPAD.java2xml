@@ -1,0 +1,27 @@
+<root>
+    <element xml-name="ieg">
+        <element xml-name="teg" java-name="tipoEntidadGeneradora"/>
+        <element xml-name="ceg">
+            <element xml-name="engf">
+                <element xml-name="cd" java-name="codigoDelegacion"/>
+                <element xml-name="eng" java-name="MunicipioODiputacion"/>
+            </element>
+        </element>
+        <element xml-name="neg" java-name="nombreEntidadGeneradora"/>
+    </element>
+    <element xml-name="ifi">
+        <element xml-name="ffi" java-name="fechaGeneracionFichero"/>
+        <element xml-name="hfi" java-name="horaGeneracionFichero"/>
+        <element xml-name="tfi" java-name="tipoFichero"/>
+        <element xml-name="dfi" java-name="descripcionDelFichero"/>
+        <element xml-name="nfi" java-name="nombreFicheroAsignadoPorDGC"/>
+    </element>
+    <element xml-name="ced" java-name="codigoEntidadDestinataria"/>
+    <element xml-name="iper">
+        <element xml-name="fip" java-name="fechaInicioPeriodo"/>
+        <element xml-name="ffp" java-name="fechaFinalizacionPeriodo"/>
+    </element>
+    <element xml-name="cuexp" java-name="numeroExpedientes"/>
+    <element xml-name="cubi" java-name="numeroBienesInmuebles"/>
+    <element xml-name="cutit" java-name="numeroTitulares"/>
+</root>

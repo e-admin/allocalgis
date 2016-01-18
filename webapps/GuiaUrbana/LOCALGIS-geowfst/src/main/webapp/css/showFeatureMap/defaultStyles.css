@@ -1,0 +1,233 @@
+/* ----- HEAD ----------------------------------------------------- */
+/*#headBorderLeft{
+	background: transparent url(../../img/showFeatureMap/headBorderLeft.png) no-repeat left center;  
+    height:84px; 
+    width:18px;  
+    position: absolute;
+    top:0px;
+    left:0px;
+    
+}
+*//*
+#headImgLeft{
+	background: #ffffff url(../../img/showFeatureMap/default/logoType.png) no-repeat 6px center;  
+    height:80px;
+    width:75px;  
+    position: absolute;
+}*/
+#headImgRight{
+	background: transparent url(../../img/showFeatureMap/logoRegion.png) no-repeat center center;    
+    height:90px;
+    width:168px;    
+    position: relative;
+}
+
+/*
+#headBorderRight{
+	background: transparent url(../../img/showFeatureMap/headBorderRight.png) no-repeat right center;  
+    height:84px;
+    width:18px;  
+    position: absolute;
+    top:0px;
+    right:0px;   
+}
+*/
+/*----- OpenLayers Styles ----------------*/
+
+.olControlSelectFeatureLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureSelect.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlSelectFeatureLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureSelect_over.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlSelectFeatureLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/default/toolbarFeatureSelect_over.png");
+	cursor: pointer;
+}
+
+.olControlDrawFeaturePolygonLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureDraw.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlDrawFeaturePolygonLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureDraw_over.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlDrawFeaturePolygonLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/default/toolbarFeatureDraw_over.png");
+	cursor: pointer;
+}
+
+.olControlDrawFeaturePathLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureDraw.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlDrawFeaturePathLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureDraw_over.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlDrawFeaturePathLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/default/toolbarFeatureDraw_over.png");
+	cursor: pointer;
+}
+
+.olControlDrawFeaturePointLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureDraw.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlDrawFeaturePointLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureDraw_over.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlDrawFeaturePointLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/default/toolbarFeatureDraw_over.png");
+	cursor: pointer;
+}
+
+
+.olControlModifyFeatureItemInactive {
+    background-image: url("../../img/showFeatureMap/default/toolbarNavZoomOut.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureItemActive {
+    background-image: url("../../img/showFeatureMap/default/toolbarNavZoomOut_over.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/default/toolbarNavZoomOut_over.png");
+	cursor: pointer;
+}
+
+
+.olControlModifyFeatureReshapeLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureReshape.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureReshapeLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureReshape_over.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureReshapeLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/default/toolbarFeatureReshape_over.png");
+	cursor: pointer;
+}
+
+.olControlModifyFeatureResizeLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureResize.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureResizeLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureResize_over.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureResizeLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/default/toolbarFeatureResize_over.png");
+	cursor: pointer;
+}
+
+
+.olControlModifyFeatureRotateLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureRotate.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureRotateLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureRotate_over.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureRotateLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/default/toolbarFeatureRotate_over.png");
+	cursor: pointer;
+}
+
+
+.olControlModifyFeatureDragLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureDrag.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureDragLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureDrag_over.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlModifyFeatureDragLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/default/toolbarFeatureDrag_over.png");
+	cursor: pointer;
+}
+
+
+
+.olControlDeleteFeatureLocalgisItemInactive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureDelete.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlDeleteFeatureLocalgisItemActive {
+    background-image: url("../../img/showFeatureMap/default/toolbarFeatureDelete_over.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.olControlDeleteFeatureLocalgisItemInactive:hover {
+	background-image: url("../../img/showFeatureMap/default/toolbarFeatureDelete_over.png");
+	cursor: pointer;
+}
+
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+codebase="@SITE@"
+href="localgis_administrador.jnlp">
+<information>
+<title>LOCALGIS Administrador</title>
+<vendor>LocalGIS</vendor>
+<homepage href="http://www.geopista.com" />
+<description>Open Source GIS client. Administrador.(@SITE@)</description>
+<icon href="logo_geopista.gif" />
+<offline-allowed />
+<icon kind="splash" href="splash_geopista.gif" />
+<shortcut online="false">
+      <desktop />
+      <menu submenu="LocalGIS" />
+    </shortcut>
+</information>
+<resources>
+<j2se version="1.6" initial-heap-size="128m" max-heap-size="1024m"/>
+<jar href="alp_client.jar" />
+<jar href="alp_server.jar" />
+<jar href="analysis.jar" />
+<jar href="catastro_client.jar" />
+<jar href="catastro_help.jar" />
+<jar href="catastro_server.jar" />
+<jar href="geobench.jar" />
+<jar href="geopista_administrador.jar" />
+<jar href="geopista_config.jar" />
+<jar href="geopista_help.jar" />
+<jar href="geopista_images.jar" />
+<jar href="geopista_img.jar" />
+<jar href="geopista_patrimonio.jar" />
+<jar href="geopista_protocol.jar" />
+<jar href="geopista_security.jar" />
+<jar href="geopista_security_sso.jar" />
+<jar href="geopista_security_dnie.jar" />
+<jar href="geopista_sql.jar" />
+<jar href="geopista_utilidades.jar" />
+<jar href="helpset.jar" />
+<jar href="jumppatched.jar" />
+<jar href="server.jar" />
+<jar href="localgis_cementerios.jar" />
+
+</resources>
+<application-desc main-class="com.geopista.app.administrador.CMainAdministrador">
+<argument>-Dfile.encoding=windows-1252</argument>
+</application-desc>
+<security><all-permissions/></security>
+</jnlp>

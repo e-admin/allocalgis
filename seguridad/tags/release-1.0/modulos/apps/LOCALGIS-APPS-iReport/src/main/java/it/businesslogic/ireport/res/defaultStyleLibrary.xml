@@ -1,0 +1,67 @@
+<?xml version="1.0"?><!-- iReport styles library -->
+<styles>
+
+	<style 
+		name="Heading"
+		isDefault="false"
+		fontSize="14"
+	/>
+	<style 
+		name="Heading 1"
+		isDefault="false"
+		fontSize="22"
+		isBold="true"
+		pdfFontName="Helvetica-Bold"
+	/>
+	<style 
+		name="Heading 2"
+		isDefault="false"
+		fontSize="22"
+		isBold="true"
+		isItalic="true"
+		pdfFontName="Helvetica-BoldOblique"
+	/>
+	<style 
+		name="Heading 3"
+		isDefault="false"
+		fontSize="18"
+		isBold="true"
+		pdfFontName="Helvetica-Bold"
+	/>
+	<style 
+		name="Heading 4"
+		isDefault="false"
+		fontSize="16"
+		isBold="true"
+		isItalic="true"
+		pdfFontName="Helvetica-BoldOblique"
+	/>
+	<style 
+		name="Heading 5"
+		isDefault="false"
+		fontSize="14"
+		isBold="true"
+		pdfFontName="Helvetica-Bold"
+	/>
+	<style 
+		name="Heading 6"
+		isDefault="false"
+		fontSize="14"
+		isBold="false"
+		pdfFontName="Helvetica"
+	/>
+	<style 
+		name="Heading 7"
+		isDefault="false"
+		fontSize="12"
+		isBold="true"
+		pdfFontName="Helvetica-Bold"
+	/>
+	<style 
+		name="Heading 8"
+		isDefault="false"
+		fontSize="12"
+		isBold="false"
+		isItalic="true"
+	/>
+</styles>

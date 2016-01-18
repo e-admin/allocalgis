@@ -1,0 +1,1 @@
+update columns set name = 'codigopoligono' where name='codigoPoligono';

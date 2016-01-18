@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module>
+    <name>Example module 1</name>
+    <version>3.0.0</version>
+    <artifact>
+      <groupId>com.localgis.webapp</groupId>
+      <artifactId>ficticiousWebApp</artifactId>
+      <version>3.0.0</version>
+      <install>war</install>
+    </artifact>
+    <dependencyInfo>
+      <dependencies>
+        <module>
+          <name>Example DataModel module 2</name>
+          <version>3.1.0</version>
+          <artifact>
+            <groupId>com.localgis.model</groupId>
+            <artifactId>ficticiousDataModel</artifactId>
+            <version>3.1.0</version>
+            <install>jar</install>
+          </artifact>
+        </module>
+        <module>
+          <name>Example client module 3</name>
+          <version>3.0.20</version>
+          <artifact>
+            <groupId>com.localgis.workbench</groupId>
+            <artifactId>ficticiousClient</artifactId>
+            <version>3.0.20</version>
+            <install>jar</install>
+          </artifact>
+        </module>
+      </dependencies>
+    </dependencyInfo>
+  </module>
+  <module>
+    <name>Example client module 3</name>
+    <version>3.0.20</version>
+    <artifact>
+      <groupId>com.localgis.workbench</groupId>
+      <artifactId>ficticiousClient</artifactId>
+      <version>3.0.20</version>
+      <install>jar</install>
+    </artifact>
+    <dependencyInfo>
+      <dependencies>
+        <module>
+          <name>Example DataModel module 2</name>
+          <version>3.1.0</version>
+          <artifact>
+            <groupId>com.localgis.model</groupId>
+            <artifactId>ficticiousDataModel</artifactId>
+            <version>3.1.0</version>
+            <install>jar</install>
+          </artifact>
+        </module>
+      </dependencies>
+    </dependencyInfo>
+  </module>
+  <module>
+    <name>Example DataModel module 2</name>
+    <version>3.1.0</version>
+    <artifact>
+      <groupId>com.localgis.model</groupId>
+      <artifactId>ficticiousDataModel</artifactId>
+      <version>3.1.0</version>
+      <install>jar</install>
+    </artifact>
+    <dependencyInfo>
+      <dependencies/>
+    </dependencyInfo>
+  </module>
+</modules>

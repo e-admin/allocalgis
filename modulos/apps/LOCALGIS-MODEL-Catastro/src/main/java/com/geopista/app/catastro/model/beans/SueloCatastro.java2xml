@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<root>
+			<element xml-name="suelof" java-condition1="isCatastroTemporal">
+				<element xml-name="idsucat">
+					<element xml-name="rsu">
+						<element xml-name="pc1" java-name="refParcela.refCatastral1"/>
+						<element xml-name="pc2" java-name="refParcela.refCatastral2"/>
+						<element xml-name="subp" java-name="numOrden"/>
+					</element>
+					<element xml-name="locat">
+						<element xml-name="cd" java-name="codDelegacion"/> 
+						<element xml-name="cmc" java-name="codMunicipioDGC" length="3"/>
+					</element>
+				</element>
+				<element xml-name="dfsu">
+					<element xml-name="fach">
+						<element xml-name="long" java-name="datosFisicos.longFachada"/>
+						<element xml-name="tipof" java-name="datosFisicos.tipoFachada"/>
+					</element>
+					<element xml-name="sup" java-name="datosFisicos.supOcupada"/>
+					<element xml-name="fondo" java-name="datosFisicos.fondo"/>
+				</element>
+				<element xml-name="dvs">
+					<element xml-name="fpon">
+						<element xml-name="cvpv" java-name="datosEconomicos.codViaPonencia"/>
+						<element xml-name="ctvpv" java-name="datosEconomicos.codTramoPonencia"/>
+						<element xml-name="zv" java-name="datosEconomicos.zonaValor.codZonaValor"/>
+					</element>
+					<element xml-name="zu" java-name="datosEconomicos.zonaUrbanistica.codZona"/>
+					<element xml-name="ctv" java-name="datosEconomicos.codTipoValor"/>
+					<element xml-name="ccvs">
+						<element xml-name="nfach" java-name="datosEconomicos.numFachadas"/>
+						<element xml-name="ilf" java-name="datosEconomicos.correctorLongFachada"/>
+						<element xml-name="ifir" java-name="datosEconomicos.correctorFormaIrregular"/>
+						<element xml-name="ide" java-name="datosEconomicos.correctorDesmonte"/>
+						<element xml-name="isdm" java-name="datosEconomicos.correctorSupDistinta"/>
+						<element xml-name="iit" java-name="datosEconomicos.correctorInedificabilidad"/>
+						<element xml-name="ivpp" java-name="datosEconomicos.correctorVPO"/>
+					</element>
+					<element xml-name="cccsc">
+						<element xml-name="vccad" java-name="datosEconomicos.correctorAprecDeprec"/>
+						<element xml-name="iadf" java-name="datosEconomicos.correctorDeprecFuncional"/>
+						<element xml-name="vcccs" java-name="datosEconomicos.correctorCargasSingulares"/>
+						<element xml-name="icce" java-name="datosEconomicos.correctorSitEspeciales"/>
+						<element xml-name="iccunl" java-name="datosEconomicos.correctorNoLucrativo"/>
+					</element>
+				</element>
+			</element>
+			<element xml-name="movf" java-condition1="isCatastroTemporal">
+				<element xml-name="tmov" java-name="TIPO_MOVIMIENTO"/>
+			</element>
+			
+			
+			
+			<element xml-name="sueloeam" java-condition="isSueloAltaModif" java-condition1="isNotCatastroTemporal">
+				<element xml-name="idsucat">
+					<element xml-name="rsu">
+						<element xml-name="pc1" java-name="refParcela.refCatastral1"/>
+						<element xml-name="pc2" java-name="refParcela.refCatastral2"/>
+						<element xml-name="subp" java-name="numOrden"/>
+					</element>
+					<element xml-name="locat">
+						<element xml-name="cd" java-name="codDelegacion"/> 
+						<element xml-name="cmc" java-name="codMunicipioDGC" length="3"/>
+					</element>
+				</element>
+				<element xml-name="dfsu">
+					<element xml-name="fach">
+						<element xml-name="long" java-name="datosFisicos.longFachada"/>
+						<element xml-name="tipof" java-name="datosFisicos.tipoFachada"/>
+					</element>
+					<element xml-name="sup" java-name="datosFisicos.supOcupada"/>
+					<element xml-name="fondo" java-name="datosFisicos.fondo"/>
+				</element>
+				<element xml-name="dvs">
+					<element xml-name="fpon">
+						<element xml-name="cvpv" java-name="datosEconomicos.codViaPonencia"/>
+						<element xml-name="ctvpv" java-name="datosEconomicos.codTramoPonencia"/>
+						<element xml-name="zv" java-name="datosEconomicos.zonaValor.codZonaValor"/>
+					</element>
+					<element xml-name="zu" java-name="datosEconomicos.zonaUrbanistica.codZona"/>
+					<element xml-name="ctv" java-name="datosEconomicos.codTipoValor"/>
+					<element xml-name="ccvs">
+						<element xml-name="nfach" java-name="datosEconomicos.numFachadas"/>
+						<element xml-name="ilf" java-name="datosEconomicos.correctorLongFachada"/>
+						<element xml-name="ifir" java-name="datosEconomicos.correctorFormaIrregular"/>
+						<element xml-name="ide" java-name="datosEconomicos.correctorDesmonte"/>
+						<element xml-name="isdm" java-name="datosEconomicos.correctorSupDistinta"/>
+						<element xml-name="iit" java-name="datosEconomicos.correctorInedificabilidad"/>
+						<element xml-name="ivpp" java-name="datosEconomicos.correctorVPO"/>
+					</element>
+					<element xml-name="cccsc">
+						<element xml-name="vccad" java-name="datosEconomicos.correctorAprecDeprec"/>
+						<element xml-name="iadf" java-name="datosEconomicos.correctorDeprecFuncional"/>
+						<element xml-name="vcccs" java-name="datosEconomicos.correctorCargasSingulares"/>
+						<element xml-name="icce" java-name="datosEconomicos.correctorSitEspeciales"/>
+						<element xml-name="iccunl" java-name="datosEconomicos.correctorNoLucrativo"/>
+					</element>
+				</element>
+			</element>
+			<element xml-name="movam"  java-condition="isSueloAltaModif" java-condition1="isNotCatastroTemporal">
+				<element xml-name="tmov" java-name="TIPO_MOVIMIENTO"/>
+			</element>
+			<element xml-name="sueloeb"  java-condition="isSueloElim" java-condition1="isNotCatastroTemporal">
+				<element xml-name="idsucat">
+					<element xml-name="rsu">
+						<element xml-name="pc1" java-name="refParcela.refCatastral1"/>
+						<element xml-name="pc2" java-name="refParcela.refCatastral2"/>
+						<element xml-name="subp" java-name="numOrden"/>
+					</element>
+						<element xml-name="locat">
+						<element xml-name="cd" java-name="codDelegacion"/> 
+						<element xml-name="cmc" java-name="codMunicipioDGC" length="3"/>
+					</element>
+				</element>
+			</element>
+			<element xml-name="movb"  java-condition="isSueloElim" java-condition1="isNotCatastroTemporal">
+				<element xml-name="tmov" java-name="TIPO_MOVIMIENTO"/>
+			</element>
+			
+	</root>

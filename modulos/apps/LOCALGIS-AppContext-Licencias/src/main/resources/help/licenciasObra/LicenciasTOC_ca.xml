@@ -1,0 +1,36 @@
+<toc version="1.0">
+    <tocitem text="(C)Contenidos">
+        <tocitem text="(C)Introducción" target="licenciasIntro"/>
+        <tocitem text="(C)Usuarios">
+            <tocitem text="(C)Usuarios y permisos" target="licenciasUsuarios"/>
+        </tocitem>
+        <tocitem text="(C)WorkFlow">
+            <tocitem text="(C)Obra Mayor" target="licenciasWFObraMayor"/>
+            <tocitem text="(C)Obra Menor" target="licenciasWFObraMenor"/>
+        </tocitem>
+        <tocitem text="(C)Opciones de Menú" target="licenciasOpcionesMenu"/>
+        <tocitem text="(C)Creación de una Licencia">
+            <tocitem text="(C)Obra Mayor" target="licenciasCreacionObraMayor"/>
+            <tocitem text="(C)Obra Menor" target="licenciasCreacionObraMenor"/>
+        </tocitem>
+        <tocitem text="(C)Modificación de una Licencia">
+            <tocitem text="(C)Obra Mayor" target="licenciasModificacionObraMayor"/>
+            <tocitem text="(C)Obra Menor" target="licenciasModificacionObraMenor"/>
+        </tocitem>
+        <tocitem text="(C)Consulta de una Licencia">
+            <tocitem text="(C)Obra Mayor" target="licenciasConsultaObraMayor"/>
+            <tocitem text="(C)Obra Menor" target="licenciasConsultaObraMenor"/>
+        </tocitem>
+        <tocitem text="(C)Informes" target="licenciasInformes"/>
+        <tocitem text="(C)Eventos">
+            <tocitem text="(C)Consulta de Eventos" target="licenciasConsultarEventos"/>
+            <tocitem text="(C)Últimos Eventos" target="licenciasUltimosEventos"/>
+        </tocitem>
+        <tocitem text="(C)Generación de Planos" target="licenciasPlanos"/>
+        <tocitem text="(C)Consulta de Notificaciones" target="licenciasNotificaciones"/>
+        <tocitem text="(C)Consulta del Histórico" target="licenciasHistorico"/>
+        <tocitem text="(C)Consulta de las Tareas Pendientes" target="licenciasTareasPendientes"/>
+		<tocitem text="(C)Configuración" target="licenciasConfiguracion"/>
+        <tocitem text="(C)Cambio de Idioma" target="licenciasIdioma"/>
+    </tocitem>    
+</toc>

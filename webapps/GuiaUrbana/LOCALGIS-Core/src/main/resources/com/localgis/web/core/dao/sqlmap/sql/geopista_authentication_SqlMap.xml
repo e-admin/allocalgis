@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="geopista_authentication" >
+  <!--
+  select count(1)
+      from usrgrouperm g inner join r_acl_perm p on (g.idperm = p.idperm)
+                         inner join r_usr_perm u on (u.idperm = p.idperm and u.idacl = p.idacl)
+                         inner join iuseruserhdr usr on (u.userid = usr.id and (usr.id_entidad = #idEntidad# or usr.id_entidad is null or usr.id_entidad=0))
+      where g.def = #role# and
+            usr.name = #username# and
+            (usr.password = #encryptedPassword# or usr.password = #encryptedPassword2#) 
+  -->  
+  <select id="isValidUser" resultClass="java.lang.Integer" parameterClass="java.util.Map" >
+  select count(1) from (	      
+  
+	      select usr.id_entidad as id_entidad
+	      from usrgrouperm g inner join r_acl_perm p on (g.idperm = p.idperm)
+	             left join r_usr_perm u on (u.idperm = p.idperm and u.idacl = p.idacl)
+	             left join iuseruserhdr usr on (u.userid = usr.id)	                         
+	      where (u.aplica!=0 or u.aplica is null) 
+	      and g.def = #role#
+	      and usr.name = #username# 
+	      and (usr.password = #encryptedPassword# or  usr.password = #encryptedPassword2#)	 
+	           
+	   union      
+	   
+	      select usr.id_entidad as id_entidad
+	      from usrgrouperm g inner join r_acl_perm p on (g.idperm = p.idperm)
+				 left join r_group_perm rgp on (g.idperm = rgp.idperm and p.idacl = rgp.idacl) 
+				 left join iusergroupuser igu on (rgp.groupid = igu.groupid)		
+	             left join iuseruserhdr usr on (igu.userid = usr.id)	                    		     
+	       where rgp.idperm||'-'||rgp.idacl not in (select idperm||'-'||idacl from r_usr_perm rup2 where rup2.userid=usr.id and rup2.aplica=0) 
+	       and g.def = #role#
+	       and usr.name = #username#
+	       and (usr.password = #encryptedPassword# or  usr.password = #encryptedPassword2#)
+	       
+	   ) as subquery
+  </select>
+<!-- 
+select usr.id_entidad
+      from usrgrouperm g inner join r_acl_perm p on (g.idperm = p.idperm)
+                         left join r_usr_perm u on (u.idperm = p.idperm and u.idacl = p.idacl)
+                         left join iuseruserhdr usr on (u.userid = usr.id)
+      where g.def = #role# and
+            usr.name = #username# and
+            (usr.password = #encryptedPassword# or  usr.password = #encryptedPassword2#) and
+            and u.aplica<>0            
+      limit 1
+-->
+  <select id="isValidUserEntity" resultClass="java.lang.Integer" parameterClass="java.util.Map" >
+      select id_entidad from (
+      
+	      select usr.id_entidad as id_entidad
+	      from usrgrouperm g inner join r_acl_perm p on (g.idperm = p.idperm)
+	             left join r_usr_perm u on (u.idperm = p.idperm and u.idacl = p.idacl)
+	             left join iuseruserhdr usr on (u.userid = usr.id)	                         
+	      where (u.aplica!=0 or u.aplica is null) 
+	      and g.def = #role#
+	      and usr.name = #username# 
+	      and (usr.password = #encryptedPassword# or  usr.password = #encryptedPassword2#)
+	      
+	   union      
+	   
+	      select usr.id_entidad as id_entidad
+	      from usrgrouperm g inner join r_acl_perm p on (g.idperm = p.idperm)
+				 left join r_group_perm rgp on (g.idperm = rgp.idperm and p.idacl = rgp.idacl) 
+				 left join iusergroupuser igu on (rgp.groupid = igu.groupid)		
+	             left join iuseruserhdr usr on (igu.userid = usr.id)	                    		     
+	       where  rgp.idperm||'-'||rgp.idacl not in (select idperm||'-'||idacl from r_usr_perm rup2 where rup2.userid=usr.id and rup2.aplica=0) 
+	       and g.def = #role#
+	       and usr.name = #username#
+	       and (usr.password = #encryptedPassword# or  usr.password = #encryptedPassword2#)
+	       
+	   ) as subquery limit 1
+  </select>
+<!-- 
+select usr.id_entidad
+      from usrgrouperm g inner join r_acl_perm p on (g.idperm = p.idperm)
+                         left join r_usr_perm u on (u.idperm = p.idperm and u.idacl = p.idacl)
+                         left join iuseruserhdr usr on (u.userid = usr.id)
+      where g.def = #role# and
+            usr.name = #username# and
+            and u.aplica<>0
+      limit 1
+-->
+  <select id="isValidUserEntityNotPass" resultClass="java.lang.Integer" parameterClass="java.util.Map" >
+      select id_entidad from (
+      
+	      select usr.id_entidad as id_entidad
+	      from usrgrouperm g inner join r_acl_perm p on (g.idperm = p.idperm)
+	             left join r_usr_perm u on (u.idperm = p.idperm and u.idacl = p.idacl)
+	             left join iuseruserhdr usr on (u.userid = usr.id)	                         
+	      where (u.aplica!=0 or u.aplica is null)
+	      and g.def = #role#
+	      and usr.name = #username#
+	      
+	  union      
+	  
+	      select usr.id_entidad as id_entidad
+	      from usrgrouperm g inner join r_acl_perm p on (g.idperm = p.idperm)
+				 left join r_group_perm rgp on (g.idperm = rgp.idperm and p.idacl = rgp.idacl) 
+				 left join iusergroupuser igu on (rgp.groupid = igu.groupid)		
+	             left join iuseruserhdr usr on (igu.userid = usr.id)
+	                    		     
+	       where rgp.idperm||'-'||rgp.idacl not in (select idperm||'-'||idacl from r_usr_perm rup2 where rup2.userid=usr.id and rup2.aplica=0) 
+	       and g.def = #role#
+	       and usr.name = #username#
+	       
+	   ) as subquery limit 1
+  </select>
+
+</sqlMap>

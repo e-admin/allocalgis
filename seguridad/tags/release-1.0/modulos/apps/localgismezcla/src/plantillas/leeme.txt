@@ -1,0 +1,3 @@
+Las plantillas solo son validas las jrxml.
+El resto de ficheros xml se podrían borrar, incluidas las carpetas
+img, oracle y postgres 

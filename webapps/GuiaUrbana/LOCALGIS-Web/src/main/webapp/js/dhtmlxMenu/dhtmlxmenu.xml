@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<menu>
+	<!-- origen -->
+	<item id="origen" text="Establecer origen">
+	</item>
+	<!-- destino -->
+	<item id="destino" text="Establecer destino">
+		
+	</item>
+	
+	<!-- eliminar -->
+	<item id="delete" text="Eliminar este destino">
+	</item>
+	
+	
+	
+	<!-- add -->
+	<item id="adddestino" text="Añadir destino">
+	</item>
+	
+	
+	<item id="delroute" text="Eliminar la ruta">
+	</item>
+	
+	<item id="sep1" type="separator"/>
+	
+	
+	<item id="zoomin" text="Ampliar">
+		
+	</item>
+	<item id="zoomout" text="Reducir">
+		
+	</item>
+	<item id="centrar" text="Centrar mapa">
+		
+	</item>
+	
+	<item id="sep2" type="separator"/>
+		<item id="area" text="Eliminar Area de influencia">
+	</item>
+</menu>

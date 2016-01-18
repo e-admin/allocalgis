@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project name="LocalGisMobile" basedir="." default="dist">
+
+	<!-- Application properties -->
+	<property name="project.name" value="LocalGisMobile" />
+
+	<property name="project.home" value="." />
+	<property name="project.source" value="${project.home}/src" />
+	<property name="project.build" value="${project.home}/build" />
+	<property name="project.classes" value="${project.build}/classes" />
+	<property name="project.lib" value="${project.home}/libs" />
+	<property name="project.dist" value="${project.build}/dist" />
+	<property name="project.instalador" value="${project.home}/instalador" />
+
+	<property name="javac.debug" value="on" />
+
+
+	<!-- ========================= Path references ==================================== -->
+
+	<!-- Classpath required  -->
+	<path id="project.classpath">
+		
+		<fileset dir="${project.lib}/bouncycastle" includes="lbc-jdk118.jar" />
+		<fileset dir="${project.lib}/FilterSLD" includes="*.jar" />
+		<fileset dir="${project.lib}/gps" includes="comm.jar" />
+		<fileset dir="${project.lib}/gps" includes="gps.jar" />
+				<fileset dir="${project.lib}/gps" includes="jcl.jar" />
+		<fileset dir="${project.lib}/iaik" includes="iaik_jce_me4se.jar" />
+		<fileset dir="${project.lib}/iaik" includes="iaik_ssl_me4se.jar" />
+		<fileset dir="${project.lib}/japisoft" includes="japiparser.jar" />
+
+		
+		<fileset dir="${project.lib}/log4j" includes="log4jME-1_3alpha_7.jar" />
+	
+		<fileset dir="${project.lib}/swt" includes="swt-3448.jar" />
+		<fileset dir="${project.lib}/swt" includes="swt-Desktop.jar" />
+		<fileset dir="${project.lib}/swt" includes="swt.jar" />
+		<fileset dir="${project.lib}/xml" includes="xml-apis.jar" />
+		<fileset dir="${project.lib}/local/SVGLocaGISViewer" includes="SVGLocalGISViewer.jar" />
+		<fileset dir="${project.lib}/local/SVGViewer" includes="SVGViewer.jar" />
+		<fileset dir="${project.lib}/local/TinyLine" includes="TinyLineMod.jar" />
+		
+		<!--
+		<fileset dir="${project.lib}/bouncycastle" includes="*.jar" />
+		<fileset dir="${project.lib}/iaik" includes="*.jar" />
+		<fileset dir="${project.lib}/local/TinyLine" includes="*.jar" />
+		<fileset dir="${project.lib}/local/SVGViewer" includes="*.jar" />
+		<fileset dir="${project.lib}/local/SVGLocaGISViewer" includes="*.jar" />
+		<fileset dir="${project.lib}/log4j" includes="*.jar" />		<fileset dir="${project.lib}/gps" includes="comm.jar, jcl.jar, gps.jar" />
+		<fileset dir="${project.lib}/japisoft" includes="*.jar" />
+		<fileset dir="${project.lib}/swt" includes="swt.jar" />
+		<fileset dir="${project.lib}/xml" includes="*.jar" /-->
+		
+	</path>
+
+	<!-- ============================ "init" target ============================ -->
+
+
+	<target name="init">
+		<echo>
+	--------------------------------------------------------------------------------
+	Running build file for LocalGISMobile ...
+	--------------------------------------------------------------------------------
+	        </echo>
+		<!--creates the build directory-->
+		<mkdir dir="${project.build}" />
+		<mkdir dir="${project.dist}" />
+		<mkdir dir="${project.dist}/lib" />
+		<mkdir dir="${project.dist}/resources" />
+		<mkdir dir="${project.dist}/config" />
+	</target>
+
+	<!-- ========================== "compile" target =========================== -->
+
+	<target name="compile" depends="init">
+		<mkdir dir="${project.classes}" />
+		<property name="java.encoding" value="ISO-8859-1" />
+		<javac srcdir="${project.source}" destdir="${project.classes}"
+					encoding="${java.encoding}"
+					classpathref="project.classpath" target="1.1" source="1.3" debug="${javac.debug}" optimize="${javac.optimize}" deprecation="${javac.deprecation}" />
+	</target>
+
+	<!-- ========================= "cleanclasses" target ======================= -->
+
+	<target name="cleanclasses" depends="init">
+		<delete dir="${project.classes}" />
+	</target>
+
+	<!-- ========================== "rebuild" target =========================== -->
+
+	<target name="rebuild" depends="cleanclasses, compile" />
+
+	<!-- ========================= "jar" target =========================== -->
+
+	<target name="jar" depends="compile,init">
+		<jar jarfile="${project.build}/${project.name}.jar" basedir="${project.classes}" />
+		<move file="${project.build}/${project.name}.jar" todir="${project.dist}/lib" />
+	</target>
+
+
+	<!--	<target name="jar" depends="compile,init">
+			<jar jarfile="${project.build}/${project.name}.jar" basedir="${project.classes}" 
+					excludes="test/**" />
+			<move file="${project.build}/${project.name}.jar" todir="${project.dist}/lib" />
+		</target>-->
+	<!-- =========================== "clean" target =========================== -->
+
+	<target name="clean" depends="init">
+		<delete dir="${project.build}" />
+	</target>
+
+
+	<!-- Target que genera una distribucion generica en funcion del fichero de 
+		     propiedades pasado como parametro en el parametro parampropertyfile -->
+	<target name="dist" depends="jar">
+
+		<copy todir="${project.dist}/resources">
+			<fileset dir="${project.source}/main/resources">
+				<include name="*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${project.dist}/config">
+			<fileset dir="${project.source}/main/config">
+				<include name="*.*" />
+			</fileset>
+		</copy>
+
+		<copy todir="${project.dist}/lib">
+			<fileset dir="..\libs">
+				<include name="**/*.jar" />
+				<include name="**/swt-win32-3349.dll" />
+				<exclude name="**/swt-PC.jar" />
+				<exclude name="ecw/windows/**" />
+			</fileset>
+		</copy>
+
+		<copy todir="${project.dist}/lib/ecw">
+			<fileset dir="..\libs\ecw">
+				<include name="**/*.dll" />
+				<exclude name="windows/**" />
+			</fileset>
+		</copy>
+		
+		<delete file="${project.dist}/all.jar" />
+
+		<zip destfile="${project.dist}/all.jar">
+			<zipgroupfileset dir="${project.dist}/lib">
+				<include name="**/*.jar"/>
+				<exclude name="**/comm.jar"/>
+				<exclude name="**/swt-3448.jar"/>
+				<exclude name="**/swt-Desktop.jar"/>
+				<exclude name ="**/LocalGisMobile.jar"/>
+			</zipgroupfileset>	 
+		</zip>
+
+
+		<antcall target="generateCabs">
+		</antcall>
+	</target>
+
+
+	<target name="generateCabs" depends="generateLocalgisCab">
+
+	</target>
+	<!--target name="generateJ9">
+		<delete file="${project.instalador}/preinstalador/localgismobile-pm.CAB" />
+		<exec executable="${project.instalador}/preinstalador/makecab.bat" dir="${project.instalador}/preinstalador" resolveexecutable="true">
+		</exec>
+
+	</target-->
+	<target name="generateLocalgisCab">
+		<delete file="${project.instalador}/LocalgisMobile/LocalgisMobile.CAB" />
+		<exec executable="${project.instalador}/LocalgisMobile/makecab.bat" dir="${project.instalador}/LocalgisMobile" resolveexecutable="true">
+		</exec>
+
+	</target>
+	<!--target name="generateJ9ForWindowsMobile_6.1">
+		<delete file="${project.instalador}/preinstalador/localgismobile-pm-CE61.CAB" />
+		<exec executable="${project.instalador}/preinstalador/makecab-61.bat" dir="${project.instalador}/preinstalador" resolveexecutable="true">
+		</exec>
+
+	</target-->
+
+	<target name="configuradorPDA" depends="jar">
+		<mkdir dir="${project.instalador}/configuradorPDA/test" />
+		<delete file="${project.instalador}/configuradorPDA.zip" />
+		<!--<delete dir="${project.instalador}/configuradorPDA">
+			<fileset>
+				<include name="*.properties" />
+			</fileset>
+		</delete>
+		<delete dir="${project.instalador}/configuradorPDA/test">
+			<fileset>
+				<include name="*.class" />
+			</fileset>
+		</delete>-->
+
+
+		<copy todir="${project.instalador}/configuradorPDA/test">
+			<filelist dir="${project.classes}/test" files="ConfiguraLocalGISMobile.class" />
+
+		</copy>
+
+		<copy todir="${project.instalador}/configuradorPDA">
+			<filelist dir="${project.source}/main/config" files="localgis.properties,gps.properties" />
+
+		</copy>
+		<zip destfile="${project.instalador}/configuradorPDA.zip" basedir="${project.instalador}/configuradorPDA" />
+		<!--	<exec executable="${project.instalador}/preinstalador/makecab-61.bat" 
+							dir="${project.instalador}/preinstalador"
+							resolveexecutable="true">
+				</exec>
+-->
+	</target>
+
+
+</project>

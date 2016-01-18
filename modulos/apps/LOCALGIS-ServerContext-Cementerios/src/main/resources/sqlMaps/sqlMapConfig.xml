@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig SYSTEM "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>   
+
+    <settings useStatementNamespaces="true"/>    
+
+	<transactionManager type="JDBC"> 
+		 <dataSource type="JNDI">
+			 <property name="DataSource" value="jdbc/localgis" />
+			 <!--<property name="DataSource" value="java:comp/env/jdbc/localgis" />-->
+		 </dataSource>		  
+    </transactionManager>
+    
+    <sqlMap resource="sqlMaps/cementerio_unidadenterramiento_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_elem_cementerio_SqlMap.xml"/>    
+	<sqlMap resource="sqlMaps/cementerio_localizacion_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_cementerio_feature_SqlMap.xml"/>	  	
+	<sqlMap resource="sqlMaps/cementerio_concesion_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_persona_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_reltitular_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_plaza_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_difunto_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_datosfallecimiento_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_bloque_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_cementerio_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_comun_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_anexo_cementerio_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_anexo_feature_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_documento_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_documento_tipos_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_tarifa_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_inhumacion_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_exhumacion_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_elem_feature_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_historico_difuntos_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_historico_propiedad_SqlMap.xml"/>
+	<sqlMap resource="sqlMaps/cementerio_intervencion_SqlMap.xml"/>
+	
+</sqlMapConfig>

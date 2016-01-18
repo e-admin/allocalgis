@@ -1,0 +1,7 @@
+<mappings>
+    <mapping>
+        <property name="lstConstrucciones" componentType="com.localgis.model.ot.ConstruccionOT"/>
+        <property name="lstCultivos" componentType="com.localgis.model.ot.CultivoOT"/>
+    </mapping>
+</mappings>
+

@@ -1,0 +1,2374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://server.ws.catalogo.sgm.tecdoc.ieci" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://server.ws.catalogo.sgm.tecdoc.ieci" xmlns:intf="http://server.ws.catalogo.sgm.tecdoc.ieci" xmlns:tns1="http://dto.services.core.sgm.tecdoc.ieci" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.3
+Built on Oct 05, 2005 (05:23:37 EDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://server.ws.catalogo.sgm.tecdoc.ieci" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://dto.services.core.sgm.tecdoc.ieci"/>
+   <element name="query">
+    <complexType>
+     <sequence>
+      <element name="query" type="impl:TramiteConsulta"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="TramiteConsulta">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="addressee" nillable="true" type="xsd:string"/>
+       <element name="id" nillable="true" type="xsd:string"/>
+       <element name="subject" nillable="true" type="xsd:string"/>
+       <element name="subtype" nillable="true" type="xsd:string"/>
+       <element name="topic" nillable="true" type="xsd:string"/>
+       <element name="type" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="queryResponse">
+    <complexType>
+     <sequence>
+      <element name="queryReturn" type="impl:Tramites"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="DocumentoExtendido">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="code" nillable="true" type="xsd:string"/>
+       <element name="description" nillable="true" type="xsd:string"/>
+       <element name="extension" nillable="true" type="xsd:string"/>
+       <element name="id" nillable="true" type="xsd:string"/>
+       <element name="mandatory" nillable="true" type="xsd:string"/>
+       <element name="signatureHook" nillable="true" type="xsd:string"/>
+       <element name="validationHook" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOfDocumentoExtendido">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:DocumentoExtendido"/>
+    </sequence>
+   </complexType>
+   <complexType name="Documentos">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="documentos" nillable="true" type="impl:ArrayOfDocumentoExtendido"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="Tramite">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="addressee" nillable="true" type="xsd:string"/>
+       <element name="description" nillable="true" type="xsd:string"/>
+       <element name="documents" nillable="true" type="impl:Documentos"/>
+       <element name="firma" nillable="true" type="xsd:string"/>
+       <element name="id" nillable="true" type="xsd:string"/>
+       <element name="idProcedimiento" nillable="true" type="xsd:string"/>
+       <element name="limitDocs" nillable="true" type="xsd:string"/>
+       <element name="oficina" nillable="true" type="xsd:string"/>
+       <element name="topic" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOfTramite">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:Tramite"/>
+    </sequence>
+   </complexType>
+   <complexType name="Tramites">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="tramites" nillable="true" type="impl:ArrayOfTramite"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="getDocument">
+    <complexType>
+     <sequence>
+      <element name="documentId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDocumentResponse">
+    <complexType>
+     <sequence>
+      <element name="getDocumentReturn" type="impl:Documento"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Documento">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="description" nillable="true" type="xsd:string"/>
+       <element name="extension" nillable="true" type="xsd:string"/>
+       <element name="id" nillable="true" type="xsd:string"/>
+       <element name="signatureHook" nillable="true" type="xsd:string"/>
+       <element name="validationHook" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="getDocuments">
+    <complexType>
+     <sequence>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDocumentsResponse">
+    <complexType>
+     <sequence>
+      <element name="getDocumentsReturn" type="impl:Documentos"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateDocument">
+    <complexType>
+     <sequence>
+      <element name="document" type="impl:Documento"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateDocumentResponse">
+    <complexType>
+     <sequence>
+      <element name="updateDocumentReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addProcedure">
+    <complexType>
+     <sequence>
+      <element name="procedure" type="impl:Tramite"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addProcedureResponse">
+    <complexType>
+     <sequence>
+      <element name="addProcedureReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProcedure">
+    <complexType>
+     <sequence>
+      <element name="procedureId" type="xsd:string"/>
+      <element name="loadDocuments" type="impl:RetornoLogico"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="RetornoLogico">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="valor" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="getProcedureResponse">
+    <complexType>
+     <sequence>
+      <element name="getProcedureReturn" type="impl:Tramite"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteProcedure">
+    <complexType>
+     <sequence>
+      <element name="procedureId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteProcedureResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteProcedureReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateProcedure">
+    <complexType>
+     <sequence>
+      <element name="procedure" type="impl:Tramite"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateProcedureResponse">
+    <complexType>
+     <sequence>
+      <element name="updateProcedureReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isDocumentReferenced">
+    <complexType>
+     <sequence>
+      <element name="documentId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isDocumentReferencedResponse">
+    <complexType>
+     <sequence>
+      <element name="isDocumentReferencedReturn" type="impl:RetornoLogico"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addProcedureDocument">
+    <complexType>
+     <sequence>
+      <element name="procedureDocument" type="impl:DocumentoTramite"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="DocumentoTramite">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="code" nillable="true" type="xsd:string"/>
+       <element name="documentId" nillable="true" type="xsd:string"/>
+       <element name="mandatory" nillable="true" type="xsd:string"/>
+       <element name="procedureId" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="addProcedureDocumentResponse">
+    <complexType>
+     <sequence>
+      <element name="addProcedureDocumentReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteProcedureDocument">
+    <complexType>
+     <sequence>
+      <element name="procedureDocument" type="impl:DocumentoTramite"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteProcedureDocumentResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteProcedureDocumentReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addDocument">
+    <complexType>
+     <sequence>
+      <element name="document" type="impl:Documento"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addDocumentResponse">
+    <complexType>
+     <sequence>
+      <element name="addDocumentReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteDocument">
+    <complexType>
+     <sequence>
+      <element name="documentId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteDocumentResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteDocumentReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProcedureDocuments">
+    <complexType>
+     <sequence>
+      <element name="procedureId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProcedureDocumentsResponse">
+    <complexType>
+     <sequence>
+      <element name="getProcedureDocumentsReturn" type="impl:Documentos"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProcedureDocument">
+    <complexType>
+     <sequence>
+      <element name="procedureId" type="xsd:string"/>
+      <element name="documentId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProcedureDocumentResponse">
+    <complexType>
+     <sequence>
+      <element name="getProcedureDocumentReturn" type="impl:DocumentoTramite"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProcedureDocumentByCode">
+    <complexType>
+     <sequence>
+      <element name="procedureId" type="xsd:string"/>
+      <element name="documentId" type="xsd:string"/>
+      <element name="code" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProcedureDocumentByCodeResponse">
+    <complexType>
+     <sequence>
+      <element name="getProcedureDocumentByCodeReturn" type="impl:DocumentoTramite"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateProcedureDocument">
+    <complexType>
+     <sequence>
+      <element name="procedureDocument" type="impl:DocumentoTramite"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateProcedureDocumentResponse">
+    <complexType>
+     <sequence>
+      <element name="updateProcedureDocumentReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProcedures">
+    <complexType>
+     <sequence>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProceduresResponse">
+    <complexType>
+     <sequence>
+      <element name="getProceduresReturn" type="impl:Tramites"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDocumentfromCode">
+    <complexType>
+     <sequence>
+      <element name="code" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDocumentfromCodeResponse">
+    <complexType>
+     <sequence>
+      <element name="getDocumentfromCodeReturn" type="impl:Documento"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAddressee">
+    <complexType>
+     <sequence>
+      <element name="addresseeId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAddresseeResponse">
+    <complexType>
+     <sequence>
+      <element name="getAddresseeReturn" type="impl:OrganoDestinatario"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="OrganoDestinatario">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="description" nillable="true" type="xsd:string"/>
+       <element name="id" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="addAddressee">
+    <complexType>
+     <sequence>
+      <element name="addressee" type="impl:OrganoDestinatario"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addAddresseeResponse">
+    <complexType>
+     <sequence>
+      <element name="addAddresseeReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteAddressee">
+    <complexType>
+     <sequence>
+      <element name="addresseeId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteAddresseeResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteAddresseeReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateAddressee">
+    <complexType>
+     <sequence>
+      <element name="addressee" type="impl:OrganoDestinatario"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateAddresseeResponse">
+    <complexType>
+     <sequence>
+      <element name="updateAddresseeReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAddressees">
+    <complexType>
+     <sequence>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAddresseesResponse">
+    <complexType>
+     <sequence>
+      <element name="getAddresseesReturn" type="impl:OrganosDestinatarios"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOfOrganoDestinatario">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:OrganoDestinatario"/>
+    </sequence>
+   </complexType>
+   <complexType name="OrganosDestinatarios">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="organosDestinatarios" nillable="true" type="impl:ArrayOfOrganoDestinatario"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="getHook">
+    <complexType>
+     <sequence>
+      <element name="hookId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHookResponse">
+    <complexType>
+     <sequence>
+      <element name="getHookReturn" type="impl:Conector"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Conector">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="description" nillable="true" type="xsd:string"/>
+       <element name="id" nillable="true" type="xsd:string"/>
+       <element name="type" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="addHook">
+    <complexType>
+     <sequence>
+      <element name="hook" type="impl:Conector"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addHookResponse">
+    <complexType>
+     <sequence>
+      <element name="addHookReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteHook">
+    <complexType>
+     <sequence>
+      <element name="hookId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteHookResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteHookReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateHook">
+    <complexType>
+     <sequence>
+      <element name="hook" type="impl:Conector"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateHookResponse">
+    <complexType>
+     <sequence>
+      <element name="updateHookReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHooks">
+    <complexType>
+     <sequence>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHooksResponse">
+    <complexType>
+     <sequence>
+      <element name="getHooksReturn" type="impl:Conectores"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOfConector">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:Conector"/>
+    </sequence>
+   </complexType>
+   <complexType name="Conectores">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="conectores" nillable="true" type="impl:ArrayOfConector"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="getHooksByType">
+    <complexType>
+     <sequence>
+      <element name="hookType" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHooksByTypeResponse">
+    <complexType>
+     <sequence>
+      <element name="getHooksByTypeReturn" type="impl:Conectores"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHookType">
+    <complexType>
+     <sequence>
+      <element name="typeId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHookTypeResponse">
+    <complexType>
+     <sequence>
+      <element name="getHookTypeReturn" type="impl:TipoConector"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="TipoConector">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="description" nillable="true" type="xsd:string"/>
+       <element name="id" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="addHookType">
+    <complexType>
+     <sequence>
+      <element name="hookType" type="impl:TipoConector"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addHookTypeResponse">
+    <complexType>
+     <sequence>
+      <element name="addHookTypeReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteHookType">
+    <complexType>
+     <sequence>
+      <element name="typeId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteHookTypeResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteHookTypeReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateHookType">
+    <complexType>
+     <sequence>
+      <element name="hookType" type="impl:TipoConector"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateHookTypeResponse">
+    <complexType>
+     <sequence>
+      <element name="updateHookTypeReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHookTypes">
+    <complexType>
+     <sequence>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHookTypesResponse">
+    <complexType>
+     <sequence>
+      <element name="getHookTypesReturn" type="impl:TiposConectores"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOfTipoConector">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:TipoConector"/>
+    </sequence>
+   </complexType>
+   <complexType name="TiposConectores">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="tiposConectores" nillable="true" type="impl:ArrayOfTipoConector"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="getAuthHooks">
+    <complexType>
+     <sequence>
+      <element name="tramiteId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAuthHooksResponse">
+    <complexType>
+     <sequence>
+      <element name="getAuthHooksReturn" type="impl:ConectoresAutenticacion"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ConectorAutenticacion">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="conectorId" nillable="true" type="xsd:string"/>
+       <element name="tramiteId" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOfConectorAutenticacion">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:ConectorAutenticacion"/>
+    </sequence>
+   </complexType>
+   <complexType name="ConectoresAutenticacion">
+    <complexContent>
+     <extension base="tns1:RetornoServicio">
+      <sequence>
+       <element name="conectoresAutenticacion" nillable="true" type="impl:ArrayOfConectorAutenticacion"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <element name="addAuthHooks">
+    <complexType>
+     <sequence>
+      <element name="authHook" type="impl:ConectorAutenticacion"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addAuthHooksResponse">
+    <complexType>
+     <sequence>
+      <element name="addAuthHooksReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteAuthHooks">
+    <complexType>
+     <sequence>
+      <element name="tramiteId" type="xsd:string"/>
+      <element name="conectorId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteAuthHooksResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteAuthHooksReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateAuthHooks">
+    <complexType>
+     <sequence>
+      <element name="conectorAutenticacion" type="impl:ConectorAutenticacion"/>
+      <element name="oldHookId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateAuthHooksResponse">
+    <complexType>
+     <sequence>
+      <element name="updateAuthHooksReturn" type="tns1:RetornoServicio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAuthHook">
+    <complexType>
+     <sequence>
+      <element name="tramiteId" type="xsd:string"/>
+      <element name="conectorId" type="xsd:string"/>
+      <element name="entidad" type="tns1:Entidad"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAuthHookResponse">
+    <complexType>
+     <sequence>
+      <element name="getAuthHookReturn" type="impl:ConectorAutenticacion"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://dto.services.core.sgm.tecdoc.ieci" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://server.ws.catalogo.sgm.tecdoc.ieci"/>
+   <complexType name="RetornoServicio">
+    <sequence>
+     <element name="errorCode" nillable="true" type="xsd:string"/>
+     <element name="returnCode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Entidad">
+    <sequence>
+     <element name="habilitada" type="xsd:boolean"/>
+     <element name="identificador" nillable="true" type="xsd:string"/>
+     <element name="nombre" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addProcedureDocumentResponse">
+
+      <wsdl:part element="impl:addProcedureDocumentResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateDocumentRequest">
+
+      <wsdl:part element="impl:updateDocument" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProcedureDocumentsResponse">
+
+      <wsdl:part element="impl:getProcedureDocumentsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateProcedureDocumentRequest">
+
+      <wsdl:part element="impl:updateProcedureDocument" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAuthHookResponse">
+
+      <wsdl:part element="impl:getAuthHookResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHooksRequest">
+
+      <wsdl:part element="impl:getHooks" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addAddresseeResponse">
+
+      <wsdl:part element="impl:addAddresseeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHookResponse">
+
+      <wsdl:part element="impl:getHookResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateHookTypeRequest">
+
+      <wsdl:part element="impl:updateHookType" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isDocumentReferencedRequest">
+
+      <wsdl:part element="impl:isDocumentReferenced" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateHookResponse">
+
+      <wsdl:part element="impl:updateHookResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDocumentsResponse">
+
+      <wsdl:part element="impl:getDocumentsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAddresseeResponse">
+
+      <wsdl:part element="impl:getAddresseeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDocumentRequest">
+
+      <wsdl:part element="impl:getDocument" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteHookResponse">
+
+      <wsdl:part element="impl:deleteHookResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProceduresResponse">
+
+      <wsdl:part element="impl:getProceduresResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProcedureResponse">
+
+      <wsdl:part element="impl:getProcedureResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateAddresseeResponse">
+
+      <wsdl:part element="impl:updateAddresseeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addProcedureResponse">
+
+      <wsdl:part element="impl:addProcedureResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateHookRequest">
+
+      <wsdl:part element="impl:updateHook" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteDocumentRequest">
+
+      <wsdl:part element="impl:deleteDocument" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteAddresseeResponse">
+
+      <wsdl:part element="impl:deleteAddresseeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteProcedureResponse">
+
+      <wsdl:part element="impl:deleteProcedureResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDocumentResponse">
+
+      <wsdl:part element="impl:getDocumentResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteHookTypeRequest">
+
+      <wsdl:part element="impl:deleteHookType" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAddresseeRequest">
+
+      <wsdl:part element="impl:getAddressee" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHooksByTypeRequest">
+
+      <wsdl:part element="impl:getHooksByType" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addProcedureRequest">
+
+      <wsdl:part element="impl:addProcedure" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProcedureDocumentsRequest">
+
+      <wsdl:part element="impl:getProcedureDocuments" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDocumentfromCodeResponse">
+
+      <wsdl:part element="impl:getDocumentfromCodeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addDocumentRequest">
+
+      <wsdl:part element="impl:addDocument" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addHookTypeResponse">
+
+      <wsdl:part element="impl:addHookTypeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteAuthHooksRequest">
+
+      <wsdl:part element="impl:deleteAuthHooks" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addAddresseeRequest">
+
+      <wsdl:part element="impl:addAddressee" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProcedureDocumentByCodeRequest">
+
+      <wsdl:part element="impl:getProcedureDocumentByCode" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteAddresseeRequest">
+
+      <wsdl:part element="impl:deleteAddressee" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHookTypesResponse">
+
+      <wsdl:part element="impl:getHookTypesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addHookRequest">
+
+      <wsdl:part element="impl:addHook" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProceduresRequest">
+
+      <wsdl:part element="impl:getProcedures" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateProcedureResponse">
+
+      <wsdl:part element="impl:updateProcedureResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProcedureRequest">
+
+      <wsdl:part element="impl:getProcedure" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addAuthHooksRequest">
+
+      <wsdl:part element="impl:addAuthHooks" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHookTypeRequest">
+
+      <wsdl:part element="impl:getHookType" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProcedureDocumentRequest">
+
+      <wsdl:part element="impl:getProcedureDocument" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProcedureDocumentByCodeResponse">
+
+      <wsdl:part element="impl:getProcedureDocumentByCodeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="queryResponse">
+
+      <wsdl:part element="impl:queryResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isDocumentReferencedResponse">
+
+      <wsdl:part element="impl:isDocumentReferencedResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProcedureDocumentResponse">
+
+      <wsdl:part element="impl:getProcedureDocumentResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDocumentfromCodeRequest">
+
+      <wsdl:part element="impl:getDocumentfromCode" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateAddresseeRequest">
+
+      <wsdl:part element="impl:updateAddressee" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteHookRequest">
+
+      <wsdl:part element="impl:deleteHook" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateAuthHooksRequest">
+
+      <wsdl:part element="impl:updateAuthHooks" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAuthHookRequest">
+
+      <wsdl:part element="impl:getAuthHook" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAuthHooksRequest">
+
+      <wsdl:part element="impl:getAuthHooks" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHookTypesRequest">
+
+      <wsdl:part element="impl:getHookTypes" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteProcedureRequest">
+
+      <wsdl:part element="impl:deleteProcedure" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateAuthHooksResponse">
+
+      <wsdl:part element="impl:updateAuthHooksResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHooksByTypeResponse">
+
+      <wsdl:part element="impl:getHooksByTypeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteHookTypeResponse">
+
+      <wsdl:part element="impl:deleteHookTypeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAddresseesRequest">
+
+      <wsdl:part element="impl:getAddressees" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAuthHooksResponse">
+
+      <wsdl:part element="impl:getAuthHooksResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addHookTypeRequest">
+
+      <wsdl:part element="impl:addHookType" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addHookResponse">
+
+      <wsdl:part element="impl:addHookResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHooksResponse">
+
+      <wsdl:part element="impl:getHooksResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAddresseesResponse">
+
+      <wsdl:part element="impl:getAddresseesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteAuthHooksResponse">
+
+      <wsdl:part element="impl:deleteAuthHooksResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHookTypeResponse">
+
+      <wsdl:part element="impl:getHookTypeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="queryRequest">
+
+      <wsdl:part element="impl:query" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateProcedureDocumentResponse">
+
+      <wsdl:part element="impl:updateProcedureDocumentResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDocumentsRequest">
+
+      <wsdl:part element="impl:getDocuments" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateHookTypeResponse">
+
+      <wsdl:part element="impl:updateHookTypeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addAuthHooksResponse">
+
+      <wsdl:part element="impl:addAuthHooksResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteDocumentResponse">
+
+      <wsdl:part element="impl:deleteDocumentResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateProcedureRequest">
+
+      <wsdl:part element="impl:updateProcedure" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHookRequest">
+
+      <wsdl:part element="impl:getHook" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateDocumentResponse">
+
+      <wsdl:part element="impl:updateDocumentResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteProcedureDocumentResponse">
+
+      <wsdl:part element="impl:deleteProcedureDocumentResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addProcedureDocumentRequest">
+
+      <wsdl:part element="impl:addProcedureDocument" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteProcedureDocumentRequest">
+
+      <wsdl:part element="impl:deleteProcedureDocument" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addDocumentResponse">
+
+      <wsdl:part element="impl:addDocumentResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="CatalogoTramitesWebService">
+
+      <wsdl:operation name="query">
+
+         <wsdl:input message="impl:queryRequest" name="queryRequest"/>
+
+         <wsdl:output message="impl:queryResponse" name="queryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDocument">
+
+         <wsdl:input message="impl:getDocumentRequest" name="getDocumentRequest"/>
+
+         <wsdl:output message="impl:getDocumentResponse" name="getDocumentResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDocuments">
+
+         <wsdl:input message="impl:getDocumentsRequest" name="getDocumentsRequest"/>
+
+         <wsdl:output message="impl:getDocumentsResponse" name="getDocumentsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateDocument">
+
+         <wsdl:input message="impl:updateDocumentRequest" name="updateDocumentRequest"/>
+
+         <wsdl:output message="impl:updateDocumentResponse" name="updateDocumentResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addProcedure">
+
+         <wsdl:input message="impl:addProcedureRequest" name="addProcedureRequest"/>
+
+         <wsdl:output message="impl:addProcedureResponse" name="addProcedureResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProcedure">
+
+         <wsdl:input message="impl:getProcedureRequest" name="getProcedureRequest"/>
+
+         <wsdl:output message="impl:getProcedureResponse" name="getProcedureResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteProcedure">
+
+         <wsdl:input message="impl:deleteProcedureRequest" name="deleteProcedureRequest"/>
+
+         <wsdl:output message="impl:deleteProcedureResponse" name="deleteProcedureResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateProcedure">
+
+         <wsdl:input message="impl:updateProcedureRequest" name="updateProcedureRequest"/>
+
+         <wsdl:output message="impl:updateProcedureResponse" name="updateProcedureResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isDocumentReferenced">
+
+         <wsdl:input message="impl:isDocumentReferencedRequest" name="isDocumentReferencedRequest"/>
+
+         <wsdl:output message="impl:isDocumentReferencedResponse" name="isDocumentReferencedResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addProcedureDocument">
+
+         <wsdl:input message="impl:addProcedureDocumentRequest" name="addProcedureDocumentRequest"/>
+
+         <wsdl:output message="impl:addProcedureDocumentResponse" name="addProcedureDocumentResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteProcedureDocument">
+
+         <wsdl:input message="impl:deleteProcedureDocumentRequest" name="deleteProcedureDocumentRequest"/>
+
+         <wsdl:output message="impl:deleteProcedureDocumentResponse" name="deleteProcedureDocumentResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addDocument">
+
+         <wsdl:input message="impl:addDocumentRequest" name="addDocumentRequest"/>
+
+         <wsdl:output message="impl:addDocumentResponse" name="addDocumentResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteDocument">
+
+         <wsdl:input message="impl:deleteDocumentRequest" name="deleteDocumentRequest"/>
+
+         <wsdl:output message="impl:deleteDocumentResponse" name="deleteDocumentResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProcedureDocuments">
+
+         <wsdl:input message="impl:getProcedureDocumentsRequest" name="getProcedureDocumentsRequest"/>
+
+         <wsdl:output message="impl:getProcedureDocumentsResponse" name="getProcedureDocumentsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProcedureDocument">
+
+         <wsdl:input message="impl:getProcedureDocumentRequest" name="getProcedureDocumentRequest"/>
+
+         <wsdl:output message="impl:getProcedureDocumentResponse" name="getProcedureDocumentResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProcedureDocumentByCode">
+
+         <wsdl:input message="impl:getProcedureDocumentByCodeRequest" name="getProcedureDocumentByCodeRequest"/>
+
+         <wsdl:output message="impl:getProcedureDocumentByCodeResponse" name="getProcedureDocumentByCodeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateProcedureDocument">
+
+         <wsdl:input message="impl:updateProcedureDocumentRequest" name="updateProcedureDocumentRequest"/>
+
+         <wsdl:output message="impl:updateProcedureDocumentResponse" name="updateProcedureDocumentResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProcedures">
+
+         <wsdl:input message="impl:getProceduresRequest" name="getProceduresRequest"/>
+
+         <wsdl:output message="impl:getProceduresResponse" name="getProceduresResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDocumentfromCode">
+
+         <wsdl:input message="impl:getDocumentfromCodeRequest" name="getDocumentfromCodeRequest"/>
+
+         <wsdl:output message="impl:getDocumentfromCodeResponse" name="getDocumentfromCodeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAddressee">
+
+         <wsdl:input message="impl:getAddresseeRequest" name="getAddresseeRequest"/>
+
+         <wsdl:output message="impl:getAddresseeResponse" name="getAddresseeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addAddressee">
+
+         <wsdl:input message="impl:addAddresseeRequest" name="addAddresseeRequest"/>
+
+         <wsdl:output message="impl:addAddresseeResponse" name="addAddresseeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteAddressee">
+
+         <wsdl:input message="impl:deleteAddresseeRequest" name="deleteAddresseeRequest"/>
+
+         <wsdl:output message="impl:deleteAddresseeResponse" name="deleteAddresseeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateAddressee">
+
+         <wsdl:input message="impl:updateAddresseeRequest" name="updateAddresseeRequest"/>
+
+         <wsdl:output message="impl:updateAddresseeResponse" name="updateAddresseeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAddressees">
+
+         <wsdl:input message="impl:getAddresseesRequest" name="getAddresseesRequest"/>
+
+         <wsdl:output message="impl:getAddresseesResponse" name="getAddresseesResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHook">
+
+         <wsdl:input message="impl:getHookRequest" name="getHookRequest"/>
+
+         <wsdl:output message="impl:getHookResponse" name="getHookResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addHook">
+
+         <wsdl:input message="impl:addHookRequest" name="addHookRequest"/>
+
+         <wsdl:output message="impl:addHookResponse" name="addHookResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteHook">
+
+         <wsdl:input message="impl:deleteHookRequest" name="deleteHookRequest"/>
+
+         <wsdl:output message="impl:deleteHookResponse" name="deleteHookResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateHook">
+
+         <wsdl:input message="impl:updateHookRequest" name="updateHookRequest"/>
+
+         <wsdl:output message="impl:updateHookResponse" name="updateHookResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHooks">
+
+         <wsdl:input message="impl:getHooksRequest" name="getHooksRequest"/>
+
+         <wsdl:output message="impl:getHooksResponse" name="getHooksResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHooksByType">
+
+         <wsdl:input message="impl:getHooksByTypeRequest" name="getHooksByTypeRequest"/>
+
+         <wsdl:output message="impl:getHooksByTypeResponse" name="getHooksByTypeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHookType">
+
+         <wsdl:input message="impl:getHookTypeRequest" name="getHookTypeRequest"/>
+
+         <wsdl:output message="impl:getHookTypeResponse" name="getHookTypeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addHookType">
+
+         <wsdl:input message="impl:addHookTypeRequest" name="addHookTypeRequest"/>
+
+         <wsdl:output message="impl:addHookTypeResponse" name="addHookTypeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteHookType">
+
+         <wsdl:input message="impl:deleteHookTypeRequest" name="deleteHookTypeRequest"/>
+
+         <wsdl:output message="impl:deleteHookTypeResponse" name="deleteHookTypeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateHookType">
+
+         <wsdl:input message="impl:updateHookTypeRequest" name="updateHookTypeRequest"/>
+
+         <wsdl:output message="impl:updateHookTypeResponse" name="updateHookTypeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHookTypes">
+
+         <wsdl:input message="impl:getHookTypesRequest" name="getHookTypesRequest"/>
+
+         <wsdl:output message="impl:getHookTypesResponse" name="getHookTypesResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAuthHooks">
+
+         <wsdl:input message="impl:getAuthHooksRequest" name="getAuthHooksRequest"/>
+
+         <wsdl:output message="impl:getAuthHooksResponse" name="getAuthHooksResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addAuthHooks">
+
+         <wsdl:input message="impl:addAuthHooksRequest" name="addAuthHooksRequest"/>
+
+         <wsdl:output message="impl:addAuthHooksResponse" name="addAuthHooksResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteAuthHooks">
+
+         <wsdl:input message="impl:deleteAuthHooksRequest" name="deleteAuthHooksRequest"/>
+
+         <wsdl:output message="impl:deleteAuthHooksResponse" name="deleteAuthHooksResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateAuthHooks">
+
+         <wsdl:input message="impl:updateAuthHooksRequest" name="updateAuthHooksRequest"/>
+
+         <wsdl:output message="impl:updateAuthHooksResponse" name="updateAuthHooksResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAuthHook">
+
+         <wsdl:input message="impl:getAuthHookRequest" name="getAuthHookRequest"/>
+
+         <wsdl:output message="impl:getAuthHookResponse" name="getAuthHookResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="CatalogoTramitesWebServiceSoapBinding" type="impl:CatalogoTramitesWebService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="query">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="queryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="queryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDocument">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDocumentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDocumentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDocuments">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDocumentsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDocumentsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateDocument">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateDocumentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateDocumentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addProcedure">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addProcedureRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addProcedureResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProcedure">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getProcedureRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getProcedureResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteProcedure">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteProcedureRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteProcedureResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateProcedure">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateProcedureRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateProcedureResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isDocumentReferenced">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isDocumentReferencedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isDocumentReferencedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addProcedureDocument">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addProcedureDocumentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addProcedureDocumentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteProcedureDocument">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteProcedureDocumentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteProcedureDocumentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addDocument">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addDocumentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addDocumentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteDocument">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteDocumentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteDocumentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProcedureDocuments">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getProcedureDocumentsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getProcedureDocumentsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProcedureDocument">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getProcedureDocumentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getProcedureDocumentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProcedureDocumentByCode">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getProcedureDocumentByCodeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getProcedureDocumentByCodeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateProcedureDocument">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateProcedureDocumentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateProcedureDocumentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProcedures">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getProceduresRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getProceduresResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDocumentfromCode">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDocumentfromCodeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDocumentfromCodeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAddressee">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAddresseeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAddresseeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addAddressee">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addAddresseeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addAddresseeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteAddressee">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteAddresseeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteAddresseeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateAddressee">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateAddresseeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateAddresseeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAddressees">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAddresseesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAddresseesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHook">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHookRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHookResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addHook">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addHookRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addHookResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteHook">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteHookRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteHookResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateHook">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateHookRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateHookResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHooks">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHooksRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHooksResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHooksByType">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHooksByTypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHooksByTypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHookType">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHookTypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHookTypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addHookType">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addHookTypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addHookTypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteHookType">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteHookTypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteHookTypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateHookType">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateHookTypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateHookTypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHookTypes">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHookTypesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHookTypesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAuthHooks">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAuthHooksRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAuthHooksResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addAuthHooks">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addAuthHooksRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addAuthHooksResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteAuthHooks">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteAuthHooksRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteAuthHooksResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateAuthHooks">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateAuthHooksRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateAuthHooksResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAuthHook">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAuthHookRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAuthHookResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="CatalogoTramitesWebServiceService">
+
+      <wsdl:port binding="impl:CatalogoTramitesWebServiceSoapBinding" name="CatalogoTramitesWebService">
+
+         <wsdlsoap:address location="http://192.168.1.60:8080/SIGEM_CatalogoTramitesWS/services/CatalogoTramitesWebService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

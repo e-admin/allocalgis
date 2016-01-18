@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/map_1_0.dtd">
+
+<map version="1.0">
+    <mapID target="geopistaIntro" url="Pages/va/geopistaIntro.html" />
+    <mapID target="geopistaAcceso" url="Pages/va/geopistaAcceso.html" />
+    <mapID target="geopistaArchivo" url="Pages/va/geopistaArchivo.html" />
+    <mapID target="geopistaArchivoAbrir" url="Pages/va/geopistaArchivo.html#abrir" />
+    <mapID target="geopistaArchivoCerrar" url="Pages/va/geopistaArchivo.html#cerrar" />
+    <mapID target="geopistaIdioma" url="Pages/va/geopistaIdioma.html"/>
+    <mapID target="geopistaContactos" url="Pages/va/geopistaContactos.html" />
+    <mapID target="geopistaEdicion" url="Pages/va/geopistaEdicion.html" />
+    <mapID target="geopistaColores" url="Pages/va/geopistaColores.html" />
+    <mapID target="geopistaMetadato" url="Pages/va/geopistaMetadato.html" />
+    <mapID target="geopistaIdentificacion" url="Pages/va/geopistaIdentificacion.html" />
+    <mapID target="geopistaIdentificacionCategoria" url="Pages/va/geopistaIdentificacion.html#categoria" />
+    <mapID target="geopistaIdentificacionExtension" url="Pages/va/geopistaIdentificacion.html#extension" />
+    <mapID target="geopistaIdentificacionGraficos" url="Pages/va/geopistaIdentificacion.html#graficos" />
+    <mapID target="geopistaIdentificacionRestricciones" url="Pages/va/geopistaIdentificacion.html#restricciones" />
+    <mapID target="geopistaReferencia" url="Pages/va/geopistaReferencia.html" />
+    <mapID target="geopistaCalidad" url="Pages/va/geopistaCalidad.html" />
+    <mapID target="geopistaDistribucion" url="Pages/va/geopistaDistribucion.html" />
+    <mapID target="geopistaCitacion"  url="Pages/va/geopistaCitacion.html" />
+    <mapID target="geopistaFormatos"  url="Pages/va/geopistaFormatos.html"/>
+    <mapID target="geopistaFecha"  url="Pages/va/geopistaFecha.html"/>
+    <mapID target="geopistaRecursos"  url="Pages/va/geopistaRecursos.html"/>
+    <mapID target="geopistaConsultar"  url="Pages/va/geopistaConsultar.html"/>
+    <mapID target="geopistaCrear"  url="Pages/va/geopistaCrear.html"/>
+</map>

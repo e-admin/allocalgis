@@ -1,0 +1,10 @@
+<mappings>
+    <mapping>
+        <method name="obtenerListaCapas">
+            <return-type componentType="com.localgis.model.ot.CapaOT"/>
+        </method>
+        <method name="altaPOI">            
+            <parameter index="0" componentType="com.localgis.model.ot.PoiOT"/>
+        </method>       
+    </mapping>
+</mappings>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- ===================================================================== -->
+<!--                                                                       -->
+<!--  Log4j Configuration                                                  -->
+<!--                                                                       -->
+<!-- ===================================================================== -->
+
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+
+  <!-- ============================== -->
+  <!-- Append messages to the console -->
+  <!-- ============================== -->
+  <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+    <param name="Threshold" value="INFO"/>
+    <param name="Target" value="System.out"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <!-- The default pattern: Date Priority [Category] Message\n -->
+      <param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n"/>
+    </layout>
+  </appender>
+
+<!-- 
+  <appender name="FILE" class="org.apache.log4j.FileAppender">
+    <param name="Threshold" value="INFO"/>
+    <param name="File" value="localgisapp.log"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n"/>
+    </layout>
+ </appender>
+ 
+ <appender name="TRADUCCIONES" class="org.apache.log4j.FileAppender">
+    <param name="Threshold" value="TRACE"/>
+    <param name="File" value="traducciones.log"/>
+
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n"/>
+    </layout>
+ </appender>
+
+ <appender name="load" class="org.apache.log4j.FileAppender">
+    <param name="Threshold" value="TRACE"/>
+    <param name="File" value="FicheroCargaPatrimonio-${CodigoIne}.log"/>
+
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="[%d{ISO8601}] [Usuario: %X{sesion}] : [Municipio: %X{municipio}] - %m%n"/>
+    </layout>
+ </appender>
+
+
+  <appender name="SYSLOG" class="org.apache.log4j.net.SyslogAppender">
+    <param name="Facility" value="LOCAL7"/>
+    <param name="FacilityPrinting" value="true"/>
+    <param name="SyslogHost" value="localhost"/>
+  </appender>
+
+  <Log events to JMS (requires a topic to be created)
+  <appender name="JMS" class="org.apache.log4j.net.JMSAppender">
+    <param name="Threshold" value="ERROR"/>
+    <param name="TopicConnectionFactoryBindingName" value="java:/ConnectionFactory"/>
+    <param name="TopicBindingName" value="topic/MyErrorsTopic"/>
+  </appender>
+  -->
+
+  <!-- ================ -->
+  <!-- Limit categories -->
+  <!-- ================ -->
+
+
+  <category name="org.apache.commons.httpclient.HttpMethodBase">
+    <priority value="DEBUG"/>
+  </category>
+
+  <category name="org.mortbay">
+    <priority value="ERROR"/>
+  </category>
+
+  <category name="org.objectweb.jotm">
+    <priority value="INFO"/>
+  </category>
+
+  <category name="org.objectweb.jotm.jta">
+    <priority value="INFO"/>
+  </category>
+
+  <category name="org.objectweb.jotm.recovery">
+    <priority value="INFO"/>
+  </category>
+
+  <category name="org.objectweb.carol">
+    <priority value="INFO"/>
+  </category>
+
+  <category name="org.objectweb.carol.rmi">
+    <priority value="INFO"/>
+  </category>
+
+  <category name="org.objectweb.carol.jndi">
+    <priority value="INFO"/>
+  </category>
+
+  <category name="org.objectweb.carol.lmi">
+    <priority value="INFO"/>
+  </category>
+
+  <category name="org.enhydra.jdbc">
+    <priority value="ERROR"/>
+  </category>
+
+ 
+  <category name="com.geopista">
+    <priority value="INFO"/>
+  </category>
+
+  <category name="com.geopista.util">
+    <priority value="DEBUG"/>
+    <!-- appender-ref ref="TRADUCCIONES"/-->
+  </category>
+  
+  
+  <category name="org.apache.commons.httpclient.auth.AuthChallengeProcessor">
+    <priority value="DEBUG"/>
+    <!-- appender-ref ref="FILE"/-->
+  </category>
+
+  <category name="com.geopista.server">
+    <priority value="INFO"/>
+  </category>
+  
+   <category name="com.geopista.sql">
+    <priority value="INFO"/>
+  </category>
+  
+  
+  <category name="com.geopista.protocol.net">
+    <priority value="ERROR"/>
+  </category>
+
+  <category name="com.geopista.protocol">
+    <priority value="ERROR"/>
+  </category>
+
+  <category name="org.apache.commons.httpclient">
+    <priority value="ERROR"/>
+  </category>
+
+  <category name="org.enhydra.jdbc.pool">
+    <priority value="ERROR"/>
+  </category>
+
+  <category name="org.enhydra.jdbc.util.Logger">
+    <priority value="ERROR"/>
+  </category>
+  
+  <category name="java.sql.ResultSet">
+    <priority value="ERROR"/>
+    <!-- appender-ref ref="FILE"/-->    
+  </category>
+  
+    <category name="org.apache.commons.httpclient.HttpMethodBase">
+    <priority value="ERROR"/>
+    <!-- appender-ref ref="FILE"/-->
+  </category>
+  
+  <category name="org.apache.commons.httpclient.auth.AuthChallengeProcessor">
+    <priority value="ERROR"/>
+    <!-- appender-ref ref="FILE"/-->
+  </category>
+  
+   <category name="org.exolab.castor">
+    <priority value="ERROR"/>
+  </category>
+
+  
+  <!-- category name="load">
+    <priority value="INFO"/>
+    <appender-ref ref="load"/>
+  </category-->
+
+  <root>
+    <priority value ="INFO" /> 
+    <appender-ref ref="CONSOLE"/>
+    <!-- appender-ref ref="FILE"/-->
+  </root>
+
+	
+</log4j:configuration>

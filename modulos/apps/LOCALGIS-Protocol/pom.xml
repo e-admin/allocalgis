@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.localgis.protocol</groupId>
+  <artifactId>localgis-protocol</artifactId>
+  <packaging>jar</packaging>
+  <name>LOCALGIS Protocol</name>
+
+  <url>http://maven.apache.org</url>
+  <parent>
+    <groupId>com.localgis</groupId>
+    <artifactId>localgis-parent</artifactId>
+    <version>3.0</version>
+  </parent>
+
+  <dependencies>
+  <dependency>
+  	<groupId>com.localgis.context</groupId>
+  	<artifactId>localgis-context</artifactId>
+  	<version>3.0</version>
+  </dependency>
+  <dependency>
+  	<groupId>com.localgis.lib</groupId>
+  	<artifactId>localgis-xml2java</artifactId>
+  	<version>3.0</version>
+  </dependency>
+    <dependency>
+  	<groupId>com.localgis.resources</groupId>
+  	<artifactId>localgis-resources</artifactId>
+  	<version>3.0</version>
+  </dependency>
+  <dependency>
+  	<groupId>com.localgis.sql</groupId>
+  	<artifactId>localgis-sql</artifactId>
+  	<version>3.0</version>
+  </dependency>
+  <dependency>
+  	<groupId>com.localgis.model</groupId>
+  	<artifactId>localgis-model</artifactId>
+  	<version>3.0</version>
+  </dependency>
+  <dependency>
+  	<groupId>com.localgis.const</groupId>
+  	<artifactId>localgis-const</artifactId>
+  	<version>3.0</version>
+  </dependency>
+    <dependency>
+  	<groupId>com.localgis.utils</groupId>
+  	<artifactId>localgis-utils-document</artifactId>
+  	<version>3.0</version>
+  </dependency>
+    <dependency>
+  	<groupId>com.localgis.model</groupId>
+  	<artifactId>localgis-model-admcar</artifactId>
+  	<version>3.0</version>
+  </dependency>
+  
+<!--   <dependency>
+  	<groupId>com.localgis.plugin</groupId>
+  	<artifactId>localgis-defaultplugins</artifactId>
+  	<version>3.0</version>
+  </dependency> -->
+ 
+  <dependency>
+  	<groupId>commons-net</groupId>
+  	<artifactId>commons-net</artifactId>
+  	<version>3.1</version>
+  </dependency>
+  <dependency>
+	<groupId>org.codehaus.castor</groupId>
+	<artifactId>castor-xml</artifactId>
+	<version>1.3.2</version>
+	</dependency>
+	<dependency>
+	  <groupId>com.localgis</groupId>
+	  <artifactId>AbsoluteLayout</artifactId>
+	  <version>1.0.0</version>
+	</dependency>
+  </dependencies>
+</project>

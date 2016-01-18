@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="EIEL_equipamientos_EQ"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="840"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="tipo_infra" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["EIEL"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ID_ENTIDAD" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_municipio" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["33001"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="locale" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["es_ES"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[".\\src\\plantillas\\eiel\\subreports\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGE_DIR" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[".\\src\\plantillas\\eiel\\img\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lista_dominios" isForPrompting="false" class="java.lang.Object">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_cc" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_cu" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_as" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_ce" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_en" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_ip" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_sa" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_su" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_id" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_lm" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_mt" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_pj" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="filtro_ta" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["limit 0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nucleo_seleccionado" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="IMPRIMIR_IMAGENES" isForPrompting="false" class="java.lang.Boolean">
+		<defaultValueExpression ><![CDATA[new Boolean(true)]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[select nombreoficial as municipio from municipios where id = $P{id_municipio}]]></queryString>
+
+	<field name="municipio" class="java.lang.String"/>
+
+	<variable name="logotipo" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[
+		]]></variableExpression>
+		<initialValueExpression><![CDATA[
+		]]></initialValueExpression>
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="60"  isSplitAllowed="true" >
+				<rectangle radius="0" >
+					<reportElement
+						mode="Opaque"
+						x="1"
+						y="2"
+						width="533"
+						height="56"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="rectangle-1"/>
+					<graphicElement stretchType="NoStretch" pen="Thin" fill="Solid" />
+				</rectangle>
+				<image  scaleImage="RetainShape" vAlign="Middle" hAlign="Left" isUsingCache="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="6"
+						y="3"
+						width="85"
+						height="54"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="image-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch" pen="None" fill="Solid" />
+					<imageExpression class="java.lang.String"><![CDATA[$P{IMAGE_DIR}+"logo_principado.gif"]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="153"
+						y="41"
+						width="130"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-2"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="10" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{municipio}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						mode="Opaque"
+						x="451"
+						y="1"
+						width="1"
+						height="57"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch" pen="Thin" fill="Solid" />
+				</line>
+				<line direction="BottomUp">
+					<reportElement
+						mode="Opaque"
+						x="97"
+						y="39"
+						width="355"
+						height="1"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch" pen="Thin" fill="Solid" />
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						mode="Opaque"
+						x="96"
+						y="1"
+						width="1"
+						height="57"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="line-4"/>
+					<graphicElement stretchType="NoStretch" pen="Thin" fill="Solid" />
+				</line>
+				<staticText>
+					<reportElement
+						x="99"
+						y="2"
+						width="346"
+						height="25"
+						key="staticText-8"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ENCUESTA DE INFRAESTRUCTURAS Y EQUIPAMIENTOS LOCALES SISTEMA DE ACTUALIZACIÃ“N CONTÃ�NUA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="101"
+						y="27"
+						width="95"
+						height="13"
+						key="staticText-9"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Asturias]]></text>
+				</staticText>
+				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="455"
+						y="12"
+						width="76"
+						height="30"
+						key="image-2"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA[$P{IMAGE_DIR}+"serpa.jpg"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement
+						x="99"
+						y="41"
+						width="55"
+						height="17"
+						key="staticText-10"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Verdana" size="10"/>
+					</textElement>
+				<text><![CDATA[Municipio:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="298"
+						y="41"
+						width="40"
+						height="16"
+						key="staticText-11"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana"/>
+					</textElement>
+				<text><![CDATA[Fecha:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="338"
+						y="41"
+						width="106"
+						height="16"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+				</textField>
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="228"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="3"
+						y="3"
+						width="150"
+						height="13"
+						key="staticText-12"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+					</textElement>
+				<text><![CDATA[TIPO DE INFRAESTRUCTURA:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="156"
+						y="3"
+						width="138"
+						height="13"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{tipo_infra}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="298"
+						y="3"
+						width="205"
+						height="13"
+						key="staticText-13"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ORGANISMO QUE CONTRATA LA OBRA:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="16"
+						width="125"
+						height="13"
+						key="staticText-14"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[DIRECCIÃ“N FACULTATIVA:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="207"
+						y="16"
+						width="40"
+						height="13"
+						key="staticText-15"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[TELF:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="298"
+						y="16"
+						width="32"
+						height="11"
+						key="staticText-16"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[FASE:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="337"
+						y="16"
+						width="179"
+						height="10"
+						key="staticText-17"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+				<text><![CDATA[EN PROYECTO           OBRA REALIZADA]]></text>
+				</staticText>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="31"
+						width="533"
+						height="15"
+						key="subreport-1"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_cc}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_cc">
+						<subreportParameterExpression><![CDATA[$P{filtro_cc}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_01_CC_casa_consistorial.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="46"
+						width="533"
+						height="15"
+						key="subreport-2"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_ce}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_ce">
+						<subreportParameterExpression><![CDATA[$P{filtro_ce}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_02_CE_cementerios.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="61"
+						width="533"
+						height="15"
+						key="subreport-3"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_as}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_as">
+						<subreportParameterExpression><![CDATA[$P{filtro_as}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_03_AS_centros_asistenciales.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="76"
+						width="533"
+						height="15"
+						key="subreport-4"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_cu}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_cu">
+						<subreportParameterExpression><![CDATA[$P{filtro_cu}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_04_CU_centros_culturales.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="91"
+						width="533"
+						height="15"
+						key="subreport-5"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_en}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_en">
+						<subreportParameterExpression><![CDATA[$P{filtro_en}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_05_EN_centros_ensenanza.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="106"
+						width="533"
+						height="15"
+						key="subreport-6"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_ip}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_ip">
+						<subreportParameterExpression><![CDATA[$P{filtro_ip}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_06_IP_centros_extincion_incendios.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="121"
+						width="533"
+						height="15"
+						key="subreport-7"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_sa}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_sa">
+						<subreportParameterExpression><![CDATA[$P{filtro_sa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_07_CSAN_centros_sanitarios.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="136"
+						width="533"
+						height="15"
+						key="subreport-8"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_su}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_su">
+						<subreportParameterExpression><![CDATA[$P{filtro_su}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_08_SU_edificios_sin_uso.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="151"
+						width="533"
+						height="15"
+						key="subreport-9"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_id}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_id">
+						<subreportParameterExpression><![CDATA[$P{filtro_id}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_09_ID_instalacion_deportivas.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="166"
+						width="533"
+						height="15"
+						key="subreport-10"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_lm}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_lm">
+						<subreportParameterExpression><![CDATA[$P{filtro_lm}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_10_LM_lonjas_y_mercados.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="181"
+						width="533"
+						height="15"
+						key="subreport-11"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_mt}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_mt">
+						<subreportParameterExpression><![CDATA[$P{filtro_mt}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_11_MT_mataderos.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="196"
+						width="533"
+						height="15"
+						key="subreport-12"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_pj}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_pj">
+						<subreportParameterExpression><![CDATA[$P{filtro_pj}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_12_PJ_parques_y_jardines.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="211"
+						width="533"
+						height="15"
+						key="subreport-13"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[new Boolean(!$P{filtro_ta}.equalsIgnoreCase("LIMIT 0"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="ID_ENTIDAD">
+						<subreportParameterExpression><![CDATA[$P{ID_ENTIDAD}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="filtro_ta">
+						<subreportParameterExpression><![CDATA[$P{filtro_ta}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="id_municipio">
+						<subreportParameterExpression><![CDATA[$P{id_municipio}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="locale">
+						<subreportParameterExpression><![CDATA[$P{locale}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nucleo_seleccionado">
+						<subreportParameterExpression><![CDATA[$P{nucleo_seleccionado}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="IMPRIMIR_IMAGENES">
+						<subreportParameterExpression><![CDATA[$P{IMPRIMIR_IMAGENES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"EIEL_equipamientos_EQ_13_TA_tanatorios.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="1"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="14"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="460"
+						y="2"
+						width="25"
+						height="10"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-11"
+						positionType="Float"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="503"
+						y="2"
+						width="25"
+						height="10"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-12"
+						positionType="Float"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<line direction="BottomUp">
+					<reportElement
+						mode="Opaque"
+						x="490"
+						y="7"
+						width="5"
+						height="1"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="line-3"
+						positionType="Float"/>
+					<graphicElement stretchType="NoStretch" pen="Thin" fill="Solid" />
+				</line>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="400"
+						y="2"
+						width="56"
+						height="10"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-7"
+						positionType="Float"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+						<font fontName="Verdana" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[PÃ¡gina]]></text>
+				</staticText>
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

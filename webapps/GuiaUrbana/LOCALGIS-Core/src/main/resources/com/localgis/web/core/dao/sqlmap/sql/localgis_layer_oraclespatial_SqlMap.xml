@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="localgis_layer">
+  
+  <insert id="insert" parameterClass="com.localgis.web.core.model.LocalgisLayer" >
+    <selectKey keyProperty="layerid" resultClass="java.lang.Integer">
+      select localgisguiaurbana.layersequence.nextval from dual
+    </selectKey>
+    insert into localgisguiaurbana.layer (layerid, layeridgeopista, layername, layerquery, geometrytype)
+    values (#layerid:INTEGER#, #layeridgeopista:INTEGER#, #layername:VARCHAR#, #layerquery:VARCHAR#, #geometrytype:VARCHAR#)
+  </insert>
+    
+</sqlMap>

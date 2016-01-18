@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="localgis_marker" >
+
+  <resultMap id="LocalgisMarkerResult" class="com.localgis.web.core.model.LocalgisMarker" >
+    <result column="markerid" property="markerid" jdbcType="INTEGER" />
+    <result column="mapid" property="mapid" jdbcType="INTEGER" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="x" property="x" jdbcType="DOUBLE" />
+    <result column="y" property="y" jdbcType="DOUBLE" />
+    <result column="scale" property="scale" jdbcType="DOUBLE" />
+    <result column="markname" property="markname" jdbcType="VARCHAR" />
+    <result column="marktext" property="marktext" jdbcType="VARCHAR" />
+  </resultMap>
+  
+   <select id="selectMarkersByMapIdAndUsername" resultMap="LocalgisMarkerResult" parameterClass="java.util.Map" >
+    select markerid, mapid, username, x, y, scale, markname, marktext
+    from localgisguiaurbana.marker
+    where mapid = #mapid# and username = #username#
+  </select>
+
+  <select id="selectByPrimaryKey" resultMap="LocalgisMarkerResult" parameterClass="java.util.Map">
+    select markerid, mapid, username, x, y, scale, markname, marktext
+    from localgisguiaurbana.marker
+    where markerid = #markerid#
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterClass="com.localgis.web.core.model.LocalgisMarker" >
+    delete from localgisguiaurbana.marker
+    where markerid = #markerid:NUMERIC#
+  </delete>
+
+  <update id="updateByPrimaryKey" parameterClass="com.localgis.web.core.model.LocalgisMarker" >
+    update localgisguiaurbana.marker
+    set markname = #markname:VARCHAR#,
+        marktext = #marktext:VARCHAR#
+    where markerid = #markerid:NUMERIC#
+  </update>
+  
+</sqlMap>

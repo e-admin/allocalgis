@@ -1,0 +1,100 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository>${HOME}/.m2/repository.localgis3</localRepository>
+  <!--localRepository>c:\Users\fjgarcia\.m2\repository.localgis3.satec</localRepository-->
+  <interactiveMode>true</interactiveMode>
+  <usePluginRegistry>false</usePluginRegistry>
+  <offline>false</offline>
+  
+  <servers>			
+		<server>
+			<id>LocalGISIII</id>
+			<!--username>satec</username>
+			<password>EkdYb2mP</password-->
+			<username>admin</username>
+			<password>admin123</password>
+		</server>	
+  </servers>
+  
+	<profiles>		
+		<profile>
+			<id>LocalGISIII</id>
+			<properties>
+				<jarsigner.alias>geopista</jarsigner.alias>
+				<jarsigner.keystoreDirectory>${signPath}</jarsigner.keystoreDirectory>
+				<jarsigner.keystore>GeopistaKeyStore</jarsigner.keystore>
+				<jarsigner.storepass>geopista99</jarsigner.storepass>
+				<jarsigner.keypass>geopista99</jarsigner.keypass>				
+			</properties>
+			<repositories>
+				<repository>
+					<id>LocalGISIII</id>
+					<name>Repositorio de LocalGISIII de MINETUR</name>
+					<!--url>http://localgis3.minetur.gob.es/nexus/content/groups/localgisgroup/</url-->
+					<url>http://localgis.nexus.satec.es:38081/nexus/content/groups/localgisgroup/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>LocalGISIII.Cotesa</id>
+					<name>Repositorio de LocalGISIII de MINETUR</name>					
+					<!--url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url-->
+					<url>http://localgis.nexus.satec.es:38081/nexus/content/groups/localgisgroup/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</repository>	
+										
+				
+			</repositories>			
+			<pluginRepositories>
+				<pluginRepository>
+					<id>LocalGISIII</id>
+					<name>Repositorio de LocalGISIII de MINETUR</name>
+					<!--url>http://srvweblin.grupotecopy.es/nexus/content/repositories/localgis3/</url-->
+					<url>http://localgis.nexus.satec.es:38081/nexus/content/groups/localgisgroup/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>	
+			
+			</profile>
+			
+	</profiles>
+	<mirrors>
+		<mirror>
+			<id>LocalGISGExtra</id> 
+			<name>Servidor Nexus</name>
+			<url>http://maven.forgerock.org/repo/repo/</url> 
+			<mirrorOf>ForgeRock</mirrorOf> 
+		</mirror>		
+		<!--mirror>
+			<id>LocalGISGrupo</id> 
+			<name>Servidor Nexus COTESA</name>
+			<url>http://localgis3.minetur.gob.es/nexus/content/groups/localgisgroup/</url> 
+			<mirrorOf>*</mirrorOf> 
+		</mirror-->
+		
+	</mirrors>
+
+	
+	<activeProfiles>
+		<activeProfile>LocalGISIII</activeProfile>
+	</activeProfiles>
+</settings>

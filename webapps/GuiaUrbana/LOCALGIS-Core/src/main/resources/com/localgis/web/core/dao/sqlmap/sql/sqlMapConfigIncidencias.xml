@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig
+PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig >
+
+    <settings useStatementNamespaces="true"/>
+
+	<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="oracle.jdbc.driver.OracleDriver" />
+			<property name="JDBC.ConnectionURL" value="jdbc:oracle:thin:@172.16.1.100:1521:ORCL" />
+			<property name="JDBC.Username" value="repos" />
+			<property name="JDBC.Password" value="repos" />
+			<property name="JDBC.DefaultAutoCommit" value="false" />
+			<property name="Pool.MaximumActiveConnections" value="10" />
+			<property name="Pool.MaximumIdleConnections" value="5" />
+			<property name="Pool.MaximumCheckoutTime" value="120000" />
+		</dataSource>
+	</transactionManager>
+
+	<!-- Ficheros de mapeos. Los paths son relativos al classpath. -->
+	<!-- Ficheros relacionados con la bd de geopista -->
+    <sqlMap resource="com/localgis/web/core/dao/sqlmap/sql/incidencias_authentication_SqlMap.xml" />	
+</sqlMapConfig>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/map_1_0.dtd">
+
+<map version="1.0">
+
+    <mapID target="GestionExpedientes" url="registroExp/Pages/es/GestionExpedientes.html" />
+    <mapID target="BusquedaExpedientes" url="registroExp/Pages/es/BusquedaExpedientes.html" />
+    <mapID target="NuevoExpediente" url="registroExp/Pages/es/NuevoExpediente.html" />
+    <mapID target="AsociarParcelas" url="registroExp/Pages/es/AsociarParcelas.html" />
+    <mapID target="GestionDeExpedientes" url="registroExp/Pages/es/GestionDeExpedientes.html" />
+    <mapID target="ModificarDatosExpediente" url="registroExp/Pages/es/ModificarDatosExpediente.html" />
+    <mapID target="EditarInformacionCatastral" url="registroExp/Pages/es/EditarInformacionCatastral.html" />
+    <mapID target="ExportarExpediente" url="registroExp/Pages/es/ExportarExpediente.html" />
+    <mapID target="AsociarInformacionGrafica" url="registroExp/Pages/es/AsociarInformacionGrafica.html" />
+    <mapID target="VerEstadoExpediente" url="registroExp/Pages/es/VerEstadoExpediente.html" />   
+    
+    <mapID target="introduccionRegExp" url="registroExp/Pages/es/Introduccion.html"/>
+    <mapID target="masDatosFinca" url="registroExp/Pages/es/MasDatosFinca.html"/>
+    <mapID target="MasDatosBI" url="registroExp/Pages/es/MasDatosBI.html"/>
+    <mapID target="MasDatosLocales" url="registroExp/Pages/es/MasDatosLocales.html"/>
+    <mapID target="MasDatosTitular" url="registroExp/Pages/es/MasDatosTitular.html"/>
+    <mapID target="NuevaFinca" url="registroExp/Pages/es/NuevaFinca.html"/>
+    <mapID target="NuevoBI" url="registroExp/Pages/es/NuevoBI.html"/>
+    <mapID target="NuevoLocal" url="registroExp/Pages/es/NuevoLocal.html"/>
+    <mapID target="NuevoLocalComun" url="registroExp/Pages/es/NuevoLocalComun.html"/>
+    <mapID target="NuevoCultivo" url="registroExp/Pages/es/NuevoCultivo.html"/>
+    <mapID target="NuevoCultivoComun" url="registroExp/Pages/es/NuevoCultivoComun.html"/>
+    <mapID target="NuevoTitular" url="registroExp/Pages/es/NuevoTitular.html"/>    
+    <mapID target="EliminarFinca" url="registroExp/Pages/es/EliminarFinca.html"/>
+    <mapID target="EliminarBI" url="registroExp/Pages/es/EliminarBI.html"/>
+    <mapID target="EliminarLocal" url="registroExp/Pages/es/EliminarLocal.html"/>
+    <mapID target="EliminarCultivo" url="registroExp/Pages/es/EliminarCultivo.html"/>
+    <mapID target="EliminarTitular" url="registroExp/Pages/es/EliminarTitular.html"/>    
+    <mapID target="DefinirRepresentante" url="registroExp/Pages/es/DefinirRepresentante.html"/>
+    <mapID target="ComunidadBienes" url="registroExp/Pages/es/ComunidadBienes.html"/>
+    <mapID target="Suelo" url="registroExp/Pages/es/Suelo.html"/>
+    <mapID target="UnidadConstructiva" url="registroExp/Pages/es/UnidadConstructiva.html"/>
+    <mapID target="Reparto" url="registroExp/Pages/es/Reparto.html"/>
+    
+    <mapID target="ExportacionExpedientes" url="registroExp/Pages/es/ExportacionExpedientes.html"/>
+
+    <mapID target="HistoricoDeFicheros" url="registroExp/Pages/es/HistoricoDeFicheros.html"/>
+    
+    <mapID target="Configuracion" url="registroExp/Pages/es/Configuracion.html"/>
+    
+    <mapID target="introduccionHerrEdic" url="herramientasEdicion/Pages/es/Introduccion.html"/>    
+    <mapID target="SeleccionPorCirculo" url="herramientasEdicion/Pages/es/SeleccionPorCirculo.html"/>
+    <mapID target="Escalado" url="herramientasEdicion/Pages/es/Escalado.html"/>
+    <mapID target="Girado" url="herramientasEdicion/Pages/es/Girado.html"/>
+    <mapID target="Simetria" url="herramientasEdicion/Pages/es/Simetria.html"/>
+    <mapID target="SeleccionarPorPoligono" url="herramientasEdicion/Pages/es/SeleccionarPorPoligono.html"/>
+    <mapID target="GuiasDeDibujo" url="herramientasEdicion/Pages/es/GuiasDeDibujo.html"/>
+    <mapID target="CoordAbsolutasRelativas" url="herramientasEdicion/Pages/es/CoordAbsolutasRelativas.html"/>
+    <mapID target="PanelEdicion" url="herramientasEdicion/Pages/es/PanelEdicion.html"/>
+    <mapID target="Recortar" url="herramientasEdicion/Pages/es/Recortar.html"/>
+    <mapID target="GeometriasParalelas" url="herramientasEdicion/Pages/es/GeometriasParalelas.html"/>
+    <mapID target="ExplosionEntidades" url="herramientasEdicion/Pages/es/ExplosionEntidades.html"/>    
+    <mapID target="DivisionElementos" url="herramientasEdicion/Pages/es/DivisionElementos.html"/>
+    <mapID target="SeleccionUnaEntidad" url="herramientasEdicion/Pages/es/SeleccionUnaEntidad.html"/>
+    <mapID target="SeleccionPorTipo" url="herramientasEdicion/Pages/es/SeleccionPorTipo.html"/>
+    <mapID target="FusionElementos" url="herramientasEdicion/Pages/es/FusionElementos.html"/>
+    <mapID target="DibujarCirculo" url="herramientasEdicion/Pages/es/DibujarCirculo.html"/>
+    <mapID target="DibujarArco" url="herramientasEdicion/Pages/es/DibujarArco.html"/>
+    
+    <mapID target="introduccionImportadores" url="importadores/Pages/es/Introduccion.html"/>
+    <mapID target="PadronCatastral" url="importadores/Pages/es/PadronCatastral.html"/>
+    <mapID target="FinRetorno" url="importadores/Pages/es/FinRetorno.html"/>
+    <mapID target="FinSalida" url="importadores/Pages/es/FinSalida.html"/>
+    <mapID target="InformacionTitularidad" url="importadores/Pages/es/InformacionTitularidad.html"/>
+    <mapID target="InformacionCatastral" url="importadores/Pages/es/InformacionCatastral.html"/>
+    <mapID target="InformacionRetorno" url="importadores/Pages/es/InformacionRetorno.html"/>        
+    
+    <mapID target="dbHelp" url="dbHelp/"/>    
+    
+</map>

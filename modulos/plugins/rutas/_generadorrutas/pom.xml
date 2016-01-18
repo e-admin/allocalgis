@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.generador-modulos</groupId>
+	<artifactId>generador</artifactId>
+	<version>3.0</version>
+	<packaging>pom</packaging>
+	<description>Agrupador para generacion de artefactos Editor Gis</description>
+
+	<properties>
+		<rutaProyectos>../</rutaProyectos>
+	</properties>
+
+	<modules>
+
+
+	<module>../RouteEngineCalculateRoutePlugin</module>
+	<module>../RouteEngineDeleteNetworksPlugin</module>
+	<module>../RouteEngineDrawPMRRedPlugin</module>
+	<module>../RouteEngineGuardarEnBasePlugin</module>
+	<module>../RouteEngineIncidentInsertionPlugin</module>
+	<module>../RouteEngineLeerDeBasePlugin</module>
+	<module>../RouteEngineMaxSpeedEditPlugin</module>
+	<module>../RouteEngineNetworkFusionPlugin</module>
+	<module>../RouteEngineNetworkLinksPlugin</module>
+	<module>../RouteEnginePMRRedGeneratorPlugin</module>
+	<module>../RouteEnginePluginToolsCore</module>
+	<module>../RouteEngineTemporalIncidentsPlugin</module>
+	<module>../RouteEngineTrafficRegulationPlugin</module>
+	<module>../RouteEngineTravelSalesManPlugin</module>
+	<module>../RouteEngineTurnImpedancePlugin</module>
+	<module>../RouteEngineWithInCostPlugin</module>
+	<module>../ToolBoxNetworkPlugIn</module>
+	<module>../localgis-routeengine</module>
+	</modules>
+</project>

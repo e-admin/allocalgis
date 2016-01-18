@@ -1,0 +1,52 @@
+<root>
+    <element xml-name="tint" java-name="tipoDeIntercambio"/>
+    <element xml-name="texp" java-name="tipoExpediente.codigoTipoExpediente"/>
+    <element xml-name="fac" java-name="fechaAlteracion"/>
+    <element xml-name="expg">
+        <element xml-name="aexpg" java-name="annoExpedienteGerencia"/>
+        <element xml-name="rexpg" java-name="referenciaExpedienteGerencia"/>
+        <element xml-name="ero" java-name="codigoEntidadRegistroDGCOrigenAlteracion" length="3"/>
+    </element>
+    <element xml-name="expec">
+        <element xml-name="aexpec" java-name="annoExpedienteAdminOrigenAlteracion"/>
+        <element xml-name="rexpec" java-name="referenciaExpedienteAdminOrigen"/>
+        <element xml-name="eoa" java-name="entidadGeneradora.descripcion"/>
+    </element>
+    <element xml-name="fre" java-name="fechaRegistro"/>
+    <element xml-name="fhm">
+        <element xml-name="fm" java-name="fechaMovimiento"/>
+        <element xml-name="hm" java-name="horaMovimiento"/>
+    </element>
+    <element xml-name="inr">
+        <element xml-name="npn">
+            <element xml-name="not">
+                <element xml-name="cp" java-name="codProvinciaNotaria"/>
+                <element xml-name="cpb" java-name="codPoblacionNotaria" length="4"/>
+                <element xml-name="cnt" java-name="codNotaria" length="3"/>
+            </element>
+            <element xml-name="pn">
+                <element xml-name="aprt" java-name="annoProtocoloNotarial"/>
+                <element xml-name="prt" java-name="protocoloNotarial" length="6"/>
+            </element>
+        </element>
+    </element>
+    <element xml-name="decl">
+        <element xml-name="doco" java-name="tipoDocumentoOrigenAlteracion"/>
+        <element xml-name="idoco" java-name="infoDocumentoOrigenAlteracion"/>
+        <element xml-name="nbi">
+            <element xml-name="nbu" java-name="numBienesInmueblesUrbanos"/>
+            <element xml-name="nbr" java-name="numBienesInmueblesRusticos"/>
+            <element xml-name="nbce" java-name="numBienesInmueblesCaractEsp"/>
+        </element>
+    </element>
+    <element xml-name="cdeac" java-name="codigoDescriptivoAlteracion"/>
+    <element xml-name="deac" java-name="descripcionAlteracion"/>
+    <element xml-name="einfg" java-name="existenciaInformacionGrafica"/>
+    <element xml-name="dec">
+        <element xml-name="idp">
+            <element xml-name="nif" java-name="nifPresentador" length="9"/>
+            <element xml-name="nom" java-name="nombreCompletoPresentador"/>
+        </element>
+        <element xml-name="dfn" java-name="direccionPresentador"/>
+    </element>
+</root>

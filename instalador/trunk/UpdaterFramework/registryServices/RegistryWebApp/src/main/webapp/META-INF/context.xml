@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context debug="10" path="/Registry">
+		<Resource auth="Container" 
+			  driverClassName="org.postgresql.Driver" 
+			  maxActive="10" 
+			  maxIdle="4" 
+			  name="jdbc/systemversion" 
+			  password="${localgis_database_password}" 
+			  type="javax.sql.DataSource" 
+			  url="${localgis_database_url}?autoReconnect=true" 
+			  username="${localgis_database_username}" 
+			  validationQuery="select 1"/>
+			
+</Context>
+<!--
+<Context debug="10">
+		<Resource auth="Container" 
+			  driverClassName="org.postgresql.Driver" 
+			  maxActive="10" 
+			  maxIdle="4" 
+			  name="jdbc/systemversion" 
+			  password="e2F4m68A" 
+			  type="javax.sql.DataSource" 
+			  url="jdbc:postgresql://pamod-pre.c.ovd.interhost.com:5432/geopista?autoReconnect=true" 
+			  username="postgres" 
+			  validationQuery="select 1"/>
+			
+</Context> -->

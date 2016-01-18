@@ -1,0 +1,118 @@
+MAP
+	NAME "localgisguiaurbana"
+	STATUS ON
+	SIZE 600 420
+	IMAGECOLOR 255 255 255
+	IMAGETYPE PNG24
+	EXTENT $MAX_EXTENT$
+	UNITS METERS
+	RESOLUTION 72
+
+	FONTSET   "fontset/fontset.txt"
+
+	# Needed for MapServer v4.  Please comment the following line if you are using MapServer v3.6 or earlier
+	TEMPLATEPATTERN "printable.html|loader.html"
+
+	SHAPEPATH "data"
+
+	WEB
+		METADATA
+			"wms_title" "LOCALGIS Guia Urbana"
+			"wms_abstract" "wms reference implementation"
+			"wms_server_version"  "1.1.1"
+			"wms_onlineresource" "$ONLINE_RESOURCE$"
+			"wms_srs" "EPSG:23029 EPSG:23030 EPSG:23031 EPSG:4230 EPSG:25829 EPSG:25830 EPSG:25831 EPSG:4258 EPSG:4326"
+			"wms_keywordlist" "mapserver,WMS"
+			"wms_contactperson" ""
+			"wms_contactorganization" ""
+			"wms_contactposition"	""
+			"wms_addresstype" ""
+			"wms_address" ""
+			"wms_city" ""
+			"wms_stateorprovince" ""
+			"wms_city" ""
+			"wms_postcode" ""
+			"wms_country" ""
+			"wms_contactvoicetelephone" ""
+			"wms_contactfacsimiletelephone" ""
+			"wms_contactelectronicmailaddress" ""
+			"wms_feature_info_mime_type" "gml"
+			"wms_encoding" "$ENCODING$"
+		END
+		TEMPLATE "templates/feature.html"
+		EMPTY "empty.html"  # path relative to the webserver document root
+		MINSCALE 1000
+		MAXSCALE 1550000
+		IMAGEPATH tmp/  # full path to image tmp dir, so cgi can find it
+		IMAGEURL "tmp/"  # url location of image tmp dir, so web browser can find it
+	END # Web Interface Options
+
+	PROJECTION
+	   "$PROJECTION$"
+	END
+
+	LEGEND
+		STATUS ON
+		POSITION UL
+		KEYSIZE 24 16
+		LABEL
+			FONT "verdana"
+			TYPE TRUETYPE
+			SIZE 10
+			COLOR 70 70 70
+		END
+		TRANSPARENT on
+	END # Legend
+
+	REFERENCE
+		IMAGE graphics/clearmap.gif
+		EXTENT $MAX_EXTENT$
+		SIZE 150 128
+		STATUS ON
+		COLOR -1 -1 -1
+		OUTLINECOLOR 255 0 0
+	END
+
+	QUERYMAP
+		STATUS OFF
+		STYLE SELECTED
+		COLOR 255 255 0
+	END
+
+	SCALEBAR
+		STATUS OFF
+		LABEL
+			SIZE tiny
+			COLOR 0 0 0
+			OUTLINECOLOR 255 255 255
+		END
+		STYLE 0
+		INTERVALS 3
+		SIZE 100 3
+	 	COLOR 0 0 0
+	 	BACKGROUNDCOLOR 255 255 255
+	 	OUTLINECOLOR 0 0 0
+	 	UNITS METERS
+	 	POSITION LR
+	 	TRANSPARENT TRUE
+	 	POSTLABELCACHE true
+	END
+
+    SYMBOL
+        NAME "sld_mark_symbol_lcg_point_selected"
+        TYPE ELLIPSE
+        FILLED TRUE
+        POINTS
+            1 1
+        END
+    END
+
+#############################
+# Definiciones de Layers/Capas
+#############################
+
+$LAYERS_MAPSERVER$
+
+
+
+END # Map File

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="geopista_columns" >
+  
+  <resultMap id="GeopistaColumnResult" class="com.localgis.web.core.model.GeopistaColumn" >
+    <result column="id" property="id" jdbcType="NUMERIC" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="id_domain" property="idDomain" jdbcType="NUMERIC" />
+    <result column="id_table" property="idTable" jdbcType="NUMERIC" />
+    <result column="Length" property="length" jdbcType="NUMERIC" />
+    <result column="Precision" property="precision" jdbcType="NUMERIC" />
+    <result column="Scale" property="scale" jdbcType="NUMERIC" />
+    <result column="Type" property="type" jdbcType="NUMERIC" />
+    <result column="id_attribute_geopista" property="idAttributeGeopista" jdbcType="NUMERIC" />
+    <result column="geometrytype" property="geometryType" jdbcType="NUMERIC" />
+    <result column="idAlias" property="idAlias" jdbcType="NUMERIC" />
+    <result column="alias" property="alias" jdbcType="VARCHAR" />
+    <result column="tablename" property="tablename" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <select id="selectColumnsByLayer" resultMap="GeopistaColumnResult" parameterClass="java.util.Map" >
+    select c.*, a.id as id_attribute_geopista, t.geometrytype as geometrytype, a.id_alias as idAlias, '' as alias, t.name as tablename
+    from attributes a inner join columns c on (a.id_column = c.id)
+                      left join columns_domains cd on (c.id = cd.id_column)
+                      inner join tables t on (c.id_table = t.id_table)
+    where a.id_layer=#idLayer#
+    order by a."position",t.id_table,c.id
+  </select>
+
+  <select id="selectColumnsByLayerTranslated" resultMap="GeopistaColumnResult" parameterClass="java.util.Map" >
+    select c.*, a.id as id_attribute_geopista, t.geometrytype as geometrytype, a.id_alias as idAlias, d.traduccion as alias, t.name as tablename
+    from attributes a inner join columns c on (a.id_column = c.id) and a.id_layer=#idLayer#
+                      left join columns_domains cd on (c.id = cd.id_column)
+                      inner join tables t on (c.id_table = t.id_table)
+                      left outer join dictionary d on (a.id_alias=d.id_vocablo) and d.locale = #locale#
+    order by a."position",t.id_table,c.id
+  </select>
+
+  <select id="selectColumnsByLayerTranslatedAllLanguages" resultMap="GeopistaColumnResult" parameterClass="java.util.Map" >
+    select c.*, a.id as id_attribute_geopista, t.geometrytype as geometrytype, a.id_alias as idAlias, d.traduccion as alias, t.name as tablename
+    from attributes a inner join columns c on (a.id_column = c.id)
+                      left join columns_domains cd on (c.id = cd.id_column)
+                      inner join tables t on (c.id_table = t.id_table)
+                      inner join dictionary d on (a.id_alias=d.id_vocablo) 
+    where a.id_layer=#idLayer#
+    order by a."position",t.id_table,c.id
+  </select>
+
+</sqlMap>

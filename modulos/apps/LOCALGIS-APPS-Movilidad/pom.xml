@@ -1,0 +1,504 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis.app</groupId>
+	<artifactId>localgis-apps-movilidad</artifactId>
+	<version>3.0</version>
+	<packaging>jar</packaging>
+	<name>LOCALGIS-APPS-Movilidad</name>
+	<description>Open Source GIS client. Movilidad.</description>
+	<organization>
+		<name>MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO</name>
+	</organization>
+	<parent>
+		<groupId>com.localgis</groupId>
+		<artifactId>localgis-parent-movilidad</artifactId>
+		<version>3.0</version>
+	</parent>
+	<properties>
+		<mainClassJnlp>es.satec.localgismobile.core.LocalGISMobile</mainClassJnlp>
+	</properties>
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<target>1.4</target>
+					<source>1.4</source>
+					<compilerArguments>
+						<sourcepath>${project.basedir}/src/main/java</sourcepath>
+					</compilerArguments>
+					<excludes>
+						<excludes>${project.basedir}/src/main/resources</excludes>
+					</excludes>
+				</configuration>
+			</plugin>
+
+			<!-- Coloca localgis-apps-movilidad.jar en /target/dist/ -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<finalName>${project.artifactId}</finalName>
+					<outputDirectory>${project.build.directory}/dist</outputDirectory>
+					<archive>
+						<manifest>
+							<mainClass>com.someclass.Main</mainClass>
+							<packageName>es.satec.localgismobile.core.LocalGISMobile</packageName>
+						</manifest>
+						<manifestEntries>
+							<mode>development</mode>
+							<url>${pom.url}</url>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<!-- Despliega las dependencias en /target/dist/lib -->
+			<!-- Guarda las de pendencias en all.jar con Assembly3 -->
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-dependency-plugin</artifactId> 
+				<version>2.4</version> <executions> <execution> <id>copy-dependencies</id> 
+				<phase>compile</phase> <goals> <goal>copy-dependencies</goal> </goals> <configuration> 
+				<outputDirectory>${project.build.directory}/dist/lib</outputDirectory> </configuration> 
+				</execution> </executions> </plugin> -->
+
+			<!-- Despliega los recursos de /src/main/** en /target/dist/** -->
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<!-- Despliega src/main/config/ en /target/dist/config/ -->
+					<execution>
+						<id>copy-config</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/dist/config/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/config/</directory>
+									<filtering>false</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<!-- Despliega src/main/resources/ en /target/dist/resources/ -->
+					<execution>
+						<id>copy-resources</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/dist/resources/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/resources/</directory>
+									<filtering>false</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					
+					<!-- Despliega src/main/dll/ en /target/dist/dll/ -->
+					<!-- NO DESCOMENTAR -->
+					<!-- <execution> <id>copy-dll</id> <phase>compile</phase> <goals> <goal>copy-resources</goal> 
+						</goals> <configuration> <outputDirectory>${project.build.directory}/dist/dll/</outputDirectory> 
+						<resources> <resource> <directory>src/main/</directory> <filtering>true</filtering> 
+						<includes> <include>*.dll</include> </includes> </resource> </resources> 
+						</configuration> </execution> -->
+					<!-- Despliega src/main/gps/ en /target/dist/gps/ -->
+					<execution>
+						<id>copy-gps</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/dist/gps/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/gps/</directory>
+									<filtering>false</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<!-- Despliega src/main/lnks/ en /target/dist/lnks/ -->
+					<execution>
+						<id>copy-lnks</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/dist/lnks/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/lnks/</directory>
+									<filtering>false</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<!-- Despliega src/main/db/ en /target/dist/db/ -->
+					<!--<execution> <id>copy-db</id> <phase>compile</phase> <goals> <goal>copy-resources</goal> 
+						</goals> <configuration> <outputDirectory>${project.build.directory}/dist/db/</outputDirectory> 
+						<resources> <resource> <directory>src/main/db/</directory> <filtering>false</filtering> 
+						</resource> </resources> </configuration> </execution> -->
+				</executions>
+			</plugin>
+
+			<!-- ################################################################ -->
+			<!-- ################################################################ -->
+			<!-- ################################################################ -->
+
+			<!-- Ejecuta los Assembly (1="configuradorPDA.zip", 2="configuradorPDA2.zip", 
+				3="all.jar" y 4="LocalgisMobile3_tablet.zip") -->
+				
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>make-assembly1</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<echo>Realizando el asemble1</echo>
+							<descriptors>
+								<descriptor>src/assemble/assembly1.xml</descriptor>
+							</descriptors>
+							<finalName>localgis-apps-movilidad-configuradorPDA</finalName>
+							<outputDirectory>${project.basedir}/dist/instalador</outputDirectory>
+							<appendAssemblyId>false</appendAssemblyId>
+						</configuration>
+					</execution>
+					<!-- <execution> <id>make-assembly2</id> <phase>package</phase> <goals> 
+						<goal>single</goal> </goals> <configuration> <descriptors> <descriptor>src/assemble/assembly2.xml</descriptor> 
+						</descriptors> <finalName>configuradorPDA2</finalName> <appendAssemblyId>false</appendAssemblyId> 
+						</configuration> </execution> -->
+						
+						
+					<!-- Genera all-desktop.jar con las dependencias -->
+					<!--  Se genera asi para tener un unico jar con todo -->
+					<execution>
+						<id>make-assembly3-desktop</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>src/assemble/assembly3-desktop.xml</descriptor>
+							</descriptors>
+							<outputDirectory>${project.build.directory}/dist</outputDirectory>
+							<finalName>all-desktop</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+						</configuration>
+					</execution>
+					
+					<!-- Genera all.jar con las dependencias. Este solo vale para la PDA -->
+					<!--  Se genera asi para tener un unico jar con todo -->
+					<execution>
+						<id>make-assembly3-pda</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>src/assemble/assembly3-pda.xml</descriptor>
+							</descriptors>
+							<outputDirectory>${project.build.directory}/dist</outputDirectory>
+							<finalName>all</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+						</configuration>
+					</execution>
+					
+					<!-- Genera LocalgisMobile3_tablet.zip -->
+					<execution>
+						<id>make-assembly4</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>src/assemble/assembly4.xml</descriptor>
+							</descriptors>
+							<finalName>localgis-apps-movilidad-tablet</finalName>
+							<outputDirectory>${project.basedir}/dist/instalador</outputDirectory>
+							<appendAssemblyId>false</appendAssemblyId>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Ejecuta makecab.bat y genera el .CAB en /instalador/LocalgisMobile/ -->
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<tasks>
+								<echo>Generating de CAB file.......</echo>
+								<copy todir="${project.build.directory}/dist/dll/">
+									<fileset dir="src/main/" includes="*.dll" />
+								</copy>
+								<exec executable="cmd"
+									dir="${project.basedir}/instalador/LocalgisMobile" spawn="false">
+									<arg value="/c" />
+									<arg value="makecab.bat" />
+								</exec>
+								 <zip destfile="${project.basedir}/dist/instalador/localgis-apps-movilidad-cab.zip"
+       								basedir="${project.basedir}/instalador/LocalgisMobile"
+      								includes="*.CAB" />
+							</tasks>
+							<!-- <target> <exec executable="cmd" dir="${project.basedir}/instalador/LocalgisMobile" 
+								spawn="true"> <arg value="/c"/> <arg value="makecab.bat"/> </exec> </target> -->
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+			<!-- ################################################################ -->
+			<!-- ################################################################ -->
+			<!-- ################################################################ -->
+			
+			<!--  Desplegamos los artefactos que necesitamos -->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<executions>
+
+					<execution>
+						<id>localgis-apps-movilidad-tablet</id>
+						<phase>install</phase>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<configuration>
+							<!-- the path to the client-side artifact to deploy -->
+							<file>${project.basedir}/dist/instalador/localgis-apps-movilidad-tablet.zip</file>							
+							<groupId>com.localgis.app</groupId>
+							<artifactId>localgis-apps-movilidad-tablet</artifactId>
+							<version>${project.version}</version>
+							<packaging>zip</packaging>
+							<description>Aplicacion de movilidad para tabletas</description>
+							<uniqueVersion>false</uniqueVersion>
+						</configuration>
+					</execution>	
+
+					<execution>
+						<id>localgis-apps-movilidad-configuradorPDA</id>
+						<phase>install</phase>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<configuration>
+							<file>${project.basedir}/dist/instalador/localgis-apps-movilidad-configuradorPDA.zip</file>							
+							<groupId>com.localgis.app</groupId>
+							<artifactId>localgis-apps-movilidad-configuradorPDA</artifactId>
+							<version>${project.version}</version>
+							<packaging>zip</packaging>
+							<description>Aplicacion de configuracion para la PDA</description>
+							<uniqueVersion>false</uniqueVersion>
+						</configuration>
+					</execution>		
+					
+					<execution>
+						<id>localgis-apps-movilidad-cab</id>
+						<phase>install</phase>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<configuration>
+							<file>${project.basedir}/dist/instalador/localgis-apps-movilidad-cab.zip</file>							
+							<groupId>com.localgis.app</groupId>
+							<artifactId>localgis-apps-movilidad-cab</artifactId>
+							<version>${project.version}</version>
+							<packaging>zip</packaging>
+							<description>Aplicacion CAB para la PDA</description>
+							<uniqueVersion>false</uniqueVersion>
+						</configuration>
+					</execution>	
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.7</version>
+				
+				<executions>
+
+					<execution>
+						<id>localgis-apps-movilidad-tablet</id>
+						<phase>deploy</phase>
+						
+						<goals>
+							<goal>deploy-file</goal>
+						</goals>
+						<configuration>
+							<!-- the path to the client-side artifact to deploy -->
+							<file>${project.basedir}/dist/instalador/localgis-apps-movilidad-tablet.zip</file>							
+							<groupId>com.localgis.app</groupId>
+							<artifactId>localgis-apps-movilidad-tablet</artifactId>
+							<version>${project.version}</version>
+							<packaging>zip</packaging>
+							<description>Aplicacion de movilidad para tabletas</description>
+							<uniqueVersion>false</uniqueVersion>
+							<repositoryId>${project.distributionManagement.snapshotRepository.id}</repositoryId>
+						</configuration>
+					</execution>	
+
+					<execution>
+						<id>localgis-apps-movilidad-configuradorPDA</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy-file</goal>
+						</goals>
+						<configuration>
+							<file>${project.basedir}/dist/instalador/localgis-apps-movilidad-configuradorPDA.zip</file>							
+							<groupId>com.localgis.app</groupId>
+							<artifactId>localgis-apps-movilidad-configuradorPDA</artifactId>
+							<version>${project.version}</version>
+							<packaging>zip</packaging>
+							<description>Aplicacion de configuracion para la PDA</description>
+							<uniqueVersion>false</uniqueVersion>
+						</configuration>
+					</execution>		
+					
+					<execution>
+						<id>localgis-apps-movilidad-cab</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy-file</goal>
+						</goals>
+						<configuration>
+							<file>${project.basedir}/dist/instalador/localgis-apps-movilidad-cab.zip</file>							
+							<groupId>com.localgis.app</groupId>
+							<artifactId>localgis-apps-movilidad-cab</artifactId>
+							<version>${project.version}</version>
+							<packaging>zip</packaging>
+							<description>Aplicacion CAB para la PDA</description>
+							<uniqueVersion>false</uniqueVersion>
+						</configuration>
+					</execution>	
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.localgis.mobile.lib</groupId>
+			<artifactId>localgis-tinyline</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.mobile.lib</groupId>
+			<artifactId>localgis-filtersld</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.mobile.lib</groupId>
+			<artifactId>localgis-gps</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.mobile.lib</groupId>
+			<artifactId>localgis-svgviewer</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.localgis.mobile.lib</groupId>
+			<artifactId>localgis-svglocalgisviewer</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<!--dependency> <groupId>org.bouncycastle</groupId> <artifactId>lbc-jdk</artifactId> 
+			<version>1.18</version> </dependency -->
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk16</artifactId>
+			<version>1.46</version>
+		</dependency>
+
+		<dependency>
+			<groupId>iaik.me</groupId>
+			<artifactId>iaik_jce_me4se</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/lib/iaik_jce_me4se-1.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>iaik.me</groupId>
+			<artifactId>iaik_ssl_me4se</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/lib/iaik_ssl_me4se-1.0.jar</systemPath>
+		</dependency>
+		<!--<dependency> <groupId>org.eclipse.swt</groupId> <artifactId>org.eclipse.swt.win32.win32.x86</artifactId> 
+			<version>3.7.2</version> </dependency> -->
+		<dependency>
+			<groupId>org.eclipse</groupId>
+			<artifactId>swt</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse</groupId>
+			<artifactId>swt-Desktop</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!--<dependency> <groupId>org.eclipse</groupId> <artifactId>swt-3349-3448</artifactId> 
+			<version>1.0</version> <type>zip</type> </dependency> -->
+		<!--<dependency> <groupId>org.eclipse</groupId> <artifactId>swt-3349</artifactId> 
+			<version>1.0</version> </dependency> <dependency> <groupId>org.eclipse</groupId> 
+			<artifactId>swt-3448</artifactId> <version>1.0</version> </dependency> -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>comm</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- dependency> <groupId>gnu.io</groupId> <artifactId>jcl</artifactId> 
+			<version>1.1.15.1</version> </dependency -->
+		<dependency>
+			<groupId>it.cnr.isti.domoware.tinyos</groupId>
+			<artifactId>tinyos-core-rxtx</artifactId>
+			<version>1.1.15.1</version>
+		</dependency>
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>1.2.01</version>
+		</dependency>
+	</dependencies>
+</project>

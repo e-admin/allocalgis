@@ -1,0 +1,7 @@
+Si se quieren generar nuevos informes .jrxml hay que tener en cuenta que se pasan por
+código 3 parámetro al ireport, estos son:
+
+  - lista_expedientes: listado con los códigos de expedientes de la búsqueda.
+  - locale: Locale para las traducciones.
+  - id_municipio: Id del Municipio.
+  

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+    <jar path="C:/desarrollo/dist/geopistabeanSupport.jar"/>
+    <options overwrite="true" compress="true" exportErrors="false" exportWarnings="true" saveDescription="true" descriptionLocation="/geopista/com/geopista/bean/GEOBeanSupportPackager.jardesc" useSourceFolders="false" buildIfNeeded="true" includeDirectoryEntries="false"/>
+    <manifest manifestVersion="1.0" usesManifest="true" reuseManifest="true" saveManifest="true" generateManifest="false" manifestLocation="/geopista/com/geopista/bean/GEOBeanSupportManifest.MF">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportOutputFolder="false" exportJavaFiles="false">
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.io.datasource"/>
+        <file path="/geopista/com/vividsolutions/jump/workbench/ui/images/ClockW.gif"/>
+        <file path="/geopista/com/geopista/ui/images/online.png"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.bean{GeopistaBeanProxy.java"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.util.image.encoders"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.deegree_impl.services.wfs.filterencoding"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.jump.coverage.datasource"/>
+        <file path="/geopista/com/geopista/ui/images/no_network.png"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.dxf.math"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.util.image.jaicodecs.imageformats.png"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.ui.renderer"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench{WorkbenchContext.java"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.protocol"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.security"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.task"/>
+        <file path="/geopista/com/vividsolutions/jump/workbench/ui/images/ClockSE.gif"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.wms"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.io"/>
+        <file path="/geopista/com/vividsolutions/jump/workbench/ui/images/ClockE.gif"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.geotools.dbffile"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.warp"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.util.image.jaicodecs.imageformats.tif"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.util.image.jaicodecs.imageformats"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.model"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.xml"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.ui.task"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.util.java2xml"/>
+        <file path="/geopista/com/vividsolutions/jump/workbench/ui/images/ClockN.gif"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.jump.io"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.ui.renderer"/>
+        <file path="/geopista/com/geopista/ui/images/lock_closed.png"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.app"/>
+        <file path="/geopista/com/geopista/ui/images/app-icon.gif"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.util.image.jaicodecs.image"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.driver"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.plugin"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.model"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.io.datasource"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.util.image.jaicodecs.stream"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.jump.coverage"/>
+        <file path="/geopista/com/vividsolutions/jump/workbench/ui/images/ClockNW.gif"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.util"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.coordsys.impl"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.dxf"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.wms.util"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.util.image.jaicodecs.imageformats.gif"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.deegree_impl.tools"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.coverage"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.app.editor"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench{WorkbenchProperties.java"/>
+        <file path="/geopista/GeoPistai18n.properties"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.dxf.reader"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.server.administradorCartografia"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.datasource"/>
+        <file path="/geopista/com/vividsolutions/jump/workbench/ui/images/ClockSW.gif"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.geom"/>
+        <file path="/geopista/com/geopista/ui/images/logo_geopista.png"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.feature"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.feature"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.util.exception"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.coordsys"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.protocol.administrador"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.wms.ui"/>
+        <file path="/geopista/com/vividsolutions/jump/workbench/ui/images/ClockS.gif"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.ui.images{IconLoader.java"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.spatialindex"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.protocol.net"/>
+        <file path="/geopista/GeoPista.properties"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.util"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.deegree_impl.graphics.sld"/>
+        <file path="/geopista/com/vividsolutions/jump/workbench/ui/images/ClockNE.gif"/>
+        <file path="/geopista/GeoPistai18n_es_ES.properties"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.jump.plugin"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.util.image.jaicodecs.imageformats.fpx"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench{WorkbenchException.java"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.editor"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.ui.renderer.style"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.dxf.utils"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.util.image.jaicodecs.imageformats.jpg"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.ui"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.ui.style"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.util.expression"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.util.image.jaicodecs.imageformats.bmp"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.deegree_impl.gml"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.util.image.jaicodecs"/>
+        <file path="/geopista/com/geopista/ui/images/Editar_datos.gif"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.bean{GeopistaMapProxy.java"/>
+        <file path="/geopista/com/geopista/ui/images/lock_open.png"/>
+        <javaElement handleIdentifier="=geopista/&lt;org.agil.core.util.image"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.io"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.ui.plugin"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.ui.dialogs"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.ui"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.geopista.bean{IGEOPISTABean.java"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.ui.renderer.java2D"/>
+        <javaElement handleIdentifier="=geopista/&lt;com.vividsolutions.jump.workbench.ui.images{IconLoader.java"/>
+    </selectedElements>
+</jardesc>
