@@ -51,3 +51,7 @@ Hemos abierto en el wiki una sección donde se explica de manera clara y sencill
 
 Con el objetivo de homogeneizar el estilo del código de AL SIGM escrito en distintos IDEs recomendamos seguir las pautas que nos proponen desde <a href="editorconfig.org" target="_new">editorconfig.org</a>
 
+## Licencias
+
+En el siguiente <a href="https://github.com/Cenatic/allocalgis/tree/master/licencias" target="_new">enlace</a> se pueden ver las licencias de los componentes que forman parte de AL LocalGIS
+
