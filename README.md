@@ -43,7 +43,7 @@ Para obtener más información sobre Versionamiento Semántico visita <a href="h
 
 ###Tags y releases
 
-Tenéis disponibles los tags, las releases de las versiones 3.0 y 3.0.1 en este <a href="https://github.com/Cenatic/alsigm/releases" target="_new">enlace.</a>
+Tenéis disponibles los tags y las releases de la versión v3 en el siguiente <a href="https://github.com/Cenatic/allocalgis/releases" target="_new">enlace.</a>
 
 ##Contribuye
 
