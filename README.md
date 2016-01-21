@@ -8,3 +8,5 @@ Tiene como objetivo facilitar la implantación de Sistemas de Información Terri
 * La información de las mismas
 * Sus gestiones administrativas
 * Sus actividades diarias
+
+## Descarga de AL LocalGIS
