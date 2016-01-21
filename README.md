@@ -10,3 +10,8 @@ Tiene como objetivo facilitar la implantación de Sistemas de Información Terri
 * Sus actividades diarias
 
 ## Descarga de AL LocalGIS
+
+Puedes descargar AL LocalGIS v3 en el siguiente enlace:<a href="https://github.com/Cenatic/allocalgis/releases/tag/v3.0" target="_new">AL LocalGIS v3</a>
+
+## Configuración del entorno de desarrollo (compilación e instalación)
+
