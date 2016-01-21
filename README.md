@@ -15,9 +15,9 @@ Puedes descargar AL LocalGIS v3 en el siguiente enlace:<a href="https://github.c
 
 ## Configuración del entorno de desarrollo (compilación e instalación)
 
-<a href="https://github.com/Cenatic/allocalgis/releases/tag/v3.0" target="_new">Manual de compilación</a>
+<a href="https://github.com/Cenatic/allocalgis/releases/download/Configuraci%C3%B3n/SETSI_LOCALGIS3_Manual.de.Compilacion.v3.0.pdf" target="_new">Manual de compilación</a>
 
-<a href="https://github.com/Cenatic/allocalgis/releases/tag/v3.0" target="_new">Manual de instalación</a>
+<a href="https://github.com/Cenatic/allocalgis/releases/download/Configuraci%C3%B3n/SETSI_LOCALGIS3_Manual.de.Instalacion.pdf" target="_new">Manual de instalación</a>
 
 Nota: Debido a la gestión de grandes archivos de Github se han extraído del directorio /Software dos archivos, concretamente mapserver.tgz y mapserver_simple.tgz. Dichos archivos, que puedes localizar aquí <a href="https://github.com/Cenatic/allocalgis/releases/tag/Anexo" target="_new">Anexos</a>, deberán ser introducidos en /Software antes de la compilación y la instalación.
 
