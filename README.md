@@ -28,11 +28,11 @@ La documentación completa de la plataforma se encuentra alojada en esta secció
 
 ##Versionado, tags y releases
 
-Con el objetivo principal de asegurar transparencia entre nuestro ciclo de lanzamiento y el esfuerzo por mantener la compatibilidad con versiones anteriores, este proyecto se mantendrá bajo las directrices de versiones semánticas. A veces cuesta un poco mantener un orden en el versionado, pero vamos a adherimos a estas reglas siempre que sea posible.
+Con el objetivo principal de asegurar transparencia entre nuestro ciclo de lanzamiento y el esfuerzo por mantener la compatibilidad con versiones anteriores, este proyecto se mantendrá bajo las directrices de versiones semánticas. A veces cuesta un poco mantener un orden en el versionado, pero vamos a adherirnos a estas reglas siempre que sea posible.
 
 Se numerarán Releases con el siguiente formato:
 
-"major". "menor". "parche"
+"mayor". "menor". "parche"
 
 Y será construido con las siguientes pautas:
 
@@ -52,7 +52,7 @@ Tenéis disponibles los tags y las releases de la versión v3 en el siguiente <a
 
 Hemos abierto en el wiki una sección donde se explica de manera clara y sencilla cómo contribuir a un proyecto en Github como pudiera ser este, los pasos se pueden ver en el siguiente <a href="https://github.com/Cenatic/alsigm/wiki/Contribuye" target="_new">enlace</a>
 
-Con el objetivo de homogeneizar el estilo del código de AL SIGM escrito en distintos IDEs recomendamos seguir las pautas que nos proponen desde <a href="editorconfig.org" target="_new">editorconfig.org</a>
+Con el objetivo de homogeneizar el estilo del código de AL LocalGIS escrito en distintos IDEs recomendamos seguir las pautas que nos proponen desde <a href="editorconfig.org" target="_new">editorconfig.org</a>
 
 ## Licencias
 
