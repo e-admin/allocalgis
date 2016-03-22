@@ -1,1 +1,0 @@
-keytool -exportcert -keystore GeopistaKeyStore -storepass geopista99 -alias geopista -file geopista.cer
