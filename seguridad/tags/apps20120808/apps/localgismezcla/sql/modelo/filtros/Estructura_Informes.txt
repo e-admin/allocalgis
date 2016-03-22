@@ -1,7 +1,0 @@
-FichasFilterDialog	|
-					|--->FichasFilterPanel		|
-												|-->auxFiltroJPanel (Contenedor)		|
-												|										|-->filtroJPanel (Pestañas)
-												|												
-												|-->auxDatosInformeJPanel (Contenedor)  |
-																						|-->datosInformeJPanel (Parte de Abajo)

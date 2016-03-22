@@ -1,1 +1,0 @@
-266#\J9\PPRO11\bin\j9w.exe -jcl:ppro11 -Dfile.encoding=UTF-8  -Djava.library.path=\LocalGIS -Xmx32m -Dapp_path=\LocalGIS -cp "\LocalGIS\all.jar;LocalGIS\comm.jar;\LocalGIS;\LocalGIS\LocalGisMobile.jar" es.satec.localgismobile.core.LocalGISMobile

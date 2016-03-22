@@ -1,2 +1,0 @@
-update query_catalog set query = 'Select id from EntidadesSingulares where codigoine=? and codigo_entidadcolectiva=? and id_municipio=?' where id='buscarIdEntidad';
-update query_catalog set query = 'insert into nucleos_y_diseminados(id,id_entidadsingular,codigoine,nombreoficial,nombreoficialcorto,nombrecooficial,descripcion,numhabitantes,tipo,area,length,"GEOMETRY") values (nextval(''seq_nucleos_y_diseminados''),?,?,?,?,?,?,?,?,?,?,(select "GEOMETRY"  from municipios where id=?))' where id='insertarDiseminado';

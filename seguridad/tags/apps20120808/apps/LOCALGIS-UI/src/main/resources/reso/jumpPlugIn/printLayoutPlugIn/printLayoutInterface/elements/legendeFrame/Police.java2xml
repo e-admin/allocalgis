@@ -1,9 +1,0 @@
-<!DOCTYPE root>
-<root>
-	<element xml-name="FontName" java-name="FontName" />
-	<element xml-name="FontStyle" java-name="FontStyle" />
-	<element xml-name="FontSize" java-name="FontSize" />
-	<element xml-name="Color" java-name="Color" />
-	<element xml-name="Underline" java-name="Underline" />
-	<element xml-name="UpperCase" java-name="UpperCase" />
-</root>

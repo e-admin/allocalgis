@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="LOCALGIS-SERVER-LicenciasObra">
-        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
-        <property name="context-root" value="LOCALGIS-SERVER-LicenciasObra"/>
-        <property name="java-output-path" value="/LOCALGIS-SERVER-LicenciasObra/build/classes"/>
-    </wb-module>
-</project-modules>

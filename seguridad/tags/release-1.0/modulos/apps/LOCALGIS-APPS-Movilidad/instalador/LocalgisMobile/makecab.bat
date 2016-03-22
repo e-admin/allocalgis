@@ -1,1 +1,0 @@
-..\cabwiz LocalgisMobile.inf 

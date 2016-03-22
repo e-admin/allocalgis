@@ -1,5 +1,0 @@
-1. Ejecutar el script del directorio sql
-2. Revisar los ficheros de configuracion:
-	config\jetty.xml --> Parámetros de configuración de la base de datos.
-	config\configAdministracion --> Url donde se encuentra el servidor
-	config\log4j.ini --> Ficheros de log

@@ -1,4 +1,0 @@
-Para compilar ejecutar esto
-
-/usr/local/java-jdk/bin/javac -cp "/usr/local/LocalGIS/mapserver/lib/mapscript.jar:." MapScriptTest.java
-

@@ -1,6 +1,0 @@
-<skeleton>
-<tab i18nKey="CMainContaminantes.title" classId="Contaminante">
-	<item rm="asunto" i18nKey="JDialogBuscarContaminantes.jLabelAsunto.text" 	name="" edit="true"/>
-</tab>
-
-</skeleton>

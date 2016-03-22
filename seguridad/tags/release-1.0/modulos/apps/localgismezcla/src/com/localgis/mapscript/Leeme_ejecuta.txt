@@ -1,3 +1,0 @@
-Para ejecutar ejecutar esto
-
-/usr/local/java-jdk/bin/java -Djava.library.path="/usr/local/LocalGIS/mapserver/cgi-bin:/usr/local/LocalGIS/mapserver/lib/" -cp "/usr/local/LocalGIS/mapserver/lib/mapscript.jar:."  MapScriptTest 

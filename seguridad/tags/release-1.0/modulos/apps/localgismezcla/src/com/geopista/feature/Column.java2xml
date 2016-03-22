@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<root>
-    <element xml-name="name" java-name="name"/>
-    <element xml-name="description" java-name="description"/>
-    <element xml-name="domain" java-name="domain"/>
-    <element xml-name="table" java-name="table"/>
-</root>

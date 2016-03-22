@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<root>
-  <attribute xml-name="useHTMLLineBreaks" java-name="useHTMLLineBreaks"/>
-  <element xml-name="attribute2unit" java-name="attribute2unit"/>
-</root>

@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<root>
-	<attribute xml-name="name" java-name="name"/>
- 	<attribute xml-name="visible" java-name="visible"/>
-	 <element xml-name="coverage" java-name="coverage"/>
-  <attribute xml-name="alpha" java-name="alpha"/>
-  <attribute xml-name="interpolation" java-name="interpolation"/>
-  
-</root>

@@ -1,7 +1,0 @@
-<root>
-  <attribute xml-name="type" java-name="type"/>
-  <attribute xml-name="currentStyleName" java-name="currentStyleName"/>
-  <!--attribute xml-name="sldFileName" java-name="sldFileName"/-->
-  <element xml-name="sld" java-name="sld"/>
-  <element xml-name="layerName" java-name="layerName"/>
-</root>

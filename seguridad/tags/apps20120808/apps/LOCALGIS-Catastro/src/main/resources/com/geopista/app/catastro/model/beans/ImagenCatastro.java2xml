@@ -1,6 +1,0 @@
-<root>
-	<element xml-name="nom" java-name="nombre"/>
-	<element xml-name="frmt" java-name="extension"/>
-	<element xml-name="tdo" java-name="tipoDocumento"/>
-	<element xml-name="foto" java-name="foto"/>						
-</root>
