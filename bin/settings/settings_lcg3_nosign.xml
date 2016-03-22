@@ -1,0 +1,100 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository>${env.USERPROFILE}\.m2\repository.localgis3-nosign</localRepository>
+  <interactiveMode>true</interactiveMode>
+  <usePluginRegistry>false</usePluginRegistry>
+  <offline>false</offline>
+  
+  <servers>			
+		<server>
+			<id>LocalGISIII</id>
+			<username>usuario</username>
+			<password>password</password>
+		</server>	
+		<server>
+			<id>LocalGISIIIlibext</id>
+			<username>usuario</username>
+			<password>password</password>
+		</server>	
+		<server>
+			<id>LocalGISGrupo</id>
+			<username>usuario</username>
+			<password>password</password>
+		</server>
+  </servers>
+			
+	<profiles>		
+		<profile>
+			<id>LocalGISIII</id>
+			<properties>
+				<jarsigner.alias>pruebalocalgis</jarsigner.alias>
+				<jarsigner.keystoreDirectory>${signPath}</jarsigner.keystoreDirectory>
+				<jarsigner.keystore>LocalGISPruebaStore</jarsigner.keystore>
+				<jarsigner.storepass>localgis</jarsigner.storepass>
+				<jarsigner.keypass>localigs</jarsigner.keypass>				
+			</properties>
+			<repositories>
+				<repository>
+					<id>LocalGISIII</id>
+					<name>Repositorio de LocalGISIII de MINETUR</name>
+					<url>http://srvproges.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+					
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>LocalGISIIIlibext</id>
+					<name>Repositorio de LocalGISIII de MINETUR</name>
+					<url>http://srvproges.grupotecopy.es/nexus/content/repositories/localgis3libext/</url>
+					
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</repository>
+				
+									
+				
+			</repositories>			
+			<pluginRepositories>
+				<pluginRepository>
+					<id>LocalGISIII</id>
+					<name>Repositorio de LocalGISIII de MINETUR</name>
+
+					<url>http://srvproges.grupotecopy.es/nexus/content/repositories/localgis3/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>	
+			
+			</profile>
+			
+	</profiles>
+	<mirrors>
+		<mirror>
+			<id>LocalGISGrupo</id> 
+			<name>Servidor Nexus LOCALGIS</name>
+			<url>http://localgis3.minetur.gob.es/nexus/content/groups/localgis3finalgroupreleaseunsigned/</url> 
+			<mirrorOf>*</mirrorOf> 
+		</mirror>
+		
+	</mirrors>
+	<activeProfiles>
+		<activeProfile>LocalGISIII</activeProfile>
+	</activeProfiles>
+</settings>

@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.localgis</groupId>
+	<artifactId>localgis-apps</artifactId>
+	<packaging>pom</packaging>
+	<version>3.0</version>
+	<name>LocalGIS Workbench Parent</name>
+		<parent>
+		<artifactId>localgis-parent-artifacts</artifactId>
+		<groupId>com.localgis</groupId>
+		<version>3.0</version>
+	</parent>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<target>1.7</target>
+					<source>1.7</source>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<modules>	
+	
+		<module>${appModulesPath}/localgis-servercontext-resources</module>		
+		<module>${appModulesPath}/localgis-servercontext-administracion</module>		
+		<module>${appModulesPath}/localgis-servercontext-alfresco</module>
+		<module>${appModulesPath}/localgis-servercontext-backup</module>
+		<module>${appModulesPath}/localgis-servercontext-catastro</module>
+		<module>${appModulesPath}/localgis-servercontext-cementerios</module>
+		<module>${appModulesPath}/localgis-servercontext-contaminantes</module>
+		<module>${appModulesPath}/localgis-servercontext-document</module>
+		<module>${appModulesPath}/localgis-servercontext-eiel</module>
+		<module>${appModulesPath}/localgis-servercontext-inventario</module>
+		<module>${appModulesPath}/localgis-servercontext-licencias</module>
+		<module>${appModulesPath}/localgis-plugin-movilidad</module>
+		<module>${appModulesPath}/localgis-servercontext-licenciasactividad</module>
+		<module>${appModulesPath}/localgis-servercontext-licenciasobra</module>
+		<module>${appModulesPath}/localgis-servercontext-metadatos</module>
+		<module>${appModulesPath}/localgis-servercontext-movilidad</module>
+		<module>${appModulesPath}/localgis-servercontext-ocupaciones</module>
+		<module>${appModulesPath}/localgis-servercontext-sigm</module>
+		<module>${appModulesPath}/localgis-server-alfresco</module>
+		<module>${appModulesPath}/localgis-server-catastro</module>
+		<module>${appModulesPath}/localgis-server-principal</module>
+		<module>${appModulesPath}/localgis-server-administracion</module>
+		<module>${appModulesPath}/localgis-server-backup</module>
+		<module>${appModulesPath}/localgis-server-cementerios</module>
+		<module>${appModulesPath}/localgis-server-contaminantes</module>
+		<module>${appModulesPath}/localgis-server-dnie</module>
+		<module>${appModulesPath}/localgis-server-eiel</module>
+		<module>${appModulesPath}/localgis-server-geopista</module>
+		<module>${appModulesPath}/localgis-server-inventario</module>
+		<module>${appModulesPath}/localgis-server-licenciasactividad</module>
+		<module>${appModulesPath}/localgis-server-licenciasobra</module>
+		<module>${appModulesPath}/localgis-server-metadatos</module>
+		<module>${appModulesPath}/localgis-server-movilidad</module>
+		<module>${appModulesPath}/localgis-server-ocupaciones</module>
+		<module>${appModulesPath}/localgis-server-init</module>
+		<module>${appModulesPath}/localgis-apps-eielindicadoresbatchgenerator</module>
+		<module>${appModulesPath}/localgis-apps-luceneindexer</module>
+		<module>${appModulesPath}/localgis-apps-reloadexternallayers</module>
+		<module>${appModulesPath}/localgis-server-programadortareas</module>
+		<!--module>${appModulesPath}/localgis-server-sso</module-->
+		
+	</modules>	
+</project>

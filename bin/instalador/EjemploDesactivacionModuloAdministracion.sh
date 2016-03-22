@@ -1,0 +1,1 @@
+/usr/bin/mvn -e com.localgis.maven.plugin:updaterPlugin:3.0:launchUninstall -DinstallationURL=http://localgis3.grupotecopy.es:8080/RegistryWS/services/RegistryService -DartifactId=AdministracionModule -DpropertiesFile=entornos/install_linux_localgis3.properties -DgroupId=com.localgis.modules.apps -DmoduleVersion=3.0.0 

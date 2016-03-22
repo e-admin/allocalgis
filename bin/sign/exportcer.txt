@@ -1,0 +1,1 @@
+keytool -exportcert -keystore LocalGISPruebaStore -storepass localgis -alias pruebalocalgis -file localgisprueba.cer

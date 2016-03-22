@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>IDELabRoute</artifactId>
+    <groupId>org.uva.itast</groupId>
+    <version>0.0.2</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>customizedGeotoolsGraph</artifactId>
+  <name>Customized Geotools Graph</name>
+  <description>Geotools's graph module customized and evolutioned.
+Some refactoring has been made in order to reduce coupling and place Graphable states out of the graph model.</description>
+<scm>
+  	<connection>scm:svn:http://itastdevserver.tel.uva.es/svn/routeserver/trunk/IDELabRoute/customizedGeotoolsGraph/</connection>
+  	<developerConnection>scm:svn:http://itastdevserver.tel.uva.es/svn/routeserver/trunk/IDELabRoute/customizedGeotoolsGraph/</developerConnection>
+  	<url>http://dev.idelab.uva.es/routeserver/browser/trunk/IDELabRoute</url>
+  </scm>
+ <licenses>
+    <license>
+      <name>Lesser General Public License (LGPL)</name>
+      <url>http://www.gnu.org/copyleft/lesser.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.4.2</version>
+        <configuration>
+          <skipTests>false</skipTests>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.geotools</groupId>
+  		<artifactId>gt-main</artifactId>
+  		<version>${geotools.version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.geotools</groupId>
+  		<artifactId>gt-api</artifactId>
+  		<version>${geotools.version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.geotools</groupId>
+  		<artifactId>gt-metadata</artifactId>
+  		<version>2.5.5</version>
+  	</dependency>
+  </dependencies>
+  <properties>
+  	<geotools.version>2.5.5</geotools.version>
+  </properties>
+</project>
