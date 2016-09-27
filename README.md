@@ -13,13 +13,9 @@ Tiene como objetivo facilitar la implantación de Sistemas de Información Terri
 
 Puedes descargar AL LocalGIS v3 en el siguiente enlace:<a href="https://github.com/Cenatic/allocalgis/releases/tag/v3.0" target="_new">AL LocalGIS v3</a>
 
-## Configuración del entorno de desarrollo (compilación e instalación)
+## Documentación: manuales de compilación e instalación para Windows y GNU/Linux 
 
 <a href="https://github.com/e-admin/allocalgis/releases/download/Configuraci%C3%B3n/Manual.de.compilacion.AL.LocalGIS.3.0.Windows.pdf" target="_new">Manual de compilación AL LocalGIS 3.0 Windows</a>
-
-<a href="https://github.com/e-admin/allocalgis/releases/download/Configuraci%C3%B3n/Manual.de.instalacion.Al.LocalGIS.3.0.Windows.pdf" target="_new">Manual de instalación Al LocalGIS 3.0 Windows</a>
-
-<a href="https://github.com/e-admin/allocalgis/releases/download/Configuraci%C3%B3n/Manual.de.instalacion.y.compilacion.Al.LocalGIS.3.0.Linux.pdf" target="_new">Manual de instalación y compilación Al LocalGIS 3.0 Linux</a>
 
 *Nota 2: Debido a la gestión de grandes archivos de Github se han extraído del directorio /Software dos archivos, concretamente mapserver.tgz y mapserver_simple.tgz. Dichos archivos, que puedes localizar aquí <a href="https://github.com/Cenatic/allocalgis/releases/tag/Anexo" target="_new">Anexos</a>, deberán ser introducidos en /Software antes de la compilación y la instalación.*
 
