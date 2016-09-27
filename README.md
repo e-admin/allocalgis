@@ -15,12 +15,9 @@ Puedes descargar AL LocalGIS v3 en el siguiente enlace:<a href="https://github.c
 
 ## Documentación: manuales de compilación e instalación para Windows y GNU/Linux 
 
-<a href="https://github.com/e-admin/allocalgis/releases/download/Configuraci%C3%B3n/Manual.de.compilacion.AL.LocalGIS.3.0.Windows.pdf" target="_new">Manual de compilación AL LocalGIS 3.0 Windows</a>
+<a href="https://github.com/e-admin/allocalgis/releases/download/Configuraci%C3%B3n/Manual_instalacion_Windows_Linux.rar" target="_new">Manual de compilación AL LocalGIS 3.0 Windows</a>
 
 *Nota 2: Debido a la gestión de grandes archivos de Github se han extraído del directorio /Software dos archivos, concretamente mapserver.tgz y mapserver_simple.tgz. Dichos archivos, que puedes localizar aquí <a href="https://github.com/Cenatic/allocalgis/releases/tag/Anexo" target="_new">Anexos</a>, deberán ser introducidos en /Software antes de la compilación y la instalación.*
-
-##Documentación
-La documentación completa de la plataforma se encuentra alojada en esta sección:<a href="https://github.com/Cenatic/allocalgis/releases/tag/Documentaci%C3%B3n" target="_new">Documentación</a>
 
 ##Versionado, tags y releases
 
